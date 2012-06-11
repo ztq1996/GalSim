@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['fftw_5ftype',['fftw_type',['../structgalsim_1_1_f_f_t_w___traits.html#a60ac8235974f47cf5a3d2ce318709a76',1,'galsim::FFTW_Traits::fftw_type()'],['../structgalsim_1_1_f_f_t_w___traits_3_01std_1_1complex_3_01_t_01_4_01_4.html#a6e0d6eabaffab17e32ddbcb3ed676944',1,'galsim::FFTW_Traits&lt; std::complex&lt; T &gt; &gt;::fftw_type()'],['../classgalsim_1_1_f_f_t_w___array.html#a2c026d72040aec0f9cf6a46260c9c853',1,'galsim::FFTW_Array::fftw_type()']]],
   ['fifthof5_5fargument_5ftype',['fifthof5_argument_type',['../structgalsim_1_1integ_1_1pentanary__function.html#abf16c0491d21f79647bebdf853ef9e60',1,'galsim::integ::pentanary_function']]],
   ['fifthof6_5fargument_5ftype',['fifthof6_argument_type',['../structgalsim_1_1integ_1_1hexanary__function.html#a377713364f64a986e648f1eb66b8afe9',1,'galsim::integ::hexanary_function']]],
   ['fifthof7_5fargument_5ftype',['fifthof7_argument_type',['../structgalsim_1_1integ_1_1heptanary__function.html#a39e259f09264870ccc4d134113304536',1,'galsim::integ::heptanary_function']]],

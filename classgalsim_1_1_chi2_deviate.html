@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim::Chi2Deviate Class Reference</div>  </div>
@@ -101,13 +102,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classgalsim_1_1_chi2_deviate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_random_8h_source.html">Random.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for galsim::Chi2Deviate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classgalsim_1_1_chi2_deviate.png" usemap="#galsim::Chi2Deviate_map" alt=""/>
+  <map id="galsim::Chi2Deviate_map" name="galsim::Chi2Deviate_map">
+<area href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates." alt="galsim::BaseDeviate" shape="rect" coords="0,0,124,24"/>
+</map>
+ </div></div>
 
 <p><a href="classgalsim_1_1_chi2_deviate-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a45ce501ee6af1bc76d13058780e6b907"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a45ce501ee6af1bc76d13058780e6b907">Chi2Deviate</a> (<a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;u_, double n=1.)</td></tr>
-<tr class="memdesc:a45ce501ee6af1bc76d13058780e6b907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Chi^2-distributed RNG.  <a href="#a45ce501ee6af1bc76d13058780e6b907"></a><br/></td></tr>
+<tr class="memitem:ab54408bb0e6cb1df0791e52408f9d1d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#ab54408bb0e6cb1df0791e52408f9d1d5">Chi2Deviate</a> (double n=1.)</td></tr>
+<tr class="memdesc:ab54408bb0e6cb1df0791e52408f9d1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Chi^2-distributed RNG, using time of day as seed.  <a href="#ab54408bb0e6cb1df0791e52408f9d1d5"></a><br/></td></tr>
+<tr class="memitem:a1ae698f73a90edc8be40887523df5f18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a1ae698f73a90edc8be40887523df5f18">Chi2Deviate</a> (long lseed, double n=1.)</td></tr>
+<tr class="memdesc:a1ae698f73a90edc8be40887523df5f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Chi^2-distributed RNG, using the provided value as seed.  <a href="#a1ae698f73a90edc8be40887523df5f18"></a><br/></td></tr>
+<tr class="memitem:a738b72d399bc082746c5d9ed7aa8b4ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a738b72d399bc082746c5d9ed7aa8b4ad">Chi2Deviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double n=1.)</td></tr>
+<tr class="memdesc:a738b72d399bc082746c5d9ed7aa8b4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Chi^2-distributed RNG, sharing the random number generator with rhs.  <a href="#a738b72d399bc082746c5d9ed7aa8b4ad"></a><br/></td></tr>
+<tr class="memitem:a5486c50b1200759c06f47faaea49075c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a5486c50b1200759c06f47faaea49075c">Chi2Deviate</a> (const <a class="el" href="classgalsim_1_1_chi2_deviate.html">Chi2Deviate</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a5486c50b1200759c06f47faaea49075c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a5486c50b1200759c06f47faaea49075c"></a><br/></td></tr>
 <tr class="memitem:a2f7d4a32f4ebb2a99931b07a868ee371"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a2f7d4a32f4ebb2a99931b07a868ee371">operator()</a> ()</td></tr>
 <tr class="memdesc:a2f7d4a32f4ebb2a99931b07a868ee371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a2f7d4a32f4ebb2a99931b07a868ee371"></a><br/></td></tr>
 <tr class="memitem:abc59517f36ca2a6817dc148e1056089a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#abc59517f36ca2a6817dc148e1056089a">getN</a> ()</td></tr>
@@ -117,33 +133,67 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aafa7526888a82845bf3f5cfb8c447dc0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aafa7526888a82845bf3f5cfb8c447dc0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#aafa7526888a82845bf3f5cfb8c447dc0">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
 <tr class="memdesc:aafa7526888a82845bf3f5cfb8c447dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Chi^2 pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#aafa7526888a82845bf3f5cfb8c447dc0"></a><br/></td></tr>
+<tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
+<tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
+<tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
+<tr class="memdesc:a9a44c1be0021535a594d4f8c505b1a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a9a44c1be0021535a594d4f8c505b1a99"></a><br/></td></tr>
+<tr class="memitem:af28797531e7deb113b54f4a1fc19798d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d">reset</a> ()</td></tr>
+<tr class="memdesc:af28797531e7deb113b54f4a1fc19798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates.  <a href="#af28797531e7deb113b54f4a1fc19798d"></a><br/></td></tr>
+<tr class="memitem:a467ee386aebd84bb837c016718e8c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec">reset</a> (long lseed)</td></tr>
+<tr class="memdesc:a467ee386aebd84bb837c016718e8c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like seed(lseed), but severs the relationship between other Deviates.  <a href="#a467ee386aebd84bb837c016718e8c6ec"></a><br/></td></tr>
+<tr class="memitem:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f">reset</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev)</td></tr>
+<tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a5486c50b1200759c06f47faaea49075c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a5486c50b1200759c06f47faaea49075c">Chi2Deviate</a> (const <a class="el" href="classgalsim_1_1_chi2_deviate.html">Chi2Deviate</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a5486c50b1200759c06f47faaea49075c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide copy and assignment so users do not create duplicate (correlated!) RNG's:  <a href="#a5486c50b1200759c06f47faaea49075c"></a><br/></td></tr>
-<tr class="memitem:a33043dc9045cc9ed7b32281ff04812fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#a33043dc9045cc9ed7b32281ff04812fa">operator=</a> (const <a class="el" href="classgalsim_1_1_chi2_deviate.html">Chi2Deviate</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a33043dc9045cc9ed7b32281ff04812fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide copy and assignment so users do not create duplicate (correlated!) RNG's:  <a href="#a33043dc9045cc9ed7b32281ff04812fa"></a><br/></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5c0a4b5e400c7a0539fa9f0d6e6de131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a5c0a4b5e400c7a0539fa9f0d6e6de131">seedtime</a> ()</td></tr>
+<tr class="memdesc:a5c0a4b5e400c7a0539fa9f0d6e6de131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private routine to seed with microsecond counter from time-of-day structure.  <a href="#a5c0a4b5e400c7a0539fa9f0d6e6de131"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aab77ba0a5ad9441726fc717cdfc6e00e"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html#aad9eaa469b85fc9dd4702f6ceff6be4c">rng_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#aab77ba0a5ad9441726fc717cdfc6e00e">_rng</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aeaf9fb73a06347a09191f41e10fc77f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#aeaf9fb73a06347a09191f41e10fc77f7">u</a></td></tr>
-<tr class="memitem:ad4d5a292027e443bc10cfdfe89fb3b6f"><td class="memItemLeft" align="right" valign="top">boost::random::chi_squared_distribution&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#ad4d5a292027e443bc10cfdfe89fb3b6f">chi_squared</a></td></tr>
+<tr class="memitem:ae0444c6d505c4f8b6883ba97f459aef0"><td class="memItemLeft" align="right" valign="top">boost::random::chi_squared_distribution&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_chi2_deviate.html#ae0444c6d505c4f8b6883ba97f459aef0">_chi_squared</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A Chi^2-distributed deviate with degrees-of-freedom parameter n. </p>
-<p>See <a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">http://en.wikipedia.org/wiki/Chi-squared_distribution</a> (although note that in the Boost random routine this class calls the notation is k=n for the number of degrees of freedom). The Chi^2 distribution is a real valued distribution producing deviates &gt;= 0.</p>
-<p><a class="el" href="classgalsim_1_1_chi2_deviate.html" title="A Chi^2-distributed deviate with degrees-of-freedom parameter n.">Chi2Deviate</a> is constructed with reference to a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will actually generate the randoms, which are then transformed to a Chi^2 distribution. Copy constructor and assignment operator are kept private since you probably do not want two "random" number generators producing the same sequence of numbers in your code! </p>
+<p>See <a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">http://en.wikipedia.org/wiki/Chi-squared_distribution</a> (although note that in the Boost random routine this class calls the notation is k=n for the number of degrees of freedom). The Chi^2 distribution is a real valued distribution producing deviates &gt;= 0. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a45ce501ee6af1bc76d13058780e6b907"></a>
+<a class="anchor" id="ab54408bb0e6cb1df0791e52408f9d1d5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::Chi2Deviate::Chi2Deviate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>u_</em>, </td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1.</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Chi^2-distributed RNG, using time of day as seed. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Number of degrees of freedom for the output distribution, must be &gt; 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ae698f73a90edc8be40887523df5f18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim::Chi2Deviate::Chi2Deviate </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -159,11 +209,45 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Chi^2-distributed RNG. </p>
-<p>Constructor requires reference to a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that generates the randoms, which are then transformed to Gamma distribution. </p>
+<p>Construct a new Chi^2-distributed RNG, using the provided value as seed. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">u_</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will be called to generate all randoms. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Number of degrees of freedom for the output distribution, must be &gt; 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a738b72d399bc082746c5d9ed7aa8b4ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim::Chi2Deviate::Chi2Deviate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Chi^2-distributed RNG, sharing the random number generator with rhs. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Other deviate with which to share the RNG </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Number of degrees of freedom for the output distribution, must be &gt; 0. </td></tr>
   </table>
   </dd>
@@ -174,9 +258,6 @@ Private Attributes</h2></td></tr>
 <a class="anchor" id="a5486c50b1200759c06f47faaea49075c"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">galsim::Chi2Deviate::Chi2Deviate </td>
@@ -186,14 +267,10 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Hide copy and assignment so users do not create duplicate (correlated!) RNG's: </p>
+<p>Construct a copy that shares the RNG with rhs. </p>
+<p>Note: the default constructed op= function will do the same thing. </p>
 
 </div>
 </div>
@@ -260,7 +337,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a33043dc9045cc9ed7b32281ff04812fa"></a>
+<a class="anchor" id="af28797531e7deb113b54f4a1fc19798d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,21 +345,165 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::Chi2Deviate::operator= </td>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_chi2_deviate.html">Chi2Deviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hide copy and assignment so users do not create duplicate (correlated!) RNG's: </p>
+<p>Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates. </p>
+<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a467ee386aebd84bb837c016718e8c6ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Like seed(lseed), but severs the relationship between other Deviates. </p>
+<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a83d16e67974cfc43d3b9afddeae2cd3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this object share its random number generator with another Deviate. </p>
+<p>It discards whatever rng it had been using and starts sharing the one held by dev. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c1affde5339594abf9bd45f8c036f2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-seed the PRNG using current time. </p>
+<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a44c1be0021535a594d4f8c505b1a99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-seed the PRNG using specified seed. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a111b8db476baf0c246d147b66335a7d9">galsim::UniformDeviate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c0a4b5e400c7a0539fa9f0d6e6de131"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seedtime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private routine to seed with microsecond counter from time-of-day structure. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a3c6083ac2789090df4eaac24b8ee3701">galsim::UniformDeviate</a>.</p>
 
 </div>
 </div>
@@ -311,7 +532,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ad4d5a292027e443bc10cfdfe89fb3b6f"></a>
+<a class="anchor" id="ae0444c6d505c4f8b6883ba97f459aef0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -319,7 +540,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::random::chi_squared_distribution galsim::Chi2Deviate::chi_squared</td>
+          <td class="memname">boost::random::chi_squared_distribution galsim::Chi2Deviate::_chi_squared</td>
         </tr>
       </table>
   </td>
@@ -331,7 +552,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aeaf9fb73a06347a09191f41e10fc77f7"></a>
+<a class="anchor" id="aab77ba0a5ad9441726fc717cdfc6e00e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -339,12 +560,12 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&amp; galsim::Chi2Deviate::u</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_base_deviate.html#aad9eaa469b85fc9dd4702f6ceff6be4c">rng_type</a>&gt; galsim::BaseDeviate::_rng</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -357,7 +578,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:18 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

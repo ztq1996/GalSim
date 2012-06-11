@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Packages</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">SBInterpolatedImage.h File Reference</div>  </div>
@@ -107,15 +108,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html">galsim::MultipleImageHelper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Helper class that stores multiple images and their fourier transforms.  <a href="classgalsim_1_1_multiple_image_helper.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html">galsim::MultipleImageHelper::MultipleImageHelperImpl</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html">galsim::SBInterpolatedImage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface Brightness Profile represented by interpolation over one or more data tables/images.  <a href="classgalsim_1_1_s_b_interpolated_image.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_s_b_interpolated_image_1_1_pixel.html">galsim::SBInterpolatedImage::Pixel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple structure used to index all pixels for photon shooting.  <a href="structgalsim_1_1_s_b_interpolated_image_1_1_pixel.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl_1_1_pixel.html">galsim::SBInterpolatedImage::SBInterpolatedImageImpl::Pixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple structure used to index all pixels for photon shooting.  <a href="structgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl_1_1_pixel.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Packages</h2></td></tr>
 <tr class="memitem:namespacegalsim"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html">galsim</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1sbp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html">galsim::sbp</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a548daa08288c33b0adee71e395cd9464"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Quintic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a548daa08288c33b0adee71e395cd9464">galsim::sbp::defaultKInterpolant1d</a> (<a class="el" href="mmgr_8h.html#a1ac41480eb2e4aadd52252ee550b630a">new</a> Quintic(sbp::kvalue_accuracy))</td></tr>
+<tr class="memdesc:a548daa08288c33b0adee71e395cd9464"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default k-space interpolator.  <a href="#a548daa08288c33b0adee71e395cd9464"></a><br/></td></tr>
+<tr class="memitem:aad3e58b51f650dc8f3580afd27adb791"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr<br class="typebreak"/>
+&lt; InterpolantXY &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#aad3e58b51f650dc8f3580afd27adb791">galsim::sbp::defaultKInterpolant2d</a> (<a class="el" href="mmgr_8h.html#a1ac41480eb2e4aadd52252ee550b630a">new</a> InterpolantXY(defaultKInterpolant1d))</td></tr>
+<tr class="memitem:a17ea3bb76fb12fd49a0c9befb1538d2a"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Lanczos &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a17ea3bb76fb12fd49a0c9befb1538d2a">galsim::sbp::defaultXInterpolant1d</a> (<a class="el" href="mmgr_8h.html#a1ac41480eb2e4aadd52252ee550b630a">new</a> Lanczos(5, true, kvalue_accuracy))</td></tr>
+<tr class="memdesc:a17ea3bb76fb12fd49a0c9befb1538d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default real-space interpolator.  <a href="#a17ea3bb76fb12fd49a0c9befb1538d2a"></a><br/></td></tr>
+<tr class="memitem:afad28ef09196668ea576bd4e2808e2c0"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr<br class="typebreak"/>
+&lt; InterpolantXY &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#afad28ef09196668ea576bd4e2808e2c0">galsim::sbp::defaultXInterpolant2d</a> (<a class="el" href="mmgr_8h.html#a1ac41480eb2e4aadd52252ee550b630a">new</a> InterpolantXY(defaultXInterpolant1d))</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -127,7 +143,7 @@ Variables</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

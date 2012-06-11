@@ -1,9 +1,7 @@
 var searchData=
 [
   ['radtoarcsec',['RadToArcsec',['../_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1',1,'AstronomicalConstants.h']]],
-  ['range',['range',['../classgalsim_1_1_lanczos.html#aa1c965c40a743c93f7ab13e2989deeb0',1,'galsim::Lanczos::range()'],['../classgalsim_1_1_cubic.html#adb072362fa53d3024040f3204ed01497',1,'galsim::Cubic::range()'],['../classgalsim_1_1_quintic.html#aa23dad6789bc012156f937166829774e',1,'galsim::Quintic::range()']]],
   ['range_5fdivision_5ffor_5fextrema',['RANGE_DIVISION_FOR_EXTREMA',['../namespacegalsim_1_1odd.html#a721bb3032840e1c1d1ff8fba61e337f2',1,'galsim::odd']]],
-  ['re',['re',['../classgalsim_1_1_l_vector_reference.html#a160869997d6e642496e6f9442ef0664e',1,'galsim::LVectorReference']]],
   ['realspace_5fconv_5fabserr',['realspace_conv_abserr',['../namespacegalsim_1_1sbp.html#a4e2192af0e86b5e4339691499bcccc7f',1,'galsim::sbp']]],
   ['realspace_5fconv_5frelerr',['realspace_conv_relerr',['../namespacegalsim_1_1sbp.html#a884b75e2c400ab1315f73179d647747a',1,'galsim::sbp']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],

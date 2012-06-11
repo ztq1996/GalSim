@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>GammaDeviate()
-: <a class="el" href="classgalsim_1_1_gamma_deviate.html#a26c85a6a844e533ed5f18c20642b09cf">galsim::GammaDeviate</a>
+: <a class="el" href="classgalsim_1_1_gamma_deviate.html#a9520bdfc891d517273dd4c97efc93b1f">galsim::GammaDeviate</a>
 </li>
 <li>GaussianDeviate()
 : <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53">galsim::GaussianDeviate</a>
@@ -138,14 +138,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_l_vector.html#af3fafc2c4cd6e61c1c1ddcbbc2ba235b">galsim::LVector</a>
 </li>
 <li>get()
-: <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_info_barn.html#a84ae25c2bd441af9195fa65b639228ea">galsim::SBSersic::InfoBarn</a>
+: <a class="el" href="classgalsim_1_1_f_f_t_w___array.html#a3872ecec522124b5891721d10cbc250e">galsim::FFTW_Array&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_info_barn.html#a84ae25c2bd441af9195fa65b639228ea">galsim::SBSersic::InfoBarn</a>
 </li>
 <li>get1d()
 : <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a801c0e4214c93f44d9d247430eea03c3">galsim::InterpolantXY</a>
 </li>
-<li>get_array()
-: <a class="el" href="classgalsim_1_1_k_table.html#afa72042ab5b79e49da4c348909bc7cb2">galsim::KTable</a>
-, <a class="el" href="classgalsim_1_1_x_table.html#a2b7df79316fc27f60a90b96b11f4b285">galsim::XTable</a>
+<li>get_fftw()
+: <a class="el" href="classgalsim_1_1_f_f_t_w___array.html#a622f881800d512319713e3c300042b36">galsim::FFTW_Array&lt; T &gt;</a>
 </li>
 <li>get_index_for_id()
 : <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a4e3e3d73e023c5bec87fc1bbeef40446">galsim.real.RealGalaxyCatalog</a>
@@ -165,6 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getBeta()
 : <a class="el" href="classgalsim_1_1_gamma_deviate.html#aa6638847089330e9468ea92de7b7b1d1">galsim::GammaDeviate</a>
 , <a class="el" href="classgalsim_1_1_s_b_moffat.html#a3483ac355299977b3ac6ea669394e1ee">galsim::SBMoffat</a>
+, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ab826ab6d8f660ecfac3bb0830c01033d">galsim::SBMoffat::SBMoffatImpl</a>
 , <a class="el" href="classgalsim_1_1_shear.html#addefb925e72ea70ce961dd656437ea98">galsim::Shear</a>
 , <a class="el" href="classgalsim_1_1_ellipse.html#ad4c7fca24d3c329a6a9e5f2bff276d2a">galsim::Ellipse</a>
 </li>
@@ -173,9 +174,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_base_image.html#a1b2f0e383636b33da939ca9660e75b13">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>getData()
-: <a class="el" href="classgalsim_1_1_base_image.html#af381da9d8c3ea968dde8434656f9d87c">galsim::BaseImage&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_image.html#a6432b40bed3eb9628f3414f906a367c4">galsim::Image&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_base_image.html#af381da9d8c3ea968dde8434656f9d87c">galsim::BaseImage&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image_view.html#a5adc3286b9018111250b4dac6315040b">galsim::ImageView&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_image.html#a6432b40bed3eb9628f3414f906a367c4">galsim::Image&lt; T &gt;</a>
 </li>
 <li>getDk()
 : <a class="el" href="classgalsim_1_1_k_table.html#ae9ff994aa6befd9ad508ceff24aa2bb7">galsim::KTable</a>
@@ -210,20 +211,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getFlux()
 : <a class="el" href="classgalsim_1_1_interval.html#ac5a894135818b1c645350f7376adc885">galsim::Interval</a>
 , <a class="el" href="classgalsim_1_1_photon_array.html#ac0873ae84dc208cf24e04bfb2cabdfcb">galsim::PhotonArray</a>
-, <a class="el" href="classgalsim_1_1_s_b_deconvolve.html#a790ab7b668318a5f6581eeea7e64b808">galsim::SBDeconvolve</a>
-, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a0f215c66db16a4d0527947977e0993cf">galsim::SBInterpolatedImage</a>
-, <a class="el" href="structgalsim_1_1_s_b_interpolated_image_1_1_pixel.html#a47860203295cbda90cf53ac0f54a2783">galsim::SBInterpolatedImage::Pixel</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#abe8d40385c197d69986e5881e474245e">galsim::SBAdd</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#a5b9096089bf3f08fe871f91d8495f4ff">galsim::SBDistort</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#a81710a1a1a92054eee52389b16d10f2a">galsim::SBConvolve</a>
-, <a class="el" href="classgalsim_1_1_s_b_gaussian.html#a0fed70cac1360adcc40561dc9287f9e2">galsim::SBGaussian</a>
-, <a class="el" href="classgalsim_1_1_s_b_sersic.html#a9a239757284e9df88533f694b657775c">galsim::SBSersic</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential.html#a02a5a31584b11af4c8b1b260513ed6cb">galsim::SBExponential</a>
-, <a class="el" href="classgalsim_1_1_s_b_airy.html#a1854168e9161932fcb913b4c32b75c05">galsim::SBAiry</a>
-, <a class="el" href="classgalsim_1_1_s_b_box.html#a5aa57b0196bcb2362162639225116c15">galsim::SBBox</a>
-, <a class="el" href="classgalsim_1_1_s_b_laguerre.html#acc3e9c1e3cda99f850fafb3acb7e776f">galsim::SBLaguerre</a>
-, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7775ba1a9fabbdb65bbd21ce11ccbdb5">galsim::SBMoffat</a>
+, <a class="el" href="classgalsim_1_1_s_b_deconvolve_1_1_s_b_deconvolve_impl.html#a4379c23361294f39dcdf322531655afd">galsim::SBDeconvolve::SBDeconvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a2791b85a2262d245729ef1760a427dfa">galsim::MultipleImageHelper</a>
+, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a0bbdc40c3af5fc9f72578ee52a1d6303">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="structgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl_1_1_pixel.html#a4da32c61493c50c08ba6163d446840fb">galsim::SBInterpolatedImage::SBInterpolatedImageImpl::Pixel</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a05d5ed6c970a600844cba603acba046b">galsim::SBProfile::SBProfileImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#aaab8f561988f9ada212211fa0754aa8a">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#aee338a3b40be39b31a578aedaeff99f3">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a8333832d1a08d5b735c0f101d95f251d">galsim::SBConvolve::SBConvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a14a1795522c9f0b040c53cd227d77ed1">galsim::SBGaussian::SBGaussianImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a146562404fb5c031cc20bf324a04614f">galsim::SBSersic::SBSersicImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a4012ab7f4942f2b89b12dbac1a525713">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#ab66b54ccf94e9404689c3a4073d5075e">galsim::SBAiry::SBAiryImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d81fc589f4f8075d824997e53fd3ff">galsim::SBBox::SBBoxImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html#a18944149eb98f5c1ae3ca577adc95b3a">galsim::SBLaguerre::SBLaguerreImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aa56cfeac2e6c715443ddde6c315c4d7b">galsim::SBMoffat::SBMoffatImpl</a>
 , <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a662d8ce421ecd90080bdcaaf6890aed8">galsim.base.GSObject</a>
 </li>
 <li>getG()
@@ -238,16 +241,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getGal()
 : <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a62f3ac08d3ad3285d5446d37346103a9">galsim.real.RealGalaxyCatalog</a>
 </li>
+<li>getHalfLightRadius()
+: <a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b">galsim::SBSersic</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a585b73adb99c7ab2242c9fc54e2d4a62">galsim::SBSersic::SBSersicImpl</a>
+</li>
 <li>getIter()
 : <a class="el" href="classgalsim_1_1_base_image.html#ad04741013519c0cac437170ae18e43a2">galsim::BaseImage&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image_view.html#aca120f89bb653188170c6ee66b17bf2f">galsim::ImageView&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image.html#a80daabe0cc11d2b2d83945ff8f408aef">galsim::Image&lt; T &gt;</a>
 </li>
-<li>getKInterpolant()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a6039408a191657118a622aa1dd03dada">galsim::SBInterpolatedImage</a>
-</li>
 <li>getKsqMax()
 : <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_sersic_info.html#a10fc41487fa262eb1615d18402db8399">galsim::SBSersic::SersicInfo</a>
+</li>
+<li>getKTable()
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a8a066c6a39687368d1a2583b1adf19d8">galsim::MultipleImageHelper</a>
 </li>
 <li>getMajor()
 : <a class="el" href="classgalsim_1_1_ellipse.html#ab2a7ef23ca4faad456d0850a0df75486">galsim::Ellipse</a>
@@ -275,6 +282,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_chi2_deviate.html#abc59517f36ca2a6817dc148e1056089a">galsim::Chi2Deviate</a>
 , <a class="el" href="classgalsim_1_1_binomial_deviate.html#aa01d58eea6f6cfc8b025029fc051e539">galsim::BinomialDeviate</a>
 , <a class="el" href="classgalsim_1_1_s_b_sersic.html#adf4a729b16ae4e3d27ec1ff763a29087">galsim::SBSersic</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a4a7e65e428fb14d4f73ade24ca0a33fd">galsim::SBSersic::SBSersicImpl</a>
 </li>
 <li>getNegativeFlux()
 : <a class="el" href="classgalsim_1_1_interpolant.html#a02f9d0cb2a63f1f5421a791713a4be6d">galsim::Interpolant</a>
@@ -282,20 +290,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_interpolant_x_y.html#af46ad8c69709782e26e60f6cdf1369ef">galsim::InterpolantXY</a>
 , <a class="el" href="classgalsim_1_1_delta.html#a4ece66a8e0d17cea889313fc8e464186">galsim::Delta</a>
 , <a class="el" href="classgalsim_1_1_nearest.html#a43ab8562e5a730252a8e52b2bf316700">galsim::Nearest</a>
+, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#ad7fa56fbcaf43235a28db5bcfe61b991">galsim::SBDistort::SBDistortImpl</a>
 , <a class="el" href="classgalsim_1_1_linear.html#aac252af47722b84b22ec6b0f0d6ad039">galsim::Linear</a>
 , <a class="el" href="classgalsim_1_1_cubic.html#a412ad573b026920e9f004d2303bbc548">galsim::Cubic</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#ad0db7b58734db6ffabfff96939733d66">galsim::SBConvolve</a>
 , <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html#a2588844558fa11a3298054daf3005576">galsim::OneDimensionalDeviate</a>
-, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ae0234cc7669fc80f9dc0520f45229cd4">galsim::SBInterpolatedImage</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#aa4e48571f49e7656794cfe8e95ddc63f">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#a73c41b61f46f90d811583038a8f31d68">galsim::SBAdd</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#a6802502831dc02a3e6c9d706762efa0e">galsim::SBDistort</a>
+, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#ab7c277eb198958eb6f085cdd9ed7452f">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a18a83c23b07541de669f0c2c9e0d2a1d">galsim::SBProfile::SBProfileImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a1c71215add59b0743625ab8611e4e817">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab38e2536a99fae5fdb90f68dbcbf857a">galsim::SBConvolve::SBConvolveImpl</a>
 </li>
 <li>getNft()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#af1e301684673027b56879becbf681c62">galsim::SBInterpolatedImage</a>
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#ad8d5a312104f95458289bbe332402489">galsim::MultipleImageHelper</a>
 </li>
 <li>getNin()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#aff35644c0160418e40ed549e2d893461">galsim::SBInterpolatedImage</a>
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#adec5791a43e0836e825adba756aa1321">galsim::MultipleImageHelper</a>
 </li>
 <li>getNSplit()
 : <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#ac1fa60b54ec18f9ba261751dccd324a1">galsim::integ::IntRegion&lt; T &gt;</a>
@@ -317,11 +326,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_p_q_index.html#ae83c476ff264e6daa853dbbb4c8b8ddc">galsim::PQIndex</a>
 , <a class="el" href="classgalsim_1_1_binomial_deviate.html#a2eb299b07d3987545347d83294156523">galsim::BinomialDeviate</a>
 </li>
-<li>getPixel()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#aa4955312fe00fe2c49176fb9bde244e4">galsim::SBInterpolatedImage</a>
-</li>
 <li>getPositiveFlux()
-: <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html#a340447da0fe708e013a438a55638ebee">galsim::OneDimensionalDeviate</a>
+: <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a588a704cfed80247deb6a059d05facc2">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a78c103f7a6b519f7283d8e35f0a2ff64">galsim::SBConvolve::SBConvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#acb63e192392b8b1cbf9daec86ad766a0">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html#a340447da0fe708e013a438a55638ebee">galsim::OneDimensionalDeviate</a>
 , <a class="el" href="classgalsim_1_1_delta.html#a45d8ef8d4be3671007e0743103994057">galsim::Delta</a>
 , <a class="el" href="classgalsim_1_1_interpolant.html#a1b1d24856db9c3b715b8e8a7326623dc">galsim::Interpolant</a>
 , <a class="el" href="classgalsim_1_1_interpolant2d.html#a45ced6f49814938856babf668a0338ec">galsim::Interpolant2d</a>
@@ -329,11 +338,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_nearest.html#a213e2e49a61000fa3e8bd41ca5ebc909">galsim::Nearest</a>
 , <a class="el" href="classgalsim_1_1_linear.html#ac40d9ecf5afdb0e066695d6dbdf99abd">galsim::Linear</a>
 , <a class="el" href="classgalsim_1_1_cubic.html#abe7a2ca5a0f7d909864e28a10140eeea">galsim::Cubic</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#a80dd793ae252839ffecbcc629ba8521a">galsim::SBDistort</a>
-, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ab5e4a00d9df2fde9208f616efa16ce7b">galsim::SBInterpolatedImage</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a2184a6272da2c6a5739ef6e27114a32d">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#ae2a7301da260cc0edb230f53d925aa7a">galsim::SBAdd</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#a388a5fae5ca6911ff06259eb173ecba5">galsim::SBConvolve</a>
+, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a17163461cf6cf1b705cc2ba99149dccc">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a9e31ecd8ecf842abba08120cd8cb7e82">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4fe556086907c011093194c8da8ed112">galsim::SBProfile::SBProfileImpl</a>
 </li>
 <li>getPSF()
 : <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#af4181801bb30177d54f6d9d1140f4dda">galsim.real.RealGalaxyCatalog</a>
@@ -352,30 +359,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getScale()
 : <a class="el" href="classgalsim_1_1_base_image.html#a393950862fcb10d43c584b9a5f5cd486">galsim::BaseImage&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a359166e628878eae97ac823cb4699f9f">galsim::MultipleImageHelper</a>
+</li>
+<li>getScaleRadius()
+: <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#aed8b4a30d52835e3d0f1282cebdbfff4">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9">galsim::SBExponential</a>
 </li>
 <li>getSigma()
 : <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a2d6ba6f4227c2e83948a094c63e09274">galsim::GaussianDeviate</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a660a6059eb84a0f87fd895047147cc14">galsim::SBGaussian::SBGaussianImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian.html#a77380b1384ef97b3a93e03f7da74a4df">galsim::SBGaussian</a>
 </li>
 <li>getStride()
 : <a class="el" href="classgalsim_1_1_base_image.html#a83ca0a96a41148f15db8ee1c875ca159">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>getTolerance()
-: <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a4d5d3781642d82b57cea21676a4b8912">galsim::InterpolantXY</a>
-, <a class="el" href="classgalsim_1_1_delta.html#afd3be792d3e16ffb6faafcb34882772a">galsim::Delta</a>
-, <a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">galsim::Nearest</a>
-, <a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">galsim::Linear</a>
-, <a class="el" href="classgalsim_1_1_interpolant.html#ad628ad52cd50055ed1af1d83a6d25007">galsim::Interpolant</a>
-, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">galsim::SincInterpolant</a>
-, <a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">galsim::Lanczos</a>
-, <a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">galsim::Quintic</a>
-, <a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">galsim::Cubic</a>
+: <a class="el" href="classgalsim_1_1_interpolant.html#ad628ad52cd50055ed1af1d83a6d25007">galsim::Interpolant</a>
 , <a class="el" href="classgalsim_1_1_interpolant2d.html#a3752c7992a73301c495bf6e72fc81312">galsim::Interpolant2d</a>
+, <a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">galsim::Nearest</a>
+, <a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">galsim::Cubic</a>
+, <a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">galsim::Quintic</a>
+, <a class="el" href="classgalsim_1_1_delta.html#afd3be792d3e16ffb6faafcb34882772a">galsim::Delta</a>
+, <a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">galsim::Linear</a>
+, <a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">galsim::Lanczos</a>
+, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">galsim::SincInterpolant</a>
+, <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a4d5d3781642d82b57cea21676a4b8912">galsim::InterpolantXY</a>
 </li>
 <li>getTotalFlux()
 : <a class="el" href="classgalsim_1_1_photon_array.html#a0bad70806cc2eec26744bd38a22e9a66">galsim::PhotonArray</a>
-</li>
-<li>getWeights()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a5c4d0ca2a8bdbb066b0a514c289abfa0">galsim::SBInterpolatedImage</a>
 </li>
 <li>getX()
 : <a class="el" href="classgalsim_1_1_photon_array.html#ab68eea1f477e8c7883e3efb72520cd53">galsim::PhotonArray</a>
@@ -383,8 +394,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getX0()
 : <a class="el" href="classgalsim_1_1_ellipse.html#a4906687522978c9668ae6d615c6899f5">galsim::Ellipse</a>
 </li>
-<li>getXInterpolant()
-: <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#af8b2e594685497c8f4ad7ea7d8689026">galsim::SBInterpolatedImage</a>
+<li>getXFlux()
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a5e4754b56ea28d6a12f5c1d4c8447263">galsim::MultipleImageHelper</a>
 </li>
 <li>getXMax()
 : <a class="el" href="classgalsim_1_1_bounds.html#a052519a1ab17b622b77176bf4fc678cc">galsim::Bounds&lt; T &gt;</a>
@@ -395,15 +406,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_bounds.html#ac5dca6d3163f44289e3e9960e0d70701">galsim::Bounds&lt; T &gt;</a>
 </li>
 <li>getXRange()
-: <a class="el" href="classgalsim_1_1_s_b_sersic.html#afbcecb604f360231c3f100c670ede3bb">galsim::SBSersic</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#aa0e2deecf527f561ab14a16d0fc3ccd1">galsim::SBConvolve</a>
-, <a class="el" href="classgalsim_1_1_s_b_box.html#a9a1cd914f99564fc278c246b7ceefade">galsim::SBBox</a>
-, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a7512830c04f593e07bcfd6692bda5e23">galsim::SBInterpolatedImage</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#ac2bf480b38a379781477f67f0cac08fd">galsim::SBDistort</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential.html#adf8241e452bcd4e66d1176d09654af89">galsim::SBExponential</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#ae1a5342402a80f964b17b5a0a4867f3b">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_moffat.html#ae0f3f53c9760adf4a3e4c0eeef067fdb">galsim::SBMoffat</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#ae76c24d34123c631a8ee53fbd8280cf3">galsim::SBAdd</a>
+: <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a710f3163bffd62549ebae3e5759588a3">galsim::SBMoffat::SBMoffatImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a9accbc3039f89d485dd6afd0d81711eb">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#adeebbfa4af0040bce9b8c15d23233189">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a1b6d86089c9cdd7315c0199634782adb">galsim::SBProfile::SBProfileImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a0d4d508caf1c79ddf05d7a9d162f32c5">galsim::SBConvolve::SBConvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a3d22cc09bfcd1739c62d7ffb0df6eae3">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#ab896fe5a7b9ff5cc00167c9268d857cb">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#ae5a2125c390c01bcde7d8f9603134c5e">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a9587ff19df32ce8b81fc63f313c13fb4">galsim::SBSersic::SBSersicImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a114c3b6df25a9639ded3686f94641058">galsim::SBBox::SBBoxImpl</a>
+</li>
+<li>getXTable()
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#ab31ab4ab03d308757452fc14b2fff85a">galsim::MultipleImageHelper</a>
 </li>
 <li>getXTolerance()
 : <a class="el" href="classgalsim_1_1_solve.html#a5146f4a23b994d3399ea057d258b2ec4">galsim::Solve&lt; F, T &gt;</a>
@@ -411,36 +426,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getY()
 : <a class="el" href="classgalsim_1_1_photon_array.html#af491d851d094a1d2127a2230b6536adc">galsim::PhotonArray</a>
 </li>
+<li>getYFlux()
+: <a class="el" href="classgalsim_1_1_multiple_image_helper.html#ac40f7d79a0722517dd88d534a5b1e08f">galsim::MultipleImageHelper</a>
+</li>
 <li>getYMax()
-: <a class="el" href="classgalsim_1_1_base_image.html#ae7ad59730260e011b9880f755e14720d">galsim::BaseImage&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_bounds.html#abd66b3500b498c4a9b4e328ce51c56b2">galsim::Bounds&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_bounds.html#abd66b3500b498c4a9b4e328ce51c56b2">galsim::Bounds&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_base_image.html#ae7ad59730260e011b9880f755e14720d">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>getYMin()
-: <a class="el" href="classgalsim_1_1_base_image.html#a9d637b0bc9dcafa0087040d71fcb4ca5">galsim::BaseImage&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_bounds.html#a3648863c3c87c81a6b687c2f29b335f8">galsim::Bounds&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_bounds.html#a3648863c3c87c81a6b687c2f29b335f8">galsim::Bounds&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_base_image.html#a9d637b0bc9dcafa0087040d71fcb4ca5">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>getYRange()
-: <a class="el" href="classgalsim_1_1_s_b_sersic.html#a56cd74adb3823e123e880fd434fd6068">galsim::SBSersic</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#af3be51b55f28de9ae62ee4df531c069e">galsim::SBDistort</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#af2fff68ce043ad1c93d333be47c2f9e8">galsim::SBAdd</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential.html#af8b785f367cfda688bf8dcbb8d7f956f">galsim::SBExponential</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort.html#a515e87957ea926e10ad590872ec38363">galsim::SBDistort</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#a96be458ff76353b9b1c5d1a803b44a63">galsim::SBConvolve</a>
-, <a class="el" href="classgalsim_1_1_s_b_add.html#a4dde7b692afc60529b2ea221f0a7abc7">galsim::SBAdd</a>
-, <a class="el" href="classgalsim_1_1_s_b_box.html#ac45e62d58fcd0c2bf2219b1a2b865cb1">galsim::SBBox</a>
-, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a1c34f79e2dbd8616397f4600f830d9a4">galsim::SBMoffat</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a9bb61aaef35b593d15f7f56fbcd41613">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a02ea5b276ffc755b05f92304f81eac96">galsim::SBMoffat</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#ab438f3a016d837d336025ca699aeaef3">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a5c1f8473eb6ad8c1be9b9bf2c8dbb22e">galsim::SBInterpolatedImage</a>
-, <a class="el" href="classgalsim_1_1_s_b_convolve.html#a2636171b468b7c6f50f1438d2d7f316d">galsim::SBConvolve</a>
-, <a class="el" href="classgalsim_1_1_s_b_sersic.html#a6c29684eba79f2d4374e8925786ab8d3">galsim::SBSersic</a>
+: <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ac6d47560c04f67072ad7e0f708d6f9cb">galsim::SBProfile::SBProfileImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a03452b6fa18fdf47d4ff4fad8cb10861">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#aedbdbaaadee9f236d055a538c03ef2bc">galsim::SBSersic::SBSersicImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a0c902c0b4520f0d220001fa4a62ca5d7">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a9a8ac74b8c7fcd77b823347175b5b9ff">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a04d9a2b8d443e58664beda2a2c7385aa">galsim::SBConvolve::SBConvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a4bb5003f9513e04f1744cc202f44b800">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a61bea57a1b73f8b7b3b4a909671ac070">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a033f2a12737c5b12602b088dc2f764ec">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2a553f72bcab92232595f23f5deb81e7">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#afad7f70ebbc65b50c032efc3d684c608">galsim::SBMoffat::SBMoffatImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9ad12c72c3783c889713d81266737247">galsim::SBBox::SBBoxImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a3fc25a15c465df01a218d99f0e6a262f">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a03b9da6983541ba44981fb8102957b64">galsim::SBProfile::SBProfileImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a6e07090d85668d58c19b677f7c9b5d6a">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a596155a12c8661537c51558660b3bb16">galsim::SBMoffat::SBMoffatImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab3ef171271e71229c164a34c5d9f3995">galsim::SBConvolve::SBConvolveImpl</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:19 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

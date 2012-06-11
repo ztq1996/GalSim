@@ -117,8 +117,8 @@ Inheritance diagram for galsim::Lanczos:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a837b928fbd45b3d184021810a2d575c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a837b928fbd45b3d184021810a2d575c0">Lanczos</a> (int n_, bool fluxConserve_=false, double tol=1.e-3)</td></tr>
-<tr class="memdesc:a837b928fbd45b3d184021810a2d575c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a837b928fbd45b3d184021810a2d575c0"></a><br/></td></tr>
+<tr class="memitem:a01ed8e7e82477d50469a5ad708fc9119"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a01ed8e7e82477d50469a5ad708fc9119">Lanczos</a> (int n, bool fluxConserve=false, double tol=1.e-3)</td></tr>
+<tr class="memdesc:a01ed8e7e82477d50469a5ad708fc9119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a01ed8e7e82477d50469a5ad708fc9119"></a><br/></td></tr>
 <tr class="memitem:a5e462cccaa59c2b4210ad516c975aaf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a5e462cccaa59c2b4210ad516c975aaf3">~Lanczos</a> ()</td></tr>
 <tr class="memitem:afbd265cac5e9b7aa688b10fe5d890437"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">getTolerance</a> () const </td></tr>
 <tr class="memdesc:afbd265cac5e9b7aa688b10fe5d890437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> is calculated.  <a href="#afbd265cac5e9b7aa688b10fe5d890437"></a><br/></td></tr>
@@ -151,8 +151,9 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a291876b8f5b0db4e83342b72a24512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_interpolant_function.html">InterpolantFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9a291876b8f5b0db4e83342b72a24512">_interp</a></td></tr>
 <tr class="memdesc:a9a291876b8f5b0db4e83342b72a24512"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> to sampler.  <a href="#a9a291876b8f5b0db4e83342b72a24512"></a><br/></td></tr>
-<tr class="memitem:a4a24cf78a8459916053d454730c4e409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a4a24cf78a8459916053d454730c4e409">_sampler</a></td></tr>
-<tr class="memdesc:a4a24cf78a8459916053d454730c4e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#a4a24cf78a8459916053d454730c4e409"></a><br/></td></tr>
+<tr class="memitem:aa0257bdab5213fa88e524a930126cf9d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa0257bdab5213fa88e524a930126cf9d">_sampler</a></td></tr>
+<tr class="memdesc:aa0257bdab5213fa88e524a930126cf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#aa0257bdab5213fa88e524a930126cf9d"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -160,25 +161,25 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a018c36e8f288d40b583f7301fec933b1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a018c36e8f288d40b583f7301fec933b1">n</a></td></tr>
-<tr class="memdesc:a018c36e8f288d40b583f7301fec933b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually storing 2n, since it's used mostly this way.  <a href="#a018c36e8f288d40b583f7301fec933b1"></a><br/></td></tr>
-<tr class="memitem:aa1c965c40a743c93f7ab13e2989deeb0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#aa1c965c40a743c93f7ab13e2989deeb0">range</a></td></tr>
-<tr class="memdesc:aa1c965c40a743c93f7ab13e2989deeb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce range slightly from n so we're not using zero-valued endpoints.  <a href="#aa1c965c40a743c93f7ab13e2989deeb0"></a><br/></td></tr>
-<tr class="memitem:ac519011c73a354e596b92ab7210490ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ac519011c73a354e596b92ab7210490ad">fluxConserve</a></td></tr>
-<tr class="memdesc:ac519011c73a354e596b92ab7210490ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to insure conservation of constant (sky) flux.  <a href="#ac519011c73a354e596b92ab7210490ad"></a><br/></td></tr>
-<tr class="memitem:a730134ab4435b6734eec843b68b3932e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a730134ab4435b6734eec843b68b3932e">tolerance</a></td></tr>
-<tr class="memdesc:a730134ab4435b6734eec843b68b3932e"><td class="mdescLeft">&#160;</td><td class="mdescRight">k-space accuracy parameter  <a href="#a730134ab4435b6734eec843b68b3932e"></a><br/></td></tr>
-<tr class="memitem:ad3eda6fc98e3f5cbf6079eafb0e68aaf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ad3eda6fc98e3f5cbf6079eafb0e68aaf">uMax</a></td></tr>
-<tr class="memdesc:ad3eda6fc98e3f5cbf6079eafb0e68aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">truncation point for Fourier transform  <a href="#ad3eda6fc98e3f5cbf6079eafb0e68aaf"></a><br/></td></tr>
-<tr class="memitem:a82ea4cf0e23ea495623e2070d2ac51ae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a82ea4cf0e23ea495623e2070d2ac51ae">u1</a></td></tr>
-<tr class="memdesc:a82ea4cf0e23ea495623e2070d2ac51ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficient for flux correction  <a href="#a82ea4cf0e23ea495623e2070d2ac51ae"></a><br/></td></tr>
-<tr class="memitem:adfeb15efd3147026a504fea3d7078036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#adfeb15efd3147026a504fea3d7078036">tab</a></td></tr>
-<tr class="memdesc:adfeb15efd3147026a504fea3d7078036"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_table.html">Table</a> for Fourier transform.  <a href="#adfeb15efd3147026a504fea3d7078036"></a><br/></td></tr>
+<tr class="memitem:a974b0162c27be8233fdcbca16c60076e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a974b0162c27be8233fdcbca16c60076e">_n</a></td></tr>
+<tr class="memdesc:a974b0162c27be8233fdcbca16c60076e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually storing 2n, since it's used mostly this way.  <a href="#a974b0162c27be8233fdcbca16c60076e"></a><br/></td></tr>
+<tr class="memitem:ae49612450f22d2cbddd45ebdd7b3cdc5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ae49612450f22d2cbddd45ebdd7b3cdc5">_range</a></td></tr>
+<tr class="memdesc:ae49612450f22d2cbddd45ebdd7b3cdc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce range slightly from n so we're not using zero-valued endpoints.  <a href="#ae49612450f22d2cbddd45ebdd7b3cdc5"></a><br/></td></tr>
+<tr class="memitem:a535b29dbbc5d4535f686a578c33e671a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a535b29dbbc5d4535f686a578c33e671a">_fluxConserve</a></td></tr>
+<tr class="memdesc:a535b29dbbc5d4535f686a578c33e671a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to insure conservation of constant (sky) flux.  <a href="#a535b29dbbc5d4535f686a578c33e671a"></a><br/></td></tr>
+<tr class="memitem:a15c74d8f6cd84ed92f725a06e00b9774"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a15c74d8f6cd84ed92f725a06e00b9774">_tolerance</a></td></tr>
+<tr class="memdesc:a15c74d8f6cd84ed92f725a06e00b9774"><td class="mdescLeft">&#160;</td><td class="mdescRight">k-space accuracy parameter  <a href="#a15c74d8f6cd84ed92f725a06e00b9774"></a><br/></td></tr>
+<tr class="memitem:a4e65c54d8773fdf1c3729ac319186454"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a4e65c54d8773fdf1c3729ac319186454">_uMax</a></td></tr>
+<tr class="memdesc:a4e65c54d8773fdf1c3729ac319186454"><td class="mdescLeft">&#160;</td><td class="mdescRight">truncation point for Fourier transform  <a href="#a4e65c54d8773fdf1c3729ac319186454"></a><br/></td></tr>
+<tr class="memitem:aec80a798b67a5bc1ea43720b7a7803c8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#aec80a798b67a5bc1ea43720b7a7803c8">_u1</a></td></tr>
+<tr class="memdesc:aec80a798b67a5bc1ea43720b7a7803c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficient for flux correction  <a href="#aec80a798b67a5bc1ea43720b7a7803c8"></a><br/></td></tr>
+<tr class="memitem:ac10738ac1c3743368afef4f274fe79e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ac10738ac1c3743368afef4f274fe79e3">_tab</a></td></tr>
+<tr class="memdesc:ac10738ac1c3743368afef4f274fe79e3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_table.html">Table</a> for Fourier transform.  <a href="#ac10738ac1c3743368afef4f274fe79e3"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a837b928fbd45b3d184021810a2d575c0"></a>
+<a class="anchor" id="a01ed8e7e82477d50469a5ad708fc9119"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -186,13 +187,13 @@ Private Attributes</h2></td></tr>
           <td class="memname">galsim::Lanczos::Lanczos </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n_</em>, </td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fluxConserve_</em> = <code>false</code>, </td>
+          <td class="paramname"><em>fluxConserve</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -212,8 +213,8 @@ Private Attributes</h2></td></tr>
 <p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve tweaks the function so that it conserves value of constant (DC) input data. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n_</td><td>Filter order; must be given on input and cannot be changed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fluxConserve_</td><td>Set true to adjust filter to be exact for constant inputs. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Filter order; must be given on input and cannot be changed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fluxConserve</td><td>Set true to adjust filter to be exact for constant inputs. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Sets accuracy and extent of Fourier transform. </td></tr>
   </table>
   </dd>
@@ -637,6 +638,28 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a535b29dbbc5d4535f686a578c33e671a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::Lanczos::_fluxConserve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set to insure conservation of constant (sky) flux. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9a291876b8f5b0db4e83342b72a24512"></a>
 <div class="memitem">
 <div class="memproto">
@@ -659,7 +682,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4a24cf78a8459916053d454730c4e409"></a>
+<a class="anchor" id="a974b0162c27be8233fdcbca16c60076e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -667,51 +690,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>* galsim::Interpolant::_sampler</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac519011c73a354e596b92ab7210490ad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool galsim::Lanczos::fluxConserve</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set to insure conservation of constant (sky) flux. </p>
-
-</div>
-</div>
-<a class="anchor" id="a018c36e8f288d40b583f7301fec933b1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Lanczos::n</td>
+          <td class="memname">double galsim::Lanczos::_n</td>
         </tr>
       </table>
   </td>
@@ -725,7 +704,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa1c965c40a743c93f7ab13e2989deeb0"></a>
+<a class="anchor" id="ae49612450f22d2cbddd45ebdd7b3cdc5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -733,7 +712,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Lanczos::range</td>
+          <td class="memname">double galsim::Lanczos::_range</td>
         </tr>
       </table>
   </td>
@@ -747,7 +726,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adfeb15efd3147026a504fea3d7078036"></a>
+<a class="anchor" id="aa0257bdab5213fa88e524a930126cf9d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -755,7 +734,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt;double,double&gt; galsim::Lanczos::tab</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>&gt; galsim::Interpolant::_sampler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac10738ac1c3743368afef4f274fe79e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt;double,double&gt; galsim::Lanczos::_tab</td>
         </tr>
       </table>
   </td>
@@ -769,7 +770,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a730134ab4435b6734eec843b68b3932e"></a>
+<a class="anchor" id="a15c74d8f6cd84ed92f725a06e00b9774"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -777,7 +778,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Lanczos::tolerance</td>
+          <td class="memname">double galsim::Lanczos::_tolerance</td>
         </tr>
       </table>
   </td>
@@ -791,7 +792,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a82ea4cf0e23ea495623e2070d2ac51ae"></a>
+<a class="anchor" id="aec80a798b67a5bc1ea43720b7a7803c8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -799,7 +800,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Lanczos::u1</td>
+          <td class="memname">double galsim::Lanczos::_u1</td>
         </tr>
       </table>
   </td>
@@ -813,7 +814,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad3eda6fc98e3f5cbf6079eafb0e68aaf"></a>
+<a class="anchor" id="a4e65c54d8773fdf1c3729ac319186454"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -821,7 +822,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Lanczos::uMax</td>
+          <td class="memname">double galsim::Lanczos::_uMax</td>
         </tr>
       </table>
   </td>
@@ -841,7 +842,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

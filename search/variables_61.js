@@ -15,6 +15,5 @@ var searchData=
   ['arcmin',['ARCMIN',['../_astronomical_constants_8h.html#a0f3de8cc08ae1e66965f5e04e7fb1eed',1,'AstronomicalConstants.h']]],
   ['arcsec',['ARCSEC',['../_astronomical_constants_8h.html#a65dbe000c12ec62523c2e0a8e68ff3e6',1,'AstronomicalConstants.h']]],
   ['arg',['arg',['../classgalsim_1_1_table_entry.html#ac4d6894055eea081c58317f6f45e5df7',1,'galsim::TableEntry']]],
-  ['array',['array',['../classgalsim_1_1_k_table.html#a0d91405683ee6e4784bc5850145ce1bd',1,'galsim::KTable::array()'],['../classgalsim_1_1_x_table.html#a12688ed689273f50074a8cb98a5629ff',1,'galsim::XTable::array()']]],
   ['au',['AU',['../_astronomical_constants_8h.html#a2b9e1ccc1a034cb26b9c794767315346',1,'AstronomicalConstants.h']]]
 ];

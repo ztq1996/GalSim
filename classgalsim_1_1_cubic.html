@@ -151,8 +151,9 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a291876b8f5b0db4e83342b72a24512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_interpolant_function.html">InterpolantFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9a291876b8f5b0db4e83342b72a24512">_interp</a></td></tr>
 <tr class="memdesc:a9a291876b8f5b0db4e83342b72a24512"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> to sampler.  <a href="#a9a291876b8f5b0db4e83342b72a24512"></a><br/></td></tr>
-<tr class="memitem:a4a24cf78a8459916053d454730c4e409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a4a24cf78a8459916053d454730c4e409">_sampler</a></td></tr>
-<tr class="memdesc:a4a24cf78a8459916053d454730c4e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#a4a24cf78a8459916053d454730c4e409"></a><br/></td></tr>
+<tr class="memitem:aa0257bdab5213fa88e524a930126cf9d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa0257bdab5213fa88e524a930126cf9d">_sampler</a></td></tr>
+<tr class="memdesc:aa0257bdab5213fa88e524a930126cf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#aa0257bdab5213fa88e524a930126cf9d"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -160,13 +161,13 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:adb072362fa53d3024040f3204ed01497"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#adb072362fa53d3024040f3204ed01497">range</a></td></tr>
-<tr class="memdesc:adb072362fa53d3024040f3204ed01497"><td class="mdescLeft">&#160;</td><td class="mdescRight">x range, reduced slightly from n=2 so we're not using zero-valued endpoints.  <a href="#adb072362fa53d3024040f3204ed01497"></a><br/></td></tr>
-<tr class="memitem:a3c05c348cb69c535774dcd4d10f51ebf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a3c05c348cb69c535774dcd4d10f51ebf">tolerance</a></td></tr>
-<tr class="memitem:a8d61a300e14a47ba4d54f09ec6352297"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a8d61a300e14a47ba4d54f09ec6352297">uMax</a></td></tr>
-<tr class="memdesc:a8d61a300e14a47ba4d54f09ec6352297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncation point for Fourier transform.  <a href="#a8d61a300e14a47ba4d54f09ec6352297"></a><br/></td></tr>
-<tr class="memitem:a1690659aff43d3cc0d4fef86e84c6bcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a1690659aff43d3cc0d4fef86e84c6bcf">tab</a></td></tr>
-<tr class="memdesc:a1690659aff43d3cc0d4fef86e84c6bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabulated Fourier transform.  <a href="#a1690659aff43d3cc0d4fef86e84c6bcf"></a><br/></td></tr>
+<tr class="memitem:acc7077b67b28d45f7f661dc2657e859e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#acc7077b67b28d45f7f661dc2657e859e">_range</a></td></tr>
+<tr class="memdesc:acc7077b67b28d45f7f661dc2657e859e"><td class="mdescLeft">&#160;</td><td class="mdescRight">x range, reduced slightly from n=2 so we're not using zero-valued endpoints.  <a href="#acc7077b67b28d45f7f661dc2657e859e"></a><br/></td></tr>
+<tr class="memitem:a56bd7a3391852b33bf756eb07d03dd30"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a56bd7a3391852b33bf756eb07d03dd30">_tolerance</a></td></tr>
+<tr class="memitem:af2ee24f860f6f0a4606c0068e2ff07fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#af2ee24f860f6f0a4606c0068e2ff07fe">_uMax</a></td></tr>
+<tr class="memdesc:af2ee24f860f6f0a4606c0068e2ff07fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncation point for Fourier transform.  <a href="#af2ee24f860f6f0a4606c0068e2ff07fe"></a><br/></td></tr>
+<tr class="memitem:afa184a051704889afbc900f43aec7661"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#afa184a051704889afbc900f43aec7661">_tab</a></td></tr>
+<tr class="memdesc:afa184a051704889afbc900f43aec7661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabulated Fourier transform.  <a href="#afa184a051704889afbc900f43aec7661"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgalsim_1_1_cubic.html" title="Cubic interpolator exact to 3rd order Taylor expansion.">Cubic</a> interpolator exact to 3rd order Taylor expansion. </p>
@@ -630,7 +631,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4a24cf78a8459916053d454730c4e409"></a>
+<a class="anchor" id="acc7077b67b28d45f7f661dc2657e859e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -638,29 +639,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>* galsim::Interpolant::_sampler</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="adb072362fa53d3024040f3204ed01497"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Cubic::range</td>
+          <td class="memname">double galsim::Cubic::_range</td>
         </tr>
       </table>
   </td>
@@ -674,7 +653,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1690659aff43d3cc0d4fef86e84c6bcf"></a>
+<a class="anchor" id="aa0257bdab5213fa88e524a930126cf9d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -682,7 +661,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt;double,double&gt; galsim::Cubic::tab</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>&gt; galsim::Interpolant::_sampler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="afa184a051704889afbc900f43aec7661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt;double,double&gt; galsim::Cubic::_tab</td>
         </tr>
       </table>
   </td>
@@ -696,7 +697,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3c05c348cb69c535774dcd4d10f51ebf"></a>
+<a class="anchor" id="a56bd7a3391852b33bf756eb07d03dd30"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -704,7 +705,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Cubic::tolerance</td>
+          <td class="memname">double galsim::Cubic::_tolerance</td>
         </tr>
       </table>
   </td>
@@ -716,7 +717,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8d61a300e14a47ba4d54f09ec6352297"></a>
+<a class="anchor" id="af2ee24f860f6f0a4606c0068e2ff07fe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -724,7 +725,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::Cubic::uMax</td>
+          <td class="memname">double galsim::Cubic::_uMax</td>
         </tr>
       </table>
   </td>
@@ -744,7 +745,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

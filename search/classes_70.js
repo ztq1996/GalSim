@@ -3,7 +3,7 @@ var searchData=
   ['pentanary_5ffunction',['pentanary_function',['../structgalsim_1_1integ_1_1pentanary__function.html',1,'galsim::integ']]],
   ['photonarray',['PhotonArray',['../classgalsim_1_1_photon_array.html',1,'galsim']]],
   ['pixel',['Pixel',['../classgalsim_1_1base_1_1_pixel.html',1,'galsim::base']]],
-  ['pixel',['Pixel',['../structgalsim_1_1_s_b_interpolated_image_1_1_pixel.html',1,'galsim::SBInterpolatedImage']]],
+  ['pixel',['Pixel',['../structgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl_1_1_pixel.html',1,'galsim::SBInterpolatedImage::SBInterpolatedImageImpl']]],
   ['pointer_5fto_5fnullary_5ffunction',['pointer_to_nullary_function',['../classgalsim_1_1integ_1_1pointer__to__nullary__function.html',1,'galsim::integ']]],
   ['pointer_5fto_5ftetranary_5ffunction',['pointer_to_tetranary_function',['../classgalsim_1_1integ_1_1pointer__to__tetranary__function.html',1,'galsim::integ']]],
   ['pointer_5fto_5ftrinary_5ffunction',['pointer_to_trinary_function',['../classgalsim_1_1integ_1_1pointer__to__trinary__function.html',1,'galsim::integ']]],

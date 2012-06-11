@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html',1,'galsim']]],
   ['baseimage',['BaseImage',['../classgalsim_1_1_base_image.html',1,'galsim']]],
   ['baseimage_3c_20t1_20_3e',['BaseImage&lt; T1 &gt;',['../classgalsim_1_1_base_image.html',1,'galsim']]],
   ['baseimage_3c_20t2_20_3e',['BaseImage&lt; T2 &gt;',['../classgalsim_1_1_base_image.html',1,'galsim']]],

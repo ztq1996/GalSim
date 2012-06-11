@@ -90,6 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
@@ -102,13 +104,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classgalsim_1_1_gaussian_deviate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_random_8h_source.html">Random.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for galsim::GaussianDeviate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classgalsim_1_1_gaussian_deviate.png" usemap="#galsim::GaussianDeviate_map" alt=""/>
+  <map id="galsim::GaussianDeviate_map" name="galsim::GaussianDeviate_map">
+<area href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates." alt="galsim::BaseDeviate" shape="rect" coords="0,0,148,24"/>
+</map>
+ </div></div>
 
 <p><a href="classgalsim_1_1_gaussian_deviate-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a543b97e77fec2fb80027da08321ebd73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73">GaussianDeviate</a> (<a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;u_, double mean=0., double sigma=1.)</td></tr>
-<tr class="memdesc:a543b97e77fec2fb80027da08321ebd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gaussian-distributed RNG.  <a href="#a543b97e77fec2fb80027da08321ebd73"></a><br/></td></tr>
+<tr class="memitem:a25ac179f7248e9f01c4a5203ccd1ce5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a25ac179f7248e9f01c4a5203ccd1ce5e">GaussianDeviate</a> (double mean=0., double sigma=1.)</td></tr>
+<tr class="memdesc:a25ac179f7248e9f01c4a5203ccd1ce5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gaussian-distributed RNG, using time of day as seed.  <a href="#a25ac179f7248e9f01c4a5203ccd1ce5e"></a><br/></td></tr>
+<tr class="memitem:a4efa947a576a59a86fd8712699ae53dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a4efa947a576a59a86fd8712699ae53dd">GaussianDeviate</a> (long lseed, double mean=0., double sigma=1.)</td></tr>
+<tr class="memdesc:a4efa947a576a59a86fd8712699ae53dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gaussian-distributed RNG, using the provided value as seed.  <a href="#a4efa947a576a59a86fd8712699ae53dd"></a><br/></td></tr>
+<tr class="memitem:adf99a364b3fc725a5582399b5ed3c816"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#adf99a364b3fc725a5582399b5ed3c816">GaussianDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double mean=0., double sigma=1.)</td></tr>
+<tr class="memdesc:adf99a364b3fc725a5582399b5ed3c816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gaussian-distributed RNG, sharing the random number generator with rhs.  <a href="#adf99a364b3fc725a5582399b5ed3c816"></a><br/></td></tr>
+<tr class="memitem:a775887eebb3e9594186c26ee32e39f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53">GaussianDeviate</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a775887eebb3e9594186c26ee32e39f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a775887eebb3e9594186c26ee32e39f53"></a><br/></td></tr>
 <tr class="memitem:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">operator()</a> ()</td></tr>
 <tr class="memdesc:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a5c6ac1934a4f8297237dc6036f6cc87e"></a><br/></td></tr>
 <tr class="memitem:a03c91202c223207cf04f61701a7c9b67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a03c91202c223207cf04f61701a7c9b67">getMean</a> ()</td></tr>
@@ -130,6 +147,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d6ba6f4227c2e83948a094c63e09274"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a2d6ba6f4227c2e83948a094c63e09274">getSigma</a> ()</td></tr>
 <tr class="memitem:a44170072ecfb1eef0d5275239f0c0e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a44170072ecfb1eef0d5275239f0c0e28">setMean</a> (double mean)</td></tr>
 <tr class="memitem:ae3e00a8651fd2f35df012a524fda238b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#ae3e00a8651fd2f35df012a524fda238b">setSigma</a> (double sigma)</td></tr>
+<tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
+<tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
+<tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
+<tr class="memdesc:a9a44c1be0021535a594d4f8c505b1a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a9a44c1be0021535a594d4f8c505b1a99"></a><br/></td></tr>
+<tr class="memitem:af28797531e7deb113b54f4a1fc19798d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d">reset</a> ()</td></tr>
+<tr class="memdesc:af28797531e7deb113b54f4a1fc19798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates.  <a href="#af28797531e7deb113b54f4a1fc19798d"></a><br/></td></tr>
+<tr class="memitem:a467ee386aebd84bb837c016718e8c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec">reset</a> (long lseed)</td></tr>
+<tr class="memdesc:a467ee386aebd84bb837c016718e8c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like seed(lseed), but severs the relationship between other Deviates.  <a href="#a467ee386aebd84bb837c016718e8c6ec"></a><br/></td></tr>
+<tr class="memitem:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f">reset</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev)</td></tr>
+<tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5c0a4b5e400c7a0539fa9f0d6e6de131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a5c0a4b5e400c7a0539fa9f0d6e6de131">seedtime</a> ()</td></tr>
+<tr class="memdesc:a5c0a4b5e400c7a0539fa9f0d6e6de131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private routine to seed with microsecond counter from time-of-day structure.  <a href="#a5c0a4b5e400c7a0539fa9f0d6e6de131"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aab77ba0a5ad9441726fc717cdfc6e00e"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html#aad9eaa469b85fc9dd4702f6ceff6be4c">rng_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#aab77ba0a5ad9441726fc717cdfc6e00e">_rng</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -141,22 +177,17 @@ boost::variate_generator<br class="typebreak"/>
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a775887eebb3e9594186c26ee32e39f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53">GaussianDeviate</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a775887eebb3e9594186c26ee32e39f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide copy and assignment so users do not create duplicate (correlated!) RNG's:  <a href="#a775887eebb3e9594186c26ee32e39f53"></a><br/></td></tr>
-<tr class="memitem:af44b362c8cfbb9a01ded50b1552ff3a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#af44b362c8cfbb9a01ded50b1552ff3a1">operator=</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
-<tr class="memdesc:af44b362c8cfbb9a01ded50b1552ff3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide copy and assignment so users do not create duplicate (correlated!) RNG's:  <a href="#af44b362c8cfbb9a01ded50b1552ff3a1"></a><br/></td></tr>
-<tr class="memitem:a775887eebb3e9594186c26ee32e39f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53">GaussianDeviate</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
 <tr class="memitem:af44b362c8cfbb9a01ded50b1552ff3a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#af44b362c8cfbb9a01ded50b1552ff3a1">operator=</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a45aa06be4feb956c855b0a8daf012576"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a45aa06be4feb956c855b0a8daf012576">u</a></td></tr>
-<tr class="memitem:a1a2a6fb97401b43d8d307145452d0b9d"><td class="memItemLeft" align="right" valign="top">boost::random::normal_distribution&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a1a2a6fb97401b43d8d307145452d0b9d">normal</a></td></tr>
+<tr class="memitem:adad30e52d74029d6befab603bdb0d8ed"><td class="memItemLeft" align="right" valign="top">boost::random::normal_distribution&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#adad30e52d74029d6befab603bdb0d8ed">_normal</a></td></tr>
+<tr class="memitem:a67bdd9353ae7de93a41dcab60cd6a237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a67bdd9353ae7de93a41dcab60cd6a237">u</a></td></tr>
 <tr class="memitem:add3afcd7fdf4b461466246d9439be7e2"><td class="memItemLeft" align="right" valign="top">boost::normal_distribution *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2">normal</a></td></tr>
 <tr class="memitem:ab880f7e2824fbf6a29ea174c55e8b588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a66b46dda02d6ddc09ab8409030740415">GaussGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#ab880f7e2824fbf6a29ea174c55e8b588">gen</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Pseudo-random number generator with Gaussian distribution. </p>
-<p><a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution.">GaussianDeviate</a> is constructed with reference to a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will actually generate the randoms, which are then transformed to Gaussian distribution with chosen mean and standard deviation. Copy constructor and assignment operator are kept private since you probably do not want two "random" number generators producing the same sequence of numbers in your code! </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a66b46dda02d6ddc09ab8409030740415"></a>
 <div class="memitem">
@@ -179,15 +210,50 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a543b97e77fec2fb80027da08321ebd73"></a>
+<a class="anchor" id="a25ac179f7248e9f01c4a5203ccd1ce5e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::GaussianDeviate::GaussianDeviate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>u_</em>, </td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mean</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Gaussian-distributed RNG, using time of day as seed. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mean</td><td>Mean of the output distribution </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sigma</td><td>Standard deviation of the distribution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4efa947a576a59a86fd8712699ae53dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim::GaussianDeviate::GaussianDeviate </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -209,11 +275,52 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Gaussian-distributed RNG. </p>
-<p>Constructor requires reference to a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that generates the randoms, which are then transformed to Gaussian distribution. </p>
+<p>Construct a new Gaussian-distributed RNG, using the provided value as seed. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">u_</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will be called to generate all randoms </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mean</td><td>Mean of the output distribution </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sigma</td><td>Standard deviation of the distribution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adf99a364b3fc725a5582399b5ed3c816"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim::GaussianDeviate::GaussianDeviate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mean</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Gaussian-distributed RNG, sharing the random number generator with rhs. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Other deviate with which to share the RNG </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mean</td><td>Mean of the output distribution </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">sigma</td><td>Standard deviation of the distribution </td></tr>
   </table>
@@ -225,9 +332,6 @@ Private Attributes</h2></td></tr>
 <a class="anchor" id="a775887eebb3e9594186c26ee32e39f53"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">galsim::GaussianDeviate::GaussianDeviate </td>
@@ -237,14 +341,10 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Hide copy and assignment so users do not create duplicate (correlated!) RNG's: </p>
+<p>Construct a copy that shares the RNG with rhs. </p>
+<p>Note: the default constructed op= function will do the same thing. </p>
 
 </div>
 </div>
@@ -484,7 +584,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af44b362c8cfbb9a01ded50b1552ff3a1"></a>
+<a class="anchor" id="af28797531e7deb113b54f4a1fc19798d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -492,21 +592,165 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::GaussianDeviate::operator= </td>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hide copy and assignment so users do not create duplicate (correlated!) RNG's: </p>
+<p>Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates. </p>
+<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a467ee386aebd84bb837c016718e8c6ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Like seed(lseed), but severs the relationship between other Deviates. </p>
+<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a83d16e67974cfc43d3b9afddeae2cd3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this object share its random number generator with another Deviate. </p>
+<p>It discards whatever rng it had been using and starts sharing the one held by dev. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c1affde5339594abf9bd45f8c036f2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-seed the PRNG using current time. </p>
+<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a44c1be0021535a594d4f8c505b1a99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-seed the PRNG using specified seed. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a111b8db476baf0c246d147b66335a7d9">galsim::UniformDeviate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c0a4b5e400c7a0539fa9f0d6e6de131"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::seedtime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private routine to seed with microsecond counter from time-of-day structure. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a3c6083ac2789090df4eaac24b8ee3701">galsim::UniformDeviate</a>.</p>
 
 </div>
 </div>
@@ -591,6 +835,46 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="adad30e52d74029d6befab603bdb0d8ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::random::normal_distribution galsim::GaussianDeviate::_normal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab77ba0a5ad9441726fc717cdfc6e00e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_base_deviate.html#aad9eaa469b85fc9dd4702f6ceff6be4c">rng_type</a>&gt; galsim::BaseDeviate::_rng</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab880f7e2824fbf6a29ea174c55e8b588"></a>
 <div class="memitem">
 <div class="memproto">
@@ -631,7 +915,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1a2a6fb97401b43d8d307145452d0b9d"></a>
+<a class="anchor" id="a67bdd9353ae7de93a41dcab60cd6a237"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -639,27 +923,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::random::normal_distribution galsim::GaussianDeviate::normal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a45aa06be4feb956c855b0a8daf012576"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp; galsim::GaussianDeviate::u</td>
+          <td class="memname"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&amp; galsim::GaussianDeviate::u</td>
         </tr>
       </table>
   </td>
@@ -678,7 +942,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

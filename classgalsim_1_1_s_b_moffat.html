@@ -89,12 +89,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">galsim::SBMoffat Class Reference</div>  </div>
 </div><!--header-->
@@ -110,137 +110,124 @@ Inheritance diagram for galsim::SBMoffat:</div>
  <div class="center">
   <img src="classgalsim_1_1_s_b_moffat.png" usemap="#galsim::SBMoffat_map" alt=""/>
   <map id="galsim::SBMoffat_map" name="galsim::SBMoffat_map">
-<area href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra..." alt="galsim::SBProfile" shape="rect" coords="0,0,106,24"/>
+<area href="classgalsim_1_1_s_b_profile.html" alt="galsim::SBProfile" shape="rect" coords="0,0,106,24"/>
 </map>
  </div></div>
 
 <p><a href="classgalsim_1_1_s_b_moffat-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html">SBMoffatImpl</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a7a32e4cfca8fd425fe09e51db0aa1792"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> { <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792afd3bfcb60e1909d7502f0ed92d883de8">FWHM</a>, 
 <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f">HALF_LIGHT_RADIUS</a>, 
 <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792a6753922303d7374452ab55b483d62f40">SCALE_RADIUS</a>
  }</td></tr>
-<tr class="memdesc:a7a32e4cfca8fd425fe09e51db0aa1792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6873f6419b178881a58f20b33c2ee088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a6873f6419b178881a58f20b33c2ee088">SBMoffat</a> (double beta, double truncationFWHM=0., double flux=1., double size=1., <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType=<a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f">HALF_LIGHT_RADIUS</a>)</td></tr>
+<tr class="memdesc:a6873f6419b178881a58f20b33c2ee088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a6873f6419b178881a58f20b33c2ee088"></a><br/></td></tr>
+<tr class="memitem:ae366186bbd72f74d51bfd1f1a8e7a75a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae366186bbd72f74d51bfd1f1a8e7a75a">SBMoffat</a> (const <a class="el" href="classgalsim_1_1_s_b_moffat.html">SBMoffat</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ae366186bbd72f74d51bfd1f1a8e7a75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ae366186bbd72f74d51bfd1f1a8e7a75a"></a><br/></td></tr>
 <tr class="memitem:a864f02c88892b9a176b287180d6a163e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a864f02c88892b9a176b287180d6a163e">~SBMoffat</a> ()</td></tr>
 <tr class="memdesc:a864f02c88892b9a176b287180d6a163e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a864f02c88892b9a176b287180d6a163e"></a><br/></td></tr>
-<tr class="memitem:acfc1010d26f5df8c4187f3711d3bf044"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#acfc1010d26f5df8c4187f3711d3bf044">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
-<tr class="memdesc:acfc1010d26f5df8c4187f3711d3bf044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> at a chosen 2D position in real space.  <a href="#acfc1010d26f5df8c4187f3711d3bf044"></a><br/></td></tr>
-<tr class="memitem:ae947c54d03e1252d7389a4124f7bd0f4"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae947c54d03e1252d7389a4124f7bd0f4">kValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
-<tr class="memdesc:ae947c54d03e1252d7389a4124f7bd0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> at a chosen 2D position in k space.  <a href="#ae947c54d03e1252d7389a4124f7bd0f4"></a><br/></td></tr>
-<tr class="memitem:a1ab7b139492db0163419bfc8955a03e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a1ab7b139492db0163419bfc8955a03e2">isAxisymmetric</a> () const </td></tr>
-<tr class="memdesc:a1ab7b139492db0163419bfc8955a03e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#a1ab7b139492db0163419bfc8955a03e2"></a><br/></td></tr>
-<tr class="memitem:aa0c9d488f4cedbccc3319ef1bbcffedc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aa0c9d488f4cedbccc3319ef1bbcffedc">hasHardEdges</a> () const </td></tr>
-<tr class="memdesc:aa0c9d488f4cedbccc3319ef1bbcffedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The presence of hard edges help determine whether real space convolution might be a better choice.  <a href="#aa0c9d488f4cedbccc3319ef1bbcffedc"></a><br/></td></tr>
-<tr class="memitem:aa13f34ca389fe30016fbede0ff1bc83b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aa13f34ca389fe30016fbede0ff1bc83b">isAnalyticX</a> () const </td></tr>
-<tr class="memdesc:aa13f34ca389fe30016fbede0ff1bc83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#aa13f34ca389fe30016fbede0ff1bc83b"></a><br/></td></tr>
-<tr class="memitem:a5685314641d4efc57ccb19765a1f0e56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a5685314641d4efc57ccb19765a1f0e56">isAnalyticK</a> () const </td></tr>
-<tr class="memdesc:a5685314641d4efc57ccb19765a1f0e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#a5685314641d4efc57ccb19765a1f0e56"></a><br/></td></tr>
-<tr class="memitem:a5d03d651a5a876bdd7c0994c72511505"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a5d03d651a5a876bdd7c0994c72511505">maxK</a> () const </td></tr>
-<tr class="memdesc:a5d03d651a5a876bdd7c0994c72511505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of k beyond which aliasing can be neglected.  <a href="#a5d03d651a5a876bdd7c0994c72511505"></a><br/></td></tr>
-<tr class="memitem:a60ee77d55b19669ca4134188db6f5989"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a60ee77d55b19669ca4134188db6f5989">stepK</a> () const </td></tr>
-<tr class="memdesc:a60ee77d55b19669ca4134188db6f5989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling in k space necessary to avoid folding too much of image in x space.  <a href="#a60ee77d55b19669ca4134188db6f5989"></a><br/></td></tr>
-<tr class="memitem:ae0f3f53c9760adf4a3e4c0eeef067fdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae0f3f53c9760adf4a3e4c0eeef067fdb">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;) const </td></tr>
-<tr class="memdesc:ae0f3f53c9760adf4a3e4c0eeef067fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the range over which the profile is not trivially zero.  <a href="#ae0f3f53c9760adf4a3e4c0eeef067fdb"></a><br/></td></tr>
-<tr class="memitem:a1c34f79e2dbd8616397f4600f830d9a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a1c34f79e2dbd8616397f4600f830d9a4">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
-<tr class="memitem:a02ea5b276ffc755b05f92304f81eac96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a02ea5b276ffc755b05f92304f81eac96">getYRange</a> (double x, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
-<tr class="memitem:a58c2a7519043a533b6864b088ae64d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a58c2a7519043a533b6864b088ae64d5e">centroid</a> () const </td></tr>
-<tr class="memdesc:a58c2a7519043a533b6864b088ae64d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (X, Y) centroid of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>.  <a href="#a58c2a7519043a533b6864b088ae64d5e"></a><br/></td></tr>
-<tr class="memitem:a7775ba1a9fabbdb65bbd21ce11ccbdb5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a7775ba1a9fabbdb65bbd21ce11ccbdb5">getFlux</a> () const </td></tr>
-<tr class="memdesc:a7775ba1a9fabbdb65bbd21ce11ccbdb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>.  <a href="#a7775ba1a9fabbdb65bbd21ce11ccbdb5"></a><br/></td></tr>
-<tr class="memitem:a89d148d6ad0e3a74ea71f13a3926c51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a89d148d6ad0e3a74ea71f13a3926c51f">setFlux</a> (double flux)</td></tr>
-<tr class="memdesc:a89d148d6ad0e3a74ea71f13a3926c51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>.  <a href="#a89d148d6ad0e3a74ea71f13a3926c51f"></a><br/></td></tr>
-<tr class="memitem:ac54c3e0af2e40de1e78b0ee37f87f6d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ac54c3e0af2e40de1e78b0ee37f87f6d0">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:ac54c3e0af2e40de1e78b0ee37f87f6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moffat photon shooting is done by analytic inversion of cumulative flux distribution.  <a href="#ac54c3e0af2e40de1e78b0ee37f87f6d0"></a><br/></td></tr>
-<tr class="memitem:afe0959847c83b9ffaba0d8481dbdedf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#afe0959847c83b9ffaba0d8481dbdedf2">duplicate</a> () const </td></tr>
-<tr class="memdesc:afe0959847c83b9ffaba0d8481dbdedf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of self.  <a href="#afe0959847c83b9ffaba0d8481dbdedf2"></a><br/></td></tr>
 <tr class="memitem:a3483ac355299977b3ac6ea669394e1ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a3483ac355299977b3ac6ea669394e1ee">getBeta</a> () const </td></tr>
-<tr class="memdesc:a3483ac355299977b3ac6ea669394e1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>.  <a href="#a3483ac355299977b3ac6ea669394e1ee"></a><br/></td></tr>
-<tr class="memitem:aa6756009b5864826033179c534560381"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aa6756009b5864826033179c534560381">nyquistDx</a> () const </td></tr>
-<tr class="memdesc:aa6756009b5864826033179c534560381"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel spacing that does not alias maxK.  <a href="#aa6756009b5864826033179c534560381"></a><br/></td></tr>
-<tr class="memitem:ad802fe5128284e15d946740f47fc369b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ad802fe5128284e15d946740f47fc369b">distort</a> (const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> e) const </td></tr>
-<tr class="memdesc:ad802fe5128284e15d946740f47fc369b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion transformation (affine without rotation).  <a href="#ad802fe5128284e15d946740f47fc369b"></a><br/></td></tr>
-<tr class="memitem:aa99109517423306be5ab70b622aacb61"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aa99109517423306be5ab70b622aacb61">shear</a> (double e1, double e2) const </td></tr>
-<tr class="memdesc:aa99109517423306be5ab70b622aacb61"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> distortion transformation (affine without rotation or dilation).  <a href="#aa99109517423306be5ab70b622aacb61"></a><br/></td></tr>
-<tr class="memitem:a6d86faf2a2df82dae238f0a5e36428fd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a6d86faf2a2df82dae238f0a5e36428fd">rotate</a> (<a class="el" href="classgalsim_1_1_angle.html">Angle</a> theta) const </td></tr>
-<tr class="memdesc:a6d86faf2a2df82dae238f0a5e36428fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation distortion transformation.  <a href="#a6d86faf2a2df82dae238f0a5e36428fd"></a><br/></td></tr>
-<tr class="memitem:ad1267a7489fc7f0dc7f7a93abfadcd9c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ad1267a7489fc7f0dc7f7a93abfadcd9c">shift</a> (double dx, double dy) const </td></tr>
-<tr class="memdesc:ad1267a7489fc7f0dc7f7a93abfadcd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translation transformation.  <a href="#ad1267a7489fc7f0dc7f7a93abfadcd9c"></a><br/></td></tr>
-<tr class="memitem:a2184a6272da2c6a5739ef6e27114a32d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a2184a6272da2c6a5739ef6e27114a32d">getPositiveFlux</a> () const </td></tr>
-<tr class="memdesc:a2184a6272da2c6a5739ef6e27114a32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of flux in positive photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a> is called.  <a href="#a2184a6272da2c6a5739ef6e27114a32d"></a><br/></td></tr>
-<tr class="memitem:aa4e48571f49e7656794cfe8e95ddc63f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aa4e48571f49e7656794cfe8e95ddc63f">getNegativeFlux</a> () const </td></tr>
-<tr class="memdesc:aa4e48571f49e7656794cfe8e95ddc63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of absolute value of flux in negative photons from <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a>  <a href="#aa4e48571f49e7656794cfe8e95ddc63f"></a><br/></td></tr>
+<tr class="memitem:a11558695546a3b4129971d09df8332bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
+<tr class="memdesc:a11558695546a3b4129971d09df8332bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in real space.  <a href="#a11558695546a3b4129971d09df8332bf"></a><br/></td></tr>
+<tr class="memitem:aeeef4c5230553a57f35a70490b97eb06"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06">kValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
+<tr class="memdesc:aeeef4c5230553a57f35a70490b97eb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in k space.  <a href="#aeeef4c5230553a57f35a70490b97eb06"></a><br/></td></tr>
+<tr class="memitem:a20a8cdf69b7c134ebd815fe272771b21"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21">maxK</a> () const </td></tr>
+<tr class="memdesc:a20a8cdf69b7c134ebd815fe272771b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of k beyond which aliasing can be neglected.  <a href="#a20a8cdf69b7c134ebd815fe272771b21"></a><br/></td></tr>
+<tr class="memitem:ae7956c43a3b82f40a5b5014fcf3653f0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae7956c43a3b82f40a5b5014fcf3653f0">nyquistDx</a> () const </td></tr>
+<tr class="memdesc:ae7956c43a3b82f40a5b5014fcf3653f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel spacing that does not alias maxK.  <a href="#ae7956c43a3b82f40a5b5014fcf3653f0"></a><br/></td></tr>
+<tr class="memitem:a81e8f62302e15417bdd4a474b3f6fe55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55">stepK</a> () const </td></tr>
+<tr class="memdesc:a81e8f62302e15417bdd4a474b3f6fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling in k space necessary to avoid folding too much of image in x space.  <a href="#a81e8f62302e15417bdd4a474b3f6fe55"></a><br/></td></tr>
+<tr class="memitem:a752163179fa64df1b24d51cc13649b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d">isAxisymmetric</a> () const </td></tr>
+<tr class="memdesc:a752163179fa64df1b24d51cc13649b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#a752163179fa64df1b24d51cc13649b7d"></a><br/></td></tr>
+<tr class="memitem:a3d9f16bb409318f98b5fafb2a577c1a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a3d9f16bb409318f98b5fafb2a577c1a9">hasHardEdges</a> () const </td></tr>
+<tr class="memdesc:a3d9f16bb409318f98b5fafb2a577c1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The presence of hard edges help determine whether real space convolution might be a better choice.  <a href="#a3d9f16bb409318f98b5fafb2a577c1a9"></a><br/></td></tr>
+<tr class="memitem:a574382e3ede9ac14c0174fc8a9643265"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a574382e3ede9ac14c0174fc8a9643265">isAnalyticX</a> () const </td></tr>
+<tr class="memdesc:a574382e3ede9ac14c0174fc8a9643265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#a574382e3ede9ac14c0174fc8a9643265"></a><br/></td></tr>
+<tr class="memitem:a22cb3ddd3d82cfc8abb5b63664f9bf49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a22cb3ddd3d82cfc8abb5b63664f9bf49">isAnalyticK</a> () const </td></tr>
+<tr class="memdesc:a22cb3ddd3d82cfc8abb5b63664f9bf49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic that can affect efficiency of evaluation.  <a href="#a22cb3ddd3d82cfc8abb5b63664f9bf49"></a><br/></td></tr>
+<tr class="memitem:af07f3685954696376c51d86b3acf2600"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#af07f3685954696376c51d86b3acf2600">centroid</a> () const </td></tr>
+<tr class="memdesc:af07f3685954696376c51d86b3acf2600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (X, Y) centroid of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>.  <a href="#af07f3685954696376c51d86b3acf2600"></a><br/></td></tr>
+<tr class="memitem:a926fae5ebf1d3f4b6bd03b9ed412402f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f">getFlux</a> () const </td></tr>
+<tr class="memdesc:a926fae5ebf1d3f4b6bd03b9ed412402f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>.  <a href="#a926fae5ebf1d3f4b6bd03b9ed412402f"></a><br/></td></tr>
+<tr class="memitem:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeefb2c61d26fae17c5a55d9e60dd4ac2">scaleFlux</a> (double fluxRatio)</td></tr>
+<tr class="memdesc:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiple the flux by fluxRatio.  <a href="#aeefb2c61d26fae17c5a55d9e60dd4ac2"></a><br/></td></tr>
+<tr class="memitem:a31093a62c9086296fdf519c720edadb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a31093a62c9086296fdf519c720edadb9">setFlux</a> (double flux)</td></tr>
+<tr class="memdesc:a31093a62c9086296fdf519c720edadb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flux to a new value.  <a href="#a31093a62c9086296fdf519c720edadb9"></a><br/></td></tr>
+<tr class="memitem:a4c1cebad96d15c3e516d2992b17a3ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a4c1cebad96d15c3e516d2992b17a3ce7">applyDistortion</a> (const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e)</td></tr>
+<tr class="memdesc:a4c1cebad96d15c3e516d2992b17a3ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion (affine without rotation).  <a href="#a4c1cebad96d15c3e516d2992b17a3ce7"></a><br/></td></tr>
+<tr class="memitem:a364f6b7e568889bd3b43872e56e98570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a364f6b7e568889bd3b43872e56e98570">applyShear</a> (double g1, double g2)</td></tr>
+<tr class="memdesc:a364f6b7e568889bd3b43872e56e98570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a364f6b7e568889bd3b43872e56e98570"></a><br/></td></tr>
+<tr class="memitem:a8d861c3513863ac3c78a853d2f93a4aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a8d861c3513863ac3c78a853d2f93a4aa">applyRotation</a> (const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;theta)</td></tr>
+<tr class="memdesc:a8d861c3513863ac3c78a853d2f93a4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given rotation.  <a href="#a8d861c3513863ac3c78a853d2f93a4aa"></a><br/></td></tr>
+<tr class="memitem:a89d5ad319a343091947e2bde69e87fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a89d5ad319a343091947e2bde69e87fa2">applyShift</a> (double dx, double dy)</td></tr>
+<tr class="memdesc:a89d5ad319a343091947e2bde69e87fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a translation.  <a href="#a89d5ad319a343091947e2bde69e87fa2"></a><br/></td></tr>
+<tr class="memitem:a9d018abd10fe2a2ab526288e4d5dad57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
+<tr class="memdesc:a9d018abd10fe2a2ab526288e4d5dad57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>.  <a href="#a9d018abd10fe2a2ab526288e4d5dad57"></a><br/></td></tr>
+<tr class="memitem:a9e31ecd8ecf842abba08120cd8cb7e82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9e31ecd8ecf842abba08120cd8cb7e82">getPositiveFlux</a> () const </td></tr>
+<tr class="memdesc:a9e31ecd8ecf842abba08120cd8cb7e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of flux in positive photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a> is called.  <a href="#a9e31ecd8ecf842abba08120cd8cb7e82"></a><br/></td></tr>
+<tr class="memitem:a873e64397c04624cc8454f037f709dce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce">getNegativeFlux</a> () const </td></tr>
+<tr class="memdesc:a873e64397c04624cc8454f037f709dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of absolute value of flux in negative photons from <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a>  <a href="#a873e64397c04624cc8454f037f709dce"></a><br/></td></tr>
 <tr class="memitem:a9d5bbd0fccca02ee1a43946157bf3d69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9d5bbd0fccca02ee1a43946157bf3d69">draw</a> (double dx=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a9d5bbd0fccca02ee1a43946157bf3d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space.  <a href="#a9d5bbd0fccca02ee1a43946157bf3d69"></a><br/></td></tr>
+<tr class="memdesc:a9d5bbd0fccca02ee1a43946157bf3d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space.  <a href="#a9d5bbd0fccca02ee1a43946157bf3d69"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a0ef7975cb5404e696251acd180b973e9"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae5a2125c390c01bcde7d8f9603134c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae5a2125c390c01bcde7d8f9603134c5e">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
+<tr class="memdesc:ae5a2125c390c01bcde7d8f9603134c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the range over which the profile is not trivially zero.  <a href="#ae5a2125c390c01bcde7d8f9603134c5e"></a><br/></td></tr>
+<tr class="memitem:a3fc25a15c465df01a218d99f0e6a262f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a3fc25a15c465df01a218d99f0e6a262f">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
+<tr class="memitem:a033f2a12737c5b12602b088dc2f764ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a033f2a12737c5b12602b088dc2f764ec">getYRange</a> (double x, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a0ef7975cb5404e696251acd180b973e9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0ef7975cb5404e696251acd180b973e9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a0ef7975cb5404e696251acd180b973e9">drawShoot</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; img, double N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a0ef7975cb5404e696251acd180b973e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons.  <a href="#a0ef7975cb5404e696251acd180b973e9"></a><br/></td></tr>
-<tr class="memitem:a0d419ba852495b6c4d9fc6f9720af9d8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memdesc:a0ef7975cb5404e696251acd180b973e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons.  <a href="#a0ef7975cb5404e696251acd180b973e9"></a><br/></td></tr>
+<tr class="memitem:a0d419ba852495b6c4d9fc6f9720af9d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0d419ba852495b6c4d9fc6f9720af9d8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a0d419ba852495b6c4d9fc6f9720af9d8">drawShoot</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;img, double N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a6f3f69259d3244acc4052649a3cf342e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6f3f69259d3244acc4052649a3cf342e"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a6f3f69259d3244acc4052649a3cf342e">draw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a6f3f69259d3244acc4052649a3cf342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space returning the summed flux.  <a href="#a6f3f69259d3244acc4052649a3cf342e"></a><br/></td></tr>
+<tr class="memdesc:a6f3f69259d3244acc4052649a3cf342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space returning the summed flux.  <a href="#a6f3f69259d3244acc4052649a3cf342e"></a><br/></td></tr>
 <tr class="memitem:a5b30f475782b8288c651119bb1d7faf5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5b30f475782b8288c651119bb1d7faf5"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a5b30f475782b8288c651119bb1d7faf5">draw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a4e1dd692fb6e3010dbed7f8e5268eb17"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4e1dd692fb6e3010dbed7f8e5268eb17"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a4e1dd692fb6e3010dbed7f8e5268eb17">plainDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a4e1dd692fb6e3010dbed7f8e5268eb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values.  <a href="#a4e1dd692fb6e3010dbed7f8e5268eb17"></a><br/></td></tr>
+<tr class="memdesc:a4e1dd692fb6e3010dbed7f8e5268eb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values.  <a href="#a4e1dd692fb6e3010dbed7f8e5268eb17"></a><br/></td></tr>
 <tr class="memitem:a981825d2be572df4e5f6da4d703934dd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a981825d2be572df4e5f6da4d703934dd"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a981825d2be572df4e5f6da4d703934dd">plainDraw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a7d6c1dcfe1dfdfdd9204855cab1c2885"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7d6c1dcfe1dfdfdd9204855cab1c2885"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a7d6c1dcfe1dfdfdd9204855cab1c2885">fourierDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a7d6c1dcfe1dfdfdd9204855cab1c2885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space forcing the use of Fourier transform from k space.  <a href="#a7d6c1dcfe1dfdfdd9204855cab1c2885"></a><br/></td></tr>
+<tr class="memdesc:a7d6c1dcfe1dfdfdd9204855cab1c2885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space forcing the use of Fourier transform from k space.  <a href="#a7d6c1dcfe1dfdfdd9204855cab1c2885"></a><br/></td></tr>
 <tr class="memitem:a708e53fe1af38a2dd8c084b8378cf87f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a708e53fe1af38a2dd8c084b8378cf87f"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a708e53fe1af38a2dd8c084b8378cf87f">fourierDraw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., int wmult=1) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a50671bf5d099383f9361d409fd2b5b2e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a50671bf5d099383f9361d409fd2b5b2e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a50671bf5d099383f9361d409fd2b5b2e">drawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a50671bf5d099383f9361d409fd2b5b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space.  <a href="#a50671bf5d099383f9361d409fd2b5b2e"></a><br/></td></tr>
+<tr class="memdesc:a50671bf5d099383f9361d409fd2b5b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space.  <a href="#a50671bf5d099383f9361d409fd2b5b2e"></a><br/></td></tr>
 <tr class="memitem:a265cadf58057ef471eb199864a58d23e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a265cadf58057ef471eb199864a58d23e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a265cadf58057ef471eb199864a58d23e">drawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac417e1ef744312919dbf13320a304d55"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac417e1ef744312919dbf13320a304d55"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ac417e1ef744312919dbf13320a304d55">plainDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
-<tr class="memdesc:ac417e1ef744312919dbf13320a304d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values.  <a href="#ac417e1ef744312919dbf13320a304d55"></a><br/></td></tr>
+<tr class="memdesc:ac417e1ef744312919dbf13320a304d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values.  <a href="#ac417e1ef744312919dbf13320a304d55"></a><br/></td></tr>
 <tr class="memitem:a12e2335d16b5b3fbb84b3534c1b3dba8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a12e2335d16b5b3fbb84b3534c1b3dba8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a12e2335d16b5b3fbb84b3534c1b3dba8">plainDrawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a42f5d2d90e196f02b726dea0f74b7963"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a42f5d2d90e196f02b726dea0f74b7963"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a42f5d2d90e196f02b726dea0f74b7963">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
-<tr class="memdesc:a42f5d2d90e196f02b726dea0f74b7963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space forcing the use of Fourier transform from real space.  <a href="#a42f5d2d90e196f02b726dea0f74b7963"></a><br/></td></tr>
+<tr class="memdesc:a42f5d2d90e196f02b726dea0f74b7963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space forcing the use of Fourier transform from real space.  <a href="#a42f5d2d90e196f02b726dea0f74b7963"></a><br/></td></tr>
 <tr class="memitem:abbff92668d4b2eeb72c66d5400ecd725"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:abbff92668d4b2eeb72c66d5400ecd725"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#abbff92668d4b2eeb72c66d5400ecd725">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., int wmult=1) const </td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:acc84b8d30f1feea590e8246fabfba464"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acc84b8d30f1feea590e8246fabfba464"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#acc84b8d30f1feea590e8246fabfba464">fillXImage</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx) const </td></tr>
-<tr class="memdesc:acc84b8d30f1feea590e8246fabfba464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for drawing into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> data structures.  <a href="#acc84b8d30f1feea590e8246fabfba464"></a><br/></td></tr>
-<tr class="memitem:a06015af82113c3708b7021f5cf60de26"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a06015af82113c3708b7021f5cf60de26">fillKGrid</a> (<a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;kt) const </td></tr>
-<tr class="memdesc:a06015af82113c3708b7021f5cf60de26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for drawing a k grid into FFT data structures.  <a href="#a06015af82113c3708b7021f5cf60de26"></a><br/></td></tr>
-<tr class="memitem:acfad3b1d409d7e390a95aaf5fbf3c57c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#acfad3b1d409d7e390a95aaf5fbf3c57c">fillXGrid</a> (<a class="el" href="classgalsim_1_1_x_table.html">XTable</a> &amp;xt) const </td></tr>
-<tr class="memdesc:acfad3b1d409d7e390a95aaf5fbf3c57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for drawing an x grid into FFT data structures.  <a href="#acfad3b1d409d7e390a95aaf5fbf3c57c"></a><br/></td></tr>
-<tr class="memitem:a1af1e6204c5718fc4db6c48cd39813ac"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a1af1e6204c5718fc4db6c48cd39813ac">doFillXImage</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; float &gt; &amp;image, double dx) const </td></tr>
-<tr class="memitem:a207a73987931d65e8e2147994947919e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a207a73987931d65e8e2147994947919e">doFillXImage</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; double &gt; &amp;image, double dx) const </td></tr>
-<tr class="memitem:a5c204287f13648fb3ec38e1607c4d094"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5c204287f13648fb3ec38e1607c4d094"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a5c204287f13648fb3ec38e1607c4d094">doFillXImage2</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx) const </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a6208dcf984be4e8ab988a8381f146cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a6208dcf984be4e8ab988a8381f146cfc">setupFT</a> ()</td></tr>
-<tr class="memdesc:a6208dcf984be4e8ab988a8381f146cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the FT <a class="el" href="classgalsim_1_1_table.html">Table</a>.  <a href="#a6208dcf984be4e8ab988a8381f146cfc"></a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:afa58eee54349716e8fb60bba76e041c6"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#afa58eee54349716e8fb60bba76e041c6">pow_1</a> (double x, double)</td></tr>
 <tr class="memitem:abb3775802fd3f49fa4b58f99c14fbcc8"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#abb3775802fd3f49fa4b58f99c14fbcc8">pow_2</a> (double x, double)</td></tr>
 <tr class="memitem:a11db102cacbd23a2a7fac455d7489986"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a11db102cacbd23a2a7fac455d7489986">pow_3</a> (double x, double)</td></tr>
@@ -248,31 +235,13 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aafdba49dd25ef13e585e9e75b241ae5d"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aafdba49dd25ef13e585e9e75b241ae5d">pow_int</a> (double x, double beta)</td></tr>
 <tr class="memitem:a5c03dee25a8ce4da308128696f50e2a8"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a5c03dee25a8ce4da308128696f50e2a8">pow_gen</a> (double x, double beta)</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a8f6db5d814a05e0606c30d66f3069350"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a8f6db5d814a05e0606c30d66f3069350">_beta</a></td></tr>
-<tr class="memdesc:a8f6db5d814a05e0606c30d66f3069350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>.  <a href="#a8f6db5d814a05e0606c30d66f3069350"></a><br/></td></tr>
-<tr class="memitem:a4bf73ad2a419b03992b219aedcdc4adc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a4bf73ad2a419b03992b219aedcdc4adc">_flux</a></td></tr>
-<tr class="memdesc:a4bf73ad2a419b03992b219aedcdc4adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flux.  <a href="#a4bf73ad2a419b03992b219aedcdc4adc"></a><br/></td></tr>
-<tr class="memitem:ab42217d6129562a13451977de39d217c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ab42217d6129562a13451977de39d217c">_norm</a></td></tr>
-<tr class="memdesc:ab42217d6129562a13451977de39d217c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalization. (Including the flux)  <a href="#ab42217d6129562a13451977de39d217c"></a><br/></td></tr>
-<tr class="memitem:a3e4c0ea7e00540bc16d0910289a8643f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a3e4c0ea7e00540bc16d0910289a8643f">_rD</a></td></tr>
-<tr class="memdesc:a3e4c0ea7e00540bc16d0910289a8643f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale radius for profile <code>[1 + (r / rD)^2]^beta</code>.  <a href="#a3e4c0ea7e00540bc16d0910289a8643f"></a><br/></td></tr>
-<tr class="memitem:ae7de0d0dd6b34871c7129fe84939405e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae7de0d0dd6b34871c7129fe84939405e">_maxR</a></td></tr>
-<tr class="memdesc:ae7de0d0dd6b34871c7129fe84939405e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum <code>r</code>  <a href="#ae7de0d0dd6b34871c7129fe84939405e"></a><br/></td></tr>
-<tr class="memitem:ae42d82f9b58552e7a6a7e44c713f92a2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae42d82f9b58552e7a6a7e44c713f92a2">_FWHM</a></td></tr>
-<tr class="memdesc:ae42d82f9b58552e7a6a7e44c713f92a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full Width at Half Maximum in units of <code>rD</code>.  <a href="#ae42d82f9b58552e7a6a7e44c713f92a2"></a><br/></td></tr>
-<tr class="memitem:a66db1ede0c629c09d08db105c19c25f4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a66db1ede0c629c09d08db105c19c25f4">_fluxFactor</a></td></tr>
-<tr class="memdesc:a66db1ede0c629c09d08db105c19c25f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integral of total flux in terms of 'rD' units.  <a href="#a66db1ede0c629c09d08db105c19c25f4"></a><br/></td></tr>
-<tr class="memitem:aee881da5024742c6745ccffbfd885a32"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aee881da5024742c6745ccffbfd885a32">_rD_sq</a></td></tr>
-<tr class="memdesc:aee881da5024742c6745ccffbfd885a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculated value: rD*rD;.  <a href="#aee881da5024742c6745ccffbfd885a32"></a><br/></td></tr>
-<tr class="memitem:aafebeff80201250afb061e306762b00f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aafebeff80201250afb061e306762b00f">_maxR_sq</a></td></tr>
-<tr class="memdesc:aafebeff80201250afb061e306762b00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculated value: maxR * maxR.  <a href="#aafebeff80201250afb061e306762b00f"></a><br/></td></tr>
-<tr class="memitem:aed6dc1499d1c742aa15eb06bb18c69ab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#aed6dc1499d1c742aa15eb06bb18c69ab">_maxK</a></td></tr>
-<tr class="memdesc:aed6dc1499d1c742aa15eb06bb18c69ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum k with kValue &gt; 1.e-3.  <a href="#aed6dc1499d1c742aa15eb06bb18c69ab"></a><br/></td></tr>
-<tr class="memitem:ab038a11968e77bcfd58ee164c958a80a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ab038a11968e77bcfd58ee164c958a80a">_ft</a></td></tr>
-<tr class="memdesc:ab038a11968e77bcfd58ee164c958a80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup table for Fourier transform of Moffat.  <a href="#ab038a11968e77bcfd58ee164c958a80a"></a><br/></td></tr>
-<tr class="memitem:ad8216d79cd40d748ff577278497dd0e3"><td class="memItemLeft" align="right" valign="top">double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ad8216d79cd40d748ff577278497dd0e3">pow_beta</a> )(double x, double beta)</td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a40d416cc366e1102ca9540e3c6c7f5c7"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html">SBProfileImpl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a40d416cc366e1102ca9540e3c6c7f5c7">_pimpl</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab3b3ceecb236f313aaa282e4d89c1883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ab3b3ceecb236f313aaa282e4d89c1883">operator=</a> (const <a class="el" href="classgalsim_1_1_s_b_moffat.html">SBMoffat</a> &amp;rhs)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs). </p>
@@ -286,18 +255,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">truncationFWHM</td><td>outer truncation in units of FWHM (default <code>truncationFWHM = 0.</code>). If truncationFWHM = 0, then no truncation is applied. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size specification (default <code>size = 1.</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rType</td><td>Kind of size being specified (default <code>HALF_LIGHT_RADIUS</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="a7a32e4cfca8fd425fe09e51db0aa1792afd3bfcb60e1909d7502f0ed92d883de8"></a>FWHM</em>&nbsp;</td><td>
 </td></tr>
@@ -354,6 +311,36 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">truncationFWHM</td><td>outer truncation in units of FWHM (default <code>truncationFWHM = 0.</code>). If truncationFWHM = 0, then no truncation is applied. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size specification (default <code>size = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rType</td><td>Kind of size being specified (default <code>HALF_LIGHT_RADIUS</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae366186bbd72f74d51bfd1f1a8e7a75a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim::SBMoffat::SBMoffat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_s_b_moffat.html">SBMoffat</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
 </div>
 </div>
 <a class="anchor" id="a864f02c88892b9a176b287180d6a163e"></a>
@@ -374,7 +361,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a58c2a7519043a533b6864b088ae64d5e"></a>
+<a class="anchor" id="a4c1cebad96d15c3e516d2992b17a3ce7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -382,7 +369,135 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt;double&gt; galsim::SBMoffat::centroid </td>
+          <td class="memname">void galsim::SBProfile::applyDistortion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion (affine without rotation). </p>
+<p>This transforms the object by the given transformation. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8d861c3513863ac3c78a853d2f93a4aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBProfile::applyRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;&#160;</td>
+          <td class="paramname"><em>theta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given rotation. </p>
+<p>This rotates the object by the given angle. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a364f6b7e568889bd3b43872e56e98570"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBProfile::applyShear </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given shear. </p>
+<p>This shears the object by the given shear. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89d5ad319a343091947e2bde69e87fa2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBProfile::applyShift </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a translation. </p>
+<p>This shears the object by the given amount. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="af07f3685954696376c51d86b3acf2600"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt;double&gt; galsim::SBProfile::centroid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -390,155 +505,12 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns (X, Y) centroid of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>. </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a260283694b1d4f6756ec1138484a13f1">galsim::SBProfile</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad802fe5128284e15d946740f47fc369b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>* galsim::SBProfile::distort </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a>&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion transformation (affine without rotation). </p>
-<p>This returns a pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> that represents a new Surface Brightness Profile with the requested transformation. The type of the new object is currently <a class="el" href="classgalsim_1_1_s_b_distort.html" title="An affine transformation of another SBProfile.">SBDistort</a>, but that is an implementation choice, and should not be assumed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td><a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> class distortion. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1af1e6204c5718fc4db6c48cd39813ac"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double galsim::SBProfile::doFillXImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; float &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box.html#a7e95a584649ecfd922423707c178c8f5">galsim::SBBox</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ad0ffed4c2feb2fefc9f5f1afa3c22bac">galsim::SBInterpolatedImage</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a207a73987931d65e8e2147994947919e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double galsim::SBProfile::doFillXImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box.html#a65f12cd222d0fadaf339cec484b79625">galsim::SBBox</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a28a97ca9b185ffbb423cdc17d6a73bb4">galsim::SBInterpolatedImage</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5c204287f13648fb3ec38e1607c4d094"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::doFillXImage2 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Returns (X, Y) centroid of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. </p>
 
 </div>
 </div>
@@ -574,11 +546,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space. </p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space. </p>
 <p>A square image will be drawn which is big enough to avoid "folding." If drawing is done using FFT, it will be scaled up to a power of 2, or 3x2^n, whichever fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. The default <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d5bbd0fccca02ee1a43946157bf3d69" title="Draw an image of the SBProfile in real space.">draw()</a> routines decide internally whether image can be drawn directly in real space or needs to be done via FFT from k space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a1faffa5bf4117bba5d7c31469968409c" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
   </table>
   </dd>
@@ -627,12 +599,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space returning the summed flux. </p>
+<p>Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space returning the summed flux. </p>
 <p>If the input image <code>img</code> is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (not <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>) and has null dimension, a square image will be drawn which is big enough to avoid "folding." If drawing is done using FFT, it will be scaled up to a power of 2, or 3x2^n, whichever fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. The default <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d5bbd0fccca02ee1a43946157bf3d69" title="Draw an image of the SBProfile in real space.">draw()</a> routines decide internally whether image can be drawn directly in real space or needs to be done via FFT from k space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a1faffa5bf4117bba5d7c31469968409c" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
   </table>
   </dd>
@@ -729,13 +701,13 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space. </p>
-<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." If drawing is done using FFT, they will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space. </p>
+<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." If drawing is done using FFT, they will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
   </table>
   </dd>
@@ -795,7 +767,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -831,9 +803,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons. </p>
-<p>The input image must have defined boundaries and pixel scale. The photons generated by the <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a> method will be binned into the target <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. See caveats in <code><a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a></code> docstring. Input <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> will be cleared before drawing in the photons. Scale and location of the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> pixels will not be altered. Photons falling outside the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> range will be ignored.</p>
-<p>It is important to remember that the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> produced by <code>drawShoot</code> represents the <code><a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a></code> <em>as convolved with the square <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel.</em> So do not expect an exact match, even in the limit of large photon number, between the outputs of <code>draw</code> and <code>drawShoot</code>. You should convolve the <code><a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a></code> with an <code>SBBox(dx)</code> in order to match what will be produced by <code>drawShoot</code> onto an image with pixel scale <code>dx</code>.</p>
+<p>Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons. </p>
+<p>The input image must have defined boundaries and pixel scale. The photons generated by the <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a> method will be binned into the target <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. See caveats in <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a></code> docstring. Input <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> will be cleared before drawing in the photons. Scale and location of the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> pixels will not be altered. Photons falling outside the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> range will be ignored.</p>
+<p>It is important to remember that the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> produced by <code>drawShoot</code> represents the <code><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a></code> <em>as convolved with the square <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel.</em> So do not expect an exact match, even in the limit of large photon number, between the outputs of <code>draw</code> and <code>drawShoot</code>. You should convolve the <code><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a></code> with an <code>SBBox(dx)</code> in order to match what will be produced by <code>drawShoot</code> onto an image with pixel scale <code>dx</code>.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to draw on. </td></tr>
@@ -849,7 +821,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -884,136 +856,6 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afe0959847c83b9ffaba0d8481dbdedf2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>* galsim::SBMoffat::duplicate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a copy of self. </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a5d0fdeb1a5d407572da3def69afae699">galsim::SBProfile</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a06015af82113c3708b7021f5cf60de26"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void galsim::SBProfile::fillKGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;&#160;</td>
-          <td class="paramname"><em>kt</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Utility for drawing a k grid into FFT data structures. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box.html#a39ca31a91b9b0b877ddcfbf279452781">galsim::SBBox</a>, <a class="el" href="classgalsim_1_1_s_b_convolve.html#aca8e453517126ae5dce147e2d1067c5f">galsim::SBConvolve</a>, <a class="el" href="classgalsim_1_1_s_b_distort.html#aa85f05ac565062eba59f37dcc73a1d3d">galsim::SBDistort</a>, <a class="el" href="classgalsim_1_1_s_b_add.html#acdb4c4664af4fe34c5c6f74ae340212b">galsim::SBAdd</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#aba6a5a211bb2b158d14a1c7655fa8442">galsim::SBInterpolatedImage</a>, and <a class="el" href="classgalsim_1_1_s_b_deconvolve.html#aaa6577a67e04ceafae032089585db914">galsim::SBDeconvolve</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acfad3b1d409d7e390a95aaf5fbf3c57c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void galsim::SBProfile::fillXGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_x_table.html">XTable</a> &amp;&#160;</td>
-          <td class="paramname"><em>xt</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Utility for drawing an x grid into FFT data structures. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box.html#a4308dd05b4e0ee8150b440ee80522eb6">galsim::SBBox</a>, <a class="el" href="classgalsim_1_1_s_b_add.html#ac146f8ecdf2c3aab59580aa0b72d1e13">galsim::SBAdd</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a142b0fa768ca33ccfec735382937ffaf">galsim::SBInterpolatedImage</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acc84b8d30f1feea590e8246fabfba464"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::fillXImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Utility for drawing into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> data structures. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>image to fill (any of ImageF, ImageD, ImageS, ImageI). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid pitch on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> image is drawn </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box.html#a23ab3604d41e10eed1b1060e0d378bad">galsim::SBBox</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ad8debc9a07dd5b606e920d2f5ce64b1d">galsim::SBInterpolatedImage</a>.</p>
 
 </div>
 </div>
@@ -1057,12 +899,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space forcing the use of Fourier transform from k space. </p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space forcing the use of Fourier transform from k space. </p>
 <p>If the input image is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and has null dimension, a square image will be drawn which is big enough to avoid "folding." Drawing is done using FFT, and the image will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI or views) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a1faffa5bf4117bba5d7c31469968409c" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
   </table>
   </dd>
@@ -1159,13 +1001,13 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space forcing the use of Fourier transform from real space. </p>
-<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Drawing is done using FFT, and the images will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space forcing the use of Fourier transform from real space. </p>
+<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Drawing is done using FFT, and the images will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
   </table>
   </dd>
@@ -1234,11 +1076,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>. </p>
-
 </div>
 </div>
-<a class="anchor" id="a7775ba1a9fabbdb65bbd21ce11ccbdb5"></a>
+<a class="anchor" id="a926fae5ebf1d3f4b6bd03b9ed412402f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1246,7 +1086,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::SBMoffat::getFlux </td>
+          <td class="memname">double galsim::SBProfile::getFlux </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1254,18 +1094,16 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>. </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2">galsim::SBProfile</a>.</p>
+<p>Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. </p>
 
 </div>
 </div>
-<a class="anchor" id="aa4e48571f49e7656794cfe8e95ddc63f"></a>
+<a class="anchor" id="a873e64397c04624cc8454f037f709dce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1273,7 +1111,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double galsim::SBProfile::getNegativeFlux </td>
+          <td class="memname">double galsim::SBProfile::getNegativeFlux </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1281,21 +1119,19 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return expectation value of absolute value of flux in negative photons from <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a> </p>
-<p>Returns expectation value of (absolute value of) flux returned in negative-valued photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a> is called for this object. Default implementation is to return <a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2" title="Get the total flux of the SBProfile.">getFlux()</a> if it is negative, 0 otherwise, which will be the case when the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is constructed entirely from elements that have the same sign.</p>
-<p>It should be generally true that <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a2184a6272da2c6a5739ef6e27114a32d" title="Return expectation value of flux in positive photons when shoot() is called.">getPositiveFlux()</a> - <a class="el" href="classgalsim_1_1_s_b_profile.html#aa4e48571f49e7656794cfe8e95ddc63f" title="Return expectation value of absolute value of flux in negative photons from shoot()">getNegativeFlux()</a></code> returns the same thing as <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2" title="Get the total flux of the SBProfile.">getFlux()</a></code>. Small difference may accrue from finite numerical accuracy in cases involving lookup tables, etc.</p>
+<p>Return expectation value of absolute value of flux in negative photons from <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a> </p>
+<p>Returns expectation value of (absolute value of) flux returned in negative-valued photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a> is called for this object. Default implementation is to return <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a> if it is negative, 0 otherwise, which will be the case when the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is constructed entirely from elements that have the same sign.</p>
+<p>It should be generally true that <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a9e31ecd8ecf842abba08120cd8cb7e82" title="Return expectation value of flux in positive photons when shoot() is called.">getPositiveFlux()</a> - <a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce" title="Return expectation value of absolute value of flux in negative photons from shoot()">getNegativeFlux()</a></code> returns the same thing as <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a></code>. Small difference may accrue from finite numerical accuracy in cases involving lookup tables, etc.</p>
 <dl class="section return"><dt>Returns:</dt><dd>Expected absolute value of negative-photon flux. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve.html#ad0db7b58734db6ffabfff96939733d66">galsim::SBConvolve</a>, <a class="el" href="classgalsim_1_1_s_b_distort.html#a6802502831dc02a3e6c9d706762efa0e">galsim::SBDistort</a>, <a class="el" href="classgalsim_1_1_s_b_add.html#a73c41b61f46f90d811583038a8f31d68">galsim::SBAdd</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ae0234cc7669fc80f9dc0520f45229cd4">galsim::SBInterpolatedImage</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a2184a6272da2c6a5739ef6e27114a32d"></a>
+<a class="anchor" id="a9e31ecd8ecf842abba08120cd8cb7e82"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1303,7 +1139,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double galsim::SBProfile::getPositiveFlux </td>
+          <td class="memname">double galsim::SBProfile::getPositiveFlux </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1311,21 +1147,19 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return expectation value of flux in positive photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd" title="Shoot photons through this SBProfile.">shoot()</a> is called. </p>
-<p>Returns expectation value of flux returned in positive-valued photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd">shoot()</a> is called for this object. Default implementation is to return <a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2" title="Get the total flux of the SBProfile.">getFlux()</a>, if it is positive, or 0 otherwise, which will be the case when the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is constructed entirely from elements of the same sign.</p>
-<p>It should be generally true that <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a2184a6272da2c6a5739ef6e27114a32d" title="Return expectation value of flux in positive photons when shoot() is called.">getPositiveFlux()</a> - <a class="el" href="classgalsim_1_1_s_b_profile.html#aa4e48571f49e7656794cfe8e95ddc63f" title="Return expectation value of absolute value of flux in negative photons from shoot()">getNegativeFlux()</a></code> returns the same thing as <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a53e5852cb8fdeecd51c9fd0141b2e7f2" title="Get the total flux of the SBProfile.">getFlux()</a></code>. Small difference may accrue from finite numerical accuracy in cases involving lookup tables, etc.</p>
+<p>Return expectation value of flux in positive photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57" title="Shoot photons through this SBProfile.">shoot()</a> is called. </p>
+<p>Returns expectation value of flux returned in positive-valued photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#a9d018abd10fe2a2ab526288e4d5dad57">shoot()</a> is called for this object. Default implementation is to return <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a>, if it is positive, or 0 otherwise, which will be the case when the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is constructed entirely from elements of the same sign.</p>
+<p>It should be generally true that <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a9e31ecd8ecf842abba08120cd8cb7e82" title="Return expectation value of flux in positive photons when shoot() is called.">getPositiveFlux()</a> - <a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce" title="Return expectation value of absolute value of flux in negative photons from shoot()">getNegativeFlux()</a></code> returns the same thing as <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a></code>. Small difference may accrue from finite numerical accuracy in cases involving lookup tables, etc.</p>
 <dl class="section return"><dt>Returns:</dt><dd>Expected positive-photon flux. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve.html#a388a5fae5ca6911ff06259eb173ecba5">galsim::SBConvolve</a>, <a class="el" href="classgalsim_1_1_s_b_distort.html#a80dd793ae252839ffecbcc629ba8521a">galsim::SBDistort</a>, <a class="el" href="classgalsim_1_1_s_b_add.html#ae2a7301da260cc0edb230f53d925aa7a">galsim::SBAdd</a>, and <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ab5e4a00d9df2fde9208f616efa16ce7b">galsim::SBInterpolatedImage</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="ae0f3f53c9760adf4a3e4c0eeef067fdb"></a>
+<a class="anchor" id="ae5a2125c390c01bcde7d8f9603134c5e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1333,7 +1167,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBMoffat::getXRange </td>
+          <td class="memname">void galsim::SBProfile::getXRange </td>
           <td>(</td>
           <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>xmin</em>, </td>
@@ -1348,7 +1182,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>splits</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1358,7 +1192,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1366,11 +1200,9 @@ template&lt;typename T &gt; </div>
 <p>Define the range over which the profile is not trivially zero. </p>
 <p>These values are used when a real-space convolution is requested to define the appropriate range of integration. The implementation here is +- infinity for both x and y. Derived classes may override this if they a have different range. </p>
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_s_b_profile.html#ae1a5342402a80f964b17b5a0a4867f3b">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a1c34f79e2dbd8616397f4600f830d9a4"></a>
+<a class="anchor" id="a3fc25a15c465df01a218d99f0e6a262f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1378,7 +1210,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBMoffat::getYRange </td>
+          <td class="memname">void galsim::SBProfile::getYRange </td>
           <td>(</td>
           <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>ymin</em>, </td>
@@ -1393,7 +1225,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>splits</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1403,16 +1235,14 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_s_b_profile.html#ab438f3a016d837d336025ca699aeaef3">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a02ea5b276ffc755b05f92304f81eac96"></a>
+<a class="anchor" id="a033f2a12737c5b12602b088dc2f764ec"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1420,7 +1250,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBMoffat::getYRange </td>
+          <td class="memname">void galsim::SBProfile::getYRange </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -1441,7 +1271,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>splits</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1451,16 +1281,14 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_s_b_profile.html#a9bb61aaef35b593d15f7f56fbcd41613">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="aa0c9d488f4cedbccc3319ef1bbcffedc"></a>
+<a class="anchor" id="a3d9f16bb409318f98b5fafb2a577c1a9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1468,7 +1296,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool galsim::SBMoffat::hasHardEdges </td>
+          <td class="memname">bool galsim::SBProfile::hasHardEdges </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1476,18 +1304,16 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>The presence of hard edges help determine whether real space convolution might be a better choice. </p>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a28d5956c0b85e6da594f86e5771a38fa">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a5685314641d4efc57ccb19765a1f0e56"></a>
+<a class="anchor" id="a22cb3ddd3d82cfc8abb5b63664f9bf49"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1495,7 +1321,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool galsim::SBMoffat::isAnalyticK </td>
+          <td class="memname">bool galsim::SBProfile::isAnalyticK </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1503,19 +1329,17 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Characteristic that can affect efficiency of evaluation. </p>
-<p><a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is "analytic" in the k domain if values can be determined immediately at any position through formula or a stored table (no DFT). (TODO: Ensure that derived classes get additional info as needed). </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#ab5e08ac3c183b33c24fe52dd01b35125">galsim::SBProfile</a>.</p>
+<p><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is "analytic" in the k domain if values can be determined immediately at any position through formula or a stored table (no DFT). </p>
 
 </div>
 </div>
-<a class="anchor" id="aa13f34ca389fe30016fbede0ff1bc83b"></a>
+<a class="anchor" id="a574382e3ede9ac14c0174fc8a9643265"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1523,7 +1347,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool galsim::SBMoffat::isAnalyticX </td>
+          <td class="memname">bool galsim::SBProfile::isAnalyticX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1531,19 +1355,17 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Characteristic that can affect efficiency of evaluation. </p>
-<p><a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is "analytic" in the real domain if values can be determined immediately at any position through formula or a stored table (no DFT). (TODO: Ensure that derived classes get additional info as needed). </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#ae4c6429af70146e70fdd7c4f401fe423">galsim::SBProfile</a>.</p>
+<p><a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is "analytic" in the real domain if values can be determined immediately at any position through formula or a stored table (no DFT). </p>
 
 </div>
 </div>
-<a class="anchor" id="a1ab7b139492db0163419bfc8955a03e2"></a>
+<a class="anchor" id="a752163179fa64df1b24d51cc13649b7d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1551,7 +1373,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool galsim::SBMoffat::isAxisymmetric </td>
+          <td class="memname">bool galsim::SBProfile::isAxisymmetric </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1559,19 +1381,16 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Characteristic that can affect efficiency of evaluation. </p>
-<p>(TODO: Ensure that derived classes get additional info as needed). </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a1c0a48465d39039a26cb6076a5053a3d">galsim::SBProfile</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae947c54d03e1252d7389a4124f7bd0f4"></a>
+<a class="anchor" id="aeeef4c5230553a57f35a70490b97eb06"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1579,7 +1398,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::complex&lt;double&gt; galsim::SBMoffat::kValue </td>
+          <td class="memname">std::complex&lt;double&gt; galsim::SBProfile::kValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>k</em></td><td>)</td>
@@ -1588,12 +1407,12 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> at a chosen 2D position in k space. </p>
+<p>Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in k space. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>2D position in k space. </td></tr>
@@ -1601,11 +1420,9 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a442e9c6e0482d0e6d55c4e1f43f69c74">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a5d03d651a5a876bdd7c0994c72511505"></a>
+<a class="anchor" id="a20a8cdf69b7c134ebd815fe272771b21"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1613,7 +1430,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::SBMoffat::maxK </td>
+          <td class="memname">double galsim::SBProfile::maxK </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1621,18 +1438,16 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Value of k beyond which aliasing can be neglected. </p>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a1faffa5bf4117bba5d7c31469968409c">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="aa6756009b5864826033179c534560381"></a>
+<a class="anchor" id="ae7956c43a3b82f40a5b5014fcf3653f0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1640,7 +1455,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double galsim::SBProfile::nyquistDx </td>
+          <td class="memname">double galsim::SBProfile::nyquistDx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1648,12 +1463,36 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel spacing that does not alias maxK. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab3b3ceecb236f313aaa282e4d89c1883"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBMoffat::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_s_b_moffat.html">SBMoffat</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1697,12 +1536,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values. </p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values. </p>
 <p>If the input image is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and has null dimension, a square image will be drawn which is big enough to avoid "folding." If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI or views) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a1faffa5bf4117bba5d7c31469968409c" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
   </table>
   </dd>
@@ -1799,13 +1638,13 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values. </p>
-<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values. </p>
+<p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
   </table>
   </dd>
@@ -1888,7 +1727,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1922,7 +1761,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1956,7 +1795,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1990,7 +1829,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2024,7 +1863,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2058,14 +1897,14 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a6d86faf2a2df82dae238f0a5e36428fd"></a>
+<a class="anchor" id="aeefb2c61d26fae17c5a55d9e60dd4ac2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2073,32 +1912,26 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>* galsim::SBProfile::rotate </td>
+          <td class="memname">void galsim::SBProfile::scaleFlux </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_angle.html">Angle</a>&#160;</td>
-          <td class="paramname"><em>theta</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fluxRatio</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rotation distortion transformation. </p>
-<p>This returns a pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> that represents a new Surface Brightness Profile with the requested transformation. The type of the new object is currently <a class="el" href="classgalsim_1_1_s_b_distort.html" title="An affine transformation of another SBProfile.">SBDistort</a>, but that is an implementation choice, and should not be assumed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>rotation, in radians, anticlockwise. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Multiple the flux by fluxRatio. </p>
+<p>This resets the internal pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> that wraps the old one with a scaled flux. This does not change any previous uses of the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>, so if it had been used in some other context (e.g. in <a class="el" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles.">SBAdd</a> or <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>), that object will be unchanged and still valid. </p>
 
 </div>
 </div>
-<a class="anchor" id="a89d148d6ad0e3a74ea71f13a3926c51f"></a>
+<a class="anchor" id="a31093a62c9086296fdf519c720edadb9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2106,7 +1939,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBMoffat::setFlux </td>
+          <td class="memname">void galsim::SBProfile::setFlux </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>flux</em></td><td>)</td>
@@ -2115,18 +1948,17 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a>. </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#af9e6ffe66512a4ef040552b9fb1c2a93">galsim::SBProfile</a>.</p>
+<p>Set the flux to a new value. </p>
+<p>This sets the flux to a new value. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
 
 </div>
 </div>
-<a class="anchor" id="a6208dcf984be4e8ab988a8381f146cfc"></a>
+<a class="anchor" id="a9d018abd10fe2a2ab526288e4d5dad57"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2134,120 +1966,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBMoffat::setupFT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Setup the FT <a class="el" href="classgalsim_1_1_table.html">Table</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa99109517423306be5ab70b622aacb61"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>* galsim::SBProfile::shear </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>e1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>e2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classgalsim_1_1_shear.html">Shear</a> distortion transformation (affine without rotation or dilation). </p>
-<p>This returns a pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> that represents a new Surface Brightness Profile with the requested transformation. The type of the new object is currently <a class="el" href="classgalsim_1_1_s_b_distort.html" title="An affine transformation of another SBProfile.">SBDistort</a>, but that is an implementation choice, and should not be assumed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">e1</td><td>first component of ellipticity. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">e2</td><td>second component of ellipticity. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ad1267a7489fc7f0dc7f7a93abfadcd9c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>* galsim::SBProfile::shift </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Translation transformation. </p>
-<p>This returns a pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> that represents a new Surface Brightness Profile with the requested transformation. The type of the new object is currently <a class="el" href="classgalsim_1_1_s_b_distort.html" title="An affine transformation of another SBProfile.">SBDistort</a>, but that is an implementation choice, and should not be assumed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>shift in x. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dy</td><td>shift in y. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ac54c3e0af2e40de1e78b0ee37f87f6d0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBMoffat::shoot </td>
+          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBProfile::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -2266,19 +1985,30 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Moffat photon shooting is done by analytic inversion of cumulative flux distribution. </p>
-<p>Will require 2 uniform deviates per photon, plus analytic function (pow and sqrt) </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#af3b919f05cd1fcb0a73ccb1ee593a9fd">galsim::SBProfile</a>.</p>
+<p>Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. </p>
+<p>Returns an array of photon coordinates and fluxes that are drawn from the light distribution of this <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. Absolute value of each photons' flux should be approximately equal, but some photons can be negative as needed to represent negative regions. Note that the ray-shooting method is not intended to produce a randomized value of the total object flux, so do not assume that there will be sqrt(N) error on the flux. In fact most implementations will return a <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> with exactly correct flux, with only the <em>distribution</em> of flux on the sky that will definitely have sampling noise.</p>
+<p>The one definitive gaurantee is that, in the limit of large number of photons, the surface brightness distribution of the photons will converge on the SB pattern defined by the object.</p>
+<p>Objects with regions of negative flux will result in creation of photons with negative flux. Absolute value of negative photons' flux should be nearly equal to the standard flux of positive photons. Shot-noise fluctuations between the number of positive and negative photons will produce noise in the total net flux carried by the output <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>.</p>
+<p>The typical implementation will be to take the integral of the absolute value of flux, and divide it nearly equally into N photons. The photons are then drawn from the distribution of the <em>absolute value</em> of flux. If a photon is drawn from a region of negative flux, then that photon's flux is negated. Because of cancellation, this means that each photon will carry more than <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a>/N</code> flux if there are negative-flux regions in the object. It also means that during convolution, addition, or interpolation, positive- and negative-flux photons can be contributing to the same region of the image. Their cancellation means that the shot noise may be substantially higher than you would expect if you had only positive-flux photons.</p>
+<p>The photon flux may also vary slightly as a means of speeding up photon-shooting, as an alternative to rejection sampling. See <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code> documentation.</p>
+<p>It should be rare to use this method or any <code><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a></code> in user code - the method <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a0ef7975cb5404e696251acd180b973e9" title="Draw this SBProfile into Image by shooting photons.">drawShoot()</a></code> will more typically put the results directly into an image.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Total number of photons to produce. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ud</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will be used to draw photons from distribution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing all the photons' info. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a60ee77d55b19669ca4134188db6f5989"></a>
+<a class="anchor" id="a81e8f62302e15417bdd4a474b3f6fe55"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2286,7 +2016,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::SBMoffat::stepK </td>
+          <td class="memname">double galsim::SBProfile::stepK </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2294,19 +2024,16 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Sampling in k space necessary to avoid folding too much of image in x space. </p>
-<p>(TODO: Ensure that derived classes get additional info as needed). </p>
-
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#aad8f0668a8f0459180a37337d15acb41">galsim::SBProfile</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acfc1010d26f5df8c4187f3711d3bf044"></a>
+<a class="anchor" id="a11558695546a3b4129971d09df8332bf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2314,7 +2041,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::SBMoffat::xValue </td>
+          <td class="memname">double galsim::SBProfile::xValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -2323,13 +2050,13 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> at a chosen 2D position in real space. </p>
-<p>Assume all are real-valued. <a class="el" href="classgalsim_1_1_s_b_moffat.html#acfc1010d26f5df8c4187f3711d3bf044" title="Return value of SBProfile at a chosen 2D position in real space.">xValue()</a> may not be implemented for derived classes (<a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>) that require an FFT to determine real-space values. In this case, an <a class="el" href="classgalsim_1_1_s_b_error.html" title="Exception class thrown by SBProfiles.">SBError</a> will be thrown.</p>
+<p>Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in real space. </p>
+<p>Assume all are real-valued. <a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf" title="Return value of SBProfile at a chosen 2D position in real space.">xValue()</a> may not be implemented for derived classes (<a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>) that require an FFT to determine real-space values. In this case, an <a class="el" href="classgalsim_1_1_s_b_error.html" title="Exception class thrown by SBProfiles.">SBError</a> will be thrown.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>2D position in real space. </td></tr>
@@ -2337,12 +2064,10 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile.html#a92e11650069ad127d62724c5ec4b136a">galsim::SBProfile</a>.</p>
-
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a8f6db5d814a05e0606c30d66f3069350"></a>
+<a class="anchor" id="a40d416cc366e1102ca9540e3c6c7f5c7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2350,254 +2075,12 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::SBMoffat::_beta</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html">SBProfileImpl</a>&gt; galsim::SBProfile::_pimpl</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4bf73ad2a419b03992b219aedcdc4adc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_flux</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Flux. </p>
-
-</div>
-</div>
-<a class="anchor" id="a66db1ede0c629c09d08db105c19c25f4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_fluxFactor</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Integral of total flux in terms of 'rD' units. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab038a11968e77bcfd58ee164c958a80a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt;double,double&gt; galsim::SBMoffat::_ft</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Lookup table for Fourier transform of Moffat. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae42d82f9b58552e7a6a7e44c713f92a2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_FWHM</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Full Width at Half Maximum in units of <code>rD</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="aed6dc1499d1c742aa15eb06bb18c69ab"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_maxK</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximum k with kValue &gt; 1.e-3. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae7de0d0dd6b34871c7129fe84939405e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_maxR</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximum <code>r</code> </p>
-
-</div>
-</div>
-<a class="anchor" id="aafebeff80201250afb061e306762b00f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_maxR_sq</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculated value: maxR * maxR. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab42217d6129562a13451977de39d217c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_norm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Normalization. (Including the flux) </p>
-
-</div>
-</div>
-<a class="anchor" id="a3e4c0ea7e00540bc16d0910289a8643f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_rD</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Scale radius for profile <code>[1 + (r / rD)^2]^beta</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="aee881da5024742c6745ccffbfd885a32"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBMoffat::_rD_sq</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculated value: rD*rD;. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad8216d79cd40d748ff577278497dd0e3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double(* galsim::SBMoffat::pow_beta)(double x, double beta)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2610,7 +2093,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:37 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:18 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

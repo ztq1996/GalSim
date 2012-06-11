@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadcdc7a3b920290867f370d82976fd35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aadcdc7a3b920290867f370d82976fd35">Interpolant</a> (const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;rhs)</td></tr>
 <tr class="memdesc:aadcdc7a3b920290867f370d82976fd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor: does not copy photon sampler, will need to rebuild.  <a href="#aadcdc7a3b920290867f370d82976fd35"></a><br/></td></tr>
 <tr class="memitem:a60d75d58eed81b3064872c64adf8cdcb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a60d75d58eed81b3064872c64adf8cdcb">~Interpolant</a> ()</td></tr>
-<tr class="memdesc:a60d75d58eed81b3064872c64adf8cdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor (virtual for base class).  <a href="#a60d75d58eed81b3064872c64adf8cdcb"></a><br/></td></tr>
+<tr class="memdesc:a60d75d58eed81b3064872c64adf8cdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a60d75d58eed81b3064872c64adf8cdcb"></a><br/></td></tr>
 <tr class="memitem:a700240500435a2dad54f0a72c2ff604e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a700240500435a2dad54f0a72c2ff604e">xrange</a> () const =0</td></tr>
 <tr class="memdesc:a700240500435a2dad54f0a72c2ff604e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#a700240500435a2dad54f0a72c2ff604e"></a><br/></td></tr>
 <tr class="memitem:aa75275dce4c0ea81de6d5172e902ee0c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa75275dce4c0ea81de6d5172e902ee0c">urange</a> () const =0</td></tr>
@@ -157,8 +157,9 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a291876b8f5b0db4e83342b72a24512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_interpolant_function.html">InterpolantFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9a291876b8f5b0db4e83342b72a24512">_interp</a></td></tr>
 <tr class="memdesc:a9a291876b8f5b0db4e83342b72a24512"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> to sampler.  <a href="#a9a291876b8f5b0db4e83342b72a24512"></a><br/></td></tr>
-<tr class="memitem:a4a24cf78a8459916053d454730c4e409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a4a24cf78a8459916053d454730c4e409">_sampler</a></td></tr>
-<tr class="memdesc:a4a24cf78a8459916053d454730c4e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#a4a24cf78a8459916053d454730c4e409"></a><br/></td></tr>
+<tr class="memitem:aa0257bdab5213fa88e524a930126cf9d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa0257bdab5213fa88e524a930126cf9d">_sampler</a></td></tr>
+<tr class="memdesc:aa0257bdab5213fa88e524a930126cf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#aa0257bdab5213fa88e524a930126cf9d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>One-dimensional interpolant base function. </p>
@@ -221,8 +222,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor (virtual for base class). </p>
-<p>Deletes photon sampler if it has been built. </p>
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -610,7 +610,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4a24cf78a8459916053d454730c4e409"></a>
+<a class="anchor" id="aa0257bdab5213fa88e524a930126cf9d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -618,7 +618,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>* galsim::Interpolant::_sampler</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a>&gt; galsim::Interpolant::_sampler</td>
         </tr>
       </table>
   </td>
@@ -638,7 +638,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

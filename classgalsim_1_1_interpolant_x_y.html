@@ -114,8 +114,8 @@ Inheritance diagram for galsim::InterpolantXY:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a829abfe60cc0a9ad8169b1fd83ea6af0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a829abfe60cc0a9ad8169b1fd83ea6af0">InterpolantXY</a> (const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;i1d_)</td></tr>
-<tr class="memdesc:a829abfe60cc0a9ad8169b1fd83ea6af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a829abfe60cc0a9ad8169b1fd83ea6af0"></a><br/></td></tr>
+<tr class="memitem:a24b4bed5c0cfeb0697f29e25873376e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a24b4bed5c0cfeb0697f29e25873376e0">InterpolantXY</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &gt; i1d)</td></tr>
+<tr class="memdesc:a24b4bed5c0cfeb0697f29e25873376e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a24b4bed5c0cfeb0697f29e25873376e0"></a><br/></td></tr>
 <tr class="memitem:a4476659a8e77d98451dd2d9bca1d3e40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a4476659a8e77d98451dd2d9bca1d3e40">~InterpolantXY</a> ()</td></tr>
 <tr class="memdesc:a4476659a8e77d98451dd2d9bca1d3e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a4476659a8e77d98451dd2d9bca1d3e40"></a><br/></td></tr>
 <tr class="memitem:a5f5a84f8d220c2d16b0b8bf0f3fa6507"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a5f5a84f8d220c2d16b0b8bf0f3fa6507">xrange</a> () const </td></tr>
@@ -142,32 +142,31 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a89a3a844f113e32d609374de123cee3d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a89a3a844f113e32d609374de123cee3d">i1d</a></td></tr>
-<tr class="memdesc:a89a3a844f113e32d609374de123cee3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 1d function used in both axes here.  <a href="#a89a3a844f113e32d609374de123cee3d"></a><br/></td></tr>
+<tr class="memitem:a178666d89a10baac6654b855e528c9a7"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a178666d89a10baac6654b855e528c9a7">_i1d</a></td></tr>
+<tr class="memdesc:a178666d89a10baac6654b855e528c9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 1d function used in both axes here.  <a href="#a178666d89a10baac6654b855e528c9a7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An interpolant that is product of same 1d <code><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a></code> in x and y. </p>
 <p>Note that it only refers to the 1d function, does <em>not</em> own it, so the 1d must be kept in existence. Typically will create a given <code><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a></code> once and use for the whole program. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a829abfe60cc0a9ad8169b1fd83ea6af0"></a>
+<a class="anchor" id="a24b4bed5c0cfeb0697f29e25873376e0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::InterpolantXY::InterpolantXY </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;&#160;</td>
-          <td class="paramname"><em>i1d_</em></td><td>)</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &gt;&#160;</td>
+          <td class="paramname"><em>i1d</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>Note that the referenced <code><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a></code> is not copied, it must stay in existence. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">i1d_</td><td>One-dimensional <code><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a></code> to be applied to x and y coordinates. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i1d</td><td>One-dimensional <code><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a></code> to be applied to x and y coordinates. </td></tr>
   </table>
   </dd>
 </dl>
@@ -605,7 +604,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a89a3a844f113e32d609374de123cee3d"></a>
+<a class="anchor" id="a178666d89a10baac6654b855e528c9a7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -613,7 +612,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a>&amp; galsim::InterpolantXY::i1d</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a>&gt; galsim::InterpolantXY::_i1d</td>
         </tr>
       </table>
   </td>
@@ -633,7 +632,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 18:23:36 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 12 2012 00:33:17 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
