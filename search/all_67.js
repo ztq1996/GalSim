@@ -7,7 +7,7 @@ var searchData=
   ['ellipse',['ellipse',['../namespacegalsim_1_1ellipse.html',1,'galsim']]],
   ['fits',['fits',['../namespacegalsim_1_1fits.html',1,'galsim']]],
   ['frontend',['frontend',['../namespacegalsim_1_1frontend.html',1,'galsim']]],
-  ['g1g2_5fto_5fe1e2',['g1g2_to_e1e2',['../namespacegalsim_1_1base.html#aa40657e43cc13b313e763798c03cba74',1,'galsim::base']]],
+  ['g1g2_5fto_5fe1e2',['g1g2_to_e1e2',['../namespacegalsim_1_1utilities.html#a9e5623a48fc511636b486d42816ba940',1,'galsim::utilities']]],
   ['gal_5ffilename',['gal_filename',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a748b8d88ac39f164a6fe13525f4b2ce2',1,'galsim::real::RealGalaxyCatalog']]],
   ['gal_5fhdu',['gal_hdu',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad2bebca2101281914421a9c5ccbab8a5',1,'galsim::real::RealGalaxyCatalog']]],
   ['galsim',['galsim',['../namespacegalsim.html',1,'']]],
@@ -17,8 +17,8 @@ var searchData=
   ['gammadeviate',['GammaDeviate',['../classgalsim_1_1_uniform_deviate.html#a06351add0f3ac1e4883b760c2d5d2dcf',1,'galsim::UniformDeviate::GammaDeviate()'],['../classgalsim_1_1_gamma_deviate.html#a26c85a6a844e533ed5f18c20642b09cf',1,'galsim::GammaDeviate::GammaDeviate(UniformDeviate &amp;u_, double alpha=1., double beta=1.)'],['../classgalsim_1_1_gamma_deviate.html#a67e609e63a7d9f008b27360b13eb20d3',1,'galsim::GammaDeviate::GammaDeviate(const GammaDeviate &amp;rhs)']]],
   ['gaussgenerator',['GaussGenerator',['../classgalsim_1_1_gaussian_deviate.html#a66b46dda02d6ddc09ab8409030740415',1,'galsim::GaussianDeviate']]],
   ['gaussian',['Gaussian',['../classgalsim_1_1base_1_1_gaussian.html',1,'galsim::base']]],
-  ['gaussiandeviate',['GaussianDeviate',['../classgalsim_1_1_gaussian_deviate.html',1,'galsim']]],
   ['gaussiandeviate',['GaussianDeviate',['../classgalsim_1_1_uniform_deviate.html#a1de5cb408085ec09072c0ebc8115e503',1,'galsim::UniformDeviate::GaussianDeviate()'],['../classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73',1,'galsim::GaussianDeviate::GaussianDeviate(UniformDeviate &amp;u_, double mean=0., double sigma=1.)'],['../classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53',1,'galsim::GaussianDeviate::GaussianDeviate(const GaussianDeviate &amp;rhs)'],['../classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73',1,'galsim::GaussianDeviate::GaussianDeviate(UniformDeviate &amp;u_, double mean=0., double sigma=1.)'],['../classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53',1,'galsim::GaussianDeviate::GaussianDeviate(const GaussianDeviate &amp;rhs)']]],
+  ['gaussiandeviate',['GaussianDeviate',['../classgalsim_1_1_gaussian_deviate.html',1,'galsim']]],
   ['gen',['gen',['../classgalsim_1_1_gaussian_deviate.html#ab880f7e2824fbf6a29ea174c55e8b588',1,'galsim::GaussianDeviate::gen()'],['../classgalsim_1_1_binomial_deviate.html#a75b3e6fc5136cbe37e7606bd609af65b',1,'galsim::BinomialDeviate::gen()'],['../classgalsim_1_1_poisson_deviate.html#ae769a5409c9e46ebeee7b34a7dd312f1',1,'galsim::PoissonDeviate::gen()']]],
   ['general_5fshear_5festimator',['general_shear_estimator',['../namespacegalsim_1_1hsm.html#ac18e9c11e85e4f3907631580cd1c31cd',1,'galsim::hsm']]],
   ['generate_5fpupil_5fplane',['generate_pupil_plane',['../namespacegalsim_1_1optics.html#a582b3550f1ac69d5abc2885a0458c223',1,'galsim::optics']]],
@@ -111,5 +111,6 @@ var searchData=
   ['psfcorr',['psfcorr',['../namespacegalsim_1_1psfcorr.html',1,'galsim']]],
   ['real',['real',['../namespacegalsim_1_1real.html',1,'galsim']]],
   ['sbp',['sbp',['../namespacegalsim_1_1sbp.html',1,'galsim']]],
-  ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]]
+  ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]],
+  ['utilities',['utilities',['../namespacegalsim_1_1utilities.html',1,'galsim']]]
 ];

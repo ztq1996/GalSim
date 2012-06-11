@@ -48,7 +48,7 @@ var searchData=
   ['rightcumulativeflux',['rightCumulativeFlux',['../classgalsim_1_1_probability_tree_1_1_element.html#a644c4db1543351507410ffb2dab78bc2',1,'galsim::ProbabilityTree::Element']]],
   ['rindex',['rIndex',['../classgalsim_1_1_p_q_index.html#ae6cb40b06271760e2571aef02221924f',1,'galsim::PQIndex']]],
   ['rmatrix',['rMatrix',['../classgalsim_1_1_l_transform.html#a2ce3cf2b8bcec4ccd286a6dd56e7b2fd',1,'galsim::LTransform::rMatrix()'],['../classgalsim_1_1_l_transform.html#aa21d1664b5449972e33c5b0af2d576da',1,'galsim::LTransform::rMatrix() const ']]],
-  ['roll2d',['roll2d',['../namespacegalsim_1_1optics.html#a6af445f8b3f016aad3182539b5fa390d',1,'galsim::optics']]],
+  ['roll2d',['roll2d',['../namespacegalsim_1_1utilities.html#a13e9d483f84e5d442b47384d26f5f65b',1,'galsim::utilities']]],
   ['root',['root',['../classgalsim_1_1_probability_tree.html#a14b9d222f3a71250be32f2a463e68558',1,'galsim::ProbabilityTree::root()'],['../classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d',1,'galsim::Solve::root()']]],
   ['rotate',['rotate',['../classgalsim_1_1_l_vector.html#a05bca6fff71123332340669f0b1d4e34',1,'galsim::LVector::rotate()'],['../classgalsim_1_1_s_b_profile.html#a6d86faf2a2df82dae238f0a5e36428fd',1,'galsim::SBProfile::rotate()']]],
   ['rotationltransform',['RotationLTransform',['../namespacegalsim.html#a65d39c3456b4714741acbe4f981de830',1,'galsim']]],

@@ -19,5 +19,6 @@ var searchData=
   ['psfcorr',['psfcorr',['../namespacegalsim_1_1psfcorr.html',1,'galsim']]],
   ['real',['real',['../namespacegalsim_1_1real.html',1,'galsim']]],
   ['sbp',['sbp',['../namespacegalsim_1_1sbp.html',1,'galsim']]],
-  ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]]
+  ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]],
+  ['utilities',['utilities',['../namespacegalsim_1_1utilities.html',1,'galsim']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g1g2_5fto_5fe1e2',['g1g2_to_e1e2',['../namespacegalsim_1_1base.html#aa40657e43cc13b313e763798c03cba74',1,'galsim::base']]],
+  ['g1g2_5fto_5fe1e2',['g1g2_to_e1e2',['../namespacegalsim_1_1utilities.html#a9e5623a48fc511636b486d42816ba940',1,'galsim::utilities']]],
   ['gammadeviate',['GammaDeviate',['../classgalsim_1_1_gamma_deviate.html#a26c85a6a844e533ed5f18c20642b09cf',1,'galsim::GammaDeviate::GammaDeviate(UniformDeviate &amp;u_, double alpha=1., double beta=1.)'],['../classgalsim_1_1_gamma_deviate.html#a67e609e63a7d9f008b27360b13eb20d3',1,'galsim::GammaDeviate::GammaDeviate(const GammaDeviate &amp;rhs)']]],
   ['gaussiandeviate',['GaussianDeviate',['../classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73',1,'galsim::GaussianDeviate::GaussianDeviate(UniformDeviate &amp;u_, double mean=0., double sigma=1.)'],['../classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53',1,'galsim::GaussianDeviate::GaussianDeviate(const GaussianDeviate &amp;rhs)'],['../classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73',1,'galsim::GaussianDeviate::GaussianDeviate(UniformDeviate &amp;u_, double mean=0., double sigma=1.)'],['../classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53',1,'galsim::GaussianDeviate::GaussianDeviate(const GaussianDeviate &amp;rhs)']]],
   ['general_5fshear_5festimator',['general_shear_estimator',['../namespacegalsim_1_1hsm.html#ac18e9c11e85e4f3907631580cd1c31cd',1,'galsim::hsm']]],

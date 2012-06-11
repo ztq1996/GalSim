@@ -95,10 +95,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6af445f8b3f016aad3182539b5fa390d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#a6af445f8b3f016aad3182539b5fa390d">roll2d</a></td></tr>
-<tr class="memdesc:a6af445f8b3f016aad3182539b5fa390d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 2D roll (circular shift) on a supplied 2D numpy array, conveniently.  <a href="#a6af445f8b3f016aad3182539b5fa390d"></a><br/></td></tr>
-<tr class="memitem:a8443a0cbf99aeac64e4b113235f4231a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#a8443a0cbf99aeac64e4b113235f4231a">kxky</a></td></tr>
-<tr class="memdesc:a8443a0cbf99aeac64e4b113235f4231a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the tuple kx, ky corresponding to the DFT of a unit integer-sampled array of input shape.  <a href="#a8443a0cbf99aeac64e4b113235f4231a"></a><br/></td></tr>
 <tr class="memitem:a582b3550f1ac69d5abc2885a0458c223"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#a582b3550f1ac69d5abc2885a0458c223">generate_pupil_plane</a></td></tr>
 <tr class="memdesc:a582b3550f1ac69d5abc2885a0458c223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pupil plane, including a central obscuration such as caused by a secondary mirror.  <a href="#a582b3550f1ac69d5abc2885a0458c223"></a><br/></td></tr>
 <tr class="memitem:aed9556b04fe30f45ea8860eb14b5288b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#aed9556b04fe30f45ea8860eb14b5288b">wavefront</a></td></tr>
@@ -177,34 +173,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Returns a tuple (rho, theta, in_pupil), the first two of which are the coordinates of the pupil in unit disc-scaled coordinates for use by Zernike polynomials for describing the wavefront across the pupil plane. The array in_pupil is a vector of Bools used to specify where in the pupil plane described by rho, theta is illuminated. See also <a class="el" href="namespacegalsim_1_1optics.html#aed9556b04fe30f45ea8860eb14b5288b" title="Return a complex, aberrated wavefront across a circular (default) or square pupil.">optics.wavefront</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8443a0cbf99aeac64e4b113235f4231a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.optics.kxky </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>array_shape</em> = <code>(256,&#160;256</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the tuple kx, ky corresponding to the DFT of a unit integer-sampled array of input shape. </p>
-<p>Uses the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="An abstract base class representing all of the 2D surface brightness profiles that we know how to dra...">SBProfile</a> conventions for Fourier space, so k varies in approximate range (-pi, pi]. Uses the most common DFT element ordering conventions (and those of FFTW), so that <code>(0, 0)</code> array element corresponds to <code>(kx, ky) = (0, 0)</code>.</p>
-<p>See also the docstring for np.fftfreq, which uses the same DFT convention, and is called here, but misses a factor of pi.</p>
-<p>Adopts Numpy array index ordering so that the trailing axis corresponds to kx, rather than the leading axis as would be expected in IDL/Fortran. See docstring for numpy.meshgrid which also uses this convention.</p>
-<h2>Parameters</h2>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for <code>kx, ky</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1020,49 +988,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6af445f8b3f016aad3182539b5fa390d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.optics.roll2d </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>iroll</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>jroll</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Perform a 2D roll (circular shift) on a supplied 2D numpy array, conveniently. </p>
-<h2>Parameters</h2>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">image</td><td>the numpy array to be circular shifted. </td></tr>
-    <tr><td class="paramname">(iroll,jroll)</td><td>the roll in the i and j dimensions, respectively.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>the rolled image. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="aed9556b04fe30f45ea8860eb14b5288b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1273,7 +1198,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 11 2012 13:50:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 11 2012 18:23:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
