@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8b0c3782041f6643d5408461be2cd559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Airy photon-shooting is done numerically with <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code> class.  <a href="#a8b0c3782041f6643d5408461be2cd559"></a><br/></td></tr>
 <tr class="memitem:a1b6d86089c9cdd7315c0199634782adb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a1b6d86089c9cdd7315c0199634782adb">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;) const </td></tr>
 <tr class="memitem:a03b9da6983541ba44981fb8102957b64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a03b9da6983541ba44981fb8102957b64">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
-<tr class="memitem:ac6d47560c04f67072ad7e0f708d6f9cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ac6d47560c04f67072ad7e0f708d6f9cb">getYRange</a> (double, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
+<tr class="memitem:a4220cb2ef63f6eb9f1a1f069e51dc6cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4220cb2ef63f6eb9f1a1f069e51dc6cc">getYRangeX</a> (double, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
 <tr class="memitem:a4fe556086907c011093194c8da8ed112"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4fe556086907c011093194c8da8ed112">getPositiveFlux</a> () const </td></tr>
 <tr class="memitem:a18a83c23b07541de669f0c2c9e0d2a1d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a18a83c23b07541de669f0c2c9e0d2a1d">getNegativeFlux</a> () const </td></tr>
 <tr class="memitem:ae1c3edab7797f45841fcbcabc32f5219"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -822,7 +822,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac6d47560c04f67072ad7e0f708d6f9cb"></a>
+<a class="anchor" id="a4220cb2ef63f6eb9f1a1f069e51dc6cc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -830,7 +830,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void galsim::SBProfile::SBProfileImpl::getYRange </td>
+          <td class="memname">virtual void galsim::SBProfile::SBProfileImpl::getYRangeX </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname">, </td>
@@ -866,7 +866,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a04d9a2b8d443e58664beda2a2c7385aa">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a9a8ac74b8c7fcd77b823347175b5b9ff">galsim::SBDistort::SBDistortImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a4bb5003f9513e04f1744cc202f44b800">galsim::SBAdd::SBAddImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a14126bdad669eba929c339e4ba4937fb">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a6691efbd24e87dab7f58c596d51c3fbf">galsim::SBDistort::SBDistortImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2c63b4c5161204f4363cbd0e417ad94e">galsim::SBAdd::SBAddImpl</a>.</p>
 
 </div>
 </div>
@@ -1279,7 +1279,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 13 2012 04:56:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 15 2012 03:21:10 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
