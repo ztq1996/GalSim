@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_5f_5fadd_5f_5f',['__add__',['../classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82',1,'galsim::base::GSObject']]],
+  ['_5f_5fclass_5f_5f',['__class__',['../classgalsim_1_1base_1_1_g_s_object.html#a25733fb48fd5dd81726d1d7e1970df55',1,'galsim::base::GSObject']]],
   ['_5f_5fdiv_5f_5f',['__div__',['../classgalsim_1_1base_1_1_g_s_object.html#a182d9f8b408ee4582d170c760c533d98',1,'galsim::base::GSObject']]],
   ['_5f_5fgetattr_5f_5f',['__getattr__',['../classgalsim_1_1base_1_1_attribute_dict.html#acdb1035a338d06715dba0919a7afc7c9',1,'galsim::base::AttributeDict']]],
   ['_5f_5fiadd_5f_5f',['__iadd__',['../classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b',1,'galsim::base::GSObject']]],
@@ -102,6 +103,7 @@ var searchData=
   ['_5fkvaluenophasenodet',['_kValueNoPhaseNoDet',['../classgalsim_1_1_s_b_distort.html#a46cfca1dcfb648434cfe8b18314d9814',1,'galsim::SBDistort']]],
   ['_5fkvaluenophasewithdet',['_kValueNoPhaseWithDet',['../classgalsim_1_1_s_b_distort.html#adda37232526726005e2ca9702c0ac79b',1,'galsim::SBDistort']]],
   ['_5fkvaluewithphase',['_kValueWithPhase',['../classgalsim_1_1_s_b_distort.html#a41af0f113d16a00b31179a138c9f07fa',1,'galsim::SBDistort']]],
+  ['_5flam_5fover_5fd',['_lam_over_D',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a7f2f8caee249ed9cc789ddfe4f4b61da',1,'galsim::SBAiry::SBAiryImpl']]],
   ['_5fm',['_m',['../classgalsim_1_1_l_transform.html#acef7657956a56ace8ef134c0e93ff42b',1,'galsim::LTransform']]],
   ['_5fm_5fptr',['_M_ptr',['../classgalsim_1_1integ_1_1pointer__to__nullary__function.html#af8119644e287879942b092575079dd1b',1,'galsim::integ::pointer_to_nullary_function::_M_ptr()'],['../classgalsim_1_1integ_1_1pointer__to__trinary__function.html#a0724251e0b5845e578b782ffdae477d2',1,'galsim::integ::pointer_to_trinary_function::_M_ptr()'],['../classgalsim_1_1integ_1_1pointer__to__tetranary__function.html#addda8feeb969702a0eb04fd69fe927ac',1,'galsim::integ::pointer_to_tetranary_function::_M_ptr()']]],
   ['_5fm_5fval',['_M_val',['../structgalsim_1_1integ_1_1constant__unary__fun.html#a7f6f9ea7f848b9f28f9b974cb86f4566',1,'galsim::integ::constant_unary_fun::_M_val()'],['../structgalsim_1_1integ_1_1constant__binary__fun.html#a8a3d1ce9ee9ddcaed4bbad8320456604',1,'galsim::integ::constant_binary_fun::_M_val()']]],
@@ -151,7 +153,7 @@ var searchData=
   ['_5frange',['_range',['../classgalsim_1_1_lanczos.html#ae49612450f22d2cbddd45ebdd7b3cdc5',1,'galsim::Lanczos::_range()'],['../classgalsim_1_1_cubic.html#acc7077b67b28d45f7f661dc2657e859e',1,'galsim::Cubic::_range()'],['../classgalsim_1_1_quintic.html#a7a53937a8f1eaad98a1c99311041c455',1,'galsim::Quintic::_range()']]],
   ['_5frd',['_rD',['../classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a6bb96ec7670d5dd889034317bee3f5af',1,'galsim::SBMoffat::SBMoffatImpl']]],
   ['_5frd_5fsq',['_rD_sq',['../classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a4f663e0f822af86a56eaa4c71f6ae100',1,'galsim::SBMoffat::SBMoffatImpl']]],
-  ['_5fre',['_re',['../classgalsim_1_1_l_vector_reference.html#a9ba27741979c653f9c793b713bd5b1f5',1,'galsim::LVectorReference::_re()'],['../classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a518b670651ba8da8276a4cfd34d8b7da',1,'galsim::SBSersic::SBSersicImpl::_re()']]],
+  ['_5fre',['_re',['../classgalsim_1_1_l_vector_reference.html#a9ba27741979c653f9c793b713bd5b1f5',1,'galsim::LVectorReference::_re()'],['../classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a518b670651ba8da8276a4cfd34d8b7da',1,'galsim::SBSersic::SBSersicImpl::_re()'],['../classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a8c0c2116559c9b606db4b36c1ca976ee',1,'galsim::SBMoffat::SBMoffatImpl::_re()']]],
   ['_5fre_5fsq',['_re_sq',['../classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#aff7d4a005d36e19443b10f15bf4407e2',1,'galsim::SBSersic::SBSersicImpl']]],
   ['_5freadnoise',['_readNoise',['../classgalsim_1_1_c_c_d_noise.html#a7a2fdb68c57469fea03797e5844de5c6',1,'galsim::CCDNoise']]],
   ['_5freadytoshoot',['_readyToShoot',['../classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#ac61d36c3f54ca0aeb2cb2499adfd31ac',1,'galsim::SBInterpolatedImage::SBInterpolatedImageImpl']]],
@@ -174,6 +176,7 @@ var searchData=
   ['_5fsumminy',['_sumMinY',['../classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a5aa3067c1e423d71452fbc4839247b9a',1,'galsim::SBConvolve::SBConvolveImpl']]],
   ['_5ftab',['_tab',['../classgalsim_1_1_lanczos.html#ac10738ac1c3743368afef4f274fe79e3',1,'galsim::Lanczos::_tab()'],['../classgalsim_1_1_cubic.html#afa184a051704889afbc900f43aec7661',1,'galsim::Cubic::_tab()'],['../classgalsim_1_1_quintic.html#ae61d98d6d4d28f387a601f9aae3468ca',1,'galsim::Quintic::_tab()']]],
   ['_5ftolerance',['_tolerance',['../classgalsim_1_1_nearest.html#ae2642ce1815285bcbccbfcd1a7a1bce7',1,'galsim::Nearest::_tolerance()'],['../classgalsim_1_1_sinc_interpolant.html#add425d106b399a834b5a39a2d9b862f5',1,'galsim::SincInterpolant::_tolerance()'],['../classgalsim_1_1_linear.html#a1136a256755229d6ee9b7c424b72c935',1,'galsim::Linear::_tolerance()'],['../classgalsim_1_1_lanczos.html#a15c74d8f6cd84ed92f725a06e00b9774',1,'galsim::Lanczos::_tolerance()'],['../classgalsim_1_1_cubic.html#a56bd7a3391852b33bf756eb07d03dd30',1,'galsim::Cubic::_tolerance()'],['../classgalsim_1_1_quintic.html#a8d8718de4e999e7889264dcffc0abf05',1,'galsim::Quintic::_tolerance()']]],
+  ['_5ftrunc',['_trunc',['../classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a8fcce444c38e9e4b1ef0b61c8b887103',1,'galsim::SBMoffat::SBMoffatImpl']]],
   ['_5fu1',['_u1',['../classgalsim_1_1_lanczos.html#aec80a798b67a5bc1ea43720b7a7803c8',1,'galsim::Lanczos']]],
   ['_5fumax',['_uMax',['../classgalsim_1_1_lanczos.html#a4e65c54d8773fdf1c3729ac319186454',1,'galsim::Lanczos::_uMax()'],['../classgalsim_1_1_cubic.html#af2ee24f860f6f0a4606c0068e2ff07fe',1,'galsim::Cubic::_uMax()'],['../classgalsim_1_1_quintic.html#ac8b8fec45a264c295979bda6e2593d2d',1,'galsim::Quintic::_uMax()']]],
   ['_5furd',['_urd',['../classgalsim_1_1_uniform_deviate.html#a8f91da388a9e56c3c6562d68298d22b9',1,'galsim::UniformDeviate']]],

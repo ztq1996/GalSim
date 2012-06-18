@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36858eaceeeb53bf26b8462a3c5b620e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a36858eaceeeb53bf26b8462a3c5b620e">__itruediv__</a></td></tr>
 <tr class="memitem:adf331fe434ce3c71b64ce2745d0b75ca"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#adf331fe434ce3c71b64ce2745d0b75ca">__truediv__</a></td></tr>
 <tr class="memitem:aa0b398d4b0fca70211e4a73f81ea7e1a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aa0b398d4b0fca70211e4a73f81ea7e1a">copy</a></td></tr>
-<tr class="memdesc:aa0b398d4b0fca70211e4a73f81ea7e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of an object as the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> attribute of a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> instance.  <a href="#aa0b398d4b0fca70211e4a73f81ea7e1a"></a><br/></td></tr>
+<tr class="memdesc:aa0b398d4b0fca70211e4a73f81ea7e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of an object.  <a href="#aa0b398d4b0fca70211e4a73f81ea7e1a"></a><br/></td></tr>
 <tr class="memitem:a4ab9d51f34703ced5be1592e112605ff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a4ab9d51f34703ced5be1592e112605ff">maxK</a></td></tr>
 <tr class="memdesc:a4ab9d51f34703ced5be1592e112605ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns value of k beyond which aliasing can be neglected.  <a href="#a4ab9d51f34703ced5be1592e112605ff"></a><br/></td></tr>
 <tr class="memitem:a98091310691b1ecdd0d8bfacf48b73c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a98091310691b1ecdd0d8bfacf48b73c5">nyquistDx</a></td></tr>
@@ -196,18 +196,6 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux1</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux2</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>sigma1</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -226,7 +214,19 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fwhm2</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>fwhm2</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux1</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux2</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -618,6 +618,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a <a class="el" href="classgalsim_1_1_ellipse.html">galsim.Ellipse</a> distortion to this object. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available.</p>
 <p>For calling, <a class="el" href="classgalsim_1_1_ellipse.html">galsim.Ellipse</a> instances can be generated via:</p>
 <p>ellipse = galsim.Ellipse(e1, e2)</p>
 <p>where the ellipticities follow the convention |e| = (a^2 - b^2)/(a^2 + b^2). </p>
@@ -657,6 +658,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a rotation theta (<a class="el" href="classgalsim_1_1_angle.html">Angle</a> object, +ve anticlockwise) to this object. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -699,6 +701,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a (g1, g2) shear to this object, where |g| = (a-b)/(a+b). </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -741,6 +744,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a (dx, dy) shift to this object. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -792,7 +796,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of an object as the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> attribute of a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> instance. </p>
+<p>Returns a copy of an object. </p>
+<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a> (e.g. getSigma). </p>
 
 </div>
 </div>
@@ -1281,6 +1286,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Multiply the flux of the object by fluxRatio. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -1317,6 +1323,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the flux of the object. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -1436,7 +1443,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:05:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 18 2012 21:33:16 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

@@ -116,10 +116,12 @@ Inheritance diagram for galsim::SBDeVaucouleurs:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affb042a1f61f3d91717df08dd7b5ff4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html#affb042a1f61f3d91717df08dd7b5ff4f">SBDeVaucouleurs</a> (double flux=1., double r0=1.)</td></tr>
-<tr class="memdesc:affb042a1f61f3d91717df08dd7b5ff4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#affb042a1f61f3d91717df08dd7b5ff4f"></a><br/></td></tr>
+<tr class="memitem:a4f52e2f47ed849258b0ccb2149b67217"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html#a4f52e2f47ed849258b0ccb2149b67217">SBDeVaucouleurs</a> (double r0, double flux=1.)</td></tr>
+<tr class="memdesc:a4f52e2f47ed849258b0ccb2149b67217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a4f52e2f47ed849258b0ccb2149b67217"></a><br/></td></tr>
 <tr class="memitem:adf4a729b16ae4e3d27ec1ff763a29087"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#adf4a729b16ae4e3d27ec1ff763a29087">getN</a> () const </td></tr>
+<tr class="memdesc:adf4a729b16ae4e3d27ec1ff763a29087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Sersic index <code>n</code> of the profile.  <a href="#adf4a729b16ae4e3d27ec1ff763a29087"></a><br/></td></tr>
 <tr class="memitem:a77f98a620a069a653d28a51f380fbb7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b">getHalfLightRadius</a> () const </td></tr>
+<tr class="memdesc:a77f98a620a069a653d28a51f380fbb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half light radius of the Sersic profile.  <a href="#a77f98a620a069a653d28a51f380fbb7b"></a><br/></td></tr>
 <tr class="memitem:a11558695546a3b4129971d09df8332bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
 <tr class="memdesc:a11558695546a3b4129971d09df8332bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in real space.  <a href="#a11558695546a3b4129971d09df8332bf"></a><br/></td></tr>
 <tr class="memitem:aeeef4c5230553a57f35a70490b97eb06"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06">kValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
@@ -222,7 +224,7 @@ Static Protected Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with <code>n = 4</code>. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="affb042a1f61f3d91717df08dd7b5ff4f"></a>
+<a class="anchor" id="a4f52e2f47ed849258b0ccb2149b67217"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -230,13 +232,13 @@ Static Protected Attributes</h2></td></tr>
           <td class="memname">galsim::SBDeVaucouleurs::SBDeVaucouleurs </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>r0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>r0</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,8 +251,8 @@ Static Protected Attributes</h2></td></tr>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">r0</td><td>Half-light radius. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux (default <code>flux = 1.</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r0</td><td>Half-light radius (default <code>r0 = 1.</code>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1006,6 +1008,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the half light radius of the Sersic profile. </p>
+
 </div>
 </div>
 <a class="anchor" id="adf4a729b16ae4e3d27ec1ff763a29087"></a>
@@ -1028,6 +1032,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the Sersic index <code>n</code> of the profile. </p>
 
 </div>
 </div>
@@ -1815,7 +1821,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:05:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 18 2012 21:33:16 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

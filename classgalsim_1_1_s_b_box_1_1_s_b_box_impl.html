@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ad12c72c3783c889713d81266737247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9ad12c72c3783c889713d81266737247">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
 <tr class="memitem:a919fefaa85463b32cbe81f1bf8528255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a919fefaa85463b32cbe81f1bf8528255">centroid</a> () const </td></tr>
 <tr class="memitem:af7d81fc589f4f8075d824997e53fd3ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d81fc589f4f8075d824997e53fd3ff">getFlux</a> () const </td></tr>
+<tr class="memitem:ad966e0fb9f7180c1e9d3686ef8be12b1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ad966e0fb9f7180c1e9d3686ef8be12b1">getXWidth</a> () const </td></tr>
+<tr class="memitem:a9034a54f15f2dbc616d84cf69fb5c6c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9034a54f15f2dbc616d84cf69fb5c6c4">getYWidth</a> () const </td></tr>
 <tr class="memitem:af7d2edbc4bc9e34395ab07dbf77437e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d2edbc4bc9e34395ab07dbf77437e1">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
 <tr class="memdesc:af7d2edbc4bc9e34395ab07dbf77437e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boxcar is trivially sampled by drawing 2 uniform deviates.  <a href="#af7d2edbc4bc9e34395ab07dbf77437e1"></a><br/></td></tr>
 <tr class="memitem:a5fd55eecf6f3f8ec868dfbd16570c44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a5fd55eecf6f3f8ec868dfbd16570c44b">fillKGrid</a> (<a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;kt) const </td></tr>
@@ -616,6 +618,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad966e0fb9f7180c1e9d3686ef8be12b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBBox::SBBoxImpl::getXWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9ad12c72c3783c889713d81266737247"></a>
 <div class="memitem">
 <div class="memproto">
@@ -703,6 +720,21 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a14126bdad669eba929c339e4ba4937fb">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a6691efbd24e87dab7f58c596d51c3fbf">galsim::SBDistort::SBDistortImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2c63b4c5161204f4363cbd0e417ad94e">galsim::SBAdd::SBAddImpl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9034a54f15f2dbc616d84cf69fb5c6c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBBox::SBBoxImpl::getYWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1089,7 +1121,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:05:37 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 18 2012 21:33:16 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

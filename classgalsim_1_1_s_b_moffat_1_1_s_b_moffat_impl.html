@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afbf966465f3cbe2aac7b6265e552e070"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#afbf966465f3cbe2aac7b6265e552e070">SBMoffatImpl</a> (double beta, double truncationFWHM, double flux, double size, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType)</td></tr>
+<tr class="memitem:a883738a4cb084486e331deecfdd8611d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a883738a4cb084486e331deecfdd8611d">SBMoffatImpl</a> (double beta, double size, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType, double trunc, double flux)</td></tr>
 <tr class="memitem:a39236fcd206b5f0dd667bbd2fbc1d36e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a39236fcd206b5f0dd667bbd2fbc1d36e">~SBMoffatImpl</a> ()</td></tr>
 <tr class="memitem:a44e8bdbb993b1b89894fe7ab0736d5ac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a44e8bdbb993b1b89894fe7ab0736d5ac">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
 <tr class="memitem:aefd16332008625217129ac0f402a3c2e"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aefd16332008625217129ac0f402a3c2e">kValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9a48dc2eaefb751492284f49c7b4c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#af9a48dc2eaefb751492284f49c7b4c6a">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
 <tr class="memdesc:af9a48dc2eaefb751492284f49c7b4c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moffat photon shooting is done by analytic inversion of cumulative flux distribution.  <a href="#af9a48dc2eaefb751492284f49c7b4c6a"></a><br/></td></tr>
 <tr class="memitem:ab826ab6d8f660ecfac3bb0830c01033d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ab826ab6d8f660ecfac3bb0830c01033d">getBeta</a> () const </td></tr>
+<tr class="memitem:ac70c0000ea8ad7a14ad220e5315d022f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ac70c0000ea8ad7a14ad220e5315d022f">getScaleRadius</a> () const </td></tr>
+<tr class="memitem:aa267172eb71ba89a76ccae85b9e66bda"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aa267172eb71ba89a76ccae85b9e66bda">getFWHM</a> () const </td></tr>
+<tr class="memitem:ae2d2c93523c8cd00f60160a8f4a50d2c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ae2d2c93523c8cd00f60160a8f4a50d2c">getHalfLightRadius</a> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -142,7 +145,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1be98c722b7f01774aa18790bff834ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a1be98c722b7f01774aa18790bff834ca">_maxR</a></td></tr>
 <tr class="memdesc:a1be98c722b7f01774aa18790bff834ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum <code>r</code>  <a href="#a1be98c722b7f01774aa18790bff834ca"></a><br/></td></tr>
 <tr class="memitem:aa4e8b65906e77942dd0e48c793571b37"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aa4e8b65906e77942dd0e48c793571b37">_FWHM</a></td></tr>
-<tr class="memdesc:aa4e8b65906e77942dd0e48c793571b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full Width at Half Maximum in units of <code>rD</code>.  <a href="#aa4e8b65906e77942dd0e48c793571b37"></a><br/></td></tr>
+<tr class="memdesc:aa4e8b65906e77942dd0e48c793571b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full Width at Half Maximum.  <a href="#aa4e8b65906e77942dd0e48c793571b37"></a><br/></td></tr>
+<tr class="memitem:a8fcce444c38e9e4b1ef0b61c8b887103"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a8fcce444c38e9e4b1ef0b61c8b887103">_trunc</a></td></tr>
+<tr class="memdesc:a8fcce444c38e9e4b1ef0b61c8b887103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outer truncation radius in same physical units as <code>_rD</code>  <a href="#a8fcce444c38e9e4b1ef0b61c8b887103"></a><br/></td></tr>
 <tr class="memitem:a90c89185ee6b593a5ddee1c0b668aca3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a90c89185ee6b593a5ddee1c0b668aca3">_fluxFactor</a></td></tr>
 <tr class="memdesc:a90c89185ee6b593a5ddee1c0b668aca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integral of total flux in terms of 'rD' units.  <a href="#a90c89185ee6b593a5ddee1c0b668aca3"></a><br/></td></tr>
 <tr class="memitem:a4f663e0f822af86a56eaa4c71f6ae100"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a4f663e0f822af86a56eaa4c71f6ae100">_rD_sq</a></td></tr>
@@ -153,10 +158,12 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:abad02918689eb944474e14b84808c577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum k with kValue &gt; 1.e-3.  <a href="#abad02918689eb944474e14b84808c577"></a><br/></td></tr>
 <tr class="memitem:aef8332acbaee24dbb6cb1beb184ff26b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html">Table</a>&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aef8332acbaee24dbb6cb1beb184ff26b">_ft</a></td></tr>
 <tr class="memdesc:aef8332acbaee24dbb6cb1beb184ff26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup table for Fourier transform of Moffat.  <a href="#aef8332acbaee24dbb6cb1beb184ff26b"></a><br/></td></tr>
+<tr class="memitem:a8c0c2116559c9b606db4b36c1ca976ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a8c0c2116559c9b606db4b36c1ca976ee">_re</a></td></tr>
+<tr class="memdesc:a8c0c2116559c9b606db4b36c1ca976ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the half light radius if set or calculated post-setting.  <a href="#a8c0c2116559c9b606db4b36c1ca976ee"></a><br/></td></tr>
 <tr class="memitem:a5333709ead227a135dd0d44c944ffb37"><td class="memItemLeft" align="right" valign="top">double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a5333709ead227a135dd0d44c944ffb37">pow_beta</a> )(double x, double beta)</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afbf966465f3cbe2aac7b6265e552e070"></a>
+<a class="anchor" id="a883738a4cb084486e331deecfdd8611d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -170,25 +177,25 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>truncationFWHM</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a>&#160;</td>
-          <td class="paramname"><em>rType</em>&#160;</td>
+          <td class="paramname"><em>rType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>trunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>flux</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -276,6 +283,51 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double galsim::SBMoffat::SBMoffatImpl::getFlux </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa267172eb71ba89a76ccae85b9e66bda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBMoffat::SBMoffatImpl::getFWHM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae2d2c93523c8cd00f60160a8f4a50d2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBMoffat::SBMoffatImpl::getHalfLightRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac70c0000ea8ad7a14ad220e5315d022f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBMoffat::SBMoffatImpl::getScaleRadius </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -694,7 +746,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Full Width at Half Maximum in units of <code>rD</code>. </p>
+<p>Full Width at Half Maximum. </p>
 
 </div>
 </div>
@@ -830,6 +882,50 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8c0c2116559c9b606db4b36c1ca976ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBMoffat::SBMoffatImpl::_re</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores the half light radius if set or calculated post-setting. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8fcce444c38e9e4b1ef0b61c8b887103"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBMoffat::SBMoffatImpl::_trunc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Outer truncation radius in same physical units as <code>_rD</code> </p>
+
+</div>
+</div>
 <a class="anchor" id="a5333709ead227a135dd0d44c944ffb37"></a>
 <div class="memitem">
 <div class="memproto">
@@ -856,7 +952,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:05:37 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 18 2012 21:33:16 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

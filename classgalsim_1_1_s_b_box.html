@@ -120,12 +120,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a02f053c0bdbd0d9f500ba8efb6e008d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#a02f053c0bdbd0d9f500ba8efb6e008d3">SBBox</a> (double xw=1., double yw=0., double flux=1.)</td></tr>
-<tr class="memdesc:a02f053c0bdbd0d9f500ba8efb6e008d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a02f053c0bdbd0d9f500ba8efb6e008d3"></a><br/></td></tr>
+<tr class="memitem:af77bda29fee1b658bcc4c4526434c673"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#af77bda29fee1b658bcc4c4526434c673">SBBox</a> (double xw, double yw=0., double flux=1.)</td></tr>
+<tr class="memdesc:af77bda29fee1b658bcc4c4526434c673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af77bda29fee1b658bcc4c4526434c673"></a><br/></td></tr>
 <tr class="memitem:a6dd18881da3e84b07fec5ab5b4d06aea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#a6dd18881da3e84b07fec5ab5b4d06aea">SBBox</a> (const <a class="el" href="classgalsim_1_1_s_b_box.html">SBBox</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a6dd18881da3e84b07fec5ab5b4d06aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a6dd18881da3e84b07fec5ab5b4d06aea"></a><br/></td></tr>
 <tr class="memitem:ac166f6b4d0fee97ed00ad3ad2ef87f73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73">~SBBox</a> ()</td></tr>
 <tr class="memdesc:ac166f6b4d0fee97ed00ad3ad2ef87f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#ac166f6b4d0fee97ed00ad3ad2ef87f73"></a><br/></td></tr>
+<tr class="memitem:a1431409b3a5f8c39c847f6938e382477"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#a1431409b3a5f8c39c847f6938e382477">getXWidth</a> () const </td></tr>
+<tr class="memdesc:a1431409b3a5f8c39c847f6938e382477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x dimension width of the Boxcar.  <a href="#a1431409b3a5f8c39c847f6938e382477"></a><br/></td></tr>
+<tr class="memitem:aa776ad8e53d3f817f4cecd752950976a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box.html#aa776ad8e53d3f817f4cecd752950976a">getYWidth</a> () const </td></tr>
+<tr class="memdesc:aa776ad8e53d3f817f4cecd752950976a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y dimension width of the Boxcar.  <a href="#aa776ad8e53d3f817f4cecd752950976a"></a><br/></td></tr>
 <tr class="memitem:a11558695546a3b4129971d09df8332bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
 <tr class="memdesc:a11558695546a3b4129971d09df8332bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> at a chosen 2D position in real space.  <a href="#a11558695546a3b4129971d09df8332bf"></a><br/></td></tr>
 <tr class="memitem:aeeef4c5230553a57f35a70490b97eb06"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06">kValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
@@ -228,7 +232,7 @@ Private Member Functions</h2></td></tr>
 <div class="textblock"><p>Surface Brightness Profile for the Boxcar function. </p>
 <p>Convolution with a Boxcar function of dimensions <code>xw</code> x <code>yw</code> and sampling at pixel centres is equivalent to pixelation (i.e. Surface Brightness integration) across rectangular pixels of the same dimensions. This class is therefore useful for pixelating SBProfiles. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a02f053c0bdbd0d9f500ba8efb6e008d3"></a>
+<a class="anchor" id="af77bda29fee1b658bcc4c4526434c673"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -236,7 +240,7 @@ Private Member Functions</h2></td></tr>
           <td class="memname">galsim::SBBox::SBBox </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xw</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>xw</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -261,8 +265,8 @@ Private Member Functions</h2></td></tr>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">xw</td><td>width of Boxcar function along x (default <code>xw = 1.</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yw</td><td>width of Boxcar function along y (default <code>yw = 0.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xw</td><td>width of Boxcar function along x. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yw</td><td>width of Boxcar function along y. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux (default <code>flux = 1.</code>). </td></tr>
   </table>
   </dd>
@@ -1132,6 +1136,23 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1431409b3a5f8c39c847f6938e382477"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBBox::getXWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the x dimension width of the Boxcar. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3fc25a15c465df01a218d99f0e6a262f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1215,6 +1236,23 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa776ad8e53d3f817f4cecd752950976a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBBox::getYWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the y dimension width of the Boxcar. </p>
 
 </div>
 </div>
@@ -1819,7 +1857,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:05:37 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 18 2012 21:33:16 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
