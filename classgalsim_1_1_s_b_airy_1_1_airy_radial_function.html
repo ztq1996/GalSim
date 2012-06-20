@@ -114,22 +114,26 @@ Inheritance diagram for galsim::SBAiry::AiryRadialFunction:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8644291f08fdae59f5d3ed07f5075767"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#a8644291f08fdae59f5d3ed07f5075767">AiryRadialFunction</a> (double obscuration)</td></tr>
-<tr class="memdesc:a8644291f08fdae59f5d3ed07f5075767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8644291f08fdae59f5d3ed07f5075767"></a><br/></td></tr>
+<tr class="memitem:ad533c198012c7d298576d7de419fa24d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#ad533c198012c7d298576d7de419fa24d">AiryRadialFunction</a> (double obscuration, double obssq)</td></tr>
+<tr class="memdesc:ad533c198012c7d298576d7de419fa24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad533c198012c7d298576d7de419fa24d"></a><br/></td></tr>
 <tr class="memitem:afabbc0664e6382ff9013fbbcd6dfc007"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#afabbc0664e6382ff9013fbbcd6dfc007">operator()</a> (double radius) const </td></tr>
 <tr class="memdesc:afabbc0664e6382ff9013fbbcd6dfc007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Airy function.  <a href="#afabbc0664e6382ff9013fbbcd6dfc007"></a><br/></td></tr>
-<tr class="memitem:a4fa56490eeee903907e8f7c1e7fd2509"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#a4fa56490eeee903907e8f7c1e7fd2509">setObscuration</a> (double obscuration)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7f2365abcdea74bcdaef8dd2d8d8f9bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#a7f2365abcdea74bcdaef8dd2d8d8f9bf">_obscuration</a></td></tr>
+<tr class="memdesc:a7f2365abcdea74bcdaef8dd2d8d8f9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Central obstruction size.  <a href="#a7f2365abcdea74bcdaef8dd2d8d8f9bf"></a><br/></td></tr>
+<tr class="memitem:aa0c3adaa015dd7de5a7f51e1e41c8342"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#aa0c3adaa015dd7de5a7f51e1e41c8342">_obssq</a></td></tr>
+<tr class="memdesc:aa0c3adaa015dd7de5a7f51e1e41c8342"><td class="mdescLeft">&#160;</td><td class="mdescRight">_obscuration*_obscuration  <a href="#aa0c3adaa015dd7de5a7f51e1e41c8342"></a><br/></td></tr>
+<tr class="memitem:a11235973546a2d160712e0bf561f1a35"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html#a11235973546a2d160712e0bf561f1a35">_norm</a></td></tr>
+<tr class="memdesc:a11235973546a2d160712e0bf561f1a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculated value M_PI / (4.*(1-obs^2))  <a href="#a11235973546a2d160712e0bf561f1a35"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Subclass is a scale-free version of the Airy radial function. </p>
 <p>Serves as interface to numerical photon-shooting class <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code>.</p>
 <p>Input radius is in units of lambda/D. Output normalized to integrate to unity over input units. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8644291f08fdae59f5d3ed07f5075767"></a>
+<a class="anchor" id="ad533c198012c7d298576d7de419fa24d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -137,8 +141,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">galsim::SBAiry::AiryRadialFunction::AiryRadialFunction </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>obscuration</em></td><td>)</td>
+          <td class="paramname"><em>obscuration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obssq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -147,6 +161,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">obscuration</td><td>Fractional linear size of central obscuration of pupil. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obssq</td><td>Pre-computed obscuration^2 supplied as input for speed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,23 +204,29 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4fa56490eeee903907e8f7c1e7fd2509"></a>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a11235973546a2d160712e0bf561f1a35"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBAiry::AiryRadialFunction::setObscuration </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>obscuration</em></td><td>)</td>
-          <td></td>
+          <td class="memname">double galsim::SBAiry::AiryRadialFunction::_norm</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Calculated value M_PI / (4.*(1-obs^2)) </p>
 
 </div>
 </div>
-<hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a7f2365abcdea74bcdaef8dd2d8d8f9bf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -224,6 +245,30 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Central obstruction size. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa0c3adaa015dd7de5a7f51e1e41c8342"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBAiry::AiryRadialFunction::_obssq</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>_obscuration*_obscuration </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -232,7 +277,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 20 2012 15:29:39 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 19:06:24 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

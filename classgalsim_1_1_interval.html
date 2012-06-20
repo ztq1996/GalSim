@@ -111,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a01c62d4e25682bd71a2f9e4af6f3193a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a01c62d4e25682bd71a2f9e4af6f3193a">drawWithin</a> (double unitRandom, double &amp;x, double &amp;flux, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
 <tr class="memdesc:a01c62d4e25682bd71a2f9e4af6f3193a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw one photon position and flux from within this interval.  <a href="#a01c62d4e25682bd71a2f9e4af6f3193a"></a><br/></td></tr>
 <tr class="memitem:ac5a894135818b1c645350f7376adc885"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#ac5a894135818b1c645350f7376adc885">getFlux</a> () const </td></tr>
-<tr class="memdesc:ac5a894135818b1c645350f7376adc885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get integrated flux over this interval or annulus. Performs integral if not already cached.  <a href="#ac5a894135818b1c645350f7376adc885"></a><br/></td></tr>
+<tr class="memdesc:ac5a894135818b1c645350f7376adc885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get integrated flux over this interval or annulus.  <a href="#ac5a894135818b1c645350f7376adc885"></a><br/></td></tr>
 <tr class="memitem:a7c02cec2f0007b1f4d7ffd72415f8f14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a7c02cec2f0007b1f4d7ffd72415f8f14">getRange</a> (double &amp;xLower, double &amp;xUpper) const </td></tr>
 <tr class="memdesc:a7c02cec2f0007b1f4d7ffd72415f8f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report interval bounds.  <a href="#a7c02cec2f0007b1f4d7ffd72415f8f14"></a><br/></td></tr>
 <tr class="memitem:a34ac442720e8ba965c4081b4d2fbd61e"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classgalsim_1_1_interval.html">Interval</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a34ac442720e8ba965c4081b4d2fbd61e">split</a> (double smallFlux)</td></tr>
@@ -137,6 +137,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a34cddbbc85361ca6628f635366cf836a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a34cddbbc85361ca6628f635366cf836a">_fluxIsReady</a></td></tr>
 <tr class="memdesc:a34cddbbc85361ca6628f635366cf836a"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if flux has been integrated.  <a href="#a34cddbbc85361ca6628f635366cf836a"></a><br/></td></tr>
 <tr class="memitem:a5ab0497c7569b48cca14328d86a82a9d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a5ab0497c7569b48cca14328d86a82a9d">_flux</a></td></tr>
+<tr class="memdesc:a5ab0497c7569b48cca14328d86a82a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrated flux in this interval (can be negative)  <a href="#a5ab0497c7569b48cca14328d86a82a9d"></a><br/></td></tr>
 <tr class="memitem:aa62626ab965437bfd3fe0705950d024d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#aa62626ab965437bfd3fe0705950d024d">_useRejectionMethod</a></td></tr>
 <tr class="memitem:adb38b36bd1835cbc56e4df754efbfb8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#adb38b36bd1835cbc56e4df754efbfb8a">_maxAbsDensity</a></td></tr>
 <tr class="memdesc:adb38b36bd1835cbc56e4df754efbfb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum absolute flux density in the interval (assumed to be at an endpoint)  <a href="#adb38b36bd1835cbc56e4df754efbfb8a"></a><br/></td></tr>
@@ -190,7 +191,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>Note that no copy of the function is saved. The function whose reference is passed must remain existence through useful lifetime of the <code><a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a></code> </p>
+<p>Note that no copy of the function is saved. The function whose reference is passed must remain in existence through useful lifetime of the <code><a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a></code> </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fluxDensity</td><td>The function giving flux (= unnormalized probability) density. </td></tr>
@@ -269,7 +270,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">unitRandom</td><td>An initial uniform deviate to select photon </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>x (or radial) coordinate of the selected photon. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>(or radial) coordinate of the selected photon. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">flux</td><td>flux of the selected photon, nominally +-1, but can differ if not using rejection. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">ud</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> used for rejection sampling, if needed. </td></tr>
   </table>
@@ -291,7 +292,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get integrated flux over this interval or annulus. Performs integral if not already cached. </p>
+<p>Get integrated flux over this interval or annulus. </p>
+<p>Performs integral if not already cached.</p>
 <dl class="section return"><dt>Returns:</dt><dd>Integrated flux in interval. </dd></dl>
 
 </div>
@@ -401,6 +403,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Integrated flux in this interval (can be negative) </p>
 
 </div>
@@ -532,7 +535,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set this variable true if returning equal fluxes with rejection method, vs returning *non-unity flux weight. </p>
+<p>Set this variable true if returning equal fluxes with rejection method, vs returning non-unity flux weight. </p>
 
 </div>
 </div>
@@ -586,7 +589,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 20 2012 15:29:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 19:06:23 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

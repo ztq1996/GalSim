@@ -871,7 +871,7 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to draw on. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Total number of photons to produce. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Total number of photons to produce. N is input as a double so that very large values of N don't have to worry about overflowing int on systems with a small MAX_INT. Internally it will be rounded to the nearest integer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ud</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will be used to draw photons from distribution. </td></tr>
   </table>
   </dd>
@@ -1960,7 +1960,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 20 2012 15:29:39 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 19:06:24 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

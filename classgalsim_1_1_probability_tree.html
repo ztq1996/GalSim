@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
@@ -132,6 +133,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aab9bda67db2c74d6d15a359fc54cadee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree.html#aab9bda67db2c74d6d15a359fc54cadee">buildTree</a> (double threshold=0.)</td></tr>
 <tr class="memdesc:aab9bda67db2c74d6d15a359fc54cadee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the tree from current list elements.  <a href="#aab9bda67db2c74d6d15a359fc54cadee"></a><br/></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a16858d0cb43d6c805e17dd10753071ee"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="classgalsim_1_1_probability_tree_1_1_element.html">Element</a> * &gt;<br class="typebreak"/>
+::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree.html#a16858d0cb43d6c805e17dd10753071ee">ListIter</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a4f0a82d1de7e2e0b9ea44205df40f500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree.html#a4f0a82d1de7e2e0b9ea44205df40f500">flushElements</a> ()</td></tr>
@@ -158,7 +164,30 @@ class galsim::ProbabilityTree&lt; T &gt;</h3>
 <p>The class is derived from a list of objects of any type T. The class T can be anything that has a <code>getFlux()</code> call. The absolute value of the return from <code>getFlux()</code> is taken as the relative probability that should be assigned to this member of the list. The purpose of this class is to select a member of the list given a uniform random number in the interval [0,1). This is what the <code><a class="el" href="classgalsim_1_1_probability_tree.html#a070f28eeadcad02776bc4523fb707ab6" title="Choose a member of the tree based on a uniform deviate.">find()</a></code> member does.</p>
 <p>This works by creating a binary search tree with less-probable members being at successively deeper levels of the tree. Each member is assigned an interval of the cumulative probability (a.k.a. flux) distribution, in the order of walking the tree, and the <code><a class="el" href="classgalsim_1_1_probability_tree.html#a070f28eeadcad02776bc4523fb707ab6" title="Choose a member of the tree based on a uniform deviate.">find()</a></code> method simply descends the tree looking for the interval containing the specified random number.</p>
 <p>To use the class, just append your members to this class using the <a class="el" href="classstd_1_1list.html">std::list</a> methods. Then call <code><a class="el" href="classgalsim_1_1_probability_tree.html#aab9bda67db2c74d6d15a359fc54cadee" title="Construct the tree from current list elements.">buildTree()</a></code>, optionally specifying a minimum level of flux for members to be retained in the tree (default is that any non-zero member is in). The <code><a class="el" href="classgalsim_1_1_probability_tree.html#a070f28eeadcad02776bc4523fb707ab6" title="Choose a member of the tree based on a uniform deviate.">find()</a></code> method will now return random draws with near-optimal speed. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a16858d0cb43d6c805e17dd10753071ee"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::list&lt;<a class="el" href="classgalsim_1_1_probability_tree_1_1_element.html">Element</a>*&gt;::iterator <a class="el" href="classgalsim_1_1_probability_tree.html">galsim::ProbabilityTree</a>&lt; T &gt;::<a class="el" href="classgalsim_1_1_probability_tree.html#a16858d0cb43d6c805e17dd10753071ee">ListIter</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7a12385b5db154fae20cc1c342a77784"></a>
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +437,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 20 2012 15:29:38 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 19:06:23 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

@@ -90,8 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.base.RealGalaxy Class Reference</div>  </div>
 </div><!--header-->
@@ -167,8 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96c05ef4b77187b6d02d877232e81126"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126">createShifted</a></td></tr>
 <tr class="memdesc:a96c05ef4b77187b6d02d877232e81126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a (dx, dy) shift.  <a href="#a96c05ef4b77187b6d02d877232e81126"></a><br/></td></tr>
 <tr class="memitem:ae0b346a8b438dedbc7f60a52220869d8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8">draw</a></td></tr>
-<tr class="memdesc:ae0b346a8b438dedbc7f60a52220869d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ae0b346a8b438dedbc7f60a52220869d8"></a><br/></td></tr>
+<tr class="memdesc:ae0b346a8b438dedbc7f60a52220869d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ae0b346a8b438dedbc7f60a52220869d8"></a><br/></td></tr>
 <tr class="memitem:a42ac334d2840ba3fa832988e998beca0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0">drawShoot</a></td></tr>
+<tr class="memdesc:a42ac334d2840ba3fa832988e998beca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a42ac334d2840ba3fa832988e998beca0"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -179,10 +179,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:adae1052ce425c743ef5e64ab34df6f06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#adae1052ce425c743ef5e64ab34df6f06">original_image</a></td></tr>
 <tr class="memitem:a69443f93bbf84cec021e591755aa03a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a69443f93bbf84cec021e591755aa03a7">original_PSF</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a672c17a1597d0aaa22cf394e26bbbe16"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a672c17a1597d0aaa22cf394e26bbbe16">dx</a> = float(dx)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class describing real galaxies from some training dataset. </p>
@@ -727,8 +723,9 @@ Initialization
 </div><div class="memdoc">
 
 <p>Apply a <a class="el" href="classgalsim_1_1_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">galsim.Ellipse</a> distortion to this object. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available.</p>
-<p>Note that <a class="el" href="classgalsim_1_1_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">Ellipse</a> objects can be initialized in a variety of ways (see documentation of this class for details). </p>
+<p><a class="el" href="classgalsim_1_1_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">Ellipse</a> objects can be initialized in a variety of ways (see documentation of this class for details).</p>
+<p>Note: if the ellipse includes a dilation, then this transformation will not be flux-conserving. It conserves surface brightness instead. Thus, the flux will increase by the increase in area = dilation^2.</p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -971,7 +968,13 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>normalization</em> = <code>&quot;flux&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -986,8 +989,17 @@ Initialization
 </table>
 </div><div class="memdoc">
 
-<p>Returns an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
-<p>TODO: describe dx, wmult. </p>
+<p>Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If image=None, then an automatically-sized image will be created. (Default = None) </td></tr>
+    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If dx &lt;= 0. and image != None, then take the provided image's pixel scale. If dx &lt;= 0. and image == None, then use pi/maxK() (Default = 0.) </td></tr>
+    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default = "flux") </td></tr>
+    <tr><td class="paramname">wmult</td><td>A factor by which to make the intermediate images larger than they are normally made. The size is normally automatically chosen to reach some preset accuracy targets (see <a class="el" href="_s_b_profile_8h.html" title="Contains a class definition for two-dimensional Surface Brightness Profiles.">include/galsim/SBProfile.h</a>); however, if you see strange artifacts in the image, you might try using wmult &gt; 1. This will take longer of course, but it will produce more accurate images, since they will have less "folding" in Fourier space. (Default = 1.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The drawn image. </dd></dl>
 
 </div>
 </div>
@@ -1020,7 +1032,13 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ud</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>ud</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>normalization</em> = <code>&quot;flux&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1034,6 +1052,18 @@ Initialization
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The image on which to draw the profile. Note: Unlike for the regular draw command, image is a required parameter. drawShoot will not make the image for you. </td></tr>
+    <tr><td class="paramname">N</td><td>The number of photons to use. </td></tr>
+    <tr><td class="paramname">ud</td><td>If provided, a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> to use for the random numbers If ud=None, one will be automatically created, using the time as a seed. (Default = None) </td></tr>
+    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default = "flux") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>(TODO!) The fraction of photons that fell off the edge of the image. </dd></dl>
 
 </div>
 </div>
@@ -1407,26 +1437,6 @@ Initialization
 
 </div>
 </div>
-<a class="anchor" id="a672c17a1597d0aaa22cf394e26bbbe16"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">tuple galsim.base.GSObject.dx = float(dx)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a6d387b25cc2c0786cd9decc0950d3d33"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1513,7 +1523,7 @@ Initialization
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 20 2012 15:29:40 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 19:06:25 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
