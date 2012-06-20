@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -158,10 +158,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiple the flux by fluxRatio.  <a href="#aeefb2c61d26fae17c5a55d9e60dd4ac2"></a><br/></td></tr>
 <tr class="memitem:a31093a62c9086296fdf519c720edadb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a31093a62c9086296fdf519c720edadb9">setFlux</a> (double flux)</td></tr>
 <tr class="memdesc:a31093a62c9086296fdf519c720edadb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flux to a new value.  <a href="#a31093a62c9086296fdf519c720edadb9"></a><br/></td></tr>
-<tr class="memitem:a4c1cebad96d15c3e516d2992b17a3ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a4c1cebad96d15c3e516d2992b17a3ce7">applyDistortion</a> (const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e)</td></tr>
-<tr class="memdesc:a4c1cebad96d15c3e516d2992b17a3ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion (affine without rotation).  <a href="#a4c1cebad96d15c3e516d2992b17a3ce7"></a><br/></td></tr>
+<tr class="memitem:a9ba0c429574797b845e7be38091af487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9ba0c429574797b845e7be38091af487">applyTransformation</a> (const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e)</td></tr>
+<tr class="memdesc:a9ba0c429574797b845e7be38091af487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given <a class="el" href="classgalsim_1_1_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">Ellipse</a> distortion (affine without rotation).  <a href="#a9ba0c429574797b845e7be38091af487"></a><br/></td></tr>
 <tr class="memitem:a364f6b7e568889bd3b43872e56e98570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a364f6b7e568889bd3b43872e56e98570">applyShear</a> (double g1, double g2)</td></tr>
 <tr class="memdesc:a364f6b7e568889bd3b43872e56e98570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a364f6b7e568889bd3b43872e56e98570"></a><br/></td></tr>
+<tr class="memitem:a23dce7faa2447b1947a0600e18b3379d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a23dce7faa2447b1947a0600e18b3379d">applyShear</a> (<a class="el" href="classgalsim_1_1_shear.html">Shear</a> s)</td></tr>
+<tr class="memdesc:a23dce7faa2447b1947a0600e18b3379d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a23dce7faa2447b1947a0600e18b3379d"></a><br/></td></tr>
 <tr class="memitem:a8d861c3513863ac3c78a853d2f93a4aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a8d861c3513863ac3c78a853d2f93a4aa">applyRotation</a> (const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;theta)</td></tr>
 <tr class="memdesc:a8d861c3513863ac3c78a853d2f93a4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given rotation.  <a href="#a8d861c3513863ac3c78a853d2f93a4aa"></a><br/></td></tr>
 <tr class="memitem:a89d5ad319a343091947e2bde69e87fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a89d5ad319a343091947e2bde69e87fa2">applyShift</a> (double dx, double dy)</td></tr>
@@ -312,33 +314,6 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4c1cebad96d15c3e516d2992b17a3ce7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyDistortion </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a given <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> distortion (affine without rotation). </p>
-<p>This transforms the object by the given transformation. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
-
-</div>
-</div>
 <a class="anchor" id="a8d861c3513863ac3c78a853d2f93a4aa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +374,45 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a given shear. </p>
-<p>This shears the object by the given shear. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">g1</td><td>Reduced shear g1 by which to shear the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g2</td><td>Reduced shear g2 by which to shear the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. This shears the object by the given shear. As with scaleFlux, it does not invalidate any previous uses of this object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a23dce7faa2447b1947a0600e18b3379d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBProfile::applyShear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given shear. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td><a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a> object by which to shear the <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>. This shears the object by the given shear. As with scaleFlux, it does not invalidate any previous uses of this object. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -437,6 +450,33 @@ Private Member Functions</h2></td></tr>
 
 <p>Apply a translation. </p>
 <p>This shears the object by the given amount. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ba0c429574797b845e7be38091af487"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::SBProfile::applyTransformation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given <a class="el" href="classgalsim_1_1_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">Ellipse</a> distortion (affine without rotation). </p>
+<p>This transforms the object by the given transformation. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
 
 </div>
 </div>
@@ -1859,7 +1899,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 19 2012 14:47:39 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 01:00:26 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

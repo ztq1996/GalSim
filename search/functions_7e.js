@@ -37,8 +37,6 @@ var searchData=
   ['_7esbconvolveimpl',['~SBConvolveImpl',['../classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a795d44409170497d94ad9c52adaaae3f',1,'galsim::SBConvolve::SBConvolveImpl']]],
   ['_7esbdeconvolve',['~SBDeconvolve',['../classgalsim_1_1_s_b_deconvolve.html#adc191700769b78b6b0910c5f1154307a',1,'galsim::SBDeconvolve']]],
   ['_7esbdeconvolveimpl',['~SBDeconvolveImpl',['../classgalsim_1_1_s_b_deconvolve_1_1_s_b_deconvolve_impl.html#a61189c98f2318310db1ecaa02bf69ae7',1,'galsim::SBDeconvolve::SBDeconvolveImpl']]],
-  ['_7esbdistort',['~SBDistort',['../classgalsim_1_1_s_b_distort.html#a431508ca1f37b5c2460f7a4f84d04e6f',1,'galsim::SBDistort']]],
-  ['_7esbdistortimpl',['~SBDistortImpl',['../classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#aa298161be6346b7c00475bf47ba4c337',1,'galsim::SBDistort::SBDistortImpl']]],
   ['_7esbexponential',['~SBExponential',['../classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a',1,'galsim::SBExponential']]],
   ['_7esbexponentialimpl',['~SBExponentialImpl',['../classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a203e79e65b231a6c96554949db9e3346',1,'galsim::SBExponential::SBExponentialImpl']]],
   ['_7esbgaussian',['~SBGaussian',['../classgalsim_1_1_s_b_gaussian.html#aeed82486d3722a0edb6c5afd9baf7a2b',1,'galsim::SBGaussian']]],
@@ -53,6 +51,8 @@ var searchData=
   ['_7esbprofileimpl',['~SBProfileImpl',['../classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ac43f72f4775e73ede8c5a20a509b00b3',1,'galsim::SBProfile::SBProfileImpl']]],
   ['_7esbsersic',['~SBSersic',['../classgalsim_1_1_s_b_sersic.html#a1231803713c791d91632f88ae673dae0',1,'galsim::SBSersic']]],
   ['_7esbsersicimpl',['~SBSersicImpl',['../classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a3783506813c64ce4b752ad54fdfacda1',1,'galsim::SBSersic::SBSersicImpl']]],
+  ['_7esbtransform',['~SBTransform',['../classgalsim_1_1_s_b_transform.html#adf65ab999eaac1fe4e2077027df9fd67',1,'galsim::SBTransform']]],
+  ['_7esbtransformimpl',['~SBTransformImpl',['../classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a4e8b770ba9fe3955783d06660139505d',1,'galsim::SBTransform::SBTransformImpl']]],
   ['_7esersicinfo',['~SersicInfo',['../classgalsim_1_1_s_b_sersic_1_1_sersic_info.html#a04cfb74fa8dbc38d07f2003fbb56cbb7',1,'galsim::SBSersic::SersicInfo']]],
   ['_7esincinterpolant',['~SincInterpolant',['../classgalsim_1_1_sinc_interpolant.html#a1a3a68f170e56475a2e5e7eb2f69d4b5',1,'galsim::SincInterpolant']]],
   ['_7extable',['~XTable',['../classgalsim_1_1_x_table.html#a7a198b462fa5ea8f44f5af7f03313671',1,'galsim::XTable']]]

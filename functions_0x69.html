@@ -76,6 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
+      <li><a href="functions_prop.html"><span>Properties</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -116,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -194,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>initialize()
 : <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#acb16f9f6dc12da57ab2ecebaeaa27aeb">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a8179a5b129d44c39acb03ac235e2c6da">galsim::SBAdd::SBAddImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a46044724837df140f0575a2b3f68931b">galsim::SBDistort::SBDistortImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a88eab7d81c7af33ccf07f5170683a61c">galsim::SBTransform::SBTransformImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ac32a9d09bb2732364b40bd2f2b0a0a88">galsim::SBConvolve::SBConvolveImpl</a>
 </li>
 <li>Int2DAuxType()
@@ -249,13 +250,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#aa35962111eae9c2be2dd246f314cdd9a">galsim::integ::IntRegion&lt; T &gt;</a>
 </li>
 <li>inv()
-: <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a7006e93db44708c3abd51ae750db8d43">galsim::SBDistort::SBDistortImpl</a>
+: <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a899e1dea01342500a030a36686d2f09b">galsim::SBTransform::SBTransformImpl</a>
 , <a class="el" href="classgalsim_1_1_shear.html#a951619a7cca89ab9e558c448c398d264">galsim::Shear</a>
 , <a class="el" href="classgalsim_1_1_ellipse.html#a1768353b1925c0fbe50b4a9efd1ccb66">galsim::Ellipse</a>
+, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html#af4413cb722d6e0bac842061b8bf11c37">galsim.ellipse.Ellipse</a>
+, <a class="el" href="classgalsim_1_1shear_1_1_shear.html#a3b82ce75e8822eddd3c3449426e118db">galsim.shear.Shear</a>
 </li>
 <li>ir
-: <a class="el" href="structgalsim_1_1integ_1_1_constant_reg1.html#ad6f8c2425bfa3f56ab30d957a0b95e93">galsim::integ::ConstantReg1&lt; T &gt;</a>
-, <a class="el" href="structgalsim_1_1integ_1_1_constant_reg2.html#ad78cdf7a39c5289f4b2d3243408732e8">galsim::integ::ConstantReg2&lt; T &gt;</a>
+: <a class="el" href="structgalsim_1_1integ_1_1_constant_reg2.html#ad78cdf7a39c5289f4b2d3243408732e8">galsim::integ::ConstantReg2&lt; T &gt;</a>
+, <a class="el" href="structgalsim_1_1integ_1_1_constant_reg1.html#ad6f8c2425bfa3f56ab30d957a0b95e93">galsim::integ::ConstantReg1&lt; T &gt;</a>
 </li>
 <li>iRot
 : <a class="el" href="classgalsim_1_1_l_vector.html#a066fc9c35726b650d0389df33d1c1292acab553145689828c24c4ceb397fd2e4b">galsim::LVector</a>
@@ -266,48 +269,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_s_b_profile.html#a22cb3ddd3d82cfc8abb5b63664f9bf49">galsim::SBProfile</a>
 , <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a682009df7edc1c84678405a41f416e02">galsim::SBProfile::SBProfileImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a7492f406e701d393538e17e4b61b8a96">galsim::SBAdd::SBAddImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a6e25345f69cc53253499706709bd50a9">galsim::SBDistort::SBDistortImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#af363a5c546fe0dfd8bcdc31d263949d2">galsim::SBConvolve::SBConvolveImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a0e7c79b0ef1a3d8342835831eb7b4717">galsim::SBGaussian::SBGaussianImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a90bf064825c5862606636d2b2b43287d">galsim::SBSersic::SBSersicImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a02ab09ab464819f281c02d47be8be2d7">galsim::SBExponential::SBExponentialImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a53be4717d1193fe68ad1c52ae02984bc">galsim::SBAiry::SBAiryImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a710006c05747b0dc3f0b9fe056cd47fa">galsim::SBBox::SBBoxImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html#a07c99651bc36e6c0f4abd47100334ce4">galsim::SBLaguerre::SBLaguerreImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a65b2a7fae2631e40da4d90c07d2c6698">galsim::SBMoffat::SBMoffatImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a710006c05747b0dc3f0b9fe056cd47fa">galsim::SBBox::SBBoxImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a0e7c79b0ef1a3d8342835831eb7b4717">galsim::SBGaussian::SBGaussianImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a02ab09ab464819f281c02d47be8be2d7">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a87b5e743e5e708c8bfc7ae27477e8110">galsim::SBTransform::SBTransformImpl</a>
 </li>
 <li>isAnalyticX()
-: <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a9d943aa0375e97c667e62298f934c6a1">galsim::SBDistort::SBDistortImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_deconvolve_1_1_s_b_deconvolve_impl.html#a0721fc2795220b852924fa2dc858cf9d">galsim::SBDeconvolve::SBDeconvolveImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a8c230617c5d1e26895ae78ceefdc5e1e">galsim::SBBox::SBBoxImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a574382e3ede9ac14c0174fc8a9643265">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4da05fee9af4d9a6f4f2cc73fa9f98df">galsim::SBProfile::SBProfileImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a7daa259d9c6031d50a989159f0c2f70a">galsim::SBExponential::SBExponentialImpl</a>
-, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a671c7778e707ab11a75a1f5877aa76ff">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#afaec4ebf6f696664772aba1cb292f2ab">galsim::SBAdd::SBAddImpl</a>
+: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a671c7778e707ab11a75a1f5877aa76ff">galsim.base.GSObject</a>
 , <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab9bee0bda29e81efafc5617cec19aabf">galsim::SBConvolve::SBConvolveImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#ac6e8ea8dc4606408ead735855e58f9f3">galsim::SBGaussian::SBGaussianImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a34188b0b495ee6b08e37923949c70063">galsim::SBMoffat::SBMoffatImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#acfabf968a8f6b2e67dc94fa798961d68">galsim::SBAiry::SBAiryImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html#a9a8e5c81011a718ed5cd26befb7e8d67">galsim::SBLaguerre::SBLaguerreImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#af74a235258bcc95edeed143a037e0dce">galsim::SBSersic::SBSersicImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a8c230617c5d1e26895ae78ceefdc5e1e">galsim::SBBox::SBBoxImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_deconvolve_1_1_s_b_deconvolve_impl.html#a0721fc2795220b852924fa2dc858cf9d">galsim::SBDeconvolve::SBDeconvolveImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a49d86319ab75152884416406bcc27db7">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a574382e3ede9ac14c0174fc8a9643265">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#afaec4ebf6f696664772aba1cb292f2ab">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#acfabf968a8f6b2e67dc94fa798961d68">galsim::SBAiry::SBAiryImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a7daa259d9c6031d50a989159f0c2f70a">galsim::SBExponential::SBExponentialImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a669705b04172b17d2bc6bce023839d76">galsim::SBTransform::SBTransformImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a34188b0b495ee6b08e37923949c70063">galsim::SBMoffat::SBMoffatImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#ac6e8ea8dc4606408ead735855e58f9f3">galsim::SBGaussian::SBGaussianImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#af74a235258bcc95edeed143a037e0dce">galsim::SBSersic::SBSersicImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html#a9a8e5c81011a718ed5cd26befb7e8d67">galsim::SBLaguerre::SBLaguerreImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4da05fee9af4d9a6f4f2cc73fa9f98df">galsim::SBProfile::SBProfileImpl</a>
 </li>
 <li>isAxisymmetric()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a109bc7c81be65f8fc5d5ec32e6d0c0df">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d">galsim::SBProfile</a>
+: <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a0a7652d9bb15c682eaf346fa534c677c">galsim::SBAiry::SBAiryImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#ab37b9504b1ffa2d7ef797c2fe84b43ca">galsim::SBAdd::SBAddImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_deconvolve_1_1_s_b_deconvolve_impl.html#afe6b1f92838761cdda84813c51fd80d8">galsim::SBDeconvolve::SBDeconvolveImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a6aa3579444af16b8d76e25ca70a793ce">galsim::SBConvolve::SBConvolveImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ad661900613c5663714519b319f10fc50">galsim::SBProfile::SBProfileImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#ab37b9504b1ffa2d7ef797c2fe84b43ca">galsim::SBAdd::SBAddImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#addd384d57bbc8dfc0f1a37b449a17493">galsim::SBExponential::SBExponentialImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_distort_1_1_s_b_distort_impl.html#a673aecc68d0e6b92efd73e37299bae9d">galsim::SBDistort::SBDistortImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a985f1b6721b067bcf93d70513ca35453">galsim::SBGaussian::SBGaussianImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ac5f1e49fc687e67a3fee6f5585f0d6b9">galsim::SBBox::SBBoxImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html#a191ed84b9210e78f83710c6e6c632822">galsim::SBLaguerre::SBLaguerreImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ac5f1e49fc687e67a3fee6f5585f0d6b9">galsim::SBBox::SBBoxImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a9df705146a9bcde494501f0c289f4684">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ad6d16d0c0d08f7c8536de4c9ceae6051">galsim::SBTransform::SBTransformImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#addd384d57bbc8dfc0f1a37b449a17493">galsim::SBExponential::SBExponentialImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a5a66b436aa8167a5d246f63b6e3677a4">galsim::SBMoffat::SBMoffatImpl</a>
-, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a0a7652d9bb15c682eaf346fa534c677c">galsim::SBAiry::SBAiryImpl</a>
+, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a109bc7c81be65f8fc5d5ec32e6d0c0df">galsim.base.GSObject</a>
+, <a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a985f1b6721b067bcf93d70513ca35453">galsim::SBGaussian::SBGaussianImpl</a>
 , <a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a3fa3aa2cd55f4ffd69710d9815cf0ddc">galsim::SBSersic::SBSersicImpl</a>
 </li>
 <li>isContiguous()
@@ -317,9 +320,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_bounds.html#a054e3278ee18ec6b911e5fe3a87e2455">galsim::Bounds&lt; T &gt;</a>
 </li>
 <li>isExactAtNodes()
-: <a class="el" href="classgalsim_1_1_interpolant2d.html#abdb3086ffff98d62faae9d173f8d0618">galsim::Interpolant2d</a>
+: <a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">galsim::Interpolant</a>
 , <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a311aa2d28d4b106424019e69081da03b">galsim::InterpolantXY</a>
-, <a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">galsim::Interpolant</a>
+, <a class="el" href="classgalsim_1_1_interpolant2d.html#abdb3086ffff98d62faae9d173f8d0618">galsim::Interpolant2d</a>
 </li>
 <li>iSign()
 : <a class="el" href="classgalsim_1_1_p_q_index.html#a9c36d55699dbefaea50af45b97085603">galsim::PQIndex</a>
@@ -331,8 +334,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_table.html#a328f4c2002c23049a8fb4cf0a66c53f7">galsim::Table&lt; V, A &gt;</a>
 </li>
 <li>isreal
-: <a class="el" href="structgalsim_1_1_f_f_t_w___traits.html#ae9e3378853141cb535734e08e9a67d87a3bfa78de0664a8702192b03fd45181c1">galsim::FFTW_Traits&lt; T &gt;</a>
-, <a class="el" href="structgalsim_1_1_f_f_t_w___traits_3_01std_1_1complex_3_01_t_01_4_01_4.html#add887a3f0e5bcb2e806f2cf899c542ccab8ffadbe28d7e801e790760c9bb9da9a">galsim::FFTW_Traits&lt; std::complex&lt; T &gt; &gt;</a>
+: <a class="el" href="structgalsim_1_1_f_f_t_w___traits_3_01std_1_1complex_3_01_t_01_4_01_4.html#add887a3f0e5bcb2e806f2cf899c542ccab8ffadbe28d7e801e790760c9bb9da9a">galsim::FFTW_Traits&lt; std::complex&lt; T &gt; &gt;</a>
+, <a class="el" href="structgalsim_1_1_f_f_t_w___traits.html#ae9e3378853141cb535734e08e9a67d87a3bfa78de0664a8702192b03fd45181c1">galsim::FFTW_Traits&lt; T &gt;</a>
 </li>
 <li>isReal()
 : <a class="el" href="classgalsim_1_1_p_q_index.html#adf89f24dcd80208d28180d95dd9e4ea8">galsim::PQIndex</a>
@@ -342,15 +345,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>Iter
 : <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#ad7eb25338865410b71c4346314712398">galsim::SBAdd::SBAddImpl</a>
+, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a71a4fd1e9e938dd83b59dd262f9dc779">galsim::SBConvolve::SBConvolveImpl</a>
 </li>
 <li>iter
 : <a class="el" href="classgalsim_1_1_table.html#a9a524d9e4ad52d29c94454d5dcc545fd">galsim::Table&lt; V, A &gt;</a>
-</li>
-<li>Iter
-: <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a71a4fd1e9e938dd83b59dd262f9dc779">galsim::SBConvolve::SBConvolveImpl</a>
-</li>
-<li>iter
-: <a class="el" href="classgalsim_1_1_pset.html#a05d04130143803c25d3a9e44433aa607">galsim::Pset</a>
+, <a class="el" href="classgalsim_1_1_pset.html#a05d04130143803c25d3a9e44433aa607">galsim::Pset</a>
 </li>
 <li>iterator
 : <a class="el" href="classgalsim_1_1_image.html#a747b9b45cfb631dba85dac3246c0285a">galsim::Image&lt; T &gt;</a>
@@ -369,7 +368,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 19 2012 14:47:40 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 01:00:27 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

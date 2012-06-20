@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,46 +98,77 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>A base class representing shears.  
+ <a href="classgalsim_1_1_shear.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_shear_8h_source.html">Shear.h</a>&gt;</code></p>
 
 <p><a href="classgalsim_1_1_shear-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a607c6f4ef6e7add4e6658361db6eee3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a607c6f4ef6e7add4e6658361db6eee3c">Shear</a> (double _e1=0., double _e2=0.)</td></tr>
+<tr class="memitem:ad5e902096a1ed201d5c912646b6eb2d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#ad5e902096a1ed201d5c912646b6eb2d3">Shear</a> (double g1=0., double g2=0.)</td></tr>
+<tr class="memdesc:ad5e902096a1ed201d5c912646b6eb2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct without variance / without initializing transformation matrix.  <a href="#ad5e902096a1ed201d5c912646b6eb2d3"></a><br/></td></tr>
 <tr class="memitem:a612897245b91b81907780b8aef83f3d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a612897245b91b81907780b8aef83f3d0">Shear</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a612897245b91b81907780b8aef83f3d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a612897245b91b81907780b8aef83f3d0"></a><br/></td></tr>
 <tr class="memitem:a1623ed3c2d58c6fc6c0868267b776278"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a1623ed3c2d58c6fc6c0868267b776278">operator=</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;s)</td></tr>
+<tr class="memdesc:a1623ed3c2d58c6fc6c0868267b776278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment.  <a href="#a1623ed3c2d58c6fc6c0868267b776278"></a><br/></td></tr>
 <tr class="memitem:a447bfbd7ccda2228ddf92bde2ea683b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a447bfbd7ccda2228ddf92bde2ea683b4">setE1E2</a> (double e1in=0., double e2in=0.)</td></tr>
+<tr class="memdesc:a447bfbd7ccda2228ddf92bde2ea683b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set (e1, e2) using distortion definition.  <a href="#a447bfbd7ccda2228ddf92bde2ea683b4"></a><br/></td></tr>
 <tr class="memitem:a103897eedae3ca0c12c8ddec745f4dcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a103897eedae3ca0c12c8ddec745f4dcc">setEBeta</a> (double etain=0., <a class="el" href="classgalsim_1_1_angle.html">Angle</a> betain=<a class="el" href="classgalsim_1_1_angle.html">Angle</a>())</td></tr>
+<tr class="memdesc:a103897eedae3ca0c12c8ddec745f4dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set (|e|, beta) polar ellipticity representation using distortion definition. beta must be an <a class="el" href="classgalsim_1_1_angle.html">Angle</a>.  <a href="#a103897eedae3ca0c12c8ddec745f4dcc"></a><br/></td></tr>
 <tr class="memitem:a87b0d969a45c3ec401adfc44566b6d47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a87b0d969a45c3ec401adfc44566b6d47">setEta1Eta2</a> (double eta1in=0., double eta2in=0.)</td></tr>
-<tr class="memitem:adc2e0546c2ac97ee2f9adf33eb32445c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#adc2e0546c2ac97ee2f9adf33eb32445c">setEtaBeta</a> (double etain=0., <a class="el" href="classgalsim_1_1_angle.html">Angle</a> betain=<a class="el" href="classgalsim_1_1_angle.html">Angle</a>())</td></tr>
+<tr class="memdesc:a87b0d969a45c3ec401adfc44566b6d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set (eta1, eta2) using conformal shear definition.  <a href="#a87b0d969a45c3ec401adfc44566b6d47"></a><br/></td></tr>
+<tr class="memitem:a350b7d7858f5ac301540302f9df23486"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a350b7d7858f5ac301540302f9df23486">setEtaBeta</a> (double=0., <a class="el" href="classgalsim_1_1_angle.html">Angle</a> betain=<a class="el" href="classgalsim_1_1_angle.html">Angle</a>())</td></tr>
+<tr class="memdesc:a350b7d7858f5ac301540302f9df23486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set (|eta|, beta) using conformal shear definition. beta must be an <a class="el" href="classgalsim_1_1_angle.html">Angle</a>.  <a href="#a350b7d7858f5ac301540302f9df23486"></a><br/></td></tr>
 <tr class="memitem:a5863cc36f86045170f1237b6c7fef5a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a5863cc36f86045170f1237b6c7fef5a8">setG1G2</a> (double g1in=0., double g2in=0.)</td></tr>
+<tr class="memdesc:a5863cc36f86045170f1237b6c7fef5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">set (g1, g2) using reduced shear |g| = (a-b)/(a+b) definition.  <a href="#a5863cc36f86045170f1237b6c7fef5a8"></a><br/></td></tr>
 <tr class="memitem:a9795328be718f8686705b79f1b25e9ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a9795328be718f8686705b79f1b25e9ba">getE1</a> () const </td></tr>
+<tr class="memdesc:a9795328be718f8686705b79f1b25e9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get e1 using distortion definition.  <a href="#a9795328be718f8686705b79f1b25e9ba"></a><br/></td></tr>
 <tr class="memitem:add01824275efa19c32bb6f6e996bc8fa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#add01824275efa19c32bb6f6e996bc8fa">getE2</a> () const </td></tr>
+<tr class="memdesc:add01824275efa19c32bb6f6e996bc8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get e2 using distortion definition.  <a href="#add01824275efa19c32bb6f6e996bc8fa"></a><br/></td></tr>
 <tr class="memitem:af7f9d569d129d5815ab13564a4cc8408"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#af7f9d569d129d5815ab13564a4cc8408">getE</a> () const </td></tr>
+<tr class="memdesc:af7f9d569d129d5815ab13564a4cc8408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get |e| using distortion definition.  <a href="#af7f9d569d129d5815ab13564a4cc8408"></a><br/></td></tr>
 <tr class="memitem:a79e49269a290dbbbcec815ed01357f33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a79e49269a290dbbbcec815ed01357f33">getESq</a> () const </td></tr>
+<tr class="memdesc:a79e49269a290dbbbcec815ed01357f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get |e|^2 using distortion definition.  <a href="#a79e49269a290dbbbcec815ed01357f33"></a><br/></td></tr>
 <tr class="memitem:addefb925e72ea70ce961dd656437ea98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_angle.html">Angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#addefb925e72ea70ce961dd656437ea98">getBeta</a> () const </td></tr>
+<tr class="memdesc:addefb925e72ea70ce961dd656437ea98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get polar angle beta (returns an <a class="el" href="classgalsim_1_1_angle.html">Angle</a> class object).  <a href="#addefb925e72ea70ce961dd656437ea98"></a><br/></td></tr>
 <tr class="memitem:a0360c43c0baa2a3244a5e8f52a3e8d89"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a0360c43c0baa2a3244a5e8f52a3e8d89">getEta</a> () const </td></tr>
+<tr class="memdesc:a0360c43c0baa2a3244a5e8f52a3e8d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get |eta| using conformal shear definition.  <a href="#a0360c43c0baa2a3244a5e8f52a3e8d89"></a><br/></td></tr>
 <tr class="memitem:a01d37b2ec496ef447a0015ba846b55c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a01d37b2ec496ef447a0015ba846b55c1">getG</a> () const </td></tr>
+<tr class="memdesc:a01d37b2ec496ef447a0015ba846b55c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get |g| using reduced shear |g| = (a-b)/(a+b) definition.  <a href="#a01d37b2ec496ef447a0015ba846b55c1"></a><br/></td></tr>
+<tr class="memitem:af574587d9e9f7e4e6174f02c55fd6b61"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#af574587d9e9f7e4e6174f02c55fd6b61">getG1</a> () const </td></tr>
+<tr class="memdesc:af574587d9e9f7e4e6174f02c55fd6b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get g1 using reduced shear |g| = (a-b)/(a+b) definition.  <a href="#af574587d9e9f7e4e6174f02c55fd6b61"></a><br/></td></tr>
+<tr class="memitem:ae274e5b5c8929db37fcefbe62a7a1c4a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#ae274e5b5c8929db37fcefbe62a7a1c4a">getG2</a> () const </td></tr>
+<tr class="memdesc:ae274e5b5c8929db37fcefbe62a7a1c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get g1 using reduced shear |g| = (a-b)/(a+b) definition.  <a href="#ae274e5b5c8929db37fcefbe62a7a1c4a"></a><br/></td></tr>
 <tr class="memitem:a2446401133bcc4132090b850c404a670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a2446401133bcc4132090b850c404a670">getEta1Eta2</a> (double &amp;eta1, double &amp;eta2) const </td></tr>
+<tr class="memdesc:a2446401133bcc4132090b850c404a670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get (eta1, eta2) using conformal shear definition.  <a href="#a2446401133bcc4132090b850c404a670"></a><br/></td></tr>
 <tr class="memitem:a1057f4d926ad2dfbc95044ad4aa6a194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a1057f4d926ad2dfbc95044ad4aa6a194">getG1G2</a> (double &amp;g1, double &amp;g2) const </td></tr>
+<tr class="memdesc:a1057f4d926ad2dfbc95044ad4aa6a194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get (g1, g2) using reduced shear |g| = (a-b)/(a+b) definition.  <a href="#a1057f4d926ad2dfbc95044ad4aa6a194"></a><br/></td></tr>
 <tr class="memitem:ab01ea636e042ed544b1ac873780e8213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#ab01ea636e042ed544b1ac873780e8213">operator-</a> () const </td></tr>
+<tr class="memdesc:ab01ea636e042ed544b1ac873780e8213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary negation (both components negated).  <a href="#ab01ea636e042ed544b1ac873780e8213"></a><br/></td></tr>
 <tr class="memitem:a3f740a9a08ea5f4fd9ba80857d7cc6da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a3f740a9a08ea5f4fd9ba80857d7cc6da">operator+</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;) const </td></tr>
+<tr class="memdesc:a3f740a9a08ea5f4fd9ba80857d7cc6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composition operation.  <a href="#a3f740a9a08ea5f4fd9ba80857d7cc6da"></a><br/></td></tr>
 <tr class="memitem:adca8146b05fcd3ccf9a89c3de1404a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#adca8146b05fcd3ccf9a89c3de1404a46">operator-</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;) const </td></tr>
+<tr class="memdesc:adca8146b05fcd3ccf9a89c3de1404a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composition (with RHS negation) operation.  <a href="#adca8146b05fcd3ccf9a89c3de1404a46"></a><br/></td></tr>
 <tr class="memitem:a38430b7649c67c92dcfab547ec95e357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a38430b7649c67c92dcfab547ec95e357">operator+=</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;)</td></tr>
+<tr class="memdesc:a38430b7649c67c92dcfab547ec95e357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inplace composition operation.  <a href="#a38430b7649c67c92dcfab547ec95e357"></a><br/></td></tr>
 <tr class="memitem:a14cfb5fb9d8dd07485e8209958fa3549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a14cfb5fb9d8dd07485e8209958fa3549">operator-=</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;)</td></tr>
+<tr class="memdesc:a14cfb5fb9d8dd07485e8209958fa3549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inplace composition (with RHS negation) operation.  <a href="#a14cfb5fb9d8dd07485e8209958fa3549"></a><br/></td></tr>
 <tr class="memitem:a46a38dd0e300d7898dc3f0dad0c10827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_angle.html">Angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a46a38dd0e300d7898dc3f0dad0c10827">rotationWith</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a46a38dd0e300d7898dc3f0dad0c10827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the rotation angle for this+rhs.  <a href="#a46a38dd0e300d7898dc3f0dad0c10827"></a><br/></td></tr>
 <tr class="memitem:a8904d624366fe81d34fde907ed6bf1dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a8904d624366fe81d34fde907ed6bf1dc">operator==</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a8904d624366fe81d34fde907ed6bf1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test equivalence by comparing e1 and e2.  <a href="#a8904d624366fe81d34fde907ed6bf1dc"></a><br/></td></tr>
 <tr class="memitem:ab648fcd98f07fe95ef656bf187a9c410"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#ab648fcd98f07fe95ef656bf187a9c410">operator!=</a> (const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;rhs) const </td></tr>
-<tr class="memitem:a5db49944b18adc5fec8fa3fb4a60d197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a5db49944b18adc5fec8fa3fb4a60d197">operator*</a> (const double)</td></tr>
-<tr class="memitem:af8ea0e4dbd11cd04a170bfe77ed124ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#af8ea0e4dbd11cd04a170bfe77ed124ab">operator/</a> (const double)</td></tr>
-<tr class="memitem:af3e0b3c476180d97d45bd5d9aad50d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#af3e0b3c476180d97d45bd5d9aad50d89">operator*=</a> (const double)</td></tr>
-<tr class="memitem:a1e679f3ac54fefcdd52c14aef9a0ec1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a1e679f3ac54fefcdd52c14aef9a0ec1e">operator/=</a> (const double)</td></tr>
+<tr class="memdesc:ab648fcd98f07fe95ef656bf187a9c410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test non-equivalence by comparing e1 and e2.  <a href="#ab648fcd98f07fe95ef656bf187a9c410"></a><br/></td></tr>
 <tr class="memitem:a5cb55bc7415425c9fb798130eb433b48"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5cb55bc7415425c9fb798130eb433b48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a5cb55bc7415425c9fb798130eb433b48">fwd</a> (<a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; T &gt; p) const </td></tr>
+<tr class="memdesc:a5cb55bc7415425c9fb798130eb433b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward transformation from image to source plane coordinates under shear.  <a href="#a5cb55bc7415425c9fb798130eb433b48"></a><br/></td></tr>
 <tr class="memitem:a951619a7cca89ab9e558c448c398d264"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a951619a7cca89ab9e558c448c398d264"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a951619a7cca89ab9e558c448c398d264">inv</a> (<a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; T &gt; p) const </td></tr>
+<tr class="memdesc:a951619a7cca89ab9e558c448c398d264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse transformation from source to image plane coordinates under shear.  <a href="#a951619a7cca89ab9e558c448c398d264"></a><br/></td></tr>
 <tr class="memitem:a801d37cd806741e9c8da9d97e6237416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a801d37cd806741e9c8da9d97e6237416">getMatrix</a> (double &amp;a, double &amp;b, double &amp;c) const </td></tr>
+<tr class="memdesc:a801d37cd806741e9c8da9d97e6237416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get matrix representation of the forward transformation.  <a href="#a801d37cd806741e9c8da9d97e6237416"></a><br/></td></tr>
 <tr class="memitem:a8cd592c97f93f4440aeacac6ea4c5b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a8cd592c97f93f4440aeacac6ea4c5b64">write</a> (std::ostream &amp;fout) const </td></tr>
 <tr class="memitem:ab2e36e6093622b9edae2394f0b8f50b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#ab2e36e6093622b9edae2394f0b8f50b1">read</a> (std::istream &amp;fin)</td></tr>
 </table><table class="memberdecls">
@@ -160,8 +191,18 @@ Friends</h2></td></tr>
 <tr class="memitem:a430a0f2b0b7731aedc2185a741eed67a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a430a0f2b0b7731aedc2185a741eed67a">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;s)</td></tr>
 <tr class="memitem:a1364c37af844cffd472cd3376edabc0f"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html#a1364c37af844cffd472cd3376edabc0f">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;s)</td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a607c6f4ef6e7add4e6658361db6eee3c"></a>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>A base class representing shears. </p>
+<p>The purpose of this C++ class is to represent both deviations from roundness due to galaxy intrinsic shapes, and due to lensing shears. Given semi-major and semi-minor axis lengths "a" and "b", there are numerous ways to represent shears:</p>
+<p>eta = "conformal shear", a/b = exp(|eta|)</p>
+<p>g = "reduced shear", |g| = (a-b)/(a+b)</p>
+<p>e = "distortion", |e| = (a^2-b^2)/(a^2+b^2)</p>
+<p>q = "axis ratio", q=b/a</p>
+<p>To specify both components, we have a value Beta that is the real-space position angle of the major axis, i.e. e1 = |e| cos(2*Beta) and e2 = |e| sin(2*Beta).</p>
+<p>Shears are represented internally by e1 and e2, which relate to second moments via e1 = (Mxx - Myy) / (Mxx + Myy), e2 = 2 Mxy / (Mxx + Myy).</p>
+<p>However, given that lensing specialists most commonly think in terms of reduced shear, the constructor that takes two numbers expects (g1, g2). A user who wishes to specify another type of shape should use methods, i.e. s = <a class="el" href="classgalsim_1_1_shear.html#ad5e902096a1ed201d5c912646b6eb2d3" title="Construct without variance / without initializing transformation matrix.">Shear()</a>; s.setE1E2(my_e1, my_e2); </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad5e902096a1ed201d5c912646b6eb2d3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -172,13 +213,13 @@ Friends</h2></td></tr>
           <td class="memname">galsim::Shear::Shear </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>_e1</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>g1</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>_e2</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>g2</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -192,6 +233,15 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Construct without variance / without initializing transformation matrix. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">g1</td><td>first component (reduced shear definition). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g2</td><td>second shear component (reduced shear definition). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -208,6 +258,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copy constructor. </p>
 
 </div>
 </div>
@@ -251,6 +303,15 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Forward transformation from image to source plane coordinates under shear. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>2D vector <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> in image plane.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>2D vector <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> in source plane. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="addefb925e72ea70ce961dd656437ea98"></a>
@@ -265,6 +326,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get polar angle beta (returns an <a class="el" href="classgalsim_1_1_angle.html">Angle</a> class object). </p>
 
 </div>
 </div>
@@ -281,6 +344,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Get |e| using distortion definition. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9795328be718f8686705b79f1b25e9ba"></a>
@@ -295,6 +360,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get e1 using distortion definition. </p>
 
 </div>
 </div>
@@ -311,6 +378,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Get e2 using distortion definition. </p>
+
 </div>
 </div>
 <a class="anchor" id="a79e49269a290dbbbcec815ed01357f33"></a>
@@ -326,6 +395,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Get |e|^2 using distortion definition. </p>
+
 </div>
 </div>
 <a class="anchor" id="a0360c43c0baa2a3244a5e8f52a3e8d89"></a>
@@ -340,6 +411,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get |eta| using conformal shear definition. </p>
 
 </div>
 </div>
@@ -367,6 +440,15 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Get (eta1, eta2) using conformal shear definition. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">eta1</td><td>Reference to eta1 variable. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">eta2</td><td>Reference to eta2 variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a01d37b2ec496ef447a0015ba846b55c1"></a>
@@ -381,6 +463,25 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get |g| using reduced shear |g| = (a-b)/(a+b) definition. </p>
+
+</div>
+</div>
+<a class="anchor" id="af574587d9e9f7e4e6174f02c55fd6b61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Shear::getG1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get g1 using reduced shear |g| = (a-b)/(a+b) definition. </p>
 
 </div>
 </div>
@@ -407,6 +508,32 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get (g1, g2) using reduced shear |g| = (a-b)/(a+b) definition. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">g1</td><td>Reference to g1 variable. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">g2</td><td>Reference to g2 variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae274e5b5c8929db37fcefbe62a7a1c4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Shear::getG2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get g1 using reduced shear |g| = (a-b)/(a+b) definition. </p>
 
 </div>
 </div>
@@ -440,6 +567,9 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Get matrix representation of the forward transformation. </p>
+<p>Matrix is ... and in limit of small shear: ( a c = ( 1+g1 g2 c b ) g2 1-g1 ) </p>
+
 </div>
 </div>
 <a class="anchor" id="a951619a7cca89ab9e558c448c398d264"></a>
@@ -458,6 +588,15 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Inverse transformation from source to image plane coordinates under shear. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>2D vector <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> in source plane.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>2D vector <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> in image plane. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ab648fcd98f07fe95ef656bf187a9c410"></a>
@@ -474,37 +613,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a5db49944b18adc5fec8fa3fb4a60d197"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> galsim::Shear::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af3e0b3c476180d97d45bd5d9aad50d89"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&amp; galsim::Shear::operator*= </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Test non-equivalence by comparing e1 and e2. </p>
 
 </div>
 </div>
@@ -522,6 +631,10 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Composition operation. </p>
+<p>Note that this 'addition' is ***not commutative***!</p>
+<dl class="section return"><dt>Returns:</dt><dd>Ellipticity of circle that is sheared first by RHS and then by LHS <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a>. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a38430b7649c67c92dcfab547ec95e357"></a>
@@ -538,6 +651,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Inplace composition operation. </p>
+<p>Note that this 'addition' is ***not commutative***!</p>
+<p>In the += operation, this is LHS and the operand is RHS of +.</p>
+<dl class="section return"><dt>Returns:</dt><dd>Ellipticity of circle that is sheared first by RHS and then by LHS <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a>. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ab01ea636e042ed544b1ac873780e8213"></a>
@@ -552,6 +670,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Unary negation (both components negated). </p>
 
 </div>
 </div>
@@ -569,6 +689,10 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Composition (with RHS negation) operation. </p>
+<p>Note that this 'subtraction' is ***not commutative***!</p>
+<dl class="section return"><dt>Returns:</dt><dd>Ellipticity of circle that is sheared first by the negative RHS and then by LHS <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a>. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a14cfb5fb9d8dd07485e8209958fa3549"></a>
@@ -585,37 +709,10 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="af8ea0e4dbd11cd04a170bfe77ed124ab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_shear.html">Shear</a> galsim::Shear::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1e679f3ac54fefcdd52c14aef9a0ec1e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&amp; galsim::Shear::operator/= </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Inplace composition (with RHS negation) operation. </p>
+<p>Note that this 'addition' is ***not commutative***!</p>
+<p>In the -= operation, this is LHS and the operand is RHS of -.</p>
+<dl class="section return"><dt>Returns:</dt><dd>Ellipticity of circle that is sheared first by the negative RHS and then by LHS <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a>. </dd></dl>
 
 </div>
 </div>
@@ -633,6 +730,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Copy assignment. </p>
+
 </div>
 </div>
 <a class="anchor" id="a8904d624366fe81d34fde907ed6bf1dc"></a>
@@ -648,6 +747,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Test equivalence by comparing e1 and e2. </p>
 
 </div>
 </div>
@@ -681,6 +782,9 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Give the rotation angle for this+rhs. </p>
+<p>Detail on the above: s1 + s2 operation on points in the plane induces a rotation as well as a shear. Above method tells you what the rotation was for LHS+RHS. </p>
+
 </div>
 </div>
 <a class="anchor" id="a447bfbd7ccda2228ddf92bde2ea683b4"></a>
@@ -706,6 +810,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set (e1, e2) using distortion definition. </p>
 
 </div>
 </div>
@@ -733,6 +839,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Set (|e|, beta) polar ellipticity representation using distortion definition. beta must be an <a class="el" href="classgalsim_1_1_angle.html">Angle</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a87b0d969a45c3ec401adfc44566b6d47"></a>
@@ -759,9 +867,11 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Set (eta1, eta2) using conformal shear definition. </p>
+
 </div>
 </div>
-<a class="anchor" id="adc2e0546c2ac97ee2f9adf33eb32445c"></a>
+<a class="anchor" id="a350b7d7858f5ac301540302f9df23486"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -769,7 +879,7 @@ template&lt;class T &gt; </div>
           <td class="memname"><a class="el" href="classgalsim_1_1_shear.html">Shear</a>&amp; galsim::Shear::setEtaBeta </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>etain</em> = <code>0.</code>, </td>
+          <td class="paramname"> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -784,6 +894,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set (|eta|, beta) using conformal shear definition. beta must be an <a class="el" href="classgalsim_1_1_angle.html">Angle</a>. </p>
 
 </div>
 </div>
@@ -810,6 +922,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>set (g1, g2) using reduced shear |g| = (a-b)/(a+b) definition. </p>
 
 </div>
 </div>
@@ -1059,7 +1173,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 19 2012 14:47:39 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 01:00:26 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -183,7 +183,7 @@ Functions</h2></td></tr>
 <pre class="fragment">Carry out PSF correction using one of the methods of the HSM package to estimate shears.
 Example usage:
 </pre><div class="fragment"><div class="line">     galaxy = <a class="code" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">galsim.Gaussian</a>(flux = 1.0, sigma = 1.0)</div>
-<div class="line">     galaxy.applyShear(0.05, 0.0)  <span class="comment"># shear it by (0.05, 0) using the g=(a-b)/(a+b) definition</span></div>
+<div class="line">     galaxy.applyShear(g1=0.05, g2=0.0)  <span class="comment"># shear it by (0.05, 0) using the g=(a-b)/(a+b) definition</span></div>
 <div class="line">     psf = <a class="code" href="classgalsim_1_1atmosphere_1_1_double_gaussian.html" title="Double Gaussian, which is the sum of two SBProfile Gaussian profiles.">galsim.atmosphere.DoubleGaussian</a>(flux1 = 0.7, sigma1 = 0.7, flux2 = 0.3, sigma2 = 1.5)</div>
 <div class="line">     pixel = <a class="code" href="classgalsim_1_1base_1_1_pixel.html" title="GalSim Pixel, which has an SBBox in the SBProfile attribute.">galsim.Pixel</a>(xw = 0.2, yw = 0.2)</div>
 <div class="line">     final = <a class="code" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">galsim.Convolve</a>([galaxy, psf, pixel])</div>
@@ -191,7 +191,7 @@ Example usage:
 <div class="line">     final_image = final.draw(dx = 0.2)</div>
 <div class="line">     final_epsf_image = final_epsf.draw(dx = 0.2)</div>
 <div class="line">     result = galsim.EstimateShearHSM(final_image, final_epsf_image)</div>
-</div><!-- fragment --><p>After running the above code, result.observed_shape ["shape" = distortion, (a-b)^2/(a+b)^2] is (0.0595676, 0), and result.corrected_shape is (0.0981158, 0), compared with the expected (0.09975, 0) for a perfect PSF correction method. Note that the method will fail if the PSF or galaxy are too point-like to easily fit an elliptical Gaussian; when running on batches of many galaxies, it may be preferable to set strict=False and catch errors explicitly, i.e.</p>
+</div><!-- fragment --><p>After running the above code, result.observed_shape ["shape" = distortion, (a^2-b^2)/(a^2+b^2)] is (0.0595676, 0), and result.corrected_shape is (0.0981158, 0), compared with the expected (0.09975, 0) for a perfect PSF correction method. Note that the method will fail if the PSF or galaxy are too point-like to easily fit an elliptical Gaussian; when running on batches of many galaxies, it may be preferable to set strict=False and catch errors explicitly, i.e.</p>
 <div class="fragment"><div class="line">     n_image = 100</div>
 <div class="line">     n_fail = 0</div>
 <div class="line">     <span class="keywordflow">for</span> i=0, range(n_image):</div>
@@ -281,7 +281,7 @@ ImageView class.  Example usage:
 <div class="line">     my_moments = galsim.FindAdaptiveMom(my_gaussian_image)</div>
 </div><!-- fragment --><p>OR</p>
 <div class="fragment"><div class="line">     my_moments = my_gaussian_image.FindAdaptiveMom()</div>
-</div><!-- fragment --><p>Assuming a successful measurement, the most relevant pieces of information are my_moments.moments_sigma, which is |det(M)|^(1/4) [=sigma for a circular Gaussian] and my_moments.observed_shape, which is a <a class="el" href="classgalsim_1_1_shear.html">Shear</a>. Methods of the <a class="el" href="classgalsim_1_1_shear.html">Shear</a> class can be used to get the distortion (e1, e2) = (a^2-b^2)/(a^2+b^2), i.e. my_moments.observed_shape.getE1() &ndash; or, to get the shear g, the conformal shear eta, and so on.</p>
+</div><!-- fragment --><p>Assuming a successful measurement, the most relevant pieces of information are my_moments.moments_sigma, which is |det(M)|^(1/4) [=sigma for a circular Gaussian] and my_moments.observed_shape, which is a C++ <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a>. Methods of the <a class="el" href="classgalsim_1_1_shear.html" title="A base class representing shears.">Shear</a> class can be used to get the distortion (e1, e2) = (a^2-b^2)/(a^2+b^2), i.e. my_moments.observed_shape.getE1() &ndash; or, to get the shear g, the conformal shear eta, and so on.</p>
 <p>Note that the method will fail if the object is too point-like to easily fit an elliptical Gaussian; when running on batches of many galaxies, it may be preferable to set strict=False and catch errors explicitly, i.e.</p>
 <div class="fragment"><div class="line">     n_image = 100</div>
 <div class="line">     n_fail = 0</div>
@@ -309,7 +309,7 @@ ImageView class.  Example usage:
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 19 2012 14:47:40 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 20 2012 01:00:27 for GalSim by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
