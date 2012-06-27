@@ -131,8 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6513b5dcbc5c566c7ae0082c23ab622a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a6513b5dcbc5c566c7ae0082c23ab622a"></a><br/></td></tr>
 <tr class="memitem:a0aa3f5df22d0c212ca36ef8badacc66e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0aa3f5df22d0c212ca36ef8badacc66e">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a0aa3f5df22d0c212ca36ef8badacc66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a0aa3f5df22d0c212ca36ef8badacc66e"></a><br/></td></tr>
-<tr class="memitem:a1b1dd075bae285a36b05a335e4a1a9ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a1b1dd075bae285a36b05a335e4a1a9ab">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a1b1dd075bae285a36b05a335e4a1a9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photon-shooting will be disabled for sinc function since wiggles will make it crazy.  <a href="#a1b1dd075bae285a36b05a335e4a1a9ab"></a><br/></td></tr>
+<tr class="memitem:a5941d81dcfc0b3c5c9cc15d531ab47fe"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a5941d81dcfc0b3c5c9cc15d531ab47fe">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a5941d81dcfc0b3c5c9cc15d531ab47fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photon-shooting will be disabled for sinc function since wiggles will make it crazy.  <a href="#a5941d81dcfc0b3c5c9cc15d531ab47fe"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
 <tr class="memdesc:a9ab7c3d0433bc6b59714c454b2434df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report whether interpolation will reproduce values at samples.  <a href="#a9ab7c3d0433bc6b59714c454b2434df0"></a><br/></td></tr>
 <tr class="memitem:a1b1d24856db9c3b715b8e8a7326623dc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a1b1d24856db9c3b715b8e8a7326623dc">getPositiveFlux</a> () const </td></tr>
@@ -340,7 +340,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1b1dd075bae285a36b05a335e4a1a9ab"></a>
+<a class="anchor" id="a5941d81dcfc0b3c5c9cc15d531ab47fe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -348,7 +348,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SincInterpolant::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SincInterpolant::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -356,7 +356,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -374,7 +374,7 @@ Private Attributes</h2></td></tr>
 
 <p>Photon-shooting will be disabled for sinc function since wiggles will make it crazy. </p>
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#a3d6ea4250685b2a1b8273d42db1cdcfd">galsim::Interpolant</a>.</p>
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">galsim::Interpolant</a>.</p>
 
 </div>
 </div>

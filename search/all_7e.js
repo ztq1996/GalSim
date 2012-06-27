@@ -7,6 +7,7 @@ var searchData=
   ['_7ebounds',['~Bounds',['../classgalsim_1_1_bounds.html#ab6db50d88e421d0b04e851f1cedbc4d2',1,'galsim::Bounds']]],
   ['_7ecubic',['~Cubic',['../classgalsim_1_1_cubic.html#a31657a457f441ded282e1546abe5ae8c',1,'galsim::Cubic']]],
   ['_7edelta',['~Delta',['../classgalsim_1_1_delta.html#a6af53f327b597b5f52b3f722ad67692a',1,'galsim::Delta']]],
+  ['_7eexponentialinfo',['~ExponentialInfo',['../classgalsim_1_1_s_b_exponential_1_1_exponential_info.html#a5e354a6d4c569188e6250868d0ef452d',1,'galsim::SBExponential::ExponentialInfo']]],
   ['_7efftw_5farray',['~FFTW_Array',['../classgalsim_1_1_f_f_t_w___array.html#aad74e77d14a465f207c8547a4167e8f8',1,'galsim::FFTW_Array']]],
   ['_7efluxdensity',['~FluxDensity',['../classgalsim_1_1_flux_density.html#a056f0cb3107e71c4a23b0ab0adbae9e3',1,'galsim::FluxDensity']]],
   ['_7eformatandthrow',['~FormatAndThrow',['../class_format_and_throw.html#a462628c2fd0a79befdd4482f3b2cc188',1,'FormatAndThrow']]],

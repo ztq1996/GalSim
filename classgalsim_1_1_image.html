@@ -170,6 +170,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4830b09652b42ebf542999f3ef46cff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image.html#a4830b09652b42ebf542999f3ef46cff8">fill</a> (T x)</td></tr>
 <tr class="memdesc:a4830b09652b42ebf542999f3ef46cff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment with a scalar.  <a href="#a4830b09652b42ebf542999f3ef46cff8"></a><br/></td></tr>
 <tr class="memitem:aa48db9a12476b0565dfbfa87f10d5f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image.html#aa48db9a12476b0565dfbfa87f10d5f5a">operator=</a> (T x)</td></tr>
+<tr class="memitem:a31900717a2967cc8d9c1092a37117c8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image.html#a31900717a2967cc8d9c1092a37117c8f">setZero</a> ()</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a6432b40bed3eb9628f3414f906a367c4"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image.html#a6432b40bed3eb9628f3414f906a367c4">getData</a> ()</td></tr>
 <tr class="memdesc:a6432b40bed3eb9628f3414f906a367c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the first pixel in the image.  <a href="#a6432b40bed3eb9628f3414f906a367c4"></a><br/></td></tr>
@@ -1426,6 +1427,23 @@ template&lt;typename T&gt; </div>
 
 <p>Another way to set a value. Equivalent to im(x,y) = value. </p>
 <p>The python layer can't implement the im(x,y) = value syntax, so we need something else to set a single pixel. This function is unnecessary at the C++ level, but in the interest of trying to keep the two layers as close as possible, we might as well include it. </p>
+
+</div>
+</div>
+<a class="anchor" id="a31900717a2967cc8d9c1092a37117c8f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_image.html">galsim::Image</a>&lt; T &gt;::setZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

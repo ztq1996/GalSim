@@ -129,8 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a81bc07732f7b95107a6f351a40307ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel (default=1.)  <a href="#a81bc07732f7b95107a6f351a40307ac5"></a><br/></td></tr>
 <tr class="memitem:af46ad8c69709782e26e60f6cdf1369ef"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#af46ad8c69709782e26e60f6cdf1369ef">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:af46ad8c69709782e26e60f6cdf1369ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (abs value of) integral of the negative portions of the kernel.  <a href="#af46ad8c69709782e26e60f6cdf1369ef"></a><br/></td></tr>
-<tr class="memitem:a151d0c8b18d43a6af234afcc48d3127c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a151d0c8b18d43a6af234afcc48d3127c">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a151d0c8b18d43a6af234afcc48d3127c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#a151d0c8b18d43a6af234afcc48d3127c"></a><br/></td></tr>
+<tr class="memitem:a05b3d4223a1679d8aacd04ea3a0346db"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a05b3d4223a1679d8aacd04ea3a0346db">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a05b3d4223a1679d8aacd04ea3a0346db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#a05b3d4223a1679d8aacd04ea3a0346db"></a><br/></td></tr>
 <tr class="memitem:a7e4de841e8696c8be236426634d5b1ac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#a7e4de841e8696c8be236426634d5b1ac">xval1d</a> (double x) const </td></tr>
 <tr class="memdesc:a7e4de841e8696c8be236426634d5b1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the 1d interpolant functions for more efficient 2d interps:  <a href="#a7e4de841e8696c8be236426634d5b1ac"></a><br/></td></tr>
 <tr class="memitem:ab547191fb809b7a89b95b21e245d2213"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_x_y.html#ab547191fb809b7a89b95b21e245d2213">xvalWrapped1d</a> (double x, int N) const </td></tr>
@@ -314,7 +314,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a151d0c8b18d43a6af234afcc48d3127c"></a>
+<a class="anchor" id="a05b3d4223a1679d8aacd04ea3a0346db"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -322,7 +322,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::InterpolantXY::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::InterpolantXY::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -330,7 +330,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -349,7 +349,7 @@ Private Attributes</h2></td></tr>
 <p>Return array of displacements drawn from this kernel. </p>
 <p>Default is to throw an runtime_error </p>
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant2d.html#a787b77e8b3fccd4b8b3637fcd1ae3473">galsim::Interpolant2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant2d.html#a2800b0afbd71a38768a9f05f1062043a">galsim::Interpolant2d</a>.</p>
 
 </div>
 </div>

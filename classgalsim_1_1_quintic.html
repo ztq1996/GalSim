@@ -139,8 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1b1d24856db9c3b715b8e8a7326623dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel.  <a href="#a1b1d24856db9c3b715b8e8a7326623dc"></a><br/></td></tr>
 <tr class="memitem:a02f9d0cb2a63f1f5421a791713a4be6d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a02f9d0cb2a63f1f5421a791713a4be6d">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:a02f9d0cb2a63f1f5421a791713a4be6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (absolute value of) integral of the negative portions of the kernel.  <a href="#a02f9d0cb2a63f1f5421a791713a4be6d"></a><br/></td></tr>
-<tr class="memitem:a3d6ea4250685b2a1b8273d42db1cdcfd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a3d6ea4250685b2a1b8273d42db1cdcfd">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a3d6ea4250685b2a1b8273d42db1cdcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#a3d6ea4250685b2a1b8273d42db1cdcfd"></a><br/></td></tr>
+<tr class="memitem:adf88d2c8548b5280603dfcf535d71262"><td class="memItemLeft" align="right" valign="top">virtual boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:adf88d2c8548b5280603dfcf535d71262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#adf88d2c8548b5280603dfcf535d71262"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -373,7 +374,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3d6ea4250685b2a1b8273d42db1cdcfd"></a>
+<a class="anchor" id="adf88d2c8548b5280603dfcf535d71262"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -381,7 +382,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::Interpolant::shoot </td>
+          <td class="memname">virtual boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::Interpolant::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -389,7 +390,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -416,7 +417,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>a <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing the vector of displacements for interpolation kernel. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_linear.html#a0d63740a7dcb67c8570b8676be6009fe">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a1b1dd075bae285a36b05a335e4a1a9ab">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a01456d9b40ff0ed64e16fce3f21bf64d">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a852301f56710398d1d759241a45c38a2">galsim::Delta</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_linear.html#ad50095005b6b0fbb6e5566a15c441efd">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a5941d81dcfc0b3c5c9cc15d531ab47fe">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#acd2e9e524e82add75923473343ea948a">galsim::Delta</a>.</p>
 
 </div>
 </div>

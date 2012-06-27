@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8333832d1a08d5b735c0f101d95f251d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a8333832d1a08d5b735c0f101d95f251d">getFlux</a> () const </td></tr>
 <tr class="memitem:a78c103f7a6b519f7283d8e35f0a2ff64"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a78c103f7a6b519f7283d8e35f0a2ff64">getPositiveFlux</a> () const </td></tr>
 <tr class="memitem:ab38e2536a99fae5fdb90f68dbcbf857a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab38e2536a99fae5fdb90f68dbcbf857a">getNegativeFlux</a> () const </td></tr>
-<tr class="memitem:ad2c268be150997ef06214d1510450f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ad2c268be150997ef06214d1510450f05">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:ad2c268be150997ef06214d1510450f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>.  <a href="#ad2c268be150997ef06214d1510450f05"></a><br/></td></tr>
+<tr class="memitem:a95731ae59a1925cdc4a58673b49703c6"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a95731ae59a1925cdc4a58673b49703c6">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a95731ae59a1925cdc4a58673b49703c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>.  <a href="#a95731ae59a1925cdc4a58673b49703c6"></a><br/></td></tr>
 <tr class="memitem:a9ee181b788242de194f6bf3d4be66c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a9ee181b788242de194f6bf3d4be66c53">fillKGrid</a> (<a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;kt) const </td></tr>
 <tr class="memitem:ae1c3edab7797f45841fcbcabc32f5219"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae1c3edab7797f45841fcbcabc32f5219"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ae1c3edab7797f45841fcbcabc32f5219">fillXImage</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx) const </td></tr>
@@ -1006,7 +1006,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad2c268be150997ef06214d1510450f05"></a>
+<a class="anchor" id="a95731ae59a1925cdc4a58673b49703c6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1014,7 +1014,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBConvolve::SBConvolveImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBConvolve::SBConvolveImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -1022,7 +1022,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -1049,7 +1049,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing all the photons' info. </dd></dl>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a72c21ee5676044557d5e9a1af0efb8af">galsim::SBProfile::SBProfileImpl</a>.</p>
+<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a334634574b9b2f9f8ba3d04c4488d45d">galsim::SBProfile::SBProfileImpl</a>.</p>
 
 </div>
 </div>

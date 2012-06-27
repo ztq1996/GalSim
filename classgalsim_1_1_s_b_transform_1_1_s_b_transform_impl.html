@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a43242c09573718380daf1b2607374117"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a43242c09573718380daf1b2607374117">getFlux</a> () const </td></tr>
 <tr class="memitem:ac75d8b4a65067d255c3308b6245c32d6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ac75d8b4a65067d255c3308b6245c32d6">getPositiveFlux</a> () const </td></tr>
 <tr class="memitem:ae4f933623bb4f09992da07e89133baa4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ae4f933623bb4f09992da07e89133baa4">getNegativeFlux</a> () const </td></tr>
-<tr class="memitem:a0754742bebc7a6f1991feea3140d6e0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a0754742bebc7a6f1991feea3140d6e0c">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a0754742bebc7a6f1991feea3140d6e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_transform.html" title="An affine transformation of another SBProfile.">SBTransform</a>.  <a href="#a0754742bebc7a6f1991feea3140d6e0c"></a><br/></td></tr>
+<tr class="memitem:ab1515541564f17bf28eccee8a3ffd70c"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ab1515541564f17bf28eccee8a3ffd70c">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:ab1515541564f17bf28eccee8a3ffd70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_transform.html" title="An affine transformation of another SBProfile.">SBTransform</a>.  <a href="#ab1515541564f17bf28eccee8a3ffd70c"></a><br/></td></tr>
 <tr class="memitem:a740318f672bbb2273afc5efe3956390a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a740318f672bbb2273afc5efe3956390a">fillKGrid</a> (<a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;kt) const </td></tr>
 <tr class="memitem:ae1c3edab7797f45841fcbcabc32f5219"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae1c3edab7797f45841fcbcabc32f5219"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#ae1c3edab7797f45841fcbcabc32f5219">fillXImage</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx) const </td></tr>
@@ -151,7 +151,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a899e1dea01342500a030a36686d2f09b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a899e1dea01342500a030a36686d2f09b">inv</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
 <tr class="memdesc:a899e1dea01342500a030a36686d2f09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse coordinate transform with <code>M</code> matrix.  <a href="#a899e1dea01342500a030a36686d2f09b"></a><br/></td></tr>
 <tr class="memitem:aab76402214c6a304549a6cde04eddc79"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#aab76402214c6a304549a6cde04eddc79">kValueNoPhase</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;k) const </td></tr>
-<tr class="memdesc:aab76402214c6a304549a6cde04eddc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the the k value (no phase).  <a href="#aab76402214c6a304549a6cde04eddc79"></a><br/></td></tr>
+<tr class="memdesc:aab76402214c6a304549a6cde04eddc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the k value (no phase).  <a href="#aab76402214c6a304549a6cde04eddc79"></a><br/></td></tr>
 <tr class="memitem:ad541d73b602ca04773c2370c57552b6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ad541d73b602ca04773c2370c57552b6f">SBTransformImpl</a> (const <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html">SBTransformImpl</a> &amp;rhs)</td></tr>
 <tr class="memitem:aa06fd084d10a50fa07e4139c364034ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#aa06fd084d10a50fa07e4139c364034ac">operator=</a> (const <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html">SBTransformImpl</a> &amp;rhs)</td></tr>
 </table><table class="memberdecls">
@@ -1013,7 +1013,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the the k value (no phase). </p>
+<p>Returns the k value (no phase). </p>
 
 </div>
 </div>
@@ -1066,7 +1066,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a0754742bebc7a6f1991feea3140d6e0c"></a>
+<a class="anchor" id="ab1515541564f17bf28eccee8a3ffd70c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1074,7 +1074,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBTransform::SBTransformImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBTransform::SBTransformImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -1082,7 +1082,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -1109,7 +1109,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing all the photons' info. </dd></dl>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a72c21ee5676044557d5e9a1af0efb8af">galsim::SBProfile::SBProfileImpl</a>.</p>
+<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a334634574b9b2f9f8ba3d04c4488d45d">galsim::SBProfile::SBProfileImpl</a>.</p>
 
 </div>
 </div>

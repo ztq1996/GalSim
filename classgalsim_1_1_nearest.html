@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a213e2e49a61000fa3e8bd41ca5ebc909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel.  <a href="#a213e2e49a61000fa3e8bd41ca5ebc909"></a><br/></td></tr>
 <tr class="memitem:a43ab8562e5a730252a8e52b2bf316700"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a43ab8562e5a730252a8e52b2bf316700">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:a43ab8562e5a730252a8e52b2bf316700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (absolute value of) integral of the negative portions of the kernel.  <a href="#a43ab8562e5a730252a8e52b2bf316700"></a><br/></td></tr>
-<tr class="memitem:a01456d9b40ff0ed64e16fce3f21bf64d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a01456d9b40ff0ed64e16fce3f21bf64d">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a01456d9b40ff0ed64e16fce3f21bf64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearest-neighbor interpolant photon shooting is a simple <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> call.  <a href="#a01456d9b40ff0ed64e16fce3f21bf64d"></a><br/></td></tr>
+<tr class="memitem:a9a5769bb133a07da5468cf87d367627f"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a9a5769bb133a07da5468cf87d367627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearest-neighbor interpolant photon shooting is a simple <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> call.  <a href="#a9a5769bb133a07da5468cf87d367627f"></a><br/></td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
@@ -341,7 +341,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a01456d9b40ff0ed64e16fce3f21bf64d"></a>
+<a class="anchor" id="a9a5769bb133a07da5468cf87d367627f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -349,7 +349,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::Nearest::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::Nearest::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -357,7 +357,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -375,7 +375,7 @@ Private Attributes</h2></td></tr>
 
 <p>Nearest-neighbor interpolant photon shooting is a simple <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> call. </p>
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#a3d6ea4250685b2a1b8273d42db1cdcfd">galsim::Interpolant</a>.</p>
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">galsim::Interpolant</a>.</p>
 
 </div>
 </div>

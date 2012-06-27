@@ -182,6 +182,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a194454148b6c07e279ca75f407d97e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a194454148b6c07e279ca75f407d97e6a">fill</a> (T x) const </td></tr>
 <tr class="memdesc:a194454148b6c07e279ca75f407d97e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment with a scalar.  <a href="#a194454148b6c07e279ca75f407d97e6a"></a><br/></td></tr>
 <tr class="memitem:a6f8f9dd7db28de439821bafcdde13739"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a6f8f9dd7db28de439821bafcdde13739">operator=</a> (T x) const </td></tr>
+<tr class="memitem:aa768a8cfae431906f3a9cf2b5c182bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#aa768a8cfae431906f3a9cf2b5c182bce">setZero</a> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5ddcaee190e81c06ee6a3ecf4c990690"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5ddcaee190e81c06ee6a3ecf4c990690">getXMin</a> () const </td></tr>
 <tr class="memdesc:a5ddcaee190e81c06ee6a3ecf4c990690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience accessors for the bounding box corners.  <a href="#a5ddcaee190e81c06ee6a3ecf4c990690"></a><br/></td></tr>
@@ -1166,6 +1167,23 @@ template&lt;typename T&gt; </div>
 
 <p>Another way to set a value. Equivalent to im(x,y) = value. </p>
 <p>The python layer can't implement the im(x,y) = value syntax, so we need something else to set a single pixel. This function is unnecessary at the C++ level, but in the interest of trying to keep the two layers as close as possible, we might as well include it. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa768a8cfae431906f3a9cf2b5c182bce"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::setZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

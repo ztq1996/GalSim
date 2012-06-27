@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8609626dd8ea1d31d0fe2aca2df91f88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a8609626dd8ea1d31d0fe2aca2df91f88">centroid</a> () const </td></tr>
 <tr class="memitem:a4012ab7f4942f2b89b12dbac1a525713"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a4012ab7f4942f2b89b12dbac1a525713">getFlux</a> () const </td></tr>
 <tr class="memitem:aed8b4a30d52835e3d0f1282cebdbfff4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#aed8b4a30d52835e3d0f1282cebdbfff4">getScaleRadius</a> () const </td></tr>
-<tr class="memitem:a6515ecd501f556e39c288dc1afe7ce3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a6515ecd501f556e39c288dc1afe7ce3a">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
+<tr class="memitem:a0718138564dc41844646240fd3dfd0aa"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a0718138564dc41844646240fd3dfd0aa">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -140,6 +140,8 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a1a3c484d3ecb6009f9a6c3354b6389ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">If ksq &gt; _kq_max, then use kvalue = 0.  <a href="#a1a3c484d3ecb6009f9a6c3354b6389ad"></a><br/></td></tr>
 <tr class="memitem:ac6b35e6e16edc738d5c0c5170575f5d4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#ac6b35e6e16edc738d5c0c5170575f5d4">_norm</a></td></tr>
 <tr class="memdesc:ac6b35e6e16edc738d5c0c5170575f5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">flux / r0^2 / 2pi  <a href="#ac6b35e6e16edc738d5c0c5170575f5d4"></a><br/></td></tr>
+<tr class="memitem:a08dda480d53a89a62bca3e7de719294e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html#a08dda480d53a89a62bca3e7de719294e">_flux_over_2pi</a></td></tr>
+<tr class="memdesc:a08dda480d53a89a62bca3e7de719294e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flux / 2pi.  <a href="#a08dda480d53a89a62bca3e7de719294e"></a><br/></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7a9fa3937d03d1d458cf99d8f03b3130"></a>
@@ -470,12 +472,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6515ecd501f556e39c288dc1afe7ce3a"></a>
+<a class="anchor" id="a0718138564dc41844646240fd3dfd0aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBExponential::SBExponentialImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBExponential::SBExponentialImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -483,7 +485,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -547,6 +549,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flux. </p>
+
+</div>
+</div>
+<a class="anchor" id="a08dda480d53a89a62bca3e7de719294e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBExponential::SBExponentialImpl::_flux_over_2pi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flux / 2pi. </p>
 
 </div>
 </div>

@@ -7,8 +7,8 @@ var searchData=
   ['eclipticinclination',['EclipticInclination',['../_astronomical_constants_8h.html#a00dccbc230c3c8a55e7586176e6001e9',1,'AstronomicalConstants.h']]],
   ['eclipticnode',['EclipticNode',['../_astronomical_constants_8h.html#a70d263beef34cdf48edfd30555b82cfb',1,'AstronomicalConstants.h']]],
   ['eighthof8_5fargument_5ftype',['eighthof8_argument_type',['../structgalsim_1_1integ_1_1octanary__function.html#a37aabcf76b60fb635a1ca7ed1cfd728f',1,'galsim::integ::octanary_function']]],
-  ['element',['Element',['../classgalsim_1_1_probability_tree_1_1_element.html#aa5d2d20f2152d635992f3eaaff8e22fa',1,'galsim::ProbabilityTree::Element']]],
   ['element',['Element',['../classgalsim_1_1_probability_tree_1_1_element.html',1,'galsim::ProbabilityTree']]],
+  ['element',['Element',['../classgalsim_1_1_probability_tree_1_1_element.html#aa5d2d20f2152d635992f3eaaff8e22fa',1,'galsim::ProbabilityTree::Element']]],
   ['elementstorage',['elementStorage',['../classgalsim_1_1_probability_tree.html#a814a0b4d9163758271c287ee0c28af88',1,'galsim::ProbabilityTree']]],
   ['ellipse',['Ellipse',['../classgalsim_1_1_ellipse.html',1,'galsim']]],
   ['ellipse',['Ellipse',['../classgalsim_1_1ellipse_1_1_ellipse.html',1,'galsim::ellipse']]],
@@ -23,5 +23,9 @@ var searchData=
   ['eta',['eta',['../classgalsim_1_1shear_1_1_shear.html#a23c89fc1ae47920dddd41ae950651f5e',1,'galsim::shear::Shear']]],
   ['expand',['expand',['../classgalsim_1_1_bounds.html#a491239e823fc257356a6b1481eb2b7eb',1,'galsim::Bounds']]],
   ['expmu',['expmu',['../classgalsim_1_1_ellipse.html#a523b5fd19bfd4835b92e612d95fb684c',1,'galsim::Ellipse']]],
-  ['exponential',['Exponential',['../classgalsim_1_1base_1_1_exponential.html',1,'galsim::base']]]
+  ['exponential',['Exponential',['../classgalsim_1_1base_1_1_exponential.html',1,'galsim::base']]],
+  ['exponentialinfo',['ExponentialInfo',['../classgalsim_1_1_s_b_exponential_1_1_exponential_info.html',1,'galsim::SBExponential']]],
+  ['exponentialinfo',['ExponentialInfo',['../classgalsim_1_1_s_b_exponential_1_1_exponential_info.html#a46a045e4edee7c674b51239eb58947bd',1,'galsim::SBExponential::ExponentialInfo::ExponentialInfo()'],['../classgalsim_1_1_s_b_exponential_1_1_exponential_info.html#a9d72271a82826c140f3aab984d6781b1',1,'galsim::SBExponential::ExponentialInfo::ExponentialInfo(const ExponentialInfo &amp;rhs)']]],
+  ['exponentialradialfunction',['ExponentialRadialFunction',['../classgalsim_1_1_s_b_exponential_1_1_exponential_radial_function.html',1,'galsim::SBExponential']]],
+  ['exponentialradialfunction',['ExponentialRadialFunction',['../classgalsim_1_1_s_b_exponential_1_1_exponential_radial_function.html#a2308475d3ff34d75c25ff71fccb0a99f',1,'galsim::SBExponential::ExponentialRadialFunction']]]
 ];

@@ -127,7 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a682009df7edc1c84678405a41f416e02"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a682009df7edc1c84678405a41f416e02">isAnalyticK</a> () const =0</td></tr>
 <tr class="memitem:aefc48d83afbe72c11fa5b6677c515e45"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#aefc48d83afbe72c11fa5b6677c515e45">centroid</a> () const =0</td></tr>
 <tr class="memitem:a05d5ed6c970a600844cba603acba046b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a05d5ed6c970a600844cba603acba046b">getFlux</a> () const =0</td></tr>
-<tr class="memitem:a72c21ee5676044557d5e9a1af0efb8af"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a72c21ee5676044557d5e9a1af0efb8af">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const =0</td></tr>
+<tr class="memitem:a334634574b9b2f9f8ba3d04c4488d45d"><td class="memItemLeft" align="right" valign="top">virtual boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a334634574b9b2f9f8ba3d04c4488d45d">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const =0</td></tr>
 <tr class="memitem:a1b6d86089c9cdd7315c0199634782adb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a1b6d86089c9cdd7315c0199634782adb">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;) const </td></tr>
 <tr class="memitem:a03b9da6983541ba44981fb8102957b64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a03b9da6983541ba44981fb8102957b64">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
 <tr class="memitem:a4220cb2ef63f6eb9f1a1f069e51dc6cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a4220cb2ef63f6eb9f1a1f069e51dc6cc">getYRangeX</a> (double, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
@@ -800,7 +801,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a72c21ee5676044557d5e9a1af0efb8af"></a>
+<a class="anchor" id="a334634574b9b2f9f8ba3d04c4488d45d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -808,7 +809,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBProfile::SBProfileImpl::shoot </td>
+          <td class="memname">virtual boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBProfile::SBProfileImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -816,7 +817,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -832,7 +833,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d2edbc4bc9e34395ab07dbf77437e1">galsim::SBBox::SBBoxImpl</a>, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a8b0c3782041f6643d5408461be2cd559">galsim::SBAiry::SBAiryImpl</a>, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ad2c268be150997ef06214d1510450f05">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a0754742bebc7a6f1991feea3140d6e0c">galsim::SBTransform::SBTransformImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#ac47b7d211f44ca063350f251c960e303">galsim::SBAdd::SBAddImpl</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ae5b8e99e15c725d50a9063bfc99d0c5c">galsim::SBBox::SBBoxImpl</a>, <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a3d46eac18d42ae4cb86451bbca578bfa">galsim::SBAiry::SBAiryImpl</a>, <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a95731ae59a1925cdc4a58673b49703c6">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#ab1515541564f17bf28eccee8a3ffd70c">galsim::SBTransform::SBTransformImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#ab06df27190b51e9387437f30236890c9">galsim::SBAdd::SBAddImpl</a>.</p>
 
 </div>
 </div>

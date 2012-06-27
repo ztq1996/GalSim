@@ -118,8 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a076091dac3bf98ca9386e0a778a78df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a076091dac3bf98ca9386e0a778a78df3">getYRangeX</a> (double x, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;) const </td></tr>
 <tr class="memitem:a236338d6003280f8b575c7a4d63c30cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a236338d6003280f8b575c7a4d63c30cf">centroid</a> () const </td></tr>
 <tr class="memitem:aa56cfeac2e6c715443ddde6c315c4d7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aa56cfeac2e6c715443ddde6c315c4d7b">getFlux</a> () const </td></tr>
-<tr class="memitem:af9a48dc2eaefb751492284f49c7b4c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#af9a48dc2eaefb751492284f49c7b4c6a">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:af9a48dc2eaefb751492284f49c7b4c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moffat photon shooting is done by analytic inversion of cumulative flux distribution.  <a href="#af9a48dc2eaefb751492284f49c7b4c6a"></a><br/></td></tr>
+<tr class="memitem:ae263c4e9380f8af8f0592e4808e095bf"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ae263c4e9380f8af8f0592e4808e095bf">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:ae263c4e9380f8af8f0592e4808e095bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moffat photon shooting is done by analytic inversion of cumulative flux distribution.  <a href="#ae263c4e9380f8af8f0592e4808e095bf"></a><br/></td></tr>
 <tr class="memitem:ab826ab6d8f660ecfac3bb0830c01033d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ab826ab6d8f660ecfac3bb0830c01033d">getBeta</a> () const </td></tr>
 <tr class="memitem:ac70c0000ea8ad7a14ad220e5315d022f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#ac70c0000ea8ad7a14ad220e5315d022f">getScaleRadius</a> () const </td></tr>
 <tr class="memitem:aa267172eb71ba89a76ccae85b9e66bda"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#aa267172eb71ba89a76ccae85b9e66bda">getFWHM</a> () const </td></tr>
@@ -579,12 +579,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af9a48dc2eaefb751492284f49c7b4c6a"></a>
+<a class="anchor" id="ae263c4e9380f8af8f0592e4808e095bf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBMoffat::SBMoffatImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBMoffat::SBMoffatImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -592,7 +592,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a62d75825d09786491a500d104ce3192a',1,'galsim.real.RealGalaxyCatalog.n()'],['../classgalsim_1_1_p_q_index.html#a710160192468af743a2eefba2185fdf3',1,'galsim::PQIndex::N()']]],
+  ['n',['N',['../classgalsim_1_1_p_q_index.html#a710160192468af743a2eefba2185fdf3',1,'galsim::PQIndex::N()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a62d75825d09786491a500d104ce3192a',1,'galsim.real.RealGalaxyCatalog.n()']]],
   ['native_5fbyteorder',['native_byteorder',['../namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc',1,'galsim::fits']]],
   ['nearest',['Nearest',['../classgalsim_1_1_nearest.html',1,'galsim']]],
   ['nearest',['Nearest',['../classgalsim_1_1_nearest.html#ad732e5dd33c3f1f1ed7cad4be67819d2',1,'galsim::Nearest']]],

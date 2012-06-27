@@ -128,8 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7d81fc589f4f8075d824997e53fd3ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d81fc589f4f8075d824997e53fd3ff">getFlux</a> () const </td></tr>
 <tr class="memitem:ad966e0fb9f7180c1e9d3686ef8be12b1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ad966e0fb9f7180c1e9d3686ef8be12b1">getXWidth</a> () const </td></tr>
 <tr class="memitem:a9034a54f15f2dbc616d84cf69fb5c6c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9034a54f15f2dbc616d84cf69fb5c6c4">getYWidth</a> () const </td></tr>
-<tr class="memitem:af7d2edbc4bc9e34395ab07dbf77437e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#af7d2edbc4bc9e34395ab07dbf77437e1">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:af7d2edbc4bc9e34395ab07dbf77437e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boxcar is trivially sampled by drawing 2 uniform deviates.  <a href="#af7d2edbc4bc9e34395ab07dbf77437e1"></a><br/></td></tr>
+<tr class="memitem:ae5b8e99e15c725d50a9063bfc99d0c5c"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#ae5b8e99e15c725d50a9063bfc99d0c5c">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:ae5b8e99e15c725d50a9063bfc99d0c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boxcar is trivially sampled by drawing 2 uniform deviates.  <a href="#ae5b8e99e15c725d50a9063bfc99d0c5c"></a><br/></td></tr>
 <tr class="memitem:a5fd55eecf6f3f8ec868dfbd16570c44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a5fd55eecf6f3f8ec868dfbd16570c44b">fillKGrid</a> (<a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &amp;kt) const </td></tr>
 <tr class="memitem:abb3e6d85c229a0a8ed3f73d6846e711e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#abb3e6d85c229a0a8ed3f73d6846e711e">fillXGrid</a> (<a class="el" href="classgalsim_1_1_x_table.html">XTable</a> &amp;xt) const </td></tr>
 <tr class="memitem:ad81153755e74ed7a0e3bb1c076df8f08"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -913,7 +913,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af7d2edbc4bc9e34395ab07dbf77437e1"></a>
+<a class="anchor" id="ae5b8e99e15c725d50a9063bfc99d0c5c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -921,7 +921,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBBox::SBBoxImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBBox::SBBoxImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -929,7 +929,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -947,7 +947,7 @@ template&lt;typename T &gt; </div>
 
 <p>Boxcar is trivially sampled by drawing 2 uniform deviates. </p>
 
-<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a72c21ee5676044557d5e9a1af0efb8af">galsim::SBProfile::SBProfileImpl</a>.</p>
+<p>Implements <a class="el" href="classgalsim_1_1_s_b_profile_1_1_s_b_profile_impl.html#a334634574b9b2f9f8ba3d04c4488d45d">galsim::SBProfile::SBProfileImpl</a>.</p>
 
 </div>
 </div>

@@ -115,8 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69d96574cc105f6e640afc2f0a2835e4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a69d96574cc105f6e640afc2f0a2835e4">stepK</a> () const </td></tr>
 <tr class="memitem:ae153eab909871f28b391ab06b5b1e3bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#ae153eab909871f28b391ab06b5b1e3bb">centroid</a> () const </td></tr>
 <tr class="memitem:a14a1795522c9f0b040c53cd227d77ed1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a14a1795522c9f0b040c53cd227d77ed1">getFlux</a> () const </td></tr>
-<tr class="memitem:a61844aae34fe2c104021091b5c57a44c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a61844aae34fe2c104021091b5c57a44c">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a61844aae34fe2c104021091b5c57a44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile.">SBGaussian</a>.  <a href="#a61844aae34fe2c104021091b5c57a44c"></a><br/></td></tr>
+<tr class="memitem:a223a36eedcddbe9d7131473502b27558"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a223a36eedcddbe9d7131473502b27558">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a223a36eedcddbe9d7131473502b27558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile.">SBGaussian</a>.  <a href="#a223a36eedcddbe9d7131473502b27558"></a><br/></td></tr>
 <tr class="memitem:a660a6059eb84a0f87fd895047147cc14"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html#a660a6059eb84a0f87fd895047147cc14">getSigma</a> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
@@ -366,12 +366,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a61844aae34fe2c104021091b5c57a44c"></a>
+<a class="anchor" id="a223a36eedcddbe9d7131473502b27558"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBGaussian::SBGaussianImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBGaussian::SBGaussianImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -379,7 +379,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>

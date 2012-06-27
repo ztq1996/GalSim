@@ -131,21 +131,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a574ff7f53820b1cf07d7389506a0c5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rescale all photon positions by the given factor.  <a href="#a574ff7f53820b1cf07d7389506a0c5e7"></a><br/></td></tr>
 <tr class="memitem:a8192f81c08a52d8ad4aafd2c949bb9ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a8192f81c08a52d8ad4aafd2c949bb9ee">append</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a8192f81c08a52d8ad4aafd2c949bb9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extend this array with the contents of another.  <a href="#a8192f81c08a52d8ad4aafd2c949bb9ee"></a><br/></td></tr>
-<tr class="memitem:af55fdf79f6865af2aa7c1635a736bdc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#af55fdf79f6865af2aa7c1635a736bdc4">convolve</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs)</td></tr>
-<tr class="memdesc:af55fdf79f6865af2aa7c1635a736bdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve this array with another.  <a href="#af55fdf79f6865af2aa7c1635a736bdc4"></a><br/></td></tr>
-<tr class="memitem:a6896e3f708d26de6ba061fa8774fb68f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a6896e3f708d26de6ba061fa8774fb68f">convolveShuffle</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud)</td></tr>
-<tr class="memdesc:a6896e3f708d26de6ba061fa8774fb68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve this array with another, shuffling the order in which photons are combined.  <a href="#a6896e3f708d26de6ba061fa8774fb68f"></a><br/></td></tr>
+<tr class="memitem:a925f0c162ca3c5aeae03b84891433be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a925f0c162ca3c5aeae03b84891433be5">convolve</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud)</td></tr>
+<tr class="memdesc:a925f0c162ca3c5aeae03b84891433be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve this array with another.  <a href="#a925f0c162ca3c5aeae03b84891433be5"></a><br/></td></tr>
+<tr class="memitem:a9e71bf94a32bf3114fe542a003e4cac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a9e71bf94a32bf3114fe542a003e4cac6">convolveShuffle</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud)</td></tr>
+<tr class="memdesc:a9e71bf94a32bf3114fe542a003e4cac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve this array with another, shuffling the order in which photons are combined.  <a href="#a9e71bf94a32bf3114fe542a003e4cac6"></a><br/></td></tr>
 <tr class="memitem:a08f1eea7336abefed945ba35426056b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a08f1eea7336abefed945ba35426056b8">takeYFrom</a> (const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a08f1eea7336abefed945ba35426056b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take x displacement from this, and y displacement from x of another array, multiplying fluxes.  <a href="#a08f1eea7336abefed945ba35426056b8"></a><br/></td></tr>
-<tr class="memitem:a0ac85a5714678cb38a92d8c666150cde"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a0ac85a5714678cb38a92d8c666150cde"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a0ac85a5714678cb38a92d8c666150cde">addTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;target) const </td></tr>
-<tr class="memdesc:a0ac85a5714678cb38a92d8c666150cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add flux of photons to an image by binning into pixels.  <a href="#a0ac85a5714678cb38a92d8c666150cde"></a><br/></td></tr>
+<tr class="memitem:aef2ff1aaa1da223d1c48222ecd819caf"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aef2ff1aaa1da223d1c48222ecd819caf"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf">addTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;target) const </td></tr>
+<tr class="memdesc:aef2ff1aaa1da223d1c48222ecd819caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add flux of photons to an image by binning into pixels.  <a href="#aef2ff1aaa1da223d1c48222ecd819caf"></a><br/></td></tr>
+<tr class="memitem:aaf0c285f0e02d25c6bb4a4161e562312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312">setCorrelated</a> (bool new_val=true)</td></tr>
+<tr class="memdesc:aaf0c285f0e02d25c6bb4a4161e562312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare that the photons in this array are correlated.  <a href="#aaf0c285f0e02d25c6bb4a4161e562312"></a><br/></td></tr>
+<tr class="memitem:a185f5fe62716162bfad9be98f20b1e44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44">isCorrelated</a> () const </td></tr>
+<tr class="memdesc:a185f5fe62716162bfad9be98f20b1e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current array has correlated photons.  <a href="#a185f5fe62716162bfad9be98f20b1e44"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7ee4f51cbb3c8cf4c4e2b0f90e02809f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a7ee4f51cbb3c8cf4c4e2b0f90e02809f">_x</a></td></tr>
 <tr class="memitem:a64ba346eaf38060d81715d29efde4423"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a64ba346eaf38060d81715d29efde4423">_y</a></td></tr>
 <tr class="memitem:a63c8b956a83d580f60c0a8cf80748fe6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#a63c8b956a83d580f60c0a8cf80748fe6">_flux</a></td></tr>
+<tr class="memitem:ad110c02b9ae9cc8e96dda93d4d0daf03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_photon_array.html#ad110c02b9ae9cc8e96dda93d4d0daf03">_is_correlated</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class to hold a list of "photon" arrival positions. </p>
@@ -226,14 +231,14 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a0ac85a5714678cb38a92d8c666150cde"></a>
+<a class="anchor" id="aef2ff1aaa1da223d1c48222ecd819caf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::PhotonArray::addTo </td>
+          <td class="memname">double galsim::PhotonArray::addTo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>target</em></td><td>)</td>
@@ -250,6 +255,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns:</dt><dd>The total flux of photons the landed inside the image bounds. </dd></dl>
 
 </div>
 </div>
@@ -277,7 +283,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af55fdf79f6865af2aa7c1635a736bdc4"></a>
+<a class="anchor" id="a925f0c162ca3c5aeae03b84891433be5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -285,8 +291,18 @@ template&lt;class T &gt; </div>
           <td class="memname">void galsim::PhotonArray::convolve </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
+          <td class="paramname"><em>ud</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -296,13 +312,14 @@ template&lt;class T &gt; </div>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> to convolve with this one. Must be same size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ud</td><td>A <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> in case we need to shuffle. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a6896e3f708d26de6ba061fa8774fb68f"></a>
+<a class="anchor" id="a9e71bf94a32bf3114fe542a003e4cac6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -315,7 +332,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -327,7 +344,7 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Convolve this array with another, shuffling the order in which photons are combined. </p>
-<p>Same convolution behavior as <a class="el" href="classgalsim_1_1_photon_array.html#af55fdf79f6865af2aa7c1635a736bdc4" title="Convolve this array with another.">convolve()</a>, but the order in which the photons are multiplied into the array is randomized to destroy any flux or position correlations.</p>
+<p>Same convolution behavior as <a class="el" href="classgalsim_1_1_photon_array.html#a925f0c162ca3c5aeae03b84891433be5" title="Convolve this array with another.">convolve()</a>, but the order in which the photons are multiplied into the array is randomized to destroy any flux or position correlations.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> to convolve with this one. Must be same size. </td></tr>
@@ -431,6 +448,23 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a185f5fe62716162bfad9be98f20b1e44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::PhotonArray::isCorrelated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the current array has correlated photons. </p>
+
+</div>
+</div>
 <a class="anchor" id="a16f1b571191fc1b9b05f733e9b63c5b0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -500,6 +534,24 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aaf0c285f0e02d25c6bb4a4161e562312"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::PhotonArray::setCorrelated </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>new_val</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declare that the photons in this array are correlated. </p>
 
 </div>
 </div>
@@ -629,6 +681,26 @@ template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;double&gt; galsim::PhotonArray::_flux</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad110c02b9ae9cc8e96dda93d4d0daf03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::PhotonArray::_is_correlated</td>
         </tr>
       </table>
   </td>

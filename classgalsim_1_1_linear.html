@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac40d9ecf5afdb0e066695d6dbdf99abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel.  <a href="#ac40d9ecf5afdb0e066695d6dbdf99abd"></a><br/></td></tr>
 <tr class="memitem:aac252af47722b84b22ec6b0f0d6ad039"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#aac252af47722b84b22ec6b0f0d6ad039">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:aac252af47722b84b22ec6b0f0d6ad039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (absolute value of) integral of the negative portions of the kernel.  <a href="#aac252af47722b84b22ec6b0f0d6ad039"></a><br/></td></tr>
-<tr class="memitem:a0d63740a7dcb67c8570b8676be6009fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#a0d63740a7dcb67c8570b8676be6009fe">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a0d63740a7dcb67c8570b8676be6009fe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> interpolant has fast photon-shooting by adding two uniform deviates per axis.  <a href="#a0d63740a7dcb67c8570b8676be6009fe"></a><br/></td></tr>
+<tr class="memitem:ad50095005b6b0fbb6e5566a15c441efd"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#ad50095005b6b0fbb6e5566a15c441efd">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:ad50095005b6b0fbb6e5566a15c441efd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> interpolant has fast photon-shooting by adding two uniform deviates per axis.  <a href="#ad50095005b6b0fbb6e5566a15c441efd"></a><br/></td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
@@ -340,7 +340,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0d63740a7dcb67c8570b8676be6009fe"></a>
+<a class="anchor" id="ad50095005b6b0fbb6e5566a15c441efd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -348,7 +348,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::Linear::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::Linear::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -356,7 +356,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
@@ -374,7 +374,7 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> interpolant has fast photon-shooting by adding two uniform deviates per axis. </p>
 
-<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#a3d6ea4250685b2a1b8273d42db1cdcfd">galsim::Interpolant</a>.</p>
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">galsim::Interpolant</a>.</p>
 
 </div>
 </div>

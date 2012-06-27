@@ -118,8 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90bf064825c5862606636d2b2b43287d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a90bf064825c5862606636d2b2b43287d">isAnalyticK</a> () const </td></tr>
 <tr class="memitem:a3badf0b66662f431a2f183f72f6cc65c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a3badf0b66662f431a2f183f72f6cc65c">centroid</a> () const </td></tr>
 <tr class="memitem:a146562404fb5c031cc20bf324a04614f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a146562404fb5c031cc20bf324a04614f">getFlux</a> () const </td></tr>
-<tr class="memitem:a9af855cb26070f51db0b3956684cdb19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a9af855cb26070f51db0b3956684cdb19">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;ud) const </td></tr>
-<tr class="memdesc:a9af855cb26070f51db0b3956684cdb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sersic photon shooting done by rescaling photons from appropriate <code><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_sersic_info.html" title="A private class that caches the needed parameters for each Sersic index n.">SersicInfo</a></code>  <a href="#a9af855cb26070f51db0b3956684cdb19"></a><br/></td></tr>
+<tr class="memitem:a90dd3f5c64e701af219208fa15dbcaa8"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a90dd3f5c64e701af219208fa15dbcaa8">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
+<tr class="memdesc:a90dd3f5c64e701af219208fa15dbcaa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sersic photon shooting done by rescaling photons from appropriate <code><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_sersic_info.html" title="A private class that caches the needed parameters for each Sersic index n.">SersicInfo</a></code>  <a href="#a90dd3f5c64e701af219208fa15dbcaa8"></a><br/></td></tr>
 <tr class="memitem:a4a7e65e428fb14d4f73ade24ca0a33fd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a4a7e65e428fb14d4f73ade24ca0a33fd">getN</a> () const </td></tr>
 <tr class="memitem:a585b73adb99c7ab2242c9fc54e2d4a62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic_1_1_s_b_sersic_impl.html#a585b73adb99c7ab2242c9fc54e2d4a62">getHalfLightRadius</a> () const </td></tr>
 </table><table class="memberdecls">
@@ -495,12 +495,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9af855cb26070f51db0b3956684cdb19"></a>
+<a class="anchor" id="a90dd3f5c64e701af219208fa15dbcaa8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> galsim::SBSersic::SBSersicImpl::shoot </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>&gt; galsim::SBSersic::SBSersicImpl::shoot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -508,7 +508,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
           <td class="paramname"><em>ud</em>&#160;</td>
         </tr>
         <tr>
