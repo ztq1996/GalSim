@@ -184,7 +184,7 @@ Functions</h2></td></tr>
 Example usage:
 </pre><div class="fragment"><div class="line">     galaxy = <a class="code" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">galsim.Gaussian</a>(flux = 1.0, sigma = 1.0)</div>
 <div class="line">     galaxy.applyShear(g1=0.05, g2=0.0)  <span class="comment"># shear it by (0.05, 0) using the g=(a-b)/(a+b) definition</span></div>
-<div class="line">     psf = <a class="code" href="classgalsim_1_1atmosphere_1_1_double_gaussian.html" title="Double Gaussian, which is the sum of two SBProfile Gaussian profiles.">galsim.atmosphere.DoubleGaussian</a>(flux1 = 0.7, sigma1 = 0.7, flux2 = 0.3, sigma2 = 1.5)</div>
+<div class="line">     psf = <a class="code" href="classgalsim_1_1base_1_1_double_gaussian.html" title="Double Gaussian, which is the sum of two Gaussian profiles.">galsim.DoubleGaussian</a>(flux1 = 0.7, sigma1 = 0.7, flux2 = 0.3, sigma2 = 1.5)</div>
 <div class="line">     pixel = <a class="code" href="classgalsim_1_1base_1_1_pixel.html" title="GalSim Pixel, which has an SBBox in the SBProfile attribute.">galsim.Pixel</a>(xw = 0.2, yw = 0.2)</div>
 <div class="line">     final = <a class="code" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">galsim.Convolve</a>([galaxy, psf, pixel])</div>
 <div class="line">     final_epsf = <a class="code" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">galsim.Convolve</a>([psf, pixel])</div>

@@ -178,12 +178,12 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a614ea2d1595e55b7bdfd1cf2ef436700"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a614ea2d1595e55b7bdfd1cf2ef436700">addressPixel</a> (int y) const </td></tr>
 <tr class="memitem:aeb8b747951e854fb18c580740a971917"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#aeb8b747951e854fb18c580740a971917">addressPixel</a> (int x, int y) const </td></tr>
-<tr class="memitem:a27d4283c21363e6419ef5263b3bab197"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a27d4283c21363e6419ef5263b3bab197">BaseImage</a> (T *data, boost::shared_ptr&lt; T &gt; owner, int stride, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;b, double scale=1.)</td></tr>
-<tr class="memdesc:a27d4283c21363e6419ef5263b3bab197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor is protected since a <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> is a virtual base class.  <a href="#a27d4283c21363e6419ef5263b3bab197"></a><br/></td></tr>
+<tr class="memitem:a5378947bb8dffa5f154f425195267a02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5378947bb8dffa5f154f425195267a02">BaseImage</a> (T *data, boost::shared_ptr&lt; T &gt; owner, int stride, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;b, double scale)</td></tr>
+<tr class="memdesc:a5378947bb8dffa5f154f425195267a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor is protected since a <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> is a virtual base class.  <a href="#a5378947bb8dffa5f154f425195267a02"></a><br/></td></tr>
 <tr class="memitem:a14b615f5efee7df752a986e8c8620339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a14b615f5efee7df752a986e8c8620339">BaseImage</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="memdesc:a14b615f5efee7df752a986e8c8620339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor also protected.  <a href="#a14b615f5efee7df752a986e8c8620339"></a><br/></td></tr>
-<tr class="memitem:af2daf6250a9bbd4ffe032d041e941294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#af2daf6250a9bbd4ffe032d041e941294">BaseImage</a> (const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;b, double scale=1.)</td></tr>
-<tr class="memdesc:af2daf6250a9bbd4ffe032d041e941294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Also have a constructor that just takes a bounds.  <a href="#af2daf6250a9bbd4ffe032d041e941294"></a><br/></td></tr>
+<tr class="memitem:afcd9b0ae4f150e2702b2347589c32794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#afcd9b0ae4f150e2702b2347589c32794">BaseImage</a> (const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;b, double scale)</td></tr>
+<tr class="memdesc:afcd9b0ae4f150e2702b2347589c32794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Also have a constructor that just takes a bounds.  <a href="#afcd9b0ae4f150e2702b2347589c32794"></a><br/></td></tr>
 <tr class="memitem:a2d8d0f08d10518dd04fe4c7a959a0b34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a2d8d0f08d10518dd04fe4c7a959a0b34">allocateMem</a> ()</td></tr>
 <tr class="memdesc:a2d8d0f08d10518dd04fe4c7a959a0b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate new memory for the image.  <a href="#a2d8d0f08d10518dd04fe4c7a959a0b34"></a><br/></td></tr>
 </table><table class="memberdecls">
@@ -261,7 +261,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a27d4283c21363e6419ef5263b3bab197"></a>
+<a class="anchor" id="a5378947bb8dffa5f154f425195267a02"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -298,7 +298,7 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>scale</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -346,7 +346,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af2daf6250a9bbd4ffe032d041e941294"></a>
+<a class="anchor" id="afcd9b0ae4f150e2702b2347589c32794"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -365,7 +365,7 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>scale</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

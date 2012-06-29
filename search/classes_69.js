@@ -5,6 +5,7 @@ var searchData=
   ['imageerror',['ImageError',['../classgalsim_1_1_image_error.html',1,'galsim']]],
   ['imageview',['ImageView',['../classgalsim_1_1_image_view.html',1,'galsim']]],
   ['infobarn',['InfoBarn',['../classgalsim_1_1_s_b_sersic_1_1_info_barn.html',1,'galsim::SBSersic']]],
+  ['infobarn',['InfoBarn',['../classgalsim_1_1_s_b_airy_1_1_info_barn.html',1,'galsim::SBAiry']]],
   ['int2dauxtype',['Int2DAuxType',['../classgalsim_1_1integ_1_1_int2_d_aux_type.html',1,'galsim::integ']]],
   ['int3dauxtype',['Int3DAuxType',['../classgalsim_1_1integ_1_1_int3_d_aux_type.html',1,'galsim::integ']]],
   ['interpolant',['Interpolant',['../classgalsim_1_1_interpolant.html',1,'galsim']]],

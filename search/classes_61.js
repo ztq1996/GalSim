@@ -2,6 +2,7 @@ var searchData=
 [
   ['add',['Add',['../classgalsim_1_1base_1_1_add.html',1,'galsim::base']]],
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
+  ['airyinfo',['AiryInfo',['../classgalsim_1_1_s_b_airy_1_1_airy_info.html',1,'galsim::SBAiry']]],
   ['airyradialfunction',['AiryRadialFunction',['../classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html',1,'galsim::SBAiry']]],
   ['angle',['Angle',['../classgalsim_1_1_angle.html',1,'galsim']]],
   ['angleunit',['AngleUnit',['../classgalsim_1_1_angle_unit.html',1,'galsim']]],
