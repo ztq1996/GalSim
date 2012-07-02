@@ -6,6 +6,6 @@ var searchData=
   ['ngkplevels',['NGKPLEVELS',['../namespacegalsim_1_1integ.html#ac4fa002a6c83cf81bd44d67502d4b22d',1,'galsim::integ']]],
   ['ninitial',['Ninitial',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#ae669f64fb61192bcacc52d471baee460',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
   ['nk',['Nk',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#af429e18ecc16d09d0157312aaf892038',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
-  ['nmap',['nmap',['../classgalsim_1_1_s_b_sersic.html#a7990d50663993280d89e280bc6e9be99',1,'galsim::SBSersic::nmap()'],['../classgalsim_1_1_s_b_airy.html#a862ea3bbb32279f75721721e04b89342',1,'galsim::SBAiry::nmap()']]],
+  ['nmap',['nmap',['../classgalsim_1_1_s_b_airy.html#a862ea3bbb32279f75721721e04b89342',1,'galsim::SBAiry::nmap()'],['../classgalsim_1_1_s_b_sersic.html#a7990d50663993280d89e280bc6e9be99',1,'galsim::SBSersic::nmap()']]],
   ['normal',['normal',['../classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2',1,'galsim::GaussianDeviate']]]
 ];

@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_s_b_profile_8h_source.html">SBProfile.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_s_b_convolve_impl_8h_source.html">SBConvolveImpl.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for galsim::SBConvolve::SBConvolveImpl:</div>
 <div class="dyncontent">
@@ -166,7 +166,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a06b65538abfe28e937c930ae938273a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a06b65538abfe28e937c930ae938273a9">_y0</a></td></tr>
 <tr class="memdesc:a06b65538abfe28e937c930ae938273a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centroid position in y.  <a href="#a06b65538abfe28e937c930ae938273a9"></a><br/></td></tr>
 <tr class="memitem:afaeb6fd898c157590e2b75054b421b71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#afaeb6fd898c157590e2b75054b421b71">_isStillAxisymmetric</a></td></tr>
-<tr class="memdesc:afaeb6fd898c157590e2b75054b421b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is output <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> shape still circular?  <a href="#afaeb6fd898c157590e2b75054b421b71"></a><br/></td></tr>
+<tr class="memdesc:afaeb6fd898c157590e2b75054b421b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is output <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> shape still circular?  <a href="#afaeb6fd898c157590e2b75054b421b71"></a><br/></td></tr>
 <tr class="memitem:ab6fa72b41b7e292ce577e43521dbf08b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab6fa72b41b7e292ce577e43521dbf08b">_minMaxK</a></td></tr>
 <tr class="memdesc:ab6fa72b41b7e292ce577e43521dbf08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a65f3859899e09c161d7fa6c90dca5679">maxK()</a> of the convolved SBProfiles.  <a href="#ab6fa72b41b7e292ce577e43521dbf08b"></a><br/></td></tr>
 <tr class="memitem:a753e7438b09711569efd2c74073be569"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a753e7438b09711569efd2c74073be569">_netStepK</a></td></tr>
@@ -441,7 +441,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a255bad6c452f5e730ca6cdb0fa801159">galsim::SBBox::SBBoxImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a20ebd07f82aaef762281ddb541e3376a">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a255bad6c452f5e730ca6cdb0fa801159">galsim::SBBox::SBBoxImpl</a>.</p>
 
 </div>
 </div>
@@ -483,7 +483,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a4718f12d33825ff2110967d7f7b54609">galsim::SBBox::SBBoxImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a2183ac67effaea0d9f05607bd8df1f46">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a4718f12d33825ff2110967d7f7b54609">galsim::SBBox::SBBoxImpl</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#abb3e6d85c229a0a8ed3f73d6846e711e">galsim::SBBox::SBBoxImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2ec57a9cdc409a4991202266199f28bd">galsim::SBAdd::SBAddImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2ec57a9cdc409a4991202266199f28bd">galsim::SBAdd::SBAddImpl</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a29de0f38de7957b5315d8655b8e2fa6c">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#abb3e6d85c229a0a8ed3f73d6846e711e">galsim::SBBox::SBBoxImpl</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#add07ad81eaf4f81be9e0829ecf368e6f">galsim::SBBox::SBBoxImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a3e9aed75a7a2f28e72b75324a246e320">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#add07ad81eaf4f81be9e0829ecf368e6f">galsim::SBBox::SBBoxImpl</a>.</p>
 
 </div>
 </div>
@@ -1169,7 +1169,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Is output <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> shape still circular? </p>
+<p>Is output <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> shape still circular? </p>
 
 </div>
 </div>
@@ -1394,7 +1394,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/galsim/<a class="el" href="_s_b_profile_8h_source.html">SBProfile.h</a></li>
+<li>include/galsim/<a class="el" href="_s_b_convolve_impl_8h_source.html">SBConvolveImpl.h</a></li>
 </ul>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
