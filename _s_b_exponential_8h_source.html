@@ -98,36 +98,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>galsim {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classgalsim_1_1_s_b_exponential.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a1c6cec142b4d8d4ae3c25e49b776e321" title="Constructor - note that r0 is scale length, NOT half-light radius re as in SBSersic.">SBExponential</a>(<span class="keywordtype">double</span> r0, <span class="keywordtype">double</span> flux=1.);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a1c6cec142b4d8d4ae3c25e49b776e321" title="Constructor - note that r0 is scale length, NOT half-light radius re as in SBSersic.">SBExponential</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>&amp; rhs);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a" title="Destructor.">~SBExponential</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9" title="Returns the scale radius of the Exponential profile.">getScaleRadius</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_radial_function.html" title="Subclass of SBExponential which provides the un-normalized radial function.">ExponentialRadialFunction</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_info.html" title="A private class that stores photon shooting functions for the Exponential profile.">ExponentialInfo</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classgalsim_1_1_s_b_exponential.html#abc44db1f0d07d39fd405d4d7ccf39a90">   44</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html">SBExponentialImpl</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// Static class-wide object that does some calculations applicable to all </span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// SBExponential instantiations.</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> <a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_info.html" title="A private class that stores photon shooting functions for the Exponential profile.">ExponentialInfo</a> <a class="code" href="classgalsim_1_1_s_b_exponential.html#abc44db1f0d07d39fd405d4d7ccf39a90">_info</a>; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#ae4dfd4cb6fe05e52f013279f660b2aef">operator=</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>&amp; rhs);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // SBEXPONENTIAL_H</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classgalsim_1_1_s_b_exponential.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a1c6cec142b4d8d4ae3c25e49b776e321" title="Constructor - note that r0 is scale length, NOT half-light radius re as in SBSersic.">SBExponential</a>(<span class="keywordtype">double</span> r0, <span class="keywordtype">double</span> flux=1.);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a1c6cec142b4d8d4ae3c25e49b776e321" title="Constructor - note that r0 is scale length, NOT half-light radius re as in SBSersic.">SBExponential</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>&amp; rhs);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a" title="Destructor.">~SBExponential</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9" title="Returns the scale radius of the Exponential profile.">getScaleRadius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_radial_function.html" title="Subclass of SBExponential which provides the un-normalized radial function.">ExponentialRadialFunction</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_info.html" title="A private class that stores photon shooting functions for the Exponential profile.">ExponentialInfo</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classgalsim_1_1_s_b_exponential.html#abc44db1f0d07d39fd405d4d7ccf39a90">   45</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential_1_1_s_b_exponential_impl.html">SBExponentialImpl</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// Static class-wide object that does some calculations applicable to all </span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// SBExponential instantiations.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">static</span> <a class="code" href="classgalsim_1_1_s_b_exponential_1_1_exponential_info.html" title="A private class that stores photon shooting functions for the Exponential profile.">ExponentialInfo</a> <a class="code" href="classgalsim_1_1_s_b_exponential.html#abc44db1f0d07d39fd405d4d7ccf39a90">_info</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#ae4dfd4cb6fe05e52f013279f660b2aef">operator=</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>&amp; rhs);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // SBEXPONENTIAL_H</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

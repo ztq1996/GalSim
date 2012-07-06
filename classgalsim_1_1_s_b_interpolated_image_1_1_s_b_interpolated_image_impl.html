@@ -164,9 +164,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a91b3f5bce59a262afcce90629507f427"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a91b3f5bce59a262afcce90629507f427">_multi</a></td></tr>
 <tr class="memitem:a87a4a96b46147fe1916c67ae3c238944"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a87a4a96b46147fe1916c67ae3c238944">_wts</a></td></tr>
 <tr class="memitem:a78489cae2b002ef2a3ba164828ea9f64"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a78489cae2b002ef2a3ba164828ea9f64">_xInterp</a></td></tr>
-<tr class="memdesc:a78489cae2b002ef2a3ba164828ea9f64"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> used in real space.  <a href="#a78489cae2b002ef2a3ba164828ea9f64"></a><br/></td></tr>
+<tr class="memdesc:a78489cae2b002ef2a3ba164828ea9f64"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> used in real space.  <a href="#a78489cae2b002ef2a3ba164828ea9f64"></a><br/></td></tr>
 <tr class="memitem:adaa732c9f45438bfbcb230a862d7e5dd"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#adaa732c9f45438bfbcb230a862d7e5dd">_kInterp</a></td></tr>
-<tr class="memdesc:adaa732c9f45438bfbcb230a862d7e5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> used in k space.  <a href="#adaa732c9f45438bfbcb230a862d7e5dd"></a><br/></td></tr>
+<tr class="memdesc:adaa732c9f45438bfbcb230a862d7e5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> used in k space.  <a href="#adaa732c9f45438bfbcb230a862d7e5dd"></a><br/></td></tr>
 <tr class="memitem:a35087ff1280db03581a2da3a947ec817"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_x_table.html">XTable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a35087ff1280db03581a2da3a947ec817">_xtab</a></td></tr>
 <tr class="memdesc:a35087ff1280db03581a2da3a947ec817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final padded real-space image.  <a href="#a35087ff1280db03581a2da3a947ec817"></a><br/></td></tr>
 <tr class="memitem:a5d541f22f882155a74f39079fe50fea0"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_k_table.html">KTable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a5d541f22f882155a74f39079fe50fea0">_ktab</a></td></tr>
@@ -1037,7 +1037,7 @@ template&lt;typename T &gt; </div>
 
 <p>Shoot photons through this object. </p>
 <p><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> will assign photons to its input pixels with probability proportional to their flux. Each photon will then be displaced from its pixel center by an (x,y) amount drawn from the interpolation kernel. Note that if either the input image or the interpolation kernel have negative regions, then negative-flux photons can be generated. Noisy images or ring-y kernels will generate a lot of shot noise in the <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a213ca37c5eddcd52f7488aa69391fc26" title="Shoot photons through this object.">shoot()</a> output. Not all kernels have photon-shooting implemented. It may be best to stick to nearest-neighbor and linear interpolation kernels if you wish to avoid these issues.</p>
-<p>Use the <code><a class="el" href="classgalsim_1_1_delta.html" title="Delta-function interpolant in 1d.">Delta</a></code> <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> if you do not want to waste time moving the photons from their pixel centers. But you will regret any attempt to draw images analytically with that one.</p>
+<p>Use the <code><a class="el" href="classgalsim_1_1_delta.html" title="Delta-function interpolant in 1d.">Delta</a></code> <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> if you do not want to waste time moving the photons from their pixel centers. But you will regret any attempt to draw images analytically with that one.</p>
 <p>Photon shooting with the Sinc kernel is a bad idea and is currently forbidden.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -1122,7 +1122,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> used in k space. </p>
+<p><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> used in k space. </p>
 
 </div>
 </div>
@@ -1316,7 +1316,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> used in real space. </p>
+<p><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> used in real space. </p>
 
 </div>
 </div>

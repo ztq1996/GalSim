@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>One-dimensional interpolant base function.  
+<p>Base class representing one-dimensional interpolant functions.  
  <a href="classgalsim_1_1_interpolant.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_interpolant_8h_source.html">Interpolant.h</a>&gt;</code></p>
@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79ea4025b2d035114ff49ac0a079de5d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a79ea4025b2d035114ff49ac0a079de5d">uval</a> (double u) const =0</td></tr>
 <tr class="memdesc:a79ea4025b2d035114ff49ac0a079de5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in frequency space.  <a href="#a79ea4025b2d035114ff49ac0a079de5d"></a><br/></td></tr>
 <tr class="memitem:ad628ad52cd50055ed1af1d83a6d25007"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#ad628ad52cd50055ed1af1d83a6d25007">getTolerance</a> () const =0</td></tr>
-<tr class="memdesc:ad628ad52cd50055ed1af1d83a6d25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> is calculated.  <a href="#ad628ad52cd50055ed1af1d83a6d25007"></a><br/></td></tr>
+<tr class="memdesc:ad628ad52cd50055ed1af1d83a6d25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad628ad52cd50055ed1af1d83a6d25007"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
 <tr class="memdesc:a9ab7c3d0433bc6b59714c454b2434df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report whether interpolation will reproduce values at samples.  <a href="#a9ab7c3d0433bc6b59714c454b2434df0"></a><br/></td></tr>
 <tr class="memitem:a1b1d24856db9c3b715b8e8a7326623dc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a1b1d24856db9c3b715b8e8a7326623dc">getPositiveFlux</a> () const </td></tr>
@@ -157,13 +157,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a291876b8f5b0db4e83342b72a24512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_interpolant_function.html">InterpolantFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9a291876b8f5b0db4e83342b72a24512">_interp</a></td></tr>
-<tr class="memdesc:a9a291876b8f5b0db4e83342b72a24512"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> to sampler.  <a href="#a9a291876b8f5b0db4e83342b72a24512"></a><br/></td></tr>
+<tr class="memdesc:a9a291876b8f5b0db4e83342b72a24512"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> to sampler.  <a href="#a9a291876b8f5b0db4e83342b72a24512"></a><br/></td></tr>
 <tr class="memitem:aa0257bdab5213fa88e524a930126cf9d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html">OneDimensionalDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa0257bdab5213fa88e524a930126cf9d">_sampler</a></td></tr>
-<tr class="memdesc:aa0257bdab5213fa88e524a930126cf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>.  <a href="#aa0257bdab5213fa88e524a930126cf9d"></a><br/></td></tr>
+<tr class="memdesc:aa0257bdab5213fa88e524a930126cf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>.  <a href="#aa0257bdab5213fa88e524a930126cf9d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>One-dimensional interpolant base function. </p>
+<div class="textblock"><p>Base class representing one-dimensional interpolant functions. </p>
 <p>One-dimensional interpolant function. X units are in pixels and the frequency-domain u values are in cycles per pixel.</p>
 <p>All Interpolants are assumed symmetric so that frequency-domain values are real. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -334,7 +334,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> is calculated. </p>
+<p>Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated. </p>
 <dl class="section return"><dt>Returns:</dt><dd>Targeted accuracy </dd></dl>
 
 <p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#afd3be792d3e16ffb6faafcb34882772a">galsim::Delta</a>.</p>
@@ -363,7 +363,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Report whether interpolation will reproduce values at samples. </p>
-<p>This will return true if the interpolant is exact at nodes, meaning that F(0)=1 and F(n)=0 for non-zero integer n. Right now this is true for every implementation. </p>
+<p>This will return true if the interpolant is exact at nodes, meaning that F(0)=1 and F(n)=0 for non-zero integer n. Right now this is true for every implementation.</p>
 <dl class="section return"><dt>Returns:</dt><dd>True if samples are returned exactly. </dd></dl>
 
 </div>
@@ -401,7 +401,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return array of displacements drawn from this kernel. </p>
-<p>Since <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> is 1d, will use only x array of <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>. It will be assumed that photons returned are randomly ordered (no need to shuffle them). Also assumed that all photons will have nearly equal absolute value of flux. Total flux returned may not equal 1 due to shot noise in negative/positive photons, and small fluctuations in photon weights.</p>
+<p>Since <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is 1d, will use only x array of <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>. It will be assumed that photons returned are randomly ordered (no need to shuffle them). Also assumed that all photons will have nearly equal absolute value of flux. Total flux returned may not equal 1 due to shot noise in negative/positive photons, and small fluctuations in photon weights.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>number of photons to shoot </td></tr>
@@ -607,7 +607,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a> to sampler. </p>
+<p>The function to interface the <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> to sampler. </p>
 
 </div>
 </div>
@@ -629,7 +629,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="One-dimensional interpolant base function.">Interpolant</a>. </p>
+<p>Class that draws photons from this <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>. </p>
 
 </div>
 </div>
