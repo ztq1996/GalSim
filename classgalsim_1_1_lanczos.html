@@ -180,7 +180,7 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n. </p>
 <p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> filter is an approximation to the band-limiting sinc filter with a smooth cutoff at high x. Order n <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> has a range of +/- n pixels. It typically is a good compromise between kernel size and accuracy.</p>
-<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it conserves value of constant (DC) input data. </p>
+<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a01ed8e7e82477d50469a5ad708fc9119"></a>
 <div class="memitem">
@@ -216,7 +216,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Filter order; must be given on input and cannot be changed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fluxConserve</td><td>Set true to adjust filter to be exact for constant inputs. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fluxConserve</td><td>Set true to adjust filter to be more nearly correct for constant inputs. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Sets accuracy and extent of Fourier transform. </td></tr>
   </table>
   </dd>
