@@ -1,7 +1,7 @@
 var searchData=
 [
   ['_5f_5fadd_5f_5f',['__add__',['../classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82',1,'galsim.base.GSObject.__add__()'],['../classgalsim_1_1ellipse_1_1_ellipse.html#a8f04c8bc4756621baf30a2bec7144a0b',1,'galsim.ellipse.Ellipse.__add__()'],['../classgalsim_1_1shear_1_1_shear.html#af2dde4982fad1589c7bf0986fca8a4d7',1,'galsim.shear.Shear.__add__()']]],
-  ['_5f_5fclass_5f_5f',['__class__',['../classgalsim_1_1base_1_1_g_s_object.html#a25733fb48fd5dd81726d1d7e1970df55',1,'galsim::base::GSObject']]],
+  ['_5f_5fclass_5f_5f',['__class__',['../classgalsim_1_1base_1_1_g_s_object.html#a25733fb48fd5dd81726d1d7e1970df55',1,'galsim.base.GSObject.__class__()'],['../namespacegalsim_1_1image.html#af7d369af7210f6bc92a57606384165d0',1,'galsim.image.__class__()']]],
   ['_5f_5fdiv_5f_5f',['__div__',['../classgalsim_1_1base_1_1_g_s_object.html#a182d9f8b408ee4582d170c760c533d98',1,'galsim::base::GSObject']]],
   ['_5f_5feq_5f_5f',['__eq__',['../classgalsim_1_1ellipse_1_1_ellipse.html#a5fac2e4caffcedaf863b976d7328a614',1,'galsim.ellipse.Ellipse.__eq__()'],['../classgalsim_1_1shear_1_1_shear.html#a5896a804bb6f083a67923f459f4c3d8a',1,'galsim.shear.Shear.__eq__()']]],
   ['_5f_5fgetattr_5f_5f',['__getattr__',['../classgalsim_1_1base_1_1_attribute_dict.html#acdb1035a338d06715dba0919a7afc7c9',1,'galsim::base::AttributeDict']]],

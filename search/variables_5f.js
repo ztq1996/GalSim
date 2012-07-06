@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5f_5fclass_5f_5f',['__class__',['../classgalsim_1_1base_1_1_g_s_object.html#a25733fb48fd5dd81726d1d7e1970df55',1,'galsim::base::GSObject']]],
+  ['_5f_5fclass_5f_5f',['__class__',['../classgalsim_1_1base_1_1_g_s_object.html#a25733fb48fd5dd81726d1d7e1970df55',1,'galsim.base.GSObject.__class__()'],['../namespacegalsim_1_1image.html#af7d369af7210f6bc92a57606384165d0',1,'galsim.image.__class__()']]],
   ['_5f_5fstr_5f_5f',['__str__',['../classgalsim_1_1base_1_1_attribute_dict.html#a55675262196214385cfc666038307e70',1,'galsim::base::AttributeDict']]],
   ['_5f_5fval',['__val',['../structgalsim_1_1integ_1_1constant__nullary__fun.html#a9b45691edb2126acf287f76b6d389da1',1,'galsim::integ::constant_nullary_fun']]],
   ['_5fa',['_a',['../structgalsim_1_1integ_1_1_int_region.html#a0f472c88016e18957687234157fcdd7a',1,'galsim::integ::IntRegion']]],
