@@ -128,6 +128,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for storing image bounds, essentially the vertices of a rectangle.  <a href="classgalsim_1_1_bounds.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html">CCDNoise</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class implementing basic CCD noise model.  <a href="classgalsim_1_1_c_c_d_noise.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class representing shears.  <a href="classgalsim_1_1_cpp_shear.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cpp_ellipse.html">CppEllipse</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class representing transformation from an ellipse to the unit circle.  <a href="classgalsim_1_1_cpp_ellipse.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_error.html">FFTError</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_outof_range.html">FFTOutofRange</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_malloc.html">FFTMalloc</a></td></tr>
@@ -265,10 +269,6 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with <code>n = 4</code>.  <a href="classgalsim_1_1_s_b_de_vaucouleurs.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An affine transformation of another <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.  <a href="classgalsim_1_1_s_b_transform.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_shear.html">Shear</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class representing shears.  <a href="classgalsim_1_1_shear.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class representing transformation from an ellipse to the unit circle.  <a href="classgalsim_1_1_ellipse.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve_error.html">SolveError</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve.html">Solve</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_stopwatch.html">Stopwatch</a></td></tr>
@@ -316,6 +316,10 @@ Functions</h2></td></tr>
 <tr class="memitem:afa5e7463ad19b31418f27e58d324173f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#afa5e7463ad19b31418f27e58d324173f">operator&lt;&lt;</a> (std::ostream &amp;fout, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; T &gt; &amp;b)</td></tr>
 <tr class="memitem:a130242812019ec88c98df4fc605b2d33"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a130242812019ec88c98df4fc605b2d33"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a130242812019ec88c98df4fc605b2d33">operator&gt;&gt;</a> (std::istream &amp;fin, <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; T &gt; &amp;b)</td></tr>
+<tr class="memitem:a3bad6a77cb6a753a4ee6964ed8a41a22"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a3bad6a77cb6a753a4ee6964ed8a41a22">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> &amp;s)</td></tr>
+<tr class="memitem:af8d71bd2802825df293925d86d7d9c4e"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#af8d71bd2802825df293925d86d7d9c4e">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> &amp;s)</td></tr>
+<tr class="memitem:ae6578492e9f40ff4f6691f2abe5104bd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ae6578492e9f40ff4f6691f2abe5104bd">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_cpp_ellipse.html">CppEllipse</a> &amp;e)</td></tr>
+<tr class="memitem:a9fb228960e6a93a5b520f3411df2f35f"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a9fb228960e6a93a5b520f3411df2f35f">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_cpp_ellipse.html">CppEllipse</a> &amp;e)</td></tr>
 <tr class="memitem:a31cf42cfadcad3532fd00a3e5403f3ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a31cf42cfadcad3532fd00a3e5403f3ae">goodFFTSize</a> (int input)</td></tr>
 <tr class="memitem:aa9a87ad88aad1726ffec050a849bcc26"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Op &gt; </td></tr>
 <tr class="memitem:aa9a87ad88aad1726ffec050a849bcc26"><td class="memTemplItemLeft" align="right" valign="top">Op&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#aa9a87ad88aad1726ffec050a849bcc26">for_each_pixel</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, Op f)</td></tr>
@@ -410,19 +414,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a4a1cd44cabcf063ea019629ae385178e"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a4a1cd44cabcf063ea019629ae385178e">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_l_vector.html">LVector</a> &amp;lv)</td></tr>
 <tr class="memitem:ab4dc17b4f9e7ec0e5624a27f79b95f6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_vector.html#a066fc9c35726b650d0389df33d1c1292">LVector::GType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ab4dc17b4f9e7ec0e5624a27f79b95f6c">operator++</a> (<a class="el" href="classgalsim_1_1_l_vector.html#a066fc9c35726b650d0389df33d1c1292">LVector::GType</a> &amp;g)</td></tr>
 <tr class="memitem:a052b604788a83e1767cfdf93d3638573"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a052b604788a83e1767cfdf93d3638573">fluxRadius</a> (const <a class="el" href="classgalsim_1_1_l_vector.html">LVector</a> &amp;lv, double threshold, int maxP=-1)</td></tr>
-<tr class="memitem:a9534f05c67d55fac1d26ced56c1f550c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a> (<a class="el" href="classgalsim_1_1_shear.html">Shear</a> eta, int orderOut, int orderIn, bool coordShift=false)</td></tr>
+<tr class="memitem:aee4ea760792359b7af228b1937491eda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a> (<a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> eta, int orderOut, int orderIn, bool coordShift=false)</td></tr>
 <tr class="memitem:a8421ff8b31f6c8708e7fb7f8e8d4d9a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a8421ff8b31f6c8708e7fb7f8e8d4d9a3">MakeLTransform</a> (double mu, int orderOut, int orderIn, bool coordShift=false)</td></tr>
 <tr class="memitem:afca747eaca7b8f09d9c2605f3ffced7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#afca747eaca7b8f09d9c2605f3ffced7a">MakeLTransform</a> (<a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; x0, int orderOut, int orderIn, bool coordShift=false)</td></tr>
 <tr class="memitem:a65d39c3456b4714741acbe4f981de830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a65d39c3456b4714741acbe4f981de830">RotationLTransform</a> (double theta, int orderOut, int orderIn, bool coordShift=false)</td></tr>
-<tr class="memitem:a6b2757a9b62979b9b7f1cfc198c92937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a6b2757a9b62979b9b7f1cfc198c92937">MakeLTransform</a> (const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e, int orderOut, int orderIn, bool coordShift=false, int orderIntermediate=-1)</td></tr>
+<tr class="memitem:a29b4c1bb191924ef38e36d54e6ae26d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a29b4c1bb191924ef38e36d54e6ae26d1">MakeLTransform</a> (const <a class="el" href="classgalsim_1_1_cpp_ellipse.html">CppEllipse</a> &amp;e, int orderOut, int orderIn, bool coordShift=false, int orderIntermediate=-1)</td></tr>
 <tr class="memitem:a6cc32a12342d6a8788f380f41fb657e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a6cc32a12342d6a8788f380f41fb657e2">MakeLTransform</a> (const <a class="el" href="classgalsim_1_1_l_vector.html">LVector</a> psf, const double D, const int orderOut, const int orderIn, const int orderStar)</td></tr>
 <tr class="memitem:abd34fc0e9c36b5625428ff318a596dd3"><td class="memTemplParams" colspan="2">template&lt;typename D , typename T &gt; </td></tr>
 <tr class="memitem:abd34fc0e9c36b5625428ff318a596dd3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#abd34fc0e9c36b5625428ff318a596dd3">ApplyDeviateToImage</a> (D &amp;dev, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;data)</td></tr>
 <tr class="memitem:a78df204280d7ff1b8452c32df11fd937"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a78df204280d7ff1b8452c32df11fd937">RealSpaceConvolve</a> (const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;p1, const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;p2, const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;pos, double flux)</td></tr>
-<tr class="memitem:a2fcff0fcface0f26f2adab40ca22755f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a2fcff0fcface0f26f2adab40ca22755f">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;s)</td></tr>
-<tr class="memitem:ae5fcdb06d7e8db958aef1f172d6b11fa"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ae5fcdb06d7e8db958aef1f172d6b11fa">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_shear.html">Shear</a> &amp;s)</td></tr>
-<tr class="memitem:a852b9175f2dad1b2f25fb7613c02094d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a852b9175f2dad1b2f25fb7613c02094d">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e)</td></tr>
-<tr class="memitem:a7344f277af5ac0da57ec7b61d89c2ff9"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a7344f277af5ac0da57ec7b61d89c2ff9">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_ellipse.html">Ellipse</a> &amp;e)</td></tr>
 <tr class="memitem:ad34ff7c1ac42f528a01901f5d359a6d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ad34ff7c1ac42f528a01901f5d359a6d3">isComment</a> (const std::string &amp;instr)</td></tr>
 <tr class="memitem:a90d6546f9a1836b4cd2951ea58e7d67e"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a90d6546f9a1836b4cd2951ea58e7d67e">getlineNoComment</a> (std::istream &amp;is, std::string &amp;s)</td></tr>
 <tr class="memitem:a308f6ed4e06c8d6c18f5d729f89bdd50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a308f6ed4e06c8d6c18f5d729f89bdd50">nocaseEqual</a> (char c1, char c2)</td></tr>
@@ -909,14 +909,14 @@ template&lt;typename T , typename Op &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a9534f05c67d55fac1d26ced56c1f550c"></a>
+<a class="anchor" id="aee4ea760792359b7af228b1937491eda"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a> galsim::MakeLTransform </td>
           <td>(</td>
-          <td class="paramtype">Shear&#160;</td>
+          <td class="paramtype">CppShear&#160;</td>
           <td class="paramname"><em>eta</em>, </td>
         </tr>
         <tr>
@@ -1023,14 +1023,14 @@ template&lt;typename T , typename Op &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6b2757a9b62979b9b7f1cfc198c92937"></a>
+<a class="anchor" id="a29b4c1bb191924ef38e36d54e6ae26d1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classgalsim_1_1_l_transform.html">LTransform</a> galsim::MakeLTransform </td>
           <td>(</td>
-          <td class="paramtype">const Ellipse &amp;&#160;</td>
+          <td class="paramtype">const CppEllipse &amp;&#160;</td>
           <td class="paramname"><em>e</em>, </td>
         </tr>
         <tr>
@@ -2047,7 +2047,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2fcff0fcface0f26f2adab40ca22755f"></a>
+<a class="anchor" id="a3bad6a77cb6a753a4ee6964ed8a41a22"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2060,7 +2060,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Shear &amp;&#160;</td>
+          <td class="paramtype">const CppShear &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -2073,7 +2073,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a852b9175f2dad1b2f25fb7613c02094d"></a>
+<a class="anchor" id="ae6578492e9f40ff4f6691f2abe5104bd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2086,7 +2086,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Ellipse &amp;&#160;</td>
+          <td class="paramtype">const CppEllipse &amp;&#160;</td>
           <td class="paramname"><em>e</em>&#160;</td>
         </tr>
         <tr>
@@ -2183,7 +2183,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae5fcdb06d7e8db958aef1f172d6b11fa"></a>
+<a class="anchor" id="af8d71bd2802825df293925d86d7d9c4e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2196,7 +2196,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Shear &amp;&#160;</td>
+          <td class="paramtype">CppShear &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -2209,7 +2209,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7344f277af5ac0da57ec7b61d89c2ff9"></a>
+<a class="anchor" id="a9fb228960e6a93a5b520f3411df2f35f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2222,7 +2222,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ellipse &amp;&#160;</td>
+          <td class="paramtype">CppEllipse &amp;&#160;</td>
           <td class="paramname"><em>e</em>&#160;</td>
         </tr>
         <tr>

@@ -125,7 +125,7 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Characterizes the shape and other parameters of objects. </p>
-<p>Describe the hsm shape-related parameters of some object (usually galaxy) before and after PSF correction. All ellipticities are defined as (1-q^2)/(1+q^2), with the 1st component aligned with the pixel grid and the 2nd aligned at 45 degrees with respect to it. There are two choices for measurement type: 'e' = Bernstein &amp; Jarvis (2002) ellipticity, 'g' = shear estimator = shear*responsivity </p>
+<p>Describe the hsm shape-related parameters of some object (usually galaxy) before and after PSF correction. All ellipticities are defined as (1-q^2)/(1+q^2), with the 1st component aligned with the pixel grid and the 2nd aligned at 45 degrees with respect to it. There are two choices for measurement type: 'e' = Bernstein &amp; Jarvis (2002) ellipticity, 'g' = shear estimator = shear*responsivity. The sigma is defined based on the observed moments M_xx, M_xy, and M_yy as sigma = (Mxx Myy - M_xy^2)^(1/4) = [ det(M) ]^(1/4) </p>
 </div><hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a85d9bc4f3908f93171d98e4e7388c1f7"></a>
 <div class="memitem">

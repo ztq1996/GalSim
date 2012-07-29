@@ -12,9 +12,9 @@ var searchData=
   ['m_5falloc_5funknown',['m_alloc_unknown',['../mmgr_8h.html#a5ad622a7f16168dd6c58206f985aa896',1,'mmgr.h']]],
   ['mag',['mag',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a89d18fef6798d13ad3ed95a900c4b122',1,'galsim::real::RealGalaxyCatalog']]],
   ['mask',['mask',['../structgalsim_1_1hsm_1_1_rect_image.html#abc0e45df8babcc66ee72443f69312795',1,'galsim::hsm::RectImage']]],
-  ['matrixa',['matrixA',['../classgalsim_1_1_shear.html#a0499c5d9a082c035278e3dbaa7c9b870',1,'galsim::Shear']]],
-  ['matrixb',['matrixB',['../classgalsim_1_1_shear.html#a5f8487695fb785ab7b95b261a163e2b0',1,'galsim::Shear']]],
-  ['matrixc',['matrixC',['../classgalsim_1_1_shear.html#a4e2a9714383a281e60c6d423c0c46343',1,'galsim::Shear']]],
+  ['matrixa',['matrixA',['../classgalsim_1_1_cpp_shear.html#a926dc261d2ad09859cc2014d51e5d78b',1,'galsim::CppShear']]],
+  ['matrixb',['matrixB',['../classgalsim_1_1_cpp_shear.html#aada1b311ba1f105171f319fa6ddf47ba',1,'galsim::CppShear']]],
+  ['matrixc',['matrixC',['../classgalsim_1_1_cpp_shear.html#a61d8fe7c8237d879445d8d6f0bf86895',1,'galsim::CppShear']]],
   ['maximum_5ffft_5fsize',['maximum_fft_size',['../namespacegalsim_1_1sbp.html#aa58e0c79e6b568b6b51d64ee7f0b4fbb',1,'galsim::sbp']]],
   ['maxk_5fthreshold',['maxk_threshold',['../namespacegalsim_1_1sbp.html#ab59c6bbd5cbfccf0182a65ebc47316d1',1,'galsim::sbp']]],
   ['maxsteps',['maxSteps',['../classgalsim_1_1_solve.html#a044996f9a614fe15f7544110204992c6',1,'galsim::Solve']]],
@@ -31,5 +31,5 @@ var searchData=
   ['moments_5frho4',['moments_rho4',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a6e1281a9f2303d8bf95ab902ccc58c30',1,'galsim::hsm::HSMShapeData']]],
   ['moments_5fsigma',['moments_sigma',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a4213876a6ae071cb53876892ffd0084e',1,'galsim::hsm::HSMShapeData']]],
   ['moments_5fstatus',['moments_status',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#aa4087c21a258b04204ca235b16f7c228',1,'galsim::hsm::HSMShapeData']]],
-  ['mu',['mu',['../classgalsim_1_1_ellipse.html#abf03b0a5dd03d6c3aea8cf6d27c3bf88',1,'galsim::Ellipse']]]
+  ['mu',['mu',['../classgalsim_1_1_cpp_ellipse.html#ab80c0cf917d807fb28d2279316e28368',1,'galsim::CppEllipse']]]
 ];

@@ -26,7 +26,6 @@ var searchData=
   ['sbsersicimpl_2eh',['SBSersicImpl.h',['../_s_b_sersic_impl_8h.html',1,'']]],
   ['sbtransform_2eh',['SBTransform.h',['../_s_b_transform_8h.html',1,'']]],
   ['sbtransformimpl_2eh',['SBTransformImpl.h',['../_s_b_transform_impl_8h.html',1,'']]],
-  ['shear_2eh',['Shear.h',['../_shear_8h.html',1,'']]],
   ['shear_2epy',['shear.py',['../shear_8py.html',1,'']]],
   ['solve_2eh',['Solve.h',['../_solve_8h.html',1,'']]],
   ['std_2eh',['Std.h',['../_std_8h.html',1,'']]],

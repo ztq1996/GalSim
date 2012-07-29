@@ -17,5 +17,7 @@ var searchData=
   ['constantreg2',['ConstantReg2',['../structgalsim_1_1integ_1_1_constant_reg2.html',1,'galsim::integ']]],
   ['constimageview',['ConstImageView',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],
   ['convolve',['Convolve',['../classgalsim_1_1base_1_1_convolve.html',1,'galsim::base']]],
+  ['cppellipse',['CppEllipse',['../classgalsim_1_1_cpp_ellipse.html',1,'galsim']]],
+  ['cppshear',['CppShear',['../classgalsim_1_1_cpp_shear.html',1,'galsim']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]]
 ];

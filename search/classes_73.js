@@ -32,7 +32,6 @@ var searchData=
   ['sersicinfo',['SersicInfo',['../classgalsim_1_1_s_b_sersic_1_1_sersic_info.html',1,'galsim::SBSersic']]],
   ['sersicradialfunction',['SersicRadialFunction',['../classgalsim_1_1_s_b_sersic_1_1_sersic_radial_function.html',1,'galsim::SBSersic']]],
   ['shear',['Shear',['../classgalsim_1_1shear_1_1_shear.html',1,'galsim::shear']]],
-  ['shear',['Shear',['../classgalsim_1_1_shear.html',1,'galsim']]],
   ['sincinterpolant',['SincInterpolant',['../classgalsim_1_1_sinc_interpolant.html',1,'galsim']]],
   ['smstats',['sMStats',['../structs_m_stats.html',1,'']]],
   ['solve',['Solve',['../classgalsim_1_1_solve.html',1,'galsim']]],

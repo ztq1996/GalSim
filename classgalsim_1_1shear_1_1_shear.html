@@ -106,7 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a037b18bb46426158e610257a588ab49b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a037b18bb46426158e610257a588ab49b">__init__</a></td></tr>
 <tr class="memitem:abcb32c9c0d934e4a922cdfd6480fc778"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#abcb32c9c0d934e4a922cdfd6480fc778">setE1E2</a></td></tr>
-<tr class="memdesc:abcb32c9c0d934e4a922cdfd6480fc778"><td class="mdescLeft">&#160;</td><td class="mdescRight">propagate through all the methods from C++ define all the methods for setting shear values  <a href="#abcb32c9c0d934e4a922cdfd6480fc778"></a><br/></td></tr>
 <tr class="memitem:af27ce5bace356e95514ea49038feb42c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#af27ce5bace356e95514ea49038feb42c">setEBeta</a></td></tr>
 <tr class="memitem:a5b777b3e69d9853d06e8e1f1ce669510"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a5b777b3e69d9853d06e8e1f1ce669510">setEta1Eta2</a></td></tr>
 <tr class="memitem:ac3bac7b778db53c1b62dada6eeb6901e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#ac3bac7b778db53c1b62dada6eeb6901e">setEtaBeta</a></td></tr>
@@ -152,25 +151,25 @@ Private Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class to represent shears in a variety of ways. </p>
-<p>The python <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> class can be initialized in a variety of ways to represent shape distortions. All arguments must be named. Given semi-major and semi-minor axes a and b, we can define multiple shape measurements:</p>
+<p>The python <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> class (galsim.Shear) can be initialized in a variety of ways to represent shape distortions. All arguments must be named. Given semi-major and semi-minor axes a and b, we can define multiple shape measurements:</p>
 <p>reduced shear |g| = (a - b)/(a + b) distortion |e| = (a^2 - b^2)/(a^2 + b^2) conformal shear eta, with a/b = exp(eta) minor-to-major axis ratio q = b/a</p>
 <p>These can be thought of as a magnitude and a real-space position angle beta, or as two components e.g., g1 and g2, with</p>
 <p>g1 = |g| cos(2*beta) g2 = |g| sin(2*beta)</p>
 <p>Note: beta is <em>not</em> the phase of a complex valued shear. Rather, the complex shear is g1 + i g2 = g exp(2 i beta). Likewise for eta or e. Beta is twice the phase of the complex value.</p>
 <p>The following are all examples of valid calls to initialize a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> object: </p>
-<div class="fragment"><div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>() <span class="comment"># empty constructor sets ellipticity/shear to zero</span></div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(g1=0.05, g2=0.05)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(g1=0.05) <span class="comment"># assumes g2=0</span></div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(e1=0.05, e2=0.05)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(e2=0.05) <span class="comment"># assumes e1=0</span></div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(eta1=0.07, eta2=-0.1)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(eta=0.05, beta=45.0*galsim.degrees)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(g=0.05, beta=0.25*numpy.pi*galsim.radians)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(e=0.3, beta=30.0*galsim.degrees)</div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(q=0.5, beta=0.0*galsim.radians)</div>
+<div class="fragment"><div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>() <span class="comment"># empty constructor sets ellipticity/shear to zero</span></div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(g1=0.05, g2=0.05)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(g1=0.05) <span class="comment"># assumes g2=0</span></div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(e1=0.05, e2=0.05)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(e2=0.05) <span class="comment"># assumes e1=0</span></div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(eta1=0.07, eta2=-0.1)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(eta=0.05, beta=45.0*galsim.degrees)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(g=0.05, beta=0.25*numpy.pi*galsim.radians)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(e=0.3, beta=30.0*galsim.degrees)</div>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(q=0.5, beta=0.0*galsim.radians)</div>
 <div class="line"> <span class="comment"># can explicitly construct Angle instance, but this is not necessary:</span></div>
-<div class="line"> s = <a class="code" href="classgalsim_1_1_shear.html" title="A base class representing shears.">galsim.Shear</a>(e=0.3, beta=<a class="code" href="classgalsim_1_1_angle.html">galsim.Angle</a>(30.0*galsim.degrees)) </div>
-</div><!-- fragment --><p>There can be no mixing and matching, e.g., specifying g1 and e2. It is permissible to only specify one of two components, with the other assumed to be zero. If a magnitude such as e, g, eta, or q is specified, then beta is also required to be specified. It is possible to initialize a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> with zero reduced shear by specifying no args or kwargs, i.e. galsim.Shear(). </p>
+<div class="line"> s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(e=0.3, beta=<a class="code" href="classgalsim_1_1_angle.html">galsim.Angle</a>(30.0*galsim.degrees)) </div>
+</div><!-- fragment --><p>There can be no mixing and matching, e.g., specifying g1 and e2. It is permissible to only specify one of two components, with the other assumed to be zero. If a magnitude such as e, g, eta, or q is specified, then beta is also required to be specified. It is possible to initialize a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> with zero reduced shear by specifying no args or kwargs, i.e. galsim.Shear(). The galsim.Shear contains a C++ <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a> object, and operations on <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> rely on wrapped methods of the <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a>. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a037b18bb46426158e610257a588ab49b"></a>
 <div class="memitem">
@@ -698,8 +697,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>propagate through all the methods from C++ define all the methods for setting shear values </p>
 
 </div>
 </div>

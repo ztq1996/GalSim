@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;TMV.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_std_8h.html">Std.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_shear_8h.html">Shear.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cpp_shear_8h.html">CppShear.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>galsim {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
@@ -594,15 +594,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="comment">// if want to describe the same flux on a transformed COORD system.</span></div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="comment">// Shear:</span></div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a>(</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        Shear eta, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn, <span class="keywordtype">bool</span> coordShift=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a>(</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        CppShear eta, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn, <span class="keywordtype">bool</span> coordShift=<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="comment">// Dilation:</span></div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a>(</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a>(</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordtype">double</span> mu, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn, <span class="keywordtype">bool</span> coordShift=<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="comment">// Translation:</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a>(</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a>(</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        Position&lt;double&gt; x0, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn, <span class="keywordtype">bool</span> coordShift=<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="comment">// Rotation:</span></div>
@@ -611,12 +611,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="comment">// Combination of above 3 (specify intermediate precision if </span></div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="comment">//     the default of max(out,in) is not wanted):</span></div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a>(</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keyword">const</span> Ellipse&amp; e, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn,</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a>(</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keyword">const</span> CppEllipse&amp; e, <span class="keywordtype">int</span> orderOut, <span class="keywordtype">int</span> orderIn,</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordtype">bool</span> coordShift=<span class="keyword">false</span>, <span class="keywordtype">int</span> orderIntermediate=-1);</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="comment">// Convolution with PSF:</span></div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#a9534f05c67d55fac1d26ced56c1f550c">MakeLTransform</a>(</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    LTransform <a class="code" href="namespacegalsim.html#aee4ea760792359b7af228b1937491eda">MakeLTransform</a>(</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="keyword">const</span> LVector <a class="code" href="namespacegalsim_1_1optics.html#a96e39510406dde5b33771b59ce5cf984" title="Return numpy array containing circular (default) or square pupil PSF with low-order aberrations...">psf</a>, <span class="keyword">const</span> <span class="keywordtype">double</span> D,</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> orderOut, <span class="keyword">const</span> <span class="keywordtype">int</span> orderIn, <span class="keyword">const</span> <span class="keywordtype">int</span> orderStar);</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['s',['s',['../classgalsim_1_1_ellipse.html#affd7cf939357a01940b0041e8534fb71',1,'galsim::Ellipse']]],
+  ['s',['s',['../classgalsim_1_1_cpp_ellipse.html#abd700e31641ab91392a290074a2c8e08',1,'galsim::CppEllipse']]],
   ['sbprofile',['SBProfile',['../classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b',1,'galsim::base::GSObject']]],
   ['scale',['scale',['../classgalsim_1_1_legendre.html#a096600136c57ba539d967371ab8d4c0d',1,'galsim::Legendre']]],
   ['second',['SECOND',['../_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f',1,'AstronomicalConstants.h']]],

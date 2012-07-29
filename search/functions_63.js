@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['calcmatrix',['calcMatrix',['../classgalsim_1_1_shear.html#a7bd16cd1ea577d1f77dc827f8c677234',1,'galsim::Shear']]],
+  ['calcmatrix',['calcMatrix',['../classgalsim_1_1_cpp_shear.html#a5b8bc95601b63dd4fd7a6374f3f871f0',1,'galsim::CppShear']]],
   ['ccdnoise',['CCDNoise',['../classgalsim_1_1_c_c_d_noise.html#a8bf048f95a301c3f3d26273e4c1daab5',1,'galsim::CCDNoise::CCDNoise(double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#ac0afddc172b622984d66fa32ba4b6624',1,'galsim::CCDNoise::CCDNoise(long lseed, double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#acced172cdc50df01dba3a1e845ccca95',1,'galsim::CCDNoise::CCDNoise(const BaseDeviate &amp;dev, double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#aeb37dd84d317dffc4a1f9a78b6cbedf9',1,'galsim::CCDNoise::CCDNoise(const CCDNoise &amp;rhs)']]],
   ['ceilinterpolate',['ceilInterpolate',['../classgalsim_1_1_table.html#ae96fc469b2463ade92bac6b3c7e2fd57',1,'galsim::Table']]],
   ['center',['center',['../classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d',1,'galsim::Bounds']]],
@@ -45,6 +45,8 @@ var searchData=
   ['copy',['copy',['../classgalsim_1_1_base_image.html#a554165e1189e0ed951727a926f29b5af',1,'galsim::BaseImage::copy()'],['../classgalsim_1_1base_1_1_g_s_object.html#aa0b398d4b0fca70211e4a73f81ea7e1a',1,'galsim.base.GSObject.copy()']]],
   ['copyfrom',['copyFrom',['../classgalsim_1_1_image_view.html#a9b96b29ad3308bc6e68a6f36c834af2f',1,'galsim::ImageView::copyFrom()'],['../classgalsim_1_1_image.html#a763a5e368399d89f83bb23c68cf84904',1,'galsim::Image::copyFrom()']]],
   ['copylist',['copyList',['../classgalsim_1_1_pset.html#af413964c5000317ec260eb346e61510a',1,'galsim::Pset']]],
+  ['cppellipse',['CppEllipse',['../classgalsim_1_1_cpp_ellipse.html#aa04b5eb4f4a130c9324895ed4d40d619',1,'galsim::CppEllipse::CppEllipse(const CppShear &amp;_s=CppShear(), double _mu=0., const Position&lt; double &gt; _p=Position&lt; double &gt;())'],['../classgalsim_1_1_cpp_ellipse.html#ad18dc9bfbea45b3660bf3489af089d6c',1,'galsim::CppEllipse::CppEllipse(const CppEllipse &amp;rhs)']]],
+  ['cppshear',['CppShear',['../classgalsim_1_1_cpp_shear.html#a1f360ece4a7ef7384e50954198aa22a3',1,'galsim::CppShear::CppShear(double g1=0., double g2=0.)'],['../classgalsim_1_1_cpp_shear.html#a661422aaaf1af1876b4d6f7b1d4d1c3c',1,'galsim::CppShear::CppShear(const CppShear &amp;rhs)']]],
   ['createdilated',['createDilated',['../classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283',1,'galsim::base::GSObject']]],
   ['createmagnified',['createMagnified',['../classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d',1,'galsim::base::GSObject']]],
   ['createrotated',['createRotated',['../classgalsim_1_1base_1_1_g_s_object.html#a6c29613e57067e6ba5ec7297e746cdc4',1,'galsim::base::GSObject']]],
