@@ -293,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00261"></a><span class="lineno"><a class="code" href="classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d">  261</a></span>&#160;    <a class="code" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position&lt;T&gt;</a> <a class="code" href="classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d">Bounds&lt;T&gt;::center</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position&lt;T&gt;</a>((xmin + xmax)/2.,(ymin + ymax)/2.); }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position&lt;T&gt;</a>((xmin + xmax)/T(2),(ymin + ymax)/T(2)); }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// &amp; operator finds intersection, if any</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
@@ -337,8 +337,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        T dx = xmax-xmin;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        T dy = ymax-ymin;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        dx = dx*0.5*(m-1); </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        dy = dy*0.5*(m-1);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        dx = T(dx*0.5*(m-1.)); </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        dy = T(dy*0.5*(m-1.));</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        xmax += dx;  xmin -= dx;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        ymax += dy;  ymin -= dy;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
