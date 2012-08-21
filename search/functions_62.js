@@ -25,5 +25,6 @@ var searchData=
   ['bracketlower',['bracketLower',['../classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf',1,'galsim::Solve']]],
   ['bracketupper',['bracketUpper',['../classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e',1,'galsim::Solve']]],
   ['buildgsobject',['BuildGSObject',['../namespacegalsim_1_1frontend.html#a978f45a04e4a4ddfef2585fdb3a98583',1,'galsim::frontend']]],
-  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aab9bda67db2c74d6d15a359fc54cadee',1,'galsim::ProbabilityTree']]]
+  ['buildshortcut',['buildShortcut',['../classgalsim_1_1_probability_tree.html#aa874725742f71ce9ce82c2ddaf44c472',1,'galsim::ProbabilityTree']]],
+  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aea01c28fb02a5ac7671aefb1dbbe687e',1,'galsim::ProbabilityTree']]]
 ];

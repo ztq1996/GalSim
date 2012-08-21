@@ -2,8 +2,9 @@ var searchData=
 [
   ['add',['Add',['../classgalsim_1_1base_1_1_add.html',1,'galsim::base']]],
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
-  ['airyinfo',['AiryInfo',['../classgalsim_1_1_s_b_airy_1_1_airy_info.html',1,'galsim::SBAiry']]],
-  ['airyradialfunction',['AiryRadialFunction',['../classgalsim_1_1_s_b_airy_1_1_airy_radial_function.html',1,'galsim::SBAiry']]],
+  ['airyinfo',['AiryInfo',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html',1,'galsim::SBAiry::SBAiryImpl']]],
+  ['airyinfonoobs',['AiryInfoNoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs.html',1,'galsim::SBAiry::SBAiryImpl']]],
+  ['airyinfoobs',['AiryInfoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs.html',1,'galsim::SBAiry::SBAiryImpl']]],
   ['angle',['Angle',['../classgalsim_1_1_angle.html',1,'galsim']]],
   ['angleunit',['AngleUnit',['../classgalsim_1_1_angle_unit.html',1,'galsim']]],
   ['assignabletoimage',['AssignableToImage',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],

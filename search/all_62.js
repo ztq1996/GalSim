@@ -36,8 +36,8 @@ var searchData=
   ['binomialgenerator',['BinomialGenerator',['../classgalsim_1_1_binomial_deviate.html#a4e0dbd5c8c41bee5adc2eaae2187ae17',1,'galsim::BinomialDeviate']]],
   ['bisect',['bisect',['../structgalsim_1_1integ_1_1_int_region.html#a1790607c9bc4a948718b837b3bc8ce2f',1,'galsim::integ::IntRegion::bisect()'],['../classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2',1,'galsim::Solve::bisect()'],['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e',1,'galsim::Bisect()']]],
   ['boltzmann',['Boltzmann',['../_astronomical_constants_8h.html#a125b41175d0944993a5f264899eee96b',1,'AstronomicalConstants.h']]],
-  ['bounds',['Bounds',['../classgalsim_1_1_bounds.html#a613daa4693589f3a127850dc41999755',1,'galsim::Bounds::Bounds(const T x1, const T x2, const T y1, const T y2)'],['../classgalsim_1_1_bounds.html#a2abf14b466a899ea8fd0bee23ead2d6a',1,'galsim::Bounds::Bounds(const Position&lt; T &gt; &amp;pos)'],['../classgalsim_1_1_bounds.html#a4f3e34f5c5a7ddc4efded9c5db5ea739',1,'galsim::Bounds::Bounds(const Position&lt; T &gt; &amp;pos1, const Position&lt; T &gt; &amp;pos2)'],['../classgalsim_1_1_bounds.html#ab4dc60f2d657147b2d1dcf201a2453b4',1,'galsim::Bounds::Bounds()']]],
   ['bounds',['Bounds',['../classgalsim_1_1_bounds.html',1,'galsim']]],
+  ['bounds',['Bounds',['../classgalsim_1_1_bounds.html#a613daa4693589f3a127850dc41999755',1,'galsim::Bounds::Bounds(const T x1, const T x2, const T y1, const T y2)'],['../classgalsim_1_1_bounds.html#a2abf14b466a899ea8fd0bee23ead2d6a',1,'galsim::Bounds::Bounds(const Position&lt; T &gt; &amp;pos)'],['../classgalsim_1_1_bounds.html#a4f3e34f5c5a7ddc4efded9c5db5ea739',1,'galsim::Bounds::Bounds(const Position&lt; T &gt; &amp;pos1, const Position&lt; T &gt; &amp;pos2)'],['../classgalsim_1_1_bounds.html#ab4dc60f2d657147b2d1dcf201a2453b4',1,'galsim::Bounds::Bounds()']]],
   ['bounds_2eh',['Bounds.h',['../_bounds_8h.html',1,'']]],
   ['bounds_2epy',['bounds.py',['../bounds_8py.html',1,'']]],
   ['bounds_3c_20int_20_3e',['Bounds&lt; int &gt;',['../classgalsim_1_1_bounds.html',1,'galsim']]],
@@ -51,5 +51,6 @@ var searchData=
   ['breakonrealloc',['breakOnRealloc',['../structtag__au.html#aef7a5409d639bf0523ba65bbb684a5e6',1,'tag_au']]],
   ['brent',['Brent',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3',1,'galsim']]],
   ['buildgsobject',['BuildGSObject',['../namespacegalsim_1_1frontend.html#a978f45a04e4a4ddfef2585fdb3a98583',1,'galsim::frontend']]],
-  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aab9bda67db2c74d6d15a359fc54cadee',1,'galsim::ProbabilityTree']]]
+  ['buildshortcut',['buildShortcut',['../classgalsim_1_1_probability_tree.html#aa874725742f71ce9ce82c2ddaf44c472',1,'galsim::ProbabilityTree']]],
+  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aea01c28fb02a5ac7671aefb1dbbe687e',1,'galsim::ProbabilityTree']]]
 ];

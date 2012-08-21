@@ -6,7 +6,6 @@ var searchData=
   ['lanczos',['Lanczos',['../classgalsim_1_1_lanczos.html',1,'galsim']]],
   ['legendre',['Legendre',['../classgalsim_1_1_legendre.html',1,'galsim']]],
   ['linear',['Linear',['../classgalsim_1_1_linear.html',1,'galsim']]],
-  ['list',['list',['../classstd_1_1list.html',1,'']]],
   ['ltransform',['LTransform',['../classgalsim_1_1_l_transform.html',1,'galsim']]],
   ['lvector',['LVector',['../classgalsim_1_1_l_vector.html',1,'galsim']]],
   ['lvectorreference',['LVectorReference',['../classgalsim_1_1_l_vector_reference.html',1,'galsim']]]

@@ -12,7 +12,7 @@ var searchData=
   ['ngkplevels',['NGKPLEVELS',['../namespacegalsim_1_1integ.html#ac4fa002a6c83cf81bd44d67502d4b22d',1,'galsim::integ']]],
   ['ninitial',['Ninitial',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#ae669f64fb61192bcacc52d471baee460',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
   ['nk',['Nk',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#af429e18ecc16d09d0157312aaf892038',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
-  ['nmap',['nmap',['../classgalsim_1_1_s_b_airy.html#a862ea3bbb32279f75721721e04b89342',1,'galsim::SBAiry::nmap()'],['../classgalsim_1_1_s_b_sersic.html#a7990d50663993280d89e280bc6e9be99',1,'galsim::SBSersic::nmap()']]],
+  ['nmap',['nmap',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#ad9be98dbaa6ae9d32cf5aa81b7ebe8ba',1,'galsim::SBAiry::SBAiryImpl::nmap()'],['../classgalsim_1_1_s_b_sersic.html#a7990d50663993280d89e280bc6e9be99',1,'galsim::SBSersic::nmap()']]],
   ['nocaseequal',['nocaseEqual',['../namespacegalsim.html#a308f6ed4e06c8d6c18f5d729f89bdd50',1,'galsim::nocaseEqual(char c1, char c2)'],['../namespacegalsim.html#ab66b9fbabe45a37292a4d673a1f7b4fd',1,'galsim::nocaseEqual(const std::string &amp;s1, const std::string &amp;s2)']]],
   ['noise_2epy',['noise.py',['../noise_8py.html',1,'']]],
   ['normal',['normal',['../classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2',1,'galsim::GaussianDeviate']]],

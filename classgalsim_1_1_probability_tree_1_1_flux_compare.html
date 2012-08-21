@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GalSim: galsim::ProbabilityTree&lt; T &gt;::FluxCompare Class Reference</title>
+<title>GalSim: galsim::ProbabilityTree&lt; FluxData &gt;::FluxCompare Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">galsim::ProbabilityTree&lt; T &gt;::FluxCompare Class Reference</div>  </div>
+<div class="title">galsim::ProbabilityTree&lt; FluxData &gt;::FluxCompare Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -102,31 +102,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af546d72f56e2de7ec30f1236331928bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree_1_1_flux_compare.html#af546d72f56e2de7ec30f1236331928bc">operator()</a> (const T &amp;lhs, const T &amp;rhs) const </td></tr>
+<tr class="memitem:a18e42f6570c10b7711b8269b5f8662ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree_1_1_flux_compare.html#a18e42f6570c10b7711b8269b5f8662ba">operator()</a> (const FluxData &amp;lhs, const FluxData &amp;rhs) const </td></tr>
+<tr class="memitem:a697b5de155e427cfa4693188ee471fd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree_1_1_flux_compare.html#a697b5de155e427cfa4693188ee471fd6">operator()</a> (const FluxData &amp;lhs, double val) const </td></tr>
+<tr class="memitem:a4df7cf0fecaa0792b6ffc1eb3fe5a17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_probability_tree_1_1_flux_compare.html#a4df7cf0fecaa0792b6ffc1eb3fe5a17b">operator()</a> (double val, const FluxData &amp;lhs) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T&gt;<br/>
-class galsim::ProbabilityTree&lt; T &gt;::FluxCompare</h3>
+<div class="textblock"><h3>template&lt;class FluxData&gt;<br/>
+class galsim::ProbabilityTree&lt; FluxData &gt;::FluxCompare</h3>
 
 <p>Comparison class to sort inputs in <em>descending</em> flux order. </p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af546d72f56e2de7ec30f1236331928bc"></a>
+<a class="anchor" id="a18e42f6570c10b7711b8269b5f8662ba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class FluxData&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classgalsim_1_1_probability_tree.html">galsim::ProbabilityTree</a>&lt; T &gt;::FluxCompare::operator() </td>
+          <td class="memname">bool <a class="el" href="classgalsim_1_1_probability_tree.html">galsim::ProbabilityTree</a>&lt; FluxData &gt;::FluxCompare::operator() </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">const FluxData &amp;&#160;</td>
           <td class="paramname"><em>lhs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">const FluxData &amp;&#160;</td>
           <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a697b5de155e427cfa4693188ee471fd6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FluxData&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgalsim_1_1_probability_tree.html">galsim::ProbabilityTree</a>&lt; FluxData &gt;::FluxCompare::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const FluxData &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4df7cf0fecaa0792b6ffc1eb3fe5a17b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FluxData&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgalsim_1_1_probability_tree.html">galsim::ProbabilityTree</a>&lt; FluxData &gt;::FluxCompare::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FluxData &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

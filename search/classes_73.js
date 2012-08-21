@@ -18,6 +18,8 @@ var searchData=
   ['sbgaussianimpl',['SBGaussianImpl',['../classgalsim_1_1_s_b_gaussian_1_1_s_b_gaussian_impl.html',1,'galsim::SBGaussian']]],
   ['sbinterpolatedimage',['SBInterpolatedImage',['../classgalsim_1_1_s_b_interpolated_image.html',1,'galsim']]],
   ['sbinterpolatedimageimpl',['SBInterpolatedImageImpl',['../classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html',1,'galsim::SBInterpolatedImage']]],
+  ['sbkolmogorov',['SBKolmogorov',['../classgalsim_1_1_s_b_kolmogorov.html',1,'galsim']]],
+  ['sbkolmogorovimpl',['SBKolmogorovImpl',['../classgalsim_1_1_s_b_kolmogorov_1_1_s_b_kolmogorov_impl.html',1,'galsim::SBKolmogorov']]],
   ['sblaguerre',['SBLaguerre',['../classgalsim_1_1_s_b_laguerre.html',1,'galsim']]],
   ['sblaguerreimpl',['SBLaguerreImpl',['../classgalsim_1_1_s_b_laguerre_1_1_s_b_laguerre_impl.html',1,'galsim::SBLaguerre']]],
   ['sbmoffat',['SBMoffat',['../classgalsim_1_1_s_b_moffat.html',1,'galsim']]],

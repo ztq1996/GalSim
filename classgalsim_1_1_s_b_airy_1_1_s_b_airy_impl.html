@@ -89,9 +89,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim::SBAiry::SBAiryImpl Class Reference</div>  </div>
 </div><!--header-->
@@ -110,6 +112,15 @@ Inheritance diagram for galsim::SBAiry::SBAiryImpl:</div>
 
 <p><a href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html">AiryInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A private class that caches the photon shooting objects for a given obscuration value, so they don't have to be set up again each time.  <a href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs.html">AiryInfoNoObs</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs.html">AiryInfoObs</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_info_barn.html">InfoBarn</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map to hold one copy of the <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html" title="A private class that caches the photon shooting objects for a given obscuration value, so they don&#39;t have to be set up again each time.">AiryInfo</a> for each obscuration value ever used during the program run. Make one static copy of this map. <em>Be careful of this when multithreading:</em> Should build one <code><a class="el" href="classgalsim_1_1_s_b_airy.html" title="Surface Brightness Profile for the Airy disk (perfect diffraction-limited PSF for a circular aperture...">SBAiry</a></code> with each <code>obscuration</code> value before dispatching multiple threads.  <a href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_info_barn.html#details">More...</a><br/></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f0bd555e73d9edc483dd5a8f9833640"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#a6f0bd555e73d9edc483dd5a8f9833640">SBAiryImpl</a> (double lam_over_D, double obs, double flux)</td></tr>
@@ -166,7 +177,12 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a7f31d4cd9824bfb99841a4207b64d36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculated value: flux * D^2.  <a href="#a7f31d4cd9824bfb99841a4207b64d36a"></a><br/></td></tr>
 <tr class="memitem:ac9f54096de6c86c20c2322eaf447b9c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#ac9f54096de6c86c20c2322eaf447b9c0">_knorm</a></td></tr>
 <tr class="memdesc:ac9f54096de6c86c20c2322eaf447b9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculated value: flux / (pi (1-obs^2))  <a href="#ac9f54096de6c86c20c2322eaf447b9c0"></a><br/></td></tr>
-<tr class="memitem:afcee3fa618422cda544f70d35ad4efc3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_info.html">AiryInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#afcee3fa618422cda544f70d35ad4efc3">_info</a></td></tr>
+<tr class="memitem:afcee3fa618422cda544f70d35ad4efc3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html">AiryInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#afcee3fa618422cda544f70d35ad4efc3">_info</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ad9be98dbaa6ae9d32cf5aa81b7ebe8ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_info_barn.html">InfoBarn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#ad9be98dbaa6ae9d32cf5aa81b7ebe8ba">nmap</a></td></tr>
+<tr class="memdesc:ad9be98dbaa6ae9d32cf5aa81b7ebe8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">One static map of all <code><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html" title="A private class that caches the photon shooting objects for a given obscuration value, so they don&#39;t have to be set up again each time.">AiryInfo</a></code> structures for whole program.  <a href="#ad9be98dbaa6ae9d32cf5aa81b7ebe8ba"></a><br/></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6f0bd555e73d9edc483dd5a8f9833640"></a>
@@ -631,7 +647,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a0d4d508caf1c79ddf05d7a9d162f32c5">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a3d22cc09bfcd1739c62d7ffb0df6eae3">galsim::SBAdd::SBAddImpl</a>, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a114c3b6df25a9639ded3686f94641058">galsim::SBBox::SBBoxImpl</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a9accbc3039f89d485dd6afd0d81711eb">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a3e5decd1cf463f31376998907e73a6bc">galsim::SBTransform::SBTransformImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#a0d4d508caf1c79ddf05d7a9d162f32c5">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a9accbc3039f89d485dd6afd0d81711eb">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a3d22cc09bfcd1739c62d7ffb0df6eae3">galsim::SBAdd::SBAddImpl</a>, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a114c3b6df25a9639ded3686f94641058">galsim::SBBox::SBBoxImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a3e5decd1cf463f31376998907e73a6bc">galsim::SBTransform::SBTransformImpl</a>.</p>
 
 </div>
 </div>
@@ -673,7 +689,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab3ef171271e71229c164a34c5d9f3995">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2a553f72bcab92232595f23f5deb81e7">galsim::SBAdd::SBAddImpl</a>, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9ad12c72c3783c889713d81266737247">galsim::SBBox::SBBoxImpl</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a6e07090d85668d58c19b677f7c9b5d6a">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a0597e3134a1f1c5df9d7fc210fbfa3e5">galsim::SBTransform::SBTransformImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_s_b_convolve_1_1_s_b_convolve_impl.html#ab3ef171271e71229c164a34c5d9f3995">galsim::SBConvolve::SBConvolveImpl</a>, <a class="el" href="classgalsim_1_1_s_b_add_1_1_s_b_add_impl.html#a2a553f72bcab92232595f23f5deb81e7">galsim::SBAdd::SBAddImpl</a>, <a class="el" href="classgalsim_1_1_s_b_interpolated_image_1_1_s_b_interpolated_image_impl.html#a6e07090d85668d58c19b677f7c9b5d6a">galsim::SBInterpolatedImage::SBInterpolatedImageImpl</a>, <a class="el" href="classgalsim_1_1_s_b_box_1_1_s_b_box_impl.html#a9ad12c72c3783c889713d81266737247">galsim::SBBox::SBBoxImpl</a>, and <a class="el" href="classgalsim_1_1_s_b_transform_1_1_s_b_transform_impl.html#a0597e3134a1f1c5df9d7fc210fbfa3e5">galsim::SBTransform::SBTransformImpl</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1087,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgalsim_1_1_s_b_airy_1_1_airy_info.html">AiryInfo</a>* galsim::SBAiry::SBAiryImpl::_info</td>
+          <td class="memname">const <a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html">AiryInfo</a>* galsim::SBAiry::SBAiryImpl::_info</td>
         </tr>
       </table>
   </td>
@@ -1213,6 +1229,28 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculated value: flux * D^2. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9be98dbaa6ae9d32cf5aa81b7ebe8ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_info_barn.html">InfoBarn</a> galsim::SBAiry::SBAiryImpl::nmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>One static map of all <code><a class="el" href="classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html" title="A private class that caches the photon shooting objects for a given obscuration value, so they don&#39;t have to be set up again each time.">AiryInfo</a></code> structures for whole program. </p>
 
 </div>
 </div>

@@ -135,32 +135,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define dbg if(dbgout &amp;&amp; verbose_level &gt;= 1) (*dbgout)</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xdbg if(dbgout &amp;&amp; verbose_level &gt;= 2) (*dbgout)</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xxdbg if(dbgout &amp;&amp; verbose_level &gt;= 3) (*dbgout)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="_std_8h.html#a5bac03f035357aca807646cff28cdc4e">   47</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define dbg if(false) (std::cerr)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="_std_8h.html#a4c013549335b468e5a75bbce3c6d012d">   48</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xdbg if(false) (std::cerr)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="_std_8h.html#aa5089049dbaae793a1c0c29aa47149b8">   49</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xxdbg if(false) (std::cerr)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// A nice way to throw exceptions that take a string argument and have that string</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// include double or int information as well.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// e.g. FormatAndThrow&lt;std::runtime_error&gt;() &lt;&lt; &quot;x = &quot;&lt;&lt;x&lt;&lt;&quot; is invalid.&quot;;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> E&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="class_format_and_throw.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_format_and_throw.html">FormatAndThrow</a> </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#ade4d5bf1861974d1fe5a144725754da8">   59</a></span>&#160;    <a class="code" href="class_format_and_throw.html#ade4d5bf1861974d1fe5a144725754da8">FormatAndThrow</a>() {}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a59f3273d4e233e4af5b0315458771f8d">   62</a></span>&#160;    <a class="code" href="class_format_and_throw.html">FormatAndThrow</a>&amp; <a class="code" href="class_format_and_throw.html#a59f3273d4e233e4af5b0315458771f8d">operator&lt;&lt;</a>(<span class="keyword">const</span> T&amp; t) </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    { <a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a> &lt;&lt; t; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a462628c2fd0a79befdd4482f3b2cc188">   65</a></span>&#160;    <a class="code" href="class_format_and_throw.html#a462628c2fd0a79befdd4482f3b2cc188">~FormatAndThrow</a>() { <span class="keywordflow">throw</span> E(<a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a>.str()); }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">   67</a></span>&#160;    std::ostringstream <a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xassert(x) assert(x)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="_std_8h.html#a5bac03f035357aca807646cff28cdc4e">   48</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define dbg if(false) (std::cerr)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="_std_8h.html#a4c013549335b468e5a75bbce3c6d012d">   49</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xdbg if(false) (std::cerr)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="_std_8h.html#aa5089049dbaae793a1c0c29aa47149b8">   50</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xxdbg if(false) (std::cerr)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="_std_8h.html#ade112b5a7deb92f89f434f248714d768">   51</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define xassert(x)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// A nice way to throw exceptions that take a string argument and have that string</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// include double or int information as well.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// e.g. FormatAndThrow&lt;std::runtime_error&gt;() &lt;&lt; &quot;x = &quot;&lt;&lt;x&lt;&lt;&quot; is invalid.&quot;;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> E&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="class_format_and_throw.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_format_and_throw.html">FormatAndThrow</a> </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#ade4d5bf1861974d1fe5a144725754da8">   61</a></span>&#160;    <a class="code" href="class_format_and_throw.html#ade4d5bf1861974d1fe5a144725754da8">FormatAndThrow</a>() {}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a59f3273d4e233e4af5b0315458771f8d">   64</a></span>&#160;    <a class="code" href="class_format_and_throw.html">FormatAndThrow</a>&amp; <a class="code" href="class_format_and_throw.html#a59f3273d4e233e4af5b0315458771f8d">operator&lt;&lt;</a>(<span class="keyword">const</span> T&amp; t) </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { <a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a> &lt;&lt; t; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a462628c2fd0a79befdd4482f3b2cc188">   67</a></span>&#160;    <a class="code" href="class_format_and_throw.html#a462628c2fd0a79befdd4482f3b2cc188">~FormatAndThrow</a>() { <span class="keywordflow">throw</span> E(<a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a>.str()); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">   69</a></span>&#160;    std::ostringstream <a class="code" href="class_format_and_throw.html#a427d5b37ea355182d892cd593641e539">oss</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

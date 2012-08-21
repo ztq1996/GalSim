@@ -13,8 +13,5 @@ var searchData=
   ['resolution_5ffactor',['resolution_factor',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#ab4a1ac09c75c69ce7d08b31c192c8d89',1,'galsim::hsm::HSMShapeData']]],
   ['responsivity',['responsivity',['../structgalsim_1_1hsm_1_1_object_data.html#a79773ab653f07a9a3510f7d19b9531fd',1,'galsim::hsm::ObjectData']]],
   ['rhs',['rhs',['../classgalsim_1_1_pset_keyword_test.html#a39e087c012a61a0887cfb72914c4bb25',1,'galsim::PsetKeywordTest']]],
-  ['right',['right',['../classgalsim_1_1_probability_tree_1_1_element.html#abadfcc66a0a6800951f1128976d93c48',1,'galsim::ProbabilityTree::Element']]],
-  ['rightcumulativeflux',['rightCumulativeFlux',['../classgalsim_1_1_probability_tree_1_1_element.html#a644c4db1543351507410ffb2dab78bc2',1,'galsim::ProbabilityTree::Element']]],
-  ['root',['root',['../classgalsim_1_1_probability_tree.html#a14b9d222f3a71250be32f2a463e68558',1,'galsim::ProbabilityTree']]],
   ['running',['running',['../classgalsim_1_1_stopwatch.html#a9e298b5e698e32f67c6dd103804ea515',1,'galsim::Stopwatch']]]
 ];

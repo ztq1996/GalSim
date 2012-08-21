@@ -16,6 +16,8 @@ var searchData=
   ['sbgaussianimpl_2eh',['SBGaussianImpl.h',['../_s_b_gaussian_impl_8h.html',1,'']]],
   ['sbinterpolatedimage_2eh',['SBInterpolatedImage.h',['../_s_b_interpolated_image_8h.html',1,'']]],
   ['sbinterpolatedimageimpl_2eh',['SBInterpolatedImageImpl.h',['../_s_b_interpolated_image_impl_8h.html',1,'']]],
+  ['sbkolmogorov_2eh',['SBKolmogorov.h',['../_s_b_kolmogorov_8h.html',1,'']]],
+  ['sbkolmogorovimpl_2eh',['SBKolmogorovImpl.h',['../_s_b_kolmogorov_impl_8h.html',1,'']]],
   ['sblaguerre_2eh',['SBLaguerre.h',['../_s_b_laguerre_8h.html',1,'']]],
   ['sblaguerreimpl_2eh',['SBLaguerreImpl.h',['../_s_b_laguerre_impl_8h.html',1,'']]],
   ['sbmoffat_2eh',['SBMoffat.h',['../_s_b_moffat_8h.html',1,'']]],

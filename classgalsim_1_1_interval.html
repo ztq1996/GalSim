@@ -139,10 +139,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5ab0497c7569b48cca14328d86a82a9d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a5ab0497c7569b48cca14328d86a82a9d">_flux</a></td></tr>
 <tr class="memdesc:a5ab0497c7569b48cca14328d86a82a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrated flux in this interval (can be negative)  <a href="#a5ab0497c7569b48cca14328d86a82a9d"></a><br/></td></tr>
 <tr class="memitem:aa62626ab965437bfd3fe0705950d024d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#aa62626ab965437bfd3fe0705950d024d">_useRejectionMethod</a></td></tr>
-<tr class="memitem:adb38b36bd1835cbc56e4df754efbfb8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#adb38b36bd1835cbc56e4df754efbfb8a">_maxAbsDensity</a></td></tr>
-<tr class="memdesc:adb38b36bd1835cbc56e4df754efbfb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum absolute flux density in the interval (assumed to be at an endpoint)  <a href="#adb38b36bd1835cbc56e4df754efbfb8a"></a><br/></td></tr>
-<tr class="memitem:a5f8cbc4d757b4fd31d9df9f3e060b0aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a5f8cbc4d757b4fd31d9df9f3e060b0aa">_meanAbsDensity</a></td></tr>
-<tr class="memdesc:a5f8cbc4d757b4fd31d9df9f3e060b0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean absolute flux density in the interval.  <a href="#a5f8cbc4d757b4fd31d9df9f3e060b0aa"></a><br/></td></tr>
+<tr class="memitem:a1403af71441fa567aa6979cc2dd599eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a1403af71441fa567aa6979cc2dd599eb">_invMaxAbsDensity</a></td></tr>
+<tr class="memitem:a3a055d24c6254eda524b48d9caf19025"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a3a055d24c6254eda524b48d9caf19025">_invMeanAbsDensity</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class used to represent a linear interval or an annulus of probability function. </p>
@@ -452,6 +450,52 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1403af71441fa567aa6979cc2dd599eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Interval::_invMaxAbsDensity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<ol type="1">
+<li>/ (Maximum absolute flux density in the interval (assumed to be at an endpoint)) </li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="a3a055d24c6254eda524b48d9caf19025"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Interval::_invMeanAbsDensity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<ol type="1">
+<li>/ (Mean absolute flux density in the interval) </li>
+</ol>
+
+</div>
+</div>
 <a class="anchor" id="a3c30d481c62fb131fcc141cea62480fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -471,50 +515,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>True if domain is an annulus, otherwise domain is a linear interval. </p>
-
-</div>
-</div>
-<a class="anchor" id="adb38b36bd1835cbc56e4df754efbfb8a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Interval::_maxAbsDensity</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximum absolute flux density in the interval (assumed to be at an endpoint) </p>
-
-</div>
-</div>
-<a class="anchor" id="a5f8cbc4d757b4fd31d9df9f3e060b0aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Interval::_meanAbsDensity</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mean absolute flux density in the interval. </p>
 
 </div>
 </div>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['rad',['rad',['../classgalsim_1_1_angle.html#a86f2fbdcef0f440548769a1e8a164ca9',1,'galsim::Angle']]],
+  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html#a493373443986e49cf1c2bbd67cc4e1cb',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs::RadialFunction']]],
   ['radians',['radians',['../namespacegalsim.html#aed8d3e3dc27c52616a6006600ec00fea',1,'galsim']]],
   ['range',['range',['../classgalsim_1_1_cpp_ellipse.html#ae2f28140afe7404cd637b3cd3aa62d9c',1,'galsim::CppEllipse::range()'],['../classgalsim_1_1ellipse_1_1_ellipse.html#afc2a9e0d8ed08d0c2e69ea9cf2a14672',1,'galsim.ellipse.Ellipse.range()']]],
   ['read',['read',['../classgalsim_1_1_position.html#a0a3973e0bd944085589b2ace7f8d342d',1,'galsim::Position::read()'],['../classgalsim_1_1_bounds.html#a300f0e05a3ef7a645d13140a555f6332',1,'galsim::Bounds::read()'],['../classgalsim_1_1_cpp_shear.html#a0ba143b4b0543c19edc3f119f7c731ee',1,'galsim::CppShear::read()'],['../classgalsim_1_1_cpp_ellipse.html#a1941abb1ed6c50878a63f31cf7d1f543',1,'galsim::CppEllipse::read()'],['../classgalsim_1_1_l_vector.html#aba791aa727e4ae5b13fd0b758295ca71',1,'galsim::LVector::read()'],['../classgalsim_1_1_table.html#a7db7f65785233887584b010c9aa45130',1,'galsim::Table::read()'],['../namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9',1,'galsim.fits.read()']]],
