@@ -129,6 +129,7 @@ var searchData=
   ['optics',['optics',['../namespacegalsim_1_1optics.html',1,'galsim']]],
   ['position',['position',['../namespacegalsim_1_1position.html',1,'galsim']]],
   ['psfcorr',['psfcorr',['../namespacegalsim_1_1psfcorr.html',1,'galsim']]],
+  ['random',['random',['../namespacegalsim_1_1random.html',1,'galsim']]],
   ['real',['real',['../namespacegalsim_1_1real.html',1,'galsim']]],
   ['sbp',['sbp',['../namespacegalsim_1_1sbp.html',1,'galsim']]],
   ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]],
