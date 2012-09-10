@@ -1,8 +1,8 @@
 var searchData=
 [
   ['rad',['rad',['../classgalsim_1_1_angle.html#a86f2fbdcef0f440548769a1e8a164ca9',1,'galsim::Angle']]],
-  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
   ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
+  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
   ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html#a493373443986e49cf1c2bbd67cc4e1cb',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs::RadialFunction']]],
   ['radians',['radians',['../namespacegalsim.html#aed8d3e3dc27c52616a6006600ec00fea',1,'galsim']]],
   ['radiustype',['RadiusType',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792',1,'galsim::SBMoffat']]],
@@ -13,10 +13,9 @@ var searchData=
   ['range',['range',['../classgalsim_1_1ellipse_1_1_ellipse.html#a507c2f0e5fc80e5c8b972688eb849259',1,'galsim.ellipse.Ellipse.range()'],['../classgalsim_1_1_cpp_ellipse.html#ae2f28140afe7404cd637b3cd3aa62d9c',1,'galsim::CppEllipse::range()'],['../classgalsim_1_1ellipse_1_1_ellipse.html#afc2a9e0d8ed08d0c2e69ea9cf2a14672',1,'galsim.ellipse.Ellipse.range()']]],
   ['range_5fdivision_5ffor_5fextrema',['RANGE_DIVISION_FOR_EXTREMA',['../namespacegalsim_1_1odd.html#a721bb3032840e1c1d1ff8fba61e337f2',1,'galsim::odd']]],
   ['read',['read',['../classgalsim_1_1_position.html#a0a3973e0bd944085589b2ace7f8d342d',1,'galsim::Position::read()'],['../classgalsim_1_1_bounds.html#a300f0e05a3ef7a645d13140a555f6332',1,'galsim::Bounds::read()'],['../classgalsim_1_1_cpp_shear.html#a0ba143b4b0543c19edc3f119f7c731ee',1,'galsim::CppShear::read()'],['../classgalsim_1_1_cpp_ellipse.html#a1941abb1ed6c50878a63f31cf7d1f543',1,'galsim::CppEllipse::read()'],['../classgalsim_1_1_l_vector.html#aba791aa727e4ae5b13fd0b758295ca71',1,'galsim::LVector::read()'],['../classgalsim_1_1_table.html#a7db7f65785233887584b010c9aa45130',1,'galsim::Table::read()'],['../namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9',1,'galsim.fits.read()']]],
+  ['read_5fascii',['read_ascii',['../classgalsim_1_1io_1_1_input_catalog.html#aeb07f225f3623e061fce1be64fe45795',1,'galsim::io::InputCatalog']]],
   ['read_5fkeyvalue',['read_keyvalue',['../classgalsim_1_1_pset.html#aa1509b12ee1ea7ee729683256a51b4fb',1,'galsim::Pset']]],
-  ['readasciiinputcat',['ReadAsciiInputCat',['../namespacegalsim_1_1io.html#aa57d8bfcbb259604650e77a5eaebf002',1,'galsim::io']]],
   ['readcube',['readCube',['../namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6',1,'galsim::fits']]],
-  ['readinputcat',['ReadInputCat',['../namespacegalsim_1_1io.html#a99c8d3e2c3f02563e4ea4d4e6aeca213',1,'galsim::io']]],
   ['readmulti',['readMulti',['../namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067',1,'galsim::fits']]],
   ['real_2epy',['real.py',['../real_8py.html',1,'']]],
   ['realgalaxy',['RealGalaxy',['../classgalsim_1_1base_1_1_real_galaxy.html',1,'galsim::base']]],

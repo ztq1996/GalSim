@@ -19,14 +19,13 @@ var searchData=
   ['linear',['Linear',['../classgalsim_1_1_linear.html#a0c11e86f98734054d64ac996802f9fc8',1,'galsim::Linear::Linear()'],['../classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fadc39a6b07eec8e68c03317a30c9d61b9',1,'galsim::Table::linear()']]],
   ['linear',['Linear',['../classgalsim_1_1_linear.html',1,'galsim']]],
   ['linearinterpolate',['linearInterpolate',['../classgalsim_1_1_table.html#a8c236169db70b5b4e01d25667d0bdb1c',1,'galsim::Table']]],
-  ['load',['load',['../namespacegalsim_1_1config.html#acaefb59381f23cbb1bbfba7b13a3ab92',1,'galsim::config']]],
   ['loaded_5ffiles',['loaded_files',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad624e6e1516061819c2f73445373a056',1,'galsim::real::RealGalaxyCatalog']]],
   ['lookup',['lookup',['../classgalsim_1_1_table.html#a9c5fbdc6083dcbdd2a54ad19c5f7acd6',1,'galsim::Table']]],
   ['lowerbound',['lowerBound',['../classgalsim_1_1_pset_mem.html#a8b6f8ef71de23d2b67a9de88e0bd1048',1,'galsim::PsetMem']]],
-  ['ltransform',['LTransform',['../classgalsim_1_1_l_transform.html#a9e2c9279e1d4ea4a9afadccbf306932c',1,'galsim::LTransform::LTransform(int orderOut=0, int orderIn=0)'],['../classgalsim_1_1_l_transform.html#a856ac0826cf4bcfe1f0e46c8c27d9e1e',1,'galsim::LTransform::LTransform(const LTransform &amp;rhs)'],['../classgalsim_1_1_l_transform.html#a17c603e3af39079ccba01753e339777c',1,'galsim::LTransform::LTransform(const tmv::Matrix&lt; double &gt; &amp;rhs, int orderOut, int orderIn)']]],
   ['ltransform',['LTransform',['../classgalsim_1_1_l_transform.html',1,'galsim']]],
-  ['lvector',['LVector',['../classgalsim_1_1_l_vector_reference.html#a7c5a42766709a29b13e7d7c6ce342ccd',1,'galsim::LVectorReference::LVector()'],['../classgalsim_1_1_l_vector.html#a2d7f04cbf085cf22b9de648cad5ed76e',1,'galsim::LVector::LVector(int order=0)'],['../classgalsim_1_1_l_vector.html#ae21209f0a00d8a28d71177ef245c3f5f',1,'galsim::LVector::LVector(const LVector &amp;rhs)'],['../classgalsim_1_1_l_vector.html#a5aa378c1f0839f3c4d1dc57e2e3c8c39',1,'galsim::LVector::LVector(const tmv::Vector&lt; double &gt; &amp;v, int order)']]],
+  ['ltransform',['LTransform',['../classgalsim_1_1_l_transform.html#a9e2c9279e1d4ea4a9afadccbf306932c',1,'galsim::LTransform::LTransform(int orderOut=0, int orderIn=0)'],['../classgalsim_1_1_l_transform.html#a856ac0826cf4bcfe1f0e46c8c27d9e1e',1,'galsim::LTransform::LTransform(const LTransform &amp;rhs)'],['../classgalsim_1_1_l_transform.html#a17c603e3af39079ccba01753e339777c',1,'galsim::LTransform::LTransform(const tmv::Matrix&lt; double &gt; &amp;rhs, int orderOut, int orderIn)']]],
   ['lvector',['LVector',['../classgalsim_1_1_l_vector.html',1,'galsim']]],
-  ['lvectorreference',['LVectorReference',['../classgalsim_1_1_l_vector_reference.html',1,'galsim']]],
-  ['lvectorreference',['LVectorReference',['../classgalsim_1_1_l_vector_reference.html#a7cb0ce5b3bb5db113aa1b94501dacd06',1,'galsim::LVectorReference']]]
+  ['lvector',['LVector',['../classgalsim_1_1_l_vector_reference.html#a7c5a42766709a29b13e7d7c6ce342ccd',1,'galsim::LVectorReference::LVector()'],['../classgalsim_1_1_l_vector.html#a2d7f04cbf085cf22b9de648cad5ed76e',1,'galsim::LVector::LVector(int order=0)'],['../classgalsim_1_1_l_vector.html#ae21209f0a00d8a28d71177ef245c3f5f',1,'galsim::LVector::LVector(const LVector &amp;rhs)'],['../classgalsim_1_1_l_vector.html#a5aa378c1f0839f3c4d1dc57e2e3c8c39',1,'galsim::LVector::LVector(const tmv::Vector&lt; double &gt; &amp;v, int order)']]],
+  ['lvectorreference',['LVectorReference',['../classgalsim_1_1_l_vector_reference.html#a7cb0ce5b3bb5db113aa1b94501dacd06',1,'galsim::LVectorReference']]],
+  ['lvectorreference',['LVectorReference',['../classgalsim_1_1_l_vector_reference.html',1,'galsim']]]
 ];

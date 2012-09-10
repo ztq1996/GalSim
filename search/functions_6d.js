@@ -26,7 +26,7 @@ var searchData=
   ['membergreater_5ft',['MemberGreater_t',['../classgalsim_1_1integ_1_1_member_greater__t.html#a4105d838f93e4af61dcf034bc0fed676',1,'galsim::integ::MemberGreater_t']]],
   ['memberless',['MemberLess',['../namespacegalsim_1_1integ.html#ade1e128641ff840781ec887e1683c916',1,'galsim::integ']]],
   ['memberless_5ft',['MemberLess_t',['../classgalsim_1_1integ_1_1_member_less__t.html#a9572ef36142c5268692cc0f752d67929',1,'galsim::integ::MemberLess_t']]],
-  ['merge',['merge',['../classgalsim_1_1base_1_1_attribute_dict.html#a6104ffae613286db6272e1c50323287a',1,'galsim::base::AttributeDict']]],
+  ['merge',['merge',['../classgalsim_1_1utilities_1_1_attribute_dict.html#a8dc3a0eb0cb414c3d96567273510b6be',1,'galsim::utilities::AttributeDict']]],
   ['mtf',['mtf',['../namespacegalsim_1_1optics.html#ad884b16b42ed977b21e0f90cc9102898',1,'galsim::optics']]],
   ['mtf_5fimage',['mtf_image',['../namespacegalsim_1_1optics.html#a1d08038b20fafcdb94f130fdb25cade4',1,'galsim::optics']]],
   ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#a1ebbc0c5e533260fd3de78b99c388f5f',1,'galsim::MultipleImageHelper::MultipleImageHelper(const std::vector&lt; boost::shared_ptr&lt; BaseImage&lt; T &gt; &gt; &gt; &amp;images, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a573d7afba8597206249b5349269cc3f5',1,'galsim::MultipleImageHelper::MultipleImageHelper(const BaseImage&lt; T &gt; &amp;image, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894',1,'galsim::MultipleImageHelper::MultipleImageHelper(const MultipleImageHelper &amp;rhs)']]]

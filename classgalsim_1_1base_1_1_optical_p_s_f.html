@@ -90,13 +90,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.base.OpticalPSF Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class describing aberrated PSFs due to telescope optics.  
+<p>Class describing aberrated PSFs due to telescope optics, which has an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute.  
  <a href="classgalsim_1_1base_1_1_optical_p_s_f.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.base.OpticalPSF:</div>
@@ -113,7 +114,6 @@ Inheritance diagram for galsim.base.OpticalPSF:</div>
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4db6235b3f51efd2be0736e93279428e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#a4db6235b3f51efd2be0736e93279428e">__init__</a></td></tr>
-<tr class="memitem:adde3127901e513d6b948c4b696541938"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#adde3127901e513d6b948c4b696541938">getHalfLightRadius</a></td></tr>
 <tr class="memitem:ace2781f482d5599469ba51aea46b5b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82">__add__</a></td></tr>
 <tr class="memitem:a40b1f56421ff947a547b1ba8646b561b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b">__iadd__</a></td></tr>
 <tr class="memitem:ad36fb2c961a3612312ad0139d1a1ce53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad36fb2c961a3612312ad0139d1a1ce53">__imul__</a></td></tr>
@@ -180,35 +180,42 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad609243ee4f4462c71ac44e5181f063f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#ad609243ee4f4462c71ac44e5181f063f">Interpolant2D</a></td></tr>
+<tr class="memitem:a6d47e031faa9a4b45fa70b9eac71c9e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#a6d47e031faa9a4b45fa70b9eac71c9e3">interpolant</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:acac45886fcd4ee5ac4d3f06a8cdff5b1"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#acac45886fcd4ee5ac4d3f06a8cdff5b1">_req_params</a> = { &quot;lam_over_diam&quot; : float }</td></tr>
+<tr class="memitem:adefa1511901323708bab65a0748ef18a"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#adefa1511901323708bab65a0748ef18a">_opt_params</a></td></tr>
+<tr class="memitem:a3fd4d104529245338dee32b942024319"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html#a3fd4d104529245338dee32b942024319">_single_params</a> = []</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Class describing aberrated PSFs due to telescope optics. </p>
+<div class="textblock"><p>Class describing aberrated PSFs due to telescope optics, which has an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
 <pre class="fragment">Input aberration coefficients are assumed to be supplied in units of incident light wavelength,
 and correspond to the conventions adopted here:
 http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations
 
 Initialization
 --------------
-</pre> <div class="fragment"><div class="line">     optical_psf = <a class="code" href="classgalsim_1_1base_1_1_optical_p_s_f.html" title="Class describing aberrated PSFs due to telescope optics.">galsim.OpticalPSF</a>(lam_over_D, defocus=0., astig1=0., astig2=0., coma1=0.,</div>
-<div class="line">                                         coma2=0., spher=0., circular_pupil=<span class="keyword">True</span>, obscuration=0.,</div>
-<div class="line">                                         interpolantxy=<span class="keywordtype">None</span>, oversampling=1.5, pad_factor=1.5)</div>
+</pre> <div class="fragment"><div class="line">     optical_psf = <a class="code" href="classgalsim_1_1base_1_1_optical_p_s_f.html" title="Class describing aberrated PSFs due to telescope optics, which has an SBInterpolatedImage in the SBPr...">galsim.OpticalPSF</a>(lam_over_diam, defocus=0., astig1=0., astig2=0., coma1=0.,</div>
+<div class="line">                                     coma2=0., spher=0., circular_pupil=<span class="keyword">True</span>, obscuration=0.,</div>
+<div class="line">                                     interpolant=<span class="keywordtype">None</span>, oversampling=1.5, pad_factor=1.5)</div>
 </div><!-- fragment --><p>Initializes optical_psf as a galsim.OpticalPSF() instance.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">coma1</td><td>coma along x in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">coma2</td><td>coma along y in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) [default = 0.] </td></tr>
-    <tr><td class="paramname">interpolantxy</td><td>optional keyword for specifying the interpolation scheme [default = <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y.">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for k-space interpolation.">galsim.Quintic</a>(tol=1.e-4))]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? Alternative is square. </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) [default = 0.]. </td></tr>
+    <tr><td class="paramname">interpolant</td><td>optional keyword for specifying the interpolation scheme [default = <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y.">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for k-space interpolation.">galsim.Quintic</a>(tol=1.e-4))]. </td></tr>
     <tr><td class="paramname">oversampling</td><td>optional oversampling factor for the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> table [default = 1.5], setting oversampling &lt; 1 will produce aliasing in the PSF (not good). </td></tr>
     <tr><td class="paramname">pad_factor</td><td>additional multiple by which to zero-pad the PSF image to avoid folding compared to what would be required for a simple <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> [default = 1.5]. Note that pad_factor may need to be increased for stronger aberrations, i.e. those larger than order unity. </td></tr>
+    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -227,7 +234,7 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em>, </td>
+          <td class="paramname"><em>lam_over_diam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -281,7 +288,7 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>interpolantxy</em> = <code>None</code>, </td>
+          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -293,7 +300,13 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>pad_factor</em> = <code>1.5</code>&#160;</td>
+          <td class="paramname"><em>pad_factor</em> = <code>1.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1385,22 +1398,6 @@ Initialization
 
 </div>
 </div>
-<a class="anchor" id="adde3127901e513d6b948c4b696541938"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.base.OpticalPSF.getHalfLightRadius </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a4f480514538e924d29af411563384a6d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1590,7 +1587,7 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1717,12 +1714,84 @@ Initialization
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ad609243ee4f4462c71ac44e5181f063f"></a>
+<a class="anchor" id="adefa1511901323708bab65a0748ef18a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.OpticalPSF._opt_params</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="stringliteral">&quot;defocus&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;astig1&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;astig2&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;coma1&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;coma2&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;spher&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;circular_pupil&quot;</span> : bool ,</div>
+<div class="line">        <span class="stringliteral">&quot;obscuration&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;oversampling&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;pad_factor&quot;</span> : float ,</div>
+<div class="line">        <span class="stringliteral">&quot;flux&quot;</span> : float }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="acac45886fcd4ee5ac4d3f06a8cdff5b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.OpticalPSF._req_params = { &quot;lam_over_diam&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fd4d104529245338dee32b942024319"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.base.OpticalPSF._single_params = []</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6d47e031faa9a4b45fa70b9eac71c9e3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.base.OpticalPSF.Interpolant2D</td>
+          <td class="memname">galsim.base.OpticalPSF.interpolant</td>
         </tr>
       </table>
 </div><div class="memdoc">

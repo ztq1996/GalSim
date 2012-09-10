@@ -192,6 +192,9 @@ Public Attributes</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a14d8a185bbcab7d2c4cb690590fb70c3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html#a14d8a185bbcab7d2c4cb690590fb70c3">_fwhm_factor</a> = 0.975865</td></tr>
 <tr class="memitem:a91ec88876e9338b39e20951f102a41e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html#a91ec88876e9338b39e20951f102a41e4">_hlr_factor</a> = 0.554811</td></tr>
+<tr class="memitem:aa49b58df2087e7f5f1e44ecc7c4746da"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html#aa49b58df2087e7f5f1e44ecc7c4746da">_req_params</a> = {}</td></tr>
+<tr class="memitem:a0613edb9d5628e785bdb548e3c924349"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html#a0613edb9d5628e785bdb548e3c924349">_opt_params</a> = { &quot;flux&quot; : float }</td></tr>
+<tr class="memitem:a0bbd694f03250ea7ce5afe2e1c1068ef"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html#a0bbd694f03250ea7ce5afe2e1c1068ef">_single_params</a> = [ { &quot;lam_over_r0&quot; : float, &quot;fwhm&quot; : float, &quot;half_light_radius&quot; : float } ]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>GalSim <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">Kolmogorov</a>, which has an <a class="el" href="classgalsim_1_1_s_b_kolmogorov.html" title="Surface Brightness Profile for a Kolmogorov turbulent spectrum.">SBKolmogorov</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
@@ -199,14 +202,14 @@ Static Private Attributes</h2></td></tr>
 
 Initialization
 --------------
-</pre> <div class="fragment"><div class="line">     psf = <a class="code" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">galsim.Kolmogorov</a>(lam_over_r0)</div>
+</pre> <div class="fragment"><div class="line">     psf = <a class="code" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">galsim.Kolmogorov</a>(lam_over_r0, flux=1.)</div>
 </div><!-- fragment --><p>Initialized psf as a galsim.Kolmogorov() instance.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">Kolmogorov</a> PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends on wavelength as [r0 ~ lambda^(-6/5)]. </td></tr>
     <tr><td class="paramname">fwhm</td><td>FWHM of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">Kolmogorov</a> PSF. </td></tr>
     <tr><td class="paramname">half_light_radius</td><td>Half-light radius of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="GalSim Kolmogorov, which has an SBKolmogorov in the SBProfile attribute.">Kolmogorov</a> PSF. One of lam_over_r0, fwhm and half_light_radius (and only one) must be specified. </td></tr>
-    <tr><td class="paramname">flux</td><td>optional flux value [default = 1] </td></tr>
+    <tr><td class="paramname">flux</td><td>Optional flux value [default = 1]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1578,7 +1581,7 @@ Initialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1734,6 +1737,66 @@ Initialization
       <table class="memname">
         <tr>
           <td class="memname">float galsim.base.Kolmogorov._hlr_factor = 0.554811</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0613edb9d5628e785bdb548e3c924349"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Kolmogorov._opt_params = { &quot;flux&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa49b58df2087e7f5f1e44ecc7c4746da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Kolmogorov._req_params = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0bbd694f03250ea7ce5afe2e1c1068ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.base.Kolmogorov._single_params = [ { &quot;lam_over_r0&quot; : float, &quot;fwhm&quot; : float, &quot;half_light_radius&quot; : float } ]</td>
         </tr>
       </table>
   </td>

@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.base.Airy Class Reference</div>  </div>
 </div><!--header-->
@@ -118,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad905832e12f3f486752daca58a22a885"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_airy.html#ad905832e12f3f486752daca58a22a885">getFWHM</a></td></tr>
 <tr class="memdesc:ad905832e12f3f486752daca58a22a885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the FWHM of this <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> profile (only supported for obscuration = 0.).  <a href="#ad905832e12f3f486752daca58a22a885"></a><br/></td></tr>
 <tr class="memitem:aafc599752e87ec2481f5a91e6d56c2cc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_airy.html#aafc599752e87ec2481f5a91e6d56c2cc">getLamOverD</a></td></tr>
-<tr class="memdesc:aafc599752e87ec2481f5a91e6d56c2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the lam_over_D parameter of this <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> profile.  <a href="#aafc599752e87ec2481f5a91e6d56c2cc"></a><br/></td></tr>
+<tr class="memdesc:aafc599752e87ec2481f5a91e6d56c2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the lam_over_diam parameter of this <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> profile.  <a href="#aafc599752e87ec2481f5a91e6d56c2cc"></a><br/></td></tr>
 <tr class="memitem:ace2781f482d5599469ba51aea46b5b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82">__add__</a></td></tr>
 <tr class="memitem:a40b1f56421ff947a547b1ba8646b561b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b">__iadd__</a></td></tr>
 <tr class="memitem:ad36fb2c961a3612312ad0139d1a1ce53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad36fb2c961a3612312ad0139d1a1ce53">__imul__</a></td></tr>
@@ -186,9 +187,33 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a0e0988d0ab9ce5477c21011e5b5eb6ef"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_airy.html#a0e0988d0ab9ce5477c21011e5b5eb6ef">_req_params</a> = { &quot;lam_over_diam&quot; : float }</td></tr>
+<tr class="memitem:ae4cd7fa4130d217b173c45d9058f7c46"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_airy.html#ae4cd7fa4130d217b173c45d9058f7c46">_opt_params</a> = { &quot;flux&quot; : float , &quot;obscuration&quot; : float }</td></tr>
+<tr class="memitem:aeb828fb83cde3d2df09df2243a550ffe"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_airy.html#aeb828fb83cde3d2df09df2243a550ffe">_single_params</a> = []</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>GalSim <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a>, which has an <a class="el" href="classgalsim_1_1_s_b_airy.html" title="Surface Brightness Profile for the Airy disk (perfect diffraction-limited PSF for a circular aperture...">SBAiry</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
+<p>For more details of the <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> Surface Brightness profile, please see the <a class="el" href="classgalsim_1_1_s_b_airy.html" title="Surface Brightness Profile for the Airy disk (perfect diffraction-limited PSF for a circular aperture...">SBAiry</a> documentation produced by doxygen.</p>
+<h2>Initialization</h2>
+<p>An <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> can be initialized using one size parameter lam_over_diam, an optional obscuration parameter [default obscuration=0.] and an optional flux parameter [default flux = 1]. The half light radius or FWHM can subsequently be calculated using the <a class="el" href="classgalsim_1_1base_1_1_airy.html#ae0e016176b62de15d92111335dfabb9c" title="Return the half light radius of this Airy profile (only supported for obscuration = 0...">getHalfLightRadius()</a> method or <a class="el" href="classgalsim_1_1base_1_1_airy.html#ad905832e12f3f486752daca58a22a885" title="Return the FWHM of this Airy profile (only supported for obscuration = 0.).">getFWHM()</a>, respectively, if obscuration = 0.</p>
+<p>Example: </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>airy_obj = <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a>(flux=3., lam_over_diam=2.) airy_obj.getHalfLightRadius()</p>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p>1.0696642954485294</p>
+<p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>
+<h2>Methods</h2>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (draw, drawShoot, applyShear etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab066108ea0dc9e0aa7473626f92f3145"></a>
 <div class="memitem">
@@ -204,7 +229,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em>, </td>
+          <td class="paramname"><em>lam_over_diam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1358,7 +1383,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the lam_over_D parameter of this <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> profile. </p>
+<p>Return the lam_over_diam parameter of this <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="GalSim Airy, which has an SBAiry in the SBProfile attribute.">Airy</a> profile. </p>
 
 </div>
 </div>
@@ -1551,7 +1576,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1678,6 +1703,66 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ae4cd7fa4130d217b173c45d9058f7c46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Airy._opt_params = { &quot;flux&quot; : float , &quot;obscuration&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e0988d0ab9ce5477c21011e5b5eb6ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Airy._req_params = { &quot;lam_over_diam&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeb828fb83cde3d2df09df2243a550ffe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.base.Airy._single_params = []</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">

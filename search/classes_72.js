@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
   ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
+  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
   ['realgalaxy',['RealGalaxy',['../classgalsim_1_1base_1_1_real_galaxy.html',1,'galsim::base']]],
   ['realgalaxycatalog',['RealGalaxyCatalog',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html',1,'galsim::real']]],
   ['rectimage',['RectImage',['../structgalsim_1_1hsm_1_1_rect_image.html',1,'galsim::hsm']]],

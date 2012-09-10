@@ -11,6 +11,6 @@ var searchData=
   ['pow_5fbeta',['pow_beta',['../classgalsim_1_1_s_b_moffat_1_1_s_b_moffat_impl.html#a5333709ead227a135dd0d44c944ffb37',1,'galsim::SBMoffat::SBMoffatImpl']]],
   ['preloaded',['preloaded',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a245319227bc554398b5b557d260cc5f4',1,'galsim::real::RealGalaxyCatalog']]],
   ['prev',['prev',['../structtag__au.html#a52bad1d4aa173c8f4ea838e39726ebc4',1,'tag_au']]],
-  ['psf_5ffilename',['PSF_filename',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a1b05b75f7e76e9f9dd1a20b29f48515b',1,'galsim::real::RealGalaxyCatalog']]],
+  ['psf_5ffile_5fname',['PSF_file_name',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a33b5851256767f8029fc1f00b4720585',1,'galsim::real::RealGalaxyCatalog']]],
   ['psf_5fhdu',['PSF_hdu',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a0975ee9dd75a460e62d1e8371809ba18',1,'galsim::real::RealGalaxyCatalog']]]
 ];

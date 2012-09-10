@@ -9,7 +9,6 @@ var searchData=
   ['compose_5ff_5fgx_5fy_5ft',['compose_f_gx_y_t',['../classgalsim_1_1integ_1_1compose__f__gx__y__t.html',1,'galsim::integ']]],
   ['compose_5ff_5fgxy_5ft',['compose_f_gxy_t',['../classgalsim_1_1integ_1_1compose__f__gxy__t.html',1,'galsim::integ']]],
   ['compose_5ff_5fx_5fgy_5ft',['compose_f_x_gy_t',['../classgalsim_1_1integ_1_1compose__f__x__gy__t.html',1,'galsim::integ']]],
-  ['config',['Config',['../classgalsim_1_1base_1_1_config.html',1,'galsim::base']]],
   ['constant_5fbinary_5ffun',['constant_binary_fun',['../structgalsim_1_1integ_1_1constant__binary__fun.html',1,'galsim::integ']]],
   ['constant_5fnullary_5ffun',['constant_nullary_fun',['../structgalsim_1_1integ_1_1constant__nullary__fun.html',1,'galsim::integ']]],
   ['constant_5funary_5ffun',['constant_unary_fun',['../structgalsim_1_1integ_1_1constant__unary__fun.html',1,'galsim::integ']]],

@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.base.Sersic Class Reference</div>  </div>
 </div><!--header-->
@@ -184,9 +185,43 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af745a963e806734197d1d98cf96a01ab"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_sersic.html#af745a963e806734197d1d98cf96a01ab">_req_params</a> = { &quot;n&quot; : float , &quot;half_light_radius&quot; : float }</td></tr>
+<tr class="memitem:a2c507daa18199e5905b1a5092f467385"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_sersic.html#a2c507daa18199e5905b1a5092f467385">_opt_params</a> = { &quot;flux&quot; : float }</td></tr>
+<tr class="memitem:a1591b7069a476e4b4e50e81213588c9d"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_sersic.html#a1591b7069a476e4b4e50e81213588c9d">_single_params</a> = []</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>GalSim <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a>, which has an <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
+<p>For more details of the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a> Surface Brightness profile, please see the <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a> documentation produced by doxygen.</p>
+<h2>Initialization</h2>
+<p>A <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a> is initialized with n, the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a> index of the profile, and the half light radius size parameter half_light_radius. A flux parameter is optional [default flux = 1].</p>
+<p>Example: </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>sersic_obj = <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a>(n=3.5, half_light_radius=2.5, flux=40.) sersic_obj.getHalfLightRadius()</p>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p>2.5 </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>sersic_obj.getN()</p>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p>3.5</p>
+<h2>Methods</h2>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="GalSim Sersic, which has an SBSersic in the SBProfile attribute.">Sersic</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (draw, drawShoot, applyShear etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3e3a1669124ec66f5c14b76d03a970ba"></a>
 <div class="memitem">
@@ -1531,7 +1566,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1658,6 +1693,66 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a2c507daa18199e5905b1a5092f467385"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Sersic._opt_params = { &quot;flux&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af745a963e806734197d1d98cf96a01ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Sersic._req_params = { &quot;n&quot; : float , &quot;half_light_radius&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1591b7069a476e4b4e50e81213588c9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.base.Sersic._single_params = []</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">

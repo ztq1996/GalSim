@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:affa0f5041ddd3e9275e0ffcbd5c16084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset distribution mean.  <a href="#affa0f5041ddd3e9275e0ffcbd5c16084"></a><br/></td></tr>
 <tr class="memitem:ac53baed5427b3da7b9b3a32bd23d9e6d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac53baed5427b3da7b9b3a32bd23d9e6d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#ac53baed5427b3da7b9b3a32bd23d9e6d">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
-<tr class="memdesc:ac53baed5427b3da7b9b3a32bd23d9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Poisson pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ac53baed5427b3da7b9b3a32bd23d9e6d"></a><br/></td></tr>
+<tr class="memdesc:ac53baed5427b3da7b9b3a32bd23d9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply Poisson pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ac53baed5427b3da7b9b3a32bd23d9e6d"></a><br/></td></tr>
 <tr class="memitem:acccf21b77923f018e6995f7103c59f4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#acccf21b77923f018e6995f7103c59f4e">PoissonDeviate</a> (<a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;u_, const double mean=1.)</td></tr>
 <tr class="memitem:ac72948e132f2a0a4848436524dc9b9ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#ac72948e132f2a0a4848436524dc9b9ec">~PoissonDeviate</a> ()</td></tr>
 <tr class="memitem:ac1a2db47048b7ca1ca544aac5d188f3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#ac1a2db47048b7ca1ca544aac5d188f3b">operator()</a> ()</td></tr>
@@ -399,7 +399,8 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Add Poisson pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
+<p>Apply Poisson pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
+<p>This adds Poisson noise with the given mean to the image, and then subtracts off that mean value again, so the expected value is 0.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be noise-ified. </td></tr>

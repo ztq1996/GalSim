@@ -12,7 +12,7 @@ var searchData=
   ['assignabletoimage_3c_20t1_20_3e',['AssignableToImage&lt; T1 &gt;',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
   ['assignabletoimage_3c_20t2_20_3e',['AssignableToImage&lt; T2 &gt;',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
   ['atmosphericpsf',['AtmosphericPSF',['../classgalsim_1_1base_1_1_atmospheric_p_s_f.html',1,'galsim::base']]],
-  ['attributedict',['AttributeDict',['../classgalsim_1_1base_1_1_attribute_dict.html',1,'galsim::base']]],
+  ['attributedict',['AttributeDict',['../classgalsim_1_1utilities_1_1_attribute_dict.html',1,'galsim::utilities']]],
   ['auxfunc1',['AuxFunc1',['../structgalsim_1_1integ_1_1_aux_func1.html',1,'galsim::integ']]],
   ['auxfunc2',['AuxFunc2',['../structgalsim_1_1integ_1_1_aux_func2.html',1,'galsim::integ']]]
 ];

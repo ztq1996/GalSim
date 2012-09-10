@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.base.Moffat Class Reference</div>  </div>
 </div><!--header-->
@@ -188,9 +189,48 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af3245039cee18f1f2393aa584ae1bcb0"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_moffat.html#af3245039cee18f1f2393aa584ae1bcb0">_req_params</a> = { &quot;beta&quot; : float }</td></tr>
+<tr class="memitem:aa26648c8ee654f4643be9fa07eba81c2"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_moffat.html#aa26648c8ee654f4643be9fa07eba81c2">_opt_params</a> = { &quot;trunc&quot; : float , &quot;flux&quot; : float }</td></tr>
+<tr class="memitem:a03cb4ab71cc75333ced28dd2f5d267bf"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_moffat.html#a03cb4ab71cc75333ced28dd2f5d267bf">_single_params</a> = [ { &quot;scale_radius&quot; : float, &quot;half_light_radius&quot; : float, &quot;fwhm&quot; : float } ]</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>GalSim <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a>, which has an <a class="el" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
+<p>For more details of the <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a> Surface Brightness profile, please see the <a class="el" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a> documentation produced by doxygen.</p>
+<h2>Initialization</h2>
+<p>A <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a> is initialized with a slope parameter beta, one (and only one) of three possible size parameters </p>
+<pre class="fragment">scale_radius
+half_light_radius
+fwhm
+</pre><p>an optional truncation radius parameter trunc [default trunc = 0., indicating no truncation] and a flux parameter [default flux = 1].</p>
+<p>Example: </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>moffat_obj = <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a>(beta=3., scale_radius=3., flux=0.5) moffat_obj.getHalfLightRadius()</p>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p>1.9307827587167474 </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>moffat_obj = <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a>(beta=3., half_light_radius=1., flux=0.5) moffat_obj.getScaleRadius()</p>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p></p>
+</blockquote>
+<p>1.5537739740300376</p>
+<p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>
+<h2>Methods</h2>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (draw, drawShoot, applyShear etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2ba91bccf88dc1bfcbe024d6fe0201fd"></a>
 <div class="memitem">
@@ -212,12 +252,6 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fwhm</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>scale_radius</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -225,6 +259,12 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>half_light_radius</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fwhm</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1589,7 +1629,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1716,6 +1756,66 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="aa26648c8ee654f4643be9fa07eba81c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Moffat._opt_params = { &quot;trunc&quot; : float , &quot;flux&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3245039cee18f1f2393aa584ae1bcb0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.base.Moffat._req_params = { &quot;beta&quot; : float }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03cb4ab71cc75333ced28dd2f5d267bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.base.Moffat._single_params = [ { &quot;scale_radius&quot; : float, &quot;half_light_radius&quot; : float, &quot;fwhm&quot; : float } ]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">

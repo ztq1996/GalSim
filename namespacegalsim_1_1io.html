@@ -87,108 +87,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.io Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a99c8d3e2c3f02563e4ea4d4e6aeca213"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1io.html#a99c8d3e2c3f02563e4ea4d4e6aeca213">ReadInputCat</a></td></tr>
-<tr class="memdesc:a99c8d3e2c3f02563e4ea4d4e6aeca213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in an input catalog for object-by-object parameter specification.  <a href="#a99c8d3e2c3f02563e4ea4d4e6aeca213"></a><br/></td></tr>
-<tr class="memitem:aa57d8bfcbb259604650e77a5eaebf002"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1io.html#aa57d8bfcbb259604650e77a5eaebf002">ReadAsciiInputCat</a></td></tr>
-<tr class="memdesc:aa57d8bfcbb259604650e77a5eaebf002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in an input catalog from an ASCII file.  <a href="#aa57d8bfcbb259604650e77a5eaebf002"></a><br/></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1io_1_1_input_catalog.html">InputCatalog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class storing the data from an input catalog where each row corresponds to a different object to be built, and each column stores some item of information about that object (e.g.  <a href="classgalsim_1_1io_1_1_input_catalog.html#details">More...</a><br/></td></tr>
 </table>
-<hr/><h2>Function Documentation</h2>
-<a class="anchor" id="aa57d8bfcbb259604650e77a5eaebf002"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.io.ReadAsciiInputCat </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cat_file_name</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>comments</em> = <code>&quot;#&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read in an input catalog from an ASCII file. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cat_file_name</td><td>Filename of the input catalog. </td></tr>
-    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog (default='#').</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>A galsim.Config instance, containing useful metadata and the ASCII table itself stored as a NumPy array in the .data attribute.</dd></dl>
-<p>Does not check for sensible inputs, leaving this up to the wrapper function <a class="el" href="namespacegalsim_1_1io.html#a99c8d3e2c3f02563e4ea4d4e6aeca213" title="Read in an input catalog for object-by-object parameter specification.">ReadInputCat()</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a99c8d3e2c3f02563e4ea4d4e6aeca213"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.io.ReadInputCat </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cat_file_name</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>filetype</em> = <code>&quot;ASCII&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>comments</em> = <code>&quot;#&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read in an input catalog for object-by-object parameter specification. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">config</td><td>A configuration galsim.Config instance containing all the required information for running GalSim in Multi-Object mode. </td></tr>
-    <tr><td class="paramname">cat_file_name</td><td>Filename of the input catalog. </td></tr>
-    <tr><td class="paramname">filetype</td><td>Either 'ASCII' (currently the only, default, option) or (soon) 'FITS'. </td></tr>
-    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog (default='#').</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>A galsim.Config instance, each attribute of which is a vector of parameter values of length equal to the number of valid rows in the input catalog.</dd></dl>
-<p>Does some checking for sensible inputs, unlike the functions it calls (<a class="el" href="namespacegalsim_1_1io.html#aa57d8bfcbb259604650e77a5eaebf002" title="Read in an input catalog from an ASCII file.">ReadAsciiInputCat()</a> and ReadFitsInputCat()). </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

@@ -113,7 +113,6 @@ Inheritance diagram for galsim.base.Convolve:</div>
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aafe5dd0d12f24439bccd6862da8e48dc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_convolve.html#aafe5dd0d12f24439bccd6862da8e48dc">__init__</a></td></tr>
-<tr class="memitem:ab176c031550b86a9b2b5d915125414d4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_convolve.html#ab176c031550b86a9b2b5d915125414d4">add</a></td></tr>
 <tr class="memitem:ace2781f482d5599469ba51aea46b5b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82">__add__</a></td></tr>
 <tr class="memitem:a40b1f56421ff947a547b1ba8646b561b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b">__iadd__</a></td></tr>
 <tr class="memitem:ad36fb2c961a3612312ad0139d1a1ce53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad36fb2c961a3612312ad0139d1a1ce53">__imul__</a></td></tr>
@@ -186,7 +185,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>A class for convolving 2 or more GSObjects. </p>
 <p>The objects to be convolved may be provided either as multiple unnamed arguments (e.g. Convolve(psf,gal,pix)) or as a list (e.g. <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>[psf,gal,pix]). Any number of objects may be provided using either syntax. (Even 0 or 1, although that doesn't really make much sense.)</p>
 <p>The convolution will normally be done using discrete Fourier transforms of each of the component profiles, multiplying them together, and then transforming back to real space.</p>
-<p>The stepK used for the k-space image will be (Sum 1/stepK()^2)^(-1/2) where the sum is over all teh components being convolved. Since the size of the convolved image scales roughly as the quadrature sum of the components, this should be close to Pi/Rmax where Rmax is the radius that encloses all but (1-alias_threshold) of the flux in the final convolved image..</p>
+<p>The stepK used for the k-space image will be (Sum 1/stepK()^2)^(-1/2) where the sum is over all the components being convolved. Since the size of the convolved image scales roughly as the quadrature sum of the components, this should be close to Pi/Rmax where Rmax is the radius that encloses all but (1-alias_threshold) of the flux in the final convolved image..</p>
 <p>The maxK used for the k-space image will be the minimum of the maxK calculated for each component. Since the k-space images are multiplied, if one of them is essentially zero beyond some k value, then that will be true of the final image as well.</p>
 <p>There is also an option to do the convolution as integrals in real space. To do this, use the optional keyword argument real_space=True. Currently, the real-space integration is only enabled for 2 profiles. (Aside from the trivial implementaion for 1 profile.) If you try to use it for more than 2 profiles, an exception will be raised.</p>
 <p>The real-space convolution is normally slower than the DFT convolution. The exception is if both component profiles have hard edges. e.g. a truncated <a class="el" href="classgalsim_1_1base_1_1_moffat.html" title="GalSim Moffat, which has an SBMoffat in the SBProfile attribute.">Moffat</a> with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="GalSim Pixel, which has an SBBox in the SBProfile attribute.">Pixel</a>. In that case, the maxK for each component is quite large since the ringing dies off fairly slowly. So it can be quicker to use real-space convolution instead. Also, real-space convolution tends to be more accurate in this case as well.</p>
@@ -527,32 +526,6 @@ Public Attributes</h2></td></tr>
 <span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab176c031550b86a9b2b5d915125414d4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.base.Convolve.add </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1519,7 +1492,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fluxRatio</em>&#160;</td>
+          <td class="paramname"><em>flux_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -51,7 +51,7 @@ var searchData=
   ['memberless',['MemberLess',['../namespacegalsim_1_1integ.html#ade1e128641ff840781ec887e1683c916',1,'galsim::integ']]],
   ['memberless_5ft',['MemberLess_t',['../classgalsim_1_1integ_1_1_member_less__t.html#a9572ef36142c5268692cc0f752d67929',1,'galsim::integ::MemberLess_t']]],
   ['memberless_5ft',['MemberLess_t',['../classgalsim_1_1integ_1_1_member_less__t.html',1,'galsim::integ']]],
-  ['merge',['merge',['../classgalsim_1_1base_1_1_attribute_dict.html#a6104ffae613286db6272e1c50323287a',1,'galsim::base::AttributeDict']]],
+  ['merge',['merge',['../classgalsim_1_1utilities_1_1_attribute_dict.html#a8dc3a0eb0cb414c3d96567273510b6be',1,'galsim::utilities::AttributeDict']]],
   ['method',['Method',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045',1,'galsim']]],
   ['micron',['Micron',['../_astronomical_constants_8h.html#a62e1c874d2cf1a788c5fbb046a6cac28',1,'AstronomicalConstants.h']]],
   ['minimum_5ffft_5fsize',['minimum_fft_size',['../namespacegalsim_1_1sbp.html#a3081934882ed8b1e6127424f336484a5',1,'galsim::sbp']]],

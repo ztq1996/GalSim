@@ -139,7 +139,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -166,7 +166,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units. </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
     <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.)</td></tr>
   </table>
@@ -196,7 +196,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -256,14 +256,14 @@ Functions</h2></td></tr>
 
 <p>Return numpy array containing the MTF of a circular (default) or square pupil with low-order aberrations. </p>
 <p>MTF array element ordering follows the DFT standard of kxky(array_shape), and has mtf[0, 0] = 1 by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>Output double numpy array is C-contiguous.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -298,7 +298,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -358,13 +358,13 @@ Functions</h2></td></tr>
 
 <p>Return the MTF of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
 <p>MTF array element ordering follows the DFT standard of kxky(array_shape), and has mtf[0, 0] = 1 by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -399,7 +399,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -459,14 +459,14 @@ Functions</h2></td></tr>
 
 <p>Return the complex OTF of a circular (default) or square pupil with low-order aberrations as a numpy array. </p>
 <p>OTF array element ordering follows the DFT standard of kxky(array_shape), and has otf[0, 0] = 1+0j by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>Output complex numpy array is C-contiguous.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -501,7 +501,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -561,13 +561,13 @@ Functions</h2></td></tr>
 
 <p>Return the complex OTF of a circular (default) or square pupil with low-order aberrations as a (real, imag) tuple of ImageViewD objects rather than a complex numpy array. </p>
 <p>OTF array element ordering follows the DFT standard of kxky(array_shape), and has otf[0, 0] = 1+0j by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for array views of ImageViewD tuple. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -602,7 +602,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -650,7 +650,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -662,14 +668,14 @@ Functions</h2></td></tr>
 
 <p>Return numpy array containing circular (default) or square pupil PSF with low-order aberrations. </p>
 <p>The PSF is centred on the array[array_shape[0] / 2, array_shape[1] / 2] pixel by default, and uses surface brightness rather than flux units for pixel values, matching <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>Ouput numpy array is C-contiguous.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -678,6 +684,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
     <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.] </td></tr>
   </table>
   </dd>
 </dl>
@@ -704,7 +711,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -752,7 +759,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -764,13 +777,13 @@ Functions</h2></td></tr>
 
 <p>Return circular (default) or square pupil PSF with low-order aberrations as an ImageViewD. </p>
 <p>The PSF is centred on the array[array_shape[0] / 2, array_shape[1] / 2] pixel by default, and uses surface brightness rather than flux units for pixel values, matching <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -779,6 +792,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
     <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.] </td></tr>
   </table>
   </dd>
 </dl>
@@ -805,7 +819,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -865,14 +879,14 @@ Functions</h2></td></tr>
 
 <p>Return numpy array containing the PTF [radians] of a circular (default) or square pupil with low-order aberrations. </p>
 <p>PTF array element ordering follows the DFT standard of kxky(array_shape), and has ptf[0, 0] = 0. by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>Output double numpy array is C-contiguous.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -907,7 +921,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -967,13 +981,13 @@ Functions</h2></td></tr>
 
 <p>Return the PTF [radians] of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
 <p>PTF array element ordering follows the DFT standard of kxky(array_shape), and has ptf[0, 0] = 0. by default.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -1008,7 +1022,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1067,8 +1081,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return a complex, aberrated wavefront across a circular (default) or square pupil. </p>
-<p>Outputs a complex image (shape=array_shape) of a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/D = lam_over_D on an output grid of spacing dx.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>Outputs a complex image (shape=array_shape) of a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/D = lam_over_diam on an output grid of spacing dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>The pupil sample locations are arranged in standard DFT element ordering format, so that (kx, ky) = (0, 0) is the [0, 0] array element.</p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the definitions given here: <a href="http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations">http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations</a></p>
 <h2>Parameters</h2>
@@ -1076,7 +1090,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
@@ -1112,7 +1126,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_D</em> = <code>2.</code>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>2.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1171,8 +1185,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return wavefront as a (real, imag) tuple of ImageViewD objects rather than complex numpy array. </p>
-<p>Outputs a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/D = lam_over_D on an output grid of spacing dx.</p>
-<p>To ensure properly Nyquist sampled output any user should set lam_over_D &gt;= 2. * dx.</p>
+<p>Outputs a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/diam = lam_over_diam on an output grid of spacing dx.</p>
+<p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>The pupil sample locations are arranged in standard DFT element ordering format, so that (kx, ky) = (0, 0) is the [0, 0] array element.</p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the definitions given here: <a href="http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations">http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations</a></p>
 <h2>Parameters</h2>
@@ -1180,7 +1194,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the output array. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_D</td><td>lambda / D in the physical units adopted for dx (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig1</td><td>first component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">astig2</td><td>second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
