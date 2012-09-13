@@ -13,6 +13,7 @@ var searchData=
   ['image',['image',['../namespacegalsim_1_1image.html',1,'galsim']]],
   ['integ',['integ',['../namespacegalsim_1_1integ.html',1,'galsim']]],
   ['io',['io',['../namespacegalsim_1_1io.html',1,'galsim']]],
+  ['lensing',['lensing',['../namespacegalsim_1_1lensing.html',1,'galsim']]],
   ['noise',['noise',['../namespacegalsim_1_1noise.html',1,'galsim']]],
   ['odd',['odd',['../namespacegalsim_1_1odd.html',1,'galsim']]],
   ['optics',['optics',['../namespacegalsim_1_1optics.html',1,'galsim']]],

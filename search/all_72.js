@@ -1,12 +1,13 @@
 var searchData=
 [
   ['rad',['rad',['../classgalsim_1_1_angle.html#a86f2fbdcef0f440548769a1e8a164ca9',1,'galsim::Angle']]],
-  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
   ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
+  ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs_1_1_radial_function.html',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
   ['radialfunction',['RadialFunction',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs_1_1_radial_function.html#a493373443986e49cf1c2bbd67cc4e1cb',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs::RadialFunction']]],
   ['radians',['radians',['../namespacegalsim.html#aed8d3e3dc27c52616a6006600ec00fea',1,'galsim']]],
   ['radiustype',['RadiusType',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792',1,'galsim::SBMoffat']]],
   ['radtoarcsec',['RadToArcsec',['../_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1',1,'AstronomicalConstants.h']]],
+  ['rand_5farr',['rand_arr',['../namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27',1,'galsim::utilities']]],
   ['random_2eh',['Random.h',['../_random_8h.html',1,'']]],
   ['random_2epy',['random.py',['../random_8py.html',1,'']]],
   ['randomoldboost_2eh',['RandomOldBoost.h',['../_random_old_boost_8h.html',1,'']]],
@@ -57,6 +58,8 @@ var searchData=
   ['rotationwith',['rotationWith',['../classgalsim_1_1_cpp_shear.html#a25640a2bf42b7166f90d69b0607dd7e4',1,'galsim::CppShear::rotationWith()'],['../classgalsim_1_1shear_1_1_shear.html#a6b769b62bd287ee662668cfcb4220219',1,'galsim.shear.Shear.rotationWith()']]],
   ['rowbegin',['rowBegin',['../classgalsim_1_1_base_image.html#a212b602fe0a42c1750c836447d153899',1,'galsim::BaseImage::rowBegin()'],['../classgalsim_1_1_image_view.html#a25e25fd8bab90a1f1ed1e814a55db64b',1,'galsim::ImageView::rowBegin()'],['../classgalsim_1_1_image.html#a6e14db2365180853a11daff6cde349ef',1,'galsim::Image::rowBegin(int r)'],['../classgalsim_1_1_image.html#a338b065ceb8f9664130bd3f66ec47863',1,'galsim::Image::rowBegin(int r) const ']]],
   ['rowend',['rowEnd',['../classgalsim_1_1_base_image.html#a6662e14a8b633e04b4a42e75243091ae',1,'galsim::BaseImage::rowEnd()'],['../classgalsim_1_1_image_view.html#a379ae0338bfb21327f99cf499f5a8d59',1,'galsim::ImageView::rowEnd()'],['../classgalsim_1_1_image.html#abdec41f126d13cd13dc887836d378762',1,'galsim::Image::rowEnd(int r)'],['../classgalsim_1_1_image.html#a37b23ad08db1ce6f9dc0636403518d03',1,'galsim::Image::rowEnd(int r) const ']]],
+  ['rs',['rs',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html#af83fac4dd284c2f4bb662e1594830046',1,'galsim::lensing::NFWHalo']]],
+  ['rs_5farcsec',['rs_arcsec',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html#a11723adf7f65fbe2190156e069a19c11',1,'galsim::lensing::NFWHalo']]],
   ['running',['running',['../classgalsim_1_1_stopwatch.html#a9e298b5e698e32f67c6dd103804ea515',1,'galsim::Stopwatch']]],
   ['rvector',['rVector',['../classgalsim_1_1_l_vector.html#a56f1f2ae2803a7d3121edb5e507fb6b3',1,'galsim::LVector::rVector()'],['../classgalsim_1_1_l_vector.html#a8fe48c67038f9ea6b7b9406a6f3c27a2',1,'galsim::LVector::rVector() const ']]]
 ];

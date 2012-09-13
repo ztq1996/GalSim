@@ -8,5 +8,7 @@ var searchData=
   ['nk',['Nk',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#af429e18ecc16d09d0157312aaf892038',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
   ['nmap',['nmap',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl.html#ad9be98dbaa6ae9d32cf5aa81b7ebe8ba',1,'galsim::SBAiry::SBAiryImpl::nmap()'],['../classgalsim_1_1_s_b_sersic.html#a7990d50663993280d89e280bc6e9be99',1,'galsim::SBSersic::nmap()']]],
   ['nobjects',['nobjects',['../classgalsim_1_1io_1_1_input_catalog.html#a1f6b35f7d1e70c1864ea6c615fda3319',1,'galsim.io.InputCatalog.nobjects()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ab2cd5eb6336bf4431a0377af2e026ef5',1,'galsim.real.RealGalaxyCatalog.nobjects()']]],
-  ['normal',['normal',['../classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2',1,'galsim::GaussianDeviate']]]
+  ['normal',['normal',['../classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2',1,'galsim::GaussianDeviate']]],
+  ['nx',['nx',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4e677e1504fa15f2d4831384fd3a400b',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['ny',['ny',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a6bf5e1f777d6256bd052192ad6e6f66c',1,'galsim::lensing::PowerSpectrumRealizer']]]
 ];

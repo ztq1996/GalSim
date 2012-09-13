@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['e',['../classgalsim_1_1shear_1_1_shear.html#a69377360c37ad03198cf005b48bd4708',1,'galsim::shear::Shear']]],
+  ['e',['E',['../classgalsim_1_1lensing_1_1_cosmology.html#ab3577744f233d7e8a553ae886fd0c9f2',1,'galsim.lensing.Cosmology.E()'],['../classgalsim_1_1shear_1_1_shear.html#a69377360c37ad03198cf005b48bd4708',1,'galsim.shear.Shear.e()']]],
   ['e1',['e1',['../classgalsim_1_1_cpp_shear.html#a58baeba59f36cf15619de5ef7dd64015',1,'galsim::CppShear::e1()'],['../structgalsim_1_1hsm_1_1_object_data.html#a85d9bc4f3908f93171d98e4e7388c1f7',1,'galsim::hsm::ObjectData::e1()'],['../classgalsim_1_1shear_1_1_shear.html#ab9094393f00fdad1c40e3457f12337b7',1,'galsim.shear.Shear.e1()']]],
   ['e2',['e2',['../classgalsim_1_1_cpp_shear.html#af29fc5747741206b6bc103da4b61100c',1,'galsim::CppShear::e2()'],['../structgalsim_1_1hsm_1_1_object_data.html#a56dec6d715aff0345b5f9a69a1d1091c',1,'galsim::hsm::ObjectData::e2()'],['../classgalsim_1_1shear_1_1_shear.html#a65815fffb7a3db12c8517ee1e5000809',1,'galsim.shear.Shear.e2()']]],
   ['earthmass',['EarthMass',['../_astronomical_constants_8h.html#a0fffcc72ce86fcb183b5b31563021dfb',1,'AstronomicalConstants.h']]],
@@ -18,6 +18,7 @@ var searchData=
   ['estimateshearhsm',['EstimateShearHSM',['../namespacegalsim_1_1psfcorr.html#a1072476270c2dcd1b1223fcb41e2bda5',1,'galsim::psfcorr']]],
   ['estimateshearhsmview',['EstimateShearHSMView',['../namespacegalsim_1_1hsm.html#aa729e5266459ae6240b1cd64a9c512ef',1,'galsim::hsm']]],
   ['eta',['eta',['../classgalsim_1_1shear_1_1_shear.html#a23c89fc1ae47920dddd41ae950651f5e',1,'galsim::shear::Shear']]],
+  ['eval_5fsbinterpolatedimage',['eval_sbinterpolatedimage',['../namespacegalsim_1_1utilities.html#af739aae79169d51cc299bb62101fe56f',1,'galsim::utilities']]],
   ['expand',['expand',['../classgalsim_1_1_bounds.html#a491239e823fc257356a6b1481eb2b7eb',1,'galsim::Bounds']]],
   ['expmu',['expmu',['../classgalsim_1_1_cpp_ellipse.html#a3d081d0125589f95056afd769e2ae015',1,'galsim::CppEllipse']]],
   ['exponential',['Exponential',['../classgalsim_1_1base_1_1_exponential.html',1,'galsim::base']]],

@@ -12,6 +12,8 @@ var searchData=
   ['allocationnumber',['allocationNumber',['../structtag__au.html#a82172e3b13eb8c4308fa0a4dea87b59a',1,'tag_au']]],
   ['allocationtype',['allocationType',['../structtag__au.html#a872bb222e8ef970649d7a2f2ebb9a416',1,'tag_au']]],
   ['allowed_5fflux_5fvariation',['ALLOWED_FLUX_VARIATION',['../namespacegalsim_1_1odd.html#a18395b5e45fb268c96c6d0f573d4c534',1,'galsim::odd']]],
+  ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a0dffef6e343b8a1992b369d99da4f395',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['amplitude_5fe',['amplitude_E',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a39906444f177ee975dd6e7d898b8431e',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['arcmin',['ARCMIN',['../_astronomical_constants_8h.html#a0f3de8cc08ae1e66965f5e04e7fb1eed',1,'AstronomicalConstants.h']]],
   ['arcsec',['ARCSEC',['../_astronomical_constants_8h.html#a65dbe000c12ec62523c2e0a8e68ff3e6',1,'AstronomicalConstants.h']]],
   ['arg',['arg',['../classgalsim_1_1_table_entry.html#ac4d6894055eea081c58317f6f45e5df7',1,'galsim::TableEntry']]],

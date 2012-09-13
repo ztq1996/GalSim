@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['da',['Da',['../classgalsim_1_1lensing_1_1_cosmology.html#a231f429c1c5d6d2bcee338be9457a93d',1,'galsim::lensing::Cosmology']]],
   ['deallocate_5frect_5fimage',['deallocate_rect_image',['../namespacegalsim_1_1hsm.html#a0628fc63aed5b3ba6c554f10792d1a0d',1,'galsim::hsm']]],
   ['decm',['decm',['../classgalsim_1_1_p_q_index.html#a0176779a9c0c54aee871db44a2c093e8',1,'galsim::PQIndex']]],
   ['decn',['decN',['../classgalsim_1_1_p_q_index.html#a4c966fcb03797eed95f0e9549b43a6f2',1,'galsim::PQIndex']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../classgalsim_1_1_solve.html#a34e00af24e1643bb59637a56df4706b9',1,'galsim::Solve']]],
+  ['m',['m',['../classgalsim_1_1_solve.html#a34e00af24e1643bb59637a56df4706b9',1,'galsim::Solve::m()'],['../classgalsim_1_1lensing_1_1_n_f_w_halo.html#afffa2263e5dd0ad19b4c40e059ed8efd',1,'galsim.lensing.NFWHalo.M()']]],
   ['m_5falloc_5fcalloc',['m_alloc_calloc',['../mmgr_8h.html#a2e30dc329be8d2c78d4e4f49fe20121a',1,'mmgr.h']]],
   ['m_5falloc_5fdelete',['m_alloc_delete',['../mmgr_8h.html#a89091c819cb47c9fdb2d2f942a6ebea6',1,'mmgr.h']]],
   ['m_5falloc_5fdelete_5farray',['m_alloc_delete_array',['../mmgr_8h.html#aff7c8accc862bd92a30f7c8326d9d396',1,'mmgr.h']]],

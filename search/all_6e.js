@@ -3,12 +3,13 @@ var searchData=
   ['n',['N',['../classgalsim_1_1_p_q_index.html#a710160192468af743a2eefba2185fdf3',1,'galsim::PQIndex']]],
   ['native_5fbyteorder',['native_byteorder',['../namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc',1,'galsim::fits']]],
   ['ncols',['ncols',['../classgalsim_1_1io_1_1_input_catalog.html#a61dfcb2e572e96011900549f8ed20391',1,'galsim::io::InputCatalog']]],
-  ['nearest',['Nearest',['../classgalsim_1_1_nearest.html',1,'galsim']]],
   ['nearest',['Nearest',['../classgalsim_1_1_nearest.html#ad732e5dd33c3f1f1ed7cad4be67819d2',1,'galsim::Nearest']]],
+  ['nearest',['Nearest',['../classgalsim_1_1_nearest.html',1,'galsim']]],
   ['needsconjugation',['needsConjugation',['../classgalsim_1_1_p_q_index.html#adb1d88adf012e7688db49a5e3524bb27',1,'galsim::PQIndex']]],
   ['new',['new',['../mmgr_8h.html#a1ac41480eb2e4aadd52252ee550b630a',1,'mmgr.h']]],
   ['next',['next',['../structtag__au.html#a952f4e03968fdd18bbce8061a41e2c16',1,'tag_au']]],
   ['nextdistinct',['nextDistinct',['../classgalsim_1_1_p_q_index.html#a1721441413c4568e5bbb6a0b92880f58',1,'galsim::PQIndex']]],
+  ['nfwhalo',['NFWHalo',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html',1,'galsim::lensing']]],
   ['ngen',['nGen',['../classgalsim_1_1_l_vector.html#a066fc9c35726b650d0389df33d1c1292a8a4126653554df4273ee3da91cc008e1',1,'galsim::LVector']]],
   ['ngkplevels',['NGKPLEVELS',['../namespacegalsim_1_1integ.html#ac4fa002a6c83cf81bd44d67502d4b22d',1,'galsim::integ']]],
   ['ninitial',['Ninitial',['../structgalsim_1_1_multiple_image_helper_1_1_multiple_image_helper_impl.html#ae669f64fb61192bcacc52d471baee460',1,'galsim::MultipleImageHelper::MultipleImageHelperImpl']]],
@@ -20,5 +21,7 @@ var searchData=
   ['normal',['normal',['../classgalsim_1_1_gaussian_deviate.html#add3afcd7fdf4b461466246d9439be7e2',1,'galsim::GaussianDeviate']]],
   ['nullary_5ffunction',['nullary_function',['../structgalsim_1_1integ_1_1nullary__function.html',1,'galsim::integ']]],
   ['nullary_5ffunction_3c_20_5fuf_3a_3aresult_5ftype_20_3e',['nullary_function&lt; _UF::result_type &gt;',['../structgalsim_1_1integ_1_1nullary__function.html',1,'galsim::integ']]],
+  ['nx',['nx',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4e677e1504fa15f2d4831384fd3a400b',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['ny',['ny',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a6bf5e1f777d6256bd052192ad6e6f66c',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['nyquistdx',['nyquistDx',['../classgalsim_1_1_s_b_profile.html#ae7956c43a3b82f40a5b5014fcf3653f0',1,'galsim::SBProfile::nyquistDx()'],['../classgalsim_1_1base_1_1_g_s_object.html#a98091310691b1ecdd0d8bfacf48b73c5',1,'galsim.base.GSObject.nyquistDx()']]]
 ];

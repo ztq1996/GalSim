@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['a',['../classgalsim_1_1lensing_1_1_cosmology.html#a23081810feebe7d126012d92fb9b7c8c',1,'galsim::lensing::Cosmology']]],
   ['abserr',['abserr',['../classgalsim_1_1integ_1_1_int2_d_aux_type.html#a2674f1f483c29deeccaa1584b8c26857',1,'galsim::integ::Int2DAuxType::abserr()'],['../classgalsim_1_1integ_1_1_int3_d_aux_type.html#ab5e137639ea9d726676fee1204d3983b',1,'galsim::integ::Int3DAuxType::abserr()']]],
   ['absolute_5ferror',['ABSOLUTE_ERROR',['../namespacegalsim_1_1odd.html#a3d8f7eb5d4ac671624b0e545dc6dab07',1,'galsim::odd']]],
   ['abzeropoint',['ABZeropoint',['../_astronomical_constants_8h.html#a04cdda147e4061c975a013366ff0555b',1,'AstronomicalConstants.h']]],
@@ -25,8 +26,8 @@ var searchData=
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
   ['airyinfo',['AiryInfo',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html#abe773133c1c61676a49cbba0664d3584',1,'galsim::SBAiry::SBAiryImpl::AiryInfo::AiryInfo()'],['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html#a65800419393df7b0d5e8246c4c8cdd8b',1,'galsim::SBAiry::SBAiryImpl::AiryInfo::AiryInfo(const AiryInfo &amp;rhs)']]],
   ['airyinfo',['AiryInfo',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info.html',1,'galsim::SBAiry::SBAiryImpl']]],
-  ['airyinfonoobs',['AiryInfoNoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs.html#a29e668e8e91907056f96582917f11938',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
   ['airyinfonoobs',['AiryInfoNoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs.html',1,'galsim::SBAiry::SBAiryImpl']]],
+  ['airyinfonoobs',['AiryInfoNoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_no_obs.html#a29e668e8e91907056f96582917f11938',1,'galsim::SBAiry::SBAiryImpl::AiryInfoNoObs']]],
   ['airyinfoobs',['AiryInfoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs.html#ab9b235c17239cdbddde1be411693d56a',1,'galsim::SBAiry::SBAiryImpl::AiryInfoObs']]],
   ['airyinfoobs',['AiryInfoObs',['../classgalsim_1_1_s_b_airy_1_1_s_b_airy_impl_1_1_airy_info_obs.html',1,'galsim::SBAiry::SBAiryImpl']]],
   ['alias_5fthreshold',['alias_threshold',['../namespacegalsim_1_1sbp.html#af2333b572d187cbcfd6f6daa7c7bc30f',1,'galsim::sbp::alias_threshold()'],['../namespacegalsim_1_1base.html#a5941a6ac5e44c1a0fef1f3205d49b531',1,'galsim.base.ALIAS_THRESHOLD()']]],
@@ -35,6 +36,8 @@ var searchData=
   ['allocationnumber',['allocationNumber',['../structtag__au.html#a82172e3b13eb8c4308fa0a4dea87b59a',1,'tag_au']]],
   ['allocationtype',['allocationType',['../structtag__au.html#a872bb222e8ef970649d7a2f2ebb9a416',1,'tag_au']]],
   ['allowed_5fflux_5fvariation',['ALLOWED_FLUX_VARIATION',['../namespacegalsim_1_1odd.html#a18395b5e45fb268c96c6d0f573d4c534',1,'galsim::odd']]],
+  ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a0dffef6e343b8a1992b369d99da4f395',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['amplitude_5fe',['amplitude_E',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a39906444f177ee975dd6e7d898b8431e',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['angle',['Angle',['../classgalsim_1_1_angle_unit.html#a56927f37f8ac54bad49addcb5cb4b202',1,'galsim::AngleUnit::Angle()'],['../classgalsim_1_1_angle.html#a096fad23663218375c9c1778e3637d1b',1,'galsim::Angle::Angle(double val, AngleUnit unit)'],['../classgalsim_1_1_angle.html#a7220ec2d0b6ec8269f1c165031d810a1',1,'galsim::Angle::Angle()'],['../classgalsim_1_1_angle.html#ae57a8a71db865c91f08f8223d22da51a',1,'galsim::Angle::Angle(const Angle &amp;rhs)']]],
   ['angle',['Angle',['../classgalsim_1_1_angle.html',1,'galsim']]],
   ['angle_2eh',['Angle.h',['../_angle_8h.html',1,'']]],
@@ -59,8 +62,8 @@ var searchData=
   ['arg',['arg',['../classgalsim_1_1_table_entry.html#ac4d6894055eea081c58317f6f45e5df7',1,'galsim::TableEntry']]],
   ['argmax',['argMax',['../classgalsim_1_1_table.html#a1d1681103498e27495a0f0f36e487620',1,'galsim::Table']]],
   ['argmin',['argMin',['../classgalsim_1_1_table.html#ae267cbd42e40d384f4c4bfcadbf64ae0',1,'galsim::Table']]],
-  ['assignabletoimage',['AssignableToImage',['../classgalsim_1_1_assignable_to_image.html#a12b0001f39d53e54781640b959dd07f2',1,'galsim::AssignableToImage::AssignableToImage(const Bounds&lt; int &gt; &amp;b)'],['../classgalsim_1_1_assignable_to_image.html#a46d9d81729dfd98c7fce05e1cf2b54f1',1,'galsim::AssignableToImage::AssignableToImage(const AssignableToImage&lt; T &gt; &amp;rhs)']]],
   ['assignabletoimage',['AssignableToImage',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
+  ['assignabletoimage',['AssignableToImage',['../classgalsim_1_1_assignable_to_image.html#a12b0001f39d53e54781640b959dd07f2',1,'galsim::AssignableToImage::AssignableToImage(const Bounds&lt; int &gt; &amp;b)'],['../classgalsim_1_1_assignable_to_image.html#a46d9d81729dfd98c7fce05e1cf2b54f1',1,'galsim::AssignableToImage::AssignableToImage(const AssignableToImage&lt; T &gt; &amp;rhs)']]],
   ['assignabletoimage_3c_20resulttype_3c_20t1_2c_20t2_20_3e_3a_3atype_20_3e',['AssignableToImage&lt; ResultType&lt; T1, T2 &gt;::type &gt;',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
   ['assignabletoimage_3c_20t1_20_3e',['AssignableToImage&lt; T1 &gt;',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
   ['assignabletoimage_3c_20t2_20_3e',['AssignableToImage&lt; T2 &gt;',['../classgalsim_1_1_assignable_to_image.html',1,'galsim']]],
@@ -73,8 +76,8 @@ var searchData=
   ['au',['AU',['../_astronomical_constants_8h.html#a2b9e1ccc1a034cb26b9c794767315346',1,'AstronomicalConstants.h']]],
   ['aux1',['Aux1',['../namespacegalsim_1_1integ.html#ae56e0dcacd34c36bb80734fc4dde4500',1,'galsim::integ']]],
   ['aux2',['Aux2',['../namespacegalsim_1_1integ.html#acf178943aa6339bac9307ae5c7747c59',1,'galsim::integ']]],
-  ['auxfunc1',['AuxFunc1',['../structgalsim_1_1integ_1_1_aux_func1.html',1,'galsim::integ']]],
   ['auxfunc1',['AuxFunc1',['../structgalsim_1_1integ_1_1_aux_func1.html#a027b3f87b06a7ed8bfe1ec2fef57964d',1,'galsim::integ::AuxFunc1']]],
+  ['auxfunc1',['AuxFunc1',['../structgalsim_1_1integ_1_1_aux_func1.html',1,'galsim::integ']]],
   ['auxfunc2',['AuxFunc2',['../structgalsim_1_1integ_1_1_aux_func2.html',1,'galsim::integ']]],
   ['auxfunc2',['AuxFunc2',['../structgalsim_1_1integ_1_1_aux_func2.html#a52990ad206e4f5acf10f3aa2e0f548b4',1,'galsim::integ::AuxFunc2']]]
 ];

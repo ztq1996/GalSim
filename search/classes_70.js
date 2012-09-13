@@ -10,6 +10,8 @@ var searchData=
   ['poissondeviate',['PoissonDeviate',['../classgalsim_1_1_poisson_deviate.html',1,'galsim']]],
   ['position',['Position',['../classgalsim_1_1_position.html',1,'galsim']]],
   ['position_3c_20double_20_3e',['Position&lt; double &gt;',['../classgalsim_1_1_position.html',1,'galsim']]],
+  ['powerspectrum',['PowerSpectrum',['../classgalsim_1_1lensing_1_1_power_spectrum.html',1,'galsim::lensing']]],
+  ['powerspectrumrealizer',['PowerSpectrumRealizer',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html',1,'galsim::lensing']]],
   ['pqindex',['PQIndex',['../classgalsim_1_1_p_q_index.html',1,'galsim']]],
   ['probabilitytree',['ProbabilityTree',['../classgalsim_1_1_probability_tree.html',1,'galsim']]],
   ['probabilitytree_3c_20interval_20_3e',['ProbabilityTree&lt; Interval &gt;',['../classgalsim_1_1_probability_tree.html',1,'galsim']]],

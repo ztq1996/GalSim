@@ -8,6 +8,7 @@ var searchData=
   ['integration_5fabserr',['integration_abserr',['../namespacegalsim_1_1sbp.html#ad7d09da0f3c6dc1b4683e0d7e2ff5cd4',1,'galsim::sbp']]],
   ['integration_5frelerr',['integration_relerr',['../namespacegalsim_1_1sbp.html#a3cde98875788cfb5a3ab4e6ab7a6b4c6',1,'galsim::sbp']]],
   ['interpolant',['interpolant',['../classgalsim_1_1base_1_1_atmospheric_p_s_f.html#a678e66e7ee01dd898cedee04e779bcb8',1,'galsim.base.AtmosphericPSF.interpolant()'],['../classgalsim_1_1base_1_1_optical_p_s_f.html#a6d47e031faa9a4b45fa70b9eac71c9e3',1,'galsim.base.OpticalPSF.interpolant()'],['../classgalsim_1_1base_1_1_real_galaxy.html#ab978e745e1577a6ddc8bc4477e8c1832',1,'galsim.base.RealGalaxy.interpolant()']]],
+  ['interpolantxy',['interpolantxy',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a4d29de91ab80d99c3ad4633ebca10167',1,'galsim::lensing::PowerSpectrum']]],
   ['interpolate',['interpolate',['../classgalsim_1_1_table.html#a720e17647a03c9e4e3b977a03c24049d',1,'galsim::Table']]],
   ['invariableinclination',['InvariableInclination',['../_astronomical_constants_8h.html#a54562f2c74a062048ae649081f96a45d',1,'AstronomicalConstants.h']]],
   ['invariablenode',['InvariableNode',['../_astronomical_constants_8h.html#a46b62d9c886c9d0af750dd17f36e9fab',1,'AstronomicalConstants.h']]],
