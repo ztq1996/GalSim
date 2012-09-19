@@ -25,7 +25,7 @@
    <div id="projectname">GalSim
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Simulating galaxy images for weak lensing system testing</div>
+   <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
  </tr>
  </tbody>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +81,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">GalSim Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h1>GalSim: The modular galaxy image simulation toolkit</h1>
+<p>For installation instructions, please see the file <code>INSTALL.md</code> in the main repository directory.</p>
+<p>There are tagged versions of the code corresponding to specific project releases and development milestones.</p>
+<p>If interested in code from before <code>v0.1</code>, the tagged milestone versions may be the best ones to try if you want a stable version with specific capabilities.</p>
+<p>(For more info on tags see the "Milestone tags" Section below and <code>docs/git.txt</code>)</p>
+<h2>How to get started</h2>
+<ol type="1">
+<li>We assume that all steps in <code>INSTALL.md</code> are complete.</li>
+<li>Optional, but recommended whenever you try a new version of the code: run the unit tests to make sure that there are no errors. You can do this by running <code>scons tests</code>.</li>
+<li>Optional: run <code>doxygen</code> to generate documentation, using <code>Doxyfile</code> in the main repository directory to specify all doxygen settings. You can alternatively view the documentation on GitHub at <a href="http://galsim-developers.github.com/GalSim/">http://galsim-developers.github.com/GalSim/</a></li>
+</ol>
+<h2>Demonstration scripts</h2>
+<p>Once these steps are completed, there are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These labelled <code>demo1.py</code>-<code>demo8.py</code></p>
+<p>As the project develops through further versions, and adds further capabilities to the software, further demo scripts will be added to <code>examples/</code> to illustrate and showcase what GalSim can do.</p>
+<h2>Reference documentation</h2>
+<p>For an overview of GalSim workflow and tools, please see <code>doc/GalSim_Quick_Reference.pdf</code> in the GalSim repository.</p>
+<p>For the Python GSObject classes used to describe astronomical objects, see <a class="el" href="namespacegalsim_1_1base.html">galsim.base</a> in the doxygen documentation.</p>
+<h2>Additional scripts</h2>
+<p>While the demo scripts can be run from the command-line while sitting in <code>examples/</code> without any arguments, the remaining scripts are auxiliary utilities that take various command-line arguments, which are always explained in comments at the top of the file.</p>
+<ul>
+<li><code>ShootInterpolated.py</code> is a script that takes as input a filename for a FITS image, which it will simulate (optionally sheared and/or resampled) via photon-shooting.</li>
+</ul>
+<ul>
+<li><code>MeasMoments.py</code> can be used to measure the adaptive moments (best-fit elliptical Gaussian) for a FITS image.</li>
+</ul>
+<ul>
+<li><code>MeasShape.py</code> can be used to carry out PSF correction using one of four methods, given FITS images of the galaxy and PSF.</li>
+</ul>
+<h2>Release and Milestone tags</h2>
+<p>After every GalSim release and development milestone we tag a snapshot of the code at that moment, with the tag name <code>vX.X</code> or <code>milestoneN</code> where N is the milestone number.</p>
+<p>You can see the available tags using the command </p>
+<pre class="fragment">git tag -l
+</pre><p>at terminal from within the repository.</p>
+<p>The version of the code at any given snapshot can then be checked out using the tag name, e.g.: </p>
+<pre class="fragment">$ git checkout milestone2
+</pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.) </p>
+</div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
 </body>

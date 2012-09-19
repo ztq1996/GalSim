@@ -3,6 +3,5 @@ var searchData=
   ['angle_2eh',['Angle.h',['../_angle_8h.html',1,'']]],
   ['angle_2epy',['angle.py',['../angle_8py.html',1,'']]],
   ['astronomicalconstants_2eh',['AstronomicalConstants.h',['../_astronomical_constants_8h.html',1,'']]],
-  ['atmosphere_2epy',['atmosphere.py',['../atmosphere_8py.html',1,'']]],
-  ['auto_5flink_2ehpp',['auto_link.hpp',['../auto__link_8hpp.html',1,'']]]
+  ['atmosphere_2epy',['atmosphere.py',['../atmosphere_8py.html',1,'']]]
 ];

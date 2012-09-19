@@ -25,7 +25,7 @@
    <div id="projectname">GalSim
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Simulating galaxy images for weak lensing system testing</div>
+   <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
  </tr>
  </tbody>
@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,27 +95,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">FFT.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Objects that make use of 2d FFT's in VERSION 3 of the FFTW package.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
 <code>#include &lt;deque&gt;</code><br/>
 <code>#include &lt;complex&gt;</code><br/>
 <code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
 <code>#include &quot;fftw3.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_std_8h_source.html">Std.h</a>&quot;</code><br/>
+<code>#include &quot;Std.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_interpolant_8h_source.html">Interpolant.h</a>&quot;</code><br/>
 </div>
 <p><a href="_f_f_t_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_error.html">galsim::FFTError</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_outof_range.html">galsim::FFTOutofRange</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_malloc.html">galsim::FFTMalloc</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_invalid.html">galsim::FFTInvalid</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_f_f_t_w___traits.html">galsim::FFTW_Traits&lt; T &gt;</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_f_f_t_w___traits_3_01std_1_1complex_3_01_t_01_4_01_4.html">galsim::FFTW_Traits&lt; std::complex&lt; T &gt; &gt;</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_f_f_t_w___array.html">galsim::FFTW_Array&lt; T &gt;</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_k_table.html">galsim::KTable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_k_table.html" title="KTable is a class holding the k-space representation of a real function.">KTable</a> is a class holding the k-space representation of a real function.  <a href="classgalsim_1_1_k_table.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_x_table.html">galsim::XTable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_x_table.html" title="XTable is a class holding a lookup table of a real 2-d function.">XTable</a> is a class holding a lookup table of a real 2-d function.  <a href="classgalsim_1_1_x_table.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Packages</h2></td></tr>
@@ -123,8 +122,42 @@ Packages</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a31cf42cfadcad3532fd00a3e5403f3ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a31cf42cfadcad3532fd00a3e5403f3ae">galsim::goodFFTSize</a> (int input)</td></tr>
+<tr class="memdesc:a31cf42cfadcad3532fd00a3e5403f3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper function that will return the smallest 2^n or 3x2^n value that is even and &gt;= the input integer.  <a href="#a31cf42cfadcad3532fd00a3e5403f3ae"></a><br/></td></tr>
 </table>
-</div><!-- contents -->
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Objects that make use of 2d FFT's in VERSION 3 of the FFTW package. </p>
+<p>Notes:</p>
+<ul>
+<li>Requires that the FFTW is set up to do double-precision.</li>
+</ul>
+<ul>
+<li>All tables have even dimensions (enforced on construction).</li>
+</ul>
+<ul>
+<li>The complex arrays (KTables) must be Hermitian, so transforms are real.</li>
+</ul>
+<ul>
+<li>All arrays are 0-indexed.</li>
+</ul>
+<ul>
+<li>FFTW arrays are stored in ROW-MAJOR order, meaning that in matrix notation, the most rapidly varying index is the last one. However in an "image" view of the array, we would label this as the x value that is increasing along rows. When doing real-to-complex transforms, the complex output contains (N/2+1) elements along this latter index, 0&lt;=j&lt;=N/2, and the j&lt;0 elements must be obtained via conjugation. Imaginary parts of 0 and N/2 are zero.</li>
+</ul>
+<ul>
+<li>This interface will assume an "image" based convention in which all access to real or complex elements is in (ix, iy) format, and ix will be the rapidly varying index, with the k-space arrays being half-sized in the x direction.</li>
+</ul>
+<ul>
+<li>**SO**: when filling arrays, make ix your inner loop. And provide only kx&gt;=0 to fill KTable.</li>
+</ul>
+<ul>
+<li>xTable arrays have indices -N/2 &lt;= ix,iy &lt; N/2. To store in FFTW arrays, which assume 0&lt;=j &lt; N, we add N/2 to indices before accessing FFTW arrays. This means that k values need to be multiplied by -1^(ix+iy) before/after transforms.</li>
+</ul>
+<ul>
+<li>kTable arrays can be accessed by -N/2 &lt;= jx, jy &lt;= N/2. FFTW puts DC at [0,0] element, so the code in this class changes negative input indices to wrap them properly, also considering that jx&lt;0 must be conjugated.</li>
+</ul>
+<ul>
+<li>"forward" transform, x-&gt;k, has -1 in exponent. </li>
+</ul>
+</div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
 </body>
