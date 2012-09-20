@@ -134,6 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae7956c43a3b82f40a5b5014fcf3653f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Real-space image pixel spacing that does not alias maxK.  <a href="#ae7956c43a3b82f40a5b5014fcf3653f0"></a><br/></td></tr>
 <tr class="memitem:a81e8f62302e15417bdd4a474b3f6fe55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55">stepK</a> () const </td></tr>
 <tr class="memdesc:a81e8f62302e15417bdd4a474b3f6fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling in k-space necessary to avoid folding too much of image in x space.  <a href="#a81e8f62302e15417bdd4a474b3f6fe55"></a><br/></td></tr>
+<tr class="memitem:a407cf518440b2c132364ccae9c98b613"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a407cf518440b2c132364ccae9c98b613">getGoodImageSize</a> (double dx, double wmult=1.) const </td></tr>
+<tr class="memdesc:a407cf518440b2c132364ccae9c98b613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine a good size for a drawn image based on dx and <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space.">stepK()</a>  <a href="#a407cf518440b2c132364ccae9c98b613"></a><br/></td></tr>
 <tr class="memitem:a752163179fa64df1b24d51cc13649b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d">isAxisymmetric</a> () const </td></tr>
 <tr class="memdesc:a752163179fa64df1b24d51cc13649b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is known to have rotational symmetry about x=y=0.  <a href="#a752163179fa64df1b24d51cc13649b7d"></a><br/></td></tr>
 <tr class="memitem:a3d9f16bb409318f98b5fafb2a577c1a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a3d9f16bb409318f98b5fafb2a577c1a9">hasHardEdges</a> () const </td></tr>
@@ -166,55 +168,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9e31ecd8ecf842abba08120cd8cb7e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of flux in positive photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94" title="Shoot photons through this SBProfile.">shoot()</a> is called.  <a href="#a9e31ecd8ecf842abba08120cd8cb7e82"></a><br/></td></tr>
 <tr class="memitem:a873e64397c04624cc8454f037f709dce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:a873e64397c04624cc8454f037f709dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return expectation value of absolute value of flux in negative photons from <a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94" title="Shoot photons through this SBProfile.">shoot()</a>  <a href="#a873e64397c04624cc8454f037f709dce"></a><br/></td></tr>
-<tr class="memitem:afe031448a5171eb5a884aa12c30fcc0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#afe031448a5171eb5a884aa12c30fcc0a">draw</a> (double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:afe031448a5171eb5a884aa12c30fcc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space.  <a href="#afe031448a5171eb5a884aa12c30fcc0a"></a><br/></td></tr>
+<tr class="memitem:aee82d2bd31b21f44465ee905366d3718"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aee82d2bd31b21f44465ee905366d3718"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718">drawShoot</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; image, double N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud, double gain=1., double max_extra_noise=0., bool poisson_flux=true) const </td></tr>
+<tr class="memdesc:aee82d2bd31b21f44465ee905366d3718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons.  <a href="#aee82d2bd31b21f44465ee905366d3718"></a><br/></td></tr>
+<tr class="memitem:a56a60e7942736380f45b82695ab2170c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a56a60e7942736380f45b82695ab2170c"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c">draw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; image, double gain=1., double wmult=1.) const </td></tr>
+<tr class="memdesc:a56a60e7942736380f45b82695ab2170c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space returning the summed flux.  <a href="#a56a60e7942736380f45b82695ab2170c"></a><br/></td></tr>
+<tr class="memitem:a4b3cc4cad1f119cc9ea95f3f78af9bb6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4b3cc4cad1f119cc9ea95f3f78af9bb6"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a4b3cc4cad1f119cc9ea95f3f78af9bb6">plainDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; image, double gain=1.) const </td></tr>
+<tr class="memdesc:a4b3cc4cad1f119cc9ea95f3f78af9bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values. For SBProfiles without an analytic real-space representation, an exception will be thrown.  <a href="#a4b3cc4cad1f119cc9ea95f3f78af9bb6"></a><br/></td></tr>
+<tr class="memitem:ac02be0d9d736b3a12d92f5c51518e398"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac02be0d9d736b3a12d92f5c51518e398"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ac02be0d9d736b3a12d92f5c51518e398">fourierDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; image, double gain=1., double wmult=1.) const </td></tr>
+<tr class="memdesc:ac02be0d9d736b3a12d92f5c51518e398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of Fourier transform from k space.  <a href="#ac02be0d9d736b3a12d92f5c51518e398"></a><br/></td></tr>
+<tr class="memitem:a0ddbb12c5a09580778548338d2b9ffeb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0ddbb12c5a09580778548338d2b9ffeb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb">drawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; im, double gain=1., double wmult=1.) const </td></tr>
+<tr class="memdesc:a0ddbb12c5a09580778548338d2b9ffeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space.  <a href="#a0ddbb12c5a09580778548338d2b9ffeb"></a><br/></td></tr>
+<tr class="memitem:a03ae250814e299f4a7b81b9320c5ba29"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a03ae250814e299f4a7b81b9320c5ba29"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a03ae250814e299f4a7b81b9320c5ba29">plainDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; im, double gain=1.) const </td></tr>
+<tr class="memdesc:a03ae250814e299f4a7b81b9320c5ba29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values.  <a href="#a03ae250814e299f4a7b81b9320c5ba29"></a><br/></td></tr>
+<tr class="memitem:a95bdbd701e35010b9cdb48134d931f10"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a95bdbd701e35010b9cdb48134d931f10"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a95bdbd701e35010b9cdb48134d931f10">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; im, double gain=1., double wmult=1.) const </td></tr>
+<tr class="memdesc:a95bdbd701e35010b9cdb48134d931f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space forcing the use of Fourier transform from real space.  <a href="#a95bdbd701e35010b9cdb48134d931f10"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae5a2125c390c01bcde7d8f9603134c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae5a2125c390c01bcde7d8f9603134c5e">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
 <tr class="memdesc:ae5a2125c390c01bcde7d8f9603134c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the range over which the profile is not trivially zero.  <a href="#ae5a2125c390c01bcde7d8f9603134c5e"></a><br/></td></tr>
 <tr class="memitem:a3fc25a15c465df01a218d99f0e6a262f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a3fc25a15c465df01a218d99f0e6a262f">getYRange</a> (double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
 <tr class="memitem:a607e4a0b179cf9d6d1039ce8b4b11c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a607e4a0b179cf9d6d1039ce8b4b11c26">getYRangeX</a> (double x, double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5fcf8dbc8eda34133533f14d712dda81"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5fcf8dbc8eda34133533f14d712dda81"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a5fcf8dbc8eda34133533f14d712dda81">drawShoot</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; img, double N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud, double dx=0., double gain=1., double noise=0., bool poisson_flux=true) const </td></tr>
-<tr class="memdesc:a5fcf8dbc8eda34133533f14d712dda81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> into <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by shooting photons.  <a href="#a5fcf8dbc8eda34133533f14d712dda81"></a><br/></td></tr>
-<tr class="memitem:a5efa18f64101619f6003851efc62cd13"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5efa18f64101619f6003851efc62cd13"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a5efa18f64101619f6003851efc62cd13">drawShoot</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;img, double N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud, double dx=0., double gain=1., double noise=0., bool poisson_flux=true) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a593f40548149c5089133491b9159680f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a593f40548149c5089133491b9159680f"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a593f40548149c5089133491b9159680f">draw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:a593f40548149c5089133491b9159680f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space returning the summed flux.  <a href="#a593f40548149c5089133491b9159680f"></a><br/></td></tr>
-<tr class="memitem:a79ef9d993937a46fd6a7686c3a835564"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a79ef9d993937a46fd6a7686c3a835564"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a79ef9d993937a46fd6a7686c3a835564">draw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a1b66a4931a8cc7270d1d63aaae89de8b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1b66a4931a8cc7270d1d63aaae89de8b"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a1b66a4931a8cc7270d1d63aaae89de8b">plainDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:a1b66a4931a8cc7270d1d63aaae89de8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values.  <a href="#a1b66a4931a8cc7270d1d63aaae89de8b"></a><br/></td></tr>
-<tr class="memitem:a2b312805aaa811d6854b5a91c55168b4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2b312805aaa811d6854b5a91c55168b4"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a2b312805aaa811d6854b5a91c55168b4">plainDraw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a85d241c7c3831f19e1e6305cf1891c1d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a85d241c7c3831f19e1e6305cf1891c1d"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a85d241c7c3831f19e1e6305cf1891c1d">fourierDraw</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:a85d241c7c3831f19e1e6305cf1891c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of Fourier transform from k space.  <a href="#a85d241c7c3831f19e1e6305cf1891c1d"></a><br/></td></tr>
-<tr class="memitem:ae08f555cbc462b68dc178014c4cbffec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae08f555cbc462b68dc178014c4cbffec"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae08f555cbc462b68dc178014c4cbffec">fourierDraw</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;image, double dx=0., double gain=1., int wmult=1) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ab70318bc5578c756aa083417790b1391"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab70318bc5578c756aa083417790b1391"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ab70318bc5578c756aa083417790b1391">drawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:ab70318bc5578c756aa083417790b1391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space.  <a href="#ab70318bc5578c756aa083417790b1391"></a><br/></td></tr>
-<tr class="memitem:ae97a524598c61a78d360371c8dfaedef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae97a524598c61a78d360371c8dfaedef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae97a524598c61a78d360371c8dfaedef">drawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8217099180df8bb3793b8c4b0e536fc5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8217099180df8bb3793b8c4b0e536fc5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a8217099180df8bb3793b8c4b0e536fc5">plainDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:a8217099180df8bb3793b8c4b0e536fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space forcing the use of k space methods where we have a formula for k values.  <a href="#a8217099180df8bb3793b8c4b0e536fc5"></a><br/></td></tr>
-<tr class="memitem:a67a6409905db75df4cea89dffe3c16c0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a67a6409905db75df4cea89dffe3c16c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a67a6409905db75df4cea89dffe3c16c0">plainDrawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ae11746c4a0016548135d020df502256a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae11746c4a0016548135d020df502256a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae11746c4a0016548135d020df502256a">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
-<tr class="memdesc:ae11746c4a0016548135d020df502256a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space forcing the use of Fourier transform from real space.  <a href="#ae11746c4a0016548135d020df502256a"></a><br/></td></tr>
-<tr class="memitem:a39de0f82c3d589f2c0e3529c44df7027"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a39de0f82c3d589f2c0e3529c44df7027"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a39de0f82c3d589f2c0e3529c44df7027">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;re, <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;im, double dk=0., double gain=1., int wmult=1) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Surface Brightness Profile for the Airy disk (perfect diffraction-limited PSF for a circular aperture), with central obscuration. </p>
@@ -489,59 +468,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe031448a5171eb5a884aa12c30fcc0a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt;float&gt; galsim::SBProfile::draw </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space. </p>
-<p>The draw method produces a 2d sampled rendering of a given <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> using the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> class. A square image will be drawn which is big enough to avoid "folding." If drawing is done using FFT, as is the case for SBProfiles for which isAnalyticX is false, then the image size will be scaled up to a power of 2, or 3x2^n, whichever fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. The default <a class="el" href="classgalsim_1_1_s_b_profile.html#afe031448a5171eb5a884aa12c30fcc0a" title="Draw an image of the SBProfile in real space.">draw()</a> routines decide internally whether image can be drawn directly in real space or needs to be done via FFT from k space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>image (as ImageViewF; if another type is preferred, then use the draw method that takes an image as argument) </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a593f40548149c5089133491b9159680f"></a>
+<a class="anchor" id="a56a60e7942736380f45b82695ab2170c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -553,14 +480,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">double galsim::SBProfile::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -571,8 +492,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -588,13 +509,13 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Draw the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space returning the summed flux. </p>
-<p>If the input image <code>img</code> is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (not <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>) and has null dimension, a square image will be drawn which is big enough to avoid "folding." If drawing is done using FFT, it will be scaled up to a power of 2, or 3x2^n, whichever fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. The default <a class="el" href="classgalsim_1_1_s_b_profile.html#afe031448a5171eb5a884aa12c30fcc0a" title="Draw an image of the SBProfile in real space.">draw()</a> routines decide internally whether image can be drawn directly in real space or needs to be done via FFT from k space. Note that if you give an input image, its origin may be redefined by the time it comes back. The image is not cleared out before drawing. So this profile will be added to anything already on the input image.</p>
+<p>The image will be drawn on the provided <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>, although for an FFT draw method, the k-image may be calculated internally on a larger grid to avoid folding. The default <a class="el" href="classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c" title="Draw the SBProfile in real space returning the summed flux.">draw()</a> routines decide internally whether image can be drawn directly in real space or needs to be done via FFT from k space.</p>
+<p>The image is not cleared out before drawing. So this profile will be added to anything already on the input image.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>If desired, a scaling to make intermediate images larger than normal. (default <code>wmult</code> = 1)</td></tr>
   </table>
   </dd>
 </dl>
@@ -602,55 +523,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a79ef9d993937a46fd6a7686c3a835564"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab70318bc5578c756aa083417790b1391"></a>
+<a class="anchor" id="a0ddbb12c5a09580778548338d2b9ffeb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -662,20 +535,14 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void galsim::SBProfile::drawK </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>re</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>im</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -686,8 +553,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -706,72 +573,17 @@ template&lt;typename T &gt; </div>
 <p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." If drawing is done using FFT, they will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>If desired, a scaling to make intermediate images larger than normal. (default <code>wmult</code> = 1) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ae97a524598c61a78d360371c8dfaedef"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::drawK </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>re</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>im</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5fcf8dbc8eda34133533f14d712dda81"></a>
+<a class="anchor" id="aee82d2bd31b21f44465ee905366d3718"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -784,7 +596,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">double galsim::SBProfile::drawShoot </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -802,19 +614,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>noise</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>max_extra_noise</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -841,12 +647,11 @@ template&lt;typename T &gt; </div>
 <p>It is important to remember that the <code><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a></code> produced by <code>drawShoot</code> represents the <code><a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a></code> <em>as convolved with the square <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel.</em> So do not expect an exact match, even in the limit of large photon number, between the outputs of <code>draw</code> and <code>drawShoot</code>. You should convolve the <code><a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a></code> with an <code>SBBox(dx)</code> in order to match what will be produced by <code>drawShoot</code> onto an image with pixel scale <code>dx</code>.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to draw on. Note: Unlike for the regular draw command, image is a required parameter. drawShoot will not make the image for you. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Total number of photons to produce. N is input as a double so that very large values of N don't have to worry about overflowing int on systems with a small MAX_INT. Internally it will be rounded to the nearest integer. If N=0, use as many photons as necessary to end up with an image with the correct poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to N = flux. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ud</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> that will be used to draw photons from distribution. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dx</code> Given <code>dx=0.</code> default, routine will take dx from the image scale. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per photon. (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if N=0, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full N = flux. Essentially each shot photon can have a flux &gt; 1. Then extra poisson noise is added after the fact. The noise parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this would be noise = sky_level / 100 where sky_level is the flux per pixel due to the sky. Note that this uses a "variance" definition of noise, not a "sigma" definition. (default <code>noise = 0.</code>) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if N=0, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full N = flux. Essentially each shot photon can have a flux &gt; 1. Then extra poisson noise is added after the fact. The max_extra_noise parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this would be max_extra_noise = sky_level / 100 where sky_level is the flux per pixel due to the sky. Note that this uses a "variance" definition of noise, not a "sigma" definition. (default <code>max_extra_noise = 0.</code>) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>N</code> samples (default <code>poisson_flux = true</code>). </td></tr>
   </table>
   </dd>
@@ -856,73 +661,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5efa18f64101619f6003851efc62cd13"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::drawShoot </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>N</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a>&#160;</td>
-          <td class="paramname"><em>ud</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>noise</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>poisson_flux</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a85d241c7c3831f19e1e6305cf1891c1d"></a>
+<a class="anchor" id="ac02be0d9d736b3a12d92f5c51518e398"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -934,14 +673,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">double galsim::SBProfile::fourierDraw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -952,8 +685,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -969,13 +702,13 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of Fourier transform from k space. </p>
-<p>If the input image is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and has null dimension, a square image will be drawn which is big enough to avoid "folding." Drawing is done using FFT, and the image will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
+<p>The image will be drawn on the provided <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>, although the k-image may be calculated internally on a larger grid to avoid folding. The FFT image will also be scaled up to either a power of 2 or 3 x a power of 2, whichever fits.</p>
+<p>The image is not cleared out before drawing. So this profile will be added to anything already on the input image.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI or views) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>If desired, a scaling to make intermediate images larger than normal. (default <code>wmult</code> = 1)</td></tr>
   </table>
   </dd>
 </dl>
@@ -983,55 +716,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae08f555cbc462b68dc178014c4cbffec"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::fourierDraw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae11746c4a0016548135d020df502256a"></a>
+<a class="anchor" id="a95bdbd701e35010b9cdb48134d931f10"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1043,20 +728,14 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void galsim::SBProfile::fourierDrawK </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>re</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>im</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1067,8 +746,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1087,68 +766,13 @@ template&lt;typename T &gt; </div>
 <p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Drawing is done using FFT, and the images will be scaled up to a power of 2, or 3x2^n, whicher fits. If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding in real space. Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>If desired, a scaling to make intermediate images larger than normal. (default <code>wmult</code> = 1) </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a39de0f82c3d589f2c0e3529c44df7027"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::fourierDrawK </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>re</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>im</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1174,6 +798,51 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a407cf518440b2c132364ccae9c98b613"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::SBProfile::getGoodImageSize </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine a good size for a drawn image based on dx and <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space.">stepK()</a> </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>The pixel scale of the image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>If desired, a scaling to make the image larger than normal. (default <code>wmult</code> = 1)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>the recommended image size.</dd></dl>
+<p>The basic formula is 2pi * wmult / (dx * <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space.">stepK()</a>) But then we round up to the next even integer value. </p>
 
 </div>
 </div>
@@ -1581,7 +1250,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1b66a4931a8cc7270d1d63aaae89de8b"></a>
+<a class="anchor" id="a4b3cc4cad1f119cc9ea95f3f78af9bb6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1593,26 +1262,14 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">double galsim::SBProfile::plainDraw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>gain</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1627,14 +1284,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values. </p>
-<p>If the input image is an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and has null dimension, a square image will be drawn which is big enough to avoid "folding." If input image has finite dimensions then these will be used, although in an FFT the image may be calculated internally on a larger grid to avoid folding. Note that if you give an input image, its origin may be redefined by the time it comes back. For SBProfiles without an analytic real-space representation, an exception will be thrown.</p>
+<p>Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in real space forcing the use of real methods where we have a formula for x values. For SBProfiles without an analytic real-space representation, an exception will be thrown. </p>
+<p>The image is not cleared out before drawing. So this profile will be added to anything already on the input image.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageF, ImageD, ImageS, ImageI or views) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dx</code>; given <code>dx=0.</code> default, routine will choose <code>dx</code> to be at least fine enough for Nyquist sampling at <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected.">maxK()</a></code>. If you specify dx, image will be drawn with this <code>dx</code> and you will receive an image with the aliased frequencies included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will draw an image that is <code>wmult</code> times larger than the default choice, i.e. it will have finer sampling in k space and have less folding. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>(any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.)</td></tr>
   </table>
   </dd>
 </dl>
@@ -1642,55 +1297,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2b312805aaa811d6854b5a91c55168b4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::SBProfile::plainDraw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8217099180df8bb3793b8c4b0e536fc5"></a>
+<a class="anchor" id="a03ae250814e299f4a7b81b9320c5ba29"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1702,32 +1309,20 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void galsim::SBProfile::plainDrawK </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>re</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>im</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>gain</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1746,68 +1341,12 @@ template&lt;typename T &gt; </div>
 <p>For drawing in k space: routines are analagous to real space, except 2 images are needed since the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is complex. If the input images are <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s and have null dimension, square images will be drawn which are big enough to avoid "folding." Note that if you give an input image, its origin may be redefined by the time it comes back.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageF, ImageD, ImageS, ImageI or views). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dk</td><td>grid on which <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is drawn has pitch <code>dk</code>; given <code>dk=0.</code> default, routine will choose <code>dk</code> necessary to avoid folding of image in real space. If you specify <code>dk</code>, image will be drawn with this <code>dk</code> and you will receive an image with folding artifacts included. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of ADU to draw per "photon". (default <code>gain</code> = 1.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wmult</td><td>specifying <code>wmult&gt;1</code> will expand the size drawn in k space. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">re</td><td>image of real argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">im</td><td>image of imaginary argument of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space (any of ImageViewF, ImageViewD, ImageViewS, ImageViewI) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Number of photons per ADU. (default <code>gain</code> = 1.) </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a67a6409905db75df4cea89dffe3c16c0"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::plainDrawK </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>re</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>im</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dk</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1903,7 +1442,7 @@ template&lt;typename T &gt; </div>
 <p>Objects with regions of negative flux will result in creation of photons with negative flux. Absolute value of negative photons' flux should be nearly equal to the standard flux of positive photons. Shot-noise fluctuations between the number of positive and negative photons will produce noise in the total net flux carried by the output <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a>.</p>
 <p>The typical implementation will be to take the integral of the absolute value of flux, and divide it nearly equally into N photons. The photons are then drawn from the distribution of the <em>absolute value</em> of flux. If a photon is drawn from a region of negative flux, then that photon's flux is negated. Because of cancellation, this means that each photon will carry more than <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a>/N</code> flux if there are negative-flux regions in the object. It also means that during convolution, addition, or interpolation, positive- and negative-flux photons can be contributing to the same region of the image. Their cancellation means that the shot noise may be substantially higher than you would expect if you had only positive-flux photons.</p>
 <p>The photon flux may also vary slightly as a means of speeding up photon-shooting, as an alternative to rejection sampling. See <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code> documentation.</p>
-<p>It should be rare to use this method or any <code><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a></code> in user code - the method <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a5fcf8dbc8eda34133533f14d712dda81" title="Draw this SBProfile into Image by shooting photons.">drawShoot()</a></code> will more typically put the results directly into an image.</p>
+<p>It should be rare to use this method or any <code><a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a></code> in user code - the method <code><a class="el" href="classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718" title="Draw this SBProfile into Image by shooting photons.">drawShoot()</a></code> will more typically put the results directly into an image.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Total number of photons to produce. </td></tr>
