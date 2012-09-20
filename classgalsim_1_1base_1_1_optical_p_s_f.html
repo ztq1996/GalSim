@@ -187,9 +187,10 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Class describing aberrated PSFs due to telescope optics, which has an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute. </p>
 <p>Input aberration coefficients are assumed to be supplied in units of incident light wavelength, and correspond to the conventions adopted here: <a href="http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations">http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations</a></p>
 <h2>Initialization</h2>
-<pre class="fragment">optical_psf = galsim.OpticalPSF(lam_over_diam, defocus=0., astig1=0., astig2=0., coma1=0.,
-                                coma2=0., spher=0., circular_pupil=True, obscuration=0.,
-                                interpolant=None, oversampling=1.5, pad_factor=1.5)
+<pre class="fragment">&gt;&gt;&gt; optical_psf = galsim.OpticalPSF(lam_over_diam, defocus=0., astig1=0., astig2=0.,
+                                    coma1=0., coma2=0., spher=0., circular_pupil=True,
+                                    obscuration=0., interpolant=None, oversampling=1.5,
+                                    pad_factor=1.5)
 </pre><p>Initializes optical_psf as a galsim.OpticalPSF() instance.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">

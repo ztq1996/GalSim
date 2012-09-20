@@ -358,7 +358,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the MTF of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
-<p>MTF array element ordering follows the DFT standard of kxky(array_shape), and has mtf[0, 0] = 1 by default.</p>
+<p>MTF array element ordering follows the DFT standard of kxky(array_shape), and has mtf[0, 0] = 1 by default. The scale of the output ImageViewD is correct in k space units.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
@@ -561,7 +561,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the complex OTF of a circular (default) or square pupil with low-order aberrations as a (real, imag) tuple of ImageViewD objects rather than a complex numpy array. </p>
-<p>OTF array element ordering follows the DFT standard of kxky(array_shape), and has otf[0, 0] = 1+0j by default.</p>
+<p>OTF array element ordering follows the DFT standard of kxky(array_shape), and has otf[0, 0] = 1+0j by default. The scale of the output ImageViewD is correct in k space units.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
@@ -981,7 +981,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the PTF [radians] of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
-<p>PTF array element ordering follows the DFT standard of kxky(array_shape), and has ptf[0, 0] = 0. by default.</p>
+<p>PTF array element ordering follows the DFT standard of kxky(array_shape), and has ptf[0, 0] = 0. by default. The scale of the output ImageViewD is correct in k space units.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
@@ -1188,7 +1188,7 @@ Functions</h2></td></tr>
 <p>Return wavefront as a (real, imag) tuple of ImageViewD objects rather than complex numpy array. </p>
 <p>Outputs a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/diam = lam_over_diam on an output grid of spacing dx.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
-<p>The pupil sample locations are arranged in standard DFT element ordering format, so that (kx, ky) = (0, 0) is the [0, 0] array element.</p>
+<p>The pupil sample locations are arranged in standard DFT element ordering format, so that (kx, ky) = (0, 0) is the [0, 0] array element. The scale of the output ImageViewD is correct in k space units.</p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the definitions given here: <a href="http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations">http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations</a></p>
 <h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
