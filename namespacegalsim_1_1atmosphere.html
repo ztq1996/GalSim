@@ -137,12 +137,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the atmospheric modulation transfer function for long exposures with Kolmogorov turbulence as a numpy array. </p>
-<h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends weakly on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
+    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted for dx (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends weakly on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -180,12 +179,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the atmospheric modulation transfer function for long exposures with Kolmogorov turbulence as an ImageViewD. </p>
-<h2>Parameters</h2>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted. for lam_over_r0.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends weakly on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
+    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted for dx (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends weakly on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -229,12 +228,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return numpy array containing long exposure Kolmogorov PSF. </p>
-<h2>Parameters</h2>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
+    <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted for dx (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends on wavelength [r0 ~ lambda^(-6/5)]. </td></tr>
     <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.] </td></tr>
   </table>
   </dd>
@@ -279,7 +277,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return long exposure Kolmogorov PSF as an ImageViewD. </p>
-<h2>Parameters</h2>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted. for lam_over_diam.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for the array view of the ImageViewD. </td></tr>

@@ -105,7 +105,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7610b43ada559be609e79226c7b3d5f3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#a7610b43ada559be609e79226c7b3d5f3">__init__</a></td></tr>
-<tr class="memdesc:a7610b43ada559be609e79226c7b3d5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create NFW halo.  <a href="#a7610b43ada559be609e79226c7b3d5f3"></a><br/></td></tr>
 <tr class="memitem:a1188caf331470ee2ca2e634e6d208eac"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#a1188caf331470ee2ca2e634e6d208eac">getShear</a></td></tr>
 <tr class="memdesc:a1188caf331470ee2ca2e634e6d208eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate (reduced) shear of halo at specified positions.  <a href="#a1188caf331470ee2ca2e634e6d208eac"></a><br/></td></tr>
 <tr class="memitem:aa10b61fa8e53b07996f1aa966815f333"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#aa10b61fa8e53b07996f1aa966815f333">getConvergence</a></td></tr>
@@ -125,7 +124,18 @@ Public Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for NFW halos. </p>
 <p>Compute the lensing fields shear and convergence of a NFW halo of given mass, concentration, redshift, assuming <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a>. No mass-concentration relation is employed.</p>
-<p>Based on Matthias Bartelmann's libastro. </p>
+<p>Based on Matthias Bartelmann's libastro.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mass</td><td>Mass defined using a spherical overdensity of 200 times the critical density of the universe, in units of M_solar/h. </td></tr>
+    <tr><td class="paramname">conc</td><td>Concentration parameter, i.e., ratio of virial radius to NFW scale radius. </td></tr>
+    <tr><td class="paramname">z</td><td>Redshift </td></tr>
+    <tr><td class="paramname">pos_x</td><td>X-coordinate [arcsec] </td></tr>
+    <tr><td class="paramname">pos_y</td><td>Y-coordinate [arcsec] </td></tr>
+    <tr><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7610b43ada559be609e79226c7b3d5f3"></a>
 <div class="memitem">
@@ -181,19 +191,6 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create NFW halo. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>Mass defined using a spherical overdensity of 200 times the critical density of the universe, in units of M_solar/h. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">conc</td><td>Concentration parameter, i.e., ratio of virial radius to NFW scale radius </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>Redshift </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_x</td><td>X-coordinate [arcsec] </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_y</td><td>Y-coordinate [arcsec] </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> instance </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
@@ -242,10 +239,10 @@ Public Attributes</h2></td></tr>
 <p>Calculate convergence of halo at specified positions. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_x</td><td>X-coordinate(s) of the source, input as a Numpy array. This is assumed to be post-lensing! </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_y</td><td>Y-coordinate(s) of the source, input as a Numpy array. This is assumed to be post-lensing! </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">units</td><td>Units of coordinates (only arcsec implemented so far). </td></tr>
+    <tr><td class="paramname">pos_x</td><td>X-coordinate(s) of the source, input as a Numpy array. This is assumed to be post-lensing! </td></tr>
+    <tr><td class="paramname">pos_y</td><td>Y-coordinate(s) of the source, input as a Numpy array. This is assumed to be post-lensing! </td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
+    <tr><td class="paramname">units</td><td>Units of coordinates (only arcsec implemented so far). </td></tr>
   </table>
   </dd>
 </dl>
@@ -304,15 +301,15 @@ Public Attributes</h2></td></tr>
 <p>Calculate (reduced) shear of halo at specified positions. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_x</td><td>X-coordinate(s) of the source, input as a numpy array. This is assumed to be post-lensing! </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos_y</td><td>Y-coordinate(s) of the source, input as a numpy array. This is assumed to be post-lensing! </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">units</td><td>Units of coordinates (only arcsec implemented so far). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reduced</td><td>Whether reduced shears are returned </td></tr>
+    <tr><td class="paramname">pos_x</td><td>X-coordinate(s) of the source, input as a numpy array. This is assumed to be post-lensing! </td></tr>
+    <tr><td class="paramname">pos_y</td><td>Y-coordinate(s) of the source, input as a numpy array. This is assumed to be post-lensing! </td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
+    <tr><td class="paramname">units</td><td>Units of coordinates (only arcsec implemented so far). </td></tr>
+    <tr><td class="paramname">reduced</td><td>Whether reduced shears are returned. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>g1,g2 Numpy arrays containing the two shear components g_1 and g_2 at the specified position(s) </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>g1,g2 Numpy arrays containing the two shear components g_1 and g_2 at the specified position(s). </dd></dl>
 
 </div>
 </div>

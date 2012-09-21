@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A class storing the data from an input catalog where each row corresponds to a different object to be built, and each column stores some item of information about that object (e.g.  
+<p>A class storing the data from an input catalog.  
  <a href="classgalsim_1_1io_1_1_input_catalog.html#details">More...</a></p>
 
 <p><a href="classgalsim_1_1io_1_1_input_catalog-members.html">List of all members.</a></p>
@@ -117,8 +117,17 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1db0535e9fb3904ba71207dbba553180"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1io_1_1_input_catalog.html#a1db0535e9fb3904ba71207dbba553180">data</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>A class storing the data from an input catalog where each row corresponds to a different object to be built, and each column stores some item of information about that object (e.g. </p>
-<p>flux or half_light_radius). </p>
+<div class="textblock"><p>A class storing the data from an input catalog. </p>
+<p>Each row corresponds to a different object to be built, and each column stores some item of information about that object (e.g. flux or half_light_radius).</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Filename of the input catalog. (Required) </td></tr>
+    <tr><td class="paramname">dir</td><td>Directory catalog is in. </td></tr>
+    <tr><td class="paramname">file_type</td><td>Either 'ASCII' (currently the only, default, option) or (soon) 'FITS'. (TODO: default = determine from extension or, if that fails, ASCII) </td></tr>
+    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog. (default='#'). </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6ad6e33d0d50bde95381f9d4e55f7505"></a>
 <div class="memitem">
@@ -161,15 +170,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file_name</td><td>Filename of the input catalog. (Required) </td></tr>
-    <tr><td class="paramname">dir</td><td>Directory catalog is in. (default = .) </td></tr>
-    <tr><td class="paramname">file_type</td><td>Either 'ASCII' (currently the only, default, option) or (soon) 'FITS'. (TODO: default = determine from extension or, if that fails, ASCII) </td></tr>
-    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog. (default='#'). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

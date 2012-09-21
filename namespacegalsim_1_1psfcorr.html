@@ -201,20 +201,19 @@ Example usage:
 <div class="line">         <span class="keywordflow">if</span> result.error_message != <span class="stringliteral">&quot;&quot;</span>:</div>
 <div class="line">             n_fail += 1</div>
 <div class="line">     <span class="keywordflow">print</span> <span class="stringliteral">&quot;Number of failures: &quot;</span>, n_fail</div>
-</div><!-- fragment --><h2>Parameters</h2>
-<dl class="params"><dt>Parameters:</dt><dd>
+</div><!-- fragment --><dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> of the galaxy being measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the PSF </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default 0. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default REGAUSS. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>A flag determining various aspects of the shape measurement process (only necessary for REGAUSS); default 0xe. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig_gal</td><td>Optional argument with an initial guess for the Gaussian sigma of the galaxy, default 5.0 (pixels). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig_PSF</td><td>Optional argument with an initial guess for the Gaussian sigma of the PSF, default 3.0 (pixels). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strict</td><td>If True (default), then there will be a run-time exception if shear estimation fails. If set to False, then information about failures will be silently stored in the output HSMShapeData object. </td></tr>
+    <tr><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> of the galaxy being measured. </td></tr>
+    <tr><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the PSF. </td></tr>
+    <tr><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default 0. </td></tr>
+    <tr><td class="paramname">*shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default REGAUSS. </td></tr>
+    <tr><td class="paramname">flags</td><td>A flag determining various aspects of the shape measurement process (only necessary for REGAUSS); default 0xe. </td></tr>
+    <tr><td class="paramname">guess_sig_gal</td><td>Optional argument with an initial guess for the Gaussian sigma of the galaxy, default 5.0 (pixels). </td></tr>
+    <tr><td class="paramname">guess_sig_PSF</td><td>Optional argument with an initial guess for the Gaussian sigma of the PSF, default 3.0 (pixels). </td></tr>
+    <tr><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
+    <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
+    <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
+    <tr><td class="paramname">strict</td><td>If True (default), then there will be a run-time exception if shear estimation fails. If set to False, then information about failures will be silently stored in the output HSMShapeData object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -294,12 +293,12 @@ ImageView class.  Example usage:
 <div class="line">     <span class="keywordflow">print</span> <span class="stringliteral">&quot;Number of failures: &quot;</span>, n_fail</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the object being measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object, default 5.0 (pixels). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strict</td><td>If True (default), then there will be a run-time exception when moment measurement fails. If set to False, then information about failures will be silently stored in the output HSMShapeData object. </td></tr>
+    <tr><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the object being measured. </td></tr>
+    <tr><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object, default 5.0 (pixels). </td></tr>
+    <tr><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
+    <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
+    <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
+    <tr><td class="paramname">strict</td><td>If True (default), then there will be a run-time exception when moment measurement fails. If set to False, then information about failures will be silently stored in the output HSMShapeData object. </td></tr>
   </table>
   </dd>
 </dl>

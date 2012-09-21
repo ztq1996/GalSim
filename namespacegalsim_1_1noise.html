@@ -137,11 +137,9 @@ Functions</h2></td></tr>
 </blockquote>
 <pre class="fragment"> Noise following supplied model will be added to the image.
 
- Parameters
- ----------
- @param[in,out]  image  The image on which to add the noise.
- @param[in,out]  noise  Instantiated noise model (currently CCDNoise, UniformDeviate,
-                        BinomialDeviate, GaussianDeviate and PoissonDeviate are supported).
+ @param  image  The image on which to add the noise.
+ @param  noise  Instantiated noise model (currently CCDNoise, UniformDeviate, BinomialDeviate,
+                GaussianDeviate and PoissonDeviate are supported).
 
  If the supplied noise model object does not have an applyTo() method, then this will raise an
  AttributeError exception.</pre> 
