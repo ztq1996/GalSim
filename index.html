@@ -82,22 +82,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>GalSim: The modular galaxy image simulation toolkit</h1>
+<p>GalSim is open-source software for simulating images of astronomical objects (stars, galaxies) in a variety of ways. The bulk of the calculations are carried out in C++, and the user interface is in python. In addition, the code can operate directly on "config" files, for those users who prefer not to work in python. The code is being developed as a collaborative project for the upcoming weak lensing community data challenge, GREAT3 (<a href="http://great3challenge.info/">http://great3challenge.info/</a>), though it has additional capabilities beyond those needed for the challenge. At the end of this file, there is a list of the code capabilities and plans for future development.</p>
+<h2>Distribution</h2>
+<p>Please feel free to fork this repository at any time. However, please be aware that the code is still actively being developed and tested (hence the current version number is v0.1). The release of v1.0 in mid-2013 will be accompanied with a publication that users should cite.</p>
+<h2>How to communicate with the GalSim developers</h2>
+<p>If you have any comments, questions, or suggestions, please open up an Issue on our GitHub repository:</p>
+<p><a href="https://github.com/GalSim-developers/GalSim/issues?state=open">https://github.com/GalSim-developers/GalSim/issues?state=open</a></p>
+<p>Alternatively, if you prefer e-mail, then you can find contact information on the GREAT3 webpage linked above.</p>
+<h2>Installation</h2>
 <p>For installation instructions, please see the file <code>INSTALL.md</code> in the main repository directory.</p>
-<p>There are tagged versions of the code corresponding to specific project releases and development milestones.</p>
-<p>If interested in code from before <code>v0.1</code>, the tagged milestone versions may be the best ones to try if you want a stable version with specific capabilities.</p>
-<p>(For more info on tags see the "Milestone tags" Section below and <code>docs/git.txt</code>)</p>
-<h2>How to get started</h2>
-<ol type="1">
-<li>We assume that all steps in <code>INSTALL.md</code> are complete.</li>
-<li>Optional, but recommended whenever you try a new version of the code: run the unit tests to make sure that there are no errors. You can do this by running <code>scons tests</code>.</li>
-<li>Optional: run <code>doxygen</code> to generate documentation, using <code>Doxyfile</code> in the main repository directory to specify all doxygen settings. You can alternatively view the documentation on GitHub at <a href="http://galsim-developers.github.com/GalSim/">http://galsim-developers.github.com/GalSim/</a></li>
-</ol>
-<h2>Demonstration scripts</h2>
-<p>Once these steps are completed, there are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These labelled <code>demo1.py</code>-<code>demo8.py</code></p>
-<p>As the project develops through further versions, and adds further capabilities to the software, further demo scripts will be added to <code>examples/</code> to illustrate and showcase what GalSim can do.</p>
+<p>There are tagged versions of the code corresponding to specific project releases and development milestones, including v0.1 and several earlier milestones. (For more info, see the "Tagged versions" section below, and <code>devel/git.txt</code>)</p>
+<h2>Getting started</h2>
+<ul>
+<li>Install the code as in <code>INSTALL.md</code>.</li>
+</ul>
+<ul>
+<li>Optional, but recommended whenever you try a new version of the code: run the unit tests to make sure that there are no errors. You can do this by running <code>scons tests</code>. If there are any issues, please open an Issue on our GitHub page.</li>
+</ul>
+<ul>
+<li>Optional: run <code>doxygen</code> to generate documentation, using <code>Doxyfile</code> in the main repository directory to specify all doxygen settings. You can alternatively view the documentation online at <a href="http://galsim-developers.github.com/GalSim/">http://galsim-developers.github.com/GalSim/</a></li>
+</ul>
 <h2>Reference documentation</h2>
-<p>For an overview of GalSim workflow and tools, please see <code>doc/GalSim_Quick_Reference.pdf</code> in the GalSim repository.</p>
-<p>For the Python GSObject classes used to describe astronomical objects, see <a class="el" href="namespacegalsim_1_1base.html">galsim.base</a> in the doxygen documentation.</p>
+<p>For an overview of GalSim workflow and python tools, please see <code>doc/GalSim_Quick_Reference.pdf</code> in the GalSim repository. A guide to using the configuration files to generate simulations, a FAQ for installation issues, and other useful references can be found on the GalSim wiki,</p>
+<p><a href="https://github.com/GalSim-developers/GalSim/wiki">https://github.com/GalSim-developers/GalSim/wiki</a></p>
+<p>More thorough documentation for all parts of the code can be found in the doxygen documentation mentioned in the previous section, or in the python docstrings in <code>galsim/*.py</code>.</p>
+<h2>Repository directory structure</h2>
+<p>The repository has a number of subdirectories. Below is a guide to their contents:</p>
+<ul>
+<li>bin/ : executables (after the compilation procedure is done).</li>
+<li>devel/ : an assortment of developer tools.</li>
+<li>doc/ : documentation, including a <code>Quick Reference</code> guide and, if the user generates doxygen documentation using Doxyfile, the outputs will also go in this directory.</li>
+<li>examples/ : example scripts (see the following section).</li>
+<li>galsim/ : the python code for GalSim (which is what most end-users interact with).</li>
+<li>include/ : the .h header files for the C++ parts of GalSim.</li>
+<li>lib/ : compiled libraries (after the compilation procedure is done).</li>
+<li>pysrc/ : the code that makes the purely C++ parts of GalSim accessible to the python layer of GalSim.</li>
+<li>src/ : the source code for the purely C++ parts of GalSim.</li>
+<li>tests/ : unit tests.</li>
+</ul>
+<h2>Demonstration scripts</h2>
+<p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>-<code>demo8.py</code>, and can be run either using (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, or by doing <code>scons examples</code> and then using the executable <code>bin/demo1</code>. A completely parallel sequence of configuration scripts, <code>demo1.yaml</code>-<code>demo8.yaml</code>, demonstrates how to make the same set of simulations using config scripts that can be input to <code>bin/galsim_yaml</code>. As the project develops through further versions, and adds further capabilities to the software, more demo scripts will be added to <code>examples/</code> to illustrate what GalSim can do.</p>
 <h2>Additional scripts</h2>
 <p>While the demo scripts can be run from the command-line while sitting in <code>examples/</code> without any arguments, the remaining scripts are auxiliary utilities that take various command-line arguments, which are always explained in comments at the top of the file.</p>
 <ul>
@@ -109,14 +133,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <ul>
 <li><code>MeasShape.py</code> can be used to carry out PSF correction using one of four methods, given FITS images of the galaxy and PSF.</li>
 </ul>
-<h2>Release and Milestone tags</h2>
+<h2>Tagged versions</h2>
 <p>After every GalSim release and development milestone we tag a snapshot of the code at that moment, with the tag name <code>vX.X</code> or <code>milestoneN</code> where N is the milestone number.</p>
 <p>You can see the available tags using the command </p>
 <pre class="fragment">git tag -l
-</pre><p>at terminal from within the repository.</p>
+</pre><p>at a terminal from within the repository.</p>
 <p>The version of the code at any given snapshot can then be checked out using the tag name, e.g.: </p>
 <pre class="fragment">$ git checkout milestone2
-</pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.) </p>
+</pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.)</p>
+<h2>Summary of current capabilities</h2>
+<p>Currently, GalSim has the following capabilities:</p>
+<ul>
+<li>Can generate PSFs from a variety of simple parametric models and first-order optics.</li>
+</ul>
+<ul>
+<li>Can simulate galaxies from a variety of simple parametric models and based on HST training data. Some additional testing will be done in future versions to ensure that the treatment of the latter is sufficiently accurate to use for precision tests of shear.</li>
+</ul>
+<ul>
+<li>Can make the images either via i) Fourier transform / real-space convolution (real-space being occasionally faster than Fourier), and interpolation (for shearing); or via ii) photon-shooting. The exception is that simulations based on real galaxies images must be carried out using Fourier methods only.</li>
+</ul>
+<ul>
+<li>Can add uncorrelated noise using a variety of noise models.</li>
+</ul>
+<ul>
+<li>Can draw galaxy images into arbitrary locations within a larger image.</li>
+</ul>
+<ul>
+<li>It is possible to carry out nearly any simulation that a user might want using two parallel methods: directly using python code, or by specifying the simulation properties in an input configuration script.</li>
+</ul>
+<ul>
+<li>Constant shears and lensing magnifications can be applied to the galaxies.</li>
+</ul>
+<ul>
+<li>Non-constant shears and magnifications can be drawn from a shear field expected for an NFW profile dark matter halo (as for weak lensing by galaxy clusters). For gridded galaxy positions, lensing shears can be drawn randomly from a specified shear power spectrum.</li>
+</ul>
+<h2>Summary of planned future development</h2>
+<p>In addition to carrying out further testing on some existing parts of the code, we plan to add the following additional capabilities in future versions of GalSim:</p>
+<ul>
+<li>PSFs from stochastic atmosphere models.</li>
+</ul>
+<ul>
+<li>Lensing shears from a power spectrum for arbitrary (non-gridded) galaxy positions. In addition, further testing of the power spectrum code will be done.</li>
+</ul>
+<ul>
+<li>Self-consistent shears AND magnifications from a power spectrum.</li>
+</ul>
+<ul>
+<li>Simulating correlated noise fields with some user-specified correlation function.</li>
+</ul>
+<ul>
+<li>Handling (that is, whitening and imposing isotropy or four-fold symmetry on) the input noise in the HST training data, so that deeper training samples can be used for simulations of realistic galaxies.</li>
+</ul>
+<ul>
+<li>Simulating simple detector defects or image artifacts. </li>
+</ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
