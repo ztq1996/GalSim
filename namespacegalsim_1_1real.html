@@ -179,8 +179,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to simulate images (no added noise) from real galaxy training data. </p>
-<p>This function takes a RealGalaxy from some training set, and manipulates it as needed to simulate a (no-noise-added) image from some lower-resolution telescope. It thus requires a target ePSF (which could be an image, or one of our base classes) that represents all PSF components including the pixel response, and a target pixel scale. The default rotation option is to impose a random rotation to make irrelevant any real shears in the galaxy training data (optionally, the RNG can be supplied). This default can be turned off by setting rand_rotate = False or by requesting a specific rotation angle using the rotation_angle keyword, in which case rand_rotate is ignored. Optionally, the user can specify a shear (default 0). Finally, they can specify a flux normalization for the final image, default 1000.</p>
-<h2>Parameters</h2>
+<p>This function takes a RealGalaxy from some training set, and manipulates it as needed to simulate a (no-noise-added) image from some lower-resolution telescope. It thus requires a target PSF (which could be an image, or one of our base classes) that represents all PSF components including the pixel response, and a target pixel scale.</p>
+<p>The default rotation option is to impose a random rotation to make irrelevant any real shears in the galaxy training data (optionally, the RNG can be supplied). This default can be turned off by setting <code>rand_rotate = False</code> or by requesting a specific rotation angle using the <code>rotation_angle</code> keyword, in which case <code>rand_rotate</code> is ignored.</p>
+<p>Optionally, the user can specify a shear (default 0). Finally, they can specify a flux normalization for the final image, default 1000.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">real_galaxy</td><td>The RealGalaxy object to use. </td></tr>
@@ -189,10 +190,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">g1</td><td>First component of shear to impose (components defined with respect to pixel coordinates), default 0. </td></tr>
     <tr><td class="paramname">g2</td><td>Second component of shear to impose, default 0. </td></tr>
     <tr><td class="paramname">rotation_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> by which to rotate the galaxy (must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> instance). </td></tr>
-    <tr><td class="paramname">rand_rotate</td><td>If true (default) then impose a random rotation on the training galaxy; this is ignored if rotation_angle is set. </td></tr>
+    <tr><td class="paramname">rand_rotate</td><td>If <code>True</code> (default) then impose a random rotation on the training galaxy; this is ignored if <code>rotation_angle</code> is set. </td></tr>
     <tr><td class="paramname">uniform_deviate</td><td>Uniform RNG to use for selection of the random rotation angle (optional). </td></tr>
     <tr><td class="paramname">target_flux</td><td>The target flux in the output galaxy image, default 1000. </td></tr>
-    <tr><td class="paramname">image</td><td>As with the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">GSObject.draw</a> function, if an image is provided, then it will be used and returned. If image=None, then an appropriately sized image will be created. </td></tr>
+    <tr><td class="paramname">image</td><td>As with the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">GSObject.draw</a> function, if an image is provided, then it will be used and returned. If <code>image=None</code>, then an appropriately sized image will be created. </td></tr>
   </table>
   </dd>
 </dl>

@@ -141,32 +141,22 @@ Properties</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class to represent ellipses in a variety of ways. </p>
-<pre class="fragment">The galsim Ellipse class (galsim.Ellipse) represents a shear (shape distortion), dilation,
-and/or centroid shift.
-
-The python Ellipse class can be initialized in a variety of ways.  Unnamed arguments must be a
-galsim.shear.Shear object for shape distortion, a float for dilation (via the mu parameter),
-and/or a Position for centroid shift.
-
-Keyword arguments can be used to set parameters of the shape distortion the same as for the
-Shear class; or the parameter "dilation" can be used for re-sizing; or the parameters
-"x_shift" and "y_shift" can be used for centroid shifts.  The galsim.Ellipse contains a C++
-CppEllipse object, and operations on Ellipse rely on wrapped methods of the CppEllipse.
-
-The following are all examples of valid calls to initialize a Ellipse object:
-</pre> <div class="fragment"><div class="line">     s = <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>(g1=0.05, g2=0.05)</div>
-<div class="line">     shift = galsim.PositionD(0.0, 0.2)</div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>() <span class="comment"># an empty ellipse, i.e. no shearing, dilation, shifting</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(s) <span class="comment"># represents shearing by s only</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(shear = s) <span class="comment"># same as previous, but with keyword explicitly named</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(s, shift) <span class="comment"># shear and shift</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(shift, s) <span class="comment"># can specify the arguments in any order</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(s, y_shift=0.2) <span class="comment"># same as previous, specifying the y shift directly</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(mu=0.0, shear=s) <span class="comment"># no dilation, but shear by s</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(shift, g1=0.05, g2=0.05) <span class="comment"># arguments can be used to specify a shear</span></div>
-<div class="line">     ell = <a class="code" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.Ellipse</a>(mu=0.5, g=0.5, beta=45.0*galsim.degrees) <span class="comment"># dilation, shear via</span></div>
-<div class="line">     keyword argument</div>
-</div><!-- fragment --> </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<p>The galsim <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">Ellipse</a> class (galsim.Ellipse) represents a shear (shape distortion), dilation, and/or centroid shift.</p>
+<p>The python <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">Ellipse</a> class can be initialized in a variety of ways. Unnamed arguments must be a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a> object for shape distortion, a float for dilation (via the mu parameter), and/or a <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> for centroid shift.</p>
+<p>Keyword arguments can be used to set parameters of the shape distortion the same as for the Shear class; or the parameter "dilation" can be used for re-sizing; or the parameters "x_shift" and "y_shift" can be used for centroid shifts. The galsim.Ellipse contains a C++ <a class="el" href="classgalsim_1_1_cpp_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">CppEllipse</a> object, and operations on <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">Ellipse</a> rely on wrapped methods of the <a class="el" href="classgalsim_1_1_cpp_ellipse.html" title="A base class representing transformation from an ellipse to the unit circle.">CppEllipse</a>.</p>
+<p>The following are all examples of valid calls to initialize a <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">Ellipse</a> object: </p>
+<pre class="fragment">&gt;&gt;&gt; s = galsim.Shear(g1=0.05, g2=0.05)
+&gt;&gt;&gt; shift = galsim.PositionD(0.0, 0.2)
+&gt;&gt;&gt; ell = galsim.Ellipse()            # an empty ellipse, i.e. no shear, dilation, shift
+&gt;&gt;&gt; ell = galsim.Ellipse(s)           # represents shearing by s only
+&gt;&gt;&gt; ell = galsim.Ellipse(shear = s)   # same as previous, but with keyword explicitly named
+&gt;&gt;&gt; ell = galsim.Ellipse(s, shift)       # shear and shift
+&gt;&gt;&gt; ell = galsim.Ellipse(shift, s)       # can specify the arguments in any order
+&gt;&gt;&gt; ell = galsim.Ellipse(s, y_shift=0.2) # same as previous, specifying the y shift directly
+&gt;&gt;&gt; ell = galsim.Ellipse(mu=0.0, shear=s)         # no dilation, but shear by s
+&gt;&gt;&gt; ell = galsim.Ellipse(shift, g1=0.05, g2=0.05) # arguments can be used to specify a shear
+&gt;&gt;&gt; ell = galsim.Ellipse(mu=0.5, g=0.5, beta=45.0*galsim.degrees) # dilation, shear via
+                                                                  # keyword argument</pre> </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa057556fd587d87d05262f05c8e766e7"></a>
 <div class="memitem">
 <div class="memproto">
