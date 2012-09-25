@@ -147,7 +147,7 @@ Properties</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class to represent shears in a variety of ways. </p>
-<p>The python <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> class (galsim.Shear) can be initialized in a variety of ways to represent shape distortions. All arguments must be named. Given semi-major and semi-minor axes a and b, we can define multiple shape measurements:</p>
+<p>The python <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">Shear</a> class (galsim.Shear) can be initialized in a variety of ways to represent shape distortions. A shear is an operation that transforms a circle into an ellipse with minor-to-major axis ratio b/a, with position angle beta, while conserving the area. Given the multiple definitions of ellipticity, we have multiple definitions of shear:</p>
 <p>reduced shear |g| = (a - b)/(a + b) distortion |e| = (a^2 - b^2)/(a^2 + b^2) conformal shear eta, with a/b = exp(eta) minor-to-major axis ratio q = b/a</p>
 <p>These can be thought of as a magnitude and a real-space position angle beta, or as two components, e.g., <code>g1</code> and <code>g2</code>, with</p>
 <p><code>g1</code> = |g| cos(2*<code>beta</code>) <code>g2</code> = |g| sin(2*<code>beta</code>)</p>
