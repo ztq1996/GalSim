@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Necessary functions for dealing with real galaxies and their catalogs.  
+<p>Functions for dealing with galsim.RealGalaxy objects and the catalogs that store their data.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
@@ -114,7 +114,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a8bbf994bce5a396a830c2d6c39c2a570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to simulate images (no added noise) from real galaxy training data.  <a href="#a8bbf994bce5a396a830c2d6c39c2a570"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Necessary functions for dealing with real galaxies and their catalogs. </p>
+<div class="textblock"><p>Functions for dealing with galsim.RealGalaxy objects and the catalogs that store their data. </p>
+<p>The galsim.RealGalaxy uses images of galaxies from real astrophysical data (e.g. the Hubble Space Telescope), along with a PSF model of the optical properties of the telescope that took these images, to simulate new galaxy images with a different (must be larger) telescope PSF. A description of the simulation method can be found in Section 5 of Mandelbaum et al. (2012; MNRAS, 540, 1518), although note that the details of the implementation in Section 7 of that work are not relevant to the more recent software used here.</p>
+<p>This module defines the RealGalaxyCatalog class, used to store all required information about a real galaxy simulation training sample and accompanying PSF model. For information about downloading GalSim-readable RealGalaxyCatalog data in FITS format, see the RealGalaxy Data Download page on the GalSim Wiki: <a href="https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page">https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page</a></p>
+<p>The function simReal takes this information and uses it to simulate a (no-noise-added) image from some lower-resolution telescope. </p>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

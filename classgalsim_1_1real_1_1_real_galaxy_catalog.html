@@ -105,14 +105,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a984bd5d251d985845da8322e1a267c11"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a984bd5d251d985845da8322e1a267c11">__init__</a></td></tr>
-<tr class="memitem:a4e3e3d73e023c5bec87fc1bbeef40446"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a4e3e3d73e023c5bec87fc1bbeef40446">get_index_for_id</a></td></tr>
-<tr class="memdesc:a4e3e3d73e023c5bec87fc1bbeef40446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find which index number corresponds to the value ID in the ident field.  <a href="#a4e3e3d73e023c5bec87fc1bbeef40446"></a><br/></td></tr>
 <tr class="memitem:ab7bfa3960bb86df57116fd2da547937b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#ab7bfa3960bb86df57116fd2da547937b">preload</a></td></tr>
 <tr class="memdesc:ab7bfa3960bb86df57116fd2da547937b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preload the files into memory.  <a href="#ab7bfa3960bb86df57116fd2da547937b"></a><br/></td></tr>
 <tr class="memitem:a62f3ac08d3ad3285d5446d37346103a9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a62f3ac08d3ad3285d5446d37346103a9">getGal</a></td></tr>
-<tr class="memdesc:a62f3ac08d3ad3285d5446d37346103a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the galaxy at index i as an ImageViewD object.  <a href="#a62f3ac08d3ad3285d5446d37346103a9"></a><br/></td></tr>
+<tr class="memdesc:a62f3ac08d3ad3285d5446d37346103a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the galaxy at index <code>i</code> as an ImageViewD object.  <a href="#a62f3ac08d3ad3285d5446d37346103a9"></a><br/></td></tr>
 <tr class="memitem:af4181801bb30177d54f6d9d1140f4dda"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#af4181801bb30177d54f6d9d1140f4dda">getPSF</a></td></tr>
-<tr class="memdesc:af4181801bb30177d54f6d9d1140f4dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PSF at index i as an ImageViewD object.  <a href="#af4181801bb30177d54f6d9d1140f4dda"></a><br/></td></tr>
+<tr class="memdesc:af4181801bb30177d54f6d9d1140f4dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PSF at index <code>i</code> as an ImageViewD object.  <a href="#af4181801bb30177d54f6d9d1140f4dda"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -133,15 +131,16 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class containing a catalog with information about real galaxy training data. </p>
-<p>The <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> class reads in and stores information about a specific training sample of realistic galaxies. We assume that all files containing the images (galaxies and PSFs) live in one directory; they could be individual files, or multiple HDUs of the same file. Currently there is no functionality that lets this be a FITS data cube, because we assume that the object postage stamps will in general need to be different sizes depending on the galaxy size. For example, if the catalog is called 'catalog.fits' and is in the working directory, and the images are in a subdirectory called 'images', then the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> can be read in as follows: </p>
+<p>The <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> class reads in and stores information about a specific training sample of realistic galaxies. We assume that all files containing the images (galaxies and PSFs) live in one directory; they could be individual files, or multiple HDUs of the same file. Currently there is no functionality that lets this be a FITS data cube, because we assume that the object postage stamps will in general need to be different sizes depending on the galaxy size. For example, if the catalog is called <code>'catalog.fits'</code> and is in the working directory, and the images are in a subdirectory called <code>'images'</code>, then the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> can be read in as follows: </p>
 <pre class="fragment">&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog('./catalog.fits', 'images')
 </pre><p>To explore for the future: scaling with number of galaxies, adding more information as needed, and other i/o related issues.</p>
+<p>The GalSim repository currently contains an example catalog, in GalSim/examples/data/real_galaxy_catalog_example.fits (100 galaxies), along with the corresponding image data in other files (real_galaxy_images.fits and real_galaxy_PSF_images.fits) in that directory. For information on how to download a larger sample of 26k training galaxies, see the RealGalaxy Data Download Page on the GalSim Wiki: <a href="https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page">https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page</a></p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The file containing the catalog. </td></tr>
     <tr><td class="paramname">image_dir</td><td>The directory containing the images. </td></tr>
     <tr><td class="paramname">dir</td><td>The directory of catalog file (optional) </td></tr>
-    <tr><td class="paramname">preload</td><td>Whether to preload the header information. (default = False) </td></tr>
+    <tr><td class="paramname">preload</td><td>Whether to preload the header information. (default <code>preload = False</code>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -191,34 +190,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4e3e3d73e023c5bec87fc1bbeef40446"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.real.RealGalaxyCatalog.get_index_for_id </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Find which index number corresponds to the value ID in the ident field. </p>
-
-</div>
-</div>
 <a class="anchor" id="a62f3ac08d3ad3285d5446d37346103a9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +214,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the galaxy at index i as an ImageViewD object. </p>
+<p>Returns the galaxy at index <code>i</code> as an ImageViewD object. </p>
 
 </div>
 </div>
@@ -271,7 +242,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the PSF at index i as an ImageViewD object. </p>
+<p>Returns the PSF at index <code>i</code> as an ImageViewD object. </p>
 
 </div>
 </div>

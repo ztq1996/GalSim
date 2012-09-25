@@ -58,7 +58,7 @@ var searchData=
   ['invariableinclination',['InvariableInclination',['../_astronomical_constants_8h.html#a54562f2c74a062048ae649081f96a45d',1,'AstronomicalConstants.h']]],
   ['invariablenode',['InvariableNode',['../_astronomical_constants_8h.html#a46b62d9c886c9d0af750dd17f36e9fab',1,'AstronomicalConstants.h']]],
   ['io_2epy',['io.py',['../io_8py.html',1,'']]],
-  ['isanalytick',['isAnalyticK',['../classgalsim_1_1_s_b_profile.html#a22cb3ddd3d82cfc8abb5b63664f9bf49',1,'galsim::SBProfile']]],
+  ['isanalytick',['isAnalyticK',['../classgalsim_1_1_s_b_profile.html#a22cb3ddd3d82cfc8abb5b63664f9bf49',1,'galsim::SBProfile::isAnalyticK()'],['../classgalsim_1_1base_1_1_g_s_object.html#ad883087f48bb56d90612d940dd60a7ab',1,'galsim.base.GSObject.isAnalyticK()']]],
   ['isanalyticx',['isAnalyticX',['../classgalsim_1_1_s_b_profile.html#a574382e3ede9ac14c0174fc8a9643265',1,'galsim::SBProfile::isAnalyticX()'],['../classgalsim_1_1base_1_1_g_s_object.html#a671c7778e707ab11a75a1f5877aa76ff',1,'galsim.base.GSObject.isAnalyticX()']]],
   ['isaxisymmetric',['isAxisymmetric',['../classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d',1,'galsim::SBProfile::isAxisymmetric()'],['../classgalsim_1_1base_1_1_g_s_object.html#a109bc7c81be65f8fc5d5ec32e6d0c0df',1,'galsim.base.GSObject.isAxisymmetric()']]],
   ['iscontiguous',['isContiguous',['../classgalsim_1_1_base_image.html#a31f026981c590402f423633e198cd5f6',1,'galsim::BaseImage']]],

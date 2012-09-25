@@ -132,11 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8b5da3e499f3c00def5f7f54cab532f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae8b5da3e499f3c00def5f7f54cab532f">stepK</a></td></tr>
 <tr class="memdesc:ae8b5da3e499f3c00def5f7f54cab532f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns sampling in k space necessary to avoid folding of image in x space.  <a href="#ae8b5da3e499f3c00def5f7f54cab532f"></a><br/></td></tr>
 <tr class="memitem:a4f480514538e924d29af411563384a6d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a4f480514538e924d29af411563384a6d">hasHardEdges</a></td></tr>
-<tr class="memdesc:a4f480514538e924d29af411563384a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if there are any hard edges in the profile.  <a href="#a4f480514538e924d29af411563384a6d"></a><br/></td></tr>
+<tr class="memdesc:a4f480514538e924d29af411563384a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if there are any hard edges in the profile, which would require very small k spacing when working in the Fourier domain.  <a href="#a4f480514538e924d29af411563384a6d"></a><br/></td></tr>
 <tr class="memitem:a109bc7c81be65f8fc5d5ec32e6d0c0df"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a109bc7c81be65f8fc5d5ec32e6d0c0df">isAxisymmetric</a></td></tr>
 <tr class="memdesc:a109bc7c81be65f8fc5d5ec32e6d0c0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if axially symmetric: affects efficiency of evaluation.  <a href="#a109bc7c81be65f8fc5d5ec32e6d0c0df"></a><br/></td></tr>
 <tr class="memitem:a671c7778e707ab11a75a1f5877aa76ff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a671c7778e707ab11a75a1f5877aa76ff">isAnalyticX</a></td></tr>
 <tr class="memdesc:a671c7778e707ab11a75a1f5877aa76ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if real-space values can be determined immediately at any position without requiring a Discrete Fourier Transform.  <a href="#a671c7778e707ab11a75a1f5877aa76ff"></a><br/></td></tr>
+<tr class="memitem:ad883087f48bb56d90612d940dd60a7ab"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad883087f48bb56d90612d940dd60a7ab">isAnalyticK</a></td></tr>
+<tr class="memdesc:ad883087f48bb56d90612d940dd60a7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if k-space values can be determined immediately at any position without requiring a Discrete Fourier Transform.  <a href="#ad883087f48bb56d90612d940dd60a7ab"></a><br/></td></tr>
 <tr class="memitem:a08a0bb72927fce3c765a9580de656d1a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a08a0bb72927fce3c765a9580de656d1a">centroid</a></td></tr>
 <tr class="memdesc:a08a0bb72927fce3c765a9580de656d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (x, y) centroid of an object as a <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a>.  <a href="#a08a0bb72927fce3c765a9580de656d1a"></a><br/></td></tr>
 <tr class="memitem:a662d8ce421ecd90080bdcaaf6890aed8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a662d8ce421ecd90080bdcaaf6890aed8">getFlux</a></td></tr>
@@ -146,33 +148,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8652894487904b797d7752651b54507"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac8652894487904b797d7752651b54507">kValue</a></td></tr>
 <tr class="memdesc:ac8652894487904b797d7752651b54507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the object at a chosen 2D position in k space.  <a href="#ac8652894487904b797d7752651b54507"></a><br/></td></tr>
 <tr class="memitem:af4193645a9af52e7d54a044cafec8ab9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#af4193645a9af52e7d54a044cafec8ab9">scaleFlux</a></td></tr>
-<tr class="memdesc:af4193645a9af52e7d54a044cafec8ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux of the object by fluxRatio.  <a href="#af4193645a9af52e7d54a044cafec8ab9"></a><br/></td></tr>
+<tr class="memdesc:af4193645a9af52e7d54a044cafec8ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux of the object by flux_ratio.  <a href="#af4193645a9af52e7d54a044cafec8ab9"></a><br/></td></tr>
 <tr class="memitem:a1993652591ddc802b734186391b28894"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a1993652591ddc802b734186391b28894">setFlux</a></td></tr>
 <tr class="memdesc:a1993652591ddc802b734186391b28894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flux of the object.  <a href="#a1993652591ddc802b734186391b28894"></a><br/></td></tr>
 <tr class="memitem:ad491a1276fda07b148c6466d5dbd07b1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad491a1276fda07b148c6466d5dbd07b1">applyTransformation</a></td></tr>
-<tr class="memdesc:ad491a1276fda07b148c6466d5dbd07b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> distortion to this object.  <a href="#ad491a1276fda07b148c6466d5dbd07b1"></a><br/></td></tr>
+<tr class="memdesc:ad491a1276fda07b148c6466d5dbd07b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a galsim.Ellipse distortion to this object.  <a href="#ad491a1276fda07b148c6466d5dbd07b1"></a><br/></td></tr>
 <tr class="memitem:a4301c73bbc1491ebb170e64c509cadd5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a4301c73bbc1491ebb170e64c509cadd5">applyDilation</a></td></tr>
 <tr class="memdesc:a4301c73bbc1491ebb170e64c509cadd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a dilation of the linear size by the given scale.  <a href="#a4301c73bbc1491ebb170e64c509cadd5"></a><br/></td></tr>
 <tr class="memitem:a9d13b0238057f6d5d01f2681d91c09b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0">applyMagnification</a></td></tr>
 <tr class="memdesc:a9d13b0238057f6d5d01f2681d91c09b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2.  <a href="#a9d13b0238057f6d5d01f2681d91c09b0"></a><br/></td></tr>
 <tr class="memitem:a85cc0094dcf470cfbff93d9830ab80bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd">applyShear</a></td></tr>
-<tr class="memdesc:a85cc0094dcf470cfbff93d9830ab80bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a shear to this object, where arguments are either a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>, or arguments that will be used to initialize one.  <a href="#a85cc0094dcf470cfbff93d9830ab80bd"></a><br/></td></tr>
+<tr class="memdesc:a85cc0094dcf470cfbff93d9830ab80bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one.  <a href="#a85cc0094dcf470cfbff93d9830ab80bd"></a><br/></td></tr>
 <tr class="memitem:ad6236e3153f23f1201396369dd67f1c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad6236e3153f23f1201396369dd67f1c7">applyRotation</a></td></tr>
-<tr class="memdesc:ad6236e3153f23f1201396369dd67f1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a rotation theta (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise) to this object.  <a href="#ad6236e3153f23f1201396369dd67f1c7"></a><br/></td></tr>
+<tr class="memdesc:ad6236e3153f23f1201396369dd67f1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a rotation theta to this object.  <a href="#ad6236e3153f23f1201396369dd67f1c7"></a><br/></td></tr>
 <tr class="memitem:a6b547741eeec4086de9abe227dae9325"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6b547741eeec4086de9abe227dae9325">applyShift</a></td></tr>
 <tr class="memdesc:a6b547741eeec4086de9abe227dae9325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a (dx, dy) shift to this object.  <a href="#a6b547741eeec4086de9abe227dae9325"></a><br/></td></tr>
 <tr class="memitem:ac545bacc95772067d082a68a282265e7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac545bacc95772067d082a68a282265e7">createTransformed</a></td></tr>
-<tr class="memdesc:ac545bacc95772067d082a68a282265e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> transformation (shear, dilate, and/or shift).  <a href="#ac545bacc95772067d082a68a282265e7"></a><br/></td></tr>
+<tr class="memdesc:ac545bacc95772067d082a68a282265e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a galsim.Ellipse transformation (shear, dilate, and/or shift).  <a href="#ac545bacc95772067d082a68a282265e7"></a><br/></td></tr>
 <tr class="memitem:ad21997fcb7ef6db0cea9d51a16498283"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283">createDilated</a></td></tr>
 <tr class="memdesc:ad21997fcb7ef6db0cea9d51a16498283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a dilation of the linear size by the given scale.  <a href="#ad21997fcb7ef6db0cea9d51a16498283"></a><br/></td></tr>
 <tr class="memitem:ab1c086513d5d569e6cd1c4269e83dd2d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d">createMagnified</a></td></tr>
 <tr class="memdesc:ab1c086513d5d569e6cd1c4269e83dd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a magnification by the given scale, scaling the linear size by scale and the flux by scale^2.  <a href="#ab1c086513d5d569e6cd1c4269e83dd2d"></a><br/></td></tr>
 <tr class="memitem:a8c54a001124280ae550c57c8fdce3563"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a8c54a001124280ae550c57c8fdce3563">createSheared</a></td></tr>
-<tr class="memdesc:a8c54a001124280ae550c57c8fdce3563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a> or keyword arguments that can be used to create one.  <a href="#a8c54a001124280ae550c57c8fdce3563"></a><br/></td></tr>
+<tr class="memdesc:a8c54a001124280ae550c57c8fdce3563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one.  <a href="#a8c54a001124280ae550c57c8fdce3563"></a><br/></td></tr>
 <tr class="memitem:a6c29613e57067e6ba5ec7297e746cdc4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6c29613e57067e6ba5ec7297e746cdc4">createRotated</a></td></tr>
-<tr class="memdesc:a6c29613e57067e6ba5ec7297e746cdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation theta (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise).  <a href="#a6c29613e57067e6ba5ec7297e746cdc4"></a><br/></td></tr>
+<tr class="memdesc:a6c29613e57067e6ba5ec7297e746cdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation.  <a href="#a6c29613e57067e6ba5ec7297e746cdc4"></a><br/></td></tr>
 <tr class="memitem:a96c05ef4b77187b6d02d877232e81126"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126">createShifted</a></td></tr>
-<tr class="memdesc:a96c05ef4b77187b6d02d877232e81126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a (dx, dy) shift.  <a href="#a96c05ef4b77187b6d02d877232e81126"></a><br/></td></tr>
+<tr class="memdesc:a96c05ef4b77187b6d02d877232e81126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shift.  <a href="#a96c05ef4b77187b6d02d877232e81126"></a><br/></td></tr>
 <tr class="memitem:ae0b346a8b438dedbc7f60a52220869d8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8">draw</a></td></tr>
 <tr class="memdesc:ae0b346a8b438dedbc7f60a52220869d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ae0b346a8b438dedbc7f60a52220869d8"></a><br/></td></tr>
 <tr class="memitem:a42ac334d2840ba3fa832988e998beca0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0">drawShoot</a></td></tr>
@@ -185,7 +187,7 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Base class for defining the python interface to the <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a> C++ class. </p>
-<p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> method is unavailable for <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> instances. </p>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class represents a deconvolution kernel. Note that the <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class, or compound objects (<a class="el" href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include a <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> as one of the components, cannot be photon-shot using the drawShoot method. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a489eaeb2b75001c5fdb8c0872f8b772e"></a>
 <div class="memitem">
@@ -557,7 +559,13 @@ Public Attributes</h2></td></tr>
 <p>Apply a dilation of the linear size by the given scale. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
 <p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2...">applyMagnification()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -596,7 +604,13 @@ Public Attributes</h2></td></tr>
 <p>Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
 <p>This operation preserves surface brightness, which means that the flux is scales with the change in area. See applyDilation for a version that preserves flux.</p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -632,8 +646,14 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply a rotation theta (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise) to this object. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>Apply a rotation theta to this object. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theta</td><td>Rotation angle (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -675,8 +695,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply a shear to this object, where arguments are either a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>, or arguments that will be used to initialize one. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one. </p>
+<p>For more details about the allowed keyword arguments, see the documentation for galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>).</p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available. </p>
 
 </div>
 </div>
@@ -719,7 +740,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a (dx, dy) shift to this object. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>Horizontal shift to apply (float). </td></tr>
+    <tr><td class="paramname">dy</td><td>Vertical shift to apply (float). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -755,10 +783,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply a <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> distortion to this object. </p>
-<p>Ellipse objects can be initialized in a variety of ways (see documentation of this class for details).</p>
+<p>Apply a galsim.Ellipse distortion to this object. </p>
+<p>galsim.Ellipse objects can be initialized in a variety of ways (see documentation of this class, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> in the doxygen documentation, for details).</p>
 <p>Note: if the ellipse includes a dilation, then this transformation will not be flux-conserving. It conserves surface brightness instead. Thus, the flux will increase by the increase in area = dilation^2.</p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ellipse</td><td>The galsim.Ellipse transformation to apply </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -811,7 +845,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a copy of an object. </p>
-<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a> (e.g. getSigma()). </p>
+<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (e.g. getSigma()). </p>
 
 </div>
 </div>
@@ -849,7 +883,14 @@ Public Attributes</h2></td></tr>
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a dilation of the linear size by the given scale. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d" title="Returns a new GSObject by applying a magnification by the given scale, scaling the linear size by sca...">createMagnified()</a> for a version that preserves surface brightness, and thus changes the flux. </p>
+<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d" title="Returns a new GSObject by applying a magnification by the given scale, scaling the linear size by sca...">createMagnified()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The rescaled <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -888,7 +929,14 @@ Public Attributes</h2></td></tr>
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
 <p>This operation preserves surface brightness, which means that the flux is also scaled by a factor of scale^2.</p>
-<p>See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283" title="Returns a new GSObject by applying a dilation of the linear size by the given scale.">createDilated()</a> for a version that preserves flux. </p>
+<p>See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283" title="Returns a new GSObject by applying a dilation of the linear size by the given scale.">createDilated()</a> for a version that preserves flux.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The rescaled <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -924,7 +972,14 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation theta (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise). </p>
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theta</td><td>Rotation angle (<a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> object, +ve anticlockwise). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The rotated <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -966,7 +1021,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a> or keyword arguments that can be used to create one. </p>
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one. </p>
+<p>For more details about the allowed keyword arguments, see the documentation of galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>). </p>
 
 </div>
 </div>
@@ -1008,7 +1064,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a (dx, dy) shift. </p>
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shift. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>Horizontal shift to apply (float). </td></tr>
+    <tr><td class="paramname">dy</td><td>Vertical shift to apply (float). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The shifted <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -1044,8 +1108,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> transformation (shear, dilate, and/or shift). </p>
-<p>Note that Ellipse objects can be initialized in a variety of ways (see documentation of this class for details). </p>
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a galsim.Ellipse transformation (shear, dilate, and/or shift). </p>
+<p>Note that galsim.Ellipse objects can be initialized in a variety of ways (see documentation of this class, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> in the doxygen documentation, for details).</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ellipse</td><td>The galsim.Ellipse transformation to apply </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The transformed <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -1112,14 +1183,15 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
+<p>The draw method is used to draw an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, typically using Fourier space convolution (or, for certain GSObjects that have hard edges, real-space convolution may be used), and using interpolation to carry out image transformations such as shearing. This method can create a new <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or can draw into an existing one, depending on the choice of the <code>image</code> keyword parameter. Other keywords of particular relevance for users are those that set the pixel scale for the image (<code>dx</code>), that choose the normalization convention for the flux (<code>normalization</code>), and that decide whether the clear the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> before drawing into it (<code>add_to_image</code>).</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If image=None, then an automatically-sized image will be created. if image != None, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size. (Default = None)</td></tr>
-    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If dx is None and image != None, then take the provided image's pixel scale. If dx is None and image == None, then use the Nyquist scale = pi/maxK() If dx &lt;= 0 (regardless of image), then use the Nyquist scale = pi/maxK() (Default = None)</td></tr>
-    <tr><td class="paramname">gain</td><td>The number of photons per ADU. (Default = 1.0)</td></tr>
-    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made. This factor also applies to any intermediate images during Fourier calculations. The size of the intermediate images are normally automatically chosen to reach some preset accuracy targets (see <a class="el" href="_s_b_profile_8h.html" title="Contains a class definition for two-dimensional Surface Brightness Profiles.">include/galsim/SBProfile.h</a>); however, if you see strange artifacts in the image, you might try using wmult &gt; 1. This will take longer of course, but it will produce more accurate images, since they will have less "folding" in Fourier space. (Default = 1.)</td></tr>
-    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default = "flux")</td></tr>
-    <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that image be provided (i.e. not None) and that it have defined bounds. (Default = False)</td></tr>
+    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size (default <code>image = None</code>).</td></tr>
+    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If <code>dx</code> is <code>None</code> and <code>image != None</code>, then take the provided image's pixel scale. If <code>dx</code> is <code>None</code> and <code>image == None</code>, then use the Nyquist scale <code>= pi/maxK()</code>. If <code>dx &lt;= 0</code> (regardless of image), then use the Nyquist scale <code>= pi/maxK()</code>. (Default <code>dx = None</code>.)</td></tr>
+    <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). (Default <code>gain = 1.</code>)</td></tr>
+    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made. This factor also applies to any intermediate images during Fourier calculations. The size of the intermediate images are normally automatically chosen to reach some preset accuracy targets (see <a class="el" href="_s_b_profile_8h.html" title="Contains a class definition for two-dimensional Surface Brightness Profiles.">include/galsim/SBProfile.h</a>); however, if you see strange artifacts in the image, you might try using <code>wmult &gt; 1</code>. This will take longer of course, but it will produce more accurate images, since they will have less "folding" in Fourier space. (Default <code>wmult = 1.</code>)</td></tr>
+    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>)</td></tr>
+    <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that image be provided (i.e. <code>image</code> is not <code>None</code>) and that it have defined bounds (default <code>add_to_image = False</code>).</td></tr>
   </table>
   </dd>
 </dl>
@@ -1214,19 +1286,21 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draw an image of the object by shooting individual photons drawn from the surface brightness profile of the object. </p>
-<p>Note that the drawShoot method is unavailable for objects which contain an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>, or are compound objects (e.g. <a class="el" href="classgalsim_1_1base_1_1_add.html" title="Base class for defining the python interface to the SBAdd C++ class.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>.</p>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> method is used to draw an image of an object by shooting a number of photons to randomly sample the profile of the object. The resulting image will thus have Poisson noise due to the finite number of photons shot. <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> can create a new <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or use an existing one, depending on the choice of the <code>image</code> keyword parameter. Other keywords of particular relevance for users are those that set the pixel scale for the image (<code>dx</code>), that choose the normalization convention for the flux (<code>normalization</code>), and that decide whether the clear the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> before shooting photons into it (<code>add_to_image</code>).</p>
+<p>It is important to remember that the image produced by <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> represents the object as convolved with the square image pixel. So when using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> instead of <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, you should not explicitly include the pixel response by convolving with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. Using drawShoot without convolving with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> will produce the equivalent image (for very large n_photons) as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a> produces when the same object is convolved with <code><a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a>(xw=dx)</code> when drawing onto an image with pixel scale <code>dx</code>.</p>
+<p>Note that the drawShoot method is unavailable for objects which contain an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>, or are compound objects (e.g. <a class="el" href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If image=None, then an automatically-sized image will be created. if image != None, but its <a class="el" href="classgalsim_1_1_bounds.html" title="Class for storing image bounds, essentially the vertices of a rectangle.">Bounds</a> are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size. (Default = None)</td></tr>
-    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If dx is None and image != None, then take the provided image's pixel scale. If dx is None and image == None, then use the Nyquist scale = pi/maxK() If dx &lt;= 0 (regardless of image), then use the Nyquist scale = pi/maxK() (Default = None)</td></tr>
-    <tr><td class="paramname">gain</td><td>The number of photons per ADU. (Default = 1.0)</td></tr>
-    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made. (Default = 1.)</td></tr>
-    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default = "flux")</td></tr>
-    <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before shooting. Note: This requires that image be provided (i.e. not None) and that it have defined bounds. (Default = False)</td></tr>
-    <tr><td class="paramname">n_photons</td><td>If provided, the number of photons to use. If not provided, use as many photons as necessary to end up with an image with the correct poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to n_photons = flux. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). (Default = 0)</td></tr>
-    <tr><td class="paramname">uniform_deviate</td><td>If provided, a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> to use for the random numbers If uniform_deviate=None, one will be automatically created, using the time as a seed. (Default = None)</td></tr>
-    <tr><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if n_photons=0, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full n_photons = flux. Essentially each shot photon can have a flux &gt; 1, which increases the noise in each pixel. The max_extra_noise parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this might be max_extra_noise = sky_level / 100 where sky_level is the flux per pixel due to the sky. If the natural number of photons produces less noise than this value for all pixels, we lower the number of photons to bring the resultant noise up to this value. If the natural value produces more noise than this, we accept it and just use the natural value. Note that this uses a "variance" definition of noise, not a "sigma" definition. (Default = 0.)</td></tr>
-    <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for n_photons samples. (Default = True)</td></tr>
+    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately base on the profile's size. (Default <code>image = None</code>.)</td></tr>
+    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If <code>dx</code> is <code>None</code> and <code>image != None</code>, then take the provided image's pixel scale. If <code>dx</code> is <code>None</code> and <code>image == None</code>, then use the Nyquist scale <code>= pi/maxK()</code>. If <code>dx &lt;= 0</code> (regardless of image), then use the Nyquist scale <code>= pi/maxK()</code>. (Default <code>dx = None</code>.)</td></tr>
+    <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). (Default <code>gain = 1.</code>)</td></tr>
+    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made.</td></tr>
+    <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>)</td></tr>
+    <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that image be provided (i.e. <code>image != None</code>) and that it have defined bounds (default <code>add_to_image = False</code>).</td></tr>
+    <tr><td class="paramname">n_photons</td><td>If provided, the number of photons to use. If not provided (i.e. <code>n_photons = 0</code>), use as many photons as necessary to result in an image with the correct Poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to <code>n_photons = flux</code>. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). (Default <code>n_photons = 0</code>).</td></tr>
+    <tr><td class="paramname">uniform_deviate</td><td>If provided, a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">galsim.UniformDeviate</a> to use for the random numbers If <code>uniform_deviate=None</code>, one will be automatically created, using the time as a seed. (Default <code>uniform_deviate = None</code>)</td></tr>
+    <tr><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if <code>n_photons=0</code>, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full <code>n_photons = flux</code>. Essentially each shot photon can have a <code>flux &gt; 1</code>, which increases the noise in each pixel. The <code>max_extra_noise</code> parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this might be <code>max_extra_noise = sky_level / 100</code> where <code>sky_level</code> is the flux per pixel due to the sky. If the natural number of photons produces less noise than this value for all pixels, we lower the number of photons to bring the resultant noise up to this value. If the natural value produces more noise than this, we accept it and just use the natural value. Note that this uses a "variance" definition of noise, not a "sigma" definition. (Default <code>max_extra_noise = 0.</code>)</td></tr>
+    <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>n_photons</code> samples (default <code>poisson_flux = True</code>).</td></tr>
   </table>
   </dd>
 </dl>
@@ -1234,8 +1308,7 @@ Public Attributes</h2></td></tr>
 <p>The second part of the return tuple may be useful as a sanity check that you have provided a large enough image to catch most of the flux. For example: </p>
 <pre class="fragment">image, added_flux = obj.drawShoot(image)
 assert added_flux &gt; 0.99 * obj.getFlux()
-</pre><p>However, the appropriate threshold will depend things like whether you are keeping poisson_flux=True, how high the flux is, how big your images are relative to the size of your object, etc.</p>
-<p>It is important to remember that the image produced by <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> represents the object as convolved with the square image pixel. The photons generated by the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> method will be binned into the target image. So when using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> instead of <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, you should not convolve with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="GalSim Pixel, which has an SBBox in the SBProfile attribute.">Pixel</a>. This will produce the equivalent image (for very large n_photons) as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a> produces when the same object is convolved with <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="GalSim Pixel, which has an SBBox in the SBProfile attribute.">Pixel</a>(xw=dx) when drawing onto an image with pixel scale dx. </p>
+</pre><p>However, the appropriate threshold will depend things like whether you are keeping <code>poisson_flux = True</code>, how high the flux is, how big your images are relative to the size of your object, etc. </p>
 
 </div>
 </div>
@@ -1287,7 +1360,33 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </table>
 </div><div class="memdoc">
 
-<p>Returns True if there are any hard edges in the profile. </p>
+<p>Returns True if there are any hard edges in the profile, which would require very small k spacing when working in the Fourier domain. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad883087f48bb56d90612d940dd60a7ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.base.GSObject.isAnalyticK </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns True if k-space values can be determined immediately at any position without requiring a Discrete Fourier Transform. </p>
 
 </div>
 </div>
@@ -1376,6 +1475,8 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </div><div class="memdoc">
 
 <p>Returns the value of the object at a chosen 2D position in k space. </p>
+<p><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac8652894487904b797d7752651b54507" title="Returns the value of the object at a chosen 2D position in k space.">kValue()</a> is available if the given obj has obj.isAnalyticK() == True.</p>
+<p><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac8652894487904b797d7752651b54507" title="Returns the value of the object at a chosen 2D position in k space.">kValue()</a> can be used for all of our simple base classes. However, if a <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a> object representing the convolution of multiple objects uses real-space convolution rather than the DFT approach, i.e., real_space=True (either by argument or if it decides on its own to do so), then it is not analytic in k-space, so <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac8652894487904b797d7752651b54507" title="Returns the value of the object at a chosen 2D position in k space.">kValue()</a> will raise an exception. An SBError will be thrown at the C++ layer (raises a RuntimeError in Python).</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>A 2D galsim.PositionD/galsim.PositionI instance giving the position in k space. </td></tr>
@@ -1469,8 +1570,14 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </table>
 </div><div class="memdoc">
 
-<p>Multiply the flux of the object by fluxRatio. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>Multiply the flux of the object by flux_ratio. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux_ratio</td><td>The factor by which to scale the flux. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1507,7 +1614,13 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </div><div class="memdoc">
 
 <p>Set the flux of the object. </p>
-<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="GalSim Gaussian, which has an SBGaussian in the SBProfile attribute.">Gaussian</a>), then these methods are no longer available. </p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flux</td><td>The new flux for the object. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1570,10 +1683,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </div><div class="memdoc">
 
 <p>Returns the value of the object at a chosen 2D position in real space. </p>
+<p><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a30355af05f88c36f078099b6bb792e1c" title="Returns the value of the object at a chosen 2D position in real space.">xValue()</a> is available if obj.isAnalyticX() == True.</p>
 <p>As in <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>, this function assumes all are real-valued. <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a30355af05f88c36f078099b6bb792e1c" title="Returns the value of the object at a chosen 2D position in real space.">xValue()</a> may not be implemented for derived classes (e.g. <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a>) that require a Discrete Fourier Transform to determine real space values. In this case, an SBError will be thrown at the C++ layer (raises a RuntimeError in Python).</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>A 2D galsim.PositionD/I instance giving the position in real space. </td></tr>
+    <tr><td class="paramname">position</td><td>A 2D galsim.PositionD/galsim.PositionI instance giving the position in real space. </td></tr>
   </table>
   </dd>
 </dl>

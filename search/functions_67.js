@@ -6,7 +6,6 @@ var searchData=
   ['general_5fshear_5festimator',['general_shear_estimator',['../namespacegalsim_1_1hsm.html#ac18e9c11e85e4f3907631580cd1c31cd',1,'galsim::hsm']]],
   ['generate_5fpupil_5fplane',['generate_pupil_plane',['../namespacegalsim_1_1optics.html#a582b3550f1ac69d5abc2885a0458c223',1,'galsim::optics']]],
   ['get1d',['get1d',['../classgalsim_1_1_interpolant_x_y.html#a801c0e4214c93f44d9d247430eea03c3',1,'galsim::InterpolantXY']]],
-  ['get_5findex_5ffor_5fid',['get_index_for_id',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a4e3e3d73e023c5bec87fc1bbeef40446',1,'galsim::real::RealGalaxyCatalog']]],
   ['geta',['getA',['../classgalsim_1_1_weibull_deviate.html#a0463e3b157a3d5adb5dde9cbdfa295f4',1,'galsim::WeibullDeviate']]],
   ['getallparams',['GetAllParams',['../namespacegalsim_1_1config_1_1value.html#ae44b2af88c30a2d3c0f75b2b96300039',1,'galsim::config::value']]],
   ['getalpha',['getAlpha',['../classgalsim_1_1_gamma_deviate.html#aec815ad44eeb92487dfd8d71ac86d25c',1,'galsim::GammaDeviate']]],
