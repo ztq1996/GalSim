@@ -95,6 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">fits.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Support for reading and writing <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a>* objects to FITS.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Packages</h2></td></tr>
@@ -103,23 +106,26 @@ Packages</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9f3f9dce30942b81d85d2f8928ece310"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310">galsim.fits.write</a></td></tr>
-<tr class="memdesc:a9f3f9dce30942b81d85d2f8928ece310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a FITS file, with details depending on the type of the 'fits' argument:  <a href="#a9f3f9dce30942b81d85d2f8928ece310"></a><br/></td></tr>
+<tr class="memdesc:a9f3f9dce30942b81d85d2f8928ece310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single image to a FITS file.  <a href="#a9f3f9dce30942b81d85d2f8928ece310"></a><br/></td></tr>
 <tr class="memitem:a17dbb70385408586795efade476cdc98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a17dbb70385408586795efade476cdc98">galsim.fits.writeMulti</a></td></tr>
-<tr class="memdesc:a17dbb70385408586795efade476cdc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a multi-extension FITS file:  <a href="#a17dbb70385408586795efade476cdc98"></a><br/></td></tr>
+<tr class="memdesc:a17dbb70385408586795efade476cdc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Python list of images to a multi-extension FITS file.  <a href="#a17dbb70385408586795efade476cdc98"></a><br/></td></tr>
 <tr class="memitem:aa4fbd5ed42ffecda339a409296f0f101"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#aa4fbd5ed42ffecda339a409296f0f101">galsim.fits.writeCube</a></td></tr>
-<tr class="memdesc:aa4fbd5ed42ffecda339a409296f0f101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a FITS file as a data cube:  <a href="#aa4fbd5ed42ffecda339a409296f0f101"></a><br/></td></tr>
+<tr class="memdesc:aa4fbd5ed42ffecda339a409296f0f101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Python list of images to a FITS file as a data cube.  <a href="#aa4fbd5ed42ffecda339a409296f0f101"></a><br/></td></tr>
 <tr class="memitem:abbad6f82a80bc74fb22a752af1bbd8e9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9">galsim.fits.read</a></td></tr>
 <tr class="memdesc:abbad6f82a80bc74fb22a752af1bbd8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> from a FITS representation.  <a href="#abbad6f82a80bc74fb22a752af1bbd8e9"></a><br/></td></tr>
 <tr class="memitem:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067">galsim.fits.readMulti</a></td></tr>
-<tr class="memdesc:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an array of ImageViews from a FITS data cube.  <a href="#ae7aacb9f44faf9e487e83e12b9dd9067"></a><br/></td></tr>
+<tr class="memdesc:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a Python list of ImageViews from a Multi-extension FITS file.  <a href="#ae7aacb9f44faf9e487e83e12b9dd9067"></a><br/></td></tr>
 <tr class="memitem:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6">galsim.fits.readCube</a></td></tr>
-<tr class="memdesc:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an array of ImageViews from a FITS data cube.  <a href="#a2b703b58bd3ff40ff83bf750c73fe3d6"></a><br/></td></tr>
+<tr class="memdesc:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a Python list of ImageViews from a FITS data cube.  <a href="#a2b703b58bd3ff40ff83bf750c73fe3d6"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad82571faa522c5320d04e82232a291dc"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc">galsim.fits.native_byteorder</a> = {'big': '&gt;', 'little': '&lt;'}</td></tr>
 </table>
-</div><!-- contents -->
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Support for reading and writing <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a>* objects to FITS. </p>
+<p>This file includes routines for reading and writing individual Images to/from FITS files, and also routines for handling multiple Images. </p>
+</div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
 </body>

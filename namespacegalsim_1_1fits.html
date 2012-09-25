@@ -98,17 +98,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9f3f9dce30942b81d85d2f8928ece310"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310">write</a></td></tr>
-<tr class="memdesc:a9f3f9dce30942b81d85d2f8928ece310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a FITS file, with details depending on the type of the 'fits' argument:  <a href="#a9f3f9dce30942b81d85d2f8928ece310"></a><br/></td></tr>
+<tr class="memdesc:a9f3f9dce30942b81d85d2f8928ece310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single image to a FITS file.  <a href="#a9f3f9dce30942b81d85d2f8928ece310"></a><br/></td></tr>
 <tr class="memitem:a17dbb70385408586795efade476cdc98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a17dbb70385408586795efade476cdc98">writeMulti</a></td></tr>
-<tr class="memdesc:a17dbb70385408586795efade476cdc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a multi-extension FITS file:  <a href="#a17dbb70385408586795efade476cdc98"></a><br/></td></tr>
+<tr class="memdesc:a17dbb70385408586795efade476cdc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Python list of images to a multi-extension FITS file.  <a href="#a17dbb70385408586795efade476cdc98"></a><br/></td></tr>
 <tr class="memitem:aa4fbd5ed42ffecda339a409296f0f101"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#aa4fbd5ed42ffecda339a409296f0f101">writeCube</a></td></tr>
-<tr class="memdesc:aa4fbd5ed42ffecda339a409296f0f101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the image to a FITS file as a data cube:  <a href="#aa4fbd5ed42ffecda339a409296f0f101"></a><br/></td></tr>
+<tr class="memdesc:aa4fbd5ed42ffecda339a409296f0f101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Python list of images to a FITS file as a data cube.  <a href="#aa4fbd5ed42ffecda339a409296f0f101"></a><br/></td></tr>
 <tr class="memitem:abbad6f82a80bc74fb22a752af1bbd8e9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9">read</a></td></tr>
 <tr class="memdesc:abbad6f82a80bc74fb22a752af1bbd8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> from a FITS representation.  <a href="#abbad6f82a80bc74fb22a752af1bbd8e9"></a><br/></td></tr>
 <tr class="memitem:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067">readMulti</a></td></tr>
-<tr class="memdesc:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an array of ImageViews from a FITS data cube.  <a href="#ae7aacb9f44faf9e487e83e12b9dd9067"></a><br/></td></tr>
+<tr class="memdesc:ae7aacb9f44faf9e487e83e12b9dd9067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a Python list of ImageViews from a Multi-extension FITS file.  <a href="#ae7aacb9f44faf9e487e83e12b9dd9067"></a><br/></td></tr>
 <tr class="memitem:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6">readCube</a></td></tr>
-<tr class="memdesc:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an array of ImageViews from a FITS data cube.  <a href="#a2b703b58bd3ff40ff83bf750c73fe3d6"></a><br/></td></tr>
+<tr class="memdesc:a2b703b58bd3ff40ff83bf750c73fe3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a Python list of ImageViews from a FITS data cube.  <a href="#a2b703b58bd3ff40ff83bf750c73fe3d6"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -130,14 +130,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> from a FITS representation. </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, the Primary HDU will be used.</li>
-<li>If 'fits' is a pyfits.PrimaryHDU or pyfits.ImageHDU, that HDU will be used.</li>
-<li>If 'fits' is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used.</li>
-</ul>
-<p>If the FITS header has GS_* keywords, these will be used to initialize the bounding box and scale. If not, the bounding box will have (xMin,yMin) at (1,1) and the scale will be set to 1.0.</p>
-<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: short, int, float, and double).</p>
-<p>This function is called as "im = galsim.fits.read(...)" </p>
+<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: <code>short</code>, <code>int</code>, <code>float</code>, and <code>double</code>). If the FITS header has GS_* keywords, these will be used to initialize the bounding box and scale. If not, the bounding box will have <code>(xMin,yMin)</code> at <code>(1,1)</code> and the scale will be set to 1.0.</p>
+<p>This function is called as <code>im = <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Construct a new ImageView from a FITS representation.">galsim.fits.read</a>(...)</code></p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the Primary HDU will be used. If <code>fits</code> is a <code>pyfits.PrimaryHDU</code> or <code>pyfits.ImageHDU</code>, that HDU will be used. If <code>fits</code> is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -155,15 +155,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct an array of ImageViews from a FITS data cube. </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, the Primary HDU will be used.</li>
-<li>If 'fits' is a pyfits.PrimaryHDU or pyfits.ImageHDU, that HDU will be used.</li>
-<li>If 'fits' is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used.</li>
-</ul>
-<p>If the FITS header has GS_* keywords, these will be used to initialize the bounding boxes and scales. If not, the bounding boxes will have (xMin,yMin) at (1,1) and the scale will be set to 1.0.</p>
-<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: short, int, float, and double).</p>
-<p>This function is called as "image_list = galsim.fits.readCube(...)" </p>
+<p>Construct a Python list of ImageViews from a FITS data cube. </p>
+<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: <code>short</code>, <code>int</code>, <code>float</code>, and <code>double</code>). If the FITS header has GS_* keywords, these will be used to initialize the bounding boxes and scales. If not, the bounding boxes will have <code>(xMin,yMin)</code> at <code>(1,1)</code> and the scale will be set to 1.0.</p>
+<p>This function is called as <code>image_list = <a class="el" href="namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6" title="Construct a Python list of ImageViews from a FITS data cube.">galsim.fits.readCube</a>(...)</code></p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the Primary HDU will be used. If <code>fits</code> is a <code>pyfits.PrimaryHDU</code> or <code>pyfits.ImageHDU</code>, that HDU will be used. If <code>fits</code> is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>A Python list of <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> instances. </dd></dl>
 
 </div>
 </div>
@@ -181,13 +182,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct an array of ImageViews from a FITS data cube. </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, it will read images from these</li>
-<li>If 'fits' is a string, it will be interpreted as a filename to open and read</li>
-</ul>
-<p>If the FITS header has GS_* keywords, these will be used to initialize the bounding box and scale. If not, the bounding box will have (xMin,yMin) at (1,1) and the scale will be set to 1.0.</p>
-<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: short, int, float, and double). </p>
+<p>Construct a Python list of ImageViews from a Multi-extension FITS file. </p>
+<p>Not all FITS pixel types are supported (only those with C++ <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> template instantiations are: <code>short</code>, <code>int</code>, <code>float</code>, and <code>double</code>). If the FITS header has GS_* keywords, these will be used to initialize the bounding box and scale. If not, the bounding box will have <code>(xMin,yMin)</code> at <code>(1,1)</code> and the scale will be set to 1.0.</p>
+<p>This function is called as <code>im = <a class="el" href="namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067" title="Construct a Python list of ImageViews from a Multi-extension FITS file.">galsim.fits.readMulti</a>(...)</code></p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, readMulti will read images from these. If <code>fits</code> is a string, it will be interpreted as a filename to open and read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>A Python list of <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> instances. </dd></dl>
 
 </div>
 </div>
@@ -227,14 +231,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Write the image to a FITS file, with details depending on the type of the 'fits' argument: </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, the image will be appended as a new HDU. The user is responsible for calling fits.writeto(...) afterwards.</li>
-<li>If 'fits' is a string, it will be interpreted as a filename for a new FITS file.</li>
-</ul>
-<p>If add_wcs evaluates to True, a 'LINEAR' WCS will be added using the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s bounding box. This is not necessary to ensure an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be round-tripped through FITS, as the bounding box (and scale) are always saved in custom header keys. If add_wcs is a string, this will be used as the WCS name.</p>
-<p>This function can be called directly as "galsim.fits.write(image, ...)", with the image as the first argument, or as an image method: "image.write(...)".</p>
-<p>Setting clobber=True when 'fits' is a string will silently overwrite existing files. </p>
+<p>Write a single image to a FITS file. </p>
+<p>Write the image to a FITS file, with details depending on the arguments. This function can be called directly as <code><a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a>(image, ...)</code>, with the image as the first argument, or as an image method: <code>image.write(...)</code>.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The image to write to file. Per the description of this method, it may be given explicitly via <code><a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a>(image, ...)</code> or the method may be called directly as an image method, <code>image.write(...)</code>. </td></tr>
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a pyfits.HDUList, the image will be appended as a new HDU. In that case, the user is responsible for calling fits.writeto(...) afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new FITS file. </td></tr>
+    <tr><td class="paramname">add_wcs</td><td>If <code>add_wcs</code> evaluates to <code>True</code>, a 'LINEAR' WCS will be added using the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s bounding box. This is not necessary to ensure an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be round-tripped through FITS, as the bounding box (and scale) are always saved in custom header keys. If <code>add_wcs</code> is a string, this will be used as the WCS name. (Default <code>add_wcs = True</code>.) </td></tr>
+    <tr><td class="paramname">clobber</td><td>Setting <code>clobber=True</code> when <code>fits</code> is a string will silently overwrite existing files. (Default <code>clobber = True</code>.) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -274,14 +281,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Write the image to a FITS file as a data cube: </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, the cube will be appended as new HDUs. The user is responsible for calling fits.writeto(...) afterwards.</li>
-<li>If 'fits' is a string, it will be interpreted as a filename for a new FITS file. Normally 'image_list' is a python array of <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s (or ImageViews). Each is required to have the same size (nx,ny). If not a ValueError is raised.</li>
-</ul>
-<p>The image_list can also be either an array of numpy arrays or a 3d numpy array, in which case this is written to the fits file directly. In the former case, not explicit check is made that the numpy arrays are all the same shape, but a numpy exception will be raised which we let pass upstream unmolested.</p>
-<p>If add_wcs evaluates to True, a 'LINEAR' WCS will be added using the first <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s bounding box. No check is made to confirm that all images have the same origin and pixel scale. If add_wcs is a string, this will be used as the WCS name.</p>
-<p>Setting clobber=True when 'fits' is a string will silently overwrite existing files. </p>
+<p>Write a Python list of images to a FITS file as a data cube. </p>
+<p>The details of how the images are written to file depends on the arguments. Unlike for writeMulti, when writing a data cube it is necessary that each <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> in <code>image_list</code> has the same size <code>(nx, ny)</code>. No check is made to confirm that all images have the same origin and pixel scale.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image_list</td><td>The <code>image_list</code> can also be either an array of NumPy arrays or a 3d NumPy array, in which case this is written to the fits file directly. In the former case, no explicit check is made that the numpy arrays are all the same shape, but a numpy exception will be raised which we let pass upstream unmolested. </td></tr>
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the cube will be appended as new HDUs. The user is responsible for calling <code>fits.writeto(...)</code> afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new FITS file. </td></tr>
+    <tr><td class="paramname">add_wcs</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+    <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -321,13 +331,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Write the image to a multi-extension FITS file: </p>
-<ul>
-<li>If 'fits' is a pyfits.HDUList, the images will be appended as new HDUs. The user is responsible for calling fits.writeto(...) afterwards.</li>
-<li>If 'fits' is a string, it will be interpreted as a filename for a new multi-extension FITS file.</li>
-</ul>
-<p>If add_wcs evaluates to True, a 'LINEAR' WCS will be added using each <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s bounding box. This is not necessary to ensure an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be round-tripped through FITS, as the bounding box (and scale) are always saved in custom header keys. If add_wcs is a string, this will be used as the WCS name.</p>
-<p>Setting clobber=True when 'fits' is a string will silently overwrite existing files. </p>
+<p>Write a Python list of images to a multi-extension FITS file. </p>
+<p>The details of how the images are written to file depends on the arguments.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image_list</td><td>A Python list of Images. </td></tr>
+    <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the images will be appended as new HDUs. The user is responsible for calling <code>fits.writeto(...)</code> afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new multi-extension FITS file. </td></tr>
+    <tr><td class="paramname">add_wcs</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+    <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
