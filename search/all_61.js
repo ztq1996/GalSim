@@ -13,7 +13,7 @@ var searchData=
   ['addnoisephot',['AddNoisePhot',['../namespacegalsim_1_1config_1_1process.html#af48f5405333e36a3b7f65229efc88b10',1,'galsim::config::process']]],
   ['addto',['addTo',['../classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf',1,'galsim::PhotonArray']]],
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
-  ['alias_5fthreshold',['alias_threshold',['../namespacegalsim_1_1sbp.html#af2333b572d187cbcfd6f6daa7c7bc30f',1,'galsim::sbp::alias_threshold()'],['../namespacegalsim_1_1base.html#a5941a6ac5e44c1a0fef1f3205d49b531',1,'galsim.base.ALIAS_THRESHOLD()']]],
+  ['alias_5fthreshold',['ALIAS_THRESHOLD',['../namespacegalsim_1_1base.html#a5941a6ac5e44c1a0fef1f3205d49b531',1,'galsim.base.ALIAS_THRESHOLD()'],['../namespacegalsim_1_1sbp.html#af2333b572d187cbcfd6f6daa7c7bc30f',1,'galsim::sbp::alias_threshold()']]],
   ['allocate_5frect_5fimage',['allocate_rect_image',['../namespacegalsim_1_1hsm.html#a8e5f5aa7b06c53d22b255c2a2e38e0fd',1,'galsim::hsm']]],
   ['allowed_5fflux_5fvariation',['ALLOWED_FLUX_VARIATION',['../namespacegalsim_1_1odd.html#a18395b5e45fb268c96c6d0f573d4c534',1,'galsim::odd']]],
   ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a0dffef6e343b8a1992b369d99da4f395',1,'galsim::lensing::PowerSpectrumRealizer']]],
