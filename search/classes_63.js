@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['calculatecenter',['CalculateCenter',['../structgalsim_1_1_calculate_center.html',1,'galsim']]],
-  ['calculatecenter_3c_20t_2c_20true_20_3e',['CalculateCenter&lt; T, true &gt;',['../structgalsim_1_1_calculate_center_3_01_t_00_01true_01_4.html',1,'galsim']]],
   ['ccdnoise',['CCDNoise',['../classgalsim_1_1_c_c_d_noise.html',1,'galsim']]],
   ['chi2deviate',['Chi2Deviate',['../classgalsim_1_1_chi2_deviate.html',1,'galsim']]],
   ['constimageview',['ConstImageView',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],

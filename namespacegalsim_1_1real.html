@@ -156,7 +156,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
+          <td class="paramname"><em>uniform_deviate</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -189,9 +189,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">target_pixel_scale</td><td>The pixel scale for the final image, in arcsec. </td></tr>
     <tr><td class="paramname">g1</td><td>First component of shear to impose (components defined with respect to pixel coordinates), default <code>g1 = 0.</code> </td></tr>
     <tr><td class="paramname">g2</td><td>Second component of shear to impose, default <code>g2 = 0.</code> </td></tr>
-    <tr><td class="paramname">rotation_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> by which to rotate the galaxy (must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance). </td></tr>
+    <tr><td class="paramname">rotation_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> by which to rotate the galaxy (must be a galsim.Angle() instance). </td></tr>
     <tr><td class="paramname">rand_rotate</td><td>If <code>rand_rotate = True</code> (default) then impose a random rotation on the training galaxy; this is ignored if <code>rotation_angle</code> is set. </td></tr>
-    <tr><td class="paramname">rng</td><td>A random number generator to use for selection of the random rotation angle. (optional, may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a> or None) </td></tr>
+    <tr><td class="paramname">uniform_deviate</td><td>Uniform RNG to use for selection of the random rotation angle (optional, must be a galsim.UniformDeviate() if supplied). </td></tr>
     <tr><td class="paramname">target_flux</td><td>The target flux in the output galaxy image, default <code>target_flux = 1000.</code> </td></tr>
     <tr><td class="paramname">image</td><td>As with the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">GSObject.draw()</a> function, if an image is provided, then it will be used and returned. If <code>image=None</code>, then an appropriately sized image will be created. </td></tr>
   </table>

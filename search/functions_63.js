@@ -1,10 +1,9 @@
 var searchData=
 [
   ['calculatemaxk',['calculateMaxK',['../classgalsim_1_1_s_b_interpolated_image.html#a4e0791faae6fe94a3445ce7826b0c609',1,'galsim::SBInterpolatedImage']]],
-  ['calculatenoisevar',['CalculateNoiseVar',['../namespacegalsim_1_1config_1_1stamp.html#a3d57add4b6f4efcc89dee75f22f09a71',1,'galsim::config::stamp']]],
+  ['calculatenoisevar',['CalculateNoiseVar',['../namespacegalsim_1_1config_1_1process.html#ab61eaf8e9d0dc3457012c65a7aaea827',1,'galsim::config::process']]],
   ['calculatestepk',['calculateStepK',['../classgalsim_1_1_s_b_interpolated_image.html#a09dd8a7fa9873222e9b584584256f801',1,'galsim::SBInterpolatedImage']]],
-  ['calculatewcsshear',['CalculateWCSShear',['../namespacegalsim_1_1config_1_1stamp.html#ad61bf79acaf10018d86f44d1344f7020',1,'galsim::config::stamp']]],
-  ['call',['call',['../structgalsim_1_1_calculate_center.html#a453c7c5398548bfa716fd6b1ba914bd1',1,'galsim::CalculateCenter::call()'],['../structgalsim_1_1_calculate_center_3_01_t_00_01true_01_4.html#a9616f7477ea9678bb0fc825721e603c2',1,'galsim::CalculateCenter&lt; T, true &gt;::call()']]],
+  ['calculatewcsshear',['CalculateWCSShear',['../namespacegalsim_1_1config_1_1process.html#a272de8d5bae21a2b5d58dab61009262b',1,'galsim::config::process']]],
   ['ccdnoise',['CCDNoise',['../classgalsim_1_1_c_c_d_noise.html#a8bf048f95a301c3f3d26273e4c1daab5',1,'galsim::CCDNoise::CCDNoise(double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#ac0afddc172b622984d66fa32ba4b6624',1,'galsim::CCDNoise::CCDNoise(long lseed, double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#acced172cdc50df01dba3a1e845ccca95',1,'galsim::CCDNoise::CCDNoise(const BaseDeviate &amp;dev, double gain=1., double readNoise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#aeb37dd84d317dffc4a1f9a78b6cbedf9',1,'galsim::CCDNoise::CCDNoise(const CCDNoise &amp;rhs)']]],
   ['center',['center',['../classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d',1,'galsim::Bounds']]],
   ['centroid',['centroid',['../classgalsim_1_1_s_b_profile.html#af07f3685954696376c51d86b3acf2600',1,'galsim::SBProfile::centroid()'],['../classgalsim_1_1base_1_1_g_s_object.html#a08a0bb72927fce3c765a9580de656d1a',1,'galsim.base.GSObject.centroid()']]],

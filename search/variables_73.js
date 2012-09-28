@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['sbii_5fg1',['sbii_g1',['../classgalsim_1_1lensing_1_1_power_spectrum.html#ab7a2988f2eec0841f826f7326230dce7',1,'galsim::lensing::PowerSpectrum']]],
-  ['sbii_5fg2',['sbii_g2',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a915f4a2c26aa923a7852149589f60aa6',1,'galsim::lensing::PowerSpectrum']]],
   ['sbprofile',['SBProfile',['../classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b',1,'galsim::base::GSObject']]],
   ['second',['SECOND',['../_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f',1,'AstronomicalConstants.h']]],
   ['shoot_5fflux_5faccuracy',['shoot_flux_accuracy',['../namespacegalsim_1_1sbp.html#a51b2f5996bde0b1471ada1d75161c13f',1,'galsim::sbp']]],

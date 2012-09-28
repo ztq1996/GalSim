@@ -11,10 +11,10 @@ var searchData=
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
   ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()']]],
   ['drawk',['drawK',['../classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb',1,'galsim::SBProfile']]],
-  ['drawpsfstamp',['DrawPSFStamp',['../namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f',1,'galsim::config::stamp']]],
+  ['drawpsfstamp',['DrawPSFStamp',['../namespacegalsim_1_1config_1_1process.html#ab479104dfb07563588edcd4d4340b88d',1,'galsim::config::process']]],
   ['drawshoot',['drawShoot',['../classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718',1,'galsim::SBProfile::drawShoot()'],['../classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0',1,'galsim.base.GSObject.drawShoot()']]],
-  ['drawstampfft',['DrawStampFFT',['../namespacegalsim_1_1config_1_1stamp.html#afece785b2079817ed2d4558689d4da5f',1,'galsim::config::stamp']]],
-  ['drawstampphot',['DrawStampPhot',['../namespacegalsim_1_1config_1_1stamp.html#a35f6111ac506b8a68755e424ddbdc726',1,'galsim::config::stamp']]],
+  ['drawstampfft',['DrawStampFFT',['../namespacegalsim_1_1config_1_1process.html#a26c87566d7235b5b2a6e6c10daf1d845',1,'galsim::config::process']]],
+  ['drawstampphot',['DrawStampPhot',['../namespacegalsim_1_1config_1_1process.html#a5b8209738a32ee5acd85b89431acf153',1,'galsim::config::process']]],
   ['drawwithin',['drawWithin',['../classgalsim_1_1_interval.html#a08bb56af4a637c1169676279c9f10188',1,'galsim::Interval']]],
   ['dump',['dump',['../classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487',1,'galsim::Table']]]
 ];
