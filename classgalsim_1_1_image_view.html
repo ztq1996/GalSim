@@ -133,6 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7a6ae2664ce2785562d58a8c64adaa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep assignment operator.  <a href="#a7a6ae2664ce2785562d58a8c64adaa1a"></a><br/></td></tr>
 <tr class="memitem:a1b53064b53a979d3aaf1db1a2a585696"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a1b53064b53a979d3aaf1db1a2a585696">operator=</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="memdesc:a1b53064b53a979d3aaf1db1a2a585696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat for <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> to prevent compiler from making the default op=.  <a href="#a1b53064b53a979d3aaf1db1a2a585696"></a><br/></td></tr>
+<tr class="memitem:ae0d5e61a1eca797c33389d048debbbcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#ae0d5e61a1eca797c33389d048debbbcb">invertSelf</a> () const </td></tr>
+<tr class="memdesc:ae0d5e61a1eca797c33389d048debbbcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set each element to its inverse: im(i,j) = 1/im(i,j)  <a href="#ae0d5e61a1eca797c33389d048debbbcb"></a><br/></td></tr>
 <tr class="memitem:a5adc3286b9018111250b4dac6315040b"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a5adc3286b9018111250b4dac6315040b">getData</a> () const </td></tr>
 <tr class="memdesc:a5adc3286b9018111250b4dac6315040b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the first pixel in the image.  <a href="#a5adc3286b9018111250b4dac6315040b"></a><br/></td></tr>
 <tr class="memitem:a6460070f41d8769a2f980e983dab1c02"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a6460070f41d8769a2f980e983dab1c02">view</a> () const </td></tr>
@@ -731,6 +733,25 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae0d5e61a1eca797c33389d048debbbcb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::invertSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set each element to its inverse: im(i,j) = 1/im(i,j) </p>
 
 </div>
 </div>

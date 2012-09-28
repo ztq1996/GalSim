@@ -134,11 +134,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>observed_shape
 : <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a8ba68ff60b7cf8f4899fe6c94fb4ca4d">galsim::hsm::HSMShapeData</a>
 </li>
+<li>offset
+: <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a60d3a2afb7fc4229a968a48ca5367533">galsim.lensing.PowerSpectrum</a>
+</li>
 <li>omega_c
 : <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html#a2df16ac23745ca8ddffef5c08d6dbcb5">galsim.lensing.Cosmology</a>
 </li>
-<li>omega_l
-: <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html#ad299a0c90c8bc4448278fee1f97e4545">galsim.lensing.Cosmology</a>
+<li>omega_lam
+: <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html#a45a231ec73865a5f097542fe45ae2288">galsim.lensing.Cosmology</a>
 </li>
 <li>omega_m
 : <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html#a26b7ae86398cbab23831c1087121e19d">galsim.lensing.Cosmology</a>
@@ -150,27 +153,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html#a00aefd0bc854e1ea4beb190cf3f94dc9">galsim::OneDimensionalDeviate</a>
 </li>
 <li>operator double()
-: <a class="el" href="classgalsim_1_1_gaussian_deviate.html#ad912d1739c87d7b13c5246a408e7cdbc">galsim::GaussianDeviate</a>
-, <a class="el" href="classgalsim_1_1_uniform_deviate.html#a05f065ef77d130f4b79980721d2cb834">galsim::UniformDeviate</a>
+: <a class="el" href="classgalsim_1_1_uniform_deviate.html#a05f065ef77d130f4b79980721d2cb834">galsim::UniformDeviate</a>
+, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#ad912d1739c87d7b13c5246a408e7cdbc">galsim::GaussianDeviate</a>
 </li>
 <li>operator int()
 : <a class="el" href="classgalsim_1_1_binomial_deviate.html#a328ebcc38ea158c36ec72024c85fa0fb">galsim::BinomialDeviate</a>
 , <a class="el" href="classgalsim_1_1_poisson_deviate.html#a67b4314a05173ce8330e1badc35163eb">galsim::PoissonDeviate</a>
 </li>
 <li>operator!=()
-: <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a72b1472144062d5c6d529c636e900b7c">galsim::CppEllipse</a>
+: <a class="el" href="classgalsim_1_1_cpp_shear.html#a4bd6b82bdae635c87f0e71ed8ff13aad">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a72b1472144062d5c6d529c636e900b7c">galsim::CppEllipse</a>
 , <a class="el" href="classgalsim_1_1_table_entry.html#ada7058c0e23f3675ac4a57798e67dbb0">galsim::TableEntry&lt; V, A &gt;</a>
 , <a class="el" href="classgalsim_1_1_angle_unit.html#ac4d55983721680acb2c40248324b0816">galsim::AngleUnit</a>
 , <a class="el" href="classgalsim_1_1_angle.html#aa427b504b9acbfd31dc874bae88e2385">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#ac5eb84175edd69f92fd285b23f2d2fac">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#a54e3c07b43f0d0a67bfd32cd160041c7">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_bounds.html#ab96bd805ec895c11e02e6892bb482c40">galsim::Bounds&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_cpp_shear.html#a4bd6b82bdae635c87f0e71ed8ff13aad">galsim::CppShear</a>
 </li>
 <li>operator&amp;()
 : <a class="el" href="classgalsim_1_1_bounds.html#a30688fd107fe4754d4565803dc473042">galsim::Bounds&lt; T &gt;</a>
 </li>
 <li>operator()()
-: <a class="el" href="classgalsim_1_1_chi2_deviate.html#a2f7d4a32f4ebb2a99931b07a868ee371">galsim::Chi2Deviate</a>
+: <a class="el" href="classgalsim_1_1_gamma_deviate.html#aa1abeff954313fa6837dd11eee2f3dff">galsim::GammaDeviate</a>
+, <a class="el" href="classgalsim_1_1_chi2_deviate.html#a2f7d4a32f4ebb2a99931b07a868ee371">galsim::Chi2Deviate</a>
 , <a class="el" href="classgalsim_1_1_uniform_deviate.html#a163ba4090b86b42b3919bb0467669d71">galsim::UniformDeviate</a>
 , <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">galsim::GaussianDeviate</a>
 , <a class="el" href="classgalsim_1_1_binomial_deviate.html#a2a9d5f6eea2d14672a36eb20f58993f6">galsim::BinomialDeviate</a>
@@ -187,58 +191,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_binomial_deviate.html#a2a9d5f6eea2d14672a36eb20f58993f6">galsim::BinomialDeviate</a>
 , <a class="el" href="classgalsim_1_1_poisson_deviate.html#ac1a2db47048b7ca1ca544aac5d188f3b">galsim::PoissonDeviate</a>
 , <a class="el" href="classgalsim_1_1_weibull_deviate.html#abd1df1c5605bc7d3980d9d8872dd1285">galsim::WeibullDeviate</a>
-, <a class="el" href="classgalsim_1_1_gamma_deviate.html#aa1abeff954313fa6837dd11eee2f3dff">galsim::GammaDeviate</a>
 </li>
 <li>operator*()
 : <a class="el" href="classgalsim_1_1_angle.html#a043d40fabcd2254b7de48a99ced041ab">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#aa9928cbd65b3d1f853fdca64de3e0005">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#a03d86b9bf380dd165cb3a2e086486a76">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#af7697e601f70df9bc28d8cfd4afb77f8">galsim::CppShear</a>
 </li>
 <li>operator*=()
 : <a class="el" href="classgalsim_1_1_angle.html#aa9731f7c7e40bcf039ae974053f31d7c">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#ae13c9d02a360fbd71502c832d8b9e629">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#a4ecbd8ea4dd5030f532b8addc0e29418">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_k_table.html#ac727c4bc7da1e2082e784b5f2a27227a">galsim::KTable</a>
 , <a class="el" href="classgalsim_1_1_x_table.html#ad8b80902a8165e565e6ebfb0fdee95ad">galsim::XTable</a>
 </li>
 <li>operator+()
 : <a class="el" href="classgalsim_1_1_angle.html#ac39c7b8dc178cbd6793c6e4a0c420b49">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#a29764368949a6e9cbd5dc97e33f1e8db">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#ad7386bb2831fb3e7fff274f9a2481f44">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#a8497362986608c8645997c9a4a32a02b">galsim::CppShear</a>
 , <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a3dc94b6144a856e211f407ceb9dc70da">galsim::CppEllipse</a>
 </li>
 <li>operator+=()
 : <a class="el" href="classgalsim_1_1_angle.html#a4dcd604534894db627aa4e8e95af13b5">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#a684ff384f8b9871d7197bf792c984d6a">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#ac1f4098008cc07adb300548d640ddb5a">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_bounds.html#a284d1e1a8070425a8cf064e737b2e72a">galsim::Bounds&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#afed8a7a82a48c1e198480b6618501734">galsim::CppShear</a>
 , <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a8a6100ecd9767725197372dd6bcc78bd">galsim::CppEllipse</a>
 </li>
 <li>operator-()
-: <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a1f5bb081adcf6d10d4564702d41f01f0">galsim::CppEllipse</a>
-, <a class="el" href="classgalsim_1_1_cpp_shear.html#a5eb5eb93585dcb3de78d1d3a858920f5">galsim::CppShear</a>
-, <a class="el" href="classgalsim_1_1_angle.html#a4d3be8caeb5a0080fda95a02096bfe61">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#ad9fd97eba20cbcb3c4d3be48ef5d4cc9">galsim::Position&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_cpp_shear.html#a5eb5eb93585dcb3de78d1d3a858920f5">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a1f5bb081adcf6d10d4564702d41f01f0">galsim::CppEllipse</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#a4f096cd106a9b011af016fac3d2efbc5">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_angle.html#a4d3be8caeb5a0080fda95a02096bfe61">galsim::Angle</a>
+, <a class="el" href="classgalsim_1_1_position.html#a81169b81314b24573d9870fb3a073f8c">galsim::Position&lt; T &gt;</a>
 </li>
 <li>operator-=()
 : <a class="el" href="classgalsim_1_1_angle.html#a4a6650ba9e25ee3b536cc522b86df30d">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#aa9af89abb304181fa989ecdbdcf352bf">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#a99f0f3a252006d0d55c26d6d317c9a3e">galsim::Position&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#a1cc1dd6ef41bf82ef9562a656c6dde5a">galsim::CppShear</a>
 , <a class="el" href="classgalsim_1_1_cpp_ellipse.html#addb52aef3e87ec393aca7067fa91dda2">galsim::CppEllipse</a>
 </li>
 <li>operator/()
-: <a class="el" href="classgalsim_1_1_angle.html#a26b8b874ef75e4ef9cbfdebd6a032ce7">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#aee1382d9e9cb13ef71575d308e7a14e0">galsim::Position&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_angle.html#a412058305f5de6665c1c613b4d120cd7">galsim::Angle</a>
+: <a class="el" href="classgalsim_1_1_angle.html#a412058305f5de6665c1c613b4d120cd7">galsim::Angle</a>
+, <a class="el" href="classgalsim_1_1_position.html#a8ec6bb30de35738ff9de88e865661bd6">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_angle.html#a26b8b874ef75e4ef9cbfdebd6a032ce7">galsim::Angle</a>
 </li>
 <li>operator/=()
 : <a class="el" href="classgalsim_1_1_angle.html#a8283715cf10e61d0d73c963c20491ba1">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_position.html#adad6025a6faacf02641cc29c251855d4">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_position.html#af1a287ad65128f5144e9020ee02947b5">galsim::Position&lt; T &gt;</a>
 </li>
 <li>operator&lt;()
-: <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#a88c4caf25a42a5752e7d04646024b21e">galsim::integ::IntRegion&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_angle.html#ab5b4be71c5526ed8a603e7c97084a582">galsim::Angle</a>
+, <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#a88c4caf25a42a5752e7d04646024b21e">galsim::integ::IntRegion&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_table_entry.html#a4ef79be290516e9962fe9c293137d49c">galsim::TableEntry&lt; V, A &gt;</a>
-, <a class="el" href="classgalsim_1_1_angle.html#ab5b4be71c5526ed8a603e7c97084a582">galsim::Angle</a>
 </li>
 <li>operator&lt;&lt;
 : <a class="el" href="classgalsim_1_1_angle.html#a2958205923e6080a68adc58352a680b9">galsim::Angle</a>
@@ -246,50 +249,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classgalsim_1_1_angle.html#ac39f9e04dff0247f905b32f6b449dc3c">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_table_entry.html#a429b2a45a6019e6073255a2c3d3cd3ed">galsim::TableEntry&lt; V, A &gt;</a>
+, <a class="el" href="classgalsim_1_1_table_entry.html#aba0b239f57c0548e8cfada28cb66e9ca">galsim::TableEntry&lt; V, A &gt;</a>
 </li>
 <li>operator=()
-: <a class="el" href="classgalsim_1_1_image_view.html#a1b53064b53a979d3aaf1db1a2a585696">galsim::ImageView&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a45f6734db1655c7b9c85bd050d92e27e">galsim::MultipleImageHelper</a>
+: <a class="el" href="classgalsim_1_1_image.html#a6bc2967583856f68aac68c9658aae523">galsim::Image&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image_view.html#a6f8f9dd7db28de439821bafcdde13739">galsim::ImageView&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_position.html#aec2cbcbe5ea691682116a28c49625420">galsim::Position&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_x_table.html#af030b229dba6d152d61d24592dd5c213">galsim::XTable</a>
-, <a class="el" href="classgalsim_1_1_image.html#a12a25782c6445324635e77fbc2c0e64d">galsim::Image&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_k_table.html#ab772c302abce76bff76e7588288232a8">galsim::KTable</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#ace7848b95cf14fbbce766b622994cc2d">galsim::SBProfile</a>
 , <a class="el" href="classgalsim_1_1_image.html#aa48db9a12476b0565dfbfa87f10d5f5a">galsim::Image&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_image_view.html#a7a6ae2664ce2785562d58a8c64adaa1a">galsim::ImageView&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_cpp_shear.html#a762a43ba06ef20835e7ca79d4792b943">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_image_view.html#a1b53064b53a979d3aaf1db1a2a585696">galsim::ImageView&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#ace7848b95cf14fbbce766b622994cc2d">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_k_table.html#ab772c302abce76bff76e7588288232a8">galsim::KTable</a>
+, <a class="el" href="classgalsim_1_1_image.html#a12a25782c6445324635e77fbc2c0e64d">galsim::Image&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a71ddf84ce8f3b11a51bfbe2a0a6c812c">galsim::CppEllipse</a>
+, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a45f6734db1655c7b9c85bd050d92e27e">galsim::MultipleImageHelper</a>
+, <a class="el" href="classgalsim_1_1_x_table.html#af030b229dba6d152d61d24592dd5c213">galsim::XTable</a>
+, <a class="el" href="classgalsim_1_1_cpp_shear.html#a762a43ba06ef20835e7ca79d4792b943">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_position.html#a983c1d298dc6ccdf3e587d891a7cf673">galsim::Position&lt; T &gt;</a>
 </li>
 <li>operator==()
-: <a class="el" href="classgalsim_1_1_angle_unit.html#ac1694e8529a2871340380bac6b2ff6da">galsim::AngleUnit</a>
+: <a class="el" href="classgalsim_1_1_angle.html#a51048108f12057d574a95956ddd702cc">galsim::Angle</a>
 , <a class="el" href="classgalsim_1_1_table_entry.html#a27b9a814b0dc32277f401ff42797ea31">galsim::TableEntry&lt; V, A &gt;</a>
-, <a class="el" href="classgalsim_1_1_position.html#af652e0cf749f44c897f198613b6fe7f9">galsim::Position&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_bounds.html#a0b16cd9a7fd4818de0317ab9df84e96f">galsim::Bounds&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_angle.html#a51048108f12057d574a95956ddd702cc">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_cpp_ellipse.html#ac36ca5840a87c6febc5b4e77090e4f42">galsim::CppEllipse</a>
 , <a class="el" href="classgalsim_1_1_cpp_shear.html#a5bbd58e8743534b574fe25c40bf6a56a">galsim::CppShear</a>
+, <a class="el" href="classgalsim_1_1_position.html#a62928d9475fa56aa15fd1bd8fa16aedd">galsim::Position&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_bounds.html#a0b16cd9a7fd4818de0317ab9df84e96f">galsim::Bounds&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_table_entry.html#aaa064a4c239e57b7b56f1992a9e23648">galsim::TableEntry&lt; V, A &gt;</a>
+, <a class="el" href="classgalsim_1_1_angle_unit.html#ac1694e8529a2871340380bac6b2ff6da">galsim::AngleUnit</a>
+, <a class="el" href="classgalsim_1_1_cpp_ellipse.html#ac36ca5840a87c6febc5b4e77090e4f42">galsim::CppEllipse</a>
 </li>
 <li>operator&gt;()
-: <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#a2964546687e46fb78dc45dee8809898a">galsim::integ::IntRegion&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_table_entry.html#a07f4ecff56e9f45deebf84ca544279b3">galsim::TableEntry&lt; V, A &gt;</a>
+: <a class="el" href="classgalsim_1_1_table_entry.html#a07f4ecff56e9f45deebf84ca544279b3">galsim::TableEntry&lt; V, A &gt;</a>
 , <a class="el" href="classgalsim_1_1_angle.html#ac4a7387ecfaf0c96e2442232aae0fa5a">galsim::Angle</a>
-, <a class="el" href="classgalsim_1_1_table_entry.html#adc692444410572f92823cc9c1b1388ef">galsim::TableEntry&lt; V, A &gt;</a>
+, <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#a2964546687e46fb78dc45dee8809898a">galsim::integ::IntRegion&lt; T &gt;</a>
 </li>
 <li>operator&gt;=()
-: <a class="el" href="classgalsim_1_1_table_entry.html#a7b3b24501262ff2ff679cad16a64f4c4">galsim::TableEntry&lt; V, A &gt;</a>
-, <a class="el" href="classgalsim_1_1_angle.html#a93d6eb1c353cb56b24200974882f5642">galsim::Angle</a>
+: <a class="el" href="classgalsim_1_1_angle.html#a93d6eb1c353cb56b24200974882f5642">galsim::Angle</a>
 , <a class="el" href="classgalsim_1_1_table_entry.html#aa34c3224e180ae2d0eee98be618a919c">galsim::TableEntry&lt; V, A &gt;</a>
 </li>
 <li>operator&gt;&gt;
 : <a class="el" href="classgalsim_1_1_cpp_shear.html#ad2a747d35c3ce26449a6347c113fced3">galsim::CppShear</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classgalsim_1_1_base_image.html#a6d3f11b42810b95dcee9ec3e38b2d263">galsim::BaseImage&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_image.html#a0cde079f9176d5e52ac5919aea9c3506">galsim::Image&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_image.html#a0cde079f9176d5e52ac5919aea9c3506">galsim::Image&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image_view.html#a0b5d3c909b2fe37bf83c982445ecdd08">galsim::ImageView&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_image.html#ac2d785e08fee9a85966556587dd4de33">galsim::Image&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_base_image.html#a6d3f11b42810b95dcee9ec3e38b2d263">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>original_image
 : <a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#adae1052ce425c743ef5e64ab34df6f06">galsim.base.RealGalaxy</a>

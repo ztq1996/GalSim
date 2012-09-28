@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GalSim: galsim/config/ Directory Reference</title>
+<title>GalSim: galsim/config/image.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,7 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,6 +59,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           </span>
         </div>
       </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -81,19 +87,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Packages</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">config Directory Reference</div>  </div>
+<div class="title">image.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:config_2____init_____8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_2____init_____8py.html">__init__.py</a></td></tr>
-<tr class="memitem:gsobject_8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gsobject_8py.html">gsobject.py</a></td></tr>
-<tr class="memitem:config_2image_8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_2image_8py.html">image.py</a></td></tr>
-<tr class="memitem:process_8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8py.html">process.py</a></td></tr>
-<tr class="memitem:stamp_8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stamp_8py.html">stamp.py</a></td></tr>
-<tr class="memitem:value_8py"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8py.html">value.py</a></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
+Packages</h2></td></tr>
+<tr class="memitem:namespacegalsim_1_1config_1_1image"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html">galsim.config.image</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aab1180eb25a725c66f8a556242e6167a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a">galsim.config.image.BuildImage</a></td></tr>
+<tr class="memdesc:aab1180eb25a725c66f8a556242e6167a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image according the information in config.  <a href="#aab1180eb25a725c66f8a556242e6167a"></a><br/></td></tr>
+<tr class="memitem:a4ff907c095c04558ff1dd4188cf5e3f7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a4ff907c095c04558ff1dd4188cf5e3f7">galsim.config.image.BuildSingleImage</a></td></tr>
+<tr class="memdesc:a4ff907c095c04558ff1dd4188cf5e3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image consisting of a single stamp.  <a href="#a4ff907c095c04558ff1dd4188cf5e3f7"></a><br/></td></tr>
+<tr class="memitem:aba8cefafd95d20ef0fae0073def35246"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#aba8cefafd95d20ef0fae0073def35246">galsim.config.image.BuildTiledImage</a></td></tr>
+<tr class="memdesc:aba8cefafd95d20ef0fae0073def35246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image consisting of a tiled array of postage stamps.  <a href="#aba8cefafd95d20ef0fae0073def35246"></a><br/></td></tr>
+<tr class="memitem:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#ae7a8909abd72bba62dc1d92fb45e3a74">galsim.config.image.BuildScatteredImage</a></td></tr>
+<tr class="memdesc:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image containing multiple objects placed at arbitrary locations.  <a href="#ae7a8909abd72bba62dc1d92fb45e3a74"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

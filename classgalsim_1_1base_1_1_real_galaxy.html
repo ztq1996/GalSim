@@ -198,7 +198,7 @@ Public Attributes</h2></td></tr>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> drawShoot method is unavailable for <a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> instances.</p>
 <h2>Initialization</h2>
 <pre class="fragment">real_galaxy = galsim.RealGalaxy(real_galaxy_catalog, index=None, id=None, random=False, 
-                                uniform_deviate=None, interpolant=None)
+                                rng=None, interpolant=None)
 </pre><p>This initializes real_galaxy with three <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> objects (one for the deconvolved galaxy, and saved versions of the original HST image and PSF). Note that there are multiple keywords for choosing a galaxy; exactly one must be set. In future we may add more such options, e.g., to choose at random but accounting for the non-constant weight factors (probabilities for objects to make it into the training sample). Like other GSObjects, the <a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> contains an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute which is an <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a> representing the deconvolved HST galaxy.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -206,7 +206,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">index</td><td>Index of the desired galaxy in the catalog. </td></tr>
     <tr><td class="paramname">id</td><td>Object ID for the desired galaxy in the catalog. </td></tr>
     <tr><td class="paramname">random</td><td>If true, then just select a completely random galaxy from the catalog. </td></tr>
-    <tr><td class="paramname">uniform_deviate</td><td>A uniform deviate to use for selecting a random galaxy (optional) </td></tr>
+    <tr><td class="paramname">rng</td><td>A random number generator to use for selecting a random galaxy (may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> or None) </td></tr>
     <tr><td class="paramname">interpolant</td><td>Optional keyword for specifying the real-space interpolation scheme [default <code>interpolant = <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y.">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">galsim.Lanczos</a>(5, conserve_flux=True, tol=1.e-4))</code>]. </td></tr>
     <tr><td class="paramname">flux</td><td>Total flux, if None then original flux in galaxy is adopted without change [default <code>flux = None</code>].</td></tr>
   </table>
@@ -253,7 +253,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>uniform_deviate</em> = <code>None</code>, </td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1318,7 +1318,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>uniform_deviate</em> = <code>None</code>, </td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1354,11 +1354,11 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately base on the profile's size. (Default <code>image = None</code>.)</td></tr>
     <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the image. If <code>dx</code> is <code>None</code> and <code>image != None</code>, then take the provided image's pixel scale. If <code>dx</code> is <code>None</code> and <code>image == None</code>, then use the Nyquist scale <code>= pi/maxK()</code>. If <code>dx &lt;= 0</code> (regardless of image), then use the Nyquist scale <code>= pi/maxK()</code>. (Default <code>dx = None</code>.)</td></tr>
     <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). (Default <code>gain = 1.</code>)</td></tr>
-    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made.</td></tr>
+    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made. (Default <code>wmult = 1.</code>)</td></tr>
     <tr><td class="paramname">normalization</td><td>Two options for the normalization: "flux" or "f" means that the sum of the output pixels is normalized to be equal to the total flux. (Modulo any flux that falls off the edge of the image of course.) "surface brightness" or "sb" means that the output pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>)</td></tr>
     <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that image be provided (i.e. <code>image != None</code>) and that it have defined bounds (default <code>add_to_image = False</code>).</td></tr>
     <tr><td class="paramname">n_photons</td><td>If provided, the number of photons to use. If not provided (i.e. <code>n_photons = 0</code>), use as many photons as necessary to result in an image with the correct Poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to <code>n_photons = flux</code>. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). (Default <code>n_photons = 0</code>).</td></tr>
-    <tr><td class="paramname">uniform_deviate</td><td>If provided, a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">galsim.UniformDeviate</a> to use for the random numbers If <code>uniform_deviate=None</code>, one will be automatically created, using the time as a seed. (Default <code>uniform_deviate = None</code>)</td></tr>
+    <tr><td class="paramname">rng</td><td>If provided, a random number generator to use for photon shooting. (may be any kind of <code><a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a></code> object) If <code>rng=None</code>, one will be automatically created, using the time as a seed. (Default <code>rng = None</code>)</td></tr>
     <tr><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if <code>n_photons=0</code>, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full <code>n_photons = flux</code>. Essentially each shot photon can have a <code>flux &gt; 1</code>, which increases the noise in each pixel. The <code>max_extra_noise</code> parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this might be <code>max_extra_noise = sky_level / 100</code> where <code>sky_level</code> is the flux per pixel due to the sky. If the natural number of photons produces less noise than this value for all pixels, we lower the number of photons to bring the resultant noise up to this value. If the natural value produces more noise than this, we accept it and just use the natural value. Note that this uses a "variance" definition of noise, not a "sigma" definition. (Default <code>max_extra_noise = 0.</code>)</td></tr>
     <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>n_photons</code> samples (default <code>poisson_flux = True</code>).</td></tr>
   </table>

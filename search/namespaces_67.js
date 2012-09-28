@@ -10,6 +10,7 @@ var searchData=
   ['galsim',['galsim',['../namespacegalsim.html',1,'']]],
   ['gsobject',['gsobject',['../namespacegalsim_1_1config_1_1gsobject.html',1,'galsim::config']]],
   ['hsm',['hsm',['../namespacegalsim_1_1hsm.html',1,'galsim']]],
+  ['image',['image',['../namespacegalsim_1_1config_1_1image.html',1,'galsim::config']]],
   ['image',['image',['../namespacegalsim_1_1image.html',1,'galsim']]],
   ['integ',['integ',['../namespacegalsim_1_1integ.html',1,'galsim']]],
   ['io',['io',['../namespacegalsim_1_1io.html',1,'galsim']]],
@@ -24,6 +25,7 @@ var searchData=
   ['real',['real',['../namespacegalsim_1_1real.html',1,'galsim']]],
   ['sbp',['sbp',['../namespacegalsim_1_1sbp.html',1,'galsim']]],
   ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]],
+  ['stamp',['stamp',['../namespacegalsim_1_1config_1_1stamp.html',1,'galsim::config']]],
   ['utilities',['utilities',['../namespacegalsim_1_1utilities.html',1,'galsim']]],
   ['value',['value',['../namespacegalsim_1_1config_1_1value.html',1,'galsim::config']]]
 ];
