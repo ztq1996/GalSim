@@ -56,6 +56,7 @@ var searchData=
   ['set_5fsize',['set_size',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4efdb1b74ec332f47e022b8db643963b',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['seta',['setA',['../classgalsim_1_1_weibull_deviate.html#a1d26367743e04b8c96ff7bfbbdc363e8',1,'galsim::WeibullDeviate']]],
   ['setalpha',['setAlpha',['../classgalsim_1_1_gamma_deviate.html#adfda292e587667e54f6b6f40e5ee0bbc',1,'galsim::GammaDeviate']]],
+  ['setarea',['setArea',['../structgalsim_1_1integ_1_1_int_region.html#a2dc1fe42a1fabea87ebdf63bd2f4e8a1',1,'galsim::integ::IntRegion']]],
   ['setb',['setB',['../classgalsim_1_1_weibull_deviate.html#a722e178ddffcc7523e50ef719d055661',1,'galsim::WeibullDeviate']]],
   ['setbeta',['setBeta',['../classgalsim_1_1_gamma_deviate.html#ac2f7fe21dc82c6fc46c7ee61e0c54a23',1,'galsim::GammaDeviate']]],
   ['setbounds',['setBounds',['../classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea',1,'galsim::Solve']]],

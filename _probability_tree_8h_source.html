@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">// bin that include both left and right.  In other words the bin corresponding</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="comment">// to the dividing flux.</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">if</span> (element-&gt;isNode()) {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordtype">double</span> f = element-&gt;getRight()-&gt;getLeftAbsFlux();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordtype">double</span> <a class="code" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">f</a> = element-&gt;getRight()-&gt;getLeftAbsFlux();</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordtype">int</span> imid = int(f * _shortcut.size() / _totalAbsFlux);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                xdbg&lt;&lt;<span class="stringliteral">&quot;Node element: f = &quot;</span>&lt;&lt;f&lt;&lt;<span class="stringliteral">&quot;, imid = &quot;</span>&lt;&lt;imid&lt;&lt;std::endl;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">if</span> (imid &lt; i1) {</div>

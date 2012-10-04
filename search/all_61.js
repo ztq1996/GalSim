@@ -1,6 +1,7 @@
 var searchData=
 [
   ['a',['a',['../classgalsim_1_1lensing_1_1_cosmology.html#a23081810feebe7d126012d92fb9b7c8c',1,'galsim::lensing::Cosmology']]],
+  ['abserr',['abserr',['../_int_8h.html#aa11c2f12c3630ba41a493ce0bf1cc349',1,'Int.h']]],
   ['absolute_5ferror',['ABSOLUTE_ERROR',['../namespacegalsim_1_1odd.html#a3d8f7eb5d4ac671624b0e545dc6dab07',1,'galsim::odd']]],
   ['abzeropoint',['ABZeropoint',['../_astronomical_constants_8h.html#a04cdda147e4061c975a013366ff0555b',1,'AstronomicalConstants.h']]],
   ['accumulate',['accumulate',['../classgalsim_1_1_k_table.html#a5803288e635d7ab9dd07eaca9ad45935',1,'galsim::KTable::accumulate()'],['../classgalsim_1_1_x_table.html#a99f71a8b904fbeab225cc1d4aea946fd',1,'galsim::XTable::accumulate()']]],
@@ -11,6 +12,7 @@ var searchData=
   ['addnoise',['addNoise',['../namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7',1,'galsim::noise']]],
   ['addnoisefft',['AddNoiseFFT',['../namespacegalsim_1_1config_1_1process.html#abf0f28d9eb5f835542fa60bcbf2426bb',1,'galsim::config::process']]],
   ['addnoisephot',['AddNoisePhot',['../namespacegalsim_1_1config_1_1process.html#af48f5405333e36a3b7f65229efc88b10',1,'galsim::config::process']]],
+  ['addsplit',['addSplit',['../structgalsim_1_1integ_1_1_int_region.html#ad50b4352761c2343dac0767473aa1a6f',1,'galsim::integ::IntRegion']]],
   ['addto',['addTo',['../classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf',1,'galsim::PhotonArray']]],
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
   ['alias_5fthreshold',['ALIAS_THRESHOLD',['../namespacegalsim_1_1base.html#a5941a6ac5e44c1a0fef1f3205d49b531',1,'galsim.base.ALIAS_THRESHOLD()'],['../namespacegalsim_1_1sbp.html#af2333b572d187cbcfd6f6daa7c7bc30f',1,'galsim::sbp::alias_threshold()']]],

@@ -12,6 +12,7 @@ var searchData=
   ['reserve',['reserve',['../classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0',1,'galsim::PhotonArray']]],
   ['reset',['reset',['../classgalsim_1_1_cpp_ellipse.html#a210df92d7892cdbabc70691a24bb56a4',1,'galsim::CppEllipse::reset()'],['../classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d',1,'galsim::BaseDeviate::reset()'],['../classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec',1,'galsim::BaseDeviate::reset(long lseed)'],['../classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f',1,'galsim::BaseDeviate::reset(const BaseDeviate &amp;dev)'],['../classgalsim_1_1ellipse_1_1_ellipse.html#a6ea81e7c545c3f26a4e0c8c2144615ea',1,'galsim.ellipse.Ellipse.reset()']]],
   ['resize',['resize',['../classgalsim_1_1_image.html#a65b7d78929ebd60771a4ad8e5fcabcb9',1,'galsim::Image']]],
+  ['right',['right',['../structgalsim_1_1integ_1_1_int_region.html#aca845d1b842b969a51ac877652d4e898',1,'galsim::integ::IntRegion']]],
   ['roll2d',['roll2d',['../namespacegalsim_1_1utilities.html#a13e9d483f84e5d442b47384d26f5f65b',1,'galsim::utilities']]],
   ['root',['root',['../classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d',1,'galsim::Solve']]],
   ['rotationwith',['rotationWith',['../classgalsim_1_1_cpp_shear.html#a25640a2bf42b7166f90d69b0607dd7e4',1,'galsim::CppShear::rotationWith()'],['../classgalsim_1_1shear_1_1_shear.html#a6b769b62bd287ee662668cfcb4220219',1,'galsim.shear.Shear.rotationWith()']]],
