@@ -114,19 +114,26 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a27b0f8b55775f6f42b203b82e0c7230b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a27b0f8b55775f6f42b203b82e0c7230b">p_E</a></td></tr>
 <tr class="memitem:a9f7b0b85218b8d8e726f2dcbaea9910b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a9f7b0b85218b8d8e726f2dcbaea9910b">p_B</a></td></tr>
-<tr class="memitem:a4d29de91ab80d99c3ad4633ebca10167"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a4d29de91ab80d99c3ad4633ebca10167">interpolantxy</a></td></tr>
+<tr class="memitem:a78df320b4df424be6ff7743e833a087e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a78df320b4df424be6ff7743e833a087e">psr</a></td></tr>
+<tr class="memitem:a6a7b9649f3dd057aef02abbfa6decb52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a6a7b9649f3dd057aef02abbfa6decb52">grid_g2</a></td></tr>
+<tr class="memitem:a0c29c98e3a4feeaca3d8b52cb2fbbd57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a0c29c98e3a4feeaca3d8b52cb2fbbd57">im_g1</a></td></tr>
+<tr class="memitem:ab7a2988f2eec0841f826f7326230dce7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#ab7a2988f2eec0841f826f7326230dce7">sbii_g1</a></td></tr>
+<tr class="memitem:aaa5c27dead8114b4e6f6c444e22f22ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#aaa5c27dead8114b4e6f6c444e22f22ec">im_g2</a></td></tr>
+<tr class="memitem:a915f4a2c26aa923a7852149589f60aa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a915f4a2c26aa923a7852149589f60aa6">sbii_g2</a></td></tr>
+<tr class="memitem:a60d3a2afb7fc4229a968a48ca5367533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a60d3a2afb7fc4229a968a48ca5367533">offset</a></td></tr>
+<tr class="memitem:a0f933a284671f38d65cf303d83c2a468"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a0f933a284671f38d65cf303d83c2a468">bounds</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class to represent a lensing shear field according to some power spectrum P(k) </p>
 <p>A <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> represents some (flat-sky) shear power spectrum, either for gridded points or at arbitary positions. This class is originally initialized with a power spectrum from which we would like to generate g1 and g2 values. When the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a9c3bbbdc586176efa8200d39c6d3f328" title="Generate a realization of the current power spectrum at the specified positions.">getShear()</a> method is called, it uses a <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum_realizer.html" title="Class for generating realizations of power spectra with any area and pixel size.">PowerSpectrumRealizer</a> to generate shears on an appropriately-spaced grid, and if necessary, interpolates on that grid to the requested positions. Finally, it carries around some information about the underlying shear power spectrum used to generate the field.</p>
 <p>It is important to note that the power spectrum used to initialize the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> object should be in the same units as any parameters to the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a9c3bbbdc586176efa8200d39c6d3f328" title="Generate a realization of the current power spectrum at the specified positions.">getShear()</a> method that define the locations at which we want to get shears. When we actually draw images, there is a natural scale that defines the pitch of the image (dx), which is typically taken to be arcsec. This definition of a specific length scale means that we should also use the same units (arcsec) for the positions at which we want our galaxies to be located when we draw shears from a power spectrum, and likewise the values of k (wavenumber) going into the power spectrum function should be inverse arcsec. To give a specific example, if we want to draw Gaussians on an image with dx=0.2" (i.e., the argument dx to the draw method will be =0.2), and if we want a grid of galaxies spaced 40 pixels apart, then when we call the getShear method of the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class, we should use grid_spacing=8 [arcsec, =(40 pixels)*(0.2 arcsec/pixel)].</p>
 <p>If the power spectrum used for this calculation comes from a standard cosmology calculator that uses units of inverse radians for the wavenumber, then it is important to convert such that the units are consistent with our choice of inverse arcsec. If there is sufficient interest from users for the code to have a "unit" class that handles conversions between the various units that one might use, then future versions of GalSim might be updated to include this functionality.</p>
-<p>When creating a <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> instance, the E and B mode power spectra can optionally be set at initialization or later on with the method set_power_functions. Note that the power spectra can be ones provided in <a class="el" href="namespacegalsim_1_1lensing.html">galsim.lensing</a> (currently just a few simple power laws), or they can be user-provided functions that take a single argument k and return the power at that k value. They should be power P(k), not Delta^2(k) = k^2 P(k) / 2pi.</p>
+<p>When creating a <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> instance, the E and B mode power spectra can optionally be set at initialization or later on with the method set_power_functions. Note that the power spectra should be a function of k. The typical thing is to just use a lambda function in Python (i.e., a function that is not associated with a name); for example, to define P(k)=k^2, one would use <code>lambda k : k**2</code>. But they can also be more complicated user-defined functions that take a single argument k and return the power at that k value. They should be power P(k), not Delta^2(k) = k^2 P(k) / 2pi.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">E_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the E-mode power spectrum P_E(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the E (gradient) mode of the image. Set to None (default) for there to be no E-mode power. </td></tr>
     <tr><td class="paramname">B_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the B-mode power spectrum P_B(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the B (curl) mode of the image. Set to None (default) for there to be no B-mode power. </td></tr>
-    <tr><td class="paramname">units</td><td>A string specifying the units for the power spectrum. This string is not used in any calculations, but is saved for later information. Currently we require a value of "arcsec", so the user must do any necessary conversions to ensure that this is the case. </td></tr>
+    <tr><td class="paramname">units</td><td>The angular units used for the power spectrum (i.e. the units of k^-1). Currently only arcsec is implemented. </td></tr>
   </table>
   </dd>
 </dl>
@@ -157,7 +164,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>units</em> = <code>&quot;arcsec&quot;</code>&#160;</td>
+          <td class="paramname"><em>units</em> = <code><a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790">galsim.arcsec</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,13 +191,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>x</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>y</em> = <code>None</code>, </td>
+          <td class="paramname"><em>pos</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,13 +209,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>gaussian_deviate</em> = <code>None</code>, </td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>interpolantxy</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>center</em> = <code>galsim.PositionD(0,0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -225,60 +232,63 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate a realization of the current power spectrum at the specified positions. </p>
-<pre class="fragment">    Generate a Gaussian random realization of the specified E and B mode shear power spectra at
-    some set of locations.  This can be done in two ways: first, given arbitrary (x, y)
-    positions [NOT YET IMPLEMENTED]; or second, using grid_spacing and grid_nx to specify the
-    grid spacing and grid size for a grid of positions.  This code stores information about the
-    quantities used to generate the random shear field, generates shears using a
-    PowerSpectrumRealizer on a grid, and if necessary, interpolates to get g1 and g2 at the
-    specified positions.
-
-    The normalization of the shears from a given power spectrum is defined as follows: if 
-    P_E(k)=P_B(k)=P [const],
-    i.e., white noise in both shear components, then the shears g1 and g2 will be random
-    Gaussian deviates with variance=P.  Note that if we really had power at all k, the variance
-    would be infinite.  But we are getting shears on a grid, which has a limited k range, and
-    hence the total power is finite.  For grid spacing dx and N grid points, the spacing between
-    k values is dk = 2pi/(N dx) and k ranges from +/-(N/2) dk.  There are alternate definitions
-    to consider, e.g., that the variance should be P*(dx)^2 for a grid spacing of dx (i.e., for
-    fixed total grid extent, a smaller grid spacing requires smaller shear variances since the
-    range of k values that are accessible is larger); those who input a continuum P(k) should,
-    when predicting the behavior of shears on a grid, keep in mind our normalization convention
-    and the fact that it's a discrete FFT.  If you strongly dislike our convention and would
-    like support for an alternate one, please indicate this on our GitHub issues page.
-
-    Also note that the convention for axis orientation differs from that for the GREAT10
-    challenge, so when using codes that deal with GREAT10 challenge outputs, the sign of our g2
-    shear component must be flipped.
-
-    An example of how to use getShear is as follows, for the gridded case, where the choice of
-    grid_spacing indicates that the grid points are spaced by 1":
-</pre> <div class="fragment"><div class="line">         my_ps = <a class="code" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">galsim.lensing.PowerSpectrum</a>(galsim.lensing.pk2)</div>
-<div class="line">         g1, g2 = my_ps.getShear(grid_spacing = 1., grid_nx = 100)</div>
-</div><!-- fragment --><p>To define some other P(k), the user can do the following: </p>
-<div class="fragment"><div class="line">         <span class="keyword">def </span>mypk(k):</div>
-<div class="line">             <span class="keywordflow">return</span> k**(0.1)</div>
-<div class="line"> </div>
-<div class="line">         my_ps = <a class="code" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">galsim.lensing.PowerSpectrum</a>(mypk)</div>
-<div class="line">         g1, g2 = my_ps.getShear(grid_spacing = 1., grid_nx = 100)</div>
-</div><!-- fragment --><p>When using a non-gridded set of points, the code has to choose an appropriate spacing for a grid and then interpolate the gridded shears to the specified set of points. It does this by requiring that the modification to the power spectrum due to a (bi)linear interpolant should not be significant at the minimum separation between points. The user should be aware that use of an interpolant that is not linear does not change how this calculation is done, and therefore it is necessary to test the fidelity of the recovered power spectrum for any errors due to the chosen non-linear interpolant.</p>
-<p>For a given value of grid_spacing and grid_nx, we could get the x and y values on the grid using </p>
-<div class="fragment"><div class="line">         <span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
-<div class="line">         x, y = np.meshgrid(np.arange(0., grid_nx*grid_spacing, grid_spacing),</div>
-<div class="line">                            np.arange(0., grid_nx*grid_spacing, grid_spacing))</div>
-</div><!-- fragment --><p> where we assume a minimum x and y value of zero for the grid.</p>
+<p>This function currently does two relatively separate things. The plan is to split it into two functions, but we haven't done so yet.</p>
+<p>First, it will generate a Gaussian random realization of the specified E and B mode shear power spectrum at a grid of positions, specified by the input parameters <code>grid_spacing</code> (distance between grid points) and <code>grid_nx</code> (number of grid points in each direction.)</p>
+<p>The normalization of the shears from a given power spectrum is defined as follows: if P_E(k)=P_B(k)=P [const], i.e., white noise in both shear components, then the shears g1 and g2 will be random Gaussian deviates with variance=P. Note that if we really had power at all k, the variance would be infinite. But we are getting shears on a grid, which has a limited k range, and hence the total power is finite. For grid spacing dx and N grid points, the spacing between k values is dk = 2pi/(N dx) and k ranges from +/-(N/2) dk. There are alternate definitions to consider, e.g., that the variance should be P*(dx)^2 for a grid spacing of dx (i.e., for fixed total grid extent, a smaller grid spacing requires smaller shear variances since the range of k values that are accessible is larger); those who input a continuum P(k) should, when predicting the behavior of shears on a grid, keep in mind our normalization convention and the fact that it's a discrete FFT. If you strongly dislike our convention and would like support for an alternate one, please indicate this on our GitHub issues page.</p>
+<p>Also note that the convention for axis orientation differs from that for the GREAT10 challenge, so when using codes that deal with GREAT10 challenge outputs, the sign of our g2 shear component must be flipped.</p>
+<p>Second, this function can interpolate between the grid points to find the shear values for a given list of input positions (or just a single position). This can be done in conjunction with the first functionality, in which case the grid will be computed using the <code>grid_*</code> parameters and then that new grid will be used to interpolate the shear values. Or you can omit the <code>grid_*</code> parameters, in which case the funciton will use the most recently computed grid from a previous call. Currently, if you try to interpolate a grid without having previously called <code>getShear</code> with the <code>grid_*</code> parameters, then an exception will be raised. A future version of the code will allow the estimation of shears on non-gridded points by first automatically choosing a grid spacing on which to estimate gridded shears before interpolating, but this functionality is not implemented yet.</p>
+<p>Some examples of how to use getShear:</p>
+<ol type="1">
+<li><p class="startli">Create a grid of points separated by 1": </p>
+<pre class="fragment">my_ps = galsim.PowerSpectrum(lambda k : k**2)
+g1, g2 = my_ps.getShear(grid_spacing = 1., grid_nx = 100)
+</pre><p class="startli">The returned g1,g2 are 2-d numpy arrays of values, corresponding to the values of g1,g2 at the locations of the grid points.</p>
+<p class="startli">For a given value of grid_spacing and grid_nx, we could get the x and y values on the grid using </p>
+<pre class="fragment">import numpy as np
+min = (-grid_nx/2 + 0.5) * grid_spacing
+max = (grid_nx/2 - 0.5) * grid_spacing
+x, y = np.meshgrid(np.arange(min,max,grid_spacing),
+                   np.arange(min,max,grid_spacing))
+</pre><p class="startli">where the center of the grid is taken to be (0,0).</p>
+</li>
+<li>Same thing, but use a particular rng and set the location of the center of the grid to be something other than the default (0,0) <pre class="fragment">im = galsim.ImageF(512, 512)
+g1, g2 = my_ps.getShear(grid_spacing = 8., grid_nx = 65.,
+                        rng = galsim.BaseDeviate(1413231),
+                        center = (256.5, 256.5) )
+</pre></li>
+<li><p class="startli">Use the previously created grid to get the shear for a particular point: </p>
+<pre class="fragment">g1, g2 = my_ps.getShear(pos = galsim.PositionD(12, 412))
+</pre><p class="startli">This time the returned values are just floats and correspond to the shear for the provided position.</p>
+</li>
+<li>You can also provide a position as a tuple to save the explicit PositionD construction: <pre class="fragment">g1, g2 = my_ps.getShear(pos = (12, 412))
+</pre></li>
+<li><p class="startli">Get the shears for a bunch of points at once: </p>
+<pre class="fragment">xlist = [ 141, 313,  12, 241, 342 ]
+ylist = [  75, 199, 306, 225, 489 ]
+poslist = [ galsim.PositionD(xlist[i],ylist[i]) for i in range(len(xlist)) ]
+g1, g2 = my_ps.getShear( poslist )
+g1, g2 = my_ps.getShear( (xlist, ylist) )
+</pre><p class="startli">Both calls do the same thing. The returned g1, g2 this time are lists of g1, g2 values. The lists are the same length as the number of input positions.</p>
+</li>
+</ol>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>List of x positions (it is up to the user to check that the units are consistent with those in the P(k) function, just as for the y and grid_spacing keywords). </td></tr>
-    <tr><td class="paramname">y</td><td>List of y positions. </td></tr>
+    <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! (It is up to the user to check that the units are consistent with those in the P(k) function, just as for the grid_spacing keyword.) Valid ways to input this:<ul>
+<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>tuple of floats: (x,y)</li>
+<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of lists: ( xlist, ylist ) pos may also be None to just build a gridded array of (g1,g2). </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">grid_spacing</td><td>Spacing for an evenly spaced grid of points, in arcsec for consistency with the natural length scale of images created using the draw or drawShoot methods. </td></tr>
     <tr><td class="paramname">grid_nx</td><td>Number of grid points in the x dimension. </td></tr>
-    <tr><td class="paramname">gaussian_deviate</td><td>(Optional) A <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution.">galsim.GaussianDeviate</a> object for drawing the random numbers. (Alternatively, any <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> can be used.) </td></tr>
-    <tr><td class="paramname">interpolantxy</td><td>(Optional) <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> to use for interpolating the shears on a grid to the requested positions [default = <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y.">galsim.InterpolantXY</a>(galsim.Linear())]. </td></tr>
+    <tr><td class="paramname">rng</td><td>(Optional) A <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution.">galsim.GaussianDeviate</a> object for drawing the random numbers. (Alternatively, any <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> can be used.) </td></tr>
+    <tr><td class="paramname">interpolant</td><td>(Optional) <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> to use for interpolating the shears on a grid to the requested positions. This is highly recommended to be <a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> (which will become bi-linear, since it is in 2 dimensions). Using other interpolants is likely to be inaccurate, though on small enough scales even the linear interpolant will be problematic. A future version of the code will quantify this inaccuracy due to the interpolant in greater detail. [default = galsim.Linear()] </td></tr>
+    <tr><td class="paramname">center</td><td>(Optional) If setting up a new grid, define what position you want to consider the center of that grid. [default = (0,0)]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>g1,g2 Two Numpy arrays for the two shear components g_1 and g_2. </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>g1,g2 If given a single position: the two shear components g_1 and g_2. If given a list of positions: each is a python list of values. If pos=None, these are 2-d NumPy arrays. </dd></dl>
 
 </div>
 </div>
@@ -308,7 +318,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>units</em> = <code>&quot;arcsec&quot;</code>&#160;</td>
+          <td class="paramname"><em>units</em> = <code><a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790">galsim.arcsec</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -331,12 +341,60 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a4d29de91ab80d99c3ad4633ebca10167"></a>
+<a class="anchor" id="a0f933a284671f38d65cf303d83c2a468"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.lensing.PowerSpectrum.interpolantxy</td>
+          <td class="memname">galsim.lensing.PowerSpectrum.bounds</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6a7b9649f3dd057aef02abbfa6decb52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.grid_g2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c29c98e3a4feeaca3d8b52cb2fbbd57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.im_g1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa5c27dead8114b4e6f6c444e22f22ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.im_g2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60d3a2afb7fc4229a968a48ca5367533"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -361,6 +419,42 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.lensing.PowerSpectrum.p_E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78df320b4df424be6ff7743e833a087e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.psr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab7a2988f2eec0841f826f7326230dce7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.sbii_g1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a915f4a2c26aa923a7852149589f60aa6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing.PowerSpectrum.sbii_g2</td>
         </tr>
       </table>
 </div><div class="memdoc">

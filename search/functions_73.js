@@ -29,6 +29,7 @@ var searchData=
   ['setbounds',['setBounds',['../classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea',1,'galsim::Solve']]],
   ['setcenter',['setCenter',['../classgalsim_1_1_base_image.html#a214d240c918e003f6d7409c0cefb9c5b',1,'galsim::BaseImage']]],
   ['setcorrelated',['setCorrelated',['../classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312',1,'galsim::PhotonArray']]],
+  ['setdefaultext',['SetDefaultExt',['../namespacegalsim_1_1config_1_1process.html#a7a559af4b529ee8e54cab6f76610740b',1,'galsim::config::process']]],
   ['setdefaultindex',['SetDefaultIndex',['../namespacegalsim_1_1config_1_1value.html#a9025f3a09fd50cd16b1620449aa05bd0',1,'galsim::config::value']]],
   ['sete1e2',['setE1E2',['../classgalsim_1_1_cpp_shear.html#a88ed825b9af763309bef717a49d4b22f',1,'galsim::CppShear::setE1E2()'],['../classgalsim_1_1shear_1_1_shear.html#abcb32c9c0d934e4a922cdfd6480fc778',1,'galsim.shear.Shear.setE1E2()']]],
   ['setebeta',['setEBeta',['../classgalsim_1_1_cpp_shear.html#a537618d1f5db07b99133b801f5fa6944',1,'galsim::CppShear::setEBeta()'],['../classgalsim_1_1shear_1_1_shear.html#af27ce5bace356e95514ea49038feb42c',1,'galsim.shear.Shear.setEBeta()']]],

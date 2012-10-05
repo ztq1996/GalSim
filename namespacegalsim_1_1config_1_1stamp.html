@@ -109,11 +109,11 @@ Functions</h2></td></tr>
 <tr class="memitem:afece785b2079817ed2d4558689d4da5f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#afece785b2079817ed2d4558689d4da5f">DrawStampFFT</a></td></tr>
 <tr class="memdesc:afece785b2079817ed2d4558689d4da5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf, pix and gal profiles (which may be None) using the FFT method for doing the convolution.  <a href="#afece785b2079817ed2d4558689d4da5f"></a><br/></td></tr>
 <tr class="memitem:ae888d34072b26731720b4a9c73e113db"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#ae888d34072b26731720b4a9c73e113db">AddNoiseFFT</a></td></tr>
-<tr class="memdesc:ae888d34072b26731720b4a9c73e113db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the fft method.  <a href="#ae888d34072b26731720b4a9c73e113db"></a><br/></td></tr>
+<tr class="memdesc:ae888d34072b26731720b4a9c73e113db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the FFT method.  <a href="#ae888d34072b26731720b4a9c73e113db"></a><br/></td></tr>
 <tr class="memitem:a35f6111ac506b8a68755e424ddbdc726"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a35f6111ac506b8a68755e424ddbdc726">DrawStampPhot</a></td></tr>
 <tr class="memdesc:a35f6111ac506b8a68755e424ddbdc726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf and gal profiles (which may be None) using the photon shooting method for doing the convolution.  <a href="#a35f6111ac506b8a68755e424ddbdc726"></a><br/></td></tr>
 <tr class="memitem:aeb4d1e75f60021bc6d13032e61e4f8de"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#aeb4d1e75f60021bc6d13032e61e4f8de">AddNoisePhot</a></td></tr>
-<tr class="memdesc:aeb4d1e75f60021bc6d13032e61e4f8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the phot method.  <a href="#aeb4d1e75f60021bc6d13032e61e4f8de"></a><br/></td></tr>
+<tr class="memdesc:aeb4d1e75f60021bc6d13032e61e4f8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the photon-shooting method.  <a href="#aeb4d1e75f60021bc6d13032e61e4f8de"></a><br/></td></tr>
 <tr class="memitem:af8ad4122a54595985074f3fecb65ce5f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f">DrawPSFStamp</a></td></tr>
 <tr class="memdesc:af8ad4122a54595985074f3fecb65ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf and pix profiles.  <a href="#af8ad4122a54595985074f3fecb65ce5f"></a><br/></td></tr>
 <tr class="memitem:ad61bf79acaf10018d86f44d1344f7020"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#ad61bf79acaf10018d86f44d1344f7020">CalculateWCSShear</a></td></tr>
@@ -148,6 +148,12 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>rng</em>, </td>
         </tr>
         <tr>
@@ -164,7 +170,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the fft method. </p>
+<p>Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the FFT method. </p>
 
 </div>
 </div>
@@ -194,6 +200,12 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>rng</em>, </td>
         </tr>
         <tr>
@@ -210,7 +222,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the phot method. </p>
+<p>Add noise to an image according to the noise specifications in the noise dict appropriate for an image that has been drawn using the photon-shooting method. </p>
 
 </div>
 </div>
@@ -375,14 +387,14 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">seed</td><td>The random number seed to use for this stamp. 0 means use time. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">xsize</td><td>The xsize of the image to build </td></tr>
-    <tr><td class="paramname">ysize</td><td>The ysize of the image to build </td></tr>
-    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image </td></tr>
-    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']) </td></tr>
+    <tr><td class="paramname">xsize</td><td>The xsize of the image to build. </td></tr>
+    <tr><td class="paramname">ysize</td><td>The ysize of the image to build. </td></tr>
+    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image. </td></tr>
+    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image</td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
   </table>
   </dd>
 </dl>
@@ -471,17 +483,17 @@ Functions</h2></td></tr>
 <p>Build a number of postage stamp images as specified by the config dict. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nstamps</td><td>How many stamps to build </td></tr>
+    <tr><td class="paramname">nstamps</td><td>How many stamps to build. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">xsize</td><td>The size of a single stamp in the x direction </td></tr>
-    <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction </td></tr>
+    <tr><td class="paramname">xsize</td><td>The size of a single stamp in the x direction. </td></tr>
+    <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction. </td></tr>
     <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image </td></tr>
-    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']) </td></tr>
+    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image. </td></tr>
+    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image</td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
   </table>
   </dd>
 </dl>
