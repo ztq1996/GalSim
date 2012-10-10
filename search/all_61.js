@@ -18,6 +18,7 @@ var searchData=
   ['alias_5fthreshold',['ALIAS_THRESHOLD',['../namespacegalsim_1_1base.html#a5941a6ac5e44c1a0fef1f3205d49b531',1,'galsim.base.ALIAS_THRESHOLD()'],['../namespacegalsim_1_1sbp.html#af2333b572d187cbcfd6f6daa7c7bc30f',1,'galsim::sbp::alias_threshold()']]],
   ['allocate_5frect_5fimage',['allocate_rect_image',['../namespacegalsim_1_1hsm.html#a8e5f5aa7b06c53d22b255c2a2e38e0fd',1,'galsim::hsm']]],
   ['allowed_5fflux_5fvariation',['ALLOWED_FLUX_VARIATION',['../namespacegalsim_1_1odd.html#a18395b5e45fb268c96c6d0f573d4c534',1,'galsim::odd']]],
+  ['alt_5fint32',['alt_int32',['../namespacegalsim_1_1image.html#a0562bc5f4673b486114a540e9c4ffb38',1,'galsim::image']]],
   ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a0dffef6e343b8a1992b369d99da4f395',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['amplitude_5fe',['amplitude_E',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a39906444f177ee975dd6e7d898b8431e',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['angle',['Angle',['../classgalsim_1_1_angle_unit.html#a56927f37f8ac54bad49addcb5cb4b202',1,'galsim::AngleUnit::Angle()'],['../classgalsim_1_1_angle.html#a096fad23663218375c9c1778e3637d1b',1,'galsim::Angle::Angle(double val, AngleUnit unit)'],['../classgalsim_1_1_angle.html#a7220ec2d0b6ec8269f1c165031d810a1',1,'galsim::Angle::Angle()'],['../classgalsim_1_1_angle.html#ae57a8a71db865c91f08f8223d22da51a',1,'galsim::Angle::Angle(const Angle &amp;rhs)']]],
