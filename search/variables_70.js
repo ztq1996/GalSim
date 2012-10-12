@@ -7,6 +7,5 @@ var searchData=
   ['planck',['Planck',['../_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74',1,'AstronomicalConstants.h']]],
   ['preloaded',['preloaded',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a245319227bc554398b5b557d260cc5f4',1,'galsim::real::RealGalaxyCatalog']]],
   ['psf_5ffile_5fname',['PSF_file_name',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a33b5851256767f8029fc1f00b4720585',1,'galsim::real::RealGalaxyCatalog']]],
-  ['psf_5fhdu',['PSF_hdu',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a0975ee9dd75a460e62d1e8371809ba18',1,'galsim::real::RealGalaxyCatalog']]],
-  ['psr',['psr',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a78df320b4df424be6ff7743e833a087e',1,'galsim::lensing::PowerSpectrum']]]
+  ['psf_5fhdu',['PSF_hdu',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a0975ee9dd75a460e62d1e8371809ba18',1,'galsim::real::RealGalaxyCatalog']]]
 ];

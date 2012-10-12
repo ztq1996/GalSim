@@ -1,6 +1,7 @@
 var searchData=
 [
   ['parsevalue',['ParseValue',['../namespacegalsim_1_1config_1_1value.html#ab13260e735ec89b23905a567129c6ff5',1,'galsim::config::value']]],
+  ['permute',['permute',['../namespacegalsim_1_1random.html#a0a8e4c83ab556b3b647e0716871bd322',1,'galsim::random']]],
   ['photonarray',['PhotonArray',['../classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c',1,'galsim::PhotonArray::PhotonArray(int N)'],['../classgalsim_1_1_photon_array.html#a3ee87bfeab432d2b0d380aa0bf84d429',1,'galsim::PhotonArray::PhotonArray(std::vector&lt; double &gt; &amp;vx, std::vector&lt; double &gt; &amp;vy, std::vector&lt; double &gt; &amp;vflux)']]],
   ['plaindraw',['plainDraw',['../classgalsim_1_1_s_b_profile.html#a4b3cc4cad1f119cc9ea95f3f78af9bb6',1,'galsim::SBProfile']]],
   ['plaindrawk',['plainDrawK',['../classgalsim_1_1_s_b_profile.html#a03ae250814e299f4a7b81b9320c5ba29',1,'galsim::SBProfile']]],

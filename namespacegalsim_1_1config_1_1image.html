@@ -96,6 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2c6a709c9c894f223063f759d23ca4e7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a2c6a709c9c894f223063f759d23ca4e7">BuildImages</a></td></tr>
+<tr class="memdesc:a2c6a709c9c894f223063f759d23ca4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a number of postage stamp images as specified by the config dict.  <a href="#a2c6a709c9c894f223063f759d23ca4e7"></a><br/></td></tr>
 <tr class="memitem:aab1180eb25a725c66f8a556242e6167a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a">BuildImage</a></td></tr>
 <tr class="memdesc:aab1180eb25a725c66f8a556242e6167a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image according to the information in config.  <a href="#aab1180eb25a725c66f8a556242e6167a"></a><br/></td></tr>
 <tr class="memitem:a4ff907c095c04558ff1dd4188cf5e3f7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a4ff907c095c04558ff1dd4188cf5e3f7">BuildSingleImage</a></td></tr>
@@ -126,7 +128,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>seeds</em> = <code>None</code>, </td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -160,7 +168,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">seeds</td><td>If given, a list of seeds to use. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
@@ -169,6 +178,91 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2c6a709c9c894f223063f759d23ca4e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.image.BuildImages </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nimages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>make_psf_image</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>make_weight_image</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>make_badpix_image</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build a number of postage stamp images as specified by the config dict. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nimages</td><td>How many images to build. </td></tr>
+    <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>(images, psf_images, weight_images, badpix_images) (All in tuple are lists) </dd></dl>
 
 </div>
 </div>
@@ -187,6 +281,18 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>logger</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -219,6 +325,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
@@ -245,6 +353,18 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>logger</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -277,6 +397,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
@@ -303,6 +425,18 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>logger</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -335,6 +469,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>

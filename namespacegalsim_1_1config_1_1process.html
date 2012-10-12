@@ -106,6 +106,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1b40d58aa5d6dd2b55cc24f8b10e7ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a multi-extension fits file as specified in config.  <a href="#a1b40d58aa5d6dd2b55cc24f8b10e7ca4"></a><br/></td></tr>
 <tr class="memitem:a65ef8a95e0df55d50184f9e159b14001"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a65ef8a95e0df55d50184f9e159b14001">BuildDataCube</a></td></tr>
 <tr class="memdesc:a65ef8a95e0df55d50184f9e159b14001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a multi-image fits data cube as specified in config.  <a href="#a65ef8a95e0df55d50184f9e159b14001"></a><br/></td></tr>
+<tr class="memitem:a7629e31346ded9a987b59df13640ff07"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a7629e31346ded9a987b59df13640ff07">GetNObjForFits</a></td></tr>
+<tr class="memitem:a5352d4af03a9a9ae3fd52c8917f25aab"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a5352d4af03a9a9ae3fd52c8917f25aab">GetNObjForMultiFits</a></td></tr>
+<tr class="memitem:ad3c9556baaaf7af675bc07647ac517b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#ad3c9556baaaf7af675bc07647ac517b8">GetNObjForDataCube</a></td></tr>
+<tr class="memitem:a47940213e93f89816e6c0531551bbd25"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a47940213e93f89816e6c0531551bbd25">GetNObjForImage</a></td></tr>
 <tr class="memitem:a7a559af4b529ee8e54cab6f76610740b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a7a559af4b529ee8e54cab6f76610740b">SetDefaultExt</a></td></tr>
 <tr class="memdesc:a7a559af4b529ee8e54cab6f76610740b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some items have a default extension for a NumberedFile type.  <a href="#a7a559af4b529ee8e54cab6f76610740b"></a><br/></td></tr>
 </table>
@@ -148,7 +152,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>seeds</em> = <code>None</code>, </td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -184,7 +194,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">seeds</td><td>If given, the seeds to use </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
     <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
     <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file</td></tr>
@@ -221,7 +232,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>seeds</em> = <code>None</code>, </td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -273,7 +290,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">seeds</td><td>If given, the seeds to use. Otherwise get from the config file. </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
     <tr><td class="paramname">psf_hdu</td><td>If given, write a psf image to this hdu in file_name </td></tr>
     <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
@@ -325,7 +343,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>seeds</em> = <code>None</code>, </td>
+          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -361,7 +385,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
     <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">seeds</td><td>If given, the seeds to use </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
     <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
     <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file</td></tr>
@@ -369,6 +394,128 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>time Time taken to build file </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad3c9556baaaf7af675bc07647ac517b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.process.GetNObjForDataCube </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7629e31346ded9a987b59df13640ff07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.process.GetNObjForFits </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47940213e93f89816e6c0531551bbd25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.process.GetNObjForImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5352d4af03a9a9ae3fd52c8917f25aab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.process.GetNObjForMultiFits </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -398,13 +545,7 @@ Functions</h2></td></tr>
 
 <p>Do all processing of the provided configuration dict. </p>
 <p>In particular, this function handles processing the output field, calling other functions to build and write the specified files. The input field is processed before building each file. </p>
-<pre class="fragment">    input is a queue with (args, info) tuples:
-        kwargs are the arguments to pass to build_func
-        info is passed along to the output queue.
-    output is a queue storing (result, info, proc) tuples:
-        result is the returned value from build_func (file_name, time).
-        info is passed through from the input queue.
-        proc is the process name.</pre> 
+
 </div>
 </div>
 <a class="anchor" id="a25c53f94a309727c969ac1229d123997"></a>
@@ -416,6 +557,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_num</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

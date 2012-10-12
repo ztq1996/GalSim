@@ -114,12 +114,9 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a27b0f8b55775f6f42b203b82e0c7230b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a27b0f8b55775f6f42b203b82e0c7230b">p_E</a></td></tr>
 <tr class="memitem:a9f7b0b85218b8d8e726f2dcbaea9910b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a9f7b0b85218b8d8e726f2dcbaea9910b">p_B</a></td></tr>
-<tr class="memitem:a78df320b4df424be6ff7743e833a087e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a78df320b4df424be6ff7743e833a087e">psr</a></td></tr>
 <tr class="memitem:a6a7b9649f3dd057aef02abbfa6decb52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a6a7b9649f3dd057aef02abbfa6decb52">grid_g2</a></td></tr>
 <tr class="memitem:a0c29c98e3a4feeaca3d8b52cb2fbbd57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a0c29c98e3a4feeaca3d8b52cb2fbbd57">im_g1</a></td></tr>
-<tr class="memitem:ab7a2988f2eec0841f826f7326230dce7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#ab7a2988f2eec0841f826f7326230dce7">sbii_g1</a></td></tr>
 <tr class="memitem:aaa5c27dead8114b4e6f6c444e22f22ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#aaa5c27dead8114b4e6f6c444e22f22ec">im_g2</a></td></tr>
-<tr class="memitem:a915f4a2c26aa923a7852149589f60aa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a915f4a2c26aa923a7852149589f60aa6">sbii_g2</a></td></tr>
 <tr class="memitem:a60d3a2afb7fc4229a968a48ca5367533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a60d3a2afb7fc4229a968a48ca5367533">offset</a></td></tr>
 <tr class="memitem:a0f933a284671f38d65cf303d83c2a468"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a0f933a284671f38d65cf303d83c2a468">bounds</a></td></tr>
 </table>
@@ -131,8 +128,8 @@ Public Attributes</h2></td></tr>
 <p>When creating a <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> instance, the E and B mode power spectra can optionally be set at initialization or later on with the method set_power_functions. Note that the power spectra should be a function of k. The typical thing is to just use a lambda function in Python (i.e., a function that is not associated with a name); for example, to define P(k)=k^2, one would use <code>lambda k : k**2</code>. But they can also be more complicated user-defined functions that take a single argument k and return the power at that k value. They should be power P(k), not Delta^2(k) = k^2 P(k) / 2pi.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">E_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the E-mode power spectrum P_E(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the E (gradient) mode of the image. Set to None (default) for there to be no E-mode power. </td></tr>
-    <tr><td class="paramname">B_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the B-mode power spectrum P_B(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the B (curl) mode of the image. Set to None (default) for there to be no B-mode power. </td></tr>
+    <tr><td class="paramname">e_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the E-mode power spectrum P_E(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the E (gradient) mode of the image. Set to None (default) for there to be no E-mode power. It may also be a string that can be converted to a function using eval('lambda k : ' + e_power_function) </td></tr>
+    <tr><td class="paramname">b_power_function</td><td>A function or other callable that accepts a Numpy array of |k| values, and returns the B-mode power spectrum P_B(|k|) in an array of the same shape. It should cope happily with |k|=0. The function should return the power spectrum desired in the B (curl) mode of the image. Set to None (default) for there to be no B-mode power. It may also be a string that can be converted to a function using eval('lambda k : ' + b_power_function) </td></tr>
     <tr><td class="paramname">units</td><td>The angular units used for the power spectrum (i.e. the units of k^-1). Currently only arcsec is implemented. </td></tr>
   </table>
   </dd>
@@ -152,13 +149,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>E_power_function</em> = <code>None</code>, </td>
+          <td class="paramname"><em>e_power_function</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>B_power_function</em> = <code>None</code>, </td>
+          <td class="paramname"><em>b_power_function</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -306,13 +303,13 @@ g1, g2 = my_ps.getShear( (xlist, ylist) )
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>E_power_function</em> = <code>None</code>, </td>
+          <td class="paramname"><em>e_power_function</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>B_power_function</em> = <code>None</code>, </td>
+          <td class="paramname"><em>b_power_function</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -331,8 +328,8 @@ g1, g2 = my_ps.getShear( (xlist, ylist) )
 <p>Set / change the functions that compute the E and B mode power spectra. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">E_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class. </td></tr>
-    <tr><td class="paramname">B_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class. </td></tr>
+    <tr><td class="paramname">e_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class. </td></tr>
+    <tr><td class="paramname">b_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class. </td></tr>
     <tr><td class="paramname">units</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k)">PowerSpectrum</a> class. </td></tr>
   </table>
   </dd>
@@ -419,42 +416,6 @@ g1, g2 = my_ps.getShear( (xlist, ylist) )
       <table class="memname">
         <tr>
           <td class="memname">galsim.lensing.PowerSpectrum.p_E</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a78df320b4df424be6ff7743e833a087e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.lensing.PowerSpectrum.psr</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab7a2988f2eec0841f826f7326230dce7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.lensing.PowerSpectrum.sbii_g1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a915f4a2c26aa923a7852149589f60aa6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.lensing.PowerSpectrum.sbii_g2</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -4,6 +4,7 @@ var searchData=
   ['p_5fe',['p_E',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a27b0f8b55775f6f42b203b82e0c7230b',1,'galsim.lensing.PowerSpectrum.p_E()'],['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a70e8b3fc86a9bce8bd8992e332b7727e',1,'galsim.lensing.PowerSpectrumRealizer.p_E()']]],
   ['parsec',['Parsec',['../_astronomical_constants_8h.html#aab83e617ec86afa1bb20cf937b9004ea',1,'AstronomicalConstants.h']]],
   ['parsevalue',['ParseValue',['../namespacegalsim_1_1config_1_1value.html#ab13260e735ec89b23905a567129c6ff5',1,'galsim::config::value']]],
+  ['permute',['permute',['../namespacegalsim_1_1random.html#a0a8e4c83ab556b3b647e0716871bd322',1,'galsim::random']]],
   ['photonarray',['PhotonArray',['../classgalsim_1_1_photon_array.html',1,'galsim']]],
   ['photonarray',['PhotonArray',['../classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c',1,'galsim::PhotonArray::PhotonArray(int N)'],['../classgalsim_1_1_photon_array.html#a3ee87bfeab432d2b0d380aa0bf84d429',1,'galsim::PhotonArray::PhotonArray(std::vector&lt; double &gt; &amp;vx, std::vector&lt; double &gt; &amp;vy, std::vector&lt; double &gt; &amp;vflux)']]],
   ['photonarray_2eh',['PhotonArray.h',['../_photon_array_8h.html',1,'']]],
@@ -39,7 +40,6 @@ var searchData=
   ['psf_5fimage',['psf_image',['../namespacegalsim_1_1optics.html#a5572bcc736677766016d6353b17e6cd5',1,'galsim::optics']]],
   ['psfcorr_2eh',['PSFCorr.h',['../_p_s_f_corr_8h.html',1,'']]],
   ['psfcorr_2epy',['psfcorr.py',['../psfcorr_8py.html',1,'']]],
-  ['psr',['psr',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a78df320b4df424be6ff7743e833a087e',1,'galsim::lensing::PowerSpectrum']]],
   ['ptf',['ptf',['../namespacegalsim_1_1optics.html#a9e5b6aa95eed9e526b1b9cf7963507a1',1,'galsim::optics']]],
   ['ptf_5fimage',['ptf_image',['../namespacegalsim_1_1optics.html#a175c372fca0d3505bdd030e411dfabdb',1,'galsim::optics']]]
 ];

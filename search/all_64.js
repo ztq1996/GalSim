@@ -21,6 +21,7 @@ var searchData=
   ['devaucouleurs',['DeVaucouleurs',['../classgalsim_1_1base_1_1_de_vaucouleurs.html',1,'galsim::base']]],
   ['divert_5fboost_5frandom',['DIVERT_BOOST_RANDOM',['../_random_8h.html#aa7f15194f79996fb7331d88b71069c5c',1,'Random.h']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
+  ['do_5fpreload',['do_preload',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aa2bddf9957f1c8ea8571431d21b3cece',1,'galsim::real::RealGalaxyCatalog']]],
   ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()']]],
   ['drawk',['drawK',['../classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb',1,'galsim::SBProfile']]],
   ['drawpsfstamp',['DrawPSFStamp',['../namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f',1,'galsim::config::stamp']]],
