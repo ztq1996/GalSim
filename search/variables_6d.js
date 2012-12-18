@@ -12,10 +12,10 @@ var searchData=
   ['mjd0',['MJD0',['../_astronomical_constants_8h.html#ad37269ee6a2d03cdbb8dbb32b83509d7',1,'AstronomicalConstants.h']]],
   ['mock_5finf',['MOCK_INF',['../namespacegalsim_1_1integ.html#a823876295f18a560fd316d1ca898f6dd',1,'galsim::integ']]],
   ['mock_5finf2',['MOCK_INF2',['../namespacegalsim_1_1integ.html#a4fa295bf11bc65ba29364dbd462ab638',1,'galsim::integ']]],
-  ['moments_5famp',['moments_amp',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a00de3e1792cd7713fba660200f910b39',1,'galsim::hsm::HSMShapeData']]],
-  ['moments_5fcentroid',['moments_centroid',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a0da82241c7988e8a9084f153de377d2d',1,'galsim::hsm::HSMShapeData']]],
-  ['moments_5fn_5fiter',['moments_n_iter',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a38037656bb702cac2c826d1fbe0a96e9',1,'galsim::hsm::HSMShapeData']]],
-  ['moments_5frho4',['moments_rho4',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a6e1281a9f2303d8bf95ab902ccc58c30',1,'galsim::hsm::HSMShapeData']]],
-  ['moments_5fsigma',['moments_sigma',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a4213876a6ae071cb53876892ffd0084e',1,'galsim::hsm::HSMShapeData']]],
-  ['moments_5fstatus',['moments_status',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#aa4087c21a258b04204ca235b16f7c228',1,'galsim::hsm::HSMShapeData']]]
+  ['moments_5famp',['moments_amp',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#aecd7dfcc69c8a51b1f9ebb6ee2327d8a',1,'galsim::hsm::CppHSMShapeData::moments_amp()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#aaa897b0eb050c457c84d90dd91da18f9',1,'galsim.psfcorr.HSMShapeData.moments_amp()']]],
+  ['moments_5fcentroid',['moments_centroid',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#ad062d496a1370152226563b1140ff995',1,'galsim::hsm::CppHSMShapeData::moments_centroid()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a9ed86263a57f562d0563aae7d2748ac7',1,'galsim.psfcorr.HSMShapeData.moments_centroid()']]],
+  ['moments_5fn_5fiter',['moments_n_iter',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a056ee059d4ded933729ffb5d6229eb8e',1,'galsim::hsm::CppHSMShapeData::moments_n_iter()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a08c1165ab9d82f5567c92cf7d6e8fe7a',1,'galsim.psfcorr.HSMShapeData.moments_n_iter()']]],
+  ['moments_5frho4',['moments_rho4',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a2b5ad850af63d25d5d80f1d3937839a3',1,'galsim::hsm::CppHSMShapeData::moments_rho4()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a92b55780fca6182f1fca7dee22121e09',1,'galsim.psfcorr.HSMShapeData.moments_rho4()']]],
+  ['moments_5fsigma',['moments_sigma',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#ae29cb3f6b1619ea0c7b66d89544e75cb',1,'galsim::hsm::CppHSMShapeData::moments_sigma()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#ae0d53148157810904c81c3a1e9410b27',1,'galsim.psfcorr.HSMShapeData.moments_sigma()']]],
+  ['moments_5fstatus',['moments_status',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a32c5c44657a2913135e6092498177bcc',1,'galsim::hsm::CppHSMShapeData::moments_status()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a5aefe5a6ac732e4ebe69283010a5cf33',1,'galsim.psfcorr.HSMShapeData.moments_status()']]]
 ];

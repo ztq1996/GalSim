@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Packages</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -98,6 +99,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Routines for adaptive moment estimation and PSF correction.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html">galsim.psfcorr.HSMShapeData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to contain the outputs of using the HSM shape and moments measurement routines.  <a href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#details">More...</a><br/></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Packages</h2></td></tr>
 <tr class="memitem:namespacegalsim_1_1psfcorr"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1psfcorr.html">galsim.psfcorr</a></td></tr>
@@ -111,7 +117,7 @@ Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Routines for adaptive moment estimation and PSF correction. </p>
-<p>This file contains the python interface to C++ routines for estimation of second moments of images, and for carrying out PSF correction using a variety of algorithms. The algorithms are described in Hirata &amp; Seljak (2003; MNRAS, 343, 459), and were tested/characterized using real data in Mandelbaum et al. (2005; MNRAS, 361, 1287).</p>
+<p>This file contains the python interface to C++ routines for estimation of second moments of images, and for carrying out PSF correction using a variety of algorithms. The algorithms are described in Hirata &amp; Seljak (2003; MNRAS, 343, 459), and were tested/characterized using real data in Mandelbaum et al. (2005; MNRAS, 361, 1287). We also define a python-level container for the outputs of these codes, HSMShapeData, analogous to the C++-level CppHSMShapeData. Note that these routines for moment measurement and shear estimation are not accessible via config, only via python.</p>
 <p>The moments that are estimated are "adaptive moments" (see the first paper cited above for details); that is, they use an elliptical Gaussian weight that is matched to the image of the object being measured. The PSF correction includes several algorithms:</p>
 <ul>
 <li>One from Kaiser, Squires, &amp; Broadhurts (1995), "KSB"</li>

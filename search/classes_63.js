@@ -8,6 +8,7 @@ var searchData=
   ['convolve',['Convolve',['../classgalsim_1_1base_1_1_convolve.html',1,'galsim::base']]],
   ['cosmology',['Cosmology',['../classgalsim_1_1lensing_1_1_cosmology.html',1,'galsim::lensing']]],
   ['cppellipse',['CppEllipse',['../classgalsim_1_1_cpp_ellipse.html',1,'galsim']]],
+  ['cpphsmshapedata',['CppHSMShapeData',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html',1,'galsim::hsm']]],
   ['cppshear',['CppShear',['../classgalsim_1_1_cpp_shear.html',1,'galsim']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]]
 ];

@@ -101,17 +101,17 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characterizes the shape and other parameters of objects.  <a href="structgalsim_1_1hsm_1_1_object_data.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an image in the way that the hsm code expects to see.  <a href="structgalsim_1_1hsm_1_1_rect_image.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html">HSMShapeData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information about the shape of an object.  <a href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information about the shape of an object.  <a href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa729e5266459ae6240b1cd64a9c512ef"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:aa729e5266459ae6240b1cd64a9c512ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html">HSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#aa729e5266459ae6240b1cd64a9c512ef">EstimateShearHSMView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; U &gt; &amp;PSF_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, unsigned long flags=0xe, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
-<tr class="memdesc:aa729e5266459ae6240b1cd64a9c512ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using ImageViews.  <a href="#aa729e5266459ae6240b1cd64a9c512ef"></a><br/></td></tr>
-<tr class="memitem:ad13bfbc011b648957b1b9c23ec6338fd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad13bfbc011b648957b1b9c23ec6338fd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html">HSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#ad13bfbc011b648957b1b9c23ec6338fd">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
-<tr class="memdesc:ad13bfbc011b648957b1b9c23ec6338fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#ad13bfbc011b648957b1b9c23ec6338fd"></a><br/></td></tr>
+<tr class="memitem:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a4cfba1651e68ba94fc9636f24b2b0b89">EstimateShearHSMView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; U &gt; &amp;PSF_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, unsigned long flags=0xe, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
+<tr class="memdesc:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using ImageViews.  <a href="#a4cfba1651e68ba94fc9636f24b2b0b89"></a><br/></td></tr>
+<tr class="memitem:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#afe7b38855985ef8d7dd8e8cf7be367ac">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
+<tr class="memdesc:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#afe7b38855985ef8d7dd8e8cf7be367ac"></a><br/></td></tr>
 <tr class="memitem:a8e5f5aa7b06c53d22b255c2a2e38e0fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a8e5f5aa7b06c53d22b255c2a2e38e0fd">allocate_rect_image</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *A, long xmin, long xmax, long ymin, long ymax)</td></tr>
 <tr class="memdesc:a8e5f5aa7b06c53d22b255c2a2e38e0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for a <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> representing the image of some object.  <a href="#a8e5f5aa7b06c53d22b255c2a2e38e0fd"></a><br/></td></tr>
 <tr class="memitem:a0628fc63aed5b3ba6c554f10792d1a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a0628fc63aed5b3ba6c554f10792d1a0d">deallocate_rect_image</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *A)</td></tr>
@@ -202,14 +202,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa729e5266459ae6240b1cd64a9c512ef"></a>
+<a class="anchor" id="a4cfba1651e68ba94fc9636f24b2b0b89"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html">HSMShapeData</a> galsim::hsm::EstimateShearHSMView </td>
+          <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a> galsim::hsm::EstimateShearHSMView </td>
           <td>(</td>
           <td class="paramtype">const ImageView&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>gal_image</em>, </td>
@@ -277,7 +277,7 @@ template&lt;typename T , typename U &gt; </div>
 </div><div class="memdoc">
 
 <p>Carry out PSF correction directly using ImageViews. </p>
-<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input ImageViews. The input arguments get repackaged into <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> and <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> structs before calling general_shear_estimator. Results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">HSMShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and flags (for the REGAUSS method only).</p>
+<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input ImageViews. The input arguments get repackaged into <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> and <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> structs before calling general_shear_estimator. Results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">CppHSMShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and flags (for the REGAUSS method only).</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the galaxy being measured </td></tr>
@@ -293,7 +293,7 @@ template&lt;typename T , typename U &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>A <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">HSMShapeData</a> object containing the results of shape measurement. </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>A <a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">CppHSMShapeData</a> object containing the results of shape measurement. </dd></dl>
 
 </div>
 </div>
@@ -389,14 +389,14 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad13bfbc011b648957b1b9c23ec6338fd"></a>
+<a class="anchor" id="afe7b38855985ef8d7dd8e8cf7be367ac"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html">HSMShapeData</a> galsim::hsm::FindAdaptiveMomView </td>
+          <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a> galsim::hsm::FindAdaptiveMomView </td>
           <td>(</td>
           <td class="paramtype">const ImageView&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>object_image</em>, </td>
@@ -445,7 +445,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>A <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">HSMShapeData</a> object containing the results of moment measurement. </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>A <a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">CppHSMShapeData</a> object containing the results of moment measurement. </dd></dl>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['observed_5fshape',['observed_shape',['../structgalsim_1_1hsm_1_1_h_s_m_shape_data.html#a8ba68ff60b7cf8f4899fe6c94fb4ca4d',1,'galsim::hsm::HSMShapeData']]],
+  ['observed_5fshape',['observed_shape',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#aa0f2da1245a64f4081d1e37a17c0ecbe',1,'galsim::hsm::CppHSMShapeData::observed_shape()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#adc11d1d246a34f6a52076ecbec09dfed',1,'galsim.psfcorr.HSMShapeData.observed_shape()']]],
   ['offset',['offset',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a60d3a2afb7fc4229a968a48ca5367533',1,'galsim::lensing::PowerSpectrum']]],
   ['omega_5fc',['omega_c',['../classgalsim_1_1lensing_1_1_cosmology.html#a2df16ac23745ca8ddffef5c08d6dbcb5',1,'galsim::lensing::Cosmology']]],
   ['omega_5flam',['omega_lam',['../classgalsim_1_1lensing_1_1_cosmology.html#a45a231ec73865a5f097542fe45ae2288',1,'galsim::lensing::Cosmology']]],

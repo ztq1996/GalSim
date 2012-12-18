@@ -132,15 +132,36 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class containing a catalog with information about real galaxy training data. </p>
-<p>The <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> class reads in and stores information about a specific training sample of realistic galaxies. We assume that all files containing the images (galaxies and PSFs) live in one directory; they could be individual files, or multiple HDUs of the same file. Currently there is no functionality that lets this be a FITS data cube, because we assume that the object postage stamps will in general need to be different sizes depending on the galaxy size. For example, if the catalog is called <code>'catalog.fits'</code> and is in the working directory, and the images are in a subdirectory called <code>'images'</code>, then the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> can be read in as follows: </p>
-<pre class="fragment">&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog('./catalog.fits', 'images')
+<p>The <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data.">RealGalaxyCatalog</a> class reads in and stores information about a specific training sample of realistic galaxies. We assume that all files containing the images (galaxies and PSFs) live in one directory; they could be individual files, or multiple HDUs of the same file. Currently there is no functionality that lets this be a FITS data cube, because we assume that the object postage stamps will in general need to be different sizes depending on the galaxy size.</p>
+<p>If only the catalog name (<code>'real_galaxy_catalog.fits'</code>) is specified, then the set of galaxy/PSF image files (e.g., <code>'real_galaxy_images_1.fits'</code>, <code>'real_galaxy_PSF_images_1.fits'</code>, etc.) are assumed to be in the directory as the catalog file (in the following example, in the current working directory <code>./</code>): </p>
+<pre class="fragment">&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog('real_galaxy_catalog.fits')
+</pre><p>If <code>image_dir</code> is specified, the set of galaxy/PSF image files is assumed to be in the subdirectory of where the catalog is (in the following example, <code>./images</code>): </p>
+<pre class="fragment">&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog('real_galaxy_catalog.fits', image_dir='images')
+</pre><p>If the real galaxy catalog is in some far-flung directory, and the galaxy/PSF image files are in its subdirectory, one only needs to specify the long directory name once: </p>
+<pre class="fragment">&gt;&gt;&gt; file_name = '/data3/scratch/user_name/galsim/real_galaxy_data/real_galaxy_catalog.fits'
+&gt;&gt;&gt; image_dir = 'images'
+&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog(file_name, image_dir=image_dir)
+</pre><p>In the above case, the galaxy/PSF image files are in the directory <code>/data3/scratch/user_name/galsim/real_galaxy_data/images/</code>.</p>
+<p>The above behavior is changed if the <code>image_dir</code> specifies a directory. In this case, <code>image_dir</code> is interpreted as the full path: </p>
+<pre class="fragment">&gt;&gt;&gt; file_name = '/data3/scratch/user_name/galsim/real_galaxy_data/real_galaxy_catalog.fits'
+&gt;&gt;&gt; image_dir = '/data3/scratch/user_name/galsim/real_galaxy_data/images'
+&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog(file_name, image_dir=image_dir)
+</pre><p>When <code>dir</code> is specified without <code>image_dir</code> being specified, both the catalog and the set of galaxy/PSF images will be searched for under the directory <code>dir</code>: </p>
+<pre class="fragment">&gt;&gt;&gt; catalog_dir = '/data3/scratch/user_name/galsim/real_galaxy_data'
+&gt;&gt;&gt; file_name = 'real_galaxy_catalog.fits'
+&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog(file_name, dir=catalog_dir)
+</pre><p>If the <code>image_dir</code> is specified in addition to <code>dir</code>, the catalog name is specified as <code>dir/file_name</code>, while the galaxy/PSF image files will be searched for under <code>dir/image_dir</code>: </p>
+<pre class="fragment">&gt;&gt;&gt; catalog_dir = '/data3/scratch/user_name/galsim/real_galaxy_data'
+&gt;&gt;&gt; file_name = 'real_galaxy_catalog.fits'
+&gt;&gt;&gt; image_dir = 'images'
+&gt;&gt;&gt; my_rgc = galsim.RealGalaxyCatalog(file_name, image_dir=image_dir, dir=catalog_dir)
 </pre><p>To explore for the future: scaling with number of galaxies, adding more information as needed, and other i/o related issues.</p>
 <p>The GalSim repository currently contains an example catalog, in GalSim/examples/data/real_galaxy_catalog_example.fits (100 galaxies), along with the corresponding image data in other files (real_galaxy_images.fits and real_galaxy_PSF_images.fits) in that directory. For information on how to download a larger sample of 26k training galaxies, see the RealGalaxy Data Download Page on the GalSim Wiki: <a href="https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page">https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data%20Download%20Page</a></p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The file containing the catalog. </td></tr>
-    <tr><td class="paramname">image_dir</td><td>The directory containing the images. </td></tr>
-    <tr><td class="paramname">dir</td><td>The directory of catalog file (optional) </td></tr>
+    <tr><td class="paramname">image_dir</td><td>If a string containing no <code>/</code>, it is the relative path from the location of the catalog file to the directory containing the galaxy/PDF images. If a path (a string containing <code>/</code>), it is the full path to the directory containing the galaxy/PDF images. </td></tr>
+    <tr><td class="paramname">dir</td><td>The directory of catalog file (optional). </td></tr>
     <tr><td class="paramname">preload</td><td>Whether to preload the header information. (default <code>preload = False</code>) </td></tr>
   </table>
   </dd>
@@ -166,7 +187,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image_dir</em>, </td>
+          <td class="paramname"><em>image_dir</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -133,6 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7a6ae2664ce2785562d58a8c64adaa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep assignment operator.  <a href="#a7a6ae2664ce2785562d58a8c64adaa1a"></a><br/></td></tr>
 <tr class="memitem:a1b53064b53a979d3aaf1db1a2a585696"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a1b53064b53a979d3aaf1db1a2a585696">operator=</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="memdesc:a1b53064b53a979d3aaf1db1a2a585696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat for <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> to prevent compiler from making the default op=.  <a href="#a1b53064b53a979d3aaf1db1a2a585696"></a><br/></td></tr>
+<tr class="memitem:ac6e47c544dc482b2e1a7cb474395d59c"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ac6e47c544dc482b2e1a7cb474395d59c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#ac6e47c544dc482b2e1a7cb474395d59c">operator=</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:ac6e47c544dc482b2e1a7cb474395d59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow copy from a different type.  <a href="#ac6e47c544dc482b2e1a7cb474395d59c"></a><br/></td></tr>
 <tr class="memitem:ae0d5e61a1eca797c33389d048debbbcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#ae0d5e61a1eca797c33389d048debbbcb">invertSelf</a> () const </td></tr>
 <tr class="memdesc:ae0d5e61a1eca797c33389d048debbbcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set each element to its inverse: im(i,j) = 1/im(i,j)  <a href="#ae0d5e61a1eca797c33389d048debbbcb"></a><br/></td></tr>
 <tr class="memitem:a5adc3286b9018111250b4dac6315040b"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a5adc3286b9018111250b4dac6315040b">getData</a> () const </td></tr>
@@ -157,6 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aca120f89bb653188170c6ee66b17bf2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator to an arbitrary pixel.  <a href="#aca120f89bb653188170c6ee66b17bf2f"></a><br/></td></tr>
 <tr class="memitem:a9b96b29ad3308bc6e68a6f36c834af2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a9b96b29ad3308bc6e68a6f36c834af2f">copyFrom</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;rhs) const </td></tr>
 <tr class="memdesc:a9b96b29ad3308bc6e68a6f36c834af2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep-copy pixel values from rhs to this.  <a href="#a9b96b29ad3308bc6e68a6f36c834af2f"></a><br/></td></tr>
+<tr class="memitem:a7a33dfbde2d70f437a0a4d777cc56d35"><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
+<tr class="memitem:a7a33dfbde2d70f437a0a4d777cc56d35"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a7a33dfbde2d70f437a0a4d777cc56d35">copyFrom</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; U &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a7a33dfbde2d70f437a0a4d777cc56d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copy may be from a different type of image.  <a href="#a7a33dfbde2d70f437a0a4d777cc56d35"></a><br/></td></tr>
 <tr class="memitem:a393950862fcb10d43c584b9a5f5cd486"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a393950862fcb10d43c584b9a5f5cd486">getScale</a> () const </td></tr>
 <tr class="memdesc:a393950862fcb10d43c584b9a5f5cd486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel scale.  <a href="#a393950862fcb10d43c584b9a5f5cd486"></a><br/></td></tr>
 <tr class="memitem:a5e869c14c3f711b6662a81db5b32daf2"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5e869c14c3f711b6662a81db5b32daf2">getOwner</a> () const </td></tr>
@@ -446,6 +452,29 @@ template&lt;typename T&gt; </div>
 
 <p>Deep-copy pixel values from rhs to this. </p>
 <p>The bounds must be commensurate (i.e. the same shape). If not, an exception will be thrown. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a33dfbde2d70f437a0a4d777cc56d35"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::copyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deep copy may be from a different type of image. </p>
+<p>Do this inline, so we don't have to worry about instantiating all pairs of types. </p>
 
 </div>
 </div>
@@ -854,6 +883,28 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Repeat for <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> to prevent compiler from making the default op=. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac6e47c544dc482b2e1a7cb474395d59c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt;T&gt;&amp; <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allow copy from a different type. </p>
 
 </div>
 </div>

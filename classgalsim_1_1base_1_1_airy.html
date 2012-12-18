@@ -185,6 +185,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae0b346a8b438dedbc7f60a52220869d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ae0b346a8b438dedbc7f60a52220869d8"></a><br/></td></tr>
 <tr class="memitem:a42ac334d2840ba3fa832988e998beca0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0">drawShoot</a></td></tr>
 <tr class="memdesc:a42ac334d2840ba3fa832988e998beca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the object by shooting individual photons drawn from the surface brightness profile of the object.  <a href="#a42ac334d2840ba3fa832988e998beca0"></a><br/></td></tr>
+<tr class="memitem:aafa4ff2871a15f044689bdf3756fd918"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafa4ff2871a15f044689bdf3756fd918">drawK</a></td></tr>
+<tr class="memdesc:aafa4ff2871a15f044689bdf3756fd918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the k-space Images (real and imaginary parts) of the object, with bounds optionally set by input Images.  <a href="#aafa4ff2871a15f044689bdf3756fd918"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -1224,6 +1226,85 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aafa4ff2871a15f044689bdf3756fd918"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.base.GSObject.drawK </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>re</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>im</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dk</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>add_to_image</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws the k-space Images (real and imaginary parts) of the object, with bounds optionally set by input Images. </p>
+<p>Normalization is always such that re(0,0) = flux.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">re</td><td>If provided, this will be the real part of the k-space image. If <code>re = None</code>, then an automatically-sized image will be created. If <code>re != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>re = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size (default <code>re = None</code>).</td></tr>
+    <tr><td class="paramname">im</td><td>If provided, this will be the imaginary part of the k-space image. A provided im must match the size and scale of re. If <code>im = None</code>, then an automatically-sized image will be created. If <code>im != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>im = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size (default <code>im = None</code>).</td></tr>
+    <tr><td class="paramname">dk</td><td>If provided, use this as the pixel scale for the images. If <code>dk</code> is <code>None</code> and <code>re, im != None</code>, then take the provided images' pixel scale (which must be equal). If <code>dk</code> is <code>None</code> and <code>re, im == None</code>, then use the Nyquist scale <code>= pi/maxK()</code>. If <code>dk &lt;= 0</code> (regardless of image), then use the Nyquist scale <code>= pi/maxK()</code>. (Default <code>dk = None</code>.)</td></tr>
+    <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). (Default <code>gain = 1.</code>)</td></tr>
+    <tr><td class="paramname">wmult</td><td>A factor by which to make an automatically-sized image larger than it would normally be made. This factor also applies to any intermediate images during Fourier calculations. The size of the intermediate images are normally automatically chosen to reach some preset accuracy targets (see <a class="el" href="_s_b_profile_8h.html" title="Contains a class definition for two-dimensional Surface Brightness Profiles.">include/galsim/SBProfile.h</a>); however, if you see strange artifacts in the image, you might try using <code>wmult &gt; 1</code>. This will take longer of course, but it will produce more accurate images, since they will have less "folding" in Fourier space. (Default <code>wmult = 1.</code>)</td></tr>
+    <tr><td class="paramname">add_to_image</td><td>Whether to add to the existing images rather than clear out anything in the image before drawing. Note: This requires that images be provided (i.e. <code>re</code>, <code>im</code> are not <code>None</code>) and that they have defined bounds (default <code>add_to_image = False</code>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>(re, im) (created if necessary) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a42ac334d2840ba3fa832988e998beca0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1295,7 +1376,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>poisson_flux</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>poisson_flux</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1325,7 +1406,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">n_photons</td><td>If provided, the number of photons to use. If not provided (i.e. <code>n_photons = 0</code>), use as many photons as necessary to result in an image with the correct Poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to <code>n_photons = flux</code>. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). (Default <code>n_photons = 0</code>).</td></tr>
     <tr><td class="paramname">rng</td><td>If provided, a random number generator to use for photon shooting. (may be any kind of <code><a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a></code> object) If <code>rng=None</code>, one will be automatically created, using the time as a seed. (Default <code>rng = None</code>)</td></tr>
     <tr><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel. This is only relevant if <code>n_photons=0</code>, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, you can get away with using fewer shot photons than the full <code>n_photons = flux</code>. Essentially each shot photon can have a <code>flux &gt; 1</code>, which increases the noise in each pixel. The <code>max_extra_noise</code> parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this might be <code>max_extra_noise = sky_level / 100</code> where <code>sky_level</code> is the flux per pixel due to the sky. If the natural number of photons produces less noise than this value for all pixels, we lower the number of photons to bring the resultant noise up to this value. If the natural value produces more noise than this, we accept it and just use the natural value. Note that this uses a "variance" definition of noise, not a "sigma" definition. (Default <code>max_extra_noise = 0.</code>)</td></tr>
-    <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>n_photons</code> samples (default <code>poisson_flux = True</code>).</td></tr>
+    <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>n_photons</code> samples (default <code>poisson_flux = True</code> unless n_photons is given, in which case the default is <code>poisson_flux = False</code>).</td></tr>
   </table>
   </dd>
 </dl>
