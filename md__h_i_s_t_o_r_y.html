@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GalSim: Related Pages</title>
+<title>GalSim: HISTORY</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -76,20 +75,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">HISTORY </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="md__r_e_a_d_m_e.html" target="_self">README</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="md__i_n_s_t_a_l_l.html" target="_self">Installation Instructions</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="md__c_h_a_n_g_e_l_o_g.html" target="_self">Changes from v0.2 to v0.3</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="md__h_i_s_t_o_r_y.html" target="_self">HISTORY</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p>Below is a history of tagged versions of GalSim called <code>vX.X</code>. All tags of the form <code>milestoneN</code> were from earlier stages of development and are not currently recommended for use.</p>
+<h2>v0.2</h2>
+<p>Major changes from v0.1:</p>
+<ul>
+<li>Significant revamping and commenting of demos, including both python and config versions (Issues 243, 285, 289).</li>
+</ul>
+<ul>
+<li>Removed scipy dependence from the lensing engine, replacing it with functions from the C++ integ package which are now exposed at the python layer (Issues 288, 291).</li>
+</ul>
+<ul>
+<li>Fixed some bugs in Image handling (including bugs related to duplicate numpy.int32 types), and made Image handling generally more robust (Issues 293, 294).</li>
+</ul>
+<ul>
+<li>Significant expansion in <code>config</code> functionality, using YAML/JSON format config files (Issues 291, 295).</li>
+</ul>
+<ul>
+<li>Minor fixes to build process to make it work with fink. Version released via fink.</li>
+</ul>
+<ul>
+<li>Fixed build problems with MKL (Issue 261).</li>
+</ul>
+<ul>
+<li>Fixed bug in wrapping of angles (now not automatic &ndash; use wrap() explicitly).</li>
+</ul>
+<h2>v0.1</h2>
+<p>Initial version of GalSim that had nearly all the functionality we eventually want. </p>
+</div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
 </body>

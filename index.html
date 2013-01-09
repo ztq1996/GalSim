@@ -84,17 +84,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h1>GalSim: The modular galaxy image simulation toolkit</h1>
 <p>GalSim is open-source software for simulating images of astronomical objects (stars, galaxies) in a variety of ways. The bulk of the calculations are carried out in C++, and the user interface is in python. In addition, the code can operate directly on "config" files, for those users who prefer not to work in python. The code is being developed as a collaborative project for the upcoming weak lensing community data challenge, GREAT3 (<a href="http://great3challenge.info/">http://great3challenge.info/</a>), though it has additional capabilities beyond those needed for the challenge. At the end of this file, there is a list of the code capabilities and plans for future development.</p>
 <h2>Distribution</h2>
-<p>Please feel free to fork this repository at any time. However, please be aware that the code is still actively being developed and tested (hence the current version number is v0.1). The release of v1.0 in mid-2013 will be accompanied with a publication that users should cite.</p>
+<p>Please feel free to fork this repository at any time. However, please be aware that the code is still actively being developed and tested (hence the current version number is below 1.0). The release of v1.0 in mid-2013 will be accompanied with a publication that users should cite.</p>
 <h2>How to communicate with the GalSim developers</h2>
 <p>If you have any comments, questions, or suggestions, please open up an Issue on our GitHub repository:</p>
 <p><a href="https://github.com/GalSim-developers/GalSim/issues?state=open">https://github.com/GalSim-developers/GalSim/issues?state=open</a></p>
 <p>Alternatively, if you prefer e-mail, then you can find contact information on the GREAT3 webpage linked above.</p>
 <h2>Installation</h2>
-<p>For installation instructions, please see the file <code>INSTALL.md</code> in the main repository directory.</p>
-<p>There are tagged versions of the code corresponding to specific project releases and development milestones, including v0.1 and several earlier milestones. (For more info, see the "Tagged versions" section below, and <code>devel/git.txt</code>)</p>
+<p>For installation instructions, please see the file <code><a class="el" href="_i_n_s_t_a_l_l_8md.html">INSTALL.md</a></code> in the main repository directory.</p>
+<p>There are tagged versions of the code corresponding to specific project releases and development milestones. (For more info, see the "Tagged versions" section below, and <code>devel/git.txt</code>)</p>
 <h2>Getting started</h2>
 <ul>
-<li>Install the code as in <code>INSTALL.md</code>.</li>
+<li>Install the code as in <code><a class="el" href="_i_n_s_t_a_l_l_8md.html">INSTALL.md</a></code>.</li>
 </ul>
 <ul>
 <li>Optional, but recommended whenever you try a new version of the code: run the unit tests to make sure that there are no errors. You can do this by running <code>scons tests</code>. If there are any issues, please open an Issue on our GitHub page.</li>
@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>tests/ : unit tests.</li>
 </ul>
 <h2>Demonstration scripts</h2>
-<p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>-<code>demo8.py</code>, and can be run either using (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, or by doing <code>scons examples</code> and then using the executable <code>bin/demo1</code>. A completely parallel sequence of configuration scripts, <code>demo1.yaml</code>-<code>demo8.yaml</code>, demonstrates how to make the same set of simulations using config scripts that can be input to <code>bin/galsim_yaml</code>. As the project develops through further versions, and adds further capabilities to the software, more demo scripts will be added to <code>examples/</code> to illustrate what GalSim can do.</p>
+<p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>-<code>demo10.py</code>, and can be run either using (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, or by doing <code>scons examples</code> and then using the executable <code>bin/demo1</code>. A completely parallel sequence of configuration scripts, <code>demo1.yaml</code>-<code>demo10.yaml</code>, demonstrates how to make the same set of simulations using config scripts that can be input to <code>bin/galsim_yaml</code>. As the project develops through further versions, and adds further capabilities to the software, more demo scripts will be added to <code>examples/</code> to illustrate what GalSim can do.</p>
 <h2>Additional scripts</h2>
 <p>While the demo scripts can be run from the command-line while sitting in <code>examples/</code> without any arguments, the remaining scripts are auxiliary utilities that take various command-line arguments, which are always explained in comments at the top of the file.</p>
 <ul>
@@ -134,13 +134,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>MeasShape.py</code> can be used to carry out PSF correction using one of four methods, given FITS images of the galaxy and PSF.</li>
 </ul>
 <h2>Tagged versions</h2>
-<p>After every GalSim release and development milestone we tag a snapshot of the code at that moment, with the tag name <code>vX.X</code> or <code>milestoneN</code> where N is the milestone number.</p>
+<p>After every GalSim release and development milestone we tag a snapshot of the code at that moment, with the tag name <code>vX.X</code> or <code>milestoneN</code> where N is the milestone number. The milestoneN versions are not recommended now that we have official tagged versions, <code>vX.X</code>.</p>
 <p>You can see the available tags using the command </p>
 <pre class="fragment">git tag -l
 </pre><p>at a terminal from within the repository.</p>
-<p>The version of the code at any given snapshot can then be checked out using the tag name, e.g.: </p>
-<pre class="fragment">$ git checkout milestone2
+<p>The version of the code at any given snapshot can be downloaded from our GitHub webpage, or checked out from the repository using the tag name, e.g.: </p>
+<pre class="fragment">$ git checkout v0.2
 </pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.)</p>
+<p>For a version history and a description of how the current version of the code differs from the last tagged version, see <a class="el" href="_h_i_s_t_o_r_y_8md.html">HISTORY.md</a> and <a class="el" href="_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a> (respectively). These files are found in the main GalSim directory, and are also displayed on our wiki which is linked above.</p>
 <h2>Summary of current capabilities</h2>
 <p>Currently, GalSim has the following capabilities:</p>
 <ul>
