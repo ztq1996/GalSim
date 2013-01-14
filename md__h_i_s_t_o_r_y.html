@@ -88,19 +88,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Significant revamping and commenting of demos, including both python and config versions (Issues 243, 285, 289).</li>
 </ul>
 <ul>
-<li>Removed scipy dependence from the lensing engine, replacing it with functions from the C++ integ package which are now exposed at the python layer (Issues 288, 291).</li>
+<li>Fixed build problems with MKL (Issue 261).</li>
 </ul>
 <ul>
-<li>Fixed some bugs in Image handling (including bugs related to duplicate numpy.int32 types), and made Image handling generally more robust (Issues 293, 294).</li>
+<li>Removed scipy dependence from the lensing engine, replacing it with functions from the C++ integ package which are now exposed at the python layer (Issues 288, 291).</li>
 </ul>
 <ul>
 <li>Significant expansion in <code>config</code> functionality, using YAML/JSON format config files (Issues 291, 295).</li>
 </ul>
 <ul>
-<li>Minor fixes to build process to make it work with fink. Version released via fink.</li>
+<li>Fixed some bugs in Image handling (including bugs related to duplicate numpy.int32 types), and made Image handling generally more robust (Issues 293, 294).</li>
 </ul>
 <ul>
-<li>Fixed build problems with MKL (Issue 261).</li>
+<li>Minor fixes to build process to make it work with fink. Version released via fink.</li>
 </ul>
 <ul>
 <li>Fixed bug in wrapping of angles (now not automatic &ndash; use wrap() explicitly).</li>
