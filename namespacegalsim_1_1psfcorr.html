@@ -128,6 +128,18 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>badpix</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>sky_var</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
@@ -203,7 +215,7 @@ Functions</h2></td></tr>
 &gt;&gt;&gt; final_image = final.draw(dx = 0.2)
 &gt;&gt;&gt; final_epsf_image = final_epsf.draw(dx = 0.2)
 &gt;&gt;&gt; result = galsim.EstimateShearHSM(final_image, final_epsf_image)
-</pre><p>After running the above code, <code>result.observed_shape</code> ["shape" = distortion, the (a^2 - b^2)/(a^2 + b^2) definition of ellipticity] is <code>(0.0876162,1.23478e-17)</code> and <code>result.corrected_shape</code> is <code>(0.0993412,-1.86255e-09)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
+</pre><p>After running the above code, <code>result.observed_shape</code> ["shape" = distortion, the (a^2 - b^2)/(a^2 + b^2) definition of ellipticity] is <code>(0.0876162,1.23478e-17)</code> and <code>result.corrected_e1</code>, <code>result_corrected_e2</code> are <code>(0.0993412,-1.86255e-09)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
 <p>The code below gives an example of how one could run this routine on a large batch of galaxies, explicitly catching and tracking any failures: </p>
 <pre class="fragment">n_image = 100
 n_fail = 0
@@ -217,6 +229,8 @@ print "Number of failures: ", n_fail
   <table class="params">
     <tr><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> of the galaxy being measured. </td></tr>
     <tr><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the PSF. </td></tr>
+    <tr><td class="paramname">weight</td><td>The optional weight image for the galaxy being measured. Can be an int or a float array. Currently, GalSim does not account for the variation in non-zero weights, i.e., a weight map is converted to an image with 0 and 1 for pixels that are not and are used. Full use of spatial variation in non-zero weights will be included in a future version of the code. </td></tr>
+    <tr><td class="paramname">badpix</td><td>The optional bad pixel mask for the image being used. Zero should be used for pixels that are good, and any nonzero value indicates a bad pixel. </td></tr>
     <tr><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default <code>sky_var = 0.</code>. </td></tr>
     <tr><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default <code>shear_est = "REGAUSS"</code>. </td></tr>
     <tr><td class="paramname">flags</td><td>A flag determining various aspects of the shape measurement process (only necessary for REGAUSS); default <code>flags=0</code>. </td></tr>
@@ -242,6 +256,18 @@ print "Number of failures: ", n_fail
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>object_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>badpix</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -295,6 +321,8 @@ print "Number of failures: ", n_fail
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the object being measured. </td></tr>
+    <tr><td class="paramname">weight</td><td>The optional weight image for the object being measured. Can be an int or a float array. Currently, GalSim does not account for the variation in non-zero weights, i.e., a weight map is converted to an image with 0 and 1 for pixels that are not and are used. Full use of spatial variation in non-zero weights will be included in a future version of the code. </td></tr>
+    <tr><td class="paramname">badpix</td><td>The optional bad pixel mask for the image being used. Zero should be used for pixels that are good, and any nonzero value indicates a bad pixel. </td></tr>
     <tr><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object, default <code>guess_sig = 5.0</code> (pixels). </td></tr>
     <tr><td class="paramname">precision</td><td>The convergence criterion for the moments; default <code>precision = 1e-6</code>. </td></tr>
     <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>

@@ -89,7 +89,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">galsim::hsm Namespace Reference</div>  </div>
 </div><!--header-->
@@ -99,110 +100,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characterizes the shape and other parameters of objects.  <a href="structgalsim_1_1hsm_1_1_object_data.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an image in the way that the hsm code expects to see.  <a href="structgalsim_1_1hsm_1_1_rect_image.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information about the shape of an object.  <a href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a4cfba1651e68ba94fc9636f24b2b0b89">EstimateShearHSMView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; U &gt; &amp;PSF_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, unsigned long flags=0xe, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
-<tr class="memdesc:a4cfba1651e68ba94fc9636f24b2b0b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using ImageViews.  <a href="#a4cfba1651e68ba94fc9636f24b2b0b89"></a><br/></td></tr>
-<tr class="memitem:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#afe7b38855985ef8d7dd8e8cf7be367ac">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
-<tr class="memdesc:afe7b38855985ef8d7dd8e8cf7be367ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#afe7b38855985ef8d7dd8e8cf7be367ac"></a><br/></td></tr>
-<tr class="memitem:a8e5f5aa7b06c53d22b255c2a2e38e0fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a8e5f5aa7b06c53d22b255c2a2e38e0fd">allocate_rect_image</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *A, long xmin, long xmax, long ymin, long ymax)</td></tr>
-<tr class="memdesc:a8e5f5aa7b06c53d22b255c2a2e38e0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for a <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> representing the image of some object.  <a href="#a8e5f5aa7b06c53d22b255c2a2e38e0fd"></a><br/></td></tr>
-<tr class="memitem:a0628fc63aed5b3ba6c554f10792d1a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a0628fc63aed5b3ba6c554f10792d1a0d">deallocate_rect_image</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *A)</td></tr>
-<tr class="memdesc:a0628fc63aed5b3ba6c554f10792d1a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-allocate memory for a <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a>.  <a href="#a0628fc63aed5b3ba6c554f10792d1a0d"></a><br/></td></tr>
-<tr class="memitem:ac18e9c11e85e4f3907631580cd1c31cd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#ac18e9c11e85e4f3907631580cd1c31cd">general_shear_estimator</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *gal_image, <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *PSF, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> *gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> *PSF_data, char *shear_est, unsigned long flags)</td></tr>
-<tr class="memdesc:ac18e9c11e85e4f3907631580cd1c31cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#ac18e9c11e85e4f3907631580cd1c31cd"></a><br/></td></tr>
-<tr class="memitem:a1c61eb4d9f3090e8cf51bd3e05186999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a1c61eb4d9f3090e8cf51bd3e05186999">find_ellipmom_2</a> (<a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html">RectImage</a> *data, double *A, double *x0, double *y0, double *Mxx, double *Mxy, double *Myy, double *rho4, double epsilon, int *num_iter)</td></tr>
-<tr class="memdesc:a1c61eb4d9f3090e8cf51bd3e05186999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a1c61eb4d9f3090e8cf51bd3e05186999"></a><br/></td></tr>
+<tr class="memitem:a72441418e8e79493243aa1e57d8cb7e2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a72441418e8e79493243aa1e57d8cb7e2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a72441418e8e79493243aa1e57d8cb7e2">EstimateShearHSMView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; U &gt; &amp;PSF_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; int &gt; &amp;gal_mask_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, unsigned long flags=0xe, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
+<tr class="memdesc:a72441418e8e79493243aa1e57d8cb7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using ImageViews.  <a href="#a72441418e8e79493243aa1e57d8cb7e2"></a><br/></td></tr>
+<tr class="memitem:a48cc97bffee670640ce18202cf5493a1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a48cc97bffee670640ce18202cf5493a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html">CppHSMShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a48cc97bffee670640ce18202cf5493a1">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; int &gt; &amp;object_mask_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0)</td></tr>
+<tr class="memdesc:a48cc97bffee670640ce18202cf5493a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#a48cc97bffee670640ce18202cf5493a1"></a><br/></td></tr>
+<tr class="memitem:a7e8ad714ad613e9d3e3137a75947e3b3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a7e8ad714ad613e9d3e3137a75947e3b3"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a7e8ad714ad613e9d3e3137a75947e3b3">general_shear_estimator</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; gal_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; gal_mask, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; U &gt; PSF_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; PSF_mask, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;PSF_data, const std::string &amp;shear_est, unsigned long flags)</td></tr>
+<tr class="memdesc:a7e8ad714ad613e9d3e3137a75947e3b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#a7e8ad714ad613e9d3e3137a75947e3b3"></a><br/></td></tr>
+<tr class="memitem:a44fd43c538399b0607fa82b94e450319"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a44fd43c538399b0607fa82b94e450319"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a44fd43c538399b0607fa82b94e450319">find_ellipmom_2</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; data, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; mask, double &amp;A, double &amp;x0, double &amp;y0, double &amp;Mxx, double &amp;Mxy, double &amp;Myy, double &amp;rho4, double epsilon, int &amp;num_iter)</td></tr>
+<tr class="memdesc:a44fd43c538399b0607fa82b94e450319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a44fd43c538399b0607fa82b94e450319"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac6e588b87ee6be44153b6ce51b56c3f7"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#ac6e588b87ee6be44153b6ce51b56c3f7">nsig_rg</a> = 3.0</td></tr>
+<tr class="memdesc:ac6e588b87ee6be44153b6ce51b56c3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameter used to optimize convolutions by cutting off galaxy profile.  <a href="#ac6e588b87ee6be44153b6ce51b56c3f7"></a><br/></td></tr>
+<tr class="memitem:a200d2cae65884bcb6dfe93fb3328a6fd"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a200d2cae65884bcb6dfe93fb3328a6fd">nsig_rg2</a> = 3.6</td></tr>
+<tr class="memdesc:a200d2cae65884bcb6dfe93fb3328a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameter used to optimize convolutions by cutting off PSF residual profile.  <a href="#a200d2cae65884bcb6dfe93fb3328a6fd"></a><br/></td></tr>
+<tr class="memitem:a18290ae95481584d586a4bed580742b6"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a18290ae95481584d586a4bed580742b6">max_moment_nsig2</a> = 25.0</td></tr>
+<tr class="memdesc:a18290ae95481584d586a4bed580742b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameter for optimizing calculations of adaptive moments by cutting off profiles.  <a href="#a18290ae95481584d586a4bed580742b6"></a><br/></td></tr>
+<tr class="memitem:af4fdb51ebf29294d9777fbe3d155c704"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#af4fdb51ebf29294d9777fbe3d155c704">regauss_too_small</a> = 1</td></tr>
+<tr class="memdesc:af4fdb51ebf29294d9777fbe3d155c704"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameter for how strictly the re-Gaussianization code treats small galaxies.  <a href="#af4fdb51ebf29294d9777fbe3d155c704"></a><br/></td></tr>
+<tr class="memitem:a55143eb36c58d66def0bf0dd584e8b4f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a55143eb36c58d66def0bf0dd584e8b4f">adapt_order</a> = 2</td></tr>
+<tr class="memdesc:a55143eb36c58d66def0bf0dd584e8b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The order to which circular adaptive moments should be calculated for KSB method.  <a href="#a55143eb36c58d66def0bf0dd584e8b4f"></a><br/></td></tr>
+<tr class="memitem:a92f58ab016aa96236f8b0af5fc5ba654"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a92f58ab016aa96236f8b0af5fc5ba654">max_mom2_iter</a> = 400</td></tr>
+<tr class="memdesc:a92f58ab016aa96236f8b0af5fc5ba654"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of iterations to use when calculating adaptive moments.  <a href="#a92f58ab016aa96236f8b0af5fc5ba654"></a><br/></td></tr>
+<tr class="memitem:a126407f5fb5fc66d0a2404930e0dd743"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a126407f5fb5fc66d0a2404930e0dd743">num_iter_default</a> = -1</td></tr>
+<tr class="memdesc:a126407f5fb5fc66d0a2404930e0dd743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of iterations to report when code fails to converge within max_mom2_iter iterations.  <a href="#a126407f5fb5fc66d0a2404930e0dd743"></a><br/></td></tr>
+<tr class="memitem:a770ac94a4d6412a8e386f57958940f61"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a770ac94a4d6412a8e386f57958940f61">bound_correct_weight</a> = 0.25</td></tr>
+<tr class="memdesc:a770ac94a4d6412a8e386f57958940f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum shift in centroids and sigma between iterations for adaptive moments.  <a href="#a770ac94a4d6412a8e386f57958940f61"></a><br/></td></tr>
+<tr class="memitem:a609cbc4b94aea5880c1b2d7702409202"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a609cbc4b94aea5880c1b2d7702409202">max_amoment</a> = 8000.</td></tr>
+<tr class="memdesc:a609cbc4b94aea5880c1b2d7702409202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value for adaptive second moments before throwing exception.  <a href="#a609cbc4b94aea5880c1b2d7702409202"></a><br/></td></tr>
+<tr class="memitem:a491ab4166e029ad785071a73eb1dbefb"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a491ab4166e029ad785071a73eb1dbefb">max_ashift</a> = 15.</td></tr>
+<tr class="memdesc:a491ab4166e029ad785071a73eb1dbefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum allowed x / y centroid shift for adaptive moments before throwing exception.  <a href="#a491ab4166e029ad785071a73eb1dbefb"></a><br/></td></tr>
+<tr class="memitem:af2a1c5b74708bf6e951ca10891266258"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#af2a1c5b74708bf6e951ca10891266258">ksb_moments_max</a> = 4</td></tr>
+<tr class="memdesc:af2a1c5b74708bf6e951ca10891266258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use moments up to ksb_moments_max order for KSB method of PSF correction.  <a href="#af2a1c5b74708bf6e951ca10891266258"></a><br/></td></tr>
+<tr class="memitem:a1b5a8977d44ebf6d8f6224a0886f3695"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a1b5a8977d44ebf6d8f6224a0886f3695">failed_moments</a> = -1000.</td></tr>
+<tr class="memdesc:a1b5a8977d44ebf6d8f6224a0886f3695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to report for ellipticities and resolution factor if shape measurement fails.  <a href="#a1b5a8977d44ebf6d8f6224a0886f3695"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a8e5f5aa7b06c53d22b255c2a2e38e0fd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::hsm::allocate_rect_image </td>
-          <td>(</td>
-          <td class="paramtype">RectImage *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>xmin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>xmax</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ymin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ymax</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocate memory for a <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> representing the image of some object. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*A</td><td>The pointer to the <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmin</td><td>The lower x boundary for the image </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmax</td><td>The upper x boundary for the imgae </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ymin</td><td>The lower y boundary for the image </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ymax</td><td>The upper y boundary for the image </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a0628fc63aed5b3ba6c554f10792d1a0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::hsm::deallocate_rect_image </td>
-          <td>(</td>
-          <td class="paramtype">RectImage *&#160;</td>
-          <td class="paramname"><em>A</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>De-allocate memory for a <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a>. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*A</td><td>The pointer to the <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a4cfba1651e68ba94fc9636f24b2b0b89"></a>
+<a class="anchor" id="a72441418e8e79493243aa1e57d8cb7e2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -219,6 +163,12 @@ template&lt;typename T , typename U &gt; </div>
           <td></td>
           <td class="paramtype">const ImageView&lt; U &gt; &amp;&#160;</td>
           <td class="paramname"><em>PSF_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ImageView&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gal_mask_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -277,11 +227,12 @@ template&lt;typename T , typename U &gt; </div>
 </div><div class="memdoc">
 
 <p>Carry out PSF correction directly using ImageViews. </p>
-<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input ImageViews. The input arguments get repackaged into <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> and <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> structs before calling general_shear_estimator. Results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">CppHSMShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and flags (for the REGAUSS method only).</p>
+<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input ImageViews. The input arguments get repackaged before calling general_shear_estimator, and results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html" title="Struct containing information about the shape of an object.">CppHSMShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and flags (for the REGAUSS method only).</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the galaxy being measured </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the PSF </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_mask_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the mask image to be applied to the galaxy being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default 0. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">*shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default REGAUSS. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>A flag determining various aspects of the shape measurement process (only necessary for REGAUSS); default 0xe. </td></tr>
@@ -297,56 +248,64 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1c61eb4d9f3090e8cf51bd3e05186999"></a>
+<a class="anchor" id="a44fd43c538399b0607fa82b94e450319"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void galsim::hsm::find_ellipmom_2 </td>
           <td>(</td>
-          <td class="paramtype">RectImage *&#160;</td>
+          <td class="paramtype">ConstImageView&lt; T &gt;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>x0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>y0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>Mxx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>Mxy</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>Myy</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>rho4</em>, </td>
         </tr>
         <tr>
@@ -358,7 +317,7 @@ template&lt;typename T , typename U &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>num_iter</em>&#160;</td>
         </tr>
         <tr>
@@ -373,23 +332,24 @@ template&lt;typename T , typename U &gt; </div>
 <p>This function iteratively computes the adaptive moments of an image, and tells the user the results plus other diagnostic information. The key result is the best-fit elliptical Gaussian to the object, which is computed by initially guessing a circular Gaussian that is used as a weight function, computing the weighted moments, recomputing the moments using the result of the previous step as the weight function, and so on until the moments that are measured are the same as those used for the weight function. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> for the object being measured. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*A</td><td>The amplitude of the best-fit elliptical Gaussian (total image intensity for the Gaussian is 2A). </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*x0</td><td>The x centroid of the best-fit elliptical Gaussian </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*y0</td><td>The y centroid of the best-fit elliptical Gaussian </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*Mxx</td><td>The xx component of the moment matrix </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*Mxy</td><td>The xy component of the moment matrix </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*Myy</td><td>The yy component of the moment matrix </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*rho4</td><td>The weighted radial fourth moment </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">epsilon</td><td>The required level of accuracy </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*num_iter</td><td>The number of iterations needed to converge </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> for the object being measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> for the object being measured (integers: 1=use pixel, 0=do not use pixel). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>The amplitude of the best-fit elliptical Gaussian (total image intensity for the Gaussian is 2A). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>The x centroid of the best-fit elliptical Gaussian. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>The y centroid of the best-fit elliptical Gaussian. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Mxx</td><td>The xx component of the moment matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Mxy</td><td>The xy component of the moment matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Myy</td><td>The yy component of the moment matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rho4</td><td>The weighted radial fourth moment. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">epsilon</td><td>The required level of accuracy. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_iter</td><td>The number of iterations needed to converge. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="afe7b38855985ef8d7dd8e8cf7be367ac"></a>
+<a class="anchor" id="a48cc97bffee670640ce18202cf5493a1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -400,6 +360,12 @@ template&lt;typename T &gt; </div>
           <td>(</td>
           <td class="paramtype">const ImageView&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>object_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ImageView&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>object_mask_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -438,6 +404,7 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the object being measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_mask_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the mask image to be applied to the object being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object, default 5.0 (pixels). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">guess_x_centroid</td><td>Optional argument with an initial guess for the x centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
@@ -449,38 +416,52 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac18e9c11e85e4f3907631580cd1c31cd"></a>
+<a class="anchor" id="a7e8ad714ad613e9d3e3137a75947e3b3"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">unsigned int galsim::hsm::general_shear_estimator </td>
           <td>(</td>
-          <td class="paramtype">RectImage *&#160;</td>
+          <td class="paramtype">ConstImageView&lt; T &gt;&#160;</td>
           <td class="paramname"><em>gal_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">RectImage *&#160;</td>
-          <td class="paramname"><em>PSF</em>, </td>
+          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>gal_mask</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ObjectData *&#160;</td>
+          <td class="paramtype">ConstImageView&lt; U &gt;&#160;</td>
+          <td class="paramname"><em>PSF_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>PSF_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ObjectData &amp;&#160;</td>
           <td class="paramname"><em>gal_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ObjectData *&#160;</td>
+          <td class="paramtype">ObjectData &amp;&#160;</td>
           <td class="paramname"><em>PSF_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>shear_est</em>, </td>
         </tr>
         <tr>
@@ -501,16 +482,192 @@ template&lt;typename T &gt; </div>
 <p>Carry out one of the multiple possible methods of PSF correction using the HSM package. Results for the shape measurement are returned by modifying the galaxy data directly. The flags parameter is only used for the REGAUSS shape measurement method, and is defined as follows: 0x1=recompute galaxy flux by summing unmasked pixels, 0x2=recompute galaxy flux from Gaussian-quartic fit, 0x4=cut off Gaussian approximator at NSIG_RG sigma to save time, 0x8=cut off PSF residual at NSIG_RG2 to save time. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*gal_image</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> object for the galaxy </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*PSF</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_rect_image.html" title="Represents an image in the way that the hsm code expects to see.">RectImage</a> object for the PSF </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*gal_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the galaxy </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*PSF_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the PSF </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The galaxy <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_mask</td><td>The galaxy mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (integers: 1=use pixel, 0=do not use pixel). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The PSF <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_mask</td><td>The PSF mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (integers: 1=use pixel, 0=do not use pixel). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the galaxy </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the PSF </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>A parameter for REGAUSS (typical usage is 0xe). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>A status flag that should be zero if the measurement was successful. </dd></dl>
+
+</div>
+</div>
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="a55143eb36c58d66def0bf0dd584e8b4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int galsim::hsm::adapt_order = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The order to which circular adaptive moments should be calculated for KSB method. </p>
+<p>This parameter only affects calculations using the KSB method of PSF correction. Warning: deviating from default value of 2 results in code running more slowly, and results have not been significantly tested. </p>
+
+</div>
+</div>
+<a class="anchor" id="a770ac94a4d6412a8e386f57958940f61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::bound_correct_weight = 0.25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum shift in centroids and sigma between iterations for adaptive moments. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1b5a8977d44ebf6d8f6224a0886f3695"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::failed_moments = -1000.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Value to report for ellipticities and resolution factor if shape measurement fails. </p>
+
+</div>
+</div>
+<a class="anchor" id="af2a1c5b74708bf6e951ca10891266258"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int galsim::hsm::ksb_moments_max = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use moments up to ksb_moments_max order for KSB method of PSF correction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a609cbc4b94aea5880c1b2d7702409202"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::max_amoment = 8000.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum value for adaptive second moments before throwing exception. </p>
+
+</div>
+</div>
+<a class="anchor" id="a491ab4166e029ad785071a73eb1dbefb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::max_ashift = 15.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum allowed x / y centroid shift for adaptive moments before throwing exception. </p>
+
+</div>
+</div>
+<a class="anchor" id="a92f58ab016aa96236f8b0af5fc5ba654"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long galsim::hsm::max_mom2_iter = 400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum number of iterations to use when calculating adaptive moments. </p>
+
+</div>
+</div>
+<a class="anchor" id="a18290ae95481584d586a4bed580742b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::max_moment_nsig2 = 25.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A parameter for optimizing calculations of adaptive moments by cutting off profiles. </p>
+<p>This parameter is used to decide how many sigma^2 into the Gaussian adaptive moment to extend the moment calculation, with the weight being defined as 0 beyond this point. i.e., if max_moment_nsig2 is set to 25, then the Gaussian is extended to (r^2/sigma^2)=25, with proper accounting for elliptical geometry. If this parameter is set to some very large number, then the weight is never set to zero and the exponential function is always called. Note: GalSim script devel/modules/test_mom_timing.py was used to choose a value of 25 as being optimal, in that for the cases that were tested, the speedups were typically factors of several, but the results of moments and shear estimation were changed by &lt;10^-5. Not all possible cases were checked, and so for use of this code for unusual cases, we recommend that users check that this value does not affect accuracy, and/or set it to some large value to completely disable this optimization. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac6e588b87ee6be44153b6ce51b56c3f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::nsig_rg = 3.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A parameter used to optimize convolutions by cutting off galaxy profile. </p>
+<p>In the first step of the re-Gaussianization method of PSF correction, a Gaussian approximation to the pre-seeing galaxy is calculated. If re-Gaussianization is called with the flag 0x4 (as is the default), then this approximation is cut off at nsig_rg sigma to save computation time in convolutions. </p>
+
+</div>
+</div>
+<a class="anchor" id="a200d2cae65884bcb6dfe93fb3328a6fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double galsim::hsm::nsig_rg2 = 3.6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A parameter used to optimize convolutions by cutting off PSF residual profile. </p>
+<p>In the re-Gaussianization method of PSF correction, a "PSF residual" (the difference between the true PSF and its best-fit Gaussian approximation) is constructed. If re-Gaussianization is called with the flag 0x8 (as is the default), then this PSF residual is cut off at nsig_rg2 sigma to save computation time in convolutions. </p>
+
+</div>
+</div>
+<a class="anchor" id="a126407f5fb5fc66d0a2404930e0dd743"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long galsim::hsm::num_iter_default = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of iterations to report when code fails to converge within max_mom2_iter iterations. </p>
+
+</div>
+</div>
+<a class="anchor" id="af4fdb51ebf29294d9777fbe3d155c704"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int galsim::hsm::regauss_too_small = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A parameter for how strictly the re-Gaussianization code treats small galaxies. </p>
+<p>If this parameter is 1, then the re-Gaussianization code does not impose a cut on the apparent resolution before trying to measure the PSF-corrected shape of the galaxy; if 0, then it is stricter. Using the default value of 1 prevents the re-Gaussianization PSF correction from completely failing at the beginning, before trying to do PSF correction, due to the crudest possible PSF correction (Gaussian approximation) suggesting that the galaxy is very small. This could happen for some usable galaxies particularly when they have very non-Gaussian surface brightness profiles &ndash; for example, if there's a prominent bulge that the adaptive moments attempt to fit, ignoring the more extended disk. Setting a value of 1 is useful for keeping galaxies that would have failed for that reason. If they later turn out to be too small to really use, this will be reflected in the final estimate of the resolution factor, and they can be rejected after the fact. </p>
 
 </div>
 </div>

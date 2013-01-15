@@ -6,6 +6,7 @@ var searchData=
   ['kolmogorov_5fmtf_5fimage',['kolmogorov_mtf_image',['../namespacegalsim_1_1atmosphere.html#adcba2658ced052803ec41f0a9c67586a',1,'galsim::atmosphere']]],
   ['kolmogorov_5fpsf',['kolmogorov_psf',['../namespacegalsim_1_1atmosphere.html#a5ab638043e835eb6bd69883472bca74e',1,'galsim::atmosphere']]],
   ['kolmogorov_5fpsf_5fimage',['kolmogorov_psf_image',['../namespacegalsim_1_1atmosphere.html#a2398d491a5a89c0dc67d49c2cd59f63f',1,'galsim::atmosphere']]],
+  ['ksb_5fmoments_5fmax',['ksb_moments_max',['../namespacegalsim_1_1hsm.html#af2a1c5b74708bf6e951ca10891266258',1,'galsim::hsm']]],
   ['kset',['kSet',['../classgalsim_1_1_k_table.html#af96651b6eda29f0ed12f783487ee1ac2',1,'galsim::KTable']]],
   ['kset2',['kSet2',['../classgalsim_1_1_k_table.html#a2e9aa4e4aab7bd05aacb4445171fd359',1,'galsim::KTable']]],
   ['ktable',['KTable',['../classgalsim_1_1_k_table.html',1,'galsim']]],

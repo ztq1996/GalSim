@@ -3,11 +3,14 @@ var searchData=
   ['m',['M',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html#afffa2263e5dd0ad19b4c40e059ed8efd',1,'galsim::lensing::NFWHalo']]],
   ['mag',['mag',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a89d18fef6798d13ad3ed95a900c4b122',1,'galsim::real::RealGalaxyCatalog']]],
   ['major',['major',['../classgalsim_1_1ellipse_1_1_ellipse.html#ae2e86c5fec496e1301b12a68511b7783',1,'galsim::ellipse::Ellipse']]],
-  ['mask',['mask',['../structgalsim_1_1hsm_1_1_rect_image.html#abc0e45df8babcc66ee72443f69312795',1,'galsim::hsm::RectImage']]],
+  ['max_5famoment',['max_amoment',['../namespacegalsim_1_1hsm.html#a609cbc4b94aea5880c1b2d7702409202',1,'galsim::hsm']]],
+  ['max_5fashift',['max_ashift',['../namespacegalsim_1_1hsm.html#a491ab4166e029ad785071a73eb1dbefb',1,'galsim::hsm']]],
+  ['max_5fmom2_5fiter',['max_mom2_iter',['../namespacegalsim_1_1hsm.html#a92f58ab016aa96236f8b0af5fc5ba654',1,'galsim::hsm']]],
+  ['max_5fmoment_5fnsig2',['max_moment_nsig2',['../namespacegalsim_1_1hsm.html#a18290ae95481584d586a4bed580742b6',1,'galsim::hsm']]],
   ['maximum_5ffft_5fsize',['maximum_fft_size',['../namespacegalsim_1_1sbp.html#aa58e0c79e6b568b6b51d64ee7f0b4fbb',1,'galsim::sbp']]],
   ['maxk',['maxK',['../classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21',1,'galsim::SBProfile::maxK()'],['../classgalsim_1_1base_1_1_g_s_object.html#a4ab9d51f34703ced5be1592e112605ff',1,'galsim.base.GSObject.maxK()']]],
   ['maxk_5fthreshold',['maxk_threshold',['../namespacegalsim_1_1sbp.html#ab59c6bbd5cbfccf0182a65ebc47316d1',1,'galsim::sbp']]],
-  ['meas_5ftype',['meas_type',['../structgalsim_1_1hsm_1_1_object_data.html#a9914f47c6c8a9aea60780fc63e2df2cb',1,'galsim::hsm::ObjectData']]],
+  ['meas_5ftype',['meas_type',['../structgalsim_1_1hsm_1_1_object_data.html#a9914f47c6c8a9aea60780fc63e2df2cb',1,'galsim::hsm::ObjectData::meas_type()'],['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#abc24154aa01d054ef970e5173f51c49c',1,'galsim::hsm::CppHSMShapeData::meas_type()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a9da331b9caf2c4cda2307e5a9355d20a',1,'galsim.psfcorr.HSMShapeData.meas_type()']]],
   ['merge',['merge',['../classgalsim_1_1utilities_1_1_attribute_dict.html#a8dc3a0eb0cb414c3d96567273510b6be',1,'galsim::utilities::AttributeDict']]],
   ['method',['Method',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045',1,'galsim']]],
   ['micron',['Micron',['../_astronomical_constants_8h.html#a62e1c874d2cf1a788c5fbb046a6cac28',1,'AstronomicalConstants.h']]],
@@ -27,6 +30,6 @@ var searchData=
   ['mtf',['mtf',['../namespacegalsim_1_1optics.html#ad884b16b42ed977b21e0f90cc9102898',1,'galsim::optics']]],
   ['mtf_5fimage',['mtf_image',['../namespacegalsim_1_1optics.html#a1d08038b20fafcdb94f130fdb25cade4',1,'galsim::optics']]],
   ['mu',['mu',['../classgalsim_1_1ellipse_1_1_ellipse.html#a43e7d92e4c170d6b1f0ff78ed9d54710',1,'galsim::ellipse::Ellipse']]],
-  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html',1,'galsim']]],
-  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#a1ebbc0c5e533260fd3de78b99c388f5f',1,'galsim::MultipleImageHelper::MultipleImageHelper(const std::vector&lt; boost::shared_ptr&lt; BaseImage&lt; T &gt; &gt; &gt; &amp;images, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a573d7afba8597206249b5349269cc3f5',1,'galsim::MultipleImageHelper::MultipleImageHelper(const BaseImage&lt; T &gt; &amp;image, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894',1,'galsim::MultipleImageHelper::MultipleImageHelper(const MultipleImageHelper &amp;rhs)']]]
+  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#a1ebbc0c5e533260fd3de78b99c388f5f',1,'galsim::MultipleImageHelper::MultipleImageHelper(const std::vector&lt; boost::shared_ptr&lt; BaseImage&lt; T &gt; &gt; &gt; &amp;images, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a573d7afba8597206249b5349269cc3f5',1,'galsim::MultipleImageHelper::MultipleImageHelper(const BaseImage&lt; T &gt; &amp;image, double dx=0., double pad_factor=0.)'],['../classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894',1,'galsim::MultipleImageHelper::MultipleImageHelper(const MultipleImageHelper &amp;rhs)']]],
+  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html',1,'galsim']]]
 ];

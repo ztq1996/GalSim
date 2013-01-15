@@ -129,8 +129,16 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a056ee059d4ded933729ffb5d6229eb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of iterations needed to get adaptive moments; 0 if not measured.  <a href="#a056ee059d4ded933729ffb5d6229eb8e"></a><br/></td></tr>
 <tr class="memitem:ae55463fc476aaf9bf9e52f4308c6d331"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#ae55463fc476aaf9bf9e52f4308c6d331">correction_status</a></td></tr>
 <tr class="memdesc:ae55463fc476aaf9bf9e52f4308c6d331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status after carrying out PSF correction; -1 indicates no attempt to do so.  <a href="#ae55463fc476aaf9bf9e52f4308c6d331"></a><br/></td></tr>
-<tr class="memitem:a68eb39888258047915d562a228e18ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a68eb39888258047915d562a228e18ed7">corrected_shape</a></td></tr>
-<tr class="memdesc:a68eb39888258047915d562a228e18ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">galsim::CppShear</a> object representing the PSF-corrected shape  <a href="#a68eb39888258047915d562a228e18ed7"></a><br/></td></tr>
+<tr class="memitem:a61ca9a08bd395efacc22b5a92e7afa83"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a61ca9a08bd395efacc22b5a92e7afa83">corrected_e1</a></td></tr>
+<tr class="memdesc:a61ca9a08bd395efacc22b5a92e7afa83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimated e1 after correcting for effects of the PSF, for methods that return a distortion. Default value -10 if no correction carried out.  <a href="#a61ca9a08bd395efacc22b5a92e7afa83"></a><br/></td></tr>
+<tr class="memitem:a12b14ab0b939bf47058a340b1ca32132"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a12b14ab0b939bf47058a340b1ca32132">corrected_e2</a></td></tr>
+<tr class="memdesc:a12b14ab0b939bf47058a340b1ca32132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimated e2 after correcting for effects of the PSF, for methods that return a distortion. Default value -10 if no correction carried out.  <a href="#a12b14ab0b939bf47058a340b1ca32132"></a><br/></td></tr>
+<tr class="memitem:af9c973c1e14f749d7d144f6e28f0daf3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#af9c973c1e14f749d7d144f6e28f0daf3">corrected_g1</a></td></tr>
+<tr class="memdesc:af9c973c1e14f749d7d144f6e28f0daf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimated g1 after correcting for effects of the PSF, for methods that return a shear. Default value -10 if no correction carried out.  <a href="#af9c973c1e14f749d7d144f6e28f0daf3"></a><br/></td></tr>
+<tr class="memitem:a3bb35ab5bf2cfdd8fc5a0383dd15e1c6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a3bb35ab5bf2cfdd8fc5a0383dd15e1c6">corrected_g2</a></td></tr>
+<tr class="memdesc:a3bb35ab5bf2cfdd8fc5a0383dd15e1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimated g2 after correcting for effects of the PSF, for methods that return a shear. Default value -10 if no correction carried out.  <a href="#a3bb35ab5bf2cfdd8fc5a0383dd15e1c6"></a><br/></td></tr>
+<tr class="memitem:abc24154aa01d054ef970e5173f51c49c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#abc24154aa01d054ef970e5173f51c49c">meas_type</a></td></tr>
+<tr class="memdesc:abc24154aa01d054ef970e5173f51c49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">'e' for PSF correction methods that return a distortion, 'g' for methods that return a shear. "None" if PSF correction was not done.  <a href="#abc24154aa01d054ef970e5173f51c49c"></a><br/></td></tr>
 <tr class="memitem:a8e4cabf16350a502ce872a3d7b6e2ee8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a8e4cabf16350a502ce872a3d7b6e2ee8">corrected_shape_err</a></td></tr>
 <tr class="memdesc:a8e4cabf16350a502ce872a3d7b6e2ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shape measurement uncertainty sigma_gamma (not sigma_e) per component.  <a href="#a8e4cabf16350a502ce872a3d7b6e2ee8"></a><br/></td></tr>
 <tr class="memitem:a9fe0ca683389a4fd5c309e40bd1971fb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a9fe0ca683389a4fd5c309e40bd1971fb">correction_method</a></td></tr>
@@ -142,7 +150,7 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Struct containing information about the shape of an object. </p>
-<p>This hsm representation of an object shape contains two <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a> objects, one for the observed shape and one after PSF correction. It also contains information about what PSF correction was used; if no PSF correction was carried out and only the observed moments were measured, the PSF correction method will be 'None'. </p>
+<p>This representation of an object shape contains information about observed shapes and shape estimators after PSF correction. It also contains information about what PSF correction was used; if no PSF correction was carried out and only the observed moments were measured, the PSF correction method will be 'None'. Note that observed shapes are bounded to lie in the range |e| &lt; 1 or |g| &lt; 1, so they can be represented using a <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a> object. In contrast, the PSF-corrected distortions and shears are not bounded at a maximum of 1 since they are shear estimators, and placing such a bound would bias the mean. Thus, the corrected results are not represented using <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a> objects, since it may not be possible to make a meaningful per-object conversion from distortion to shear (e.g., if |e|&gt;1). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a59871e6ff4fcf106b511e62a461c9627"></a>
 <div class="memitem">
@@ -162,17 +170,59 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a68eb39888258047915d562a228e18ed7"></a>
+<a class="anchor" id="a61ca9a08bd395efacc22b5a92e7afa83"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> galsim::hsm::CppHSMShapeData::corrected_shape</td>
+          <td class="memname">float galsim::hsm::CppHSMShapeData::corrected_e1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">galsim::CppShear</a> object representing the PSF-corrected shape </p>
+<p>Estimated e1 after correcting for effects of the PSF, for methods that return a distortion. Default value -10 if no correction carried out. </p>
+
+</div>
+</div>
+<a class="anchor" id="a12b14ab0b939bf47058a340b1ca32132"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppHSMShapeData::corrected_e2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimated e2 after correcting for effects of the PSF, for methods that return a distortion. Default value -10 if no correction carried out. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9c973c1e14f749d7d144f6e28f0daf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppHSMShapeData::corrected_g1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimated g1 after correcting for effects of the PSF, for methods that return a shear. Default value -10 if no correction carried out. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3bb35ab5bf2cfdd8fc5a0383dd15e1c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppHSMShapeData::corrected_g2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimated g2 after correcting for effects of the PSF, for methods that return a shear. Default value -10 if no correction carried out. </p>
 
 </div>
 </div>
@@ -243,6 +293,20 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classgalsim_1_1_bounds.html" title="Class for storing image bounds, essentially the vertices of a rectangle.">galsim::Bounds</a> object describing the image of the object </p>
+
+</div>
+</div>
+<a class="anchor" id="abc24154aa01d054ef970e5173f51c49c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::hsm::CppHSMShapeData::meas_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>'e' for PSF correction methods that return a distortion, 'g' for methods that return a shear. "None" if PSF correction was not done. </p>
 
 </div>
 </div>

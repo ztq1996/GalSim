@@ -10,7 +10,6 @@ var searchData=
   ['addnoisephot',['AddNoisePhot',['../namespacegalsim_1_1config_1_1stamp.html#aeb4d1e75f60021bc6d13032e61e4f8de',1,'galsim::config::stamp']]],
   ['addsplit',['addSplit',['../structgalsim_1_1integ_1_1_int_region.html#ad50b4352761c2343dac0767473aa1a6f',1,'galsim::integ::IntRegion']]],
   ['addto',['addTo',['../classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf',1,'galsim::PhotonArray']]],
-  ['allocate_5frect_5fimage',['allocate_rect_image',['../namespacegalsim_1_1hsm.html#a8e5f5aa7b06c53d22b255c2a2e38e0fd',1,'galsim::hsm']]],
   ['angle',['Angle',['../classgalsim_1_1_angle.html#a096fad23663218375c9c1778e3637d1b',1,'galsim::Angle::Angle(double val, AngleUnit unit)'],['../classgalsim_1_1_angle.html#a7220ec2d0b6ec8269f1c165031d810a1',1,'galsim::Angle::Angle()'],['../classgalsim_1_1_angle.html#ae57a8a71db865c91f08f8223d22da51a',1,'galsim::Angle::Angle(const Angle &amp;rhs)']]],
   ['angleunit',['AngleUnit',['../classgalsim_1_1_angle_unit.html#adeb5a41a8570e72cfa6ee89b2f90e719',1,'galsim::AngleUnit']]],
   ['append',['append',['../classgalsim_1_1_photon_array.html#a8192f81c08a52d8ad4aafd2c949bb9ee',1,'galsim::PhotonArray']]],

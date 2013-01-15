@@ -5,6 +5,7 @@ var searchData=
   ['realspace_5fconv_5fabserr',['realspace_conv_abserr',['../namespacegalsim_1_1sbp.html#a4e2192af0e86b5e4339691499bcccc7f',1,'galsim::sbp']]],
   ['realspace_5fconv_5frelerr',['realspace_conv_relerr',['../namespacegalsim_1_1sbp.html#a884b75e2c400ab1315f73179d647747a',1,'galsim::sbp']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],
+  ['regauss_5ftoo_5fsmall',['regauss_too_small',['../namespacegalsim_1_1hsm.html#af4fdb51ebf29294d9777fbe3d155c704',1,'galsim::hsm']]],
   ['relative_5ferror',['RELATIVE_ERROR',['../namespacegalsim_1_1odd.html#ab10fa1bf1dc303e9c202805f407d2f6d',1,'galsim::odd']]],
   ['relerr',['relerr',['../_int_8h.html#a0e9f6681c910ef2d85e1d0efae6a4a2d',1,'Int.h']]],
   ['resolution',['resolution',['../structgalsim_1_1hsm_1_1_object_data.html#a6fc3211235f35e56e1be397a7ec5b52b',1,'galsim::hsm::ObjectData']]],

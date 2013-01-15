@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Fix warnings in boost::random stuff on some systems (Issue 250)</li>
 </ul>
 <ul>
-<li>Minor changes in the python interface to the outputs of the moments and shape estimation routines (the HSMShapeData class). (Issue 296)</li>
+<li>Minor changes in the python interface to the outputs of the moments and shape estimation routines (the HSMShapeData class). (Issue 296, 316, 332)</li>
 </ul>
 <ul>
 <li>On systems where a different C++ compiler was used for GalSim and for python, C++ exceptions show up with a non-informative error message. While this is not easily fixable, there is now a test for this incompatibility when compiling, which results in a warning being generated. (Issue 317)</li>
@@ -121,7 +121,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>There is a useful new option when compiling, MEMTEST, that makes it easy to check for memory leaks in the C++ side of GalSim. (Issue 327)</li>
 </ul>
 <ul>
-<li>Enable copying Images of different types. (Issue 327) </li>
+<li>Enable copying Images of different types. (Issue 327)</li>
+</ul>
+<ul>
+<li>The moments and PSF correction code was updated to use the Image class and TMV. The python interface to this software was also updated so that it can handle weight and bad pixel maps for the input Images. Finally, an optimization was introduced that typically speeds up these routines by a factor of 2-3. (Issues 331, 332) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

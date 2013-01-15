@@ -1,7 +1,6 @@
 var searchData=
 [
   ['da',['Da',['../classgalsim_1_1lensing_1_1_cosmology.html#a231f429c1c5d6d2bcee338be9457a93d',1,'galsim::lensing::Cosmology']]],
-  ['deallocate_5frect_5fimage',['deallocate_rect_image',['../namespacegalsim_1_1hsm.html#a0628fc63aed5b3ba6c554f10792d1a0d',1,'galsim::hsm']]],
   ['defaultkinterpolant1d',['defaultKInterpolant1d',['../namespacegalsim_1_1sbp.html#a548daa08288c33b0adee71e395cd9464',1,'galsim::sbp']]],
   ['defaultkinterpolant2d',['defaultKInterpolant2d',['../namespacegalsim_1_1sbp.html#aad3e58b51f650dc8f3580afd27adb791',1,'galsim::sbp']]],
   ['defaultxinterpolant1d',['defaultXInterpolant1d',['../namespacegalsim_1_1sbp.html#a17ea3bb76fb12fd49a0c9befb1538d2a',1,'galsim::sbp']]],

@@ -11,7 +11,7 @@ var searchData=
   ['error_5fmessage',['error_message',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a133de3a3b304437b11c0ca009dac29ad',1,'galsim::hsm::CppHSMShapeData::error_message()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6f93bd9922a6dafb6a647e82da13eef3',1,'galsim.psfcorr.HSMShapeData.error_message()']]],
   ['esq',['esq',['../classgalsim_1_1shear_1_1_shear.html#a5d46a2f5ee58c995e8471887b6fdf870',1,'galsim::shear::Shear']]],
   ['estimateshearhsm',['EstimateShearHSM',['../namespacegalsim_1_1psfcorr.html#a1072476270c2dcd1b1223fcb41e2bda5',1,'galsim::psfcorr']]],
-  ['estimateshearhsmview',['EstimateShearHSMView',['../namespacegalsim_1_1hsm.html#a4cfba1651e68ba94fc9636f24b2b0b89',1,'galsim::hsm']]],
+  ['estimateshearhsmview',['EstimateShearHSMView',['../namespacegalsim_1_1hsm.html#a72441418e8e79493243aa1e57d8cb7e2',1,'galsim::hsm']]],
   ['eta',['eta',['../classgalsim_1_1shear_1_1_shear.html#a23c89fc1ae47920dddd41ae950651f5e',1,'galsim::shear::Shear']]],
   ['eval_5fsbinterpolatedimage',['eval_sbinterpolatedimage',['../namespacegalsim_1_1utilities.html#af739aae79169d51cc299bb62101fe56f',1,'galsim::utilities']]],
   ['expand',['expand',['../classgalsim_1_1_bounds.html#a491239e823fc257356a6b1481eb2b7eb',1,'galsim::Bounds']]],

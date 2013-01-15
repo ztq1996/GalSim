@@ -118,7 +118,8 @@ Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Routines for adaptive moment estimation and PSF correction. </p>
 <p>This file contains the python interface to C++ routines for estimation of second moments of images, and for carrying out PSF correction using a variety of algorithms. The algorithms are described in Hirata &amp; Seljak (2003; MNRAS, 343, 459), and were tested/characterized using real data in Mandelbaum et al. (2005; MNRAS, 361, 1287). We also define a python-level container for the outputs of these codes, HSMShapeData, analogous to the C++-level CppHSMShapeData. Note that these routines for moment measurement and shear estimation are not accessible via config, only via python.</p>
-<p>The moments that are estimated are "adaptive moments" (see the first paper cited above for details); that is, they use an elliptical Gaussian weight that is matched to the image of the object being measured. The PSF correction includes several algorithms:</p>
+<p>The moments that are estimated are "adaptive moments" (see the first paper cited above for details); that is, they use an elliptical Gaussian weight that is matched to the image of the object being measured. The observed moments can be represented as a Gaussian sigma and a Shear object representing the shape.</p>
+<p>The PSF correction includes several algorithms, three that are re-implementations of methods originated by others and one that was originated by Hirata &amp; Seljak:</p>
 <ul>
 <li>One from Kaiser, Squires, &amp; Broadhurts (1995), "KSB"</li>
 </ul>
@@ -129,9 +130,10 @@ Functions</h2></td></tr>
 <li>One that represents a modification by Hirata &amp; Seljak (2003) of methods in Bernstein &amp; Jarvis (2002), "LINEAR"</li>
 </ul>
 <ul>
-<li>One new method from Hirata &amp; Seljak (2003), "REGAUSS"</li>
+<li>One method from Hirata &amp; Seljak (2003), "REGAUSS" (re-Gaussianization)</li>
 </ul>
-<p>These are all based on correction of moments, but with different sets of assumptions. For more detailed discussion on all of these algorithms, see the relevant papers above. </p>
+<p>These methods return shear (or shape) estimators, which may not in fact satisfy conditions like |e|&lt;=1, and so they are represented simply as e1/e2 or g1/g2 (depending on the method) rather than using a Shear object, which IS required to satisfy |e|&lt;=1.</p>
+<p>These methods are all based on correction of moments, but with different sets of assumptions. For more detailed discussion on all of these algorithms, see the relevant papers above. </p>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

@@ -23,7 +23,7 @@ var searchData=
   ['realspace_5fconv_5frelerr',['realspace_conv_relerr',['../namespacegalsim_1_1sbp.html#a884b75e2c400ab1315f73179d647747a',1,'galsim::sbp']]],
   ['realspaceconvolve',['RealSpaceConvolve',['../namespacegalsim.html#a78df204280d7ff1b8452c32df11fd937',1,'galsim']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],
-  ['rectimage',['RectImage',['../structgalsim_1_1hsm_1_1_rect_image.html',1,'galsim::hsm']]],
+  ['regauss_5ftoo_5fsmall',['regauss_too_small',['../namespacegalsim_1_1hsm.html#af4fdb51ebf29294d9777fbe3d155c704',1,'galsim::hsm']]],
   ['relative_5ferror',['RELATIVE_ERROR',['../namespacegalsim_1_1odd.html#ab10fa1bf1dc303e9c202805f407d2f6d',1,'galsim::odd']]],
   ['relerr',['relerr',['../_int_8h.html#a0e9f6681c910ef2d85e1d0efae6a4a2d',1,'Int.h']]],
   ['reserve',['reserve',['../classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0',1,'galsim::PhotonArray']]],

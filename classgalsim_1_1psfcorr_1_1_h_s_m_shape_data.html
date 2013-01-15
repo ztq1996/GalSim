@@ -117,7 +117,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a92b55780fca6182f1fca7dee22121e09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a92b55780fca6182f1fca7dee22121e09">moments_rho4</a></td></tr>
 <tr class="memitem:a08c1165ab9d82f5567c92cf7d6e8fe7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a08c1165ab9d82f5567c92cf7d6e8fe7a">moments_n_iter</a></td></tr>
 <tr class="memitem:a56a68d25fce804f0cc7bc6cdf564b26c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a56a68d25fce804f0cc7bc6cdf564b26c">correction_status</a></td></tr>
-<tr class="memitem:a667d2786f3155703ea92662758bfa0ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a667d2786f3155703ea92662758bfa0ef">corrected_shape</a></td></tr>
+<tr class="memitem:a82352126d265089a4c550e969a77a3d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a82352126d265089a4c550e969a77a3d9">corrected_e1</a></td></tr>
+<tr class="memitem:a78899c279045f90a2fe10ec426753e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a78899c279045f90a2fe10ec426753e38">corrected_e2</a></td></tr>
+<tr class="memitem:a6b0d93577b5d5586cea4e6e98fd91773"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6b0d93577b5d5586cea4e6e98fd91773">corrected_g1</a></td></tr>
+<tr class="memitem:aab3a9a9f6670464881835af26ce201ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#aab3a9a9f6670464881835af26ce201ff">corrected_g2</a></td></tr>
+<tr class="memitem:a9da331b9caf2c4cda2307e5a9355d20a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a9da331b9caf2c4cda2307e5a9355d20a">meas_type</a></td></tr>
 <tr class="memitem:a214579279018127ef0d2c3d012ba65be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a214579279018127ef0d2c3d012ba65be">corrected_shape_err</a></td></tr>
 <tr class="memitem:ae1f7401ed0095e488e06e621870dad7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#ae1f7401ed0095e488e06e621870dad7b">correction_method</a></td></tr>
 <tr class="memitem:af4d1e3b60b37654c35a9a828ff3dfe05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#af4d1e3b60b37654c35a9a828ff3dfe05">resolution_factor</a></td></tr>
@@ -155,7 +159,7 @@ Public Attributes</h2></td></tr>
 <li>correction_status: the status flag resulting from PSF correction; -1 indicates no attempt to measure, 0 indicates success.</li>
 </ul>
 <ul>
-<li>corrected_shape: a galsim.Shear object representing the PSF-corrected shape.</li>
+<li>corrected_e1, corrected_e2, corrected_g1, corrected_g2: floats representing the estimated shear after removing the effects of the PSF. Either e1/e2 or g1/g2 will differ from the default values of -10, with the choice of shape to use determined by the quantity meas_type (a string that equals either 'e' or 'g') or, equivalently, by the correction method (since the correction method determines what quantity is estimated, either the shear or the distortion).</li>
 </ul>
 <ul>
 <li>corrected_shape_err: shape measurement uncertainty sigma_gamma per component.</li>
@@ -198,12 +202,48 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a667d2786f3155703ea92662758bfa0ef"></a>
+<a class="anchor" id="a82352126d265089a4c550e969a77a3d9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.psfcorr.HSMShapeData.corrected_shape</td>
+          <td class="memname">galsim.psfcorr.HSMShapeData.corrected_e1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78899c279045f90a2fe10ec426753e38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.psfcorr.HSMShapeData.corrected_e2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b0d93577b5d5586cea4e6e98fd91773"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.psfcorr.HSMShapeData.corrected_g1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab3a9a9f6670464881835af26ce201ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.psfcorr.HSMShapeData.corrected_g2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -264,6 +304,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.psfcorr.HSMShapeData.image_bounds</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9da331b9caf2c4cda2307e5a9355d20a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.psfcorr.HSMShapeData.meas_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
