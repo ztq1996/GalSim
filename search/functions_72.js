@@ -5,7 +5,7 @@ var searchData=
   ['rand_5farr',['rand_arr',['../namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27',1,'galsim::utilities']]],
   ['range',['range',['../classgalsim_1_1_cpp_ellipse.html#ae2f28140afe7404cd637b3cd3aa62d9c',1,'galsim::CppEllipse::range()'],['../classgalsim_1_1ellipse_1_1_ellipse.html#afc2a9e0d8ed08d0c2e69ea9cf2a14672',1,'galsim.ellipse.Ellipse.range()']]],
   ['read',['read',['../classgalsim_1_1_position.html#a0a3973e0bd944085589b2ace7f8d342d',1,'galsim::Position::read()'],['../classgalsim_1_1_bounds.html#a300f0e05a3ef7a645d13140a555f6332',1,'galsim::Bounds::read()'],['../classgalsim_1_1_cpp_shear.html#a0ba143b4b0543c19edc3f119f7c731ee',1,'galsim::CppShear::read()'],['../classgalsim_1_1_cpp_ellipse.html#a1941abb1ed6c50878a63f31cf7d1f543',1,'galsim::CppEllipse::read()'],['../classgalsim_1_1_table.html#a7db7f65785233887584b010c9aa45130',1,'galsim::Table::read()'],['../namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9',1,'galsim.fits.read()']]],
-  ['read_5fascii',['read_ascii',['../classgalsim_1_1io_1_1_input_catalog.html#aeb07f225f3623e061fce1be64fe45795',1,'galsim::io::InputCatalog']]],
+  ['read_5fascii',['read_ascii',['../classgalsim_1_1catalog_1_1_input_catalog.html#aa0e3c05824ea5ffc360a849ece504222',1,'galsim::catalog::InputCatalog']]],
   ['readcube',['readCube',['../namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6',1,'galsim::fits']]],
   ['readmulti',['readMulti',['../namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067',1,'galsim::fits']]],
   ['realspaceconvolve',['RealSpaceConvolve',['../namespacegalsim.html#a78df204280d7ff1b8452c32df11fd937',1,'galsim']]],

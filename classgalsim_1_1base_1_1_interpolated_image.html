@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GalSim: galsim.base.GSObject Class Reference</title>
+<title>GalSim: galsim.base.InterpolatedImage Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacegalsim.html">galsim</a></li><li class="navelem"><a class="el" href="namespacegalsim_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html">GSObject</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacegalsim.html">galsim</a></li><li class="navelem"><a class="el" href="namespacegalsim_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html">InterpolatedImage</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,41 +93,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">galsim.base.GSObject Class Reference</div>  </div>
+<div class="title">galsim.base.InterpolatedImage Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for defining the interface with which all GalSim Objects access their shared methods and attributes, particularly those from the C++ <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> classes.  
- <a href="classgalsim_1_1base_1_1_g_s_object.html#details">More...</a></p>
+<p>A class describing non-parametric objects specified using an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, which can be interpolated for the purpose of carrying out transformations.  
+ <a href="classgalsim_1_1base_1_1_interpolated_image.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for galsim.base.GSObject:</div>
+Inheritance diagram for galsim.base.InterpolatedImage:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classgalsim_1_1base_1_1_g_s_object.png" usemap="#galsim.base.GSObject_map" alt=""/>
-  <map id="galsim.base.GSObject_map" name="galsim.base.GSObject_map">
-<area href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects." alt="galsim.base.Add" shape="rect" coords="191,56,372,80"/>
-<area href="classgalsim_1_1base_1_1_airy.html" title="A class describing Airy PSF profiles." alt="galsim.base.Airy" shape="rect" coords="191,112,372,136"/>
-<area href="classgalsim_1_1base_1_1_atmospheric_p_s_f.html" title="Base class for long exposure Kolmogorov PSF." alt="galsim.base.AtmosphericPSF" shape="rect" coords="191,168,372,192"/>
-<area href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects." alt="galsim.base.Convolve" shape="rect" coords="191,224,372,248"/>
-<area href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class." alt="galsim.base.Deconvolve" shape="rect" coords="191,280,372,304"/>
-<area href="classgalsim_1_1base_1_1_de_vaucouleurs.html" title="A class describing DeVaucouleurs profile objects." alt="galsim.base.DeVaucouleurs" shape="rect" coords="191,336,372,360"/>
-<area href="classgalsim_1_1base_1_1_exponential.html" title="A class describing exponential profile objects." alt="galsim.base.Exponential" shape="rect" coords="191,392,372,416"/>
-<area href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects." alt="galsim.base.Gaussian" shape="rect" coords="191,448,372,472"/>
-<area href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the..." alt="galsim.base.InterpolatedImage" shape="rect" coords="191,504,372,528"/>
-<area href="classgalsim_1_1base_1_1_kolmogorov.html" title="A class describing Kolmogorov PSF profiles." alt="galsim.base.Kolmogorov" shape="rect" coords="191,560,372,584"/>
-<area href="classgalsim_1_1base_1_1_moffat.html" title="A class describing Moffat PSF profiles." alt="galsim.base.Moffat" shape="rect" coords="191,616,372,640"/>
-<area href="classgalsim_1_1base_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics." alt="galsim.base.OpticalPSF" shape="rect" coords="191,672,372,696"/>
-<area href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels." alt="galsim.base.Pixel" shape="rect" coords="191,728,372,752"/>
-<area href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset." alt="galsim.base.RealGalaxy" shape="rect" coords="191,784,372,808"/>
-<area href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects." alt="galsim.base.Sersic" shape="rect" coords="191,840,372,864"/>
+  <img src="classgalsim_1_1base_1_1_interpolated_image.png" usemap="#galsim.base.InterpolatedImage_map" alt=""/>
+  <map id="galsim.base.InterpolatedImage_map" name="galsim.base.InterpolatedImage_map">
+<area href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a..." alt="galsim.base.GSObject" shape="rect" coords="0,0,181,24"/>
 </map>
  </div></div>
 
-<p><a href="classgalsim_1_1base_1_1_g_s_object-members.html">List of all members.</a></p>
+<p><a href="classgalsim_1_1base_1_1_interpolated_image-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9a6d32438a27766235e087d76acdaa18"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9a6d32438a27766235e087d76acdaa18">__init__</a></td></tr>
+<tr class="memitem:ac96210f09adfadb9c9df95d94f1975fe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#ac96210f09adfadb9c9df95d94f1975fe">__init__</a></td></tr>
 <tr class="memitem:ace2781f482d5599469ba51aea46b5b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82">__add__</a></td></tr>
 <tr class="memitem:a40b1f56421ff947a547b1ba8646b561b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b">__iadd__</a></td></tr>
 <tr class="memitem:ad36fb2c961a3612312ad0139d1a1ce53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad36fb2c961a3612312ad0139d1a1ce53">__imul__</a></td></tr>
@@ -198,17 +184,40 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ac5367134c984d8252548001ec17837fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#ac5367134c984d8252548001ec17837fa">interpolant</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base class for defining the interface with which all GalSim Objects access their shared methods and attributes, particularly those from the C++ <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> classes. </p>
+<div class="textblock"><p>A class describing non-parametric objects specified using an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, which can be interpolated for the purpose of carrying out transformations. </p>
+<p>The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and an interpolant are used to create an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. The <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> class is useful if you have a non-parametric description of an object as an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, that you wish to manipulate / transform using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods such as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2...">applyMagnification()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6b547741eeec4086de9abe227dae9325" title="Apply a (dx, dy) shift to this object.">applyShift()</a>, etc. The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be any <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> (i.e., <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>, or <a class="el" href="classgalsim_1_1_const_image_view.html" title="ConstImageView class views an Image in a read-only context.">ConstImageView</a>).</p>
+<p>The constructor needs to know how the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> was drawn: is it an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of flux or of surface brightness? Since our default for drawing Images using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a> and <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> is that <code>normalization == 'flux'</code> (i.e., sum of pixel values equals the object flux), the default for the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> class is to assume the same flux normalization. However, the user can specify 'surface brightness' normalization if desired, or alternatively, can instead specify the desired flux for the object.</p>
+<p>If the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> has a scale associated with it, then there is no need to specify an input scale <code>dx</code>.</p>
+<p>If no interpolant is specified then by default a quintic interpolant is used. The user also has to specify how much zero-padding to include around an input image; by default, a value of 4 is used. Note that both the interpolant and the <code>pad_factor</code> determine the accuracy of interpolation on the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when carrying out operations such as shifting, shearing, dilating, and rotating. For some details of the typical accuracy of interpolants used in GalSim as a function of the amount of padding, see table 1 in devel/modules/finterp.pdf in the GalSim repository. A quick summary is that for precise calculations (~1% accuracy or better), nearest-neighbor and linear interpolants should not be used; cubic, quintic, and <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> with n=3 are acceptable with &gt;4x padding; and higher-order <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> is okay even with just 2x padding. There is a tradeoff between speed and accuracy, and from this perspective, the quintic interpolant with 4x padding seems optimal (errors &lt;0.001), though for precise tests of shears even greater accuracy is needed, so either 6x padding should be used, or a higher order <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolant should be used (modified to conserve flux). The user is given complete freedom to choose interpolants and pad factors, and no warnings are raised when the code is modified to choose some combination that is known to give significant error.</p>
+<h2>Initialization</h2>
+<pre class="fragment">&gt;&gt;&gt; interpolated_image = galsim.InterpolatedImage(image, interpolant = None,
+                                                  normalization = 'f', dx = None,
+                                                  flux = None, pad_factor = 0.)
+</pre><p>Initializes interpolated_image as a galsim.InterpolatedImage() instance.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> from which to construct the object. This may be either an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>) instance or a string indicating a fits file from which to read the image. </td></tr>
+    <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. (Default <code>interpolant = Quintic()</code>) </td></tr>
+    <tr><td class="paramname">normalization</td><td>Two options for specifying the normalization of the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>: "flux" or "f" means that the sum of the pixels is normalized to be equal to the total flux. "surface brightness" or "sb" means that the pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>) </td></tr>
+    <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>; this will override the pixel scale stored by the provided <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, in any. If <code>dx</code> is <code>None</code>, then take the provided image's pixel scale. (Default <code>dx = None</code>.) </td></tr>
+    <tr><td class="paramname">flux</td><td>Optionally specify a total flux for the object, which overrides the implied flux normalization from the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> itself. </td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. Note that the padding is with zeros; could be changed in future. (Default <code>pad_factor = 0</code>.)</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>Methods</h2>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (<a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a> etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9a6d32438a27766235e087d76acdaa18"></a>
+<a class="anchor" id="ac96210f09adfadb9c9df95d94f1975fe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.base.GSObject.__init__ </td>
+          <td class="memname">def galsim.base.InterpolatedImage.__init__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -217,7 +226,37 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>SBProfile</em>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>normalization</em> = <code>'flux'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pad_factor</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,14 +266,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html#a489eaeb2b75001c5fdb8c0872f8b772e">galsim.base.Deconvolve</a>, and <a class="el" href="classgalsim_1_1base_1_1_add.html#a23a1b1b07c10ec0122b064d278c5c9fe">galsim.base.Add</a>.</p>
-
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ace2781f482d5599469ba51aea46b5b82"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__add__ </td>
@@ -254,6 +294,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -261,6 +306,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a182d9f8b408ee4582d170c760c533d98"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__div__ </td>
@@ -280,6 +328,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -287,6 +340,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a40b1f56421ff947a547b1ba8646b561b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__iadd__ </td>
@@ -306,6 +362,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -313,6 +374,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="adfd94d2968689bc7a956856ae61d6e51"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__idiv__ </td>
@@ -332,6 +396,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -339,6 +408,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ad36fb2c961a3612312ad0139d1a1ce53"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__imul__ </td>
@@ -358,6 +430,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -365,6 +442,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a36858eaceeeb53bf26b8462a3c5b620e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__itruediv__ </td>
@@ -384,6 +464,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -391,6 +476,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="aa31d94eb1b6367d8034d4cd2c46cd94b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__mul__ </td>
@@ -410,6 +498,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -417,6 +510,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a1a27f25c7faffd8c29a45477abc21459"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__rmul__ </td>
@@ -436,6 +532,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -443,6 +544,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="adf331fe434ce3c71b64ce2745d0b75ca"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.__truediv__ </td>
@@ -462,6 +566,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -469,6 +578,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a4301c73bbc1491ebb170e64c509cadd5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyDilation </td>
@@ -488,6 +600,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a dilation of the linear size by the given scale. </p>
@@ -506,6 +623,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a9d13b0238057f6d5d01f2681d91c09b0"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyMagnification </td>
@@ -525,6 +645,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
@@ -543,6 +668,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ad6236e3153f23f1201396369dd67f1c7"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyRotation </td>
@@ -562,6 +690,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a rotation theta to this object. </p>
@@ -578,6 +711,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a85cc0094dcf470cfbff93d9830ab80bd"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyShear </td>
@@ -603,6 +739,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one. </p>
@@ -614,6 +755,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a6b547741eeec4086de9abe227dae9325"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyShift </td>
@@ -639,6 +783,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a (dx, dy) shift to this object. </p>
@@ -656,6 +805,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ad491a1276fda07b148c6466d5dbd07b1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.applyTransformation </td>
@@ -675,6 +827,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Apply a galsim.Ellipse distortion to this object. </p>
@@ -693,6 +850,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a08a0bb72927fce3c765a9580de656d1a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.centroid </td>
@@ -702,6 +862,11 @@ Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the (x, y) centroid of an object as a <a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a>. </p>
@@ -711,6 +876,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="aa0b398d4b0fca70211e4a73f81ea7e1a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.copy </td>
@@ -720,6 +888,11 @@ Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a copy of an object. </p>
@@ -730,6 +903,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ad21997fcb7ef6db0cea9d51a16498283"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createDilated </td>
@@ -749,6 +925,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a dilation of the linear size by the given scale. </p>
@@ -767,6 +948,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ab1c086513d5d569e6cd1c4269e83dd2d"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createMagnified </td>
@@ -786,6 +970,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
@@ -805,6 +994,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a6c29613e57067e6ba5ec7297e746cdc4"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createRotated </td>
@@ -824,6 +1016,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation. </p>
@@ -840,6 +1037,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a8c54a001124280ae550c57c8fdce3563"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createSheared </td>
@@ -865,6 +1065,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one. </p>
@@ -875,6 +1080,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a96c05ef4b77187b6d02d877232e81126"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createShifted </td>
@@ -900,6 +1108,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shift. </p>
@@ -917,6 +1130,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ac545bacc95772067d082a68a282265e7"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.createTransformed </td>
@@ -936,6 +1152,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a galsim.Ellipse transformation (shear, dilate, and/or shift). </p>
@@ -953,6 +1174,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ae0b346a8b438dedbc7f60a52220869d8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.draw </td>
@@ -1002,6 +1226,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
@@ -1025,6 +1254,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="aafa4ff2871a15f044689bdf3756fd918"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.drawK </td>
@@ -1074,6 +1306,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draws the k-space Images (real and imaginary parts) of the object, with bounds optionally set by input Images. </p>
@@ -1096,6 +1333,9 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a42ac334d2840ba3fa832988e998beca0"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.drawShoot </td>
@@ -1169,6 +1409,11 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draw an image of the object by shooting individual photons drawn from the surface brightness profile of the object. </p>
@@ -1201,6 +1446,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a662d8ce421ecd90080bdcaaf6890aed8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.getFlux </td>
@@ -1210,6 +1458,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the flux of the object. </p>
@@ -1219,6 +1472,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a4f480514538e924d29af411563384a6d"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.hasHardEdges </td>
@@ -1228,6 +1484,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns True if there are any hard edges in the profile, which would require very small k spacing when working in the Fourier domain. </p>
@@ -1237,6 +1498,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="ad883087f48bb56d90612d940dd60a7ab"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.isAnalyticK </td>
@@ -1246,6 +1510,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns True if k-space values can be determined immediately at any position without requiring a Discrete Fourier Transform. </p>
@@ -1255,6 +1524,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a671c7778e707ab11a75a1f5877aa76ff"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.isAnalyticX </td>
@@ -1264,6 +1536,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns True if real-space values can be determined immediately at any position without requiring a Discrete Fourier Transform. </p>
@@ -1273,6 +1550,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a109bc7c81be65f8fc5d5ec32e6d0c0df"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.isAxisymmetric </td>
@@ -1282,6 +1562,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns True if axially symmetric: affects efficiency of evaluation. </p>
@@ -1291,6 +1576,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="ac8652894487904b797d7752651b54507"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.kValue </td>
@@ -1310,6 +1598,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the value of the object at a chosen 2D position in k space. </p>
@@ -1327,6 +1620,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a4ab9d51f34703ced5be1592e112605ff"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.maxK </td>
@@ -1336,6 +1632,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns value of k beyond which aliasing can be neglected. </p>
@@ -1345,6 +1646,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a98091310691b1ecdd0d8bfacf48b73c5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.nyquistDx </td>
@@ -1354,6 +1658,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> pixel spacing that does not alias maxK. </p>
@@ -1363,6 +1672,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="af4193645a9af52e7d54a044cafec8ab9"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.scaleFlux </td>
@@ -1382,6 +1694,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Multiply the flux of the object by flux_ratio. </p>
@@ -1398,6 +1715,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a1993652591ddc802b734186391b28894"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.setFlux </td>
@@ -1417,6 +1737,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the flux of the object. </p>
@@ -1433,6 +1758,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="ae8b5da3e499f3c00def5f7f54cab532f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.stepK </td>
@@ -1442,6 +1770,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns sampling in k space necessary to avoid folding of image in x space. </p>
@@ -1451,6 +1784,9 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <a class="anchor" id="a30355af05f88c36f078099b6bb792e1c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.base.GSObject.xValue </td>
@@ -1470,6 +1806,11 @@ assert added_flux &gt; 0.99 * obj.getFlux()
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the value of the object at a chosen 2D position in real space. </p>
@@ -1485,14 +1826,34 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ac5367134c984d8252548001ec17837fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.InterpolatedImage.interpolant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">galsim.base.GSObject.SBProfile</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

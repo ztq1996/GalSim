@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Lanczos:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a01ed8e7e82477d50469a5ad708fc9119"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a01ed8e7e82477d50469a5ad708fc9119">Lanczos</a> (int n, bool fluxConserve=false, double tol=1.e-3)</td></tr>
-<tr class="memdesc:a01ed8e7e82477d50469a5ad708fc9119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a01ed8e7e82477d50469a5ad708fc9119"></a><br/></td></tr>
+<tr class="memitem:adf2c3bc1832c9c6466c69c369c7f3562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#adf2c3bc1832c9c6466c69c369c7f3562">Lanczos</a> (int n, bool fluxConserve=true, double tol=1.e-4)</td></tr>
+<tr class="memdesc:adf2c3bc1832c9c6466c69c369c7f3562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#adf2c3bc1832c9c6466c69c369c7f3562"></a><br/></td></tr>
 <tr class="memitem:a5e462cccaa59c2b4210ad516c975aaf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a5e462cccaa59c2b4210ad516c975aaf3">~Lanczos</a> ()</td></tr>
 <tr class="memitem:afbd265cac5e9b7aa688b10fe5d890437"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">getTolerance</a> () const </td></tr>
 <tr class="memdesc:afbd265cac5e9b7aa688b10fe5d890437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#afbd265cac5e9b7aa688b10fe5d890437"></a><br/></td></tr>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> filter is an approximation to the band-limiting sinc filter with a smooth cutoff at high x. Order n <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> has a range of +/- n pixels. It typically is a good compromise between kernel size and accuracy.</p>
 <p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a01ed8e7e82477d50469a5ad708fc9119"></a>
+<a class="anchor" id="adf2c3bc1832c9c6466c69c369c7f3562"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -158,13 +158,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fluxConserve</em> = <code>false</code>, </td>
+          <td class="paramname"><em>fluxConserve</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-3</code>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-4</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

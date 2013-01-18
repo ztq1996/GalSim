@@ -3,6 +3,7 @@ var searchData=
   ['a',['a',['../classgalsim_1_1lensing_1_1_cosmology.html#a23081810feebe7d126012d92fb9b7c8c',1,'galsim::lensing::Cosmology']]],
   ['accumulate',['accumulate',['../classgalsim_1_1_k_table.html#a5803288e635d7ab9dd07eaca9ad45935',1,'galsim::KTable::accumulate()'],['../classgalsim_1_1_x_table.html#a99f71a8b904fbeab225cc1d4aea946fd',1,'galsim::XTable::accumulate()']]],
   ['add_5ffunction_5fpixel',['add_function_pixel',['../namespacegalsim.html#a4f80013e0447c4d10a160639c8eeb3ce',1,'galsim::add_function_pixel(const ImageView&lt; T &gt; &amp;image, Op f)'],['../namespacegalsim.html#a4aaf198f52d3894533b7e840d68aec84',1,'galsim::add_function_pixel(const ImageView&lt; T &gt; &amp;image, const Bounds&lt; int &gt; &amp;bounds, Op f)']]],
+  ['add_5fhdu',['add_hdu',['../namespacegalsim_1_1fits.html#abb1afad3db9b5fbd5297bedc5198edb9',1,'galsim::fits']]],
   ['addborder',['addBorder',['../classgalsim_1_1_bounds.html#a6b2643e69e48b7e8c05e50f2f513474e',1,'galsim::Bounds']]],
   ['addentry',['addEntry',['../classgalsim_1_1_table.html#ab29e4367c2a8e1e598123029d12f7ba7',1,'galsim::Table']]],
   ['addnoise',['addNoise',['../namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7',1,'galsim::noise']]],

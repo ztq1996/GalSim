@@ -8,6 +8,7 @@ var searchData=
   ['adapt_5forder',['adapt_order',['../namespacegalsim_1_1hsm.html#a55143eb36c58d66def0bf0dd584e8b4f',1,'galsim::hsm']]],
   ['add',['Add',['../classgalsim_1_1base_1_1_add.html',1,'galsim::base']]],
   ['add_5ffunction_5fpixel',['add_function_pixel',['../namespacegalsim.html#a4f80013e0447c4d10a160639c8eeb3ce',1,'galsim::add_function_pixel(const ImageView&lt; T &gt; &amp;image, Op f)'],['../namespacegalsim.html#a4aaf198f52d3894533b7e840d68aec84',1,'galsim::add_function_pixel(const ImageView&lt; T &gt; &amp;image, const Bounds&lt; int &gt; &amp;bounds, Op f)']]],
+  ['add_5fhdu',['add_hdu',['../namespacegalsim_1_1fits.html#abb1afad3db9b5fbd5297bedc5198edb9',1,'galsim::fits']]],
   ['addborder',['addBorder',['../classgalsim_1_1_bounds.html#a6b2643e69e48b7e8c05e50f2f513474e',1,'galsim::Bounds']]],
   ['addentry',['addEntry',['../classgalsim_1_1_table.html#ab29e4367c2a8e1e598123029d12f7ba7',1,'galsim::Table']]],
   ['addnoise',['addNoise',['../namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7',1,'galsim::noise']]],

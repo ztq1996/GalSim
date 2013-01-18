@@ -7,6 +7,8 @@ var searchData=
   ['weight',['weight',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aaa969ffc404af2b4c2519d8b9e9e897d',1,'galsim::real::RealGalaxyCatalog']]],
   ['wrap',['wrap',['../classgalsim_1_1_angle.html#a550bd8cc9210be2fc09faf109b24f9a6',1,'galsim::Angle::wrap()'],['../classgalsim_1_1_k_table.html#aed19fd9796fc0d419bdd35e880281515',1,'galsim::KTable::wrap()'],['../classgalsim_1_1_x_table.html#ad5e58312785a003e6a0da43d67fa6f18',1,'galsim::XTable::wrap()']]],
   ['write',['write',['../classgalsim_1_1_position.html#a11fa6e7b1992241448215ff76c60b284',1,'galsim::Position::write()'],['../classgalsim_1_1_bounds.html#ac93648ea17cff2383eab9d874468a2f6',1,'galsim::Bounds::write()'],['../classgalsim_1_1_cpp_shear.html#a9694d87e67a6c29cd2cb234e47cb6430',1,'galsim::CppShear::write()'],['../classgalsim_1_1_cpp_ellipse.html#a31e299b95eae22c5a037004f7df9a1bf',1,'galsim::CppEllipse::write()'],['../namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310',1,'galsim.fits.write()']]],
+  ['write_5ffile',['write_file',['../namespacegalsim_1_1fits.html#ae183d011e3dc590c5c079efd4b68e645',1,'galsim::fits']]],
+  ['write_5fheader',['write_header',['../namespacegalsim_1_1fits.html#a174f525c80a4506bf38a7a2f2c45d401',1,'galsim::fits']]],
   ['writecube',['writeCube',['../namespacegalsim_1_1fits.html#aa4fbd5ed42ffecda339a409296f0f101',1,'galsim::fits']]],
   ['writemulti',['writeMulti',['../namespacegalsim_1_1fits.html#a17dbb70385408586795efade476cdc98',1,'galsim::fits']]]
 ];

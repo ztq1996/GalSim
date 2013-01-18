@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -95,8 +96,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1___read_file.html">_ReadFile</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1___write_file.html">_WriteFile</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3fa664c9b57c5776ff6ed83432697883"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a3fa664c9b57c5776ff6ed83432697883">parse_compression</a></td></tr>
+<tr class="memitem:a174f525c80a4506bf38a7a2f2c45d401"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a174f525c80a4506bf38a7a2f2c45d401">write_header</a></td></tr>
+<tr class="memitem:abb1afad3db9b5fbd5297bedc5198edb9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#abb1afad3db9b5fbd5297bedc5198edb9">add_hdu</a></td></tr>
 <tr class="memitem:a9f3f9dce30942b81d85d2f8928ece310"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310">write</a></td></tr>
 <tr class="memdesc:a9f3f9dce30942b81d85d2f8928ece310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single image to a FITS file.  <a href="#a9f3f9dce30942b81d85d2f8928ece310"></a><br/></td></tr>
 <tr class="memitem:a17dbb70385408586795efade476cdc98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#a17dbb70385408586795efade476cdc98">writeMulti</a></td></tr>
@@ -113,8 +122,68 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad82571faa522c5320d04e82232a291dc"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc">native_byteorder</a> = {'big': '&gt;', 'little': '&lt;'}</td></tr>
+<tr class="memitem:adb3deb80791f0f41f0d6f8cbdb444905"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#adb3deb80791f0f41f0d6f8cbdb444905">read_file</a> = <a class="el" href="classgalsim_1_1fits_1_1___read_file.html">_ReadFile</a>()</td></tr>
+<tr class="memitem:ae183d011e3dc590c5c079efd4b68e645"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html#ae183d011e3dc590c5c079efd4b68e645">write_file</a> = <a class="el" href="classgalsim_1_1fits_1_1___write_file.html">_WriteFile</a>()</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="abb1afad3db9b5fbd5297bedc5198edb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.add_hdu </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>hdus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pyfits_compress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fa664c9b57c5776ff6ed83432697883"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.parse_compression </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abbad6f82a80bc74fb22a752af1bbd8e9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -123,8 +192,18 @@ Variables</h2></td></tr>
           <td class="memname">def galsim.fits.read </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fits</em></td><td>)</td>
+          <td class="paramname"><em>fits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -135,6 +214,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the Primary HDU will be used. If <code>fits</code> is a <code>pyfits.PrimaryHDU</code> or <code>pyfits.ImageHDU</code>, that HDU will be used. If <code>fits</code> is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used. </td></tr>
+    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). Options are: None or 'none' = no decompression 'rice' = use rice decompression in tiles 'gzip' = use gzip to decompress the full file 'bzip2' = use bzip2 to decompress the full file 'gzip_tile' = use gzip decompression in tiles 'hcompress' = use hcompress decompression in tiles 'plio' = use plio decompression in tiles 'auto' = determine the decompression from the extension of the file name (requires fits to be a string). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </td></tr>
   </table>
   </dd>
 </dl>
@@ -149,8 +229,18 @@ Variables</h2></td></tr>
           <td class="memname">def galsim.fits.readCube </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fits</em></td><td>)</td>
+          <td class="paramname"><em>fits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -176,8 +266,18 @@ Variables</h2></td></tr>
           <td class="memname">def galsim.fits.readMulti </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>fits</em></td><td>)</td>
+          <td class="paramname"><em>fits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -221,7 +321,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>clobber</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>clobber</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -239,9 +345,54 @@ Variables</h2></td></tr>
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a pyfits.HDUList, the image will be appended as a new HDU. In that case, the user is responsible for calling fits.writeto(...) afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new FITS file. </td></tr>
     <tr><td class="paramname">add_wcs</td><td>If <code>add_wcs</code> evaluates to <code>True</code>, a 'LINEAR' WCS will be added using the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>'s bounding box. This is not necessary to ensure an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be round-tripped through FITS, as the bounding box (and scale) are always saved in custom header keys. If <code>add_wcs</code> is a string, this will be used as the WCS name. (Default <code>add_wcs = True</code>.) </td></tr>
     <tr><td class="paramname">clobber</td><td>Setting <code>clobber=True</code> when <code>fits</code> is a string will silently overwrite existing files. (Default <code>clobber = True</code>.) </td></tr>
+    <tr><td class="paramname">compression</td><td>Which compression scheme to use (if any). Options are: None or 'none' = no compression 'rice' = use rice compression in tiles (preserves header readability) 'gzip' = use gzip to compress the full file 'bzip2' = use bzip2 to compress the full file 'gzip_tile' = use gzip in tiles (preserves header readability) 'hcompress' = use hcompress in tiles (only valid for 2-d images) 'plio' = use plio compression in tiles (only valid for pos integer data) 'auto' = determine the compression from the extension of the file name (requires fits to be a string). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a174f525c80a4506bf38a7a2f2c45d401"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.write_header </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>hdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>add_wcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>xmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ymin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -271,7 +422,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>clobber</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>clobber</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -289,6 +446,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the cube will be appended as new HDUs. The user is responsible for calling <code>fits.writeto(...)</code> afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new FITS file. </td></tr>
     <tr><td class="paramname">add_wcs</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
     <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+    <tr><td class="paramname">compression</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,7 +479,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>clobber</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>clobber</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>compression</em> = <code>'auto'</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -339,6 +503,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the images will be appended as new HDUs. The user is responsible for calling <code>fits.writeto(...)</code> afterwards. If <code>fits</code> is a string, it will be interpreted as a filename for a new multi-extension FITS file. </td></tr>
     <tr><td class="paramname">add_wcs</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
     <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
+    <tr><td class="paramname">compression</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Write a single image to a FITS file.">galsim.fits.write</a> method. </td></tr>
   </table>
   </dd>
 </dl>
@@ -352,6 +517,30 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">dictionary galsim.fits.native_byteorder = {'big': '&gt;', 'little': '&lt;'}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb3deb80791f0f41f0d6f8cbdb444905"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple galsim.fits.read_file = <a class="el" href="classgalsim_1_1fits_1_1___read_file.html">_ReadFile</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae183d011e3dc590c5c079efd4b68e645"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple galsim.fits.write_file = <a class="el" href="classgalsim_1_1fits_1_1___write_file.html">_WriteFile</a>()</td>
         </tr>
       </table>
 </div><div class="memdoc">

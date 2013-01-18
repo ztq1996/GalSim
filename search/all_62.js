@@ -39,5 +39,6 @@ var searchData=
   ['buildsinglestamp',['BuildSingleStamp',['../namespacegalsim_1_1config_1_1stamp.html#a063879d446e48ece650adb6c1c7e948f',1,'galsim::config::stamp']]],
   ['buildstamps',['BuildStamps',['../namespacegalsim_1_1config_1_1stamp.html#a8076c27943e842102f0a74ee813e96d2',1,'galsim::config::stamp']]],
   ['buildtiledimage',['BuildTiledImage',['../namespacegalsim_1_1config_1_1image.html#aba8cefafd95d20ef0fae0073def35246',1,'galsim::config::image']]],
-  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aea01c28fb02a5ac7671aefb1dbbe687e',1,'galsim::ProbabilityTree']]]
+  ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aea01c28fb02a5ac7671aefb1dbbe687e',1,'galsim::ProbabilityTree']]],
+  ['bz2_5fin_5fmem',['bz2_in_mem',['../classgalsim_1_1fits_1_1___read_file.html#aa7cc181a3d05dc59d8859eb51b9aa1d0',1,'galsim::fits::_ReadFile']]]
 ];
