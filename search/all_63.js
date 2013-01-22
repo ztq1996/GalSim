@@ -17,6 +17,7 @@ var searchData=
   ['center',['center',['../classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d',1,'galsim::Bounds']]],
   ['centroid',['centroid',['../classgalsim_1_1_s_b_profile.html#af07f3685954696376c51d86b3acf2600',1,'galsim::SBProfile::centroid()'],['../classgalsim_1_1base_1_1_g_s_object.html#a08a0bb72927fce3c765a9580de656d1a',1,'galsim.base.GSObject.centroid()']]],
   ['changelog_2emd',['CHANGELOG.md',['../_c_h_a_n_g_e_l_o_g_8md.html',1,'']]],
+  ['check_5fhdu',['check_hdu',['../namespacegalsim_1_1fits.html#a7219e4f33894a3062239ade8a7328854',1,'galsim::fits']]],
   ['checkallparams',['CheckAllParams',['../namespacegalsim_1_1config_1_1value.html#a46e9d7a5f43f8303081e058bc4ddf8cf',1,'galsim::config::value']]],
   ['chi2deviate',['Chi2Deviate',['../classgalsim_1_1_chi2_deviate.html',1,'galsim']]],
   ['chi2deviate',['Chi2Deviate',['../classgalsim_1_1_chi2_deviate.html#ab54408bb0e6cb1df0791e52408f9d1d5',1,'galsim::Chi2Deviate::Chi2Deviate(double n=1.)'],['../classgalsim_1_1_chi2_deviate.html#a1ae698f73a90edc8be40887523df5f18',1,'galsim::Chi2Deviate::Chi2Deviate(long lseed, double n=1.)'],['../classgalsim_1_1_chi2_deviate.html#a738b72d399bc082746c5d9ed7aa8b4ad',1,'galsim::Chi2Deviate::Chi2Deviate(const BaseDeviate &amp;rhs, double n=1.)'],['../classgalsim_1_1_chi2_deviate.html#a5486c50b1200759c06f47faaea49075c',1,'galsim::Chi2Deviate::Chi2Deviate(const Chi2Deviate &amp;rhs)']]],
@@ -52,7 +53,7 @@ var searchData=
   ['createsheared',['createSheared',['../classgalsim_1_1base_1_1_g_s_object.html#a8c54a001124280ae550c57c8fdce3563',1,'galsim::base::GSObject']]],
   ['createshifted',['createShifted',['../classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126',1,'galsim::base::GSObject']]],
   ['createtransformed',['createTransformed',['../classgalsim_1_1base_1_1_g_s_object.html#ac545bacc95772067d082a68a282265e7',1,'galsim::base::GSObject']]],
-  ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a514133d6f71da65e2b9aa1594dacfa9b',1,'galsim::Cubic']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]],
+  ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a514133d6f71da65e2b9aa1594dacfa9b',1,'galsim::Cubic']]],
   ['changes_20from_20v0_2e2_20to_20v0_2e3',['Changes from v0.2 to v0.3',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
 ];
