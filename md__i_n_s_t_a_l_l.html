@@ -152,7 +152,7 @@ easy_install pyyaml
 <p>followed by </p>
 <pre class="fragment">./b2 link=shared
 ./b2 &amp;ndash;prefix=&lt;INSTALL_DIR&gt; link=shared install
-</pre><p> (if you are installing to a system directory, the second needs to be run as root, of course <code>./b2</code>...)</p>
+</pre><p>If you are installing to a system directory, the second needs to be run as root, of course: <code>sudo ./b2</code>... Also, you should be aware that if you are running <code>b2</code> a second time, you should use <code>b2 -a</code> to tell boost to recompile everything rather than use the existing libraries.</p>
 <p>The <code>link=shared</code> is necessary to ensure that they are built as shared libraries; this is automatic on some platforms, but not all.</p>
 <p>Note: if you do not want to install everything related to Boost (which takes a while), you can restrict to Boost Python and math by using <code>&ndash;with-python</code> <code>&ndash;with-math</code> on the <code>./b2</code> commands. Currently we are only using Boost Python, but there may be parts of the math library we want to use so installing these two will likely be sufficient for the foreseeable future.</p>
 <p>Once you have installed Boost, you can check that it links to the version of Python that will be used for GalSim and on which you have installed NumPy and PyFITS by typing </p>
