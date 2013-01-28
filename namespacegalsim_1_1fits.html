@@ -281,6 +281,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, the Primary HDU will be used. If <code>fits</code> is a <code>pyfits.PrimaryHDU</code> or <code>pyfits.ImageHDU</code>, that HDU will be used. If <code>fits</code> is a string, it will be interpreted as a filename to open; the Primary HDU of that file will be used. </td></tr>
+    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). Options are: None or 'none' = no decompression 'rice' = use rice decompression in tiles 'gzip' = use gzip to decompress the full file 'bzip2' = use bzip2 to decompress the full file 'gzip_tile' = use gzip decompression in tiles 'hcompress' = use hcompress decompression in tiles 'plio' = use plio decompression in tiles 'auto' = determine the decompression from the extension of the file name (requires fits to be a string). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,6 +319,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">fits</td><td>If <code>fits</code> is a <code>pyfits.HDUList</code>, readMulti will read images from these. If <code>fits</code> is a string, it will be interpreted as a filename to open and read. </td></tr>
+    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). Options are: None or 'none' = no decompression 'rice' = use rice decompression in tiles 'gzip' = use gzip to decompress the full file 'bzip2' = use bzip2 to decompress the full file 'gzip_tile' = use gzip decompression in tiles 'hcompress' = use hcompress decompression in tiles 'plio' = use plio decompression in tiles 'auto' = determine the decompression from the extension of the file name (requires fits to be a string). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </td></tr>
   </table>
   </dd>
 </dl>
