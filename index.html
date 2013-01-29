@@ -85,6 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>GalSim is open-source software for simulating images of astronomical objects (stars, galaxies) in a variety of ways. The bulk of the calculations are carried out in C++, and the user interface is in python. In addition, the code can operate directly on "config" files, for those users who prefer not to work in python. The code is being developed as a collaborative project for the upcoming weak lensing community data challenge, GREAT3 (<a href="http://great3challenge.info/">http://great3challenge.info/</a>), though it has additional capabilities beyond those needed for the challenge. At the end of this file, there is a list of the code capabilities and plans for future development.</p>
 <h2>Distribution</h2>
 <p>Please feel free to fork this repository at any time. However, please be aware that the code is still actively being developed and tested (hence the current version number is below 1.0). The release of v1.0 in mid-2013 will be accompanied with a publication that users should cite.</p>
+<h2>Keeping up-to-date with GalSim</h2>
+<p>There is a GalSim mailing list, organized through the Google Group galsim-announce. Members of the group will receive news and updates about the GalSim code, including notifications of major version releases, new features and bugfixes.</p>
+<p>You do not need a Google Account to subscribe to the group, simply send any email to </p>
+<pre class="fragment">galsim-announce+subscribe@googlegroups.com
+</pre><p>If you receive a confirmation request (check junk mail filters!) simply reply directly to that email, with anything, to confirm. You may also click the link in the confirmation request, but you may be asked for a Google Account login.</p>
+<p>To unsubscribe, simply send any email to </p>
+<pre class="fragment">galsim-announce+unsubscribe@googlegroups.com
+</pre><p>You should receive notification that your unsubscription was successful.</p>
 <h2>How to communicate with the GalSim developers</h2>
 <p>If you have any comments, questions, or suggestions, please open up an Issue on our GitHub repository:</p>
 <p><a href="https://github.com/GalSim-developers/GalSim/issues?state=open">https://github.com/GalSim-developers/GalSim/issues?state=open</a></p>
@@ -168,6 +176,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <ul>
 <li>Non-constant shears and magnifications can be drawn from a shear field expected for an NFW profile dark matter halo (as for weak lensing by galaxy clusters). For gridded galaxy positions, lensing shears can be drawn randomly from a specified shear power spectrum.</li>
 </ul>
+<ul>
+<li>Simulating correlated Gaussian noise fields as according to user-specified, correlation functions derived from images.</li>
+</ul>
 <h2>Summary of planned future development</h2>
 <p>In addition to carrying out further testing on some existing parts of the code, we plan to add the following additional capabilities in future versions of GalSim:</p>
 <ul>
@@ -178,9 +189,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <ul>
 <li>Self-consistent shears AND magnifications from a power spectrum.</li>
-</ul>
-<ul>
-<li>Simulating correlated noise fields with some user-specified correlation function.</li>
 </ul>
 <ul>
 <li>Handling (that is, whitening and imposing isotropy or four-fold symmetry on) the input noise in the HST training data, so that deeper training samples can be used for simulations of realistic galaxies.</li>
