@@ -103,6 +103,7 @@ Packages</h2></td></tr>
 <tr class="memitem:namespacegalsim_1_1bounds"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1bounds.html">bounds</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1catalog"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1catalog.html">catalog</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1config"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config.html">config</a></td></tr>
+<tr class="memitem:namespacegalsim_1_1correlatednoise"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1correlatednoise.html">correlatednoise</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1ellipse"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1ellipse.html">ellipse</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1fits"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1fits.html">fits</a></td></tr>
 <tr class="memitem:namespacegalsim_1_1hsm"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html">hsm</a></td></tr>
@@ -279,6 +280,11 @@ Functions</h2></td></tr>
 <tr class="memitem:afa5e7463ad19b31418f27e58d324173f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#afa5e7463ad19b31418f27e58d324173f">operator&lt;&lt;</a> (std::ostream &amp;fout, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; T &gt; &amp;b)</td></tr>
 <tr class="memitem:a130242812019ec88c98df4fc605b2d33"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a130242812019ec88c98df4fc605b2d33"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a130242812019ec88c98df4fc605b2d33">operator&gt;&gt;</a> (std::istream &amp;fin, <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; T &gt; &amp;b)</td></tr>
+<tr class="memitem:afd38875bb24781b189c0a98d1da82b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#afd38875bb24781b189c0a98d1da82b97">calculateCovarianceMatrix</a> (const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;sbp, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;bounds, double dx)</td></tr>
+<tr class="memdesc:afd38875bb24781b189c0a98d1da82b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return, as a square <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, a noise covariance matrix between every element in an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> with supplied <code>bounds</code> and pixel scale <code>dx</code> for a correlation function represented as an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.  <a href="#afd38875bb24781b189c0a98d1da82b97"></a><br/></td></tr>
+<tr class="memitem:a39b7f8e76a3217add76677f98b39c19c"><td class="memItemLeft" align="right" valign="top">tmv::SymMatrix&lt; double, <br class="typebreak"/>
+tmv::FortranStyle|tmv::Upper &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a39b7f8e76a3217add76677f98b39c19c">calculateCovarianceSymMatrix</a> (const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;sbp, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;bounds, double dx)</td></tr>
+<tr class="memdesc:a39b7f8e76a3217add76677f98b39c19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return, as a TMV SymMatrix, a noise covariance matrix between every element in an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> with pixel scale dx.  <a href="#a39b7f8e76a3217add76677f98b39c19c"></a><br/></td></tr>
 <tr class="memitem:a3bad6a77cb6a753a4ee6964ed8a41a22"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a3bad6a77cb6a753a4ee6964ed8a41a22">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> &amp;s)</td></tr>
 <tr class="memitem:af8d71bd2802825df293925d86d7d9c4e"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#af8d71bd2802825df293925d86d7d9c4e">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> &amp;s)</td></tr>
 <tr class="memitem:ae6578492e9f40ff4f6691f2abe5104bd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ae6578492e9f40ff4f6691f2abe5104bd">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgalsim_1_1_cpp_ellipse.html">CppEllipse</a> &amp;e)</td></tr>
@@ -524,6 +530,78 @@ template&lt;typename D , typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd38875bb24781b189c0a98d1da82b97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt;double&gt; galsim::calculateCovarianceMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const SBProfile &amp;&#160;</td>
+          <td class="paramname"><em>sbp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Bounds&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return, as a square <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, a noise covariance matrix between every element in an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> with supplied <code>bounds</code> and pixel scale <code>dx</code> for a correlation function represented as an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>. </p>
+<p>The matrix is symmetric, and therefore only the upper triangular elements are actually written into. The rest are initialized and remain as zero.</p>
+<p>For an example of this function in use, see <code><a class="el" href="correlatednoise_8py.html" title="Python layer documentation and functions for handling correlated noise in GalSim.">galsim/correlatednoise.py</a></code>.</p>
+<p>Currently, this actually copies elements from an internal calculation of the covariance matrix (using Mike Jarvis' TMV library). It could, therefore, be calculated more efficiently by direct assignment. However, as this public member function is foreseen as being mainly for visualization/checking purposes, we go via the TMV intermediary to avoid code duplication. If, in future, it becomes critical to speed up this function this can be revisited. </p>
+
+</div>
+</div>
+<a class="anchor" id="a39b7f8e76a3217add76677f98b39c19c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmv::SymMatrix&lt;double, tmv::FortranStyle|tmv::Upper&gt; galsim::calculateCovarianceSymMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const SBProfile &amp;&#160;</td>
+          <td class="paramname"><em>sbp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Bounds&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return, as a TMV SymMatrix, a noise covariance matrix between every element in an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> with pixel scale dx. </p>
+<p>The TMV SymMatrix uses FortranStyle indexing (to match the FITS-compliant usage in <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>) along with ColumnMajor ordering (the default), and Upper triangle storage. </p>
 
 </div>
 </div>

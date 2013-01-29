@@ -205,7 +205,9 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">normalization</td><td>Two options for specifying the normalization of the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>: "flux" or "f" means that the sum of the pixels is normalized to be equal to the total flux. "surface brightness" or "sb" means that the pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>) </td></tr>
     <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>; this will override the pixel scale stored by the provided <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, in any. If <code>dx</code> is <code>None</code>, then take the provided image's pixel scale. (Default <code>dx = None</code>.) </td></tr>
     <tr><td class="paramname">flux</td><td>Optionally specify a total flux for the object, which overrides the implied flux normalization from the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> itself. </td></tr>
-    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. Note that the padding is with zeros; could be changed in future. (Default <code>pad_factor = 0</code>.)</td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. Note that the padding is with zeros; could be changed in future. (Default <code>pad_factor = 0</code>.) </td></tr>
+    <tr><td class="paramname">calculate_stepk</td><td>Set as <code>True</code> to perform an internal determination of the extent of the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the stepsize in the Fourier space lookup table. </td></tr>
+    <tr><td class="paramname">calculate_maxk</td><td>Set as <code>True</code> to perform an internal determination of the highest spatial frequency needed to accurately render the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the extent of the Fourier space lookup table.</td></tr>
   </table>
   </dd>
 </dl>
@@ -256,7 +258,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>pad_factor</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>pad_factor</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>calculate_stepk</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>calculate_maxk</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -654,7 +668,7 @@ Public Attributes</h2></td></tr>
 
 <p>Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves surface brightness, which means that the flux is scales with the change in area. See applyDilation for a version that preserves flux.</p>
+<p>This operation preserves surface brightness, which means that the flux scales with the change in area. See applyDilation for a version that preserves flux.</p>
 <p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -896,7 +910,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a copy of an object. </p>
-<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (e.g. getSigma()). </p>
+<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (e.g. getSigma()). However, not necessarily all instance attributes will be copied across (e.g. the interpolant stored by an <a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics.">OpticalPSF</a> object). </p>
 
 </div>
 </div>

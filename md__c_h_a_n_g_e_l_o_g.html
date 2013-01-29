@@ -133,7 +133,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>The moments and PSF correction code was updated to use the Image class and TMV. The python interface to this software was also updated so that it can handle weight and bad pixel maps for the input Images. Finally, an optimization was introduced that typically speeds up these routines by a factor of 2-3. (Issues #331, #332)</li>
 </ul>
 <ul>
-<li>There is a new base class, InterpolatedImage, which contains an SBInterpolatedImage. Users who wish to take some arbitrary input image and manipulate it (shear, convolved, etc.) can use this base class as a way of easily carrying out those operations. (Issue #333) </li>
+<li>There is a new base class, InterpolatedImage, which contains an SBInterpolatedImage. Users who wish to take some arbitrary input image and manipulate it (shear, convolved, etc.) can use this base class as a way of easily carrying out those operations. (Issue #333)</li>
+</ul>
+<ul>
+<li>There is a new class structure for representing 2D correlation functions, used to describe correlated noise in images (for example). The intended user interface is using the <code>cf = galsim.ImageCorrFunc(image)</code> constructor, which calculates the discrete correlation function between pixels in the input image. The <code>cf</code> instance acts as a container for an internal <code>GSObject</code> representation of this correlation function, making many <code>GSObject</code> operations available (Issue #297). </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

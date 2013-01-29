@@ -21,7 +21,7 @@ var searchData=
   ['divert_5fboost_5frandom',['DIVERT_BOOST_RANDOM',['../_random_8h.html#aa7f15194f79996fb7331d88b71069c5c',1,'Random.h']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
   ['do_5fpreload',['do_preload',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aa2bddf9957f1c8ea8571431d21b3cece',1,'galsim::real::RealGalaxyCatalog']]],
-  ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()']]],
+  ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()'],['../classgalsim_1_1correlatednoise_1_1___corr_func.html#a6b77a3b9f68d67098737744bd25931d3',1,'galsim.correlatednoise._CorrFunc.draw()']]],
   ['drawk',['drawK',['../classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb',1,'galsim::SBProfile::drawK()'],['../classgalsim_1_1base_1_1_g_s_object.html#aafa4ff2871a15f044689bdf3756fd918',1,'galsim.base.GSObject.drawK()']]],
   ['drawpsfstamp',['DrawPSFStamp',['../namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f',1,'galsim::config::stamp']]],
   ['drawshoot',['drawShoot',['../classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718',1,'galsim::SBProfile::drawShoot()'],['../classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0',1,'galsim.base.GSObject.drawShoot()']]],

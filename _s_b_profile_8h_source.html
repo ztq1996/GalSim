@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SBProfile.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_s_b_profile_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<a href="_s_b_profile_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- c++ -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef SBPROFILE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SBPROFILE_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
@@ -196,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="comment">// Transformations (all are special cases of affine transformations via SBTransform):</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_profile.html#aeefb2c61d26fae17c5a55d9e60dd4ac2" title="Multiple the flux by fluxRatio.">scaleFlux</a>(<span class="keywordtype">double</span> fluxRatio);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_profile.html#aeefb2c61d26fae17c5a55d9e60dd4ac2" title="Multiply the flux by fluxRatio.">scaleFlux</a>(<span class="keywordtype">double</span> fluxRatio);</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_profile.html#a31093a62c9086296fdf519c720edadb9" title="Set the flux to a new value.">setFlux</a>(<span class="keywordtype">double</span> flux);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
@@ -218,7 +218,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="comment">// **** Drawing routines ****</span></div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="comment"></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718" title="Draw this SBProfile into Image by shooting photons.">drawShoot</a>(<a class="code" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView&lt;T&gt;</a> image, <span class="keywordtype">double</span> N, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud,</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718" title="Draw this SBProfile into an Image by shooting photons.">drawShoot</a>(<a class="code" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView&lt;T&gt;</a> image, <span class="keywordtype">double</span> N, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud,</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                         <span class="keywordtype">double</span> gain=1., <span class="keywordtype">double</span> max_extra_noise=0., <span class="keywordtype">bool</span> poisson_flux=<span class="keyword">true</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>

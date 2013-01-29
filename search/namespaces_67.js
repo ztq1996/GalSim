@@ -6,6 +6,7 @@ var searchData=
   ['bounds',['bounds',['../namespacegalsim_1_1bounds.html',1,'galsim']]],
   ['catalog',['catalog',['../namespacegalsim_1_1catalog.html',1,'galsim']]],
   ['config',['config',['../namespacegalsim_1_1config.html',1,'galsim']]],
+  ['correlatednoise',['correlatednoise',['../namespacegalsim_1_1correlatednoise.html',1,'galsim']]],
   ['ellipse',['ellipse',['../namespacegalsim_1_1ellipse.html',1,'galsim']]],
   ['fits',['fits',['../namespacegalsim_1_1fits.html',1,'galsim']]],
   ['galsim',['galsim',['../namespacegalsim.html',1,'']]],

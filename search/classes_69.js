@@ -1,6 +1,7 @@
 var searchData=
 [
   ['image',['Image',['../classgalsim_1_1_image.html',1,'galsim']]],
+  ['imagecorrfunc',['ImageCorrFunc',['../classgalsim_1_1correlatednoise_1_1_image_corr_func.html',1,'galsim::correlatednoise']]],
   ['imageview',['ImageView',['../classgalsim_1_1_image_view.html',1,'galsim']]],
   ['inputcatalog',['InputCatalog',['../classgalsim_1_1catalog_1_1_input_catalog.html',1,'galsim::catalog']]],
   ['interpolant',['Interpolant',['../classgalsim_1_1_interpolant.html',1,'galsim']]],

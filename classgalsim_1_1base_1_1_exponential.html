@@ -634,7 +634,7 @@ scale_radius
 
 <p>Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves surface brightness, which means that the flux is scales with the change in area. See applyDilation for a version that preserves flux.</p>
+<p>This operation preserves surface brightness, which means that the flux scales with the change in area. See applyDilation for a version that preserves flux.</p>
 <p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -876,7 +876,7 @@ scale_radius
 </div><div class="memdoc">
 
 <p>Returns a copy of an object. </p>
-<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (e.g. getSigma()). </p>
+<p>This preserves the original type of the object, so if the caller is a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (for example), the copy will also be a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>, and can thus call the methods that are not in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, but are in <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> (e.g. getSigma()). However, not necessarily all instance attributes will be copied across (e.g. the interpolant stored by an <a class="el" href="classgalsim_1_1base_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics.">OpticalPSF</a> object). </p>
 
 </div>
 </div>
