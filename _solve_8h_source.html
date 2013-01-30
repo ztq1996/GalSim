@@ -91,256 +91,276 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Solve.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_solve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Template to find the zero of an equation</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Currently uses bisection method, no solution caching.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SOLVE_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SOLVE_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Std.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>galsim {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// All code between the @cond and @endcond is excluded from Doxygen documentation</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">class </span>SolveError : <span class="keyword">public</span> std::runtime_error </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        SolveError(<span class="keyword">const</span> std::string m) : std::runtime_error(<span class="stringliteral">&quot;Solve error: &quot;</span>+m) {}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
+<a href="_solve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- c++ -*-</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright 2012, 2013 The GalSim developers:</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * GalSim is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * GalSim is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * along with GalSim.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Template to find the zero of an equation</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Currently uses bisection method, no solution caching.</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">   27</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">defaultTolerance</a>=1.e-7;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">   28</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">defaultMaxSteps</a>=40;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">   30</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> { <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>, <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a> };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> F, <span class="keyword">class</span> T=<span class="keywordtype">double</span>&gt;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html">  100</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_solve.html" title="A class that solves a provided function for a zero.">Solve</a> </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> F&amp;  func;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        T lBound;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        T uBound;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        T xTolerance;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">int</span> maxSteps;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">mutable</span> T flower;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">mutable</span> T fupper;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> boundsAreEvaluated;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> m;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8">  115</a></span>&#160;        <a class="code" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8" title="Constructor taking the function to solve, and the range (if known).">Solve</a>(<span class="keyword">const</span> F&amp; func_, T lb_=0., T ub_=1.) :</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            func(func_), lBound(lb_), uBound(ub_), xTolerance(<a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">defaultTolerance</a>),</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            maxSteps(<a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">defaultMaxSteps</a>), boundsAreEvaluated(false), m(<a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>) {}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a524e4aa8293b490d8c99a52b7b58d52e">  120</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a524e4aa8293b490d8c99a52b7b58d52e" title="Set the maximum number of steps for the solving algorithm to use.">setMaxSteps</a>(<span class="keywordtype">int</span> m) { maxSteps=m; }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a71c9d52be54fac377abb1359bf190b7b">  123</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a71c9d52be54fac377abb1359bf190b7b" title="Set which method to use: Bisect or Brent.">setMethod</a>(<a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> m_) { m=m_; }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ad5a68dd69f9ee0698408ef825ee6bc68">  126</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ad5a68dd69f9ee0698408ef825ee6bc68" title="Set the tolerance to define when the root is close enough to 0. (abs(x) &lt; tol)">setXTolerance</a>(T tol) { xTolerance=tol; }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a5146f4a23b994d3399ea057d258b2ec4">  129</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a5146f4a23b994d3399ea057d258b2ec4" title="Get the current tolerance.">getXTolerance</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> xTolerance; }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea">  132</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea" title="Set the bounds for the search to new values.">setBounds</a>(T lb, T ub) { lBound=lb; uBound=ub; }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a97304e78d7cf65a4f0ef01774d8c28b7">  136</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_solve.html#a97304e78d7cf65a4f0ef01774d8c28b7" title="Get the current search bounds.">getLowerBound</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> lBound; }</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a3145f05847e8ac685473ed997246719a">  137</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_solve.html#a3145f05847e8ac685473ed997246719a">getUpperBound</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> uBound; }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">  146</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378" title="Hunt for bracket, geometrically expanding range.">bracket</a>() </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor=2.0;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracket()&quot;</span>);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                flower = func(lBound);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                fupper = func(uBound);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="keywordflow">if</span> (std::abs(flower) &lt; std::abs(fupper)) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    uBound = lBound;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    fupper = flower;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    delta *= factor;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    lBound -= delta;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    flower = func(lBound);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    lBound = uBound;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    flower = fupper;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    delta *= factor;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    uBound += delta;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    fupper = func(uBound);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracket()&quot;</span>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SOLVE_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SOLVE_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Std.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>galsim {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// All code between the @cond and @endcond is excluded from Doxygen documentation</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>SolveError : <span class="keyword">public</span> std::runtime_error </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        SolveError(<span class="keyword">const</span> std::string m) : std::runtime_error(<span class="stringliteral">&quot;Solve error: &quot;</span>+m) {}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">   47</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">defaultTolerance</a>=1.e-7;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">   48</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">defaultMaxSteps</a>=40;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">   50</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> { <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>, <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a> };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> F, <span class="keyword">class</span> T=<span class="keywordtype">double</span>&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html">  120</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_solve.html" title="A class that solves a provided function for a zero.">Solve</a> </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">const</span> F&amp;  func;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        T lBound;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        T uBound;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        T xTolerance;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">int</span> maxSteps;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">mutable</span> T flower;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">mutable</span> T fupper;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> boundsAreEvaluated;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> m;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8">  135</a></span>&#160;        <a class="code" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8" title="Constructor taking the function to solve, and the range (if known).">Solve</a>(<span class="keyword">const</span> F&amp; func_, T lb_=0., T ub_=1.) :</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            func(func_), lBound(lb_), uBound(ub_), xTolerance(<a class="code" href="namespacegalsim.html#a6b92aa39468879512706492907c82df0">defaultTolerance</a>),</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            maxSteps(<a class="code" href="namespacegalsim.html#aa41aaa402e44af794da463abc461287c">defaultMaxSteps</a>), boundsAreEvaluated(false), m(<a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>) {}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a524e4aa8293b490d8c99a52b7b58d52e">  140</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a524e4aa8293b490d8c99a52b7b58d52e" title="Set the maximum number of steps for the solving algorithm to use.">setMaxSteps</a>(<span class="keywordtype">int</span> m) { maxSteps=m; }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a71c9d52be54fac377abb1359bf190b7b">  143</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a71c9d52be54fac377abb1359bf190b7b" title="Set which method to use: Bisect or Brent.">setMethod</a>(<a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> m_) { m=m_; }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ad5a68dd69f9ee0698408ef825ee6bc68">  146</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ad5a68dd69f9ee0698408ef825ee6bc68" title="Set the tolerance to define when the root is close enough to 0. (abs(x) &lt; tol)">setXTolerance</a>(T tol) { xTolerance=tol; }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a5146f4a23b994d3399ea057d258b2ec4">  149</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a5146f4a23b994d3399ea057d258b2ec4" title="Get the current tolerance.">getXTolerance</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> xTolerance; }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea">  152</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a8bbd1f21c10c4bf6afea688e5f2b7aea" title="Set the bounds for the search to new values.">setBounds</a>(T lb, T ub) { lBound=lb; uBound=ub; }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a97304e78d7cf65a4f0ef01774d8c28b7">  156</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_solve.html#a97304e78d7cf65a4f0ef01774d8c28b7" title="Get the current search bounds.">getLowerBound</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> lBound; }</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a3145f05847e8ac685473ed997246719a">  157</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_solve.html#a3145f05847e8ac685473ed997246719a">getUpperBound</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> uBound; }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">  166</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378" title="Hunt for bracket, geometrically expanding range.">bracket</a>() </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor=2.0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracket()&quot;</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                flower = func(lBound);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                fupper = func(uBound);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">  183</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e" title="Hunt for bracket, geometrically expanding range.">bracketUpper</a>() </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor=2.0;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketUpper()&quot;</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                flower = func(lBound);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                fupper = func(uBound);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                lBound = uBound;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                flower = fupper;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                delta *= factor;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                uBound += delta;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                fupper = func(uBound);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketUpper()&quot;</span>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">  211</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf" title="Hunt for bracket, geometrically expanding range.">bracketLower</a>() </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor = 2.0;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketLower()&quot;</span>);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                flower = func(lBound);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                fupper = func(uBound);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                uBound = lBound;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                fupper = flower;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                delta *= factor;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                lBound -= delta;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                flower = func(lBound);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketLower()&quot;</span>);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d">  237</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d" title="Find the root according the the method currently set.">root</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">switch</span> (m) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>:</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                   <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2" title="A simple bisection root-finder.">bisect</a>();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a>:</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                   <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3" title="A more sophisticated root-finder using Brent&#39;s algorithm.">zbrent</a>();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;              <span class="keywordflow">default</span> :</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                   <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Unknown method in root()&quot;</span>);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2">  252</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2" title="A simple bisection root-finder.">bisect</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            T dx,<a class="code" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">f</a>,fmid,xmid,rtb;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                flower=func(lBound);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                fupper=func(uBound);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                boundsAreEvaluated = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            f=flower;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            fmid=fupper;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">if</span> (f*fmid &gt;= 0.0) </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> &lt;&lt; lBound </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            rtb = f &lt; 0.0 ? (dx=uBound-lBound,lBound) : (dx=lBound-uBound,uBound);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1;j&lt;=maxSteps;j++) {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                fmid=func(xmid=rtb+(dx *= 0.5));</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">if</span> (fmid &lt;= 0.0) rtb=xmid;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">if</span> ( (std::abs(dx) &lt; xTolerance) || fmid == 0.0) <span class="keywordflow">return</span> rtb;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many bisections&quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3">  280</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3" title="A more sophisticated root-finder using Brent&#39;s algorithm.">zbrent</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            T a=lBound, b=uBound, c=uBound;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            T d=b-a, e=b-a;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            T min1,min2;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                flower=func(a);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                fupper=func(b);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                boundsAreEvaluated = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            T fa = flower;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            T fb = fupper;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            T p,q,r,s,tol1,xm;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">if</span> ((fa &gt; 0.0 &amp;&amp; fb &gt; 0.0) || (fa &lt; 0.0 &amp;&amp; fb &lt; 0.0)) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    &lt;&lt; lBound &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            T fc=fb;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iter=0;iter&lt;=maxSteps;iter++) {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <span class="keywordflow">if</span> ((fb &gt; 0.0 &amp;&amp; fc &gt; 0.0) || (fb &lt; 0.0 &amp;&amp; fc &lt; 0.0)) {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    c=a;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    fc=fa;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    e=d=b-a;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">if</span> (std::abs(fc) &lt; std::abs(fb)) {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    a=b;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    b=c;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    c=a;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    fa=fb;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    fb=fc;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    fc=fa;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                tol1=2.0*std::numeric_limits&lt;T&gt;::epsilon()*std::abs(b)</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    +0.5*xTolerance;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                xm=0.5*(c-b);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">if</span> (std::abs(xm) &lt;= tol1 || fb == 0.0) <span class="keywordflow">return</span> b;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                <span class="keywordflow">if</span> (std::abs(e) &gt;= tol1 &amp;&amp; std::abs(fa) &gt; std::abs(fb)) {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    s=fb/fa;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    <span class="keywordflow">if</span> (a == c) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                        p=2.0*xm*s;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                        q=1.0-s;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                        q=fa/fc;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        r=fb/fc;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        p=s*(2.0*xm*q*(q-r)-(b-a)*(r-1.0));</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        q=(q-1.0)*(r-1.0)*(s-1.0);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="keywordflow">if</span> (p &gt; 0.0) q = -q;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    p=std::abs(p);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    min1=3.0*xm*q-std::abs(tol1*q);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    min2=std::abs(e*q);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    <span class="keywordflow">if</span> (2.0*p &lt; std::min(min1,min2) ) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                        e=d;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                        d=p/q;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                        d=xm;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                        e=d;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    d=xm;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    e=d;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                a=b;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                fa=fb;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <span class="keywordflow">if</span> (std::abs(d) &gt; tol1) b += d;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <span class="keywordflow">else</span> b += (xm&gt;=0. ? std::abs(tol1) : -std::abs(tol1));</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                fb=func(b);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Maximum number of iterations exceeded in zbrent&quot;</span>);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        }</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    };</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;} <span class="comment">// namespace solve</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">if</span> (std::abs(flower) &lt; std::abs(fupper)) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    uBound = lBound;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    fupper = flower;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    delta *= factor;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    lBound -= delta;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    flower = func(lBound);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    lBound = uBound;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    flower = fupper;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    delta *= factor;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    uBound += delta;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    fupper = func(uBound);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracket()&quot;</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">  203</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e" title="Hunt for bracket, geometrically expanding range.">bracketUpper</a>() </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor=2.0;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketUpper()&quot;</span>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                flower = func(lBound);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                fupper = func(uBound);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                lBound = uBound;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                flower = fupper;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                delta *= factor;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                uBound += delta;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                fupper = func(uBound);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketUpper()&quot;</span>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">  231</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf" title="Hunt for bracket, geometrically expanding range.">bracketLower</a>() </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> factor = 2.0;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketLower()&quot;</span>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                flower = func(lBound);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                fupper = func(uBound);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                boundsAreEvaluated=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordtype">double</span> delta = uBound-lBound;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1; j&lt;maxSteps; j++) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">if</span> (fupper*flower &lt; 0.0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                uBound = lBound;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                fupper = flower;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                delta *= factor;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                lBound -= delta;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                flower = func(lBound);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketLower()&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d">  257</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a8d443964066d0bcead110c54141c735d" title="Find the root according the the method currently set.">root</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">switch</span> (m) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>:</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                   <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2" title="A simple bisection root-finder.">bisect</a>();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a>:</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                   <span class="keywordflow">return</span> <a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3" title="A more sophisticated root-finder using Brent&#39;s algorithm.">zbrent</a>();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;              <span class="keywordflow">default</span> :</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                   <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Unknown method in root()&quot;</span>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2">  272</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a46716cefe286bf38433060ad5dc6abc2" title="A simple bisection root-finder.">bisect</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            T dx,<a class="code" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">f</a>,fmid,xmid,rtb;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                flower=func(lBound);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                fupper=func(uBound);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                boundsAreEvaluated = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            f=flower;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            fmid=fupper;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">if</span> (f*fmid &gt;= 0.0) </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> &lt;&lt; lBound </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            rtb = f &lt; 0.0 ? (dx=uBound-lBound,lBound) : (dx=lBound-uBound,uBound);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1;j&lt;=maxSteps;j++) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                fmid=func(xmid=rtb+(dx *= 0.5));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="keywordflow">if</span> (fmid &lt;= 0.0) rtb=xmid;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <span class="keywordflow">if</span> ( (std::abs(dx) &lt; xTolerance) || fmid == 0.0) <span class="keywordflow">return</span> rtb;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many bisections&quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3">  300</a></span>&#160;        T <a class="code" href="classgalsim_1_1_solve.html#a11486be6082cbbf0411b66823c5b4df3" title="A more sophisticated root-finder using Brent&#39;s algorithm.">zbrent</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            T a=lBound, b=uBound, c=uBound;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            T d=b-a, e=b-a;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            T min1,min2;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">if</span> (!boundsAreEvaluated) {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                flower=func(a);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                fupper=func(b);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                boundsAreEvaluated = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            T fa = flower;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            T fb = fupper;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            T p,q,r,s,tol1,xm;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> ((fa &gt; 0.0 &amp;&amp; fb &gt; 0.0) || (fa &lt; 0.0 &amp;&amp; fb &lt; 0.0)) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    &lt;&lt; lBound &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            T fc=fb;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iter=0;iter&lt;=maxSteps;iter++) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">if</span> ((fb &gt; 0.0 &amp;&amp; fc &gt; 0.0) || (fb &lt; 0.0 &amp;&amp; fc &lt; 0.0)) {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    c=a;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    fc=fa;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    e=d=b-a;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                <span class="keywordflow">if</span> (std::abs(fc) &lt; std::abs(fb)) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    a=b;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    b=c;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    c=a;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    fa=fb;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    fb=fc;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    fc=fa;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                tol1=2.0*std::numeric_limits&lt;T&gt;::epsilon()*std::abs(b)</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    +0.5*xTolerance;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                xm=0.5*(c-b);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="keywordflow">if</span> (std::abs(xm) &lt;= tol1 || fb == 0.0) <span class="keywordflow">return</span> b;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                <span class="keywordflow">if</span> (std::abs(e) &gt;= tol1 &amp;&amp; std::abs(fa) &gt; std::abs(fb)) {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    s=fb/fa;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                    <span class="keywordflow">if</span> (a == c) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        p=2.0*xm*s;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        q=1.0-s;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                        q=fa/fc;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                        r=fb/fc;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                        p=s*(2.0*xm*q*(q-r)-(b-a)*(r-1.0));</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                        q=(q-1.0)*(r-1.0)*(s-1.0);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                    <span class="keywordflow">if</span> (p &gt; 0.0) q = -q;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                    p=std::abs(p);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    min1=3.0*xm*q-std::abs(tol1*q);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    min2=std::abs(e*q);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                    <span class="keywordflow">if</span> (2.0*p &lt; std::min(min1,min2) ) {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        e=d;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                        d=p/q;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                        d=xm;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        e=d;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                    }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                    d=xm;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                    e=d;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                a=b;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                fa=fb;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="keywordflow">if</span> (std::abs(d) &gt; tol1) b += d;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordflow">else</span> b += (xm&gt;=0. ? std::abs(tol1) : -std::abs(tol1));</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                fb=func(b);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Maximum number of iterations exceeded in zbrent&quot;</span>);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    };</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;} <span class="comment">// namespace solve</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

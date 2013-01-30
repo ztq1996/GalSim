@@ -92,81 +92,101 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_photon_array_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef PHOTON_ARRAY_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PHOTON_ARRAY_H</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Std.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_random_8h.html" title="Random-number-generator classes.">Random.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_image_8h.html">Image.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>galsim {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c">   35</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c" title="Construct an array of given size with zero-flux photons.">PhotonArray</a>(<span class="keywordtype">int</span> N): _x(N,0.), _y(N,0.), _flux(N,0.), _is_correlated(false) {}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright 2012, 2013 The GalSim developers:</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * GalSim is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * GalSim is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * along with GalSim.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef PHOTON_ARRAY_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PHOTON_ARRAY_H</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;Std.h&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_random_8h.html" title="Random-number-generator classes.">Random.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_image_8h.html">Image.h</a>&quot;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c" title="Construct an array of given size with zero-flux photons.">PhotonArray</a>(std::vector&lt;double&gt;&amp; vx, std::vector&lt;double&gt;&amp; vy, std::vector&lt;double&gt;&amp; vflux);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a5afddf32d7dd83151e0fb7186d507d11">   51</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classgalsim_1_1_photon_array.html#a5afddf32d7dd83151e0fb7186d507d11" title="Accessor for array size.">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _x.size(); }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0">   57</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0" title="reserve space in arrays for future elements">reserve</a>(<span class="keywordtype">int</span> N) </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            _x.reserve(N);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            _y.reserve(N);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            _flux.reserve(N);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a8275c1c5a7d97b68e5e38476b9267639">   72</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a8275c1c5a7d97b68e5e38476b9267639" title="Set characteristics of a photon.">setPhoton</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> flux) </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            _x[i]=x; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            _y[i]=y;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            _flux[i]=flux;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ab68eea1f477e8c7883e3efb72520cd53">   85</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#ab68eea1f477e8c7883e3efb72520cd53" title="Access x coordinate of a photon.">getX</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _x[i]; }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#af491d851d094a1d2127a2230b6536adc">   93</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#af491d851d094a1d2127a2230b6536adc" title="Access y coordinate of a photon.">getY</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _y[i]; }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ac0873ae84dc208cf24e04bfb2cabdfcb">  101</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#ac0873ae84dc208cf24e04bfb2cabdfcb" title="Access flux of a photon.">getFlux</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _flux[i]; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#a0bad70806cc2eec26744bd38a22e9a66" title="Return sum of all photons&#39; fluxes.">getTotalFlux</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a4d861af05145391cc60694c19f75cc7a" title="Rescale all photon fluxes so that total flux matches argument.">setTotalFlux</a>(<span class="keywordtype">double</span> flux);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a38cb428c22e3b3490d327069189a9670" title="Rescale all photon fluxes by the given factor.">scaleFlux</a>(<span class="keywordtype">double</span> scale);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a574ff7f53820b1cf07d7389506a0c5e7" title="Rescale all photon positions by the given factor.">scaleXY</a>(<span class="keywordtype">double</span> scale);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a8192f81c08a52d8ad4aafd2c949bb9ee" title="Extend this array with the contents of another.">append</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a925f0c162ca3c5aeae03b84891433be5" title="Convolve this array with another.">convolve</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>galsim {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c">   55</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c" title="Construct an array of given size with zero-flux photons.">PhotonArray</a>(<span class="keywordtype">int</span> N): _x(N,0.), _y(N,0.), _flux(N,0.), _is_correlated(false) {}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classgalsim_1_1_photon_array.html#ad411864e6603305b32a47d2c8057e02c" title="Construct an array of given size with zero-flux photons.">PhotonArray</a>(std::vector&lt;double&gt;&amp; vx, std::vector&lt;double&gt;&amp; vy, std::vector&lt;double&gt;&amp; vflux);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a5afddf32d7dd83151e0fb7186d507d11">   71</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classgalsim_1_1_photon_array.html#a5afddf32d7dd83151e0fb7186d507d11" title="Accessor for array size.">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _x.size(); }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0">   77</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0" title="reserve space in arrays for future elements">reserve</a>(<span class="keywordtype">int</span> N) </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            _x.reserve(N);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            _y.reserve(N);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            _flux.reserve(N);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a8275c1c5a7d97b68e5e38476b9267639">   92</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a8275c1c5a7d97b68e5e38476b9267639" title="Set characteristics of a photon.">setPhoton</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> flux) </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            _x[i]=x; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            _y[i]=y;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            _flux[i]=flux;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ab68eea1f477e8c7883e3efb72520cd53">  105</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#ab68eea1f477e8c7883e3efb72520cd53" title="Access x coordinate of a photon.">getX</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _x[i]; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#af491d851d094a1d2127a2230b6536adc">  113</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#af491d851d094a1d2127a2230b6536adc" title="Access y coordinate of a photon.">getY</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _y[i]; }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#ac0873ae84dc208cf24e04bfb2cabdfcb">  121</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#ac0873ae84dc208cf24e04bfb2cabdfcb" title="Access flux of a photon.">getFlux</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _flux[i]; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#a0bad70806cc2eec26744bd38a22e9a66" title="Return sum of all photons&#39; fluxes.">getTotalFlux</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a4d861af05145391cc60694c19f75cc7a" title="Rescale all photon fluxes so that total flux matches argument.">setTotalFlux</a>(<span class="keywordtype">double</span> flux);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a38cb428c22e3b3490d327069189a9670" title="Rescale all photon fluxes by the given factor.">scaleFlux</a>(<span class="keywordtype">double</span> scale);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a574ff7f53820b1cf07d7389506a0c5e7" title="Rescale all photon positions by the given factor.">scaleXY</a>(<span class="keywordtype">double</span> scale);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a9e71bf94a32bf3114fe542a003e4cac6" title="Convolve this array with another, shuffling the order in which photons are combined.">convolveShuffle</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a08f1eea7336abefed945ba35426056b8" title="Take x displacement from this, and y displacement from x of another array, multiplying fluxes...">takeYFrom</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a8192f81c08a52d8ad4aafd2c949bb9ee" title="Extend this array with the contents of another.">append</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a925f0c162ca3c5aeae03b84891433be5" title="Convolve this array with another.">convolve</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf" title="Add flux of photons to an image by binning into pixels.">addTo</a>(<a class="code" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView&lt;T&gt;</a>&amp; target) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312">  190</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312" title="Declare that the photons in this array are correlated.">setCorrelated</a>(<span class="keywordtype">bool</span> new_val=<span class="keyword">true</span>) { _is_correlated = new_val; }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44">  195</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44" title="Check if the current array has correlated photons.">isCorrelated</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _is_correlated; }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::vector&lt;double&gt; _x;      <span class="comment">// Vector holding x coords of photons</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::vector&lt;double&gt; _y;      <span class="comment">// Vector holding y coords of photons</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        std::vector&lt;double&gt; _flux;   <span class="comment">// Vector holding flux of photons</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">bool</span> _is_correlated;          <span class="comment">// Are the photons correlated?</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    };</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;} <span class="comment">// end namespace galsim</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a9e71bf94a32bf3114fe542a003e4cac6" title="Convolve this array with another, shuffling the order in which photons are combined.">convolveShuffle</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs, <a class="code" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> ud);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#a08f1eea7336abefed945ba35426056b8" title="Take x displacement from this, and y displacement from x of another array, multiplying fluxes...">takeYFrom</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>&amp; rhs);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf" title="Add flux of photons to an image by binning into pixels.">addTo</a>(<a class="code" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView&lt;T&gt;</a>&amp; target) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312">  210</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_photon_array.html#aaf0c285f0e02d25c6bb4a4161e562312" title="Declare that the photons in this array are correlated.">setCorrelated</a>(<span class="keywordtype">bool</span> new_val=<span class="keyword">true</span>) { _is_correlated = new_val; }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="code" href="classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44">  215</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44" title="Check if the current array has correlated photons.">isCorrelated</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _is_correlated; }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        std::vector&lt;double&gt; _x;      <span class="comment">// Vector holding x coords of photons</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        std::vector&lt;double&gt; _y;      <span class="comment">// Vector holding y coords of photons</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        std::vector&lt;double&gt; _flux;   <span class="comment">// Vector holding flux of photons</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordtype">bool</span> _is_correlated;          <span class="comment">// Are the photons correlated?</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    };</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;} <span class="comment">// end namespace galsim</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
