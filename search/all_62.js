@@ -1,9 +1,10 @@
 var searchData=
 [
+  ['b_5fpower_5ffunction',['b_power_function',['../classgalsim_1_1lensing_1_1_power_spectrum.html#ad944e6a37bfda383de704ee43bc39d33',1,'galsim::lensing::PowerSpectrum']]],
   ['band',['band',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a3f5c993516cedb0bfea1155efa7c91c9',1,'galsim::real::RealGalaxyCatalog']]],
   ['base_2epy',['base.py',['../base_8py.html',1,'']]],
-  ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html#ab96e0305fba2bdbe89e294d324e7815e',1,'galsim::BaseDeviate::BaseDeviate()'],['../classgalsim_1_1_base_deviate.html#a27bcdd4b35a75ac1d6d664735195f417',1,'galsim::BaseDeviate::BaseDeviate(long lseed)'],['../classgalsim_1_1_base_deviate.html#a074f9323cbfd474ac0ecadbd1ca3fe52',1,'galsim::BaseDeviate::BaseDeviate(const BaseDeviate &amp;rhs)']]],
   ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html',1,'galsim']]],
+  ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html#ab96e0305fba2bdbe89e294d324e7815e',1,'galsim::BaseDeviate::BaseDeviate()'],['../classgalsim_1_1_base_deviate.html#a27bcdd4b35a75ac1d6d664735195f417',1,'galsim::BaseDeviate::BaseDeviate(long lseed)'],['../classgalsim_1_1_base_deviate.html#a074f9323cbfd474ac0ecadbd1ca3fe52',1,'galsim::BaseDeviate::BaseDeviate(const BaseDeviate &amp;rhs)']]],
   ['baseimage',['BaseImage',['../classgalsim_1_1_base_image.html',1,'galsim']]],
   ['beta',['beta',['../classgalsim_1_1ellipse_1_1_ellipse.html#a4fe3fcb16137ebf5b0e87b3765b66094',1,'galsim.ellipse.Ellipse.beta()'],['../classgalsim_1_1shear_1_1_shear.html#aade896b9f4c27ff93d1dd8ede67110df',1,'galsim.shear.Shear.beta()']]],
   ['binom',['binom',['../namespacegalsim.html#ac664190a05ed6072d049e6ca42d756dd',1,'galsim']]],
@@ -28,6 +29,7 @@ var searchData=
   ['builddatacube',['BuildDataCube',['../namespacegalsim_1_1config_1_1process.html#a65ef8a95e0df55d50184f9e159b14001',1,'galsim::config::process']]],
   ['buildfits',['BuildFits',['../namespacegalsim_1_1config_1_1process.html#aa8a1a8605c8c243f3a614fd2b749515b',1,'galsim::config::process']]],
   ['buildgal',['BuildGal',['../namespacegalsim_1_1config_1_1stamp.html#a974de3e2e2a4a2cc8c258bf935777b1f',1,'galsim::config::stamp']]],
+  ['buildgriddedshears',['buildGriddedShears',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a8ffabf0f0163723677400baa92d2ee6c',1,'galsim::lensing::PowerSpectrum']]],
   ['buildgsobject',['BuildGSObject',['../namespacegalsim_1_1config_1_1gsobject.html#a07fc9be6755a477ed2e4fbb323023926',1,'galsim::config::gsobject']]],
   ['buildimage',['BuildImage',['../namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a',1,'galsim::config::image']]],
   ['buildimages',['BuildImages',['../namespacegalsim_1_1config_1_1image.html#a2c6a709c9c894f223063f759d23ca4e7',1,'galsim::config::image']]],

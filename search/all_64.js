@@ -17,6 +17,7 @@ var searchData=
   ['degrees',['degrees',['../namespacegalsim.html#ae61b66be379ab254f69728a4873e0274',1,'galsim']]],
   ['delta',['Delta',['../classgalsim_1_1_delta.html',1,'galsim']]],
   ['delta',['Delta',['../classgalsim_1_1_delta.html#a3af2062aadfeca6dddfd14af80cf7c5b',1,'galsim::Delta']]],
+  ['delta2',['delta2',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a8dbf3c83d354bbff213d4ca2818a58e8',1,'galsim::lensing::PowerSpectrum']]],
   ['devaucouleurs',['DeVaucouleurs',['../classgalsim_1_1base_1_1_de_vaucouleurs.html',1,'galsim::base']]],
   ['divert_5fboost_5frandom',['DIVERT_BOOST_RANDOM',['../_random_8h.html#aa7f15194f79996fb7331d88b71069c5c',1,'Random.h']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],

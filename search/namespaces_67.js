@@ -27,6 +27,7 @@ var searchData=
   ['sbp',['sbp',['../namespacegalsim_1_1sbp.html',1,'galsim']]],
   ['shear',['shear',['../namespacegalsim_1_1shear.html',1,'galsim']]],
   ['stamp',['stamp',['../namespacegalsim_1_1config_1_1stamp.html',1,'galsim::config']]],
+  ['table',['table',['../namespacegalsim_1_1table.html',1,'galsim']]],
   ['utilities',['utilities',['../namespacegalsim_1_1utilities.html',1,'galsim']]],
   ['value',['value',['../namespacegalsim_1_1config_1_1value.html',1,'galsim::config']]]
 ];

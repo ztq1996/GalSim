@@ -45,5 +45,7 @@ var searchData=
   ['iscorrelated',['isCorrelated',['../classgalsim_1_1_photon_array.html#a185f5fe62716162bfad9be98f20b1e44',1,'galsim::PhotonArray']]],
   ['isdefined',['isDefined',['../classgalsim_1_1_bounds.html#a054e3278ee18ec6b911e5fe3a87e2455',1,'galsim::Bounds']]],
   ['isexactatnodes',['isExactAtNodes',['../classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0',1,'galsim::Interpolant::isExactAtNodes()'],['../classgalsim_1_1_interpolant2d.html#abdb3086ffff98d62faae9d173f8d0618',1,'galsim::Interpolant2d::isExactAtNodes()'],['../classgalsim_1_1_interpolant_x_y.html#a311aa2d28d4b106424019e69081da03b',1,'galsim::InterpolantXY::isExactAtNodes()']]],
+  ['islogf',['isLogF',['../classgalsim_1_1table_1_1_lookup_table.html#ab4ccd8ff431f6195b2f507959f058fd3',1,'galsim::table::LookupTable']]],
+  ['islogx',['isLogX',['../classgalsim_1_1table_1_1_lookup_table.html#a24cb6915944fc0a1e69e54bb41ff3860',1,'galsim::table::LookupTable']]],
   ['issameshapeas',['isSameShapeAs',['../classgalsim_1_1_bounds.html#af749fd142e32cd5d0498ff18565324d5',1,'galsim::Bounds']]]
 ];

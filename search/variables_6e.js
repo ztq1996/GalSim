@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['n_5fx',['n_x',['../classgalsim_1_1table_1_1_lookup_table.html#a4388cefd390d96ced0a1329e0c52c59c',1,'galsim::table::LookupTable']]],
   ['native_5fbyteorder',['native_byteorder',['../namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc',1,'galsim::fits']]],
   ['ncols',['ncols',['../classgalsim_1_1catalog_1_1_input_catalog.html#a63d132457537c89ff8cfca761a7a759f',1,'galsim::catalog::InputCatalog']]],
   ['nobjects',['nobjects',['../classgalsim_1_1catalog_1_1_input_catalog.html#ab6d846b7f29f72db13ea11842045446e',1,'galsim.catalog.InputCatalog.nobjects()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ab2cd5eb6336bf4431a0377af2e026ef5',1,'galsim.real.RealGalaxyCatalog.nobjects()']]],

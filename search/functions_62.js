@@ -14,6 +14,7 @@ var searchData=
   ['builddatacube',['BuildDataCube',['../namespacegalsim_1_1config_1_1process.html#a65ef8a95e0df55d50184f9e159b14001',1,'galsim::config::process']]],
   ['buildfits',['BuildFits',['../namespacegalsim_1_1config_1_1process.html#aa8a1a8605c8c243f3a614fd2b749515b',1,'galsim::config::process']]],
   ['buildgal',['BuildGal',['../namespacegalsim_1_1config_1_1stamp.html#a974de3e2e2a4a2cc8c258bf935777b1f',1,'galsim::config::stamp']]],
+  ['buildgriddedshears',['buildGriddedShears',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a8ffabf0f0163723677400baa92d2ee6c',1,'galsim::lensing::PowerSpectrum']]],
   ['buildgsobject',['BuildGSObject',['../namespacegalsim_1_1config_1_1gsobject.html#a07fc9be6755a477ed2e4fbb323023926',1,'galsim::config::gsobject']]],
   ['buildimage',['BuildImage',['../namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a',1,'galsim::config::image']]],
   ['buildimages',['BuildImages',['../namespacegalsim_1_1config_1_1image.html#a2c6a709c9c894f223063f759d23ca4e7',1,'galsim::config::image']]],

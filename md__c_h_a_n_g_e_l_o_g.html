@@ -81,7 +81,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes from v0.3 to current version: </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>None so far. </p>
+<div class="textblock"><ul>
+<li>Option for shears from a power spectrum: use a tabulated P(k), either input as arrays or read in from a file, for example from a cosmological shear power spectrum calculator. Also, the PowerSpectrum class now properly handles conversions between different units for P(k) and the galaxy positions at which we are calculating shear. Finally, an important bug in how the shears were generated from the power spectrum (which resulted in issues with overall normalization) was fixed. (Issue #305)</li>
+</ul>
+<ul>
+<li>An optimization of the InterpolatedImage constructor. (Issue #305)</li>
+</ul>
+<ul>
+<li>A work-around for a pyfits bug that made our Rice-compressed output files (using pyfits) unreadable by ds9. (Issue #305)</li>
+</ul>
+<ul>
+<li>There is now a python interface to C++ tables that can be used for interpolation in a more general context. (Issue #305) </li>
+</ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

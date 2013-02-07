@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>tests/ : unit tests.</li>
 </ul>
 <h2>Demonstration scripts</h2>
-<p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>-<code>demo10.py</code>, and can be run either using (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, or by doing <code>scons examples</code> and then using the executable <code>bin/demo1</code>. A completely parallel sequence of configuration scripts, <code>demo1.yaml</code>-<code>demo10.yaml</code>, demonstrates how to make the same set of simulations using config scripts that can be input to <code>bin/galsim_yaml</code>. As the project develops through further versions, and adds further capabilities to the software, more demo scripts will be added to <code>examples/</code> to illustrate what GalSim can do.</p>
+<p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>-<code>demo11.py</code>, and can be run either using (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, or by doing <code>scons examples</code> and then using the executable <code>bin/demo1</code>. A completely parallel sequence of configuration scripts, <code>demo1.yaml</code>-<code>demo11.yaml</code>, demonstrates how to make the same set of simulations using config scripts that can be input to <code>bin/galsim_yaml</code>. As the project develops through further versions, and adds further capabilities to the software, more demo scripts will be added to <code>examples/</code> to illustrate what GalSim can do.</p>
 <h2>Additional scripts</h2>
 <p>While the demo scripts can be run from the command-line while sitting in <code>examples/</code> without any arguments, the remaining scripts are auxiliary utilities that take various command-line arguments, which are always explained in comments at the top of the file.</p>
 <ul>
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Constant shears and lensing magnifications can be applied to the galaxies.</li>
 </ul>
 <ul>
-<li>Non-constant shears and magnifications can be drawn from a shear field expected for an NFW profile dark matter halo (as for weak lensing by galaxy clusters). For gridded galaxy positions, lensing shears can be drawn randomly from a specified shear power spectrum.</li>
+<li>Non-constant shears and magnifications can be drawn from a shear field expected for an NFW profile dark matter halo (as for weak lensing by galaxy clusters). For gridded galaxy positions, lensing shears can be drawn randomly from a specified shear power spectrum, and they can then be interpolated to non-gridded positions.</li>
 </ul>
 <ul>
 <li>Simulating correlated Gaussian noise fields as according to user-specified, correlation functions derived from images.</li>
@@ -183,9 +183,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>In addition to carrying out further testing on some existing parts of the code, we plan to add the following additional capabilities in future versions of GalSim:</p>
 <ul>
 <li>PSFs from stochastic atmosphere models.</li>
-</ul>
-<ul>
-<li>Lensing shears from a power spectrum for arbitrary (non-gridded) galaxy positions. In addition, further testing of the power spectrum code will be done.</li>
 </ul>
 <ul>
 <li>Self-consistent shears AND magnifications from a power spectrum.</li>

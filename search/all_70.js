@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['p_5fb',['p_B',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a9f7b0b85218b8d8e726f2dcbaea9910b',1,'galsim.lensing.PowerSpectrum.p_B()'],['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a590eb2bc9c0336096b740c12159e14aa',1,'galsim.lensing.PowerSpectrumRealizer.p_B()']]],
-  ['p_5fe',['p_E',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a27b0f8b55775f6f42b203b82e0c7230b',1,'galsim.lensing.PowerSpectrum.p_E()'],['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a70e8b3fc86a9bce8bd8992e332b7727e',1,'galsim.lensing.PowerSpectrumRealizer.p_E()']]],
+  ['p_5fb',['p_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a590eb2bc9c0336096b740c12159e14aa',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['p_5fe',['p_E',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a70e8b3fc86a9bce8bd8992e332b7727e',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['parse_5fcompression',['parse_compression',['../namespacegalsim_1_1fits.html#a3fa664c9b57c5776ff6ed83432697883',1,'galsim::fits']]],
   ['parsec',['Parsec',['../_astronomical_constants_8h.html#aab83e617ec86afa1bb20cf937b9004ea',1,'AstronomicalConstants.h']]],
   ['parsevalue',['ParseValue',['../namespacegalsim_1_1config_1_1value.html#ab13260e735ec89b23905a567129c6ff5',1,'galsim::config::value']]],
