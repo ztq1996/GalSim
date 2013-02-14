@@ -231,7 +231,7 @@ otool -L &lt;YOUR_BOOST_LIB_DIR&gt;/libboost_python&lt;POSSIBLE_SUFFIX&gt;.dylib
 <p>These can be considered a tutorial on getting up to speed with GalSim. Reading through these in order will introduce you to how to use most of the features of GalSim in Python.</p>
 <p>There are also a corresponding set of config files: demo1.yaml, demo2.yaml, ...</p>
 <p>These files can be run using the executable galsim_yaml, and will produce the same output images as the Python scripts. They are also well commented, and can be considered a parallel tutorial for learning the config file usage of GalSim.</p>
-<p>All demo scripts are designed to be run in the <code>GalSim/examples</code> directory. This includes the demo executables, which can be found in <code>GalSim/bin/</code>.</p>
+<p>All demo scripts are designed to be run in the <code>GalSim/examples</code> directory. Or, the executable versions of the demos in <code>GalSim/bin</code> (which are the outputs of running <code>scons examples</code>) can be run from either <code>GalSim/bin</code> or <code>GalSim/examples</code>.</p>
 <h1>4. Platform-specific notes</h1>
 <h2>i) Linux</h2>
 <p>The vast majority of Linux distributions provide installable packages for most of our dependencies. In may cases, however, it is also necessary to install "-devel" or "-dev" packages (e.g. <code>python-dev</code> or <code>libboost-dev</code> on Debian- derivatives). However, as above we stress that you should make sure that the version of Python that Boost is built against must be the same as that you intend to use for running GalSim.</p>
