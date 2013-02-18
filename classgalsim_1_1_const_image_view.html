@@ -127,8 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab9af9df9c99a7058ef76e9fac8cf9ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor from a <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> makes a new view of the same data.  <a href="#ab9af9df9c99a7058ef76e9fac8cf9ce0"></a><br/></td></tr>
 <tr class="memitem:a41a8d3c8522cd26bc7b9fd27154b4f1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_const_image_view.html#a41a8d3c8522cd26bc7b9fd27154b4f1b">ConstImageView</a> (const <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="memdesc:a41a8d3c8522cd26bc7b9fd27154b4f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat the same copy constructor functionality for <a class="el" href="classgalsim_1_1_const_image_view.html" title="ConstImageView class views an Image in a read-only context.">ConstImageView</a> to make sure the compiler doesn't make the default one.  <a href="#a41a8d3c8522cd26bc7b9fd27154b4f1b"></a><br/></td></tr>
-<tr class="memitem:a5ac8e0d5572293b84fbd257ce320e752"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_const_image_view.html#a5ac8e0d5572293b84fbd257ce320e752">view</a> () const </td></tr>
-<tr class="memdesc:a5ac8e0d5572293b84fbd257ce320e752"><td class="mdescLeft">&#160;</td><td class="mdescRight">View just returns itself.  <a href="#a5ac8e0d5572293b84fbd257ce320e752"></a><br/></td></tr>
+<tr class="memitem:a306ad6c68644cbdd72c5831be06fe703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_const_image_view.html#a306ad6c68644cbdd72c5831be06fe703">view</a> () const </td></tr>
+<tr class="memdesc:a306ad6c68644cbdd72c5831be06fe703"><td class="mdescLeft">&#160;</td><td class="mdescRight">View just returns itself.  <a href="#a306ad6c68644cbdd72c5831be06fe703"></a><br/></td></tr>
 <tr class="memitem:a393950862fcb10d43c584b9a5f5cd486"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a393950862fcb10d43c584b9a5f5cd486">getScale</a> () const </td></tr>
 <tr class="memdesc:a393950862fcb10d43c584b9a5f5cd486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel scale.  <a href="#a393950862fcb10d43c584b9a5f5cd486"></a><br/></td></tr>
 <tr class="memitem:a5e869c14c3f711b6662a81db5b32daf2"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5e869c14c3f711b6662a81db5b32daf2">getOwner</a> () const </td></tr>
@@ -155,6 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a214d240c918e003f6d7409c0cefb9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the center of the image, changing the logical location of the pixels.  <a href="#a214d240c918e003f6d7409c0cefb9c5b"></a><br/></td></tr>
 <tr class="memitem:a1b2f0e383636b33da939ca9660e75b13"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a1b2f0e383636b33da939ca9660e75b13">getBounds</a> () const </td></tr>
 <tr class="memdesc:a1b2f0e383636b33da939ca9660e75b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bounding box of the image.  <a href="#a1b2f0e383636b33da939ca9660e75b13"></a><br/></td></tr>
+<tr class="memitem:ac4787819c640456776f1140511cc4137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4787819c640456776f1140511cc4137">getPaddedSize</a> (float pad_factor) const </td></tr>
+<tr class="memdesc:ac4787819c640456776f1140511cc4137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the image in one dimension after padding.  <a href="#ac4787819c640456776f1140511cc4137"></a><br/></td></tr>
 <tr class="memitem:a6fdf90fe50b53af75d1940d83f68350f"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a6fdf90fe50b53af75d1940d83f68350f">operator()</a> (int xpos, int ypos) const </td></tr>
 <tr class="memdesc:a6fdf90fe50b53af75d1940d83f68350f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unchecked element access.  <a href="#a6fdf90fe50b53af75d1940d83f68350f"></a><br/></td></tr>
 <tr class="memitem:a0b482c854849b482f0e90257f02db3f3"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a0b482c854849b482f0e90257f02db3f3">at</a> (int xpos, int ypos) const </td></tr>
@@ -518,6 +520,34 @@ template&lt;typename T&gt; </div>
 
 <p>Return a shared pointer that manages the lifetime of the image's pixels. </p>
 <p>The actual pointer will point to a parent image rather than the image itself if this is a subimage. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4787819c640456776f1140511cc4137"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::getPaddedSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pad_factor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the size of the image in one dimension after padding. </p>
 
 </div>
 </div>
@@ -1012,14 +1042,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5ac8e0d5572293b84fbd257ce320e752"></a>
+<a class="anchor" id="a306ad6c68644cbdd72c5831be06fe703"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt;T&gt;&amp; <a class="el" href="classgalsim_1_1_const_image_view.html">galsim::ConstImageView</a>&lt; T &gt;::view </td>
+          <td class="memname"><a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt;T&gt; <a class="el" href="classgalsim_1_1_const_image_view.html">galsim::ConstImageView</a>&lt; T &gt;::view </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

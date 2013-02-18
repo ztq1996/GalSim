@@ -185,10 +185,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab978e745e1577a6ddc8bc4477e8c1832"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#ab978e745e1577a6ddc8bc4477e8c1832">interpolant</a></td></tr>
+<tr class="memitem:a65054ef63f92e53c705bbcc02e5de59c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a65054ef63f92e53c705bbcc02e5de59c">x_interpolant</a></td></tr>
+<tr class="memitem:a6be60ab978a6c59c49a43789367241ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a6be60ab978a6c59c49a43789367241ad">k_interpolant</a></td></tr>
 <tr class="memitem:a9da5dbe904a4f4f1de7c803182f636a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a9da5dbe904a4f4f1de7c803182f636a8">catalog_file</a></td></tr>
 <tr class="memitem:a6d387b25cc2c0786cd9decc0950d3d33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a6d387b25cc2c0786cd9decc0950d3d33">index</a></td></tr>
 <tr class="memitem:a93ca5f0a7e3a589671f6efca401d360d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a93ca5f0a7e3a589671f6efca401d360d">pixel_scale</a></td></tr>
+<tr class="memitem:a0f272a3e4c9aa4fd012a06bbfb76ffa2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a0f272a3e4c9aa4fd012a06bbfb76ffa2">pad_variance</a></td></tr>
 <tr class="memitem:adae1052ce425c743ef5e64ab34df6f06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#adae1052ce425c743ef5e64ab34df6f06">original_image</a></td></tr>
 <tr class="memitem:a69443f93bbf84cec021e591755aa03a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html#a69443f93bbf84cec021e591755aa03a7">original_PSF</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
@@ -200,8 +202,11 @@ Public Attributes</h2></td></tr>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> drawShoot method is unavailable for <a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> instances.</p>
 <h2>Initialization</h2>
 <pre class="fragment">real_galaxy = galsim.RealGalaxy(real_galaxy_catalog, index=None, id=None, random=False, 
-                                rng=None, interpolant=None)
+                                rng=None, x_interpolant=None, k_interpolant=None,
+                                flux=None, pad_factor = 0, noise_pad=False, pad_image=None,
+                                use_cache = True)
 </pre><p>This initializes real_galaxy with three <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> objects (one for the deconvolved galaxy, and saved versions of the original HST image and PSF). Note that there are multiple keywords for choosing a galaxy; exactly one must be set. In future we may add more such options, e.g., to choose at random but accounting for the non-constant weight factors (probabilities for objects to make it into the training sample). Like other GSObjects, the <a class="el" href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> contains an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute which is an <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a> representing the deconvolved HST galaxy.</p>
+<p>Note that preliminary tests suggest that for optimal balance between accuracy and speed, <code>k_interpolant</code> and <code>pad_factor</code> should be kept at their default values. The user should be aware that significant inaccuracy can result from using other combinations of these parameters; see devel/modules/finterp.pdf, especially table 1, in the GalSim repository.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">real_galaxy_catalog</td><td>A RealGalaxyCatalog object with basic information about where to find the data, etc. </td></tr>
@@ -209,8 +214,13 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">id</td><td>Object ID for the desired galaxy in the catalog. </td></tr>
     <tr><td class="paramname">random</td><td>If true, then just select a completely random galaxy from the catalog. </td></tr>
     <tr><td class="paramname">rng</td><td>A random number generator to use for selecting a random galaxy (may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> or None) </td></tr>
-    <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default `interpolant = galsim.Lanczos(5)']. </td></tr>
-    <tr><td class="paramname">flux</td><td>Total flux, if None then original flux in galaxy is adopted without change [default <code>flux = None</code>].</td></tr>
+    <tr><td class="paramname">x_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which real-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default `interpolant = <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">galsim.Lanczos</a>(5,...)']. </td></tr>
+    <tr><td class="paramname">k_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which k-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. We strongly recommend leaving this parameter at its default value; see text above for details. [default `interpolant = Quintic()']. </td></tr>
+    <tr><td class="paramname">flux</td><td>Total flux, if None then original flux in galaxy is adopted without change [default <code>flux = None</code>]. </td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. We strongly recommend leaving this parameter at its default value; see text above for details. [Default <code>pad_factor = 0</code>.] </td></tr>
+    <tr><td class="paramname">noise_pad</td><td>When creating the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute for this <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, pad the SBInterpolated image with zeros, or with noise of a level specified in the training dataset? There are several options here: Use <code>noise_pad = False</code> if you wish to pad with zeros. Use <code>noise_pad = True</code> if you wish to pad with uncorrelated noise of the proper variance. Set <code>noise_pad</code> equal to a galsim.ImageCorrFunc, an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, or a filename for a file containing an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of an example noise field that will be used to calculate the noise power spectrum and generate noise in the padding region. In the last case, if the same file is used repeatedly, then use of the <code>use_cache</code> keyword (see below) can be used to prevent the need for repeated galsim.ImageCorrFunc initializations. [default <code>noise_pad = False</code>] </td></tr>
+    <tr><td class="paramname">pad_image</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be used for deterministically padding the original image. This can be specified in two ways: (a) as a <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a>; or (b) as a string which is interpreted as a filename containing an image to use. The size of the image that is passed in is taken to specify the amount of padding, and so the <code>pad_factor</code> keyword should be equal to 1, i.e., no padding. The <code>pad_image</code> scale is ignored, and taken to be equal to that of the <code>image</code>. Note that <code>pad_image</code> can be used together with <code>noise_pad</code>. However, the user should be careful to ensure that the image used for padding has roughly zero mean. The purpose of this keyword is to allow for a more flexible representation of some noise field around an object; if the user wishes to represent the sky level around an object, they should do that when they have drawn the final image instead. (Default <code>pad_image = None</code>.) </td></tr>
+    <tr><td class="paramname">use_cache</td><td>Specify whether to cache noise_pad read in from a file to save having to build an ImageCorrFunc repeatedly from the same image. (Default <code>use_cache = True</code>)</td></tr>
   </table>
   </dd>
 </dl>
@@ -261,13 +271,43 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
+          <td class="paramname"><em>x_interpolant</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>k_interpolant</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pad_factor</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>noise_pad</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pad_image</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>use_cache</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1877,12 +1917,12 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 
 </div>
 </div>
-<a class="anchor" id="ab978e745e1577a6ddc8bc4477e8c1832"></a>
+<a class="anchor" id="a6be60ab978a6c59c49a43789367241ad"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.base.RealGalaxy.interpolant</td>
+          <td class="memname">galsim.base.RealGalaxy.k_interpolant</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1907,6 +1947,18 @@ assert added_flux &gt; 0.99 * obj.getFlux()
       <table class="memname">
         <tr>
           <td class="memname">galsim.base.RealGalaxy.original_PSF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f272a3e4c9aa4fd012a06bbfb76ffa2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.RealGalaxy.pad_variance</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1941,6 +1993,18 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a65054ef63f92e53c705bbcc02e5de59c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.RealGalaxy.x_interpolant</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

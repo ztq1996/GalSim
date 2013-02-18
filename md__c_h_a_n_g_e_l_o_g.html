@@ -82,6 +82,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><ul>
+<li>When making GSObjects out of real images that have noise, it is possible to pad those images with a noise field (either correlated or uncorrelated) so that there is not an abrupt change of properties in the noise field when crossing the border into the padding region. (Issue #238)</li>
+</ul>
+<ul>
 <li>Option for shears from a power spectrum: use a tabulated P(k), either input as arrays or read in from a file, for example from a cosmological shear power spectrum calculator. Also, the PowerSpectrum class now properly handles conversions between different units for P(k) and the galaxy positions at which we are calculating shear. Finally, an important bug in how the shears were generated from the power spectrum (which resulted in issues with overall normalization) was fixed. (Issue #305)</li>
 </ul>
 <ul>

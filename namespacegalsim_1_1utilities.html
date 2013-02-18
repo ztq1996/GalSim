@@ -110,8 +110,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a9e5623a48fc511636b486d42816ba940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for going from (g1, g2) -&gt; (e1, e2).  <a href="#a9e5623a48fc511636b486d42816ba940"></a><br/></td></tr>
 <tr class="memitem:abbd8593ea30d16263c2f03e1147b5b27"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27">rand_arr</a></td></tr>
 <tr class="memdesc:abbd8593ea30d16263c2f03e1147b5b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a 2d array of random deviates (of any sort).  <a href="#abbd8593ea30d16263c2f03e1147b5b27"></a><br/></td></tr>
-<tr class="memitem:af739aae79169d51cc299bb62101fe56f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#af739aae79169d51cc299bb62101fe56f">eval_sbinterpolatedimage</a></td></tr>
-<tr class="memdesc:af739aae79169d51cc299bb62101fe56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the value of some <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> at a list of positions.  <a href="#af739aae79169d51cc299bb62101fe56f"></a><br/></td></tr>
 <tr class="memitem:acea0edb61ecb4fee9e1ed17af11a1559"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#acea0edb61ecb4fee9e1ed17af11a1559">convert_interpolant_to_2d</a></td></tr>
 <tr class="memdesc:acea0edb61ecb4fee9e1ed17af11a1559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a given interpolant to an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> if it is given as a string or 1-d.  <a href="#acea0edb61ecb4fee9e1ed17af11a1559"></a><br/></td></tr>
 </table>
@@ -131,49 +129,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convert a given interpolant to an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> if it is given as a string or 1-d. </p>
-
-</div>
-</div>
-<a class="anchor" id="af739aae79169d51cc299bb62101fe56f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.utilities.eval_sbinterpolatedimage </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sbi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>x_list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>y_list</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Function to get the value of some <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> at a list of positions. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sbi</td><td>An <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> on which we want to carry out the interpolation. </td></tr>
-    <tr><td class="paramname">x_list</td><td>A list of the x values at which we want to do the interpolation. </td></tr>
-    <tr><td class="paramname">y_list</td><td>A list of the y values at which we awnt to do the interpolation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>A list of the image values at the desired (x, y) positions. </dd></dl>
 
 </div>
 </div>

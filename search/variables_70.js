@@ -2,6 +2,7 @@ var searchData=
 [
   ['p_5fb',['p_B',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a590eb2bc9c0336096b740c12159e14aa',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['p_5fe',['p_E',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a70e8b3fc86a9bce8bd8992e332b7727e',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['pad_5fvariance',['pad_variance',['../classgalsim_1_1base_1_1_real_galaxy.html#a0f272a3e4c9aa4fd012a06bbfb76ffa2',1,'galsim::base::RealGalaxy']]],
   ['parsec',['Parsec',['../_astronomical_constants_8h.html#aab83e617ec86afa1bb20cf937b9004ea',1,'AstronomicalConstants.h']]],
   ['pixel_5fscale',['pixel_scale',['../classgalsim_1_1base_1_1_real_galaxy.html#a93ca5f0a7e3a589671f6efca401d360d',1,'galsim.base.RealGalaxy.pixel_scale()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a9b9606a77393d190743f66bb52f912d3',1,'galsim.real.RealGalaxyCatalog.pixel_scale()']]],
   ['planck',['Planck',['../_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74',1,'AstronomicalConstants.h']]],

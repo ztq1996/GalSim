@@ -184,30 +184,55 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac5367134c984d8252548001ec17837fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#ac5367134c984d8252548001ec17837fa">interpolant</a></td></tr>
+<tr class="memitem:ac25ade62ba7704e1f0df9d263f9d19d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#ac25ade62ba7704e1f0df9d263f9d19d6">x_interpolant</a></td></tr>
+<tr class="memitem:ada7191439f32606474372dfd6eb86a02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#ada7191439f32606474372dfd6eb86a02">k_interpolant</a></td></tr>
+<tr class="memitem:a6c66086c5f0a1b44eed6bc2d67d9341c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#a6c66086c5f0a1b44eed6bc2d67d9341c">x_size</a></td></tr>
+<tr class="memitem:a22def7fcf7b6aca116cab54676f0105a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html#a22def7fcf7b6aca116cab54676f0105a">y_size</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class describing non-parametric objects specified using an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, which can be interpolated for the purpose of carrying out transformations. </p>
-<p>The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and an interpolant are used to create an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. The <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> class is useful if you have a non-parametric description of an object as an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, that you wish to manipulate / transform using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods such as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2...">applyMagnification()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6b547741eeec4086de9abe227dae9325" title="Apply a (dx, dy) shift to this object.">applyShift()</a>, etc. The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be any <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> (i.e., <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>, or <a class="el" href="classgalsim_1_1_const_image_view.html" title="ConstImageView class views an Image in a read-only context.">ConstImageView</a>).</p>
+<p>The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and optional interpolants are used to create an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. The <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> class is useful if you have a non-parametric description of an object as an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, that you wish to manipulate / transform using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods such as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2...">applyMagnification()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6b547741eeec4086de9abe227dae9325" title="Apply a (dx, dy) shift to this object.">applyShift()</a>, etc. The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> can be any <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> (i.e., <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>, or <a class="el" href="classgalsim_1_1_const_image_view.html" title="ConstImageView class views an Image in a read-only context.">ConstImageView</a>).</p>
 <p>The constructor needs to know how the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> was drawn: is it an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of flux or of surface brightness? Since our default for drawing Images using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a> and <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> is that <code>normalization == 'flux'</code> (i.e., sum of pixel values equals the object flux), the default for the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> class is to assume the same flux normalization. However, the user can specify 'surface brightness' normalization if desired, or alternatively, can instead specify the desired flux for the object.</p>
 <p>If the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> has a scale associated with it, then there is no need to specify an input scale <code>dx</code>.</p>
-<p>If no interpolant is specified then by default a quintic interpolant is used. The user also has to specify how much zero-padding to include around an input image; by default, a value of 4 is used. Note that both the interpolant and the <code>pad_factor</code> determine the accuracy of interpolation on the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when carrying out operations such as shifting, shearing, dilating, and rotating. For some details of the typical accuracy of interpolants used in GalSim as a function of the amount of padding, see table 1 in devel/modules/finterp.pdf in the GalSim repository. A quick summary is that for precise calculations (~1% accuracy or better), nearest-neighbor and linear interpolants should not be used; cubic, quintic, and <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> with n=3 are acceptable with &gt;4x padding; and higher-order <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> is okay even with just 2x padding. There is a tradeoff between speed and accuracy, and from this perspective, the quintic interpolant with 4x padding seems optimal (errors &lt;0.001), though for precise tests of shears even greater accuracy is needed, so either 6x padding should be used, or a higher order <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolant should be used (modified to conserve flux). The user is given complete freedom to choose interpolants and pad factors, and no warnings are raised when the code is modified to choose some combination that is known to give significant error.</p>
+<p>The user may optionally specify an interpolant, <code>x_interpolant</code>, for real-space manipulations (e.g., shearing, resampling). If none is specified, then by default, a 5th order <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolant is used. The user may also choose to specify two quantities that can affect the Fourier space convolution: the k-space interpolant (<code>k_interpolant</code>) and the amount of padding to include around the original images (<code>pad_factor</code>). The default values for <code>x_interpolant</code>, <code>k_interpolant</code>, and <code>pad_factor</code> were chosen based on preliminary tests suggesting that they lead to a high degree of accuracy without being excessively slow. Users should be particularly wary about changing <code>k_interpolant</code> and <code>pad_factor</code> from the defaults without careful testing. The user is given complete freedom to choose interpolants and pad factors, and no warnings are raised when the code is modified to choose some combination that is known to give significant error. More details can be found in devel/modules/finterp.pdf, especially table 1, in the GalSim repository.</p>
+<p>The user can choose to have the image padding use zero (default), <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> random noise of some variance, or a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> but correlated noise field that is specified either as an ImageCorrFunc, an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (from which a noise correlation function is derived), or a string (interpreted as a filename containing an image to use for deriving the noise correlation function). The user can also pass in a random number generator to be used for noise generation. Finally, the user can pass in a <code>pad_image</code> for deterministic image padding.</p>
+<p>By default, the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a> recalculates the Fourier-space step and number of points to use for further manipulations, rather than using the most conservative possibility. For typical objects representing galaxies and PSFs this can easily make the difference between several seconds (conservative) and 0.04s (recalculated). However, the user can turn off this option, and may especially wish to do so when using images that do not contain a high S/N object - e.g., images of noise fields.</p>
 <h2>Initialization</h2>
-<pre class="fragment">&gt;&gt;&gt; interpolated_image = galsim.InterpolatedImage(image, interpolant = None,
+<pre class="fragment">&gt;&gt;&gt; interpolated_image = galsim.InterpolatedImage(image, x_interpolant = None,
+                                                  k_interpolant = None,
                                                   normalization = 'f', dx = None,
-                                                  flux = None, pad_factor = 0.)
+                                                  flux = None, pad_factor = 0.,
+                                                  noise_pad = 0., rng = None,
+                                                  pad_image = None,
+                                                  calculate_stepk = True,
+                                                  calculate_maxk = True,
+                                                  use_cache = True)
 </pre><p>Initializes interpolated_image as a galsim.InterpolatedImage() instance.</p>
+<p>For comparison of the case of padding with noise or zero when the image itself includes noise, compare <code>im1</code> and <code>im2</code> from the following code snippet (which can be executed from the examples/ directory): </p>
+<pre class="fragment">image = galsim.fits.read('data/147246.0_150.416558_1.998697_masknoise.fits')
+int_im1 = galsim.InterpolatedImage(image)
+int_im2 = galsim.InterpolatedImage(image, noise_pad='../tests/blankimg.fits')
+im1 = galsim.ImageF(1000,1000)
+im2 = galsim.ImageF(1000,1000)
+im1 = int_im1.draw(im1)
+im2 = int_im2.draw(im2)
+</pre><p>Examination of these two images clearly shows how padding with a correlated noise field that is similar to the one in the real data leads to a more reasonable appearance for the result when re-drawn at a different size.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> from which to construct the object. This may be either an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a>) instance or a string indicating a fits file from which to read the image. </td></tr>
-    <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. (Default <code>interpolant = galsim.Quintic()</code>) </td></tr>
+    <tr><td class="paramname">x_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which real-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. (Default <code>x_interpolant = galsim.Quintic()</code>) </td></tr>
+    <tr><td class="paramname">k_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which k-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. We strongly recommend leaving this parameter at its default value; see text above for details. (Default <code>k_interpolant = galsim.Quintic()</code>) </td></tr>
     <tr><td class="paramname">normalization</td><td>Two options for specifying the normalization of the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>: "flux" or "f" means that the sum of the pixels is normalized to be equal to the total flux. "surface brightness" or "sb" means that the pixels sample the surface brightness distribution at each location. (Default <code>normalization = "flux"</code>) </td></tr>
     <tr><td class="paramname">dx</td><td>If provided, use this as the pixel scale for the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>; this will override the pixel scale stored by the provided <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, in any. If <code>dx</code> is <code>None</code>, then take the provided image's pixel scale. (Default <code>dx = None</code>.) </td></tr>
     <tr><td class="paramname">flux</td><td>Optionally specify a total flux for the object, which overrides the implied flux normalization from the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> itself. </td></tr>
-    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. Note that the padding is with zeros; could be changed in future. (Default <code>pad_factor = 0</code>.) </td></tr>
-    <tr><td class="paramname">calculate_stepk</td><td>Set as <code>True</code> to perform an internal determination of the extent of the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the stepsize in the Fourier space lookup table. </td></tr>
-    <tr><td class="paramname">calculate_maxk</td><td>Set as <code>True</code> to perform an internal determination of the highest spatial frequency needed to accurately render the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the extent of the Fourier space lookup table.</td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. We strongly recommend leaving this parameter at its default value; see text above for details. (Default <code>pad_factor = 0</code>, unless a <code>pad_image</code> is passed in, which results in a default value of <code>pad_factor = 1</code>.) </td></tr>
+    <tr><td class="paramname">noise_pad</td><td>Noise properties to use when padding the original image with noise. This can be specified in several ways: (a) as a float, which is interpreted as being a variance to use when padding with uncorrelated <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a> noise; (b) as a galsim.ImageCorrFunc, which contains information about the desired noise power spectrum; (c) as a <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a> of a noise field, which is used to calculate the desired noise power spectrum; or (d) as a string which is interpreted as a filename containing an example noise field with the proper noise power spectrum. It is important to keep in mind that the calculation of a galsim.ImageCorrFunc is a non-negligible amount of overhead, so the recommended ways are (b) or (d). In the case of (d), if the same file is used repeatedly, then use of the <code>use_cache</code> keyword (see below) can be used to prevent the need for repeated galsim.ImageCorrFunc initializations. (Default <code>noise_pad = 0.</code>, i.e., pad with zeros.) </td></tr>
+    <tr><td class="paramname">rng</td><td>If padding by noise, the user can optionally supply the random noise generator to use for drawing random numbers as <code>rng</code> (may be any kind of <code><a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a></code> object). If <code>rng=None</code>, one will be automatically created, using the time as a seed. (Default <code>rng = None</code>) </td></tr>
+    <tr><td class="paramname">pad_image</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be used for deterministically padding the original image. This can be specified in two ways: (a) as a <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a>; or (b) as a string which is interpreted as a filename containing an image to use. The size of the image that is passed in is taken to specify the amount of padding, and so the <code>pad_factor</code> keyword should be equal to 1, i.e., no padding. The <code>pad_image</code> scale is ignored, and taken to be equal to that of the <code>image</code>. Note that <code>pad_image</code> can be used together with <code>noise_pad</code>. However, the user should be careful to ensure that the image used for padding has roughly zero mean. The purpose of this keyword is to allow for a more flexible representation of some noise field around an object; if the user wishes to represent the sky level around an object, they should do that when they have drawn the final image instead. (Default <code>pad_image = None</code>.) </td></tr>
+    <tr><td class="paramname">calculate_stepk</td><td>Specify whether to perform an internal determination of the extent of the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the stepsize in the Fourier space lookup table. (Default <code>calculate_stepk = True</code>) </td></tr>
+    <tr><td class="paramname">calculate_maxk</td><td>Specify whether to perform an internal determination of the highest spatial frequency needed to accurately render the object being represented by the <a class="el" href="classgalsim_1_1base_1_1_interpolated_image.html" title="A class describing non-parametric objects specified using an Image, which can be interpolated for the...">InterpolatedImage</a>; often this is useful in choosing an optimal value for the extent of the Fourier space lookup table. (Default <code>calculate_maxk = True</code>) </td></tr>
+    <tr><td class="paramname">use_cache</td><td>Specify whether to cache noise_pad read in from a file to save having to build an ImageCorrFunc repeatedly from the same image. (Default <code>use_cache = True</code>)</td></tr>
   </table>
   </dd>
 </dl>
@@ -234,7 +259,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
+          <td class="paramname"><em>x_interpolant</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>k_interpolant</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -264,13 +295,37 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>noise_pad</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pad_image</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>calculate_stepk</em> = <code>True</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>calculate_maxk</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>calculate_maxk</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>use_cache</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1840,12 +1895,12 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ac5367134c984d8252548001ec17837fa"></a>
+<a class="anchor" id="ada7191439f32606474372dfd6eb86a02"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.base.InterpolatedImage.interpolant</td>
+          <td class="memname">galsim.base.InterpolatedImage.k_interpolant</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1868,6 +1923,42 @@ assert added_flux &gt; 0.99 * obj.getFlux()
 <span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac25ade62ba7704e1f0df9d263f9d19d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.InterpolatedImage.x_interpolant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c66086c5f0a1b44eed6bc2d67d9341c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.InterpolatedImage.x_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a22def7fcf7b6aca116cab54676f0105a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.InterpolatedImage.y_size</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

@@ -170,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a214d240c918e003f6d7409c0cefb9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the center of the image, changing the logical location of the pixels.  <a href="#a214d240c918e003f6d7409c0cefb9c5b"></a><br/></td></tr>
 <tr class="memitem:a1b2f0e383636b33da939ca9660e75b13"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a1b2f0e383636b33da939ca9660e75b13">getBounds</a> () const </td></tr>
 <tr class="memdesc:a1b2f0e383636b33da939ca9660e75b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bounding box of the image.  <a href="#a1b2f0e383636b33da939ca9660e75b13"></a><br/></td></tr>
+<tr class="memitem:ac4787819c640456776f1140511cc4137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4787819c640456776f1140511cc4137">getPaddedSize</a> (float pad_factor) const </td></tr>
+<tr class="memdesc:ac4787819c640456776f1140511cc4137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the image in one dimension after padding.  <a href="#ac4787819c640456776f1140511cc4137"></a><br/></td></tr>
 <tr class="memitem:a5638c4bb87d3375382534d45b43ac2ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5638c4bb87d3375382534d45b43ac2ff">assignTo</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;rhs) const </td></tr>
 <tr class="memdesc:a5638c4bb87d3375382534d45b43ac2ff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a>'s assignTo just uses the normal copyFrom method.  <a href="#a5638c4bb87d3375382534d45b43ac2ff"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -733,6 +735,34 @@ template&lt;typename T&gt; </div>
 
 <p>Return a shared pointer that manages the lifetime of the image's pixels. </p>
 <p>The actual pointer will point to a parent image rather than the image itself if this is a subimage. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4787819c640456776f1140511cc4137"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::getPaddedSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pad_factor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the size of the image in one dimension after padding. </p>
 
 </div>
 </div>

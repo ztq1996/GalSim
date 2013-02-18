@@ -113,9 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a1ebbc0c5e533260fd3de78b99c388f5f">MultipleImageHelper</a> (const std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt; &gt; &amp;images, double dx=0., double pad_factor=0.)</td></tr>
 <tr class="memdesc:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a std::vector of images.  <a href="#a1ebbc0c5e533260fd3de78b99c388f5f"></a><br/></td></tr>
-<tr class="memitem:a573d7afba8597206249b5349269cc3f5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a573d7afba8597206249b5349269cc3f5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a573d7afba8597206249b5349269cc3f5">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, double dx=0., double pad_factor=0.)</td></tr>
-<tr class="memdesc:a573d7afba8597206249b5349269cc3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience constructor that only takes a single image.  <a href="#a573d7afba8597206249b5349269cc3f5"></a><br/></td></tr>
+<tr class="memitem:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#ac1ef0a40ea7a7de1c8b7ed911aed8132">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, double dx=0., double pad_factor=0., boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt; pad_image=<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt;())</td></tr>
+<tr class="memdesc:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience constructor that only takes a single image.  <a href="#ac1ef0a40ea7a7de1c8b7ed911aed8132"></a><br/></td></tr>
 <tr class="memitem:a7a93234c8f79236c29beac4b504a0894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a7a93234c8f79236c29beac4b504a0894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies are shallow, so can pass by value without any copying.  <a href="#a7a93234c8f79236c29beac4b504a0894"></a><br/></td></tr>
 <tr class="memitem:a45f6734db1655c7b9c85bd050d92e27e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a45f6734db1655c7b9c85bd050d92e27e">operator=</a> (const <a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;rhs)</td></tr>
@@ -189,7 +189,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a573d7afba8597206249b5349269cc3f5"></a>
+<a class="anchor" id="ac1ef0a40ea7a7de1c8b7ed911aed8132"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -211,7 +211,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pad_factor</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>pad_factor</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt;&#160;</td>
+          <td class="paramname"><em>pad_image</em> = <code><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt;&#160;T&#160;&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,6 +233,7 @@ template&lt;typename T &gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>Single input image </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>Stepsize between pixels in image data table (default value of <code>dx = 0.</code> checks the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> header for a suitable stepsize, sets to <code>1.</code> if none is found). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pad_factor</td><td>Multiple by which to increase the image size when zero-padding for the Fourier transform (default <code>pad_factor = 4</code>) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_image</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to use for padding the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, if <code>pad_factor</code> is not equal to 1. </td></tr>
   </table>
   </dd>
 </dl>
