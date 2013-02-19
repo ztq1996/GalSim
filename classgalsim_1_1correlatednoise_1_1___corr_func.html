@@ -499,7 +499,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">image</td><td>The input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> object. </td></tr>
     <tr><td class="paramname">dx</td><td>The pixel scale to adopt for the input image; should use the same units the <a class="el" href="classgalsim_1_1correlatednoise_1_1_image_corr_func.html" title="A class that represents 2D discrete correlation functions calculated from an input Image...">ImageCorrFunc</a> instance for which this is a method. If is not specified, <code>image.getScale()</code> is used instead. </td></tr>
-    <tr><td class="paramname">dev</td><td>Optional random deviate from which to draw pseudo-random numbers in generating the noise field. </td></tr>
+    <tr><td class="paramname">dev</td><td>Optional <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> from which to draw pseudo-random numbers in generating the noise field. </td></tr>
     <tr><td class="paramname">add_to_image</td><td>Whether to add to the existing image rather than clear out anything in the image before drawing. Note: This requires that the image has defined bounds (default <code>add_to_image = True</code>). </td></tr>
   </table>
   </dd>

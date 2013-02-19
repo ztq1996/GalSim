@@ -3,6 +3,7 @@ var searchData=
   ['photonarray',['PhotonArray',['../classgalsim_1_1_photon_array.html',1,'galsim']]],
   ['pixel',['Pixel',['../classgalsim_1_1base_1_1_pixel.html',1,'galsim::base']]],
   ['poissondeviate',['PoissonDeviate',['../classgalsim_1_1_poisson_deviate.html',1,'galsim']]],
+  ['poissonnoise',['PoissonNoise',['../classgalsim_1_1_poisson_noise.html',1,'galsim']]],
   ['position',['Position',['../classgalsim_1_1_position.html',1,'galsim']]],
   ['position_3c_20double_20_3e',['Position&lt; double &gt;',['../classgalsim_1_1_position.html',1,'galsim']]],
   ['powerspectrum',['PowerSpectrum',['../classgalsim_1_1lensing_1_1_power_spectrum.html',1,'galsim::lensing']]],

@@ -132,12 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a44170072ecfb1eef0d5275239f0c0e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution mean.  <a href="#a44170072ecfb1eef0d5275239f0c0e28"></a><br/></td></tr>
 <tr class="memitem:ae3e00a8651fd2f35df012a524fda238b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#ae3e00a8651fd2f35df012a524fda238b">setSigma</a> (double sigma)</td></tr>
 <tr class="memdesc:ae3e00a8651fd2f35df012a524fda238b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution standard deviation.  <a href="#ae3e00a8651fd2f35df012a524fda238b"></a><br/></td></tr>
-<tr class="memitem:a1015e5fd9a56be696b4b04e256ef0c61"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1015e5fd9a56be696b4b04e256ef0c61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a1015e5fd9a56be696b4b04e256ef0c61">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
-<tr class="memdesc:a1015e5fd9a56be696b4b04e256ef0c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Gaussian pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a1015e5fd9a56be696b4b04e256ef0c61"></a><br/></td></tr>
 <tr class="memitem:a543b97e77fec2fb80027da08321ebd73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a543b97e77fec2fb80027da08321ebd73">GaussianDeviate</a> (<a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;u_, double mean=0., double sigma=1.)</td></tr>
 <tr class="memitem:a085ec5390b40824c1202675a133793b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a085ec5390b40824c1202675a133793b0">~GaussianDeviate</a> ()</td></tr>
 <tr class="memitem:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">operator()</a> ()</td></tr>
+<tr class="memdesc:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a5c6ac1934a4f8297237dc6036f6cc87e"></a><br/></td></tr>
 <tr class="memitem:ad912d1739c87d7b13c5246a408e7cdbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#ad912d1739c87d7b13c5246a408e7cdbc">operator double</a> ()</td></tr>
 <tr class="memitem:a03c91202c223207cf04f61701a7c9b67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a03c91202c223207cf04f61701a7c9b67">getMean</a> ()</td></tr>
 <tr class="memitem:a2d6ba6f4227c2e83948a094c63e09274"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a2d6ba6f4227c2e83948a094c63e09274">getSigma</a> ()</td></tr>
@@ -343,32 +341,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a1015e5fd9a56be696b4b04e256ef0c61"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::GaussianDeviate::applyTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add Gaussian pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be noise-ified. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a03c91202c223207cf04f61701a7c9b67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -463,6 +435,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Draw a new random number from the distribution. </p>
+<p>This is invalid for a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> object that is not a derived class. However, we don't make it pure virtual, since we want to be able to make <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> objects a direct way to define a common seed for other Deviates. </p>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5c6ac1934a4f8297237dc6036f6cc87e"></a>
@@ -480,6 +457,8 @@ template&lt;typename T &gt; </div>
 
 <p>Draw a new random number from the distribution. </p>
 <dl class="section return"><dt>Returns:</dt><dd>A Gaussian deviate with current mean and sigma </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
 
 </div>
 </div>

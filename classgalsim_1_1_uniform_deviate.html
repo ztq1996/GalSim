@@ -125,12 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6ce631ce7c04536d4f76d12eb5225430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a6ce631ce7c04536d4f76d12eb5225430"></a><br/></td></tr>
 <tr class="memitem:a163ba4090b86b42b3919bb0467669d71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a163ba4090b86b42b3919bb0467669d71">operator()</a> ()</td></tr>
 <tr class="memdesc:a163ba4090b86b42b3919bb0467669d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a163ba4090b86b42b3919bb0467669d71"></a><br/></td></tr>
-<tr class="memitem:a62b1e492612f0a0ac9d2fd19382744a6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a62b1e492612f0a0ac9d2fd19382744a6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a62b1e492612f0a0ac9d2fd19382744a6">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
-<tr class="memdesc:a62b1e492612f0a0ac9d2fd19382744a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Uniform pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a62b1e492612f0a0ac9d2fd19382744a6"></a><br/></td></tr>
 <tr class="memitem:a3a6e3e6fb021a890727d06055bdb01a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a3a6e3e6fb021a890727d06055bdb01a3">UniformDeviate</a> ()</td></tr>
 <tr class="memitem:adfd14d34106c07641705832f56554b8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#adfd14d34106c07641705832f56554b8f">UniformDeviate</a> (const long lseed)</td></tr>
 <tr class="memitem:a163ba4090b86b42b3919bb0467669d71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a163ba4090b86b42b3919bb0467669d71">operator()</a> ()</td></tr>
+<tr class="memdesc:a163ba4090b86b42b3919bb0467669d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a163ba4090b86b42b3919bb0467669d71"></a><br/></td></tr>
 <tr class="memitem:a05f065ef77d130f4b79980721d2cb834"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a05f065ef77d130f4b79980721d2cb834">operator double</a> ()</td></tr>
 <tr class="memitem:a36af3510253f3ac19c00e0c2d4d1247a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">seed</a> ()</td></tr>
 <tr class="memdesc:a36af3510253f3ac19c00e0c2d4d1247a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a36af3510253f3ac19c00e0c2d4d1247a"></a><br/></td></tr>
@@ -255,32 +253,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a62b1e492612f0a0ac9d2fd19382744a6"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::UniformDeviate::applyTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add Uniform pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be noise-ified. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a05f065ef77d130f4b79980721d2cb834"></a>
 <div class="memitem">
 <div class="memproto">
@@ -309,6 +281,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Draw a new random number from the distribution. </p>
+<p>This is invalid for a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> object that is not a derived class. However, we don't make it pure virtual, since we want to be able to make <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> objects a direct way to define a common seed for other Deviates. </p>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a163ba4090b86b42b3919bb0467669d71"></a>
@@ -326,6 +303,8 @@ template&lt;typename T &gt; </div>
 
 <p>Draw a new random number from the distribution. </p>
 <dl class="section return"><dt>Returns:</dt><dd>A uniform deviate in the interval [0.,1.) </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
 
 </div>
 </div>

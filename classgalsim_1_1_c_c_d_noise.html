@@ -99,14 +99,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Class implementing basic CCD noise model.  
  <a href="classgalsim_1_1_c_c_d_noise.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_c_c_d_noise_8h_source.html">CCDNoise.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_noise_8h_source.html">Noise.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for galsim::CCDNoise:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgalsim_1_1_c_c_d_noise.png" usemap="#galsim::CCDNoise_map" alt=""/>
   <map id="galsim::CCDNoise_map" name="galsim::CCDNoise_map">
-<area href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates." alt="galsim::BaseDeviate" shape="rect" coords="0,0,124,24"/>
+<area href="classgalsim_1_1_base_noise.html" title="Base class for noise models." alt="galsim::BaseNoise" shape="rect" coords="0,0,113,24"/>
 </map>
  </div></div>
 
@@ -114,87 +114,55 @@ Inheritance diagram for galsim::CCDNoise:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8bf048f95a301c3f3d26273e4c1daab5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a8bf048f95a301c3f3d26273e4c1daab5">CCDNoise</a> (double gain=1., double readNoise=0.)</td></tr>
-<tr class="memdesc:a8bf048f95a301c3f3d26273e4c1daab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, using time of day as seed.  <a href="#a8bf048f95a301c3f3d26273e4c1daab5"></a><br/></td></tr>
-<tr class="memitem:ac0afddc172b622984d66fa32ba4b6624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#ac0afddc172b622984d66fa32ba4b6624">CCDNoise</a> (long lseed, double gain=1., double readNoise=0.)</td></tr>
-<tr class="memdesc:ac0afddc172b622984d66fa32ba4b6624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, using the provided value as seed.  <a href="#ac0afddc172b622984d66fa32ba4b6624"></a><br/></td></tr>
-<tr class="memitem:acced172cdc50df01dba3a1e845ccca95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#acced172cdc50df01dba3a1e845ccca95">CCDNoise</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev, double gain=1., double readNoise=0.)</td></tr>
-<tr class="memdesc:acced172cdc50df01dba3a1e845ccca95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, sharing the random number generator with dev.  <a href="#acced172cdc50df01dba3a1e845ccca95"></a><br/></td></tr>
+<tr class="memitem:a82dda9efb1ce4c65f3086b3deb620935"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a82dda9efb1ce4c65f3086b3deb620935">CCDNoise</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng, double sky_level=0., double gain=1., double read_noise=0.)</td></tr>
+<tr class="memdesc:a82dda9efb1ce4c65f3086b3deb620935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, sharing the random number generator with rng.  <a href="#a82dda9efb1ce4c65f3086b3deb620935"></a><br/></td></tr>
 <tr class="memitem:aeb37dd84d317dffc4a1f9a78b6cbedf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#aeb37dd84d317dffc4a1f9a78b6cbedf9">CCDNoise</a> (const <a class="el" href="classgalsim_1_1_c_c_d_noise.html">CCDNoise</a> &amp;rhs)</td></tr>
 <tr class="memdesc:aeb37dd84d317dffc4a1f9a78b6cbedf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#aeb37dd84d317dffc4a1f9a78b6cbedf9"></a><br/></td></tr>
+<tr class="memitem:a9f99c855242ebf69af01cc6c1142d644"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9f99c855242ebf69af01cc6c1142d644">getSkyLevel</a> () const </td></tr>
+<tr class="memdesc:a9f99c855242ebf69af01cc6c1142d644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report current sky_level.  <a href="#a9f99c855242ebf69af01cc6c1142d644"></a><br/></td></tr>
 <tr class="memitem:a3710fa20c1ff44753aaa132dd95a06df"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a3710fa20c1ff44753aaa132dd95a06df">getGain</a> () const </td></tr>
 <tr class="memdesc:a3710fa20c1ff44753aaa132dd95a06df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report current gain value.  <a href="#a3710fa20c1ff44753aaa132dd95a06df"></a><br/></td></tr>
 <tr class="memitem:aa31c265ff520642216fe1ee7238c7ee5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#aa31c265ff520642216fe1ee7238c7ee5">getReadNoise</a> () const </td></tr>
 <tr class="memdesc:aa31c265ff520642216fe1ee7238c7ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report current read noise.  <a href="#aa31c265ff520642216fe1ee7238c7ee5"></a><br/></td></tr>
+<tr class="memitem:a3b88d0ed117bf189963e716002581dc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a3b88d0ed117bf189963e716002581dc2">setSkyLevel</a> (double sky_level)</td></tr>
+<tr class="memdesc:a3b88d0ed117bf189963e716002581dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sky level.  <a href="#a3b88d0ed117bf189963e716002581dc2"></a><br/></td></tr>
 <tr class="memitem:acd0c8ac8924a179970002e80d2a2a463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#acd0c8ac8924a179970002e80d2a2a463">setGain</a> (double gain)</td></tr>
 <tr class="memdesc:acd0c8ac8924a179970002e80d2a2a463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set gain value.  <a href="#acd0c8ac8924a179970002e80d2a2a463"></a><br/></td></tr>
-<tr class="memitem:aea138b2dd15c74c761435e0bf97e865e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#aea138b2dd15c74c761435e0bf97e865e">setReadNoise</a> (double readNoise)</td></tr>
-<tr class="memdesc:aea138b2dd15c74c761435e0bf97e865e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set read noise.  <a href="#aea138b2dd15c74c761435e0bf97e865e"></a><br/></td></tr>
+<tr class="memitem:a01f5feef98f9aa6bc8c66b0a2ee21005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a01f5feef98f9aa6bc8c66b0a2ee21005">setReadNoise</a> (double read_noise)</td></tr>
+<tr class="memdesc:a01f5feef98f9aa6bc8c66b0a2ee21005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set read noise.  <a href="#a01f5feef98f9aa6bc8c66b0a2ee21005"></a><br/></td></tr>
+<tr class="memitem:ab3ed2b091cc21eacfb3336b905deddb3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#ab3ed2b091cc21eacfb3336b905deddb3">getVariance</a> () const </td></tr>
+<tr class="memdesc:ab3ed2b091cc21eacfb3336b905deddb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the variance of the noise model.  <a href="#ab3ed2b091cc21eacfb3336b905deddb3"></a><br/></td></tr>
+<tr class="memitem:a9e2509b481b96cb00ae8ddced354cf35"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9e2509b481b96cb00ae8ddced354cf35">setVariance</a> (double variance)</td></tr>
+<tr class="memdesc:a9e2509b481b96cb00ae8ddced354cf35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a9e2509b481b96cb00ae8ddced354cf35"></a><br/></td></tr>
 <tr class="memitem:af416cc75442377b7f10230c9a60ac54f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af416cc75442377b7f10230c9a60ac54f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#af416cc75442377b7f10230c9a60ac54f">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
 <tr class="memdesc:af416cc75442377b7f10230c9a60ac54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#af416cc75442377b7f10230c9a60ac54f"></a><br/></td></tr>
-<tr class="memitem:ac712be82525cd6835d4c74b19757422a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ac712be82525cd6835d4c74b19757422a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#ac712be82525cd6835d4c74b19757422a">applyToVar</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; variance)</td></tr>
-<tr class="memdesc:ac712be82525cd6835d4c74b19757422a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and also report variance of each pixel.  <a href="#ac712be82525cd6835d4c74b19757422a"></a><br/></td></tr>
-<tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
-<tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
-<tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
-<tr class="memdesc:a9a44c1be0021535a594d4f8c505b1a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a9a44c1be0021535a594d4f8c505b1a99"></a><br/></td></tr>
-<tr class="memitem:af28797531e7deb113b54f4a1fc19798d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d">reset</a> ()</td></tr>
-<tr class="memdesc:af28797531e7deb113b54f4a1fc19798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates.  <a href="#af28797531e7deb113b54f4a1fc19798d"></a><br/></td></tr>
-<tr class="memitem:a467ee386aebd84bb837c016718e8c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec">reset</a> (long lseed)</td></tr>
-<tr class="memdesc:a467ee386aebd84bb837c016718e8c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like seed(lseed), but severs the relationship between other Deviates.  <a href="#a467ee386aebd84bb837c016718e8c6ec"></a><br/></td></tr>
-<tr class="memitem:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f">reset</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev)</td></tr>
-<tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
+<tr class="memitem:aade605362a84052a73cb97fd58022c97"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aade605362a84052a73cb97fd58022c97"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#aade605362a84052a73cb97fd58022c97">applyToVar</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; var)</td></tr>
+<tr class="memdesc:aade605362a84052a73cb97fd58022c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and also report variance of each pixel.  <a href="#aade605362a84052a73cb97fd58022c97"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class implementing basic CCD noise model. </p>
-<p>CcdNoise instance is given a "read noise" and gain level. With these parameters set, it can operate on an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> by adding noise to each pixel. The noise has two components: first, a Poisson deviate with variance equal to ( max(pixel value, 0) / gain); second, Gaussian noise with RMS value of (readNoise / gain). The class must be given a reference to a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> when constructed, which will be the source of random values for the noise implementation. readNoise=0 will shut off the Gaussian noise. gain&lt;=0 will shut off the Poisson noise, and Gaussian value will just have value RMS=readNoise. </p>
+<p>The <a class="el" href="classgalsim_1_1_c_c_d_noise.html" title="Class implementing basic CCD noise model.">CCDNoise</a> class encapsulates the noise model of a normal CCD image. The noise has two components: first, Poisson noise corresponding to the number of electrons in each pixel (including an optional extra sky level); second, Gaussian read noise.</p>
+<p>read_noise=0 will shut off the Gaussian noise.</p>
+<p>gain&lt;=0 will shut off the Poisson noise, and Gaussian noise will have RMS = reasNoise.</p>
+<p>Note that if the image to which you are adding noise already has a sky level on it, then you should not provide the sky level here as well. The sky level here corresponds to a level is taken to be already subtracted from the image, but which was present for the Poisson noise. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8bf048f95a301c3f3d26273e4c1daab5"></a>
+<a class="anchor" id="a82dda9efb1ce4c65f3086b3deb620935"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::CCDNoise::CCDNoise </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td>
+          <td class="paramname"><em>rng</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>readNoise</em> = <code>0.</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new noise model, using time of day as seed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Electrons per ADU in the input Images, used for Poisson noise. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">readNoise</td><td>RMS of Gaussian noise, in electrons (if gain&gt;0.) or ADU (gain&lt;=0.) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ac0afddc172b622984d66fa32ba4b6624"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim::CCDNoise::CCDNoise </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em>, </td>
+          <td class="paramname"><em>sky_level</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -206,7 +174,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>readNoise</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>read_noise</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -216,54 +184,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new noise model, using the provided value as seed. </p>
+<p>Construct a new noise model, sharing the random number generator with rng. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rng</td><td>The <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> to use for the random number generation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sky_level</td><td>The sky level in ADU per pixel that was originally in the input image, but which is taken to have already been subtracted off. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Electrons per ADU in the input Images, used for Poisson noise. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">readNoise</td><td>RMS of Gaussian noise, in electrons (if gain&gt;0.) or ADU (gain&lt;=0.) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="acced172cdc50df01dba3a1e845ccca95"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim::CCDNoise::CCDNoise </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>dev</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>readNoise</em> = <code>0.</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new noise model, sharing the random number generator with dev. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dev</td><td>Other deviate with which to share the RNG </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Electrons per ADU in the input Images, used for Poisson noise. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">readNoise</td><td>RMS of Gaussian noise, in electrons (if gain&gt;0.) or ADU (gain&lt;=0.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">read_noise</td><td>RMS of Gaussian noise, in electrons (if gain&gt;0.) or ADU (gain&lt;=0.) </td></tr>
   </table>
   </dd>
 </dl>
@@ -315,9 +242,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_noise.html#ae2f44a253a71a23c16b80dfea0777815">galsim::BaseNoise</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="ac712be82525cd6835d4c74b19757422a"></a>
+<a class="anchor" id="aade605362a84052a73cb97fd58022c97"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -333,7 +262,7 @@ template&lt;class T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>variance</em>&#160;</td>
+          <td class="paramname"><em>var</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,11 +273,11 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> and also report variance of each pixel. </p>
-<p>Adds noise as in applyTo(Image) signature, but second <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> is filled with variance of added noise. </p>
+<p>Adds noise as in applyTo(Image) signature, but second <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> is filled with variance of added noise. Note: the variance image must be the same size as the data image.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be noise-ified. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">variance</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to fill with variance of applied noise. Will be resized if it does not match dimensions of data. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">var</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to fill with variance of applied noise. </td></tr>
   </table>
   </dd>
 </dl>
@@ -369,7 +298,6 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Report current gain value. </p>
-<dl class="section return"><dt>Returns:</dt><dd>Gain value (e/ADU) </dd></dl>
 
 </div>
 </div>
@@ -387,37 +315,27 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Report current read noise. </p>
-<dl class="section return"><dt>Returns:</dt><dd>Read noise value (e, if gain&gt;0, else in ADU) </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="af28797531e7deb113b54f4a1fc19798d"></a>
+<a class="anchor" id="a9f99c855242ebf69af01cc6c1142d644"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::BaseDeviate::reset </td>
+          <td class="memname">double galsim::CCDNoise::getSkyLevel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates. </p>
-<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+<p>Report current sky_level. </p>
 
 </div>
 </div>
-<a class="anchor" id="a467ee386aebd84bb837c016718e8c6ec"></a>
+<a class="anchor" id="ab3ed2b091cc21eacfb3336b905deddb3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -425,112 +343,22 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::BaseDeviate::reset </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Like seed(lseed), but severs the relationship between other Deviates. </p>
-<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
-
-</div>
-</div>
-<a class="anchor" id="a83d16e67974cfc43d3b9afddeae2cd3f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::reset </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;&#160;</td>
-          <td class="paramname"><em>dev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make this object share its random number generator with another Deviate. </p>
-<p>It discards whatever rng it had been using and starts sharing the one held by dev. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6c1affde5339594abf9bd45f8c036f2f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td class="memname">virtual double galsim::CCDNoise::getVariance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Re-seed the PRNG using current time. </p>
-<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
+<p>Get the variance of the noise model. </p>
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9a44c1be0021535a594d4f8c505b1a99"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Re-seed the PRNG using specified seed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a111b8db476baf0c246d147b66335a7d9">galsim::UniformDeviate</a>.</p>
+<p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a1a0beb7aa6ff2b275186a7aeccd698b8">galsim::BaseNoise</a>.</p>
 
 </div>
 </div>
@@ -549,16 +377,10 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Set gain value. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>Gain value (e/ADU) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a class="anchor" id="aea138b2dd15c74c761435e0bf97e865e"></a>
+<a class="anchor" id="a01f5feef98f9aa6bc8c66b0a2ee21005"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -566,24 +388,65 @@ template&lt;class T &gt; </div>
           <td class="memname">void galsim::CCDNoise::setReadNoise </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>readNoise</em></td><td>)</td>
+          <td class="paramname"><em>read_noise</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Set read noise. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">readNoise</td><td>Read noise value (e, if gain&gt;0, else in ADU) </td></tr>
-  </table>
-  </dd>
-</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b88d0ed117bf189963e716002581dc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::CCDNoise::setSkyLevel </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sky_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set sky level. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e2509b481b96cb00ae8ddced354cf35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void galsim::CCDNoise::setVariance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>variance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the variance of the noise model. </p>
+<p>If gain &gt; 0, then update sky_level to reach the correct variance. Otherwise update read_noise. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a54b792cdc77178f4fda40008a4d2e04f">galsim::BaseNoise</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/galsim/<a class="el" href="_c_c_d_noise_8h_source.html">CCDNoise.h</a></li>
+<li>include/galsim/<a class="el" href="_noise_8h_source.html">Noise.h</a></li>
 </ul>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

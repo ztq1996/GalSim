@@ -132,12 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa311c5b69cba5547094d5799d0fbe6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset value of N.  <a href="#aa311c5b69cba5547094d5799d0fbe6ce"></a><br/></td></tr>
 <tr class="memitem:a7d7fe7f17f5c07a3070db27c89036634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#a7d7fe7f17f5c07a3070db27c89036634">setP</a> (double p)</td></tr>
 <tr class="memdesc:a7d7fe7f17f5c07a3070db27c89036634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset value of p.  <a href="#a7d7fe7f17f5c07a3070db27c89036634"></a><br/></td></tr>
-<tr class="memitem:ab9c3fab3ccf3db4e3a64722e3b24ac75"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab9c3fab3ccf3db4e3a64722e3b24ac75"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#ab9c3fab3ccf3db4e3a64722e3b24ac75">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
-<tr class="memdesc:ab9c3fab3ccf3db4e3a64722e3b24ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Binomial pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ab9c3fab3ccf3db4e3a64722e3b24ac75"></a><br/></td></tr>
 <tr class="memitem:aa4d923f0ecf67442bcc34a404955a1af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#aa4d923f0ecf67442bcc34a404955a1af">BinomialDeviate</a> (<a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;u_, const int N=1, const double p=0.5)</td></tr>
 <tr class="memitem:a9feb496c358b323c521b4b062fb40bce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#a9feb496c358b323c521b4b062fb40bce">~BinomialDeviate</a> ()</td></tr>
 <tr class="memitem:a2a9d5f6eea2d14672a36eb20f58993f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#a2a9d5f6eea2d14672a36eb20f58993f6">operator()</a> ()</td></tr>
+<tr class="memdesc:a2a9d5f6eea2d14672a36eb20f58993f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a2a9d5f6eea2d14672a36eb20f58993f6"></a><br/></td></tr>
 <tr class="memitem:a328ebcc38ea158c36ec72024c85fa0fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#a328ebcc38ea158c36ec72024c85fa0fb">operator int</a> ()</td></tr>
 <tr class="memitem:aa01d58eea6f6cfc8b025029fc051e539"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#aa01d58eea6f6cfc8b025029fc051e539">getN</a> ()</td></tr>
 <tr class="memitem:a2eb299b07d3987545347d83294156523"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_binomial_deviate.html#a2eb299b07d3987545347d83294156523">getP</a> ()</td></tr>
@@ -343,32 +341,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab9c3fab3ccf3db4e3a64722e3b24ac75"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BinomialDeviate::applyTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add Binomial pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be noise-ified. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="aa01d58eea6f6cfc8b025029fc051e539"></a>
 <div class="memitem">
 <div class="memproto">
@@ -463,6 +435,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Draw a new random number from the distribution. </p>
+<p>This is invalid for a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> object that is not a derived class. However, we don't make it pure virtual, since we want to be able to make <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> objects a direct way to define a common seed for other Deviates. </p>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2a9d5f6eea2d14672a36eb20f58993f6"></a>
@@ -480,6 +457,8 @@ template&lt;typename T &gt; </div>
 
 <p>Draw a new random number from the distribution. </p>
 <dl class="section return"><dt>Returns:</dt><dd>A binomial deviate with current N and p </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
 
 </div>
 </div>

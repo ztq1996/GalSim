@@ -94,7 +94,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>A work-around for a pyfits bug that made our Rice-compressed output files (using pyfits) unreadable by ds9. (Issue #305)</li>
 </ul>
 <ul>
-<li>There is now a python interface to C++ tables that can be used for interpolation in a more general context. (Issue #305) </li>
+<li>There is now a python interface to C++ tables that can be used for interpolation in a more general context. (Issue #305)</li>
+</ul>
+<ul>
+<li>Added an <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32" title="Adds CCDNoise to an image in a way that achieves the specified signal-to-noise ratio.">addNoiseSNR()</a> method to Image classes that adds noise such that the image has a specified signal-to-noise ratio. (Issue #349)</li>
+</ul>
+<ul>
+<li>Made a new Noise hierarchy, and moved CCDNoise to that rather than have it be a BaseDeviate. There are also now GaussianNoise, PoissonNoise, and DeviateNoise classes. (Issue #349) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

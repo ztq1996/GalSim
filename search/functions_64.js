@@ -7,6 +7,7 @@ var searchData=
   ['defaultxinterpolant2d',['defaultXInterpolant2d',['../namespacegalsim_1_1sbp.html#afad28ef09196668ea576bd4e2808e2c0',1,'galsim::sbp']]],
   ['degrees',['degrees',['../namespacegalsim.html#ae61b66be379ab254f69728a4873e0274',1,'galsim']]],
   ['delta',['Delta',['../classgalsim_1_1_delta.html#a3af2062aadfeca6dddfd14af80cf7c5b',1,'galsim::Delta']]],
+  ['deviatenoise',['DeviateNoise',['../classgalsim_1_1_deviate_noise.html#a2796a4ab3cf63b8d63b85651e1faf04d',1,'galsim::DeviateNoise::DeviateNoise(boost::shared_ptr&lt; BaseDeviate &gt; dev)'],['../classgalsim_1_1_deviate_noise.html#ae9f998e8f1eba39a48f08abf15a99126',1,'galsim::DeviateNoise::DeviateNoise(const DeviateNoise &amp;rhs)']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
   ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()'],['../classgalsim_1_1correlatednoise_1_1___corr_func.html#a6b77a3b9f68d67098737744bd25931d3',1,'galsim.correlatednoise._CorrFunc.draw()']]],
   ['drawk',['drawK',['../classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb',1,'galsim::SBProfile::drawK()'],['../classgalsim_1_1base_1_1_g_s_object.html#aafa4ff2871a15f044689bdf3756fd918',1,'galsim.base.GSObject.drawK()']]],

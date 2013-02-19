@@ -132,9 +132,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1d26367743e04b8c96ff7bfbbdc363e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution shape parameter a.  <a href="#a1d26367743e04b8c96ff7bfbbdc363e8"></a><br/></td></tr>
 <tr class="memitem:a722e178ddffcc7523e50ef719d055661"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a722e178ddffcc7523e50ef719d055661">setB</a> (double b)</td></tr>
 <tr class="memdesc:a722e178ddffcc7523e50ef719d055661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution scale parameter b.  <a href="#a722e178ddffcc7523e50ef719d055661"></a><br/></td></tr>
-<tr class="memitem:a34530564a42195b1ff4fc2e7b31da810"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a34530564a42195b1ff4fc2e7b31da810"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a34530564a42195b1ff4fc2e7b31da810">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
-<tr class="memdesc:a34530564a42195b1ff4fc2e7b31da810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Weibull pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a34530564a42195b1ff4fc2e7b31da810"></a><br/></td></tr>
 <tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
 <tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
 <tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
@@ -289,32 +286,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a34530564a42195b1ff4fc2e7b31da810"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::WeibullDeviate::applyTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add Weibull pseudo-random deviates to every element in a supplied <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a0463e3b157a3d5adb5dde9cbdfa295f4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -366,6 +337,8 @@ template&lt;typename T &gt; </div>
 
 <p>Draw a new random number from the distribution. </p>
 <dl class="section return"><dt>Returns:</dt><dd>A Weibull deviate with current shape k and scale lam. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
 
 </div>
 </div>

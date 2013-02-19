@@ -1,8 +1,9 @@
 var searchData=
 [
   ['_7eassignabletoimage',['~AssignableToImage',['../classgalsim_1_1_assignable_to_image.html#aaa2d4a65ac758f68897c0271f73a243a',1,'galsim::AssignableToImage']]],
-  ['_7ebasedeviate',['~BaseDeviate',['../classgalsim_1_1_base_deviate.html#a86beae7ca71d3d3a564d56313d3c8c8a',1,'galsim::BaseDeviate']]],
+  ['_7ebasedeviate',['~BaseDeviate',['../classgalsim_1_1_base_deviate.html#adf6c50fc180a67b30e399d3627b18e05',1,'galsim::BaseDeviate']]],
   ['_7ebaseimage',['~BaseImage',['../classgalsim_1_1_base_image.html#ad8b8a7a980337de5081cfb566569a736',1,'galsim::BaseImage']]],
+  ['_7ebasenoise',['~BaseNoise',['../classgalsim_1_1_base_noise.html#a749d3084edf80b82c0e3379288143000',1,'galsim::BaseNoise']]],
   ['_7ebinomialdeviate',['~BinomialDeviate',['../classgalsim_1_1_binomial_deviate.html#a9feb496c358b323c521b4b062fb40bce',1,'galsim::BinomialDeviate']]],
   ['_7ebounds',['~Bounds',['../classgalsim_1_1_bounds.html#ab6db50d88e421d0b04e851f1cedbc4d2',1,'galsim::Bounds']]],
   ['_7ecubic',['~Cubic',['../classgalsim_1_1_cubic.html#a31657a457f441ded282e1546abe5ae8c',1,'galsim::Cubic']]],
