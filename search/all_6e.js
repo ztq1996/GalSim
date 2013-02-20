@@ -2,7 +2,7 @@ var searchData=
 [
   ['n_5fx',['n_x',['../classgalsim_1_1table_1_1_lookup_table.html#a4388cefd390d96ced0a1329e0c52c59c',1,'galsim::table::LookupTable']]],
   ['native_5fbyteorder',['native_byteorder',['../namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc',1,'galsim::fits']]],
-  ['ncols',['nCols',['../classgalsim_1_1catalog_1_1_input_catalog.html#ae67561e68db3de211fd285aea639d72b',1,'galsim.catalog.InputCatalog.nCols'],['../classgalsim_1_1catalog_1_1_input_catalog.html#a63d132457537c89ff8cfca761a7a759f',1,'galsim.catalog.InputCatalog.ncols()']]],
+  ['ncols',['ncols',['../classgalsim_1_1catalog_1_1_input_catalog.html#a63d132457537c89ff8cfca761a7a759f',1,'galsim.catalog.InputCatalog.ncols()'],['../classgalsim_1_1catalog_1_1_input_catalog.html#ae67561e68db3de211fd285aea639d72b',1,'galsim.catalog.InputCatalog.nCols']]],
   ['nearest',['Nearest',['../classgalsim_1_1_nearest.html',1,'galsim']]],
   ['nearest',['Nearest',['../classgalsim_1_1_nearest.html#ad732e5dd33c3f1f1ed7cad4be67819d2',1,'galsim::Nearest']]],
   ['nfwhalo',['NFWHalo',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html',1,'galsim::lensing']]],

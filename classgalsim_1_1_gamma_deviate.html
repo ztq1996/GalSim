@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A Gamma-distributed deviate with shape parameter alpha and scale parameter beta.  
+<p>A Gamma-distributed deviate with shape parameter k and scale parameter beta.  
  <a href="classgalsim_1_1_gamma_deviate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_random_8h_source.html">Random.h</a>&gt;</code></p>
@@ -114,75 +114,36 @@ Inheritance diagram for galsim::GammaDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9520bdfc891d517273dd4c97efc93b1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a9520bdfc891d517273dd4c97efc93b1f">GammaDeviate</a> (double alpha=0., double beta=1.)</td></tr>
-<tr class="memdesc:a9520bdfc891d517273dd4c97efc93b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, using time of day as seed.  <a href="#a9520bdfc891d517273dd4c97efc93b1f"></a><br/></td></tr>
-<tr class="memitem:a6bf1ae09c90ced5be43421ec0b77f85d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a6bf1ae09c90ced5be43421ec0b77f85d">GammaDeviate</a> (long lseed, double alpha=0., double beta=1.)</td></tr>
-<tr class="memdesc:a6bf1ae09c90ced5be43421ec0b77f85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, using the provided value as seed.  <a href="#a6bf1ae09c90ced5be43421ec0b77f85d"></a><br/></td></tr>
-<tr class="memitem:a74bdd8d86eaa083cf13e2952ec5bef27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a74bdd8d86eaa083cf13e2952ec5bef27">GammaDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double alpha=0., double beta=1.)</td></tr>
-<tr class="memdesc:a74bdd8d86eaa083cf13e2952ec5bef27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, sharing the random number generator with rhs.  <a href="#a74bdd8d86eaa083cf13e2952ec5bef27"></a><br/></td></tr>
+<tr class="memitem:a3a336b842613dc31c450d2d96ce2e3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a3a336b842613dc31c450d2d96ce2e3b4">GammaDeviate</a> (long lseed=0, double k=0., double beta=1.)</td></tr>
+<tr class="memdesc:a3a336b842613dc31c450d2d96ce2e3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, using the provided value as seed.  <a href="#a3a336b842613dc31c450d2d96ce2e3b4"></a><br/></td></tr>
+<tr class="memitem:aedbbf64ff09432d0db8879dedebc53f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aedbbf64ff09432d0db8879dedebc53f3">GammaDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double k=0., double theta=1.)</td></tr>
+<tr class="memdesc:aedbbf64ff09432d0db8879dedebc53f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, sharing the random number generator with rhs.  <a href="#aedbbf64ff09432d0db8879dedebc53f3"></a><br/></td></tr>
 <tr class="memitem:a67e609e63a7d9f008b27360b13eb20d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a67e609e63a7d9f008b27360b13eb20d3">GammaDeviate</a> (const <a class="el" href="classgalsim_1_1_gamma_deviate.html">GammaDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a67e609e63a7d9f008b27360b13eb20d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a67e609e63a7d9f008b27360b13eb20d3"></a><br/></td></tr>
 <tr class="memitem:aa1abeff954313fa6837dd11eee2f3dff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aa1abeff954313fa6837dd11eee2f3dff">operator()</a> ()</td></tr>
 <tr class="memdesc:aa1abeff954313fa6837dd11eee2f3dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#aa1abeff954313fa6837dd11eee2f3dff"></a><br/></td></tr>
-<tr class="memitem:aec815ad44eeb92487dfd8d71ac86d25c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aec815ad44eeb92487dfd8d71ac86d25c">getAlpha</a> ()</td></tr>
-<tr class="memdesc:aec815ad44eeb92487dfd8d71ac86d25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current distribution shape parameter alpha.  <a href="#aec815ad44eeb92487dfd8d71ac86d25c"></a><br/></td></tr>
-<tr class="memitem:aa6638847089330e9468ea92de7b7b1d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aa6638847089330e9468ea92de7b7b1d1">getBeta</a> ()</td></tr>
-<tr class="memdesc:aa6638847089330e9468ea92de7b7b1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current distribution scale parameter beta.  <a href="#aa6638847089330e9468ea92de7b7b1d1"></a><br/></td></tr>
-<tr class="memitem:adfda292e587667e54f6b6f40e5ee0bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#adfda292e587667e54f6b6f40e5ee0bbc">setAlpha</a> (double alpha)</td></tr>
-<tr class="memdesc:adfda292e587667e54f6b6f40e5ee0bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution shape parameter alpha.  <a href="#adfda292e587667e54f6b6f40e5ee0bbc"></a><br/></td></tr>
-<tr class="memitem:ac2f7fe21dc82c6fc46c7ee61e0c54a23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#ac2f7fe21dc82c6fc46c7ee61e0c54a23">setBeta</a> (double beta)</td></tr>
-<tr class="memdesc:ac2f7fe21dc82c6fc46c7ee61e0c54a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution scale parameter beta.  <a href="#ac2f7fe21dc82c6fc46c7ee61e0c54a23"></a><br/></td></tr>
-<tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
-<tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
-<tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
-<tr class="memdesc:a9a44c1be0021535a594d4f8c505b1a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a9a44c1be0021535a594d4f8c505b1a99"></a><br/></td></tr>
-<tr class="memitem:af28797531e7deb113b54f4a1fc19798d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d">reset</a> ()</td></tr>
-<tr class="memdesc:af28797531e7deb113b54f4a1fc19798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates.  <a href="#af28797531e7deb113b54f4a1fc19798d"></a><br/></td></tr>
+<tr class="memitem:a07e783faed50cb546a301fe4a7d5d752"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a07e783faed50cb546a301fe4a7d5d752">getK</a> ()</td></tr>
+<tr class="memdesc:a07e783faed50cb546a301fe4a7d5d752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current distribution shape parameter k.  <a href="#a07e783faed50cb546a301fe4a7d5d752"></a><br/></td></tr>
+<tr class="memitem:aa9cd9dd4b22094de65512eab5c2257ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aa9cd9dd4b22094de65512eab5c2257ba">getTheta</a> ()</td></tr>
+<tr class="memdesc:aa9cd9dd4b22094de65512eab5c2257ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current distribution scale parameter theta.  <a href="#aa9cd9dd4b22094de65512eab5c2257ba"></a><br/></td></tr>
+<tr class="memitem:a88bcae49f3e44ff7768ba343c7ace11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a88bcae49f3e44ff7768ba343c7ace11d">setK</a> (double k)</td></tr>
+<tr class="memdesc:a88bcae49f3e44ff7768ba343c7ace11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution shape parameter k.  <a href="#a88bcae49f3e44ff7768ba343c7ace11d"></a><br/></td></tr>
+<tr class="memitem:a335a311f54e8379e14a169366683bc09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a335a311f54e8379e14a169366683bc09">setTheta</a> (double theta)</td></tr>
+<tr class="memdesc:a335a311f54e8379e14a169366683bc09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current distribution scale parameter theta.  <a href="#a335a311f54e8379e14a169366683bc09"></a><br/></td></tr>
+<tr class="memitem:a85dfd67b69e6fe515d5846416bcb1afd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a85dfd67b69e6fe515d5846416bcb1afd">clearCache</a> ()</td></tr>
+<tr class="memdesc:a85dfd67b69e6fe515d5846416bcb1afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal cache.  <a href="#a85dfd67b69e6fe515d5846416bcb1afd"></a><br/></td></tr>
+<tr class="memitem:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">seed</a> (long lseed)</td></tr>
+<tr class="memdesc:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a4f50e24d2d3c73e10fc5d7a3ae7308ee"></a><br/></td></tr>
 <tr class="memitem:a467ee386aebd84bb837c016718e8c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec">reset</a> (long lseed)</td></tr>
 <tr class="memdesc:a467ee386aebd84bb837c016718e8c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like seed(lseed), but severs the relationship between other Deviates.  <a href="#a467ee386aebd84bb837c016718e8c6ec"></a><br/></td></tr>
 <tr class="memitem:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f">reset</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev)</td></tr>
 <tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>A Gamma-distributed deviate with shape parameter alpha and scale parameter beta. </p>
-<p>See <a href="http://en.wikipedia.org/wiki/Gamma_distribution">http://en.wikipedia.org/wiki/Gamma_distribution</a> (although note that in the Boost random routine this class calls the notation is alpha=k and beta=theta). The Gamma distribution is a real valued distribution producing deviates &gt;= 0. </p>
+<div class="textblock"><p>A Gamma-distributed deviate with shape parameter k and scale parameter beta. </p>
+<p>See <a href="http://en.wikipedia.org/wiki/Gamma_distribution">http://en.wikipedia.org/wiki/Gamma_distribution</a>. (Note: we use the k, theta notation. If you prefer alpha, beta, use k=alpha, theta=1/beta.) The Gamma distribution is a real valued distribution producing deviates &gt;= 0. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9520bdfc891d517273dd4c97efc93b1f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim::GammaDeviate::GammaDeviate </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>alpha</em> = <code>0.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>beta</em> = <code>1.</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new Gamma-distributed RNG, using time of day as seed. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Shape parameter of the output distribution, must be &gt; 0. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Scale parameter of the distribution, must be &gt; 0. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a6bf1ae09c90ced5be43421ec0b77f85d"></a>
+<a class="anchor" id="a3a336b842613dc31c450d2d96ce2e3b4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -190,13 +151,13 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::GammaDeviate::GammaDeviate </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em>, </td>
+          <td class="paramname"><em>lseed</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>alpha</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>k</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -213,18 +174,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a new Gamma-distributed RNG, using the provided value as seed. </p>
+<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Shape parameter of the output distribution, must be &gt; 0. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Scale parameter of the distribution, must be &gt; 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use (default = 0) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>Shape parameter of the output distribution, must be &gt; 0. (default = 0) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>Scale paramter of the distribution, must be &gt; 0. (default = 1) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a74bdd8d86eaa083cf13e2952ec5bef27"></a>
+<a class="anchor" id="aedbbf64ff09432d0db8879dedebc53f3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -238,13 +200,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>alpha</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>k</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>beta</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>theta</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -258,8 +220,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Other deviate with which to share the RNG </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Shape parameter of the output distribution, must be &gt; 0. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Scale parameter of the distribution, must be &gt; 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>Shape parameter of the output distribution, must be &gt; 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>Scale parameter of the distribution, must be &gt; 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -286,12 +248,39 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aec815ad44eeb92487dfd8d71ac86d25c"></a>
+<a class="anchor" id="a85dfd67b69e6fe515d5846416bcb1afd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::GammaDeviate::clearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the internal cache. </p>
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a8a0fc520933ed8ce5a80fe1396cea553">galsim::BaseDeviate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a07e783faed50cb546a301fe4a7d5d752"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::GammaDeviate::getAlpha </td>
+          <td class="memname">double galsim::GammaDeviate::getK </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -299,17 +288,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get current distribution shape parameter alpha. </p>
-<dl class="section return"><dt>Returns:</dt><dd>Shape parameter alpha of distribution. </dd></dl>
+<p>Get current distribution shape parameter k. </p>
+<dl class="section return"><dt>Returns:</dt><dd>Shape parameter k of distribution. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aa6638847089330e9468ea92de7b7b1d1"></a>
+<a class="anchor" id="aa9cd9dd4b22094de65512eab5c2257ba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double galsim::GammaDeviate::getBeta </td>
+          <td class="memname">double galsim::GammaDeviate::getTheta </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -317,8 +306,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get current distribution scale parameter beta. </p>
-<dl class="section return"><dt>Returns:</dt><dd>Scale parameter beta of distribution. </dd></dl>
+<p>Get current distribution scale parameter theta. </p>
+<dl class="section return"><dt>Returns:</dt><dd>Scale parameter theta of distribution. </dd></dl>
 
 </div>
 </div>
@@ -336,35 +325,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draw a new random number from the distribution. </p>
-<dl class="section return"><dt>Returns:</dt><dd>A Gamma deviate with current shape alpha and scale beta. </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>A Gamma deviate with current shape k and scale theta. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">galsim::BaseDeviate</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af28797531e7deb113b54f4a1fc19798d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates. </p>
-<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
 
 </div>
 </div>
@@ -422,7 +385,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6c1affde5339594abf9bd45f8c036f2f"></a>
+<a class="anchor" id="a4f50e24d2d3c73e10fc5d7a3ae7308ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -430,35 +393,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Re-seed the PRNG using current time. </p>
-<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9a44c1be0021535a594d4f8c505b1a99"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td class="memname">virtual void galsim::BaseDeviate::seed </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
           <td class="paramname"><em>lseed</em></td><td>)</td>
@@ -467,15 +402,16 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Re-seed the PRNG using specified seed. </p>
+<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0)</td></tr>
   </table>
   </dd>
 </dl>
@@ -485,48 +421,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adfda292e587667e54f6b6f40e5ee0bbc"></a>
+<a class="anchor" id="a88bcae49f3e44ff7768ba343c7ace11d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::GammaDeviate::setAlpha </td>
+          <td class="memname">void galsim::GammaDeviate::setK </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set current distribution shape parameter alpha. </p>
+<p>Set current distribution shape parameter k. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>New shape parameter for distribution. Behaviour for non-positive value is undefined. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>New shape parameter for distribution. Behaviour for non-positive value is undefined. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ac2f7fe21dc82c6fc46c7ee61e0c54a23"></a>
+<a class="anchor" id="a335a311f54e8379e14a169366683bc09"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::GammaDeviate::setBeta </td>
+          <td class="memname">void galsim::GammaDeviate::setTheta </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>beta</em></td><td>)</td>
+          <td class="paramname"><em>theta</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set current distribution scale parameter beta. </p>
+<p>Set current distribution scale parameter theta. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>New scale parameter for distribution. Behavior for non-positive value is undefined. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>New scale parameter for distribution. Behavior for non-positive value is undefined. </td></tr>
   </table>
   </dd>
 </dl>

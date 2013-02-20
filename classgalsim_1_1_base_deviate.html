@@ -108,7 +108,7 @@ Inheritance diagram for galsim::BaseDeviate:</div>
   <map id="galsim::BaseDeviate_map" name="galsim::BaseDeviate_map">
 <area href="classgalsim_1_1_binomial_deviate.html" title="A Binomial deviate for N trials each of probability p." alt="galsim::BinomialDeviate" shape="rect" coords="0,56,148,80"/>
 <area href="classgalsim_1_1_chi2_deviate.html" title="A Chi^2-distributed deviate with degrees-of-freedom parameter n." alt="galsim::Chi2Deviate" shape="rect" coords="158,56,306,80"/>
-<area href="classgalsim_1_1_gamma_deviate.html" title="A Gamma-distributed deviate with shape parameter alpha and scale parameter beta." alt="galsim::GammaDeviate" shape="rect" coords="316,56,464,80"/>
+<area href="classgalsim_1_1_gamma_deviate.html" title="A Gamma-distributed deviate with shape parameter k and scale parameter beta." alt="galsim::GammaDeviate" shape="rect" coords="316,56,464,80"/>
 <area href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution." alt="galsim::GaussianDeviate" shape="rect" coords="474,56,622,80"/>
 <area href="classgalsim_1_1_poisson_deviate.html" title="A Poisson deviate with specified mean." alt="galsim::PoissonDeviate" shape="rect" coords="632,56,780,80"/>
 <area href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.)." alt="galsim::UniformDeviate" shape="rect" coords="790,56,938,80"/>
@@ -120,24 +120,20 @@ Inheritance diagram for galsim::BaseDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab96e0305fba2bdbe89e294d324e7815e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#ab96e0305fba2bdbe89e294d324e7815e">BaseDeviate</a> ()</td></tr>
-<tr class="memdesc:ab96e0305fba2bdbe89e294d324e7815e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using time of day as seed.  <a href="#ab96e0305fba2bdbe89e294d324e7815e"></a><br/></td></tr>
-<tr class="memitem:a27bcdd4b35a75ac1d6d664735195f417"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a27bcdd4b35a75ac1d6d664735195f417">BaseDeviate</a> (long lseed)</td></tr>
-<tr class="memdesc:a27bcdd4b35a75ac1d6d664735195f417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using the provided value as seed.  <a href="#a27bcdd4b35a75ac1d6d664735195f417"></a><br/></td></tr>
+<tr class="memitem:add43b677dd1e18a97b84cebab36fa668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#add43b677dd1e18a97b84cebab36fa668">BaseDeviate</a> (long lseed=0)</td></tr>
+<tr class="memdesc:add43b677dd1e18a97b84cebab36fa668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using the provided value as seed.  <a href="#add43b677dd1e18a97b84cebab36fa668"></a><br/></td></tr>
 <tr class="memitem:a074f9323cbfd474ac0ecadbd1ca3fe52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a074f9323cbfd474ac0ecadbd1ca3fe52">BaseDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a074f9323cbfd474ac0ecadbd1ca3fe52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, sharing the random number generator with rhs.  <a href="#a074f9323cbfd474ac0ecadbd1ca3fe52"></a><br/></td></tr>
 <tr class="memitem:adf6c50fc180a67b30e399d3627b18e05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#adf6c50fc180a67b30e399d3627b18e05">~BaseDeviate</a> ()</td></tr>
 <tr class="memdesc:adf6c50fc180a67b30e399d3627b18e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#adf6c50fc180a67b30e399d3627b18e05"></a><br/></td></tr>
-<tr class="memitem:a6c1affde5339594abf9bd45f8c036f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f">seed</a> ()</td></tr>
-<tr class="memdesc:a6c1affde5339594abf9bd45f8c036f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using current time.  <a href="#a6c1affde5339594abf9bd45f8c036f2f"></a><br/></td></tr>
-<tr class="memitem:a9a44c1be0021535a594d4f8c505b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a9a44c1be0021535a594d4f8c505b1a99">seed</a> (long lseed)</td></tr>
-<tr class="memdesc:a9a44c1be0021535a594d4f8c505b1a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a9a44c1be0021535a594d4f8c505b1a99"></a><br/></td></tr>
-<tr class="memitem:af28797531e7deb113b54f4a1fc19798d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#af28797531e7deb113b54f4a1fc19798d">reset</a> ()</td></tr>
-<tr class="memdesc:af28797531e7deb113b54f4a1fc19798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates.  <a href="#af28797531e7deb113b54f4a1fc19798d"></a><br/></td></tr>
+<tr class="memitem:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">seed</a> (long lseed)</td></tr>
+<tr class="memdesc:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a4f50e24d2d3c73e10fc5d7a3ae7308ee"></a><br/></td></tr>
 <tr class="memitem:a467ee386aebd84bb837c016718e8c6ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec">reset</a> (long lseed)</td></tr>
 <tr class="memdesc:a467ee386aebd84bb837c016718e8c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like seed(lseed), but severs the relationship between other Deviates.  <a href="#a467ee386aebd84bb837c016718e8c6ec"></a><br/></td></tr>
 <tr class="memitem:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f">reset</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;dev)</td></tr>
 <tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
+<tr class="memitem:a8a0fc520933ed8ce5a80fe1396cea553"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a8a0fc520933ed8ce5a80fe1396cea553">clearCache</a> ()</td></tr>
+<tr class="memdesc:a8a0fc520933ed8ce5a80fe1396cea553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal cache of the rng object.  <a href="#a8a0fc520933ed8ce5a80fe1396cea553"></a><br/></td></tr>
 <tr class="memitem:a56d45ced1fcc88f5a9b9fec70f845e05"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">operator()</a> ()</td></tr>
 <tr class="memdesc:a56d45ced1fcc88f5a9b9fec70f845e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a56d45ced1fcc88f5a9b9fec70f845e05"></a><br/></td></tr>
 </table>
@@ -150,25 +146,7 @@ Public Member Functions</h2></td></tr>
 <p>3) Passing another <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> as the first arguemnt to the constructor. This will make the new Deviate share the same underlying random number generator with the other Deviate. So you can make one Deviate (of any type), and seed it with a particular deterministic value. Then if you pass that Deviate to any other one you make, they will all be using the same rng and have a particular deterministic series of values. (It doesn't have to be the first one &ndash; any one you've made later can also be used to seed a new one.)</p>
 <p>There is not much you can do with something that is only known to be a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> rather than one of the derived classes other than construct it and change the seed, and use it as an argument to pass to other Deviate constructors. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab96e0305fba2bdbe89e294d324e7815e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim::BaseDeviate::BaseDeviate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using time of day as seed. </p>
-<p>Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession will not be independent. </p>
-
-</div>
-</div>
-<a class="anchor" id="a27bcdd4b35a75ac1d6d664735195f417"></a>
+<a class="anchor" id="add43b677dd1e18a97b84cebab36fa668"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -176,16 +154,17 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::BaseDeviate::BaseDeviate </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em></td><td>)</td>
+          <td class="paramname"><em>lseed</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using the provided value as seed. </p>
+<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -237,6 +216,35 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a8a0fc520933ed8ce5a80fe1396cea553"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void galsim::BaseDeviate::clearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the internal cache of the rng object. </p>
+<p>Sometimes this is required to get two sequences synced up if the other one is reseeded. e.g. <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution.">GaussianDeviate</a> generates two deviates at a time for efficiency, so if you don't do this, and there is still an internal cached value, you'll get that rather than a new one generated with the new seed.</p>
+<p>As far as I know, <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution.">GaussianDeviate</a> is the only one to require this, but just in case something changes about how boost implements any of these deviates, I overload the virtual function for all of them and call the distribution's <a class="el" href="classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec" title="Like seed(lseed), but severs the relationship between other Deviates.">reset()</a> method. </p>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1_chi2_deviate.html#ac6255abd1341758cec51cb805f9e2f83">galsim::Chi2Deviate</a>, <a class="el" href="classgalsim_1_1_gamma_deviate.html#a85dfd67b69e6fe515d5846416bcb1afd">galsim::GammaDeviate</a>, <a class="el" href="classgalsim_1_1_weibull_deviate.html#a26e1ac3e41be514ebef28592cdb4b9f1">galsim::WeibullDeviate</a>, <a class="el" href="classgalsim_1_1_poisson_deviate.html#ab2501758dbf4afc70264c49837e4a074">galsim::PoissonDeviate</a>, <a class="el" href="classgalsim_1_1_binomial_deviate.html#a5521be446124dd4a1789d9f5d5e034e6">galsim::BinomialDeviate</a>, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a0002d86b46124f59fb474076533d199d">galsim::GaussianDeviate</a>, and <a class="el" href="classgalsim_1_1_uniform_deviate.html#ac9428f58c9b4bde6c290ff11da07a685">galsim::UniformDeviate</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a56d45ced1fcc88f5a9b9fec70f845e05"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,24 +262,6 @@ Public Member Functions</h2></td></tr>
 <p>This is invalid for a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> object that is not a derived class. However, we don't make it pure virtual, since we want to be able to make <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> objects a direct way to define a common seed for other Deviates. </p>
 
 <p>Reimplemented in <a class="el" href="classgalsim_1_1_chi2_deviate.html#a2f7d4a32f4ebb2a99931b07a868ee371">galsim::Chi2Deviate</a>, <a class="el" href="classgalsim_1_1_gamma_deviate.html#aa1abeff954313fa6837dd11eee2f3dff">galsim::GammaDeviate</a>, <a class="el" href="classgalsim_1_1_weibull_deviate.html#abd1df1c5605bc7d3980d9d8872dd1285">galsim::WeibullDeviate</a>, <a class="el" href="classgalsim_1_1_poisson_deviate.html#ac1a2db47048b7ca1ca544aac5d188f3b">galsim::PoissonDeviate</a>, <a class="el" href="classgalsim_1_1_binomial_deviate.html#a2a9d5f6eea2d14672a36eb20f58993f6">galsim::BinomialDeviate</a>, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">galsim::GaussianDeviate</a>, <a class="el" href="classgalsim_1_1_uniform_deviate.html#a163ba4090b86b42b3919bb0467669d71">galsim::UniformDeviate</a>, <a class="el" href="classgalsim_1_1_poisson_deviate.html#ac1a2db47048b7ca1ca544aac5d188f3b">galsim::PoissonDeviate</a>, <a class="el" href="classgalsim_1_1_binomial_deviate.html#a2a9d5f6eea2d14672a36eb20f58993f6">galsim::BinomialDeviate</a>, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">galsim::GaussianDeviate</a>, and <a class="el" href="classgalsim_1_1_uniform_deviate.html#a163ba4090b86b42b3919bb0467669d71">galsim::UniformDeviate</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af28797531e7deb113b54f4a1fc19798d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Like <a class="el" href="classgalsim_1_1_base_deviate.html#a6c1affde5339594abf9bd45f8c036f2f" title="Re-seed the PRNG using current time.">seed()</a>, but severs the relationship between other Deviates. </p>
-<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
 
 </div>
 </div>
@@ -313,44 +303,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6c1affde5339594abf9bd45f8c036f2f"></a>
+<a class="anchor" id="a4f50e24d2d3c73e10fc5d7a3ae7308ee"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Re-seed the PRNG using current time. </p>
-<p>Note that this will reseed all Deviates currently sharing the RNG with this one. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9a44c1be0021535a594d4f8c505b1a99"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::BaseDeviate::seed </td>
+          <td class="memname">virtual void galsim::BaseDeviate::seed </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
           <td class="paramname"><em>lseed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Re-seed the PRNG using specified seed. </p>
+<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0)</td></tr>
   </table>
   </dd>
 </dl>
