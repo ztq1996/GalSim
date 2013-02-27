@@ -82,13 +82,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><ul>
-<li>Small bug fix for multiple operations on GSObjects when drawing images using photon shooting, which affects combinations like shifting and shearing. (Issue #359)</li>
-</ul>
-<ul>
 <li>When making GSObjects out of real images that have noise, it is possible to pad those images with a noise field (either correlated or uncorrelated) so that there is not an abrupt change of properties in the noise field when crossing the border into the padding region. (Issue #238)</li>
 </ul>
 <ul>
-<li>Option for shears from a power spectrum: use a tabulated P(k), either input as arrays or read in from a file, for example from a cosmological shear power spectrum calculator. Also, the PowerSpectrum class now properly handles conversions between different units for P(k) and the galaxy positions at which we are calculating shear. Finally, an important bug in how the shears were generated from the power spectrum (which resulted in issues with overall normalization) was fixed. (Issue #305)</li>
+<li>Option for shears from a power spectrum: use a tabulated P(k), either input as arrays or read in from a file, for example from a cosmological shear power spectrum calculator. Also, the <code>PowerSpectrum</code> class now properly handles conversions between different units for P(k) and the galaxy positions at which we are calculating shear. Finally, an important bug in how the shears were generated from the power spectrum (which resulted in issues with overall normalization) was fixed. (Issue #305)</li>
 </ul>
 <ul>
 <li>An optimization of the InterpolatedImage constructor. (Issue #305)</li>
@@ -103,13 +100,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added a DistDeviate class that generates pseudo-random numbers from a user-defined probability distribution. (Issue #306)</li>
 </ul>
 <ul>
+<li>A free function added that gives the user quick access to the 2D spatial correlation function of noise in HST COSMOS F814W weak lensing science images (e.g. Leauthaud et al 2007). Calling <code><a class="el" href="namespacegalsim_1_1correlatednoise.html#a325db62b192c80379cae03dc4db3b7d1" title="Returns a 2D discrete correlation function representing noise in the HST COSMOS F814W unrotated scien...">galsim.correlatednoise.get_COSMOS_CorrFunc</a>(...)</code> returns a correlation function that shares all the methods of a <code>galsim.ImageCorrFunc()</code>, and optional keyword inputs allow the point variance and physical scale of the function to be set correctly. (Issue #345)</li>
+</ul>
+<ul>
 <li>Added an <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32" title="Adds CCDNoise to an image in a way that achieves the specified signal-to-noise ratio.">addNoiseSNR()</a> method to Image classes that adds noise such that the image has a specified signal-to-noise ratio. (Issue #349)</li>
 </ul>
 <ul>
 <li>Made a new Noise hierarchy, and moved CCDNoise to that rather than have it be a BaseDeviate. There are also now GaussianNoise, PoissonNoise, and DeviateNoise classes. (Issue #349)</li>
 </ul>
 <ul>
-<li>New demo11 script that includes getting PowerSpectrum shears from a file, uses an InterpolatedImage for the PSF, and uses DistDeviate (RandomDistribution in the config) for the sizes. (Issues #305, #306) </li>
+<li>Small bug fix for multiple operations on GSObjects when drawing images using photon shooting, which affects combinations like shifting and shearing. (Issue #359)</li>
+</ul>
+<ul>
+<li>New demo11 script that includes getting PowerSpectrum shears from a file, uses an InterpolatedImage for the PSF, uses DistDeviate (RandomDistribution in the config) for the sizes, and applies correlated noise such as found in COSMOS to the output image. (Issues #305, #306, #345)</li>
+</ul>
+<ul>
+<li>Minor bug fix for correct directory handling in the executable versions of the demo scripts, i.e. those generated in the <code>bin/</code> subdirectory using <code>scons examples</code>. (Issue #345) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

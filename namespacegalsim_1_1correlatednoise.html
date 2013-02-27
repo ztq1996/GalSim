@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.correlatednoise Namespace Reference</div>  </div>
 </div><!--header-->
@@ -100,7 +101,70 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class describing 2D correlation functions, typically calculated from Images.  <a href="classgalsim_1_1correlatednoise_1_1___corr_func.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1_image_corr_func.html">ImageCorrFunc</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that represents 2D discrete correlation functions calculated from an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="classgalsim_1_1correlatednoise_1_1_image_corr_func.html#details">More...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a325db62b192c80379cae03dc4db3b7d1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1correlatednoise.html#a325db62b192c80379cae03dc4db3b7d1">get_COSMOS_CorrFunc</a></td></tr>
+<tr class="memdesc:a325db62b192c80379cae03dc4db3b7d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D discrete correlation function representing noise in the HST COSMOS F814W unrotated science coadd images.  <a href="#a325db62b192c80379cae03dc4db3b7d1"></a><br/></td></tr>
 </table>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a325db62b192c80379cae03dc4db3b7d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise.get_COSMOS_CorrFunc </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dx_cosmos</em> = <code>0.03</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance</em> = <code>0.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a 2D discrete correlation function representing noise in the HST COSMOS F814W unrotated science coadd images. </p>
+<p>See <a href="http://cosmos.astro.caltech.edu/astronomer/hst.html">http://cosmos.astro.caltech.edu/astronomer/hst.html</a> for information about the COSMOS survey, and Leauthaud et al (2007) for detailed information about the unrotated F814W coadds used for weak lensing science.</p>
+<p>This function uses a stacked estimate of the correlation function in COSMOS noise fields, the location of which should be input to this function via the <code>file_name</code> argument. This image is stored in FITS format, and is generated as described in <code>YOUR/REPO/PATH/GalSim/devel/external/hst/make_cosmos_cfimage.py</code>. The image itself can also be found within the GalSim repo, located at: </p>
+<pre class="fragment">/YOUR/REPO/PATH/GalSim/examples/data/acs_I_unrot_sci_20_cf.fits
+</pre><dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>String containing the path and filename above but modified to match the location of the GalSim repoistory on your system. </td></tr>
+    <tr><td class="paramname">dx_cosmos</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim: defaults to 0.03 arcsec, see below for more information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>Important note regarding units</h2>
+<p>The ACS coadd images in COSMOS have a pixel scale of 0.03 arcsec, and so the pixel scale <code>dx_cosmos</code> adopted in the representation of of the correlation function takes a default value </p>
+<pre class="fragment">dx_cosmos = 0.03
+</pre><p>If you wish to use other units, ensure that the input keyword <code>dx_cosmos</code> takes the value corresponding to 0.03 arcsec in your chosen system.</p>
+<h2>Example usage</h2>
+<p>The following commands use this function to generate a 300 pixel x 300 pixel image of noise with HST COSMOS correlation properties (substitute in your own file and path for the <code>filestring</code>). </p>
+<pre class="fragment">&gt;&gt;&gt; filestring='/YOUR/REPO/PATH/GalSim/devel/external/hst/acs_I_unrot_sci_20_cf.fits'
+&gt;&gt;&gt; import galsim
+&gt;&gt;&gt; cf = galsim.correlatednoise.get_COSMOS_CorrFunc(filestring)
+&gt;&gt;&gt; im = galsim.ImageD(300, 300)
+&gt;&gt;&gt; cf.applyNoiseTo(im, dx=0.03)
+&gt;&gt;&gt; im.write('out.fits')
+</pre><p>The FITS file <code>out.fits</code> should then contain an image of randomly-generated, COSMOS-like noise. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

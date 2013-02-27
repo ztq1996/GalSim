@@ -9,6 +9,7 @@ var searchData=
   ['get',['get',['../classgalsim_1_1catalog_1_1_input_catalog.html#afa50315d77c753583f3bcf87ef5cbe41',1,'galsim::catalog::InputCatalog']]],
   ['get1d',['get1d',['../classgalsim_1_1_interpolant_x_y.html#a801c0e4214c93f44d9d247430eea03c3',1,'galsim::InterpolantXY']]],
   ['get_5fangle_5funit',['get_angle_unit',['../namespacegalsim_1_1angle.html#a009141ee5bd0925aedf14a2268675441',1,'galsim::angle']]],
+  ['get_5fcosmos_5fcorrfunc',['get_COSMOS_CorrFunc',['../namespacegalsim_1_1correlatednoise.html#a325db62b192c80379cae03dc4db3b7d1',1,'galsim::correlatednoise']]],
   ['geta',['getA',['../classgalsim_1_1_weibull_deviate.html#a0463e3b157a3d5adb5dde9cbdfa295f4',1,'galsim::WeibullDeviate']]],
   ['getallparams',['GetAllParams',['../namespacegalsim_1_1config_1_1value.html#ae44b2af88c30a2d3c0f75b2b96300039',1,'galsim::config::value']]],
   ['getarea',['getArea',['../structgalsim_1_1integ_1_1_int_region.html#ad9a836d52ec90d6ab8556a66ece88996',1,'galsim::integ::IntRegion']]],
