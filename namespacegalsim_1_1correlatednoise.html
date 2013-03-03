@@ -145,7 +145,8 @@ Functions</h2></td></tr>
 </pre><dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>String containing the path and filename above but modified to match the location of the GalSim repoistory on your system. </td></tr>
-    <tr><td class="paramname">dx_cosmos</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim: defaults to 0.03 arcsec, see below for more information.  Scales the correlation function so that its point variance, equivalent to its value at zero separation distance, matches this value. The default <code>variance = 0.</code> uses the variance in the original COSMOS noise fields.</td></tr>
+    <tr><td class="paramname">dx_cosmos</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim: defaults to 0.03 arcsec, see below for more information. </td></tr>
+    <tr><td class="paramname">variance</td><td>Scales the correlation function so that its point variance, equivalent to its value at zero separation distance, matches this value. The default <code>variance = 0.</code> uses the variance in the original COSMOS noise fields.</td></tr>
   </table>
   </dd>
 </dl>
