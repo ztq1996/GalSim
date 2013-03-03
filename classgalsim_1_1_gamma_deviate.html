@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A Gamma-distributed deviate with shape parameter k and scale parameter beta.  
+<p>A Gamma-distributed deviate with shape parameter k and scale parameter theta.  
  <a href="classgalsim_1_1_gamma_deviate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_random_8h_source.html">Random.h</a>&gt;</code></p>
@@ -114,8 +114,8 @@ Inheritance diagram for galsim::GammaDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3a336b842613dc31c450d2d96ce2e3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a3a336b842613dc31c450d2d96ce2e3b4">GammaDeviate</a> (long lseed=0, double k=0., double beta=1.)</td></tr>
-<tr class="memdesc:a3a336b842613dc31c450d2d96ce2e3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, using the provided value as seed.  <a href="#a3a336b842613dc31c450d2d96ce2e3b4"></a><br/></td></tr>
+<tr class="memitem:a22bb3a527d879a5e4a57a8ed3e61ab87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a22bb3a527d879a5e4a57a8ed3e61ab87">GammaDeviate</a> (long lseed=0, double k=0., double theta=1.)</td></tr>
+<tr class="memdesc:a22bb3a527d879a5e4a57a8ed3e61ab87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, using the provided value as seed.  <a href="#a22bb3a527d879a5e4a57a8ed3e61ab87"></a><br/></td></tr>
 <tr class="memitem:aedbbf64ff09432d0db8879dedebc53f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#aedbbf64ff09432d0db8879dedebc53f3">GammaDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double k=0., double theta=1.)</td></tr>
 <tr class="memdesc:aedbbf64ff09432d0db8879dedebc53f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gamma-distributed RNG, sharing the random number generator with rhs.  <a href="#aedbbf64ff09432d0db8879dedebc53f3"></a><br/></td></tr>
 <tr class="memitem:a67e609e63a7d9f008b27360b13eb20d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gamma_deviate.html#a67e609e63a7d9f008b27360b13eb20d3">GammaDeviate</a> (const <a class="el" href="classgalsim_1_1_gamma_deviate.html">GammaDeviate</a> &amp;rhs)</td></tr>
@@ -140,10 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a83d16e67974cfc43d3b9afddeae2cd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this object share its random number generator with another Deviate.  <a href="#a83d16e67974cfc43d3b9afddeae2cd3f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>A Gamma-distributed deviate with shape parameter k and scale parameter beta. </p>
+<div class="textblock"><p>A Gamma-distributed deviate with shape parameter k and scale parameter theta. </p>
 <p>See <a href="http://en.wikipedia.org/wiki/Gamma_distribution">http://en.wikipedia.org/wiki/Gamma_distribution</a>. (Note: we use the k, theta notation. If you prefer alpha, beta, use k=alpha, theta=1/beta.) The Gamma distribution is a real valued distribution producing deviates &gt;= 0. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3a336b842613dc31c450d2d96ce2e3b4"></a>
+<a class="anchor" id="a22bb3a527d879a5e4a57a8ed3e61ab87"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>beta</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>theta</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
