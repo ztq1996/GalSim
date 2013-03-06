@@ -59,5 +59,5 @@ var searchData=
   ['createtransformed',['createTransformed',['../classgalsim_1_1base_1_1_g_s_object.html#ac545bacc95772067d082a68a282265e7',1,'galsim.base.GSObject.createTransformed()'],['../classgalsim_1_1correlatednoise_1_1___corr_func.html#a4c87b08c7e25091af83a3ac59f5dd865',1,'galsim.correlatednoise._CorrFunc.createTransformed()']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a514133d6f71da65e2b9aa1594dacfa9b',1,'galsim::Cubic']]],
-  ['changes_20from_20v0_2e3_20to_20current_20version_3a',['Changes from v0.3 to current version:',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
+  ['changes_20from_20v0_2e4_20to_20current_20version_3a',['Changes from v0.4 to current version:',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
 ];
