@@ -261,15 +261,28 @@ scons tests NOSETESTS=/sw/bin/nosetests
 <pre class="fragment">fink install scons fftw3 tmv0 boost1.46.1.cmake
 scons TMV_DIR=/sw
 </pre><p>For other Python versions, the fink-installed Boost usually will not work, so you can only use fink for SCons, FFTW and TMV. So you will probably need to install Boost manually. This can be done by following the instructions of Section 1.v), above.</p>
-<p>b) MacPorts &ndash; this is another popular Mac package management project (<a href="http://www.macports.org/">http://www.macports.org/</a>) with similar functionality to fink, although TMV is not supported but can be easily installed by following the instructions in Section 1.iv).</p>
+<p>b) MacPorts &ndash; this is another popular Mac package management project (<a href="http://www.macports.org/">http://www.macports.org/</a>) with similar functionality to fink. Neither TMV nor GalSim are currently on the official MacPorts distribution list, so users cannot find them by searching the MacPorts site. However, it is possible to install both TMV and GalSim, plus the other dependencies of GalSim, using MacPorts following the instructions below.</p>
 <p>It is in general a good idea to upgrade all modules, prior to installing any new modules: </p>
 <pre class="fragment">sudo port selfupdate
 sudo port upgrade outdated
-</pre><p>The following modules relevant to GalSim are available on MacPorts (note that when using MacPorts to install Boost, you may need to explicitly indicate Boost.Python): </p>
-<pre class="fragment">sudo port install scons fftw-3 python27 py27-nose py27-numpy py27-pyfits \
-     py27-yaml
-sudo port install boost +python27
-</pre><p>Notes on MacPorts version of gcc with Mac OS X 10.5.8: If you have installed a MacPorts version of gcc (e.g., "mp-gcc47"), it may not link correctly with the other MacPorts installed modules, which are compiled in the system gcc versions. To check what gcc versions are available to you, try the command </p>
+</pre><p>Below is a list of steps to take to install GalSim using MacPorts: </p>
+<pre class="fragment">i) Take the `Portfiles` from the GalSim repository:
+https://github.com/GalSim-developers/GalSim/blob/master/devel/ports.tar.gz
+(If you do not clone the repository, there is a "copy" button on the website
+that you can use to download the file directly.)
+ii) Place the file in your home directory.
+iii) `tar xvzf ports.tar.gz`
+iv) `cd ports`
+v) `sudo portindex`
+vi) `sudo port install python27`
+vii) `sudo port select &amp;ndash;set python python27`
+viii) `sudo sh -c "echo file:///Users/username/ports &gt;&gt;
+      /opt/local/etc/macports/sources.conf"`
+ix) `sudo port install galsim`
+x) Add /opt/local/lib to DYLD_LIBRARY_PATH
+</pre><p>Notes on MacPorts with Mac OS X 10.8: The use of <code>sudo</code> in the above commands may elicit an error message that says "dyld: DYLD_ environment variables being ignored because main executable
+(/usr/bin/sudo) is setuid or setgid". This is the result of a bug in Mac OS X 10.8, and will not prevent the installation of GalSim with the above steps from being successful.</p>
+<p>Notes on MacPorts version of gcc with Mac OS X 10.5.8: If you have installed a MacPorts version of gcc (e.g., "mp-gcc47"), it may not link correctly with the other MacPorts installed modules, which are compiled in the system gcc versions. To check what gcc versions are available to you, try the command </p>
 <pre class="fragment">port select &amp;ndash;list gcc
 </pre><p>then switch to the system gcc version (either 4.0 or 4.2) with </p>
 <pre class="fragment">sudo port select &amp;ndash;set gcc gcc42
