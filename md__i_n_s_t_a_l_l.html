@@ -280,7 +280,8 @@ viii) `sudo sh -c "echo file:///Users/username/ports &gt;&gt;
       /opt/local/etc/macports/sources.conf"`
 ix) `sudo port install galsim`
 x) Add /opt/local/lib to DYLD_LIBRARY_PATH
-</pre><p>Notes on MacPorts with Mac OS X 10.8: The use of <code>sudo</code> in the above commands may elicit an error message that says "dyld: DYLD_ environment variables being ignored because main executable
+</pre><p>Some users may find that the last step results in an inability to import the GalSim module. In that case, you can clear that addition to DYLD_LIBRARY_PATH and instead add /opt/local/lib to DYLD_FALLBACK_LIBRARY_PATH.</p>
+<p>Notes on MacPorts with Mac OS X 10.8: The use of <code>sudo</code> in the above commands may elicit an error message that says "dyld: DYLD_ environment variables being ignored because main executable
 (/usr/bin/sudo) is setuid or setgid". This is the result of a bug in Mac OS X 10.8, and will not prevent the installation of GalSim with the above steps from being successful.</p>
 <p>Notes on MacPorts version of gcc with Mac OS X 10.5.8: If you have installed a MacPorts version of gcc (e.g., "mp-gcc47"), it may not link correctly with the other MacPorts installed modules, which are compiled in the system gcc versions. To check what gcc versions are available to you, try the command </p>
 <pre class="fragment">port select &amp;ndash;list gcc
