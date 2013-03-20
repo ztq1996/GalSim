@@ -31,10 +31,10 @@ var searchData=
   ['_7esbgaussian',['~SBGaussian',['../classgalsim_1_1_s_b_gaussian.html#aeed82486d3722a0edb6c5afd9baf7a2b',1,'galsim::SBGaussian']]],
   ['_7esbinterpolatedimage',['~SBInterpolatedImage',['../classgalsim_1_1_s_b_interpolated_image.html#a54662b2133f6c3ba1930ca7267aeba06',1,'galsim::SBInterpolatedImage']]],
   ['_7esbkolmogorov',['~SBKolmogorov',['../classgalsim_1_1_s_b_kolmogorov.html#a9ff0be5634d9737cd658384ceb78b079',1,'galsim::SBKolmogorov']]],
-  ['_7esblaguerre',['~SBLaguerre',['../classgalsim_1_1_s_b_laguerre.html#a3efb412bbb20fb0f786a6d2ffa78b739',1,'galsim::SBLaguerre']]],
   ['_7esbmoffat',['~SBMoffat',['../classgalsim_1_1_s_b_moffat.html#a864f02c88892b9a176b287180d6a163e',1,'galsim::SBMoffat']]],
   ['_7esbprofile',['~SBProfile',['../classgalsim_1_1_s_b_profile.html#a06f77dec827936f92644512db325d7da',1,'galsim::SBProfile']]],
   ['_7esbsersic',['~SBSersic',['../classgalsim_1_1_s_b_sersic.html#a1231803713c791d91632f88ae673dae0',1,'galsim::SBSersic']]],
+  ['_7esbshapelet',['~SBShapelet',['../classgalsim_1_1_s_b_shapelet.html#adb1b095c1257c592e526026d679065b1',1,'galsim::SBShapelet']]],
   ['_7esbtransform',['~SBTransform',['../classgalsim_1_1_s_b_transform.html#adf65ab999eaac1fe4e2077027df9fd67',1,'galsim::SBTransform']]],
   ['_7esincinterpolant',['~SincInterpolant',['../classgalsim_1_1_sinc_interpolant.html#a1a3a68f170e56475a2e5e7eb2f69d4b5',1,'galsim::SincInterpolant']]],
   ['_7extable',['~XTable',['../classgalsim_1_1_x_table.html#a7a198b462fa5ea8f44f5af7f03313671',1,'galsim::XTable']]]

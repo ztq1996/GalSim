@@ -120,6 +120,7 @@ Inheritance diagram for galsim.base.GSObject:</div>
 <area href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels." alt="galsim.base.Pixel" shape="rect" coords="191,728,372,752"/>
 <area href="classgalsim_1_1base_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset." alt="galsim.base.RealGalaxy" shape="rect" coords="191,784,372,808"/>
 <area href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects." alt="galsim.base.Sersic" shape="rect" coords="191,840,372,864"/>
+<area href="classgalsim_1_1base_1_1_shapelet.html" title="A class describing polar shapelet surface brightness profiles." alt="galsim.base.Shapelet" shape="rect" coords="191,896,372,920"/>
 </map>
  </div></div>
 
@@ -217,7 +218,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>SBProfile</em>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -501,6 +502,8 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#aacf743693a02fe8729f7af93cca37af0">galsim.base.Shapelet</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9d13b0238057f6d5d01f2681d91c09b0"></a>
@@ -538,6 +541,8 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#a7950cfc93c8fe2e9457e81818108fd0d">galsim.base.Shapelet</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad6236e3153f23f1201396369dd67f1c7"></a>
@@ -572,6 +577,8 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#aca01407e06a30fec32909d68e301b9fd">galsim.base.Shapelet</a>.</p>
 
 </div>
 </div>
@@ -1007,6 +1014,10 @@ Public Attributes</h2></td></tr>
 <p>Draws an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the object, with bounds optionally set by an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </p>
 <p>The draw method is used to draw an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, typically using Fourier space convolution (or, for certain GSObjects that have hard edges, real-space convolution may be used), and using interpolation to carry out image transformations such as shearing. This method can create a new <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or can draw into an existing one, depending on the choice of the <code>image</code> keyword parameter. Other keywords of particular relevance for users are those that set the pixel scale for the image (<code>dx</code>), that choose the normalization convention for the flux (<code>normalization</code>), and that decide whether the clear the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> before drawing into it (<code>add_to_image</code>).</p>
 <p>Note that when drawing a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> that was defined with a particular value of flux, it is not necessarily the case that a drawn image with 'normalization=flux' will have the sum of pixel values equal to flux. That condition is guaranteed to be satisfied only if the profile has been convolved with a pixel response. If there was no convolution by a pixel response, then the draw method is effectively sampling the surface brightness profile of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> at pixel centers without integrating over the flux within pixels, so for profiles that are poorly sampled and/or varying rapidly (e.g., high n <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> profiles), the sum of pixel values might differ significantly from the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> flux.</p>
+<p>On return, the image will have a member <code>added_flux</code>, which will be set to be the total flux added to the image. This may be useful as a sanity check that you have provided a large enough image to catch most of the flux. For example: </p>
+<pre class="fragment">obj.draw(image)
+assert image.added_flux &gt; 0.99 * obj.getFlux()
+</pre><p>The appropriate threshold will depend on your particular application, including what kind of profile the object has, how big your image is relative to the size of your object, etc.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size (default <code>image = None</code>).</td></tr>
@@ -1175,6 +1186,10 @@ Public Attributes</h2></td></tr>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> method is used to draw an image of an object by shooting a number of photons to randomly sample the profile of the object. The resulting image will thus have Poisson noise due to the finite number of photons shot. <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> can create a new <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or use an existing one, depending on the choice of the <code>image</code> keyword parameter. Other keywords of particular relevance for users are those that set the pixel scale for the image (<code>dx</code>), that choose the normalization convention for the flux (<code>normalization</code>), and that decide whether the clear the input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> before shooting photons into it (<code>add_to_image</code>).</p>
 <p>It is important to remember that the image produced by <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> represents the object as convolved with the square image pixel. So when using <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a> instead of <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, you should not explicitly include the pixel response by convolving with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. Using drawShoot without convolving with a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> will produce the equivalent image (for very large n_photons) as <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a> produces when the same object is convolved with <code><a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a>(xw=dx)</code> when drawing onto an image with pixel scale <code>dx</code>.</p>
 <p>Note that the drawShoot method is unavailable for objects which contain an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>, or are compound objects (e.g. <a class="el" href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include an <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a>.</p>
+<p>On return, the image will have a member <code>added_flux</code>, which will be set to be the total flux of photons that landed inside the image bounds. This may be useful as a sanity check that you have provided a large enough image to catch most of the flux. For example: </p>
+<pre class="fragment">obj.drawShoot(image)
+assert image.added_flux &gt; 0.99 * obj.getFlux()
+</pre><p>The appropriate threshold will depend on your particular application, including what kind of profile the object has, how big your image is relative to the size of your object, whether you are keeping <code>poisson_flux = True</code>, etc.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately base on the profile's size. (Default <code>image = None</code>.)</td></tr>
@@ -1190,11 +1205,7 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>The tuple (image, added_flux), where image is the input with drawn photons added and added_flux is the total flux of photons that landed inside the image bounds.</dd></dl>
-<p>The second part of the return tuple may be useful as a sanity check that you have provided a large enough image to catch most of the flux. For example: </p>
-<pre class="fragment">image, added_flux = obj.drawShoot(image)
-assert added_flux &gt; 0.99 * obj.getFlux()
-</pre><p>However, the appropriate threshold will depend things like whether you are keeping <code>poisson_flux = True</code>, how high the flux is, how big your images are relative to the size of your object, etc. </p>
+<dl class="section return"><dt>Returns:</dt><dd>The drawn image. </dd></dl>
 
 </div>
 </div>
@@ -1393,6 +1404,8 @@ assert added_flux &gt; 0.99 * obj.getFlux()
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#aa04ac3e19af23fd3cd4f0ea855318f87">galsim.base.Shapelet</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1993652591ddc802b734186391b28894"></a>
@@ -1427,6 +1440,8 @@ assert added_flux &gt; 0.99 * obj.getFlux()
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#a974da8d601efe710c415ba2044be60c3">galsim.base.Shapelet</a>.</p>
 
 </div>
 </div>

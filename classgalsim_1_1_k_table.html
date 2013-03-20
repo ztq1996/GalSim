@@ -159,6 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6abd0e9f4440a97896e1cd4199fa8a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate a function over d^2k:  <a href="#a6abd0e9f4440a97896e1cd4199fa8a6c"></a><br/></td></tr>
 <tr class="memitem:a30019f9035d7f0ab6baeca766aab0757"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_k_table.html#a30019f9035d7f0ab6baeca766aab0757">integratePixels</a> () const </td></tr>
 <tr class="memdesc:a30019f9035d7f0ab6baeca766aab0757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate <a class="el" href="classgalsim_1_1_k_table.html" title="KTable is a class holding the k-space representation of a real function.">KTable</a> over d^2k (sum of all pixels * dk * dk)  <a href="#a30019f9035d7f0ab6baeca766aab0757"></a><br/></td></tr>
+<tr class="memitem:af30a738119b9ae73f8aeb883480856c4"><td class="memItemLeft" align="right" valign="top">std::complex&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_k_table.html#af30a738119b9ae73f8aeb883480856c4">getArray</a> ()</td></tr>
+<tr class="memdesc:af30a738119b9ae73f8aeb883480856c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the ability to directly write to the array.  <a href="#af30a738119b9ae73f8aeb883480856c4"></a><br/></td></tr>
+<tr class="memitem:a87e4146ed97108bd4cb990877fe58755"><td class="memItemLeft" align="right" valign="top">const std::complex&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_k_table.html#a87e4146ed97108bd4cb990877fe58755">getArray</a> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
@@ -383,6 +386,38 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>New table is function of this one: </p>
+
+</div>
+</div>
+<a class="anchor" id="af30a738119b9ae73f8aeb883480856c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::complex&lt;double&gt;* galsim::KTable::getArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allow the ability to directly write to the array. </p>
+
+</div>
+</div>
+<a class="anchor" id="a87e4146ed97108bd4cb990877fe58755"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::complex&lt;double&gt;* galsim::KTable::getArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

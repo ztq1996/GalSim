@@ -10,13 +10,15 @@ var searchData=
   ['sbgaussian',['SBGaussian',['../classgalsim_1_1_s_b_gaussian.html',1,'galsim']]],
   ['sbinterpolatedimage',['SBInterpolatedImage',['../classgalsim_1_1_s_b_interpolated_image.html',1,'galsim']]],
   ['sbkolmogorov',['SBKolmogorov',['../classgalsim_1_1_s_b_kolmogorov.html',1,'galsim']]],
-  ['sblaguerre',['SBLaguerre',['../classgalsim_1_1_s_b_laguerre.html',1,'galsim']]],
   ['sbmoffat',['SBMoffat',['../classgalsim_1_1_s_b_moffat.html',1,'galsim']]],
   ['sbprofile',['SBProfile',['../classgalsim_1_1_s_b_profile.html',1,'galsim']]],
   ['sbsersic',['SBSersic',['../classgalsim_1_1_s_b_sersic.html',1,'galsim']]],
+  ['sbshapelet',['SBShapelet',['../classgalsim_1_1_s_b_shapelet.html',1,'galsim']]],
   ['sbtransform',['SBTransform',['../classgalsim_1_1_s_b_transform.html',1,'galsim']]],
   ['sersic',['Sersic',['../classgalsim_1_1base_1_1_sersic.html',1,'galsim::base']]],
+  ['shapelet',['Shapelet',['../classgalsim_1_1base_1_1_shapelet.html',1,'galsim::base']]],
   ['shear',['Shear',['../classgalsim_1_1shear_1_1_shear.html',1,'galsim::shear']]],
   ['sincinterpolant',['SincInterpolant',['../classgalsim_1_1_sinc_interpolant.html',1,'galsim']]],
+  ['skipthisobject',['SkipThisObject',['../classgalsim_1_1config_1_1gsobject_1_1_skip_this_object.html',1,'galsim::config::gsobject']]],
   ['solve',['Solve',['../classgalsim_1_1_solve.html',1,'galsim']]]
 ];

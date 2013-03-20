@@ -81,7 +81,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes from v0.4 to current version: </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>None. </p>
+<div class="textblock"><ul>
+<li>Added Shapelet class (sub-class of GSObject) for describing shapelet profiles. (Issue #350)</li>
+</ul>
+<ul>
+<li>Made various speed improvements related to drawing images, both in real and Fourier space. (Issue #350)</li>
+</ul>
+<ul>
+<li>Changed <code>obj.draw()</code> to return the added_flux in addition to the image in parallel to existing behavior of <code>drawShoot</code>. (Issue #350)</li>
+</ul>
+<ul>
+<li>Added des module that add some DES-specific types and paves the way for adding similar modules for other telescopes/surveys. Specifically, there are classes for the two ways that DES measures PSFs: DES_Shapelet and DES_PSFEx, demoed in examples/des.py and examples/des.yaml. (Issue #350)</li>
+</ul>
+<ul>
+<li>Enabled InputCatalog to read FITS catalogs. (Issue #350)</li>
+</ul>
+<ul>
+<li>Added FitsHeader class and config option. (Issue #350)</li>
+</ul>
+<ul>
+<li>Added the ability to read/write to a specific HDU rather than assuming the first hdu should be used. (Issue #350) </li>
+</ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

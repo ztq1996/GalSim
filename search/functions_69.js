@@ -47,5 +47,9 @@ var searchData=
   ['isexactatnodes',['isExactAtNodes',['../classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0',1,'galsim::Interpolant::isExactAtNodes()'],['../classgalsim_1_1_interpolant2d.html#abdb3086ffff98d62faae9d173f8d0618',1,'galsim::Interpolant2d::isExactAtNodes()'],['../classgalsim_1_1_interpolant_x_y.html#a311aa2d28d4b106424019e69081da03b',1,'galsim::InterpolantXY::isExactAtNodes()']]],
   ['islogf',['isLogF',['../classgalsim_1_1table_1_1_lookup_table.html#ab4ccd8ff431f6195b2f507959f058fd3',1,'galsim::table::LookupTable']]],
   ['islogx',['isLogX',['../classgalsim_1_1table_1_1_lookup_table.html#a24cb6915944fc0a1e69e54bb41ff3860',1,'galsim::table::LookupTable']]],
-  ['issameshapeas',['isSameShapeAs',['../classgalsim_1_1_bounds.html#af749fd142e32cd5d0498ff18565324d5',1,'galsim::Bounds']]]
+  ['issameshapeas',['isSameShapeAs',['../classgalsim_1_1_bounds.html#af749fd142e32cd5d0498ff18565324d5',1,'galsim::Bounds']]],
+  ['items',['items',['../classgalsim_1_1fits_1_1_fits_header.html#aeb138f2dfb6096cec4a5f8927e0e8f27',1,'galsim::fits::FitsHeader']]],
+  ['iteritems',['iteritems',['../classgalsim_1_1fits_1_1_fits_header.html#a566657d3e654ab8ebed646ae407d160d',1,'galsim::fits::FitsHeader']]],
+  ['iterkeys',['iterkeys',['../classgalsim_1_1fits_1_1_fits_header.html#a6269c626a2e2d581c588137a57c39503',1,'galsim::fits::FitsHeader']]],
+  ['itervalues',['itervalues',['../classgalsim_1_1fits_1_1_fits_header.html#a6e318f68ec79f67556fa43ca84a405ba',1,'galsim::fits::FitsHeader']]]
 ];

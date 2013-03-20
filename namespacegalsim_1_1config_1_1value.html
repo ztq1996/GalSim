@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.config.value Namespace Reference</div>  </div>
 </div><!--header-->
@@ -104,9 +105,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae44b2af88c30a2d3c0f75b2b96300039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check and get all the parameters for a particular item.  <a href="#ae44b2af88c30a2d3c0f75b2b96300039"></a><br/></td></tr>
 <tr class="memitem:a86024a047190f362e34f8d8a76ce9a43"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1value.html#a86024a047190f362e34f8d8a76ce9a43">GetCurrentValue</a></td></tr>
 <tr class="memdesc:a86024a047190f362e34f8d8a76ce9a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current value of a parameter (either stored or a simple value)  <a href="#a86024a047190f362e34f8d8a76ce9a43"></a><br/></td></tr>
-<tr class="memitem:a8ec2090b6efd5a45c01de7d76f0783df"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1value.html#a8ec2090b6efd5a45c01de7d76f0783df">type_by_letter</a></td></tr>
 <tr class="memitem:a9025f3a09fd50cd16b1620449aa05bd0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1value.html#a9025f3a09fd50cd16b1620449aa05bd0">SetDefaultIndex</a></td></tr>
 <tr class="memdesc:a9025f3a09fd50cd16b1620449aa05bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the number of items in a list is known, we allow the user to omit some of the parameters of a Sequence or Random and set them automatically based on the size of the list, catalog, etc.  <a href="#a9025f3a09fd50cd16b1620449aa05bd0"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad12400ca84f698926856c74962a87910"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1value.html#ad12400ca84f698926856c74962a87910">valid_value_types</a></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a46e9d7a5f43f8303081e058bc4ddf8cf"></a>
@@ -318,20 +322,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8ec2090b6efd5a45c01de7d76f0783df"></a>
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="ad12400ca84f698926856c74962a87910"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.config.value.type_by_letter </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
+          <td class="memname">dictionary galsim.config.value.valid_value_types</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespacegalsim_1_1config_1_1value.html">    1</a></span>&#160;{</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;List&#39;</span> : [ float, int, bool, str, <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a>, <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>, galsim.PositionD ],</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;Eval&#39;</span> : [ float, int, bool, str, <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a>, <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a>, galsim.PositionD ],</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;InputCatalog&#39;</span> : [ float, int, bool, str ],</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;FitsHeader&#39;</span> : [ float, int, bool, str ],</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;Sequence&#39;</span> : [ float, int, bool ],</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;Random&#39;</span> : [ float, int, bool, <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> ],</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;RandomGaussian&#39;</span> : [ float ],</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;RandomDistribution&#39;</span> : [ float ],</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;RandomCircle&#39;</span> : [ galsim.PositionD ],</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;NumberedFile&#39;</span> : [ str ],</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;FormattedStr&#39;</span> : [ str ],</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&#39;Rad&#39;</span> : [ <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> ],</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="stringliteral">&#39;Radians&#39;</span> : [ <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> ],</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&#39;Deg&#39;</span> : [ <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> ],</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&#39;Degrees&#39;</span> : [ <a class="code" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> ],</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="stringliteral">&#39;E1E2&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="stringliteral">&#39;EBeta&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="stringliteral">&#39;G1G2&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="stringliteral">&#39;GBeta&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&#39;Eta1Eta2&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="stringliteral">&#39;EtaBeta&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="stringliteral">&#39;QBeta&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="stringliteral">&#39;XY&#39;</span> : [ galsim.PositionD ],</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="stringliteral">&#39;RTheta&#39;</span> : [ galsim.PositionD ],</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&#39;NFWHaloShear&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&#39;NFWHaloMag&#39;</span> : [ float ],</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="stringliteral">&#39;PowerSpectrumShear&#39;</span> : [ <a class="code" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.Shear</a> ],</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -13,6 +13,8 @@ var searchData=
   ['bracketlower',['bracketLower',['../classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf',1,'galsim::Solve']]],
   ['bracketupper',['bracketUpper',['../classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e',1,'galsim::Solve']]],
   ['builddatacube',['BuildDataCube',['../namespacegalsim_1_1config_1_1process.html#a65ef8a95e0df55d50184f9e159b14001',1,'galsim::config::process']]],
+  ['builddes_5fpsfex',['BuildDES_PSFEx',['../namespacegalsim_1_1des_1_1des__psfex.html#a75e67c9d9708f13fd0530b9fc1964117',1,'galsim::des::des_psfex']]],
+  ['builddes_5fshapelet',['BuildDES_Shapelet',['../namespacegalsim_1_1des_1_1des__shapelet.html#a017dc0a5fb5bfb166b074c31d4724f3f',1,'galsim::des::des_shapelet']]],
   ['buildfits',['BuildFits',['../namespacegalsim_1_1config_1_1process.html#aa8a1a8605c8c243f3a614fd2b749515b',1,'galsim::config::process']]],
   ['buildgal',['BuildGal',['../namespacegalsim_1_1config_1_1stamp.html#a974de3e2e2a4a2cc8c258bf935777b1f',1,'galsim::config::stamp']]],
   ['buildgriddedshears',['buildGriddedShears',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a8ffabf0f0163723677400baa92d2ee6c',1,'galsim::lensing::PowerSpectrum']]],

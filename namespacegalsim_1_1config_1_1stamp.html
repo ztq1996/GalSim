@@ -160,7 +160,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em>, </td>
+          <td class="paramname"><em>sky_level_pixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em>, </td>
+          <td class="paramname"><em>sky_level_pixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -354,7 +354,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em> = <code>None</code>, </td>
+          <td class="paramname"><em>sky_level_pixel</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -401,7 +401,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">xsize</td><td>The xsize of the image to build. </td></tr>
     <tr><td class="paramname">ysize</td><td>The ysize of the image to build. </td></tr>
     <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image. </td></tr>
+    <tr><td class="paramname">sky_level_pixel</td><td>The background sky level to add to the image (in ADU/pixel). </td></tr>
     <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
@@ -458,7 +458,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em> = <code>None</code>, </td>
+          <td class="paramname"><em>sky_level_pixel</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -507,7 +507,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction. </td></tr>
     <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">sky_level</td><td>The background sky level to add to the image. </td></tr>
+    <tr><td class="paramname">sky_level_pixel</td><td>The background sky level to add to the image (in ADU/pixel). </td></tr>
     <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
@@ -534,13 +534,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>pixel_scale</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em>&#160;</td>
+          <td class="paramname"><em>sky_level_pixel</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -562,8 +568,18 @@ Functions</h2></td></tr>
           <td class="memname">def galsim.config.stamp.CalculateWCSShear </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wcs</em></td><td>)</td>
+          <td class="paramname"><em>wcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -664,7 +680,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em>, </td>
+          <td class="paramname"><em>sky_level_pixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -729,7 +745,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>sky_level</em>, </td>
+          <td class="paramname"><em>sky_level_pixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

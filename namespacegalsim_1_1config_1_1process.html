@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.config.process Namespace Reference</div>  </div>
 </div><!--header-->
@@ -98,6 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Functions</h2></td></tr>
 <tr class="memitem:a25c53f94a309727c969ac1229d123997"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a25c53f94a309727c969ac1229d123997">ProcessInput</a></td></tr>
 <tr class="memdesc:a25c53f94a309727c969ac1229d123997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input field, reading in any specified input files or setting up any objects that need to be initialized.  <a href="#a25c53f94a309727c969ac1229d123997"></a><br/></td></tr>
+<tr class="memitem:a43f054aa42dad1f395ff3f4fe8a40864"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a43f054aa42dad1f395ff3f4fe8a40864">ProcessInputNObjects</a></td></tr>
+<tr class="memdesc:a43f054aa42dad1f395ff3f4fe8a40864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input field, just enough to determine the number of objects.  <a href="#a43f054aa42dad1f395ff3f4fe8a40864"></a><br/></td></tr>
 <tr class="memitem:a2ecdb648fc17c8218541f5471629fbc9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a2ecdb648fc17c8218541f5471629fbc9">Process</a></td></tr>
 <tr class="memdesc:a2ecdb648fc17c8218541f5471629fbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do all processing of the provided configuration dict.  <a href="#a2ecdb648fc17c8218541f5471629fbc9"></a><br/></td></tr>
 <tr class="memitem:aa8a1a8605c8c243f3a614fd2b749515b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#aa8a1a8605c8c243f3a614fd2b749515b">BuildFits</a></td></tr>
@@ -112,6 +115,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a47940213e93f89816e6c0531551bbd25"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a47940213e93f89816e6c0531551bbd25">GetNObjForImage</a></td></tr>
 <tr class="memitem:a7a559af4b529ee8e54cab6f76610740b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a7a559af4b529ee8e54cab6f76610740b">SetDefaultExt</a></td></tr>
 <tr class="memdesc:a7a559af4b529ee8e54cab6f76610740b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some items have a default extension for a NumberedFile type.  <a href="#a7a559af4b529ee8e54cab6f76610740b"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a49188917da7e7f3e40b02ee4cdd23299"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1process.html#a49188917da7e7f3e40b02ee4cdd23299">valid_input_types</a></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a65ef8a95e0df55d50184f9e159b14001"></a>
@@ -579,7 +586,25 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Process the input field, reading in any specified input files or setting up any objects that need to be initialized. </p>
-<p>These objects are saved in the top level of config: config['catalog'] = the catalog specified by config.input.catalog, if provided. config['real_catalog'] = the catalog specified by config.input.real_catalog, if provided. config['nfw_halo'] = an NFWHalo specified by config.input.nfw_halo, if provided. </p>
+<p>Each item in the above valid_input_types will be built and available at the top level of config. e.g.; config['catalog'] = the catalog specified by config.input.catalog, if provided. config['real_catalog'] = the catalog specified by config.input.real_catalog, if provided. etc. </p>
+
+</div>
+</div>
+<a class="anchor" id="a43f054aa42dad1f395ff3f4fe8a40864"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.process.ProcessInputNObjects </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process the input field, just enough to determine the number of objects. </p>
 
 </div>
 </div>
@@ -609,6 +634,35 @@ Functions</h2></td></tr>
 
 <p>Some items have a default extension for a NumberedFile type. </p>
 
+</div>
+</div>
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="a49188917da7e7f3e40b02ee4cdd23299"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.config.process.valid_input_types</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespacegalsim_1_1config_1_1process.html">    1</a></span>&#160;{ </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="comment"># The values are tuples with:</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="comment"># - the class name to build.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="comment"># - a list of keys to ignore on the initial creation (e.g. PowerSpectrum has values that are </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment">#   used later).</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment"># - whether the class has a nobjects field, in which case it also must have a constructor</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">#   kwarg nobjects_only to efficiently do only enough to calculate nobjects.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;catalog&#39;</span> : (<span class="stringliteral">&#39;InputCatalog&#39;</span>, [], <span class="keyword">True</span>), </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;real_catalog&#39;</span> : (<span class="stringliteral">&#39;RealGalaxyCatalog&#39;</span>, [], <span class="keyword">True</span>),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;nfw_halo&#39;</span> : (<span class="stringliteral">&#39;NFWHalo&#39;</span>, [], <span class="keyword">False</span>),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;power_spectrum&#39;</span> : (<span class="stringliteral">&#39;PowerSpectrum&#39;</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                        <span class="comment"># power_spectrum uses these extra parameters for buildGriddedShears later.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                        [<span class="stringliteral">&#39;grid_spacing&#39;</span>, <span class="stringliteral">&#39;interpolant&#39;</span>], </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                        <span class="keyword">False</span>),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&#39;fits_header&#39;</span> : (<span class="stringliteral">&#39;FitsHeader&#39;</span>, [], <span class="keyword">False</span>), </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
