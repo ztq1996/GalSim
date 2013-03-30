@@ -25,6 +25,7 @@ var searchData=
   ['realspace_5fconv_5frelerr',['realspace_conv_relerr',['../namespacegalsim_1_1sbp.html#a884b75e2c400ab1315f73179d647747a',1,'galsim::sbp']]],
   ['realspaceconvolve',['RealSpaceConvolve',['../namespacegalsim.html#a78df204280d7ff1b8452c32df11fd937',1,'galsim']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],
+  ['recompute_5fpower',['recompute_power',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#ae3231adab090164c3c21ee4002dd076b',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['regauss_5ftoo_5fsmall',['regauss_too_small',['../namespacegalsim_1_1hsm.html#af4fdb51ebf29294d9777fbe3d155c704',1,'galsim::hsm']]],
   ['relative_5ferror',['RELATIVE_ERROR',['../namespacegalsim_1_1odd.html#ab10fa1bf1dc303e9c202805f407d2f6d',1,'galsim::odd']]],
   ['relerr',['relerr',['../_int_8h.html#a0e9f6681c910ef2d85e1d0efae6a4a2d',1,'Int.h']]],

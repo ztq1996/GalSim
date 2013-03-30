@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing.html#a3404998871b478b7197ca5326ebd4470',1,'galsim::lensing']]],
   ['keys',['keys',['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim::fits::FitsHeader']]],
   ['kolmogorov_5fmtf',['kolmogorov_mtf',['../namespacegalsim_1_1atmosphere.html#ad5e11134386049aa92dd0ea150e84682',1,'galsim::atmosphere']]],
   ['kolmogorov_5fmtf_5fimage',['kolmogorov_mtf_image',['../namespacegalsim_1_1atmosphere.html#adcba2658ced052803ec41f0a9c67586a',1,'galsim::atmosphere']]],

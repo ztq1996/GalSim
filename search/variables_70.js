@@ -5,6 +5,7 @@ var searchData=
   ['pad_5fvariance',['pad_variance',['../classgalsim_1_1base_1_1_real_galaxy.html#a0f272a3e4c9aa4fd012a06bbfb76ffa2',1,'galsim::base::RealGalaxy']]],
   ['parsec',['Parsec',['../_astronomical_constants_8h.html#aab83e617ec86afa1bb20cf937b9004ea',1,'AstronomicalConstants.h']]],
   ['pixel_5fscale',['pixel_scale',['../classgalsim_1_1base_1_1_real_galaxy.html#a93ca5f0a7e3a589671f6efca401d360d',1,'galsim.base.RealGalaxy.pixel_scale()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a9b9606a77393d190743f66bb52f912d3',1,'galsim.real.RealGalaxyCatalog.pixel_scale()']]],
+  ['pixel_5fsize',['pixel_size',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a5b2ff6c9fad766bd13544be0a6b5d989',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['planck',['Planck',['../_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74',1,'AstronomicalConstants.h']]],
   ['preloaded',['preloaded',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a245319227bc554398b5b557d260cc5f4',1,'galsim::real::RealGalaxyCatalog']]],
   ['psf_5ffile_5fname',['PSF_file_name',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a33b5851256767f8029fc1f00b4720585',1,'galsim::real::RealGalaxyCatalog']]],

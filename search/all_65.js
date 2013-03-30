@@ -15,6 +15,7 @@ var searchData=
   ['estimateshearhsm',['EstimateShearHSM',['../namespacegalsim_1_1psfcorr.html#a1072476270c2dcd1b1223fcb41e2bda5',1,'galsim::psfcorr']]],
   ['estimateshearhsmview',['EstimateShearHSMView',['../namespacegalsim_1_1hsm.html#a72441418e8e79493243aa1e57d8cb7e2',1,'galsim::hsm']]],
   ['eta',['eta',['../classgalsim_1_1shear_1_1_shear.html#a23c89fc1ae47920dddd41ae950651f5e',1,'galsim::shear::Shear']]],
+  ['exp2ipsi',['exp2ipsi',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a695eec419e555d9cd9b6f15b85460b1d',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['expand',['expand',['../classgalsim_1_1_bounds.html#a491239e823fc257356a6b1481eb2b7eb',1,'galsim::Bounds']]],
   ['exponential',['Exponential',['../classgalsim_1_1base_1_1_exponential.html',1,'galsim::base']]]
 ];

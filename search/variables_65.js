@@ -6,5 +6,6 @@ var searchData=
   ['earthmass',['EarthMass',['../_astronomical_constants_8h.html#a0fffcc72ce86fcb183b5b31563021dfb',1,'AstronomicalConstants.h']]],
   ['eclipticinclination',['EclipticInclination',['../_astronomical_constants_8h.html#a00dccbc230c3c8a55e7586176e6001e9',1,'AstronomicalConstants.h']]],
   ['eclipticnode',['EclipticNode',['../_astronomical_constants_8h.html#a70d263beef34cdf48edfd30555b82cfb',1,'AstronomicalConstants.h']]],
-  ['error_5fmessage',['error_message',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a133de3a3b304437b11c0ca009dac29ad',1,'galsim::hsm::CppHSMShapeData::error_message()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6f93bd9922a6dafb6a647e82da13eef3',1,'galsim.psfcorr.HSMShapeData.error_message()']]]
+  ['error_5fmessage',['error_message',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a133de3a3b304437b11c0ca009dac29ad',1,'galsim::hsm::CppHSMShapeData::error_message()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6f93bd9922a6dafb6a647e82da13eef3',1,'galsim.psfcorr.HSMShapeData.error_message()']]],
+  ['exp2ipsi',['exp2ipsi',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a695eec419e555d9cd9b6f15b85460b1d',1,'galsim::lensing::PowerSpectrumRealizer']]]
 ];

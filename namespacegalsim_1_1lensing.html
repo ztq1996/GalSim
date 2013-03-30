@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">0.4</span>
+   &#160;<span id="projectnumber">0.4.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.lensing Namespace Reference</div>  </div>
 </div><!--header-->
@@ -104,7 +105,97 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic cosmology calculations.  <a href="classgalsim_1_1lensing_1_1_cosmology.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html">NFWHalo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for NFW halos.  <a href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#details">More...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acdb4e6513e9124c1f35ee49b68446e10"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1lensing.html#acdb4e6513e9124c1f35ee49b68446e10">theoryToObserved</a></td></tr>
+<tr class="memdesc:acdb4e6513e9124c1f35ee49b68446e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to convert theoretical lensing quantities to observed ones.  <a href="#acdb4e6513e9124c1f35ee49b68446e10"></a><br/></td></tr>
+<tr class="memitem:a3404998871b478b7197ca5326ebd4470"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1lensing.html#a3404998871b478b7197ca5326ebd4470">kappaKaiserSquires</a></td></tr>
+<tr class="memdesc:a3404998871b478b7197ca5326ebd4470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a Kaiser &amp; Squires (1993) inversion to get a convergence map from gridded shears.  <a href="#a3404998871b478b7197ca5326ebd4470"></a><br/></td></tr>
 </table>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a3404998871b478b7197ca5326ebd4470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing.kappaKaiserSquires </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a Kaiser &amp; Squires (1993) inversion to get a convergence map from gridded shears. </p>
+<p>This function takes gridded shears and constructs a convergence map from them. While this is complicated in reality by the non-gridded galaxy positions, it is a straightforward implementation using Fourier transforms for the case of gridded galaxy positions. Note that there are additional complications when dealing with real observational issues like shape noise that are not handled by this function, and likewise there are known edge effects.</p>
+<p>Note that, like any process that attempts to recover information from discretely sampled data, the <code>kappa_E</code> and <code>kappa_B</code> maps returned by this function are subject to aliasing. There will be distortions if there are non-zero frequency modes in the lensing field represented by g1 and g2 at more than half the frequency represented by the g1, g2 grid spacing. To avoid this issue in practice you can smooth the input g1, g2 to effectively bandlimit them (the same smoothing kernel will be present in the output <code>kappa_E</code>, <code>kappa_B</code>). If applying this function to shears drawn randomly according to some power spectrum, the power spectrum that is used should be modified to go to zero above the relevant maximum k value for the grid being used.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g1</td><td>Square galsim.ImageF, galsim.ImageD or NumPy array containing the first component of shear. </td></tr>
+    <tr><td class="paramname">g2</td><td>Square galsim.ImageF, galsim.ImageD or NumPy array containing the second component of shear.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>kappa_E, kappa_B The first element of this tuple represents the convergence field underlying the input shears; the second element is the convergence field generated were all shears rotated by 45 degrees prior to input. Both are NumPy arrays. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acdb4e6513e9124c1f35ee49b68446e10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing.theoryToObserved </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gamma1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gamma2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kappa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function to convert theoretical lensing quantities to observed ones. </p>
+<p>This helper function is used internally by <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#a9c3bbbdc586176efa8200d39c6d3f328" title="This function can interpolate between grid positions to find the shear values for a given list of inp...">PowerSpectrum.getShear</a>, getMagnification, and getLensing to convert from theoretical quantities (shear and convergence) to observable ones (reduced shear and magnification). Users of <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum.html#ac3c27680628b9742b608debad77dd607" title="Generate a realization of the current power spectrum on the specified grid.">PowerSpectrum.buildGrid</a> outputs can also apply this method directly to the outputs in order to get the values of reduced shear and magnification on the output grid.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma1</td><td>The first shear component, which must be the NON-reduced shear. This and all other inputs should be supplied either as individual floating point numbers, tuples, lists, or Numpy arrays. </td></tr>
+    <tr><td class="paramname">gamma2</td><td>The second (x) shear component, which must be the NON-reduced shear. </td></tr>
+    <tr><td class="paramname">kappa</td><td>The convergence.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>g1, g2, mu The reduced shear and magnification, in the same form as the input gamma1, gamma2, and kappa. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

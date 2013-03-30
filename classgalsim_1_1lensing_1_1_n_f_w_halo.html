@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">0.4</span>
+   &#160;<span id="projectnumber">0.4.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -109,8 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1188caf331470ee2ca2e634e6d208eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate (reduced) shear of halo at specified positions.  <a href="#a1188caf331470ee2ca2e634e6d208eac"></a><br/></td></tr>
 <tr class="memitem:aa10b61fa8e53b07996f1aa966815f333"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#aa10b61fa8e53b07996f1aa966815f333">getConvergence</a></td></tr>
 <tr class="memdesc:aa10b61fa8e53b07996f1aa966815f333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate convergence of halo at specified positions.  <a href="#aa10b61fa8e53b07996f1aa966815f333"></a><br/></td></tr>
-<tr class="memitem:a6db2c96e5cb87e77929af4cc573c8adb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#a6db2c96e5cb87e77929af4cc573c8adb">getMag</a></td></tr>
-<tr class="memdesc:a6db2c96e5cb87e77929af4cc573c8adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate magnification of halo at specified positions.  <a href="#a6db2c96e5cb87e77929af4cc573c8adb"></a><br/></td></tr>
+<tr class="memitem:a4d8dedd9b2f2b1b6f7a70fe7fe9d8fca"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#a4d8dedd9b2f2b1b6f7a70fe7fe9d8fca">getMagnification</a></td></tr>
+<tr class="memdesc:a4d8dedd9b2f2b1b6f7a70fe7fe9d8fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate magnification of halo at specified positions.  <a href="#a4d8dedd9b2f2b1b6f7a70fe7fe9d8fca"></a><br/></td></tr>
+<tr class="memitem:acd1012a35a1d6da8ab4544ef7a1df0b4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing_1_1_n_f_w_halo.html#acd1012a35a1d6da8ab4544ef7a1df0b4">getLensing</a></td></tr>
+<tr class="memdesc:acd1012a35a1d6da8ab4544ef7a1df0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate lensing shear and magnification of halo at specified positions.  <a href="#acd1012a35a1d6da8ab4544ef7a1df0b4"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -246,7 +248,10 @@ Public Attributes</h2></td></tr>
 <li>Single galsim.PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
 <li>list of galsim.PositionD (or PositionI) instances</li>
-<li>tuple of lists: ( xlist, ylist ) </li>
+<li>tuple of lists: ( xlist, ylist )</li>
+<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of NumPy arrays: ( xarray, yarray )</li>
+<li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
@@ -258,12 +263,70 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6db2c96e5cb87e77929af4cc573c8adb"></a>
+<a class="anchor" id="acd1012a35a1d6da8ab4544ef7a1df0b4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.lensing.NFWHalo.getMag </td>
+          <td class="memname">def galsim.lensing.NFWHalo.getLensing </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>z_s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>units</em> = <code><a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790">galsim.arcsec</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate lensing shear and magnification of halo at specified positions. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! Valid ways to input this:<ul>
+<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>tuple of floats: (x,y)</li>
+<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of lists: ( xlist, ylist )</li>
+<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of NumPy arrays: ( xarray, yarray )</li>
+<li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>g1,g2,mu Reduced shears and magnifications. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4d8dedd9b2f2b1b6f7a70fe7fe9d8fca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing.NFWHalo.getMagnification </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -301,7 +364,10 @@ Public Attributes</h2></td></tr>
 <li>Single galsim.PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
 <li>list of galsim.PositionD (or PositionI) instances</li>
-<li>tuple of lists: ( xlist, ylist ) </li>
+<li>tuple of lists: ( xlist, ylist )</li>
+<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of NumPy arrays: ( xarray, yarray )</li>
+<li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
@@ -362,7 +428,10 @@ Public Attributes</h2></td></tr>
 <li>Single galsim.PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
 <li>list of galsim.PositionD (or PositionI) instances</li>
-<li>tuple of lists: ( xlist, ylist ) </li>
+<li>tuple of lists: ( xlist, ylist )</li>
+<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>tuple of NumPy arrays: ( xarray, yarray )</li>
+<li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>

@@ -54,6 +54,8 @@ var searchData=
   ['second',['SECOND',['../_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f',1,'AstronomicalConstants.h']]],
   ['seed',['seed',['../classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee',1,'galsim::BaseDeviate::seed()'],['../classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a',1,'galsim::UniformDeviate::seed()'],['../classgalsim_1_1_uniform_deviate.html#a111b8db476baf0c246d147b66335a7d9',1,'galsim::UniformDeviate::seed(const long lseed)']]],
   ['sersic',['Sersic',['../classgalsim_1_1base_1_1_sersic.html',1,'galsim::base']]],
+  ['set_5fpower',['set_power',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a000d816437fc998ed2891c229ddd139a',1,'galsim::lensing::PowerSpectrumRealizer']]],
+  ['set_5fsize',['set_size',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4efdb1b74ec332f47e022b8db643963b',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['seta',['setA',['../classgalsim_1_1_weibull_deviate.html#a1d26367743e04b8c96ff7bfbbdc363e8',1,'galsim::WeibullDeviate']]],
   ['setarea',['setArea',['../structgalsim_1_1integ_1_1_int_region.html#a2dc1fe42a1fabea87ebdf63bd2f4e8a1',1,'galsim::integ::IntRegion']]],
   ['setb',['setB',['../classgalsim_1_1_weibull_deviate.html#a722e178ddffcc7523e50ef719d055661',1,'galsim::WeibullDeviate']]],

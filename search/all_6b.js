@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['k',['k',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a993f8e811533889d1b1f2a17918e2141',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['k_5finterpolant',['k_interpolant',['../classgalsim_1_1base_1_1_interpolated_image.html#ada7191439f32606474372dfd6eb86a02',1,'galsim.base.InterpolatedImage.k_interpolant()'],['../classgalsim_1_1base_1_1_real_galaxy.html#a6be60ab978a6c59c49a43789367241ad',1,'galsim.base.RealGalaxy.k_interpolant()']]],
+  ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing.html#a3404998871b478b7197ca5326ebd4470',1,'galsim::lensing']]],
   ['keys',['keys',['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim::fits::FitsHeader']]],
   ['kolmogorov',['Kolmogorov',['../classgalsim_1_1base_1_1_kolmogorov.html',1,'galsim::base']]],
   ['kolmogorov_5fmtf',['kolmogorov_mtf',['../namespacegalsim_1_1atmosphere.html#ad5e11134386049aa92dd0ea150e84682',1,'galsim::atmosphere']]],
@@ -17,7 +17,6 @@ var searchData=
   ['kval2',['kval2',['../classgalsim_1_1_k_table.html#acbc9e2068b99c23ce2eb60d432818e4e',1,'galsim::KTable']]],
   ['kvalue',['kValue',['../classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06',1,'galsim::SBProfile::kValue()'],['../classgalsim_1_1base_1_1_g_s_object.html#ac8652894487904b797d7752651b54507',1,'galsim.base.GSObject.kValue()']]],
   ['kvalue_5faccuracy',['kvalue_accuracy',['../namespacegalsim_1_1sbp.html#a46cbee7c212d3e85dcc9074fdc6e14f3',1,'galsim::sbp']]],
-  ['kx',['kx',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a213c0b8770366d2f3dd75c7aecebb756',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['kxky',['kxky',['../namespacegalsim_1_1utilities.html#ae3d1586e7c70ecfd9582b71f6f5147ab',1,'galsim::utilities']]],
   ['ky',['ky',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a262efceeb18ec23ded467837071f302b',1,'galsim::lensing::PowerSpectrumRealizer']]]
 ];

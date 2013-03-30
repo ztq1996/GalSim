@@ -13,6 +13,7 @@ var searchData=
   ['pi',['PI',['../_astronomical_constants_8h.html#a598a3330b3c21701223ee0ca14316eca',1,'AstronomicalConstants.h']]],
   ['pixel',['Pixel',['../classgalsim_1_1base_1_1_pixel.html',1,'galsim::base']]],
   ['pixel_5fscale',['pixel_scale',['../classgalsim_1_1base_1_1_real_galaxy.html#a93ca5f0a7e3a589671f6efca401d360d',1,'galsim.base.RealGalaxy.pixel_scale()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a9b9606a77393d190743f66bb52f912d3',1,'galsim.real.RealGalaxyCatalog.pixel_scale()']]],
+  ['pixel_5fsize',['pixel_size',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a5b2ff6c9fad766bd13544be0a6b5d989',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['plaindraw',['plainDraw',['../classgalsim_1_1_s_b_profile.html#a4b3cc4cad1f119cc9ea95f3f78af9bb6',1,'galsim::SBProfile']]],
   ['plaindrawk',['plainDrawK',['../classgalsim_1_1_s_b_profile.html#a03ae250814e299f4a7b81b9320c5ba29',1,'galsim::SBProfile']]],
   ['planck',['Planck',['../_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74',1,'AstronomicalConstants.h']]],

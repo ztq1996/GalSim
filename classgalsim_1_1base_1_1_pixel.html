@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">0.4</span>
+   &#160;<span id="projectnumber">0.4.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -160,9 +160,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4301c73bbc1491ebb170e64c509cadd5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a4301c73bbc1491ebb170e64c509cadd5">applyDilation</a></td></tr>
 <tr class="memdesc:a4301c73bbc1491ebb170e64c509cadd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a dilation of the linear size by the given scale.  <a href="#a4301c73bbc1491ebb170e64c509cadd5"></a><br/></td></tr>
 <tr class="memitem:a9d13b0238057f6d5d01f2681d91c09b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0">applyMagnification</a></td></tr>
-<tr class="memdesc:a9d13b0238057f6d5d01f2681d91c09b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2.  <a href="#a9d13b0238057f6d5d01f2681d91c09b0"></a><br/></td></tr>
+<tr class="memdesc:a9d13b0238057f6d5d01f2681d91c09b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness.  <a href="#a9d13b0238057f6d5d01f2681d91c09b0"></a><br/></td></tr>
 <tr class="memitem:a85cc0094dcf470cfbff93d9830ab80bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd">applyShear</a></td></tr>
 <tr class="memdesc:a85cc0094dcf470cfbff93d9830ab80bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one.  <a href="#a85cc0094dcf470cfbff93d9830ab80bd"></a><br/></td></tr>
+<tr class="memitem:a3b6f6f1096d1a1eb6b0a795ced21dde3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a3b6f6f1096d1a1eb6b0a795ced21dde3">applyLensing</a></td></tr>
+<tr class="memdesc:a3b6f6f1096d1a1eb6b0a795ced21dde3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a lensing shear and magnification to this object.  <a href="#a3b6f6f1096d1a1eb6b0a795ced21dde3"></a><br/></td></tr>
 <tr class="memitem:ad6236e3153f23f1201396369dd67f1c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad6236e3153f23f1201396369dd67f1c7">applyRotation</a></td></tr>
 <tr class="memdesc:ad6236e3153f23f1201396369dd67f1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a rotation theta to this object.  <a href="#ad6236e3153f23f1201396369dd67f1c7"></a><br/></td></tr>
 <tr class="memitem:a6b547741eeec4086de9abe227dae9325"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6b547741eeec4086de9abe227dae9325">applyShift</a></td></tr>
@@ -172,9 +174,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad21997fcb7ef6db0cea9d51a16498283"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283">createDilated</a></td></tr>
 <tr class="memdesc:ad21997fcb7ef6db0cea9d51a16498283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a dilation of the linear size by the given scale.  <a href="#ad21997fcb7ef6db0cea9d51a16498283"></a><br/></td></tr>
 <tr class="memitem:ab1c086513d5d569e6cd1c4269e83dd2d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d">createMagnified</a></td></tr>
-<tr class="memdesc:ab1c086513d5d569e6cd1c4269e83dd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a magnification by the given scale, scaling the linear size by scale and the flux by scale^2.  <a href="#ab1c086513d5d569e6cd1c4269e83dd2d"></a><br/></td></tr>
+<tr class="memdesc:ab1c086513d5d569e6cd1c4269e83dd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a lensing magnification, scaling the area and flux by mu at fixed surface brightness.  <a href="#ab1c086513d5d569e6cd1c4269e83dd2d"></a><br/></td></tr>
 <tr class="memitem:a8c54a001124280ae550c57c8fdce3563"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a8c54a001124280ae550c57c8fdce3563">createSheared</a></td></tr>
 <tr class="memdesc:a8c54a001124280ae550c57c8fdce3563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one.  <a href="#a8c54a001124280ae550c57c8fdce3563"></a><br/></td></tr>
+<tr class="memitem:a48d3432b800095e5cb949a64cded86d9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a48d3432b800095e5cb949a64cded86d9">createLensed</a></td></tr>
+<tr class="memdesc:a48d3432b800095e5cb949a64cded86d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a lensing shear and magnification.  <a href="#a48d3432b800095e5cb949a64cded86d9"></a><br/></td></tr>
 <tr class="memitem:a6c29613e57067e6ba5ec7297e746cdc4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6c29613e57067e6ba5ec7297e746cdc4">createRotated</a></td></tr>
 <tr class="memdesc:a6c29613e57067e6ba5ec7297e746cdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a rotation.  <a href="#a6c29613e57067e6ba5ec7297e746cdc4"></a><br/></td></tr>
 <tr class="memitem:a96c05ef4b77187b6d02d877232e81126"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126">createShifted</a></td></tr>
@@ -579,7 +583,7 @@ Public Attributes</h2></td></tr>
 
 <p>Apply a dilation of the linear size by the given scale. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2...">applyMagnification()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
+<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9d13b0238057f6d5d01f2681d91c09b0" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness.">applyMagnification()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
 <p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -589,6 +593,64 @@ Public Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#aacf743693a02fe8729f7af93cca37af0">galsim.base.Shapelet</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b6f6f1096d1a1eb6b0a795ced21dde3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.base.GSObject.applyLensing </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a lensing shear and magnification to this object. </p>
+<p>This <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> method applies a lensing (reduced) shear and magnification. The shear must be specified using the g1, g2 definition of shear (see galsim.Shear documentation for more details). This is the same definition as the outputs of the galsim.PowerSpectrum and galsim.NFWHalo classes, which compute shears according to some lensing power spectrum or lensing by an NFW dark matter halo. The magnification determines the rescaling factor for the object area and flux, preserving surface brightness.</p>
+<p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma() for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g1</td><td>First component of lensing (reduced) shear to apply to the object. </td></tr>
+    <tr><td class="paramname">g2</td><td>Second component of lensing (reduced) shear to apply to the object. </td></tr>
+    <tr><td class="paramname">mu</td><td>Lensing magnification to apply to the object. This is the factor by which the solid angle subtended by the object is magnified, preserving surface brightness. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -609,7 +671,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -624,13 +686,13 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
-<p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves surface brightness, which means that the flux scales with the change in area. See applyDilation for a version that preserves flux.</p>
+<p>Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. </p>
+<p>This process applies a lensing magnification mu, which scales the linear dimensions of the image by the factor sqrt(mu), i.e., <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * sqrt(mu)</code> while increasing the flux by a factor of mu. Thus, applyMagnification preserves surface brightness.</p>
+<p>See applyDilation for a version that applies a linear scale factor in the size while preserving flux.</p>
 <p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+    <tr><td class="paramname">scale</td><td>The lensing magnification to apply. </td></tr>
   </table>
   </dd>
 </dl>
@@ -910,7 +972,7 @@ Public Attributes</h2></td></tr>
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a dilation of the linear size by the given scale. </p>
 <p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d" title="Returns a new GSObject by applying a magnification by the given scale, scaling the linear size by sca...">createMagnified()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
+<p>This operation preserves flux. See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d" title="Returns a new GSObject by applying a lensing magnification, scaling the area and flux by mu at fixed ...">createMagnified()</a> for a version that preserves surface brightness, and thus changes the flux.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
@@ -918,6 +980,64 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>The rescaled <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a48d3432b800095e5cb949a64cded86d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.base.GSObject.createLensed </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>g2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a lensing shear and magnification. </p>
+<p>This method returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> to which the supplied lensing (reduced) shear and magnification has been applied. The shear must be specified using the g1, g2 definition of shear (see galsim.Shear documentation for more details). This is the same definition as the outputs of the galsim.PowerSpectrum and galsim.NFWHalo classes, which compute shears according to some lensing power spectrum or lensing by an NFW dark matter halo. The magnification determines the rescaling factor for the object area and flux, preserving surface brightness.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g1</td><td>First component of lensing (reduced) shear to apply to the object. </td></tr>
+    <tr><td class="paramname">g2</td><td>Second component of lensing (reduced) shear to apply to the object. </td></tr>
+    <tr><td class="paramname">mu</td><td>Lensing magnification to apply to the object. This is the factor by which the solid angle subtended by the object is magnified, preserving surface brightness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>The lensed <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>
@@ -938,7 +1058,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -953,13 +1073,12 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a magnification by the given scale, scaling the linear size by scale and the flux by scale^2. </p>
-<p>Scales the linear dimensions of the image by the factor scale. e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>This operation preserves surface brightness, which means that the flux is also scaled by a factor of scale^2.</p>
+<p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a lensing magnification, scaling the area and flux by mu at fixed surface brightness. </p>
+<p>This process returns a new object with a lensing magnification mu, which scales the linear dimensions of the image by the factor sqrt(mu), i.e., <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * sqrt(mu)</code> while increasing the flux by a factor of mu. Thus, the new object has the same surface brightness as the original, but different size and flux.</p>
 <p>See <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283" title="Returns a new GSObject by applying a dilation of the linear size by the given scale.">createDilated()</a> for a version that preserves flux.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. </td></tr>
+    <tr><td class="paramname">mu</td><td>The lensing magnification to apply. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1049,7 +1168,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one. </p>
-<p>For more details about the allowed keyword arguments, see the documentation of galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>). </p>
+<p>For more details about the allowed keyword arguments, see the documentation of galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>).</p>
+<dl class="section return"><dt>Returns:</dt><dd>The sheared <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. </dd></dl>
 
 </div>
 </div>

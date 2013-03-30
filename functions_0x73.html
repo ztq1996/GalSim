@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">0.4</span>
+   &#160;<span id="projectnumber">0.4.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -205,6 +205,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">galsim::BaseDeviate</a>
 , <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>
 </li>
+<li>set_power()
+: <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a000d816437fc998ed2891c229ddd139a">galsim.lensing.PowerSpectrumRealizer</a>
+</li>
+<li>set_size()
+: <a class="el" href="classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4efdb1b74ec332f47e022b8db643963b">galsim.lensing.PowerSpectrumRealizer</a>
+</li>
 <li>setA()
 : <a class="el" href="classgalsim_1_1_weibull_deviate.html#a1d26367743e04b8c96ff7bfbbdc363e8">galsim::WeibullDeviate</a>
 </li>
@@ -307,10 +313,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_base_image.html#a94cc40ed91c0ba42ce9dde4fd49e7ea4">galsim::BaseImage&lt; T &gt;</a>
 </li>
 <li>setSigma()
-: <a class="el" href="classgalsim_1_1_gaussian_noise.html#a894554b85c3b3f1d19348d0ca78b0893">galsim::GaussianNoise</a>
-, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#ae3e00a8651fd2f35df012a524fda238b">galsim::GaussianDeviate</a>
+: <a class="el" href="classgalsim_1_1_gaussian_deviate.html#ae3e00a8651fd2f35df012a524fda238b">galsim::GaussianDeviate</a>
 , <a class="el" href="classgalsim_1_1base_1_1_shapelet.html#af649e1e82356072511d10919fa4b0dc7">galsim.base.Shapelet</a>
-, <a class="el" href="classgalsim_1_1_gaussian_deviate.html#ae3e00a8651fd2f35df012a524fda238b">galsim::GaussianDeviate</a>
+, <a class="el" href="classgalsim_1_1_gaussian_noise.html#a894554b85c3b3f1d19348d0ca78b0893">galsim::GaussianNoise</a>
 </li>
 <li>setSkyLevel()
 : <a class="el" href="classgalsim_1_1_poisson_noise.html#ac76cb138f20dd72a3e2fd2157ae51121">galsim::PoissonNoise</a>
@@ -328,14 +333,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>setVariance()
 : <a class="el" href="classgalsim_1_1_poisson_noise.html#a0ec9bc3fca15b7600caa06e1d07a37fc">galsim::PoissonNoise</a>
+, <a class="el" href="classgalsim_1_1_base_noise.html#a54b792cdc77178f4fda40008a4d2e04f">galsim::BaseNoise</a>
 , <a class="el" href="classgalsim_1_1_gaussian_noise.html#a1b6455f964aae48e8277830e998b980d">galsim::GaussianNoise</a>
 , <a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9e2509b481b96cb00ae8ddced354cf35">galsim::CCDNoise</a>
-, <a class="el" href="classgalsim_1_1_base_noise.html#a54b792cdc77178f4fda40008a4d2e04f">galsim::BaseNoise</a>
 , <a class="el" href="classgalsim_1_1_deviate_noise.html#acdf8a8fb8de40b1c4bb0c62e466df167">galsim::DeviateNoise</a>
 </li>
 <li>setX0()
-: <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html#a35b66ef414cd9c27967f4fe8595a9e76">galsim.ellipse.Ellipse</a>
-, <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a54ee2642cd9867e6e971e1462a028506">galsim::CppEllipse</a>
+: <a class="el" href="classgalsim_1_1_cpp_ellipse.html#a54ee2642cd9867e6e971e1462a028506">galsim::CppEllipse</a>
+, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html#a35b66ef414cd9c27967f4fe8595a9e76">galsim.ellipse.Ellipse</a>
 </li>
 <li>setXMax()
 : <a class="el" href="classgalsim_1_1_bounds.html#a87f3416557ae7b12046d275ea2bf976b">galsim::Bounds&lt; T &gt;</a>
@@ -361,27 +366,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_bounds.html#adde9c54a2681c66f9f8ed80e0679f5c6">galsim::Bounds&lt; T &gt;</a>
 </li>
 <li>shoot()
-: <a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">galsim::Nearest</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1_delta.html#acd2e9e524e82add75923473343ea948a">galsim::Delta</a>
+: <a class="el" href="classgalsim_1_1_delta.html#acd2e9e524e82add75923473343ea948a">galsim::Delta</a>
 , <a class="el" href="classgalsim_1_1_one_dimensional_deviate.html#a5f7d73d84a2763b364390cf37b94d281">galsim::OneDimensionalDeviate</a>
-, <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a05b3d4223a1679d8aacd04ea3a0346db">galsim::InterpolantXY</a>
-, <a class="el" href="classgalsim_1_1_interpolant2d.html#a2800b0afbd71a38768a9f05f1062043a">galsim::Interpolant2d</a>
-, <a class="el" href="classgalsim_1_1_linear.html#ad50095005b6b0fbb6e5566a15c441efd">galsim::Linear</a>
+, <a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">galsim::Nearest</a>
 , <a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">galsim::Interpolant</a>
+, <a class="el" href="classgalsim_1_1_linear.html#ad50095005b6b0fbb6e5566a15c441efd">galsim::Linear</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a05b3d4223a1679d8aacd04ea3a0346db">galsim::InterpolantXY</a>
 , <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a5941d81dcfc0b3c5c9cc15d531ab47fe">galsim::SincInterpolant</a>
+, <a class="el" href="classgalsim_1_1_interpolant2d.html#a2800b0afbd71a38768a9f05f1062043a">galsim::Interpolant2d</a>
 </li>
 <li>sigma
-: <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a96dc3b3ce78a099ec1a67bcf3114ecc4">galsim.des.des_shapelet.DES_Shapelet</a>
-, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html#a9609fdee193b52a5cd0ed28f87fba0f6">galsim::hsm::ObjectData</a>
+: <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html#a9609fdee193b52a5cd0ed28f87fba0f6">galsim::hsm::ObjectData</a>
+, <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a96dc3b3ce78a099ec1a67bcf3114ecc4">galsim.des.des_shapelet.DES_Shapelet</a>
 </li>
 <li>SincInterpolant()
 : <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a629dee7b72832c2d19467f44d9d6d57b">galsim::SincInterpolant</a>
 </li>
 <li>size()
 : <a class="el" href="classgalsim_1_1_table.html#a4d5810f584623a94c8a83af4a2bdb7e1">galsim::Table&lt; V, A &gt;</a>
-, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a4fedc8f5ba9f28128032338da08cfb3d">galsim::MultipleImageHelper</a>
 , <a class="el" href="classgalsim_1_1_photon_array.html#a5afddf32d7dd83151e0fb7186d507d11">galsim::PhotonArray</a>
+, <a class="el" href="classgalsim_1_1_multiple_image_helper.html#a4fedc8f5ba9f28128032338da08cfb3d">galsim::MultipleImageHelper</a>
 </li>
 <li>Solve()
 : <a class="el" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8">galsim::Solve&lt; F, T &gt;</a>
@@ -393,17 +398,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1_interval.html#a34ac442720e8ba965c4081b4d2fbd61e">galsim::Interval</a>
 </li>
 <li>stepK()
-: <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55">galsim::SBProfile</a>
-, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae8b5da3e499f3c00def5f7f54cab532f">galsim.base.GSObject</a>
+: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae8b5da3e499f3c00def5f7f54cab532f">galsim.base.GSObject</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55">galsim::SBProfile</a>
 </li>
 <li>subDivide()
 : <a class="el" href="structgalsim_1_1integ_1_1_int_region.html#a7f5b798625d49507bbe6b178c1c81153">galsim::integ::IntRegion&lt; T &gt;</a>
 </li>
 <li>subImage()
 : <a class="el" href="classgalsim_1_1_image_view.html#af462992dfaae5ae4dc3192fbf8022a23">galsim::ImageView&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_image.html#a430ba97a264f879a507acb325fc62d82">galsim::Image&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_base_image.html#a12a183197b04b602c2dfcd94d5f18653">galsim::BaseImage&lt; T &gt;</a>
 , <a class="el" href="classgalsim_1_1_image.html#af0738563a55be56c5e1bebe76eb04a79">galsim::Image&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_base_image.html#a12a183197b04b602c2dfcd94d5f18653">galsim::BaseImage&lt; T &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -10,6 +10,7 @@ var searchData=
   ['readcube',['readCube',['../namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6',1,'galsim::fits']]],
   ['readmulti',['readMulti',['../namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067',1,'galsim::fits']]],
   ['realspaceconvolve',['RealSpaceConvolve',['../namespacegalsim.html#a78df204280d7ff1b8452c32df11fd937',1,'galsim']]],
+  ['recompute_5fpower',['recompute_power',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#ae3231adab090164c3c21ee4002dd076b',1,'galsim::lensing::PowerSpectrumRealizer']]],
   ['reserve',['reserve',['../classgalsim_1_1_photon_array.html#a16f1b571191fc1b9b05f733e9b63c5b0',1,'galsim::PhotonArray']]],
   ['reset',['reset',['../classgalsim_1_1_cpp_ellipse.html#a210df92d7892cdbabc70691a24bb56a4',1,'galsim::CppEllipse::reset()'],['../classgalsim_1_1_base_deviate.html#a467ee386aebd84bb837c016718e8c6ec',1,'galsim::BaseDeviate::reset(long lseed)'],['../classgalsim_1_1_base_deviate.html#a83d16e67974cfc43d3b9afddeae2cd3f',1,'galsim::BaseDeviate::reset(const BaseDeviate &amp;dev)'],['../classgalsim_1_1ellipse_1_1_ellipse.html#a6ea81e7c545c3f26a4e0c8c2144615ea',1,'galsim.ellipse.Ellipse.reset()'],['../classgalsim_1_1random_1_1_dist_deviate.html#a46cdfcc58f2e4e5f14800247a416f836',1,'galsim.random.DistDeviate.reset()']]],
   ['resize',['resize',['../classgalsim_1_1_image.html#a65b7d78929ebd60771a4ad8e5fcabcb9',1,'galsim::Image']]],
