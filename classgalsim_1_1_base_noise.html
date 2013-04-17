@@ -106,10 +106,12 @@ Inheritance diagram for galsim::BaseNoise:</div>
  <div class="center">
   <img src="classgalsim_1_1_base_noise.png" usemap="#galsim::BaseNoise_map" alt=""/>
   <map id="galsim::BaseNoise_map" name="galsim::BaseNoise_map">
-<area href="classgalsim_1_1_c_c_d_noise.html" title="Class implementing basic CCD noise model." alt="galsim::CCDNoise" shape="rect" coords="0,56,137,80"/>
-<area href="classgalsim_1_1_deviate_noise.html" title="Add noise according to a given Deviate." alt="galsim::DeviateNoise" shape="rect" coords="147,56,284,80"/>
-<area href="classgalsim_1_1_gaussian_noise.html" title="Class implementing simple Gaussain noise." alt="galsim::GaussianNoise" shape="rect" coords="294,56,431,80"/>
-<area href="classgalsim_1_1_poisson_noise.html" title="Class implementing simple Poisson noise." alt="galsim::PoissonNoise" shape="rect" coords="441,56,578,80"/>
+<area href="classgalsim_1_1_c_c_d_noise.html" title="Class implementing basic CCD noise model." alt="galsim::CCDNoise" shape="rect" coords="0,56,270,80"/>
+<area href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields." alt="galsim.correlatednoise._BaseCorrelatedNoise" shape="rect" coords="280,56,550,80"/>
+<area href="classgalsim_1_1_deviate_noise.html" title="Add noise according to a given Deviate." alt="galsim::DeviateNoise" shape="rect" coords="560,56,830,80"/>
+<area href="classgalsim_1_1_gaussian_noise.html" title="Class implementing simple Gaussain noise." alt="galsim::GaussianNoise" shape="rect" coords="840,56,1110,80"/>
+<area href="classgalsim_1_1_poisson_noise.html" title="Class implementing simple Poisson noise." alt="galsim::PoissonNoise" shape="rect" coords="1120,56,1390,80"/>
+<area href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ..." alt="galsim.correlatednoise.CorrelatedNoise" shape="rect" coords="280,112,550,136"/>
 </map>
  </div></div>
 
@@ -123,10 +125,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3afacf69a90ce944c90f5afaed545e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor shares the underlying rng.  <a href="#a3afacf69a90ce944c90f5afaed545e2e"></a><br/></td></tr>
 <tr class="memitem:a749d3084edf80b82c0e3379288143000"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#a749d3084edf80b82c0e3379288143000">~BaseNoise</a> ()</td></tr>
 <tr class="memdesc:a749d3084edf80b82c0e3379288143000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor is virtual.  <a href="#a749d3084edf80b82c0e3379288143000"></a><br/></td></tr>
+<tr class="memitem:aa1a4348710b72d435aa6ce229130a29e"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#aa1a4348710b72d435aa6ce229130a29e">getRNG</a> ()</td></tr>
+<tr class="memdesc:aa1a4348710b72d435aa6ce229130a29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model.  <a href="#aa1a4348710b72d435aa6ce229130a29e"></a><br/></td></tr>
+<tr class="memitem:ab7f48ad977d4e81cb12ba454b433784c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#ab7f48ad977d4e81cb12ba454b433784c">setRNG</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng)</td></tr>
+<tr class="memdesc:ab7f48ad977d4e81cb12ba454b433784c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model.  <a href="#ab7f48ad977d4e81cb12ba454b433784c"></a><br/></td></tr>
 <tr class="memitem:a1a0beb7aa6ff2b275186a7aeccd698b8"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#a1a0beb7aa6ff2b275186a7aeccd698b8">getVariance</a> () const =0</td></tr>
 <tr class="memdesc:a1a0beb7aa6ff2b275186a7aeccd698b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the variance of the noise model.  <a href="#a1a0beb7aa6ff2b275186a7aeccd698b8"></a><br/></td></tr>
 <tr class="memitem:a54b792cdc77178f4fda40008a4d2e04f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#a54b792cdc77178f4fda40008a4d2e04f">setVariance</a> (double variance)=0</td></tr>
 <tr class="memdesc:a54b792cdc77178f4fda40008a4d2e04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a54b792cdc77178f4fda40008a4d2e04f"></a><br/></td></tr>
+<tr class="memitem:a013fa7ff128f8f2127ee9c93d99f7277"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#a013fa7ff128f8f2127ee9c93d99f7277">scaleVariance</a> (double variance_ratio)=0</td></tr>
+<tr class="memdesc:a013fa7ff128f8f2127ee9c93d99f7277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a013fa7ff128f8f2127ee9c93d99f7277"></a><br/></td></tr>
 <tr class="memitem:ae2f44a253a71a23c16b80dfea0777815"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae2f44a253a71a23c16b80dfea0777815"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#ae2f44a253a71a23c16b80dfea0777815">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
 <tr class="memdesc:ae2f44a253a71a23c16b80dfea0777815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#ae2f44a253a71a23c16b80dfea0777815"></a><br/></td></tr>
@@ -231,6 +239,23 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa1a4348710b72d435aa6ce229130a29e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a>&gt; galsim::BaseNoise::getRNG </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model. </p>
+
+</div>
+</div>
 <a class="anchor" id="a1a0beb7aa6ff2b275186a7aeccd698b8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +279,53 @@ template&lt;typename T &gt; </div>
 
 <p>Get the variance of the noise model. </p>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_deviate_noise.html#a2fa5ce5083434a99a383970140fda95b">galsim::DeviateNoise</a>, <a class="el" href="classgalsim_1_1_c_c_d_noise.html#ab3ed2b091cc21eacfb3336b905deddb3">galsim::CCDNoise</a>, <a class="el" href="classgalsim_1_1_poisson_noise.html#acdde7a875ff13165b9844043896a8a94">galsim::PoissonNoise</a>, and <a class="el" href="classgalsim_1_1_gaussian_noise.html#aa6ed78fce234e160abb3832996fb3cb0">galsim::GaussianNoise</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_deviate_noise.html#a2fa5ce5083434a99a383970140fda95b">galsim::DeviateNoise</a>, <a class="el" href="classgalsim_1_1_c_c_d_noise.html#a7d6c74bc3fb324c289e26825a27a09c1">galsim::CCDNoise</a>, <a class="el" href="classgalsim_1_1_poisson_noise.html#ac382269849b21257533a03e1ac33bc62">galsim::PoissonNoise</a>, and <a class="el" href="classgalsim_1_1_gaussian_noise.html#aa6ed78fce234e160abb3832996fb3cb0">galsim::GaussianNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a013fa7ff128f8f2127ee9c93d99f7277"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void galsim::BaseNoise::scaleVariance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>variance_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the variance of the noise model. </p>
+
+<p>Implemented in <a class="el" href="classgalsim_1_1_deviate_noise.html#a340099b214a37b9e1979f1113aff6637">galsim::DeviateNoise</a>, <a class="el" href="classgalsim_1_1_c_c_d_noise.html#acd755d7aaa0028ef5d04a8619b38edbe">galsim::CCDNoise</a>, <a class="el" href="classgalsim_1_1_poisson_noise.html#a43aff78d744402cc60ad37862db03f99">galsim::PoissonNoise</a>, and <a class="el" href="classgalsim_1_1_gaussian_noise.html#a2356c27d393946bebd3e614612f71b52">galsim::GaussianNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7f48ad977d4e81cb12ba454b433784c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseNoise::setRNG </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td>
+          <td class="paramname"><em>rng</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model. </p>
 
 </div>
 </div>
@@ -282,7 +353,7 @@ template&lt;typename T &gt; </div>
 
 <p>Set the variance of the noise model. </p>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_deviate_noise.html#acdf8a8fb8de40b1c4bb0c62e466df167">galsim::DeviateNoise</a>, <a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9e2509b481b96cb00ae8ddced354cf35">galsim::CCDNoise</a>, <a class="el" href="classgalsim_1_1_poisson_noise.html#a0ec9bc3fca15b7600caa06e1d07a37fc">galsim::PoissonNoise</a>, and <a class="el" href="classgalsim_1_1_gaussian_noise.html#a1b6455f964aae48e8277830e998b980d">galsim::GaussianNoise</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_deviate_noise.html#acdf8a8fb8de40b1c4bb0c62e466df167">galsim::DeviateNoise</a>, <a class="el" href="classgalsim_1_1_c_c_d_noise.html#ac8febcea281324d9383b2a4c99153db0">galsim::CCDNoise</a>, <a class="el" href="classgalsim_1_1_poisson_noise.html#a97d81c56037bee84a515fa8312a9cd74">galsim::PoissonNoise</a>, and <a class="el" href="classgalsim_1_1_gaussian_noise.html#a1b6455f964aae48e8277830e998b980d">galsim::GaussianNoise</a>.</p>
 
 </div>
 </div>

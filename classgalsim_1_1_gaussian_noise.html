@@ -126,9 +126,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa6ed78fce234e160abb3832996fb3cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the variance of the noise model.  <a href="#aa6ed78fce234e160abb3832996fb3cb0"></a><br/></td></tr>
 <tr class="memitem:a1b6455f964aae48e8277830e998b980d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_noise.html#a1b6455f964aae48e8277830e998b980d">setVariance</a> (double variance)</td></tr>
 <tr class="memdesc:a1b6455f964aae48e8277830e998b980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a1b6455f964aae48e8277830e998b980d"></a><br/></td></tr>
+<tr class="memitem:a2356c27d393946bebd3e614612f71b52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_noise.html#a2356c27d393946bebd3e614612f71b52">scaleVariance</a> (double variance_ratio)</td></tr>
+<tr class="memdesc:a2356c27d393946bebd3e614612f71b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the variance of the noise model.  <a href="#a2356c27d393946bebd3e614612f71b52"></a><br/></td></tr>
 <tr class="memitem:a5ce916cc76c20d4fc7da0853a3b843b4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5ce916cc76c20d4fc7da0853a3b843b4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_noise.html#a5ce916cc76c20d4fc7da0853a3b843b4">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
 <tr class="memdesc:a5ce916cc76c20d4fc7da0853a3b843b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a5ce916cc76c20d4fc7da0853a3b843b4"></a><br/></td></tr>
+<tr class="memitem:aa1a4348710b72d435aa6ce229130a29e"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#aa1a4348710b72d435aa6ce229130a29e">getRNG</a> ()</td></tr>
+<tr class="memdesc:aa1a4348710b72d435aa6ce229130a29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model.  <a href="#aa1a4348710b72d435aa6ce229130a29e"></a><br/></td></tr>
+<tr class="memitem:ab7f48ad977d4e81cb12ba454b433784c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#ab7f48ad977d4e81cb12ba454b433784c">setRNG</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng)</td></tr>
+<tr class="memdesc:ab7f48ad977d4e81cb12ba454b433784c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model.  <a href="#ab7f48ad977d4e81cb12ba454b433784c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class implementing simple Gaussain noise. </p>
@@ -211,6 +217,31 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa1a4348710b72d435aa6ce229130a29e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a>&gt; galsim::BaseNoise::getRNG </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model. </p>
+
+</div>
+</div>
 <a class="anchor" id="a145248f3c8ed73131d62e1c9a89892bf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -252,6 +283,60 @@ template&lt;typename T &gt; </div>
 <p>Get the variance of the noise model. </p>
 
 <p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a1a0beb7aa6ff2b275186a7aeccd698b8">galsim::BaseNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2356c27d393946bebd3e614612f71b52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::GaussianNoise::scaleVariance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>variance_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Scale the variance of the noise model. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a013fa7ff128f8f2127ee9c93d99f7277">galsim::BaseNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7f48ad977d4e81cb12ba454b433784c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseNoise::setRNG </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td>
+          <td class="paramname"><em>rng</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model. </p>
 
 </div>
 </div>

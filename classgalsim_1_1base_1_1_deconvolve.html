@@ -188,7 +188,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4ae84ed44bf9a3f09df7e4bfa30f52b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_deconvolve.html#a4ae84ed44bf9a3f09df7e4bfa30f52b9">farg</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -209,7 +208,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>farg</em>&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -673,7 +672,7 @@ Public Attributes</h2></td></tr>
 <p>After this call, the caller's type will be a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>. This means that if the caller was a derived type that had extra methods beyond those defined in <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> (e.g. getSigma for a <a class="el" href="classgalsim_1_1base_1_1_gaussian.html" title="A class describing Gaussian profile objects.">Gaussian</a>), then these methods are no longer available.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scale</td><td>The lensing magnification to apply. </td></tr>
+    <tr><td class="paramname">mu</td><td>The lensing magnification to apply. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1911,18 +1910,6 @@ assert image.added_flux &gt; 0.99 * obj.getFlux()
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a4ae84ed44bf9a3f09df7e4bfa30f52b9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.base.Deconvolve.farg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">

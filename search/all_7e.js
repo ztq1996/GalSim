@@ -24,6 +24,8 @@ var searchData=
   ['_7equintic',['~Quintic',['../classgalsim_1_1_quintic.html#ab22becfadba4c0ed418247d9876f35d0',1,'galsim::Quintic']]],
   ['_7esbadd',['~SBAdd',['../classgalsim_1_1_s_b_add.html#a2fc4427f3fc7b7c5151177ffcefd7487',1,'galsim::SBAdd']]],
   ['_7esbairy',['~SBAiry',['../classgalsim_1_1_s_b_airy.html#a69b2ec854399ef8f8b57d19b19d84f9b',1,'galsim::SBAiry']]],
+  ['_7esbautoconvolve',['~SBAutoConvolve',['../classgalsim_1_1_s_b_auto_convolve.html#aabae3419beeae19ae9bc7eaffad277b4',1,'galsim::SBAutoConvolve']]],
+  ['_7esbautocorrelate',['~SBAutoCorrelate',['../classgalsim_1_1_s_b_auto_correlate.html#a7ab1e0c94b0f500ff380f67944c29845',1,'galsim::SBAutoCorrelate']]],
   ['_7esbbox',['~SBBox',['../classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73',1,'galsim::SBBox']]],
   ['_7esbconvolve',['~SBConvolve',['../classgalsim_1_1_s_b_convolve.html#a1b862883c72720a1521466284d5fc372',1,'galsim::SBConvolve']]],
   ['_7esbdeconvolve',['~SBDeconvolve',['../classgalsim_1_1_s_b_deconvolve.html#adc191700769b78b6b0910c5f1154307a',1,'galsim::SBDeconvolve']]],

@@ -94,6 +94,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added Shapelet class (sub-class of GSObject) for describing shapelet profiles. (Issue #350)</li>
 </ul>
 <ul>
+<li>The <code>ImageCorrFunc</code> has been superseded by the <code>CorrelatedNoise</code>, which like the <code>GaussianNoise</code>, <code>PoissonNoise</code> etc. classes inherits from the <code>BaseNoise</code>. The class contains all the correlation information represented by the <code>ImageCorrFunc</code>, as well as the random number generator required to apply noise (Issue #352).</li>
+</ul>
+<ul>
+<li>Similarly the get_COSMOS_CorrFunc() is replaced by the <a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">getCOSMOSNoise()</a> function, which now initializes a Noise model with a stored random number generator (Issue #352).</li>
+</ul>
+<ul>
+<li>Bug fixed in the generation of correlated noise fields (Issue #352); formerly these erroneously had two-fold rotational symmetry.</li>
+</ul>
+<ul>
+<li>The correlated noise classes now have an applyWhiteningTo() method. The purpose of this function is to add noise to images that contain correlated noise; the power spectrum of the added noise is specifically designed to result in white (uncorrelated) noise in the final image (Issue #352).</li>
+</ul>
+<ul>
 <li>Made various speed improvements related to drawing images, both in real and Fourier space. (Issue #350)</li>
 </ul>
 <ul>
@@ -109,7 +121,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added FitsHeader class and config option. (Issue #350)</li>
 </ul>
 <ul>
-<li>Added the ability to read/write to a specific HDU rather than assuming the first hdu should be used. (Issue #350) </li>
+<li>Added the ability to read/write to a specific HDU rather than assuming the first hdu should be used. (Issue #350)</li>
+</ul>
+<ul>
+<li>Added a new script, <a class="el" href="pse_8py.html" title="Module containing code for estimating shear power spectra from shears at gridded positions.">galsim/pse.py</a>, that contains a PowerSpectrumEstimator class that can be used to estimate the shear power spectrum from a set of shears defined on a grid. The main functionality of PowerSpectrumEstimator actually does not require an installed version of GalSim, just Python 2.6 or 2.7 and NumPy. (Issue #382) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

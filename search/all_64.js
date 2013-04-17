@@ -25,16 +25,18 @@ var searchData=
   ['devaucouleurs',['DeVaucouleurs',['../classgalsim_1_1base_1_1_de_vaucouleurs.html',1,'galsim::base']]],
   ['deviatenoise',['DeviateNoise',['../classgalsim_1_1_deviate_noise.html',1,'galsim']]],
   ['deviatenoise',['DeviateNoise',['../classgalsim_1_1_deviate_noise.html#a2796a4ab3cf63b8d63b85651e1faf04d',1,'galsim::DeviateNoise::DeviateNoise(boost::shared_ptr&lt; BaseDeviate &gt; dev)'],['../classgalsim_1_1_deviate_noise.html#ae9f998e8f1eba39a48f08abf15a99126',1,'galsim::DeviateNoise::DeviateNoise(const DeviateNoise &amp;rhs)']]],
+  ['deviatenoise_5fcopy',['DeviateNoise_copy',['../namespacegalsim_1_1noise.html#ac4007479ddf916e30e9de7af133828da',1,'galsim::noise']]],
   ['distdeviate',['DistDeviate',['../classgalsim_1_1random_1_1_dist_deviate.html',1,'galsim::random']]],
   ['divert_5fboost_5frandom',['DIVERT_BOOST_RANDOM',['../_random_8h.html#aa7f15194f79996fb7331d88b71069c5c',1,'Random.h']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
   ['do_5fpreload',['do_preload',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aa2bddf9957f1c8ea8571431d21b3cece',1,'galsim::real::RealGalaxyCatalog']]],
-  ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()'],['../classgalsim_1_1correlatednoise_1_1___corr_func.html#a6b77a3b9f68d67098737744bd25931d3',1,'galsim.correlatednoise._CorrFunc.draw()']]],
+  ['draw',['draw',['../classgalsim_1_1_s_b_profile.html#a56a60e7942736380f45b82695ab2170c',1,'galsim::SBProfile::draw()'],['../classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8',1,'galsim.base.GSObject.draw()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a802b7af3f66f968d58875e20e44dc3ab',1,'galsim.correlatednoise._BaseCorrelatedNoise.draw()']]],
   ['drawk',['drawK',['../classgalsim_1_1_s_b_profile.html#a0ddbb12c5a09580778548338d2b9ffeb',1,'galsim::SBProfile::drawK()'],['../classgalsim_1_1base_1_1_g_s_object.html#aafa4ff2871a15f044689bdf3756fd918',1,'galsim.base.GSObject.drawK()']]],
   ['drawpsfstamp',['DrawPSFStamp',['../namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f',1,'galsim::config::stamp']]],
   ['drawshoot',['drawShoot',['../classgalsim_1_1_s_b_profile.html#aee82d2bd31b21f44465ee905366d3718',1,'galsim::SBProfile::drawShoot()'],['../classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0',1,'galsim.base.GSObject.drawShoot()']]],
   ['drawstampfft',['DrawStampFFT',['../namespacegalsim_1_1config_1_1stamp.html#afece785b2079817ed2d4558689d4da5f',1,'galsim::config::stamp']]],
   ['drawstampphot',['DrawStampPhot',['../namespacegalsim_1_1config_1_1stamp.html#a35f6111ac506b8a68755e424ddbdc726',1,'galsim::config::stamp']]],
   ['drawwithin',['drawWithin',['../classgalsim_1_1_interval.html#a08bb56af4a637c1169676279c9f10188',1,'galsim::Interval']]],
-  ['dump',['dump',['../classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487',1,'galsim::Table']]]
+  ['dump',['dump',['../classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487',1,'galsim::Table']]],
+  ['dx',['dx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a36f7be3ed1cdc8e270cefeb4d6e853b4',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

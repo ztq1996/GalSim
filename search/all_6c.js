@@ -9,5 +9,7 @@ var searchData=
   ['loaded_5ffiles',['loaded_files',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad624e6e1516061819c2f73445373a056',1,'galsim::real::RealGalaxyCatalog']]],
   ['lookup',['lookup',['../classgalsim_1_1_table.html#a9c5fbdc6083dcbdd2a54ad19c5f7acd6',1,'galsim::Table']]],
   ['lookuptable',['LookupTable',['../classgalsim_1_1table_1_1_lookup_table.html',1,'galsim::table']]],
-  ['lookuptable_5fgetinitargs',['LookupTable_getinitargs',['../namespacegalsim_1_1table.html#a6300875f81820220b29888fa389c3e75',1,'galsim::table']]]
+  ['lookuptable_5fgetinitargs',['LookupTable_getinitargs',['../namespacegalsim_1_1table.html#a6300875f81820220b29888fa389c3e75',1,'galsim::table']]],
+  ['lx',['lx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a1082bde1d8d3f169daa743de40f4010a',1,'galsim::pse::PowerSpectrumEstimator']]],
+  ['ly',['ly',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#aff6ccc101c52037999b76e7cb1bbb8a0',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

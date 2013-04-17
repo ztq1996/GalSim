@@ -2,6 +2,8 @@ var searchData=
 [
   ['sbadd',['SBAdd',['../classgalsim_1_1_s_b_add.html',1,'galsim']]],
   ['sbairy',['SBAiry',['../classgalsim_1_1_s_b_airy.html',1,'galsim']]],
+  ['sbautoconvolve',['SBAutoConvolve',['../classgalsim_1_1_s_b_auto_convolve.html',1,'galsim']]],
+  ['sbautocorrelate',['SBAutoCorrelate',['../classgalsim_1_1_s_b_auto_correlate.html',1,'galsim']]],
   ['sbbox',['SBBox',['../classgalsim_1_1_s_b_box.html',1,'galsim']]],
   ['sbconvolve',['SBConvolve',['../classgalsim_1_1_s_b_convolve.html',1,'galsim']]],
   ['sbdeconvolve',['SBDeconvolve',['../classgalsim_1_1_s_b_deconvolve.html',1,'galsim']]],

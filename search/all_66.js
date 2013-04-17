@@ -4,7 +4,6 @@ var searchData=
   ['f_5flog',['f_log',['../classgalsim_1_1table_1_1_lookup_table.html#a326067b2079e04eed8e797f4f19a1784',1,'galsim::table::LookupTable']]],
   ['fact',['fact',['../namespacegalsim.html#a596292bf4c5c25f49d25ae3b5c2750f1',1,'galsim']]],
   ['failed_5fmoments',['failed_moments',['../namespacegalsim_1_1hsm.html#a1b5a8977d44ebf6d8f6224a0886f3695',1,'galsim::hsm']]],
-  ['farg',['farg',['../classgalsim_1_1base_1_1_deconvolve.html#a4ae84ed44bf9a3f09df7e4bfa30f52b9',1,'galsim::base::Deconvolve']]],
   ['fft_2eh',['FFT.h',['../_f_f_t_8h.html',1,'']]],
   ['fftwmeasure',['fftwMeasure',['../classgalsim_1_1_k_table.html#a5f73f4d14349774982fba1f0994bdc0c',1,'galsim::KTable::fftwMeasure()'],['../classgalsim_1_1_x_table.html#a6f06596bc260fcf6302a96614e696022',1,'galsim::XTable::fftwMeasure()']]],
   ['file_5fname',['file_name',['../classgalsim_1_1catalog_1_1_input_catalog.html#accf1dec6954ccf0806649940b74107da',1,'galsim.catalog.InputCatalog.file_name()'],['../classgalsim_1_1des_1_1des__psfex_1_1_d_e_s___p_s_f_ex.html#a5ef1c1258cd2bcce86fa6ba3ab6adeb8',1,'galsim.des.des_psfex.DES_PSFEx.file_name()'],['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#aa7a9d558ec622cfca39d2bd5264e3b70',1,'galsim.des.des_shapelet.DES_Shapelet.file_name()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a8460da3dc76f3445231231a04d813014',1,'galsim.real.RealGalaxyCatalog.file_name()']]],

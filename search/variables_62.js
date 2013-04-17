@@ -3,6 +3,7 @@ var searchData=
   ['b_5fpower_5ffunction',['b_power_function',['../classgalsim_1_1lensing_1_1_power_spectrum.html#ad944e6a37bfda383de704ee43bc39d33',1,'galsim::lensing::PowerSpectrum']]],
   ['band',['band',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a3f5c993516cedb0bfea1155efa7c91c9',1,'galsim::real::RealGalaxyCatalog']]],
   ['basis',['basis',['../classgalsim_1_1des_1_1des__psfex_1_1_d_e_s___p_s_f_ex.html#a8148dd1f3500c401883c4d6456198a58',1,'galsim::des::des_psfex::DES_PSFEx']]],
+  ['bin_5fedges',['bin_edges',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a68eb65f38b093529272bc4c3c9ca4dd6',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['boltzmann',['Boltzmann',['../_astronomical_constants_8h.html#a125b41175d0944993a5f264899eee96b',1,'AstronomicalConstants.h']]],
   ['bound_5fcorrect_5fweight',['bound_correct_weight',['../namespacegalsim_1_1hsm.html#a770ac94a4d6412a8e386f57958940f61',1,'galsim::hsm']]],
   ['bounds',['bounds',['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a77299b22037cfc4a2ef736abdfd77b1f',1,'galsim.des.des_shapelet.DES_Shapelet.bounds()'],['../classgalsim_1_1lensing_1_1_power_spectrum.html#a0f933a284671f38d65cf303d83c2a468',1,'galsim.lensing.PowerSpectrum.bounds()']]],

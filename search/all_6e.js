@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['n',['N',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#aa0d1ea0c60f81414b154bfaca5065e35',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['n_5fx',['n_x',['../classgalsim_1_1table_1_1_lookup_table.html#a4388cefd390d96ced0a1329e0c52c59c',1,'galsim::table::LookupTable']]],
   ['names',['names',['../classgalsim_1_1catalog_1_1_input_catalog.html#a0625a1c095818896d94ac7d1598e29a2',1,'galsim::catalog::InputCatalog']]],
   ['native_5fbyteorder',['native_byteorder',['../namespacegalsim_1_1fits.html#ad82571faa522c5320d04e82232a291dc',1,'galsim::fits']]],
@@ -10,6 +11,10 @@ var searchData=
   ['nobjects',['nobjects',['../classgalsim_1_1catalog_1_1_input_catalog.html#ab6d846b7f29f72db13ea11842045446e',1,'galsim.catalog.InputCatalog.nobjects()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ab2cd5eb6336bf4431a0377af2e026ef5',1,'galsim.real.RealGalaxyCatalog.nobjects()']]],
   ['noise_2eh',['Noise.h',['../_noise_8h.html',1,'']]],
   ['noise_2epy',['noise.py',['../noise_8py.html',1,'']]],
+  ['noise_5fdiv',['Noise_div',['../namespacegalsim_1_1noise.html#a87e6d843d5b04e7fd937343d070ba05a',1,'galsim::noise']]],
+  ['noise_5fidiv',['Noise_idiv',['../namespacegalsim_1_1noise.html#a39c39b8a349bd18e8639f3ba9ed50f9d',1,'galsim::noise']]],
+  ['noise_5fimul',['Noise_imul',['../namespacegalsim_1_1noise.html#a3293fe2dbc763a141dace2081f1d3ea4',1,'galsim::noise']]],
+  ['noise_5fmul',['Noise_mul',['../namespacegalsim_1_1noise.html#aae86d8ae3142ce4badb620460138672d',1,'galsim::noise']]],
   ['npca',['npca',['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a75936ee4949f159171d8aabf777628d2',1,'galsim::des::des_shapelet::DES_Shapelet']]],
   ['nsig_5frg',['nsig_rg',['../namespacegalsim_1_1hsm.html#ac6e588b87ee6be44153b6ce51b56c3f7',1,'galsim::hsm']]],
   ['nsig_5frg2',['nsig_rg2',['../namespacegalsim_1_1hsm.html#a200d2cae65884bcb6dfe93fb3328a6fd',1,'galsim::hsm']]],

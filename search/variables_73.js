@@ -6,6 +6,7 @@ var searchData=
   ['second',['SECOND',['../_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f',1,'AstronomicalConstants.h']]],
   ['shoot_5fflux_5faccuracy',['shoot_flux_accuracy',['../namespacegalsim_1_1sbp.html#a51b2f5996bde0b1471ada1d75161c13f',1,'galsim::sbp']]],
   ['sigma',['sigma',['../structgalsim_1_1hsm_1_1_object_data.html#a9609fdee193b52a5cd0ed28f87fba0f6',1,'galsim::hsm::ObjectData::sigma()'],['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a96dc3b3ce78a099ec1a67bcf3114ecc4',1,'galsim.des.des_shapelet.DES_Shapelet.sigma()']]],
+  ['sky_5fsize',['sky_size',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a974a3e93b5db6411d3a9547d8fcb7f49',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['small_5ffraction_5fof_5fflux',['SMALL_FRACTION_OF_FLUX',['../namespacegalsim_1_1odd.html#a85063bcbda8e0fc6150d958c745e411a',1,'galsim::odd']]],
   ['solarsystemmass',['SolarSystemMass',['../_astronomical_constants_8h.html#a4a9cd6be55c946df52acca2e75f7da3e',1,'AstronomicalConstants.h']]],
   ['speedoflight',['SpeedOfLight',['../_astronomical_constants_8h.html#a976b7a0cb6696d50ba116fff8956e2d4',1,'AstronomicalConstants.h']]],

@@ -24,6 +24,7 @@ var searchData=
   ['optics',['optics',['../namespacegalsim_1_1optics.html',1,'galsim']]],
   ['position',['position',['../namespacegalsim_1_1position.html',1,'galsim']]],
   ['process',['process',['../namespacegalsim_1_1config_1_1process.html',1,'galsim::config']]],
+  ['pse',['pse',['../namespacegalsim_1_1pse.html',1,'galsim']]],
   ['psfcorr',['psfcorr',['../namespacegalsim_1_1psfcorr.html',1,'galsim']]],
   ['random',['random',['../namespacegalsim_1_1random.html',1,'galsim']]],
   ['real',['real',['../namespacegalsim_1_1real.html',1,'galsim']]],

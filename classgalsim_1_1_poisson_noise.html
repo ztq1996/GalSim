@@ -122,13 +122,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a58cf5aba4ffdd0e0e4dd6f8fc126d4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report current sky_level.  <a href="#a58cf5aba4ffdd0e0e4dd6f8fc126d4b9"></a><br/></td></tr>
 <tr class="memitem:ac76cb138f20dd72a3e2fd2157ae51121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#ac76cb138f20dd72a3e2fd2157ae51121">setSkyLevel</a> (double sky_level)</td></tr>
 <tr class="memdesc:ac76cb138f20dd72a3e2fd2157ae51121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sky level.  <a href="#ac76cb138f20dd72a3e2fd2157ae51121"></a><br/></td></tr>
-<tr class="memitem:acdde7a875ff13165b9844043896a8a94"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#acdde7a875ff13165b9844043896a8a94">getVariance</a> () const </td></tr>
-<tr class="memdesc:acdde7a875ff13165b9844043896a8a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the variance of the noise model.  <a href="#acdde7a875ff13165b9844043896a8a94"></a><br/></td></tr>
-<tr class="memitem:a0ec9bc3fca15b7600caa06e1d07a37fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#a0ec9bc3fca15b7600caa06e1d07a37fc">setVariance</a> (double variance)</td></tr>
-<tr class="memdesc:a0ec9bc3fca15b7600caa06e1d07a37fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a0ec9bc3fca15b7600caa06e1d07a37fc"></a><br/></td></tr>
+<tr class="memitem:ac382269849b21257533a03e1ac33bc62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#ac382269849b21257533a03e1ac33bc62">getVariance</a> () const </td></tr>
+<tr class="memdesc:ac382269849b21257533a03e1ac33bc62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the variance of the noise model.  <a href="#ac382269849b21257533a03e1ac33bc62"></a><br/></td></tr>
+<tr class="memitem:a97d81c56037bee84a515fa8312a9cd74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#a97d81c56037bee84a515fa8312a9cd74">setVariance</a> (double variance)</td></tr>
+<tr class="memdesc:a97d81c56037bee84a515fa8312a9cd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the variance of the noise model.  <a href="#a97d81c56037bee84a515fa8312a9cd74"></a><br/></td></tr>
+<tr class="memitem:a43aff78d744402cc60ad37862db03f99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#a43aff78d744402cc60ad37862db03f99">scaleVariance</a> (double variance_ratio)</td></tr>
+<tr class="memdesc:a43aff78d744402cc60ad37862db03f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the variance of the noise model.  <a href="#a43aff78d744402cc60ad37862db03f99"></a><br/></td></tr>
 <tr class="memitem:a0e5c9ddda6af8a51f860b6ab6e33df79"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0e5c9ddda6af8a51f860b6ab6e33df79"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_noise.html#a0e5c9ddda6af8a51f860b6ab6e33df79">applyTo</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; data)</td></tr>
 <tr class="memdesc:a0e5c9ddda6af8a51f860b6ab6e33df79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add noise to an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a0e5c9ddda6af8a51f860b6ab6e33df79"></a><br/></td></tr>
+<tr class="memitem:aa1a4348710b72d435aa6ce229130a29e"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#aa1a4348710b72d435aa6ce229130a29e">getRNG</a> ()</td></tr>
+<tr class="memdesc:aa1a4348710b72d435aa6ce229130a29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model.  <a href="#aa1a4348710b72d435aa6ce229130a29e"></a><br/></td></tr>
+<tr class="memitem:ab7f48ad977d4e81cb12ba454b433784c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_noise.html#ab7f48ad977d4e81cb12ba454b433784c">setRNG</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng)</td></tr>
+<tr class="memdesc:ab7f48ad977d4e81cb12ba454b433784c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model.  <a href="#ab7f48ad977d4e81cb12ba454b433784c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class implementing simple Poisson noise. </p>
@@ -212,6 +218,31 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa1a4348710b72d435aa6ce229130a29e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a>&gt; galsim::BaseNoise::getRNG </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> being used to generate random numbers for the noise model. </p>
+
+</div>
+</div>
 <a class="anchor" id="a58cf5aba4ffdd0e0e4dd6f8fc126d4b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +260,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="acdde7a875ff13165b9844043896a8a94"></a>
+<a class="anchor" id="ac382269849b21257533a03e1ac33bc62"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -237,7 +268,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double galsim::PoissonNoise::getVariance </td>
+          <td class="memname">double galsim::PoissonNoise::getVariance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -253,6 +284,60 @@ template&lt;typename T &gt; </div>
 <p>Get the variance of the noise model. </p>
 
 <p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a1a0beb7aa6ff2b275186a7aeccd698b8">galsim::BaseNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43aff78d744402cc60ad37862db03f99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::PoissonNoise::scaleVariance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>variance_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Scale the variance of the noise model. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_base_noise.html#a013fa7ff128f8f2127ee9c93d99f7277">galsim::BaseNoise</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7f48ad977d4e81cb12ba454b433784c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseNoise::setRNG </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt;&#160;</td>
+          <td class="paramname"><em>rng</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> that will be used to generate random numbers for the noise model. </p>
 
 </div>
 </div>
@@ -274,7 +359,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a0ec9bc3fca15b7600caa06e1d07a37fc"></a>
+<a class="anchor" id="a97d81c56037bee84a515fa8312a9cd74"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -282,7 +367,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void galsim::PoissonNoise::setVariance </td>
+          <td class="memname">void galsim::PoissonNoise::setVariance </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>variance</em></td><td>)</td>
