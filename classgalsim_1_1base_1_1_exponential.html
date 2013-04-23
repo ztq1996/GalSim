@@ -204,10 +204,10 @@ Public Attributes</h2></td></tr>
 scale_radius
 </pre><p>and an optional <code>flux</code> parameter [default <code>flux = 1.</code>].</p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; exp_obj = Exponential(flux=3., scale_radius=5.)
+<pre class="fragment">&gt;&gt;&gt; exp_obj = galsim.Exponential(flux=3., scale_radius=5.)
 &gt;&gt;&gt; exp_obj.getHalfLightRadius()
 8.391734950083302
-&gt;&gt;&gt; exp_obj = Exponential(flux=3., half_light_radius=1.)
+&gt;&gt;&gt; exp_obj = galsim.Exponential(flux=3., half_light_radius=1.)
 &gt;&gt;&gt; exp_obj.getScaleRadius()
 0.5958243473776976
 </pre><p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>

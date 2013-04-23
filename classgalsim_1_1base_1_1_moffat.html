@@ -209,10 +209,10 @@ half_light_radius
 fwhm
 </pre><p>an optional truncation radius parameter <code>trunc</code> [default <code>trunc = 0.</code>, indicating no truncation] and a <code>flux</code> parameter [default <code>flux = 1</code>].</p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; moffat_obj = Moffat(beta=3., scale_radius=3., flux=0.5)
+<pre class="fragment">&gt;&gt;&gt; moffat_obj = galsim.Moffat(beta=3., scale_radius=3., flux=0.5)
 &gt;&gt;&gt; moffat_obj.getHalfLightRadius()
 1.9307827587167474
-&gt;&gt;&gt; moffat_obj = Moffat(beta=3., half_light_radius=1., flux=0.5)
+&gt;&gt;&gt; moffat_obj = galsim.Moffat(beta=3., half_light_radius=1., flux=0.5)
 &gt;&gt;&gt; moffat_obj.getScaleRadius()
 1.5537739740300376
 </pre><p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>

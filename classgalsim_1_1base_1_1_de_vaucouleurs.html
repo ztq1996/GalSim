@@ -197,13 +197,36 @@ Public Attributes</h2></td></tr>
 <p>Has an <a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html" title="Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with n = 4...">SBDeVaucouleurs</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute.</p>
 <p>For more details of the <a class="el" href="classgalsim_1_1base_1_1_de_vaucouleurs.html" title="A class describing DeVaucouleurs profile objects.">DeVaucouleurs</a> Surface Brightness profile, please see the <a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html" title="Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with n = 4...">SBDeVaucouleurs</a> documentation produced by doxygen, or refer to <a href="http://en.wikipedia.org/wiki/De_Vaucouleurs'_law">http://en.wikipedia.org/wiki/De_Vaucouleurs'_law</a>.</p>
 <h2>Initialization</h2>
-<p>A <a class="el" href="classgalsim_1_1base_1_1_de_vaucouleurs.html" title="A class describing DeVaucouleurs profile objects.">DeVaucouleurs</a> is initialized with the half light radius size parameter <code>half_light_radius</code> and an optional <code>flux</code> parameter [default <code>flux = 1.</code>].</p>
+<p>A <a class="el" href="classgalsim_1_1base_1_1_de_vaucouleurs.html" title="A class describing DeVaucouleurs profile objects.">DeVaucouleurs</a> is initialized with the half light radius size parameter <code>half_light_radius</code>. Optional parameters are truncation radius <code>trunc</code> [default <code>trunc = 0.</code>, indicating no truncation] and a <code>flux</code> parameter [default <code>flux = 1.</code>]. If <code>trunc</code> is set to a non-zero value, then it is assumed to be in the same system of units as <code>half_light_radius</code>.</p>
+<p>Note that the code will be more efficient if the truncation is always the same multiple of <code>half_light_radius</code>, since it caches many calculations that depend on the ratio <code>trunc/half_light_radius</code>.</p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; dvc_obj = DeVaucouleurs(half_light_radius=2.5, flux=40.)
+<pre class="fragment">&gt;&gt;&gt; dvc_obj = galsim.DeVaucouleurs(half_light_radius=2.5, flux=40.)
 &gt;&gt;&gt; dvc_obj.getHalfLightRadius()
 2.5
 &gt;&gt;&gt; dvc_obj.getFlux()
 40.0
+</pre><p>Another optional parameter, <code>flux_untruncated</code>, specifies whether the <code>flux</code> and <code>half_light_radius</code> correspond to the untruncated profile or the truncated profile. If <code>flux_untruncated</code> is True (and <code>trunc &gt; 0</code> of course), then the profile will be identical to the version without truncation up to the truncation radius, at which point it drops to 0. If <code>flux_untruncated</code> is False (the default), then the scale radius will be larger and the central peak will be higher than the untruncated profile, in order to maintain the correct provided <code>flux</code> and <code>half_light_radius</code>.</p>
+<p>When <code>trunc &gt; 0.</code> and <code>flux_untruncated == True</code>, the actual half-light radius will be different from the specified half-light radius. The <a class="el" href="classgalsim_1_1base_1_1_de_vaucouleurs.html#a162e519d53cbc2d8c5257e0a29301b4b" title="Return the half light radius for this DeVaucouleurs profile.">getHalfLightRadius()</a> method will return the true half-light radius. Similarly, the actual flux will not be the same as the specified value; the true flux is also returned by the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a662d8ce421ecd90080bdcaaf6890aed8" title="Returns the flux of the object.">getFlux()</a> method.</p>
+<p>Example: </p>
+<pre class="fragment">&gt;&gt;&gt; dvc_obj = galsim.DeVaucouleurs(half_light_radius=2.5, flux=40.)
+&gt;&gt;&gt; dvc_obj2 = galsim.DeVaucouleurs(half_light_radius=2.5, flux=40., trunc=10., \\
+                                    flux_untruncated=True)
+&gt;&gt;&gt; dvc_obj.xValue(galsim.PositionD(0.,0.))
+604.6895805968326
+&gt;&gt;&gt; dvc_obj2.xValue(galsim.PositionD(0.,0.))
+604.6895805968326     # The xValues are the same inside the truncation radius ...
+&gt;&gt;&gt; dvc_obj.xValue(galsim.PositionD(10.0,0.))
+0.011781304853174116
+&gt;&gt;&gt; dvc_obj2.xValue(galsim.PositionD(10.0,0.))
+0.0                   # ... but different outside the truncation radius
+&gt;&gt;&gt; dvc_obj.getHalfLightRadius()
+2.5
+&gt;&gt;&gt; dvc_obj2.getHalfLightRadius()
+1.886276579179012     # The true half-light radius is smaller than the specified value
+&gt;&gt;&gt; dvc_obj.getFlux()
+40.0
+&gt;&gt;&gt; dvc_obj2.getFlux()
+33.863171136492156    # The flux from the truncation is missing
 </pre><h2>Methods</h2>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_de_vaucouleurs.html" title="A class describing DeVaucouleurs profile objects.">DeVaucouleurs</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (<a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a> etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -227,7 +250,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>trunc</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux_untruncated</em> = <code>False</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

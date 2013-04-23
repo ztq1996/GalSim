@@ -203,7 +203,7 @@ Public Attributes</h2></td></tr>
 <h2>Initialization</h2>
 <p>An <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="A class describing Airy PSF profiles.">Airy</a> can be initialized using one size parameter <code>lam_over_diam</code>, an optional <code>obscuration</code> parameter [default <code>obscuration=0.</code>] and an optional flux parameter [default <code>flux = 1.</code>]. The half light radius or FWHM can subsequently be calculated using the <a class="el" href="classgalsim_1_1base_1_1_airy.html#ae0e016176b62de15d92111335dfabb9c" title="Return the half light radius of this Airy profile (only supported for obscuration = 0...">getHalfLightRadius()</a> method or <a class="el" href="classgalsim_1_1base_1_1_airy.html#ad905832e12f3f486752daca58a22a885" title="Return the FWHM of this Airy profile (only supported for obscuration = 0.).">getFWHM()</a>, respectively, if <code>obscuration = 0.</code></p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; airy_obj = Airy(flux=3., lam_over_diam=2.)
+<pre class="fragment">&gt;&gt;&gt; airy_obj = galsim.Airy(flux=3., lam_over_diam=2.)
 &gt;&gt;&gt; airy_obj.getHalfLightRadius()
 1.0696642954485294
 </pre><p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>

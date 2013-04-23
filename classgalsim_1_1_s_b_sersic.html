@@ -115,8 +115,8 @@ Inheritance diagram for galsim::SBSersic:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8ba997d42d2bc927d4b777ce73a44048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a8ba997d42d2bc927d4b777ce73a44048">SBSersic</a> (double n, double re, double flux=1.)</td></tr>
-<tr class="memdesc:a8ba997d42d2bc927d4b777ce73a44048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8ba997d42d2bc927d4b777ce73a44048"></a><br/></td></tr>
+<tr class="memitem:acf773860f0a85d5fc58c9011800430d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#acf773860f0a85d5fc58c9011800430d7">SBSersic</a> (double n, double re, double trunc=0., double flux=1., bool flux_untruncated=false)</td></tr>
+<tr class="memdesc:acf773860f0a85d5fc58c9011800430d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#acf773860f0a85d5fc58c9011800430d7"></a><br/></td></tr>
 <tr class="memitem:a8906b21e2c830ad0eb9c859bdadd30b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a8906b21e2c830ad0eb9c859bdadd30b5">SBSersic</a> (const <a class="el" href="classgalsim_1_1_s_b_sersic.html">SBSersic</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a8906b21e2c830ad0eb9c859bdadd30b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a8906b21e2c830ad0eb9c859bdadd30b5"></a><br/></td></tr>
 <tr class="memitem:a1231803713c791d91632f88ae673dae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a1231803713c791d91632f88ae673dae0">~SBSersic</a> ()</td></tr>
@@ -199,9 +199,12 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Sersic Surface Brightness Profile. </p>
 <p>The Sersic Surface Brightness Profile is characterized by three properties: its Sersic index <code>n</code>, its <code>flux</code> and the half-light radius <code>re</code>. Given these properties, the surface brightness profile scales as I(r) propto exp[-(r/r_0)^{1/n}]. Currently the code is limited to 0.5&lt;=n&lt;=4.2, with an exception thrown for values outside that range.</p>
+<p>The <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> representation of a Sersic profile also includes an optional truncation beyond a given radius, by the parameter <code>trunc</code>. The resolution of the truncation radius in units of half light radius <code>re</code> is limited to 2 decimal places, in order not to overload the Sersic information caching.</p>
+<p>Another optional parameter, <code>flux_untruncated</code>, allows the setting of the flux to the untruncated Sersic, while generating a truncated Sersic. This facilitates the comparison of truncated and untruncated Sersic, as both the amplitude and the scale parameter <code>b=r_0^{-1/n}</code> change when a truncated Sersic is specified to the same flux as the untruncated version with the same Sersic index <code>n</code>. The <code>flux_untruncated</code> variable is ignored if <code>trunc = 0</code>.</p>
+<p>Note that when <code>trunc &gt; 0.</code> and <code>flux_untruncated == true</code>, the actual half-light radius will be different from the specified half-light radius. The <a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b" title="Returns the half light radius of the Sersic profile.">getHalfLightRadius()</a> method will return the true half-light radius. Similarly, the actual flux will not be the the same as the specified value; the true flux is returned by the <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a> method.</p>
 <p>There are several special cases of the Sersic profile that have their own SBProfiles: n=4 (<a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html" title="Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with n = 4...">SBDeVaucouleurs</a>), n=1 (<a class="el" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>), n=0.5 (<a class="el" href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile.">SBGaussian</a>). These special cases use several simplifications in all calculations, whereas for general n, the Fourier transform must be treated numerically. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8ba997d42d2bc927d4b777ce73a44048"></a>
+<a class="anchor" id="acf773860f0a85d5fc58c9011800430d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -221,7 +224,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>trunc</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flux_untruncated</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -235,8 +250,10 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Sersic index. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">re</td><td>half-light radius. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">re</td><td>Half-light radius. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trunc</td><td>Outer truncation radius in same physical units as size; <code>trunc = 0.</code> for no truncation (default <code>trunc = 0.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux_untruncated</td><td>If <code>true</code>, sets the flux to the untruncated version of the Sersic profile with the same index <code>n</code> (default flux_untruncated = false<code>). Ignored if</code>trunc = 0.`. </td></tr>
   </table>
   </dd>
 </dl>

@@ -207,10 +207,10 @@ sigma
 fwhm
 </pre><p>and an optional <code>flux</code> parameter [default <code>flux = 1</code>].</p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; gauss_obj = Gaussian(flux=3., sigma=1.)
+<pre class="fragment">&gt;&gt;&gt; gauss_obj = galsim.Gaussian(flux=3., sigma=1.)
 &gt;&gt;&gt; gauss_obj.getHalfLightRadius()
 1.1774100225154747
-&gt;&gt;&gt; gauss_obj = Gaussian(flux=3, half_light_radius=1.)
+&gt;&gt;&gt; gauss_obj = galsim.Gaussian(flux=3, half_light_radius=1.)
 &gt;&gt;&gt; gauss_obj.getSigma()
 0.8493218002880191
 </pre><p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>

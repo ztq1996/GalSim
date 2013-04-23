@@ -115,8 +115,8 @@ Inheritance diagram for galsim::SBDeVaucouleurs:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46f8a67e8090cd4c4cf8659c02ca1478"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html#a46f8a67e8090cd4c4cf8659c02ca1478">SBDeVaucouleurs</a> (double re, double flux=1.)</td></tr>
-<tr class="memdesc:a46f8a67e8090cd4c4cf8659c02ca1478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a46f8a67e8090cd4c4cf8659c02ca1478"></a><br/></td></tr>
+<tr class="memitem:af09c0bb834e43568968c3919d9f67b94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html#af09c0bb834e43568968c3919d9f67b94">SBDeVaucouleurs</a> (double re, double trunc=0., double flux=1., bool flux_untruncated=false)</td></tr>
+<tr class="memdesc:af09c0bb834e43568968c3919d9f67b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af09c0bb834e43568968c3919d9f67b94"></a><br/></td></tr>
 <tr class="memitem:adf4a729b16ae4e3d27ec1ff763a29087"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#adf4a729b16ae4e3d27ec1ff763a29087">getN</a> () const </td></tr>
 <tr class="memdesc:adf4a729b16ae4e3d27ec1ff763a29087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Sersic index <code>n</code> of the profile.  <a href="#adf4a729b16ae4e3d27ec1ff763a29087"></a><br/></td></tr>
 <tr class="memitem:a77f98a620a069a653d28a51f380fbb7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b">getHalfLightRadius</a> () const </td></tr>
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with <code>n = 4</code>. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a46f8a67e8090cd4c4cf8659c02ca1478"></a>
+<a class="anchor" id="af09c0bb834e43568968c3919d9f67b94"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -209,7 +209,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>trunc</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flux_untruncated</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,7 +235,9 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">re</td><td>Half-light radius. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trunc</td><td>Outer truncation radius in same physical units as size; <code>trunc = 0.</code> for no truncation (default <code>trunc = 0.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux_untruncated</td><td>If <code>true</code>, sets the flux to the untruncated version of the Sersic profile with the same index <code>n</code> (default flux_untruncated = false<code>). Ignored if</code>trunc = 0.`. </td></tr>
   </table>
   </dd>
 </dl>
