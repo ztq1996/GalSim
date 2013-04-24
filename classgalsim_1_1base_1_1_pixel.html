@@ -200,6 +200,7 @@ Public Attributes</h2></td></tr>
 <p>This class is typically used to represent a <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> response function, and therefore is only needed when drawing images using Fourier transform or real-space convolution (with the draw method), not when using photon-shooting (with the drawShoot method).</p>
 <h2>Initialization</h2>
 <p>A <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> is initialized with an x dimension width <code>xw</code>, an optional y dimension width (if unspecifed <code>yw=xw</code> is assumed) and an optional flux parameter [default <code>flux = 1.</code>].</p>
+<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
 <h2>Methods</h2>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (<a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a> etc.) and operator bindings.</p>
 <p>Note: We have not implemented drawing a sheared or rotated <a class="el" href="classgalsim_1_1base_1_1_pixel.html" title="A class describing pixels.">Pixel</a> in real space. It's a bit tricky to get right at the edges where fractional fluxes are required. Fortunately, this is almost never needed. Pixels are almost always convolved by something else rather than drawn by themselves, in which case either the fourier space method is used, or photon shooting. Both of these are implemented in GalSim. If need to draw sheared or rotated Pixels in real space, please file an issue, and maybe we'll implement that function. Until then, you will get an exception if you try. </p>
@@ -230,7 +231,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

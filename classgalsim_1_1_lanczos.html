@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.  
+<p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.  
  <a href="classgalsim_1_1_lanczos.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_interpolant_8h_source.html">Interpolant.h</a>&gt;</code></p>
@@ -140,9 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adf88d2c8548b5280603dfcf535d71262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#adf88d2c8548b5280603dfcf535d71262"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n. </p>
-<p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> filter is an approximation to the band-limiting sinc filter with a smooth cutoff at high x. Order n <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a> has a range of +/- n pixels. It typically is a good compromise between kernel size and accuracy.</p>
-<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
+<div class="textblock"><p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n. </p>
+<p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> filter is an approximation to the band-limiting sinc filter with a smooth cutoff at high x. Order n <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> has a range of +/- n pixels. It typically is a good compromise between kernel size and accuracy.</p>
+<p>The filter has accuracy parameters <code>xvalue_accuracy</code> and <code>kvalue_accuracy</code> that relate to the accuracy of building the initial lookup table. For now, these are fixed in src/Interpolant.cpp to be 0.1 times the input <code>tol</code> value, where <code>tol</code> is typically very small already (default 1e-4).</p>
+<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adf2c3bc1832c9c6466c69c369c7f3562"></a>
 <div class="memitem">

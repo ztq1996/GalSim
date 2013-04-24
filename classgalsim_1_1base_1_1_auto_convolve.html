@@ -192,7 +192,14 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A special class for convolving a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> with itself. </p>
-<p>It is equivalent in functionality to galsim.Convolve([obj,obj]), but takes advantage of the fact that the two profiles are the same for some efficiency gains. </p>
+<p>It is equivalent in functionality to galsim.Convolve([obj,obj]), but takes advantage of the fact that the two profiles are the same for some efficiency gains.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The object to be convolved with itself. </td></tr>
+    <tr><td class="paramname">gsparams</td><td>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option. Note that parameters related to the Fourier-space calculations must be set when initializing the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> that goes into the <a class="el" href="classgalsim_1_1base_1_1_auto_convolve.html" title="A special class for convolving a GSObject with itself.">AutoConvolve</a>, NOT when creating the <a class="el" href="classgalsim_1_1base_1_1_auto_convolve.html" title="A special class for convolving a GSObject with itself.">AutoConvolve</a> (at which point the accuracy and threshold parameters will simply be ignored). </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af8d8569652f24e36ee877608f6e0f811"></a>
 <div class="memitem">
@@ -208,7 +215,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj</em>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,8 +230,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9a6d32438a27766235e087d76acdaa18">galsim.base.GSObject</a>.</p>
 
 </div>
 </div>

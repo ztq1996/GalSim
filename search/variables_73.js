@@ -4,7 +4,7 @@ var searchData=
   ['sbprofile',['SBProfile',['../classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b',1,'galsim::base::GSObject']]],
   ['scale',['scale',['../classgalsim_1_1lensing_1_1_power_spectrum.html#a9b3ec835a54e215e8842938ddfd3f67f',1,'galsim::lensing::PowerSpectrum']]],
   ['second',['SECOND',['../_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f',1,'AstronomicalConstants.h']]],
-  ['shoot_5fflux_5faccuracy',['shoot_flux_accuracy',['../namespacegalsim_1_1sbp.html#a51b2f5996bde0b1471ada1d75161c13f',1,'galsim::sbp']]],
+  ['shoot_5faccuracy',['shoot_accuracy',['../structgalsim_1_1_g_s_params.html#a7c8b3ff6f8158ed816586ff0537ed542',1,'galsim::GSParams']]],
   ['sigma',['sigma',['../structgalsim_1_1hsm_1_1_object_data.html#a9609fdee193b52a5cd0ed28f87fba0f6',1,'galsim::hsm::ObjectData::sigma()'],['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a96dc3b3ce78a099ec1a67bcf3114ecc4',1,'galsim.des.des_shapelet.DES_Shapelet.sigma()']]],
   ['sky_5fsize',['sky_size',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a974a3e93b5db6411d3a9547d8fcb7f49',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['small_5ffraction_5fof_5fflux',['SMALL_FRACTION_OF_FLUX',['../namespacegalsim_1_1odd.html#a85063bcbda8e0fc6150d958c745e411a',1,'galsim::odd']]],

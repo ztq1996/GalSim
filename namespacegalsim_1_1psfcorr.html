@@ -152,7 +152,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0xe</code>, </td>
+          <td class="paramname"><em>recompute_flux</em> = <code>&quot;FIT&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -188,7 +188,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>strict</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>hsmparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,7 +221,7 @@ Functions</h2></td></tr>
 &gt;&gt;&gt; final_image = final.draw(dx = 0.2)
 &gt;&gt;&gt; final_epsf_image = final_epsf.draw(dx = 0.2)
 &gt;&gt;&gt; result = galsim.EstimateShearHSM(final_image, final_epsf_image)
-</pre><p>After running the above code, <code>result.observed_shape</code> ["shape" = distortion, the (a^2 - b^2)/(a^2 + b^2) definition of ellipticity] is <code>(0.0876162,1.23478e-17)</code> and <code>result.corrected_e1</code>, <code>result_corrected_e2</code> are <code>(0.0993412,-1.86255e-09)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
+</pre><p>After running the above code, <code>result.observed_shape</code> ["shape" = distortion, the (a^2 - b^2)/(a^2 + b^2) definition of ellipticity] is <code>(0.0438925351523, -1.12519277137e-18)</code> and <code>result.corrected_e1</code>, <code>result_corrected_e2</code> are <code>(0.0993412658572,-1.84832327221e-09)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
 <p>The code below gives an example of how one could run this routine on a large batch of galaxies, explicitly catching and tracking any failures: </p>
 <pre class="fragment">n_image = 100
 n_fail = 0
@@ -233,13 +239,14 @@ print "Number of failures: ", n_fail
     <tr><td class="paramname">badpix</td><td>The optional bad pixel mask for the image being used. Zero should be used for pixels that are good, and any nonzero value indicates a bad pixel. </td></tr>
     <tr><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default <code>sky_var = 0.</code>. </td></tr>
     <tr><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default <code>shear_est = "REGAUSS"</code>. </td></tr>
-    <tr><td class="paramname">flags</td><td>A flag determining various aspects of the shape measurement process (only necessary for REGAUSS); default <code>flags=0</code>. </td></tr>
+    <tr><td class="paramname">recompute_flux</td><td>A string indicating whether to recompute the object flux, which should be NONE (for no recomputation), SUM (for recomputation via an unweighted sum over unmasked pixels), or FIT (for recomputation using the Gaussian + quartic fit); default <code>recompute_flux = FIT</code>. </td></tr>
     <tr><td class="paramname">guess_sig_gal</td><td>Optional argument with an initial guess for the Gaussian sigma of the galaxy, default <code>guess_sig_gal = 5.</code> (pixels). </td></tr>
     <tr><td class="paramname">guess_sig_PSF</td><td>Optional argument with an initial guess for the Gaussian sigma of the PSF, default <code>guess_sig_PSF = 3.</code> (pixels). </td></tr>
     <tr><td class="paramname">precision</td><td>The convergence criterion for the moments; default <code>precision = 1e-6</code>. </td></tr>
     <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
     <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
     <tr><td class="paramname">strict</td><td>If <code>strict = True</code> (default), then there will be a <code>RuntimeError</code> exception if shear estimation fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines.">HSMShapeData</a> object. </td></tr>
+    <tr><td class="paramname">hsmparams</td><td>The hsmparams keyword can be used to change the settings used by EstimateShearHSM when estimating shears; see HSMParams documentation using help(galsim.HSMParams) for more information. </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,7 +304,13 @@ print "Number of failures: ", n_fail
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>strict</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>hsmparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -318,7 +331,15 @@ print "Number of failures: ", n_fail
 <pre class="fragment">&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom()
 </pre><p>Assuming a successful measurement, the most relevant pieces of information are <code>my_moments.moments_sigma</code>, which is <code>|det(M)|^(1/4)</code> [=<code>sigma</code> for a circular Gaussian] and <code>my_moments.observed_shape</code>, which is a C++ <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a>.</p>
 <p>Methods of the <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears.">CppShear</a> class can be used to get the distortion <code>(e1, e2) = (a^2 - b^2)/(a^2 + b^2)</code>, e.g. <code>my_moments.observed_shape.getE1()</code>, or to get the shear <code>g</code>, the conformal shear <code>eta</code>, and so on.</p>
-<dl class="params"><dt>Parameters:</dt><dd>
+<p>As an example of how to use the optional <code>hsmparams</code> argument, consider cases where the input images have unusual properties, such as being very large. This could occur when measuring the properties of a very over-sampled image such as that generated using </p>
+<pre class="fragment">&gt;&gt;&gt; my_gaussian = galsim.Gaussian(sigma = 5.0)
+&gt;&gt;&gt; my_gaussian_image = my_gaussian.draw(dx = 0.01)
+</pre><p>If the user attempts to measure the moments of this 4000 x 4000 pixel image using the standard syntax, </p>
+<pre class="fragment">&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom()
+</pre><p>then the result will be a RuntimeError due to moment measurement failing because the object is so large. While the list of all possible settings that can be changed is accessible in the docstring of the galsim.HSMParams class, in this case we need to modify <code>max_amoment</code> which is the maximum value of the moments in units of pixel^2. The following measurement, using the default values for every parameter except for <code>max_amoment</code>, will be successful: </p>
+<pre class="fragment">&gt;&gt;&gt; new_params = galsim.HSMParams(max_amoment=5.0e5)
+&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom(hsmparams = new_params)
+</pre><dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> for the object being measured. </td></tr>
     <tr><td class="paramname">weight</td><td>The optional weight image for the object being measured. Can be an int or a float array. Currently, GalSim does not account for the variation in non-zero weights, i.e., a weight map is converted to an image with 0 and 1 for pixels that are not and are used. Full use of spatial variation in non-zero weights will be included in a future version of the code. </td></tr>
@@ -328,6 +349,7 @@ print "Number of failures: ", n_fail
     <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
     <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). </td></tr>
     <tr><td class="paramname">strict</td><td>If <code>strict = True</code> (default), then there will be a <code>RuntimeError</code> exception when moment measurement fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines.">HSMShapeData</a> object. </td></tr>
+    <tr><td class="paramname">hsmparams</td><td>The hsmparams keyword can be used to change the settings used by FindAdaptiveMom when estimating moments; see HSMParams documentation using help(galsim.HSMParams) for more information. </td></tr>
   </table>
   </dd>
 </dl>

@@ -38,6 +38,5 @@ var searchData=
   ['original_5fpsf',['original_PSF',['../classgalsim_1_1base_1_1_real_galaxy.html#a69443f93bbf84cec021e591755aa03a7',1,'galsim::base::RealGalaxy']]],
   ['otf',['otf',['../namespacegalsim_1_1optics.html#a3d272c8bacce2fe18711a86724e96656',1,'galsim::optics']]],
   ['otf_5fimage',['otf_image',['../namespacegalsim_1_1optics.html#ade1aa4fb2095b2d80dd8981a53129d61',1,'galsim::optics']]],
-  ['oururng',['OurURNG',['../namespacegalsim.html#a448800a092a088b209501f94afe18e6f',1,'galsim']]],
-  ['oversample_5fx',['oversample_x',['../namespacegalsim_1_1sbp.html#a395574aa14200e6274045576b73fc61c',1,'galsim::sbp']]]
+  ['oururng',['OurURNG',['../namespacegalsim.html#a448800a092a088b209501f94afe18e6f',1,'galsim']]]
 ];

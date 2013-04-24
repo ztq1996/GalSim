@@ -140,7 +140,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Nearest-neighbor interpolation: boxcar. </p>
-<p>The nearest-neighbor interpolant performs poorly as a k-space or x-space interpolant for <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. (See Bernstein &amp; Gruen 2012 for details.) The objection to its use in Fourier space does not apply when shooting photons to generate in image; in that case, the nearest-neighbor interpolant is quite efficient (but not necessarily the best choice in terms of accuracy).</p>
+<p>The nearest-neighbor interpolant performs poorly as a k-space or x-space interpolant for <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. (See document by Bernstein &amp; Gruen, devel/modules/finterp.pdf in the GalSim repository.) The objection to its use in Fourier space does not apply when shooting photons to generate an image; in that case, the nearest-neighbor interpolant is quite efficient (but not necessarily the best choice in terms of accuracy).</p>
 <p>Tolerance determines how far onto sinc wiggles the uval will go. Very far, by default! </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad732e5dd33c3f1f1ed7cad4be67819d2"></a>

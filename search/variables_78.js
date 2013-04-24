@@ -9,5 +9,5 @@ var searchData=
   ['x_5fscale',['x_scale',['../classgalsim_1_1des_1_1des__psfex_1_1_d_e_s___p_s_f_ex.html#ad5812098ddc894380d72510fa883adb1',1,'galsim::des::des_psfex::DES_PSFEx']]],
   ['x_5fsize',['x_size',['../classgalsim_1_1base_1_1_interpolated_image.html#a6c66086c5f0a1b44eed6bc2d67d9341c',1,'galsim::base::InterpolatedImage']]],
   ['x_5fzero',['x_zero',['../classgalsim_1_1des_1_1des__psfex_1_1_d_e_s___p_s_f_ex.html#a35ef3dd7332cad0e5b25c325542b14a3',1,'galsim::des::des_psfex::DES_PSFEx']]],
-  ['xvalue_5faccuracy',['xvalue_accuracy',['../namespacegalsim_1_1sbp.html#a95aff70b44787271dc9087987899d5d7',1,'galsim::sbp']]]
+  ['xvalue_5faccuracy',['xvalue_accuracy',['../structgalsim_1_1_g_s_params.html#a994386f02937c48e081b6d0b1e7a210f',1,'galsim::GSParams']]]
 ];

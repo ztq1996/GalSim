@@ -207,6 +207,7 @@ Public Attributes</h2></td></tr>
 &gt;&gt;&gt; airy_obj.getHalfLightRadius()
 1.0696642954485294
 </pre><p>Attempting to initialize with more than one size parameter is ambiguous, and will raise a TypeError exception.</p>
+<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
 <h2>Methods</h2>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_airy.html" title="A class describing Airy PSF profiles.">Airy</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (<a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a> etc.) and operator bindings. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -236,7 +237,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

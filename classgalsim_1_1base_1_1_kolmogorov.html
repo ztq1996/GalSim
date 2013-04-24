@@ -214,7 +214,8 @@ fwhm
     <tr><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="A class describing Kolmogorov PSF profiles.">Kolmogorov</a> PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10cm for most observatories and up to 20cm for excellent sites. The values are usually quoted at lambda = 500nm and r0 depends on wavelength as [r0 ~ lambda^(-6/5)]. </td></tr>
     <tr><td class="paramname">fwhm</td><td>FWHM of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="A class describing Kolmogorov PSF profiles.">Kolmogorov</a> PSF. </td></tr>
     <tr><td class="paramname">half_light_radius</td><td>Half-light radius of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="A class describing Kolmogorov PSF profiles.">Kolmogorov</a> PSF. One of <code>lam_over_r0</code>, <code>fwhm</code> and <code>half_light_radius</code> (and only one) must be specified. </td></tr>
-    <tr><td class="paramname">flux</td><td>Optional flux value [default <code>flux = 1.</code>].</td></tr>
+    <tr><td class="paramname">flux</td><td>Optional flux value [default <code>flux = 1.</code>]. </td></tr>
+    <tr><td class="paramname">gsparams</td><td>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</td></tr>
   </table>
   </dd>
 </dl>
@@ -253,7 +254,13 @@ fwhm
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

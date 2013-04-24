@@ -188,11 +188,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a4ae84ed44bf9a3f09df7e4bfa30f52b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_deconvolve.html#a4ae84ed44bf9a3f09df7e4bfa30f52b9">farg</a></td></tr>
 <tr class="memitem:a52599607e0e66c8f85a3220791888a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a52599607e0e66c8f85a3220791888a3b">SBProfile</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Base class for defining the python interface to the <a class="el" href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution.">SBDeconvolve</a> C++ class. </p>
-<p>The <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class represents a deconvolution kernel. Note that the <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class, or compound objects (<a class="el" href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include a <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> as one of the components, cannot be photon-shot using the drawShoot method. </p>
+<p>The <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class represents a deconvolution kernel. Note that the <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> class, or compound objects (<a class="el" href="classgalsim_1_1base_1_1_add.html" title="A class for adding 2 or more GSObjects.">Add</a>, <a class="el" href="classgalsim_1_1base_1_1_convolve.html" title="A class for convolving 2 or more GSObjects.">Convolve</a>) that include a <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> as one of the components, cannot be photon-shot using the drawShoot method.</p>
+<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option. Note: if gsparams is unspecified (or None), then the <a class="el" href="classgalsim_1_1base_1_1_deconvolve.html" title="Base class for defining the python interface to the SBDeconvolve C++ class.">Deconvolve</a> instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the object being deconvolved. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a489eaeb2b75001c5fdb8c0872f8b772e"></a>
 <div class="memitem">
@@ -208,7 +210,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj</em>&#160;</td>
+          <td class="paramname"><em>farg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,8 +225,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a9a6d32438a27766235e087d76acdaa18">galsim.base.GSObject</a>.</p>
 
 </div>
 </div>
@@ -1910,6 +1916,18 @@ assert image.added_flux &gt; 0.99 * obj.getFlux()
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a4ae84ed44bf9a3f09df7e4bfa30f52b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.base.Deconvolve.farg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52599607e0e66c8f85a3220791888a3b"></a>
 <div class="memitem">
 <div class="memproto">

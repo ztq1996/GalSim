@@ -120,19 +120,19 @@ Packages</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a548daa08288c33b0adee71e395cd9464"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Quintic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a548daa08288c33b0adee71e395cd9464">galsim::sbp::defaultKInterpolant1d</a> (new Quintic(sbp::kvalue_accuracy))</td></tr>
-<tr class="memdesc:a548daa08288c33b0adee71e395cd9464"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default k-space interpolator.  <a href="#a548daa08288c33b0adee71e395cd9464"></a><br/></td></tr>
+<tr class="memitem:a356a718f539f168c7adb9bec0e86b5a4"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Quintic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a356a718f539f168c7adb9bec0e86b5a4">galsim::sbp::defaultKInterpolant1d</a> (new Quintic(1.e-5))</td></tr>
+<tr class="memdesc:a356a718f539f168c7adb9bec0e86b5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default k-space interpolator.  <a href="#a356a718f539f168c7adb9bec0e86b5a4"></a><br/></td></tr>
 <tr class="memitem:aad3e58b51f650dc8f3580afd27adb791"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr<br class="typebreak"/>
 &lt; InterpolantXY &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#aad3e58b51f650dc8f3580afd27adb791">galsim::sbp::defaultKInterpolant2d</a> (new InterpolantXY(defaultKInterpolant1d))</td></tr>
-<tr class="memitem:a17ea3bb76fb12fd49a0c9befb1538d2a"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Lanczos &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a17ea3bb76fb12fd49a0c9befb1538d2a">galsim::sbp::defaultXInterpolant1d</a> (new Lanczos(5, true, kvalue_accuracy))</td></tr>
-<tr class="memdesc:a17ea3bb76fb12fd49a0c9befb1538d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default real-space interpolator.  <a href="#a17ea3bb76fb12fd49a0c9befb1538d2a"></a><br/></td></tr>
+<tr class="memitem:a262023f526afe6575ed8f7baf7587c9d"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; Lanczos &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a262023f526afe6575ed8f7baf7587c9d">galsim::sbp::defaultXInterpolant1d</a> (new Lanczos(5, true, 1.e-5))</td></tr>
+<tr class="memdesc:a262023f526afe6575ed8f7baf7587c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default real-space interpolator.  <a href="#a262023f526afe6575ed8f7baf7587c9d"></a><br/></td></tr>
 <tr class="memitem:afad28ef09196668ea576bd4e2808e2c0"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr<br class="typebreak"/>
 &lt; InterpolantXY &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#afad28ef09196668ea576bd4e2808e2c0">galsim::sbp::defaultXInterpolant2d</a> (new InterpolantXY(defaultXInterpolant1d))</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a395574aa14200e6274045576b73fc61c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#a395574aa14200e6274045576b73fc61c">galsim::sbp::oversample_x</a> = 4.</td></tr>
-<tr class="memdesc:a395574aa14200e6274045576b73fc61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">FT must be at least this much larger than input.  <a href="#a395574aa14200e6274045576b73fc61c"></a><br/></td></tr>
+<tr class="memitem:afbf3b6b63459708cf21ba7ad7363de52"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1sbp.html#afbf3b6b63459708cf21ba7ad7363de52">galsim::sbp::default_pad_factor</a> = 4.</td></tr>
+<tr class="memdesc:afbf3b6b63459708cf21ba7ad7363de52"><td class="mdescLeft">&#160;</td><td class="mdescRight">FT must be at least this much larger than input.  <a href="#afbf3b6b63459708cf21ba7ad7363de52"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>SBProfile that interpolates a given image. </p>

@@ -205,7 +205,8 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">fwhm</td><td>FWHM of the <a class="el" href="classgalsim_1_1base_1_1_kolmogorov.html" title="A class describing Kolmogorov PSF profiles.">Kolmogorov</a> PSF. Either <code>fwhm</code> or <code>lam_over_r0</code> (and only one) must be specified. </td></tr>
     <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default <code>interpolant = galsim.Quintic()</code>] </td></tr>
     <tr><td class="paramname">oversampling</td><td>Optional oversampling factor for the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> table [default <code>oversampling = 1.5</code>], setting <code>oversampling &lt; 1</code> will produce aliasing in the PSF (not good). </td></tr>
-    <tr><td class="paramname">flux</td><td>Total flux of the profile [default <code>flux=1.</code>]</td></tr>
+    <tr><td class="paramname">flux</td><td>Total flux of the profile [default <code>flux=1.</code>] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</td></tr>
   </table>
   </dd>
 </dl>
@@ -250,7 +251,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

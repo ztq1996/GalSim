@@ -17,6 +17,7 @@ var searchData=
   ['_7ektable',['~KTable',['../classgalsim_1_1_k_table.html#ad06323d9f9a052411c2ef82e3266e747',1,'galsim::KTable']]],
   ['_7elanczos',['~Lanczos',['../classgalsim_1_1_lanczos.html#a5e462cccaa59c2b4210ad516c975aaf3',1,'galsim::Lanczos']]],
   ['_7elinear',['~Linear',['../classgalsim_1_1_linear.html#ac8669149decfef8785c6e612d8a3c786',1,'galsim::Linear']]],
+  ['_7elrucache',['~LRUCache',['../classgalsim_1_1_l_r_u_cache.html#a54b7b7c27751428530dfe7e9ad0674a1',1,'galsim::LRUCache']]],
   ['_7emultipleimagehelper',['~MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#aeacb0fe09568bbd59c48a235e614339d',1,'galsim::MultipleImageHelper']]],
   ['_7enearest',['~Nearest',['../classgalsim_1_1_nearest.html#a2442c76040c21cae2eaff1301f77618e',1,'galsim::Nearest']]],
   ['_7epoissondeviate',['~PoissonDeviate',['../classgalsim_1_1_poisson_deviate.html#ac72948e132f2a0a4848436524dc9b9ec',1,'galsim::PoissonDeviate']]],

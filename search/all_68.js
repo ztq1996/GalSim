@@ -7,6 +7,8 @@ var searchData=
   ['history_2emd',['HISTORY.md',['../_h_i_s_t_o_r_y_8md.html',1,'']]],
   ['hour',['HOUR',['../_astronomical_constants_8h.html#aa8348de71fa4c8f311f9651ae5aa3adc',1,'AstronomicalConstants.h']]],
   ['hours',['hours',['../namespacegalsim.html#a84057d4bfed43178fd0ceeca30ce81fd',1,'galsim']]],
+  ['hsmparams',['HSMParams',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a00c86b50bb1d42abbd5328859e524c4e',1,'galsim::hsm::HSMParams::HSMParams(double _nsig_rg, double _nsig_rg2, double _max_moment_nsig2, int _regauss_too_small, int _adapt_order, long _max_mom2_iter, long _num_iter_default, double _bound_correct_wt, double _max_amoment, double _max_ashift, int _ksb_moments_max, double _failed_moments)'],['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a8cbd75bead8c899ca490f9fa20d7b4ea',1,'galsim::hsm::HSMParams::HSMParams()']]],
+  ['hsmparams',['HSMParams',['../structgalsim_1_1hsm_1_1_h_s_m_params.html',1,'galsim::hsm']]],
   ['hsmshapedata',['HSMShapeData',['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html',1,'galsim::psfcorr']]],
   ['hubbledistance',['HubbleDistance',['../_astronomical_constants_8h.html#ab9971facc936da3713b6ada8e16490bb',1,'AstronomicalConstants.h']]],
   ['hubblelengthmpc',['HubbleLengthMpc',['../_astronomical_constants_8h.html#a86b823cc6fd735dfa64a265531b044d4',1,'AstronomicalConstants.h']]],
