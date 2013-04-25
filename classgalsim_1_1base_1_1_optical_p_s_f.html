@@ -194,24 +194,26 @@ Public Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class describing aberrated PSFs due to telescope optics. </p>
 <p>Has an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute.</p>
-<p>Input aberration coefficients are assumed to be supplied in units of incident light wavelength, and correspond to the conventions adopted here: <a href="http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations">http://en.wikipedia.org/wiki/Optical_aberration#Zernike_model_of_aberrations</a></p>
+<p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention definined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>
 <h2>Initialization</h2>
 <pre class="fragment">&gt;&gt;&gt; optical_psf = galsim.OpticalPSF(lam_over_diam, defocus=0., astig1=0., astig2=0.,
-                                    coma1=0., coma2=0., spher=0., circular_pupil=True,
-                                    obscuration=0., interpolant=None, oversampling=1.5,
-                                    pad_factor=1.5)
+                                    coma1=0., coma2=0., trefoil1=0., trefoil2=0., spher=0.,
+                                    circular_pupil=True, obscuration=0., interpolant=None,
+                                    oversampling=1.5, pad_factor=1.5)
 </pre><p>Initializes optical_psf as a galsim.OpticalPSF() instance.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
-    <tr><td class="paramname">defocus</td><td>Defocus in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">astig1</td><td>First component of astigmatism (like e1) in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">astig2</td><td>Second component of astigmatism (like e2) in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">coma1</td><td>Coma along x in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">coma2</td><td>Coma along y in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">spher</td><td>Spherical aberration in units of incident light wavelength. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? Alternative is square. </td></tr>
-    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) [default <code>obscuration = 0.</code>]. </td></tr>
+    <tr><td class="paramname">defocus</td><td>defocus in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">astig1</td><td>astigmatism (like e2) in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">astig2</td><td>astigmatism (like e1) in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">coma1</td><td>coma along y in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">coma2</td><td>coma along x in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">trefoil1</td><td>trefoil (one of the arrows along y) in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? [default <code>circular_pupil = True</code>] </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
     <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default <code>interpolant = galsim.Quintic()</code>] </td></tr>
     <tr><td class="paramname">oversampling</td><td>Optional oversampling factor for the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> table [default <code>oversampling = 1.5</code>], setting oversampling &lt; 1 will produce aliasing in the PSF (not good). </td></tr>
     <tr><td class="paramname">pad_factor</td><td>Additional multiple by which to zero-pad the PSF image to avoid folding compared to what would be employed for a simple galsim.Airy [default <code>pad_factor = 1.5</code>]. Note that <code>pad_factor</code> may need to be increased for stronger aberrations, i.e. those larger than order unity. </td></tr>
@@ -268,6 +270,18 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>coma2</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>trefoil1</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>trefoil2</em> = <code>0.</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
