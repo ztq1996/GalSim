@@ -146,10 +146,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af462992dfaae5ae4dc3192fbf8022a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">New image that is a subimage of this (shares pixels)  <a href="#af462992dfaae5ae4dc3192fbf8022a23"></a><br/></td></tr>
 <tr class="memitem:a0b5d3c909b2fe37bf83c982445ecdd08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a0b5d3c909b2fe37bf83c982445ecdd08">operator[]</a> (const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;bounds) const </td></tr>
 <tr class="memdesc:a0b5d3c909b2fe37bf83c982445ecdd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">im[bounds] is another syntax for making a sub-image  <a href="#a0b5d3c909b2fe37bf83c982445ecdd08"></a><br/></td></tr>
-<tr class="memitem:a5d327b5df4dae60ec761f0136449fc2f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a5d327b5df4dae60ec761f0136449fc2f">operator()</a> (int xpos, int ypos) const </td></tr>
-<tr class="memdesc:a5d327b5df4dae60ec761f0136449fc2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unchecked access.  <a href="#a5d327b5df4dae60ec761f0136449fc2f"></a><br/></td></tr>
-<tr class="memitem:ad10b9fedc8cd7ff265cbd9630a87128f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#ad10b9fedc8cd7ff265cbd9630a87128f">at</a> (int xpos, int ypos) const </td></tr>
-<tr class="memdesc:ad10b9fedc8cd7ff265cbd9630a87128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element access - checked.  <a href="#ad10b9fedc8cd7ff265cbd9630a87128f"></a><br/></td></tr>
 <tr class="memitem:a779b8edda80a18bd66e8a8448d8c3312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a779b8edda80a18bd66e8a8448d8c3312">setValue</a> (int x, int y, T value)</td></tr>
 <tr class="memdesc:a779b8edda80a18bd66e8a8448d8c3312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Another way to set a value. Equivalent to im(x,y) = value.  <a href="#a779b8edda80a18bd66e8a8448d8c3312"></a><br/></td></tr>
 <tr class="memitem:a25e25fd8bab90a1f1ed1e814a55db64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image_view.html#a3f7f91da014dd4666eb52e413f221e19">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a25e25fd8bab90a1f1ed1e814a55db64b">rowBegin</a> (int r) const </td></tr>
@@ -173,14 +169,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a31f026981c590402f423633e198cd5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the data is contiguous in memory.  <a href="#a31f026981c590402f423633e198cd5f6"></a><br/></td></tr>
 <tr class="memitem:a554165e1189e0ed951727a926f29b5af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a554165e1189e0ed951727a926f29b5af">copy</a> () const </td></tr>
 <tr class="memdesc:a554165e1189e0ed951727a926f29b5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copy the image.  <a href="#a554165e1189e0ed951727a926f29b5af"></a><br/></td></tr>
-<tr class="memitem:ac4cf361606a9ed7ddcba80b34e6ae131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4cf361606a9ed7ddcba80b34e6ae131">shift</a> (int dx, int dy)</td></tr>
-<tr class="memdesc:ac4cf361606a9ed7ddcba80b34e6ae131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift the bounding box of the image, changing the logical location of the pixels.  <a href="#ac4cf361606a9ed7ddcba80b34e6ae131"></a><br/></td></tr>
-<tr class="memitem:af46d610c6853359a16c37b5045607c4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#af46d610c6853359a16c37b5045607c4c">setOrigin</a> (int x0, int y0)</td></tr>
-<tr class="memdesc:af46d610c6853359a16c37b5045607c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the origin of the image, changing the logical location of the pixels.  <a href="#af46d610c6853359a16c37b5045607c4c"></a><br/></td></tr>
 <tr class="memitem:a94cc40ed91c0ba42ce9dde4fd49e7ea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a94cc40ed91c0ba42ce9dde4fd49e7ea4">setScale</a> (double scale)</td></tr>
 <tr class="memdesc:a94cc40ed91c0ba42ce9dde4fd49e7ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel scale.  <a href="#a94cc40ed91c0ba42ce9dde4fd49e7ea4"></a><br/></td></tr>
-<tr class="memitem:a214d240c918e003f6d7409c0cefb9c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a214d240c918e003f6d7409c0cefb9c5b">setCenter</a> (int x0, int y0)</td></tr>
-<tr class="memdesc:a214d240c918e003f6d7409c0cefb9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the center of the image, changing the logical location of the pixels.  <a href="#a214d240c918e003f6d7409c0cefb9c5b"></a><br/></td></tr>
 <tr class="memitem:a1b2f0e383636b33da939ca9660e75b13"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a1b2f0e383636b33da939ca9660e75b13">getBounds</a> () const </td></tr>
 <tr class="memdesc:a1b2f0e383636b33da939ca9660e75b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bounding box of the image.  <a href="#a1b2f0e383636b33da939ca9660e75b13"></a><br/></td></tr>
 <tr class="memitem:ac4787819c640456776f1140511cc4137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4787819c640456776f1140511cc4137">getPaddedSize</a> (float pad_factor) const </td></tr>
@@ -193,11 +183,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f8f9dd7db28de439821bafcdde13739"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a6f8f9dd7db28de439821bafcdde13739">operator=</a> (T x) const </td></tr>
 <tr class="memitem:aa768a8cfae431906f3a9cf2b5c182bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#aa768a8cfae431906f3a9cf2b5c182bce">setZero</a> () const </td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a5d327b5df4dae60ec761f0136449fc2f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#a5d327b5df4dae60ec761f0136449fc2f">operator()</a> (int xpos, int ypos) const </td></tr>
+<tr class="memdesc:a5d327b5df4dae60ec761f0136449fc2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unchecked access.  <a href="#a5d327b5df4dae60ec761f0136449fc2f"></a><br/></td></tr>
+<tr class="memitem:afa562efb46ce918d9e793e0b530da470"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#afa562efb46ce918d9e793e0b530da470">operator()</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;pos) const </td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ad10b9fedc8cd7ff265cbd9630a87128f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#ad10b9fedc8cd7ff265cbd9630a87128f">at</a> (int xpos, int ypos) const </td></tr>
+<tr class="memdesc:ad10b9fedc8cd7ff265cbd9630a87128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element access - checked.  <a href="#ad10b9fedc8cd7ff265cbd9630a87128f"></a><br/></td></tr>
+<tr class="memitem:adadc0fe47175225d9f20f0cc9f76b353"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_image_view.html#adadc0fe47175225d9f20f0cc9f76b353">at</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;pos) const </td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ac4cf361606a9ed7ddcba80b34e6ae131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4cf361606a9ed7ddcba80b34e6ae131">shift</a> (int dx, int dy)</td></tr>
+<tr class="memdesc:ac4cf361606a9ed7ddcba80b34e6ae131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift the bounding box of the image, changing the logical location of the pixels.  <a href="#ac4cf361606a9ed7ddcba80b34e6ae131"></a><br/></td></tr>
+<tr class="memitem:ac88bf37d85e05c988c1155a5f809e8d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac88bf37d85e05c988c1155a5f809e8d1">shift</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;dpos)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:af46d610c6853359a16c37b5045607c4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#af46d610c6853359a16c37b5045607c4c">setOrigin</a> (int x0, int y0)</td></tr>
+<tr class="memdesc:af46d610c6853359a16c37b5045607c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the origin of the image, changing the logical location of the pixels.  <a href="#af46d610c6853359a16c37b5045607c4c"></a><br/></td></tr>
+<tr class="memitem:a3ad69752b4638be40593bbdeef7a0819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a3ad69752b4638be40593bbdeef7a0819">setOrigin</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;pos)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a214d240c918e003f6d7409c0cefb9c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a214d240c918e003f6d7409c0cefb9c5b">setCenter</a> (int x0, int y0)</td></tr>
+<tr class="memdesc:a214d240c918e003f6d7409c0cefb9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the center of the image, changing the logical location of the pixels.  <a href="#a214d240c918e003f6d7409c0cefb9c5b"></a><br/></td></tr>
+<tr class="memitem:a82e638f4cf4c9440c89bf5bd623dfc31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a82e638f4cf4c9440c89bf5bd623dfc31">setCenter</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;pos)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5ddcaee190e81c06ee6a3ecf4c990690"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a5ddcaee190e81c06ee6a3ecf4c990690">getXMin</a> () const </td></tr>
 <tr class="memdesc:a5ddcaee190e81c06ee6a3ecf4c990690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience accessors for the bounding box corners.  <a href="#a5ddcaee190e81c06ee6a3ecf4c990690"></a><br/></td></tr>
 <tr class="memitem:a01c92ca7e7e3336a87c700447dfaaf8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a01c92ca7e7e3336a87c700447dfaaf8a">getXMax</a> () const </td></tr>
 <tr class="memitem:a9d637b0bc9dcafa0087040d71fcb4ca5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a9d637b0bc9dcafa0087040d71fcb4ca5">getYMin</a> () const </td></tr>
 <tr class="memitem:ae7ad59730260e011b9880f755e14720d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ae7ad59730260e011b9880f755e14720d">getYMax</a> () const </td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a386ce21d0127e78c61b6c2b3fc9f5a45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_base_image.html#ac50584bc6b4a7855e359dc20a0eb2526">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a386ce21d0127e78c61b6c2b3fc9f5a45">getIter</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;pos) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
@@ -408,6 +420,26 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="adadc0fe47175225d9f20f0cc9f76b353"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_image.html#a12ed7a67c8ebbb4e1075f4c6b3023cb5">galsim::BaseImage&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a554165e1189e0ed951727a926f29b5af"></a>
 <div class="memitem">
 <div class="memproto">
@@ -548,6 +580,32 @@ template&lt;typename T&gt; </div>
 <p>This overrides the version in <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a>, since this one returns a non-const pointer. (T*, not const T*) </p>
 
 <p>Reimplemented from <a class="el" href="classgalsim_1_1_base_image.html#af381da9d8c3ea968dde8434656f9d87c">galsim::BaseImage&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a386ce21d0127e78c61b6c2b3fc9f5a45"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_base_image.html#ac50584bc6b4a7855e359dc20a0eb2526">const_iterator</a> <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::getIter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -875,6 +933,26 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="afa562efb46ce918d9e793e0b530da470"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classgalsim_1_1_image_view.html">galsim::ImageView</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classgalsim_1_1_base_image.html#af8aeb9cb2eba387d77fa5310ba1322bf">galsim::BaseImage&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7a6ae2664ce2785562d58a8c64adaa1a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1062,6 +1140,32 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a82e638f4cf4c9440c89bf5bd623dfc31"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::setCenter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af46d610c6853359a16c37b5045607c4c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1099,6 +1203,32 @@ template&lt;typename T&gt; </div>
 <p>Move the origin of the image, changing the logical location of the pixels. </p>
 <p>(x0,y0) becomes the new lower-left corner of the image.</p>
 <p>xmin_new = x0 xmax_new = x0 + xmax - xmin ymin_new = y0 ymax_new = y0 + ymax - ymin </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ad69752b4638be40593bbdeef7a0819"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::setOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1163,7 +1293,8 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Another way to set a value. Equivalent to im(x,y) = value. </p>
-<p>The python layer can't implement the im(x,y) = value syntax, so we need something else to set a single pixel. This function is unnecessary at the C++ level, but in the interest of trying to keep the two layers as close as possible, we might as well include it. </p>
+<p>The python layer can't implement the im(x,y) = value syntax, so we need something else to set a single pixel. This function is unnecessary at the C++ level, but in the interest of trying to keep the two layers as close as possible, we might as well include it.</p>
+<p>Note: This uses the checked element access. </p>
 
 </div>
 </div>
@@ -1220,6 +1351,32 @@ template&lt;typename T&gt; </div>
 
 <p>Shift the bounding box of the image, changing the logical location of the pixels. </p>
 <p>xmin_new = xmin + dx xmax_new = xmax + dx ymin_new = ymin + dy ymax_new = ymax + dy </p>
+
+</div>
+</div>
+<a class="anchor" id="ac88bf37d85e05c988c1155a5f809e8d1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::shift </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dpos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -135,9 +135,9 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">conc</td><td>Concentration parameter, i.e., ratio of virial radius to NFW scale radius. </td></tr>
     <tr><td class="paramname">redshift</td><td>Redshift of the halo. </td></tr>
     <tr><td class="paramname">halo_pos</td><td><a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format.">Position</a> of halo center (in arcsec). [default=PositionD(0,0)] </td></tr>
-    <tr><td class="paramname">omega_m</td><td>Omega_matter to pass to <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> constructor [default=None] </td></tr>
-    <tr><td class="paramname">omega_lam</td><td>Omega_lambda to pass to <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> constructor [default=None] </td></tr>
-    <tr><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> instance [default=None] </td></tr>
+    <tr><td class="paramname">omega_m</td><td>Omega_matter to pass to <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> constructor. [default=None] </td></tr>
+    <tr><td class="paramname">omega_lam</td><td>Omega_lambda to pass to <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> constructor. [default=None] </td></tr>
+    <tr><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1lensing_1_1_cosmology.html" title="Basic cosmology calculations.">Cosmology</a> instance. [default=None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,12 +254,12 @@ Public Attributes</h2></td></tr>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates [default = arcsec]</td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default = arcsec]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>kappa or list of kappa values </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>kappa or list of kappa values. </dd></dl>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Public Attributes</h2></td></tr>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
     <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). </td></tr>
   </table>
   </dd>
@@ -370,12 +370,12 @@ Public Attributes</h2></td></tr>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">z_s</td><td>Source redshift(s) </td></tr>
+    <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
     <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>mu Numpy array containing the magnification at the specified position(s) </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>mu Numpy array containing the magnification at the specified position(s). </dd></dl>
 
 </div>
 </div>
@@ -435,7 +435,7 @@ Public Attributes</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates [default = arcsec] </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default = arcsec] </td></tr>
     <tr><td class="paramname">reduced</td><td>Whether returned shear(s) should be reduced shears. [default=True]</td></tr>
   </table>
   </dd>

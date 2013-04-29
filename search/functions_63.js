@@ -6,7 +6,7 @@ var searchData=
   ['calculatenoisevar',['CalculateNoiseVar',['../namespacegalsim_1_1config_1_1stamp.html#a3d57add4b6f4efcc89dee75f22f09a71',1,'galsim::config::stamp']]],
   ['calculatestepk',['calculateStepK',['../classgalsim_1_1_s_b_interpolated_image.html#a09dd8a7fa9873222e9b584584256f801',1,'galsim::SBInterpolatedImage']]],
   ['calculatewcsshear',['CalculateWCSShear',['../namespacegalsim_1_1config_1_1stamp.html#ad61bf79acaf10018d86f44d1344f7020',1,'galsim::config::stamp']]],
-  ['call',['call',['../structgalsim_1_1_calculate_center.html#a453c7c5398548bfa716fd6b1ba914bd1',1,'galsim::CalculateCenter::call()'],['../structgalsim_1_1_calculate_center_3_01_t_00_01true_01_4.html#a9616f7477ea9678bb0fc825721e603c2',1,'galsim::CalculateCenter&lt; T, true &gt;::call()']]],
+  ['call',['call',['../structgalsim_1_1_calculate_center.html#a965404d6ebfae64e02a3a3e4362a8984',1,'galsim::CalculateCenter::call()'],['../structgalsim_1_1_calculate_center_3_01_t_00_01_u_00_01true_01_4.html#a70e75fc1cbe74078c30194f961824b94',1,'galsim::CalculateCenter&lt; T, U, true &gt;::call()']]],
   ['ccdnoise',['CCDNoise',['../classgalsim_1_1_c_c_d_noise.html#a82dda9efb1ce4c65f3086b3deb620935',1,'galsim::CCDNoise::CCDNoise(boost::shared_ptr&lt; BaseDeviate &gt; rng, double sky_level=0., double gain=1., double read_noise=0.)'],['../classgalsim_1_1_c_c_d_noise.html#aeb37dd84d317dffc4a1f9a78b6cbedf9',1,'galsim::CCDNoise::CCDNoise(const CCDNoise &amp;rhs)']]],
   ['ccdnoise_5fcopy',['CCDNoise_copy',['../namespacegalsim_1_1noise.html#ae2ef70bc91207f743e2ec750c06b4848',1,'galsim::noise']]],
   ['center',['center',['../classgalsim_1_1_bounds.html#a68df9df7a2ebe8427d71127d795c187d',1,'galsim::Bounds']]],
