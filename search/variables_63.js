@@ -2,6 +2,7 @@ var searchData=
 [
   ['c',['c',['../classgalsim_1_1lensing_1_1_n_f_w_halo.html#a7329519da49330d18a1d2173a8a241f2',1,'galsim::lensing::NFWHalo']]],
   ['catalog_5ffile',['catalog_file',['../classgalsim_1_1base_1_1_real_galaxy.html#a9da5dbe904a4f4f1de7c803182f636a8',1,'galsim::base::RealGalaxy']]],
+  ['config',['config',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a73132cef486e6172ff50d3e3af8086d4',1,'galsim::utilities::ComparisonShapeData']]],
   ['corrected_5fe1',['corrected_e1',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a61ca9a08bd395efacc22b5a92e7afa83',1,'galsim::hsm::CppHSMShapeData::corrected_e1()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a82352126d265089a4c550e969a77a3d9',1,'galsim.psfcorr.HSMShapeData.corrected_e1()']]],
   ['corrected_5fe2',['corrected_e2',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a12b14ab0b939bf47058a340b1ca32132',1,'galsim::hsm::CppHSMShapeData::corrected_e2()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a78899c279045f90a2fe10ec426753e38',1,'galsim.psfcorr.HSMShapeData.corrected_e2()']]],
   ['corrected_5fg1',['corrected_g1',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#af9c973c1e14f749d7d144f6e28f0daf3',1,'galsim::hsm::CppHSMShapeData::corrected_g1()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6b0d93577b5d5586cea4e6e98fd91773',1,'galsim.psfcorr.HSMShapeData.corrected_g1()']]],
