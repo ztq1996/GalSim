@@ -129,16 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0a1fd2775afe89b89f5d004aa0fa5149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply this correlated Gaussian random noise field to an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a0a1fd2775afe89b89f5d004aa0fa5149"></a><br/></td></tr>
 <tr class="memitem:a0e3376af85f80571a8355f4bd2d67c9e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0e3376af85f80571a8355f4bd2d67c9e">applyWhiteningTo</a></td></tr>
 <tr class="memdesc:a0e3376af85f80571a8355f4bd2d67c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply noise designed to whiten correlated Gaussian random noise in an input <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>.  <a href="#a0e3376af85f80571a8355f4bd2d67c9e"></a><br/></td></tr>
-<tr class="memitem:a5c9c77554b3e7e1a311c7588d37d6c4e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a5c9c77554b3e7e1a311c7588d37d6c4e">applyTransformation</a></td></tr>
-<tr class="memdesc:a5c9c77554b3e7e1a311c7588d37d6c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a galsim.Ellipse distortion to the correlated noise model.  <a href="#a5c9c77554b3e7e1a311c7588d37d6c4e"></a><br/></td></tr>
 <tr class="memitem:a70369a08a3b5f4a0dc3c22a040c807dc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a70369a08a3b5f4a0dc3c22a040c807dc">applyExpansion</a></td></tr>
 <tr class="memdesc:a70369a08a3b5f4a0dc3c22a040c807dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the linear scale of correlations in this noise model by scale.  <a href="#a70369a08a3b5f4a0dc3c22a040c807dc"></a><br/></td></tr>
 <tr class="memitem:a30d918d86ae8d10bddcd8cdfb9f3c6d0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a30d918d86ae8d10bddcd8cdfb9f3c6d0">applyRotation</a></td></tr>
 <tr class="memdesc:a30d918d86ae8d10bddcd8cdfb9f3c6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a rotation theta to this correlated noise model.  <a href="#a30d918d86ae8d10bddcd8cdfb9f3c6d0"></a><br/></td></tr>
 <tr class="memitem:adc6373ae3c3eac94a4ad7d0e6b30e07b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#adc6373ae3c3eac94a4ad7d0e6b30e07b">applyShear</a></td></tr>
 <tr class="memdesc:adc6373ae3c3eac94a4ad7d0e6b30e07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a shear to this correlated noise model, where arguments are either a galsim.Shear, or arguments that will be used to initialize one.  <a href="#adc6373ae3c3eac94a4ad7d0e6b30e07b"></a><br/></td></tr>
-<tr class="memitem:a7657a74cf67b928a49298ae38005a900"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a7657a74cf67b928a49298ae38005a900">createTransformed</a></td></tr>
-<tr class="memdesc:a7657a74cf67b928a49298ae38005a900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new correlated noise model by applying a galsim.Ellipse transformation (shear, dilate).  <a href="#a7657a74cf67b928a49298ae38005a900"></a><br/></td></tr>
 <tr class="memitem:a9abfa637a96030ee4fdbdb0391991b38"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a9abfa637a96030ee4fdbdb0391991b38">createExpanded</a></td></tr>
 <tr class="memdesc:a9abfa637a96030ee4fdbdb0391991b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new correlated noise model by applying an Expansion by the given scale, scaling the linear size by scale.  <a href="#a9abfa637a96030ee4fdbdb0391991b38"></a><br/></td></tr>
 <tr class="memitem:a0b77431718dbc891a474c1a14c948a24"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0b77431718dbc891a474c1a14c948a24">createRotated</a></td></tr>
@@ -624,42 +620,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5c9c77554b3e7e1a311c7588d37d6c4e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.correlatednoise._BaseCorrelatedNoise.applyTransformation </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ellipse</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Apply a galsim.Ellipse distortion to the correlated noise model. </p>
-<p>galsim.Ellipse objects can be initialized in a variety of ways (see documentation of this class, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> in the doxygen documentation, for details).</p>
-<p>Note that the correlation function must be peaked at the origin, and is translationally invariant: any X0 shift in the input ellipse is therefore ignored.</p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ellipse</td><td>The galsim.Ellipse transformation to apply. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a0e3376af85f80571a8355f4bd2d67c9e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -937,44 +897,6 @@ template&lt;typename T &gt; </div>
 <p>Returns a new correlated noise model by applying a shear, where arguments are either a galsim.Shear or keyword arguments that can be used to create one. </p>
 <p>The new instance will share the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a> random number generator with the parent. Use the .<a class="el" href="classgalsim_1_1_base_noise.html#ab7f48ad977d4e81cb12ba454b433784c" title="Set the BaseDeviate that will be used to generate random numbers for the noise model.">setRNG()</a> method after this operation if you wish to use a different random number sequence.</p>
 <p>For more details about the allowed keyword arguments, see the documentation of galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways.">galsim.shear.Shear</a>). </p>
-
-</div>
-</div>
-<a class="anchor" id="a7657a74cf67b928a49298ae38005a900"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.correlatednoise._BaseCorrelatedNoise.createTransformed </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ellipse</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a new correlated noise model by applying a galsim.Ellipse transformation (shear, dilate). </p>
-<p>The new instance will share the <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">galsim.BaseDeviate</a> random number generator with the parent. Use the .<a class="el" href="classgalsim_1_1_base_noise.html#ab7f48ad977d4e81cb12ba454b433784c" title="Set the BaseDeviate that will be used to generate random numbers for the noise model.">setRNG()</a> method after this operation if you wish to use a different random number sequence.</p>
-<p>Note that galsim.Ellipse objects can be initialized in a variety of ways (see documentation of this class, <a class="el" href="classgalsim_1_1ellipse_1_1_ellipse.html" title="A class to represent ellipses in a variety of ways.">galsim.ellipse.Ellipse</a> in the doxygen documentation, for details).</p>
-<p>Note also that the correlation function must be peaked at the origin, and is translationally invariant: any X0 shift in the input ellipse is therefore ignored.</p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ellipse</td><td>The galsim.Ellipse transformation to apply </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>The transformed object. </dd></dl>
 
 </div>
 </div>

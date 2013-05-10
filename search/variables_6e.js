@@ -13,6 +13,6 @@ var searchData=
   ['nsig_5frg',['nsig_rg',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#afa53e9052c23b0ad142eb7bbec78af03',1,'galsim::hsm::HSMParams']]],
   ['nsig_5frg2',['nsig_rg2',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a9947c8eb851d3911d3551eaf3f6b4df2',1,'galsim::hsm::HSMParams']]],
   ['num_5fiter_5fdefault',['num_iter_default',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a8ebb94fefb4162846f58dde7bb56dbd8',1,'galsim::hsm::HSMParams']]],
-  ['nx',['nx',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a4e677e1504fa15f2d4831384fd3a400b',1,'galsim::lensing::PowerSpectrumRealizer']]],
-  ['ny',['ny',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a6bf5e1f777d6256bd052192ad6e6f66c',1,'galsim::lensing::PowerSpectrumRealizer']]]
+  ['nx',['nx',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#abc1b92b06972c24ddedfefac251463e7',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
+  ['ny',['ny',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#ae243d699a2b76c11d895a15d2d6e8196',1,'galsim::lensing_ps::PowerSpectrumRealizer']]]
 ];

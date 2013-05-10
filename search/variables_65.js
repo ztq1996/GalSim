@@ -2,7 +2,7 @@ var searchData=
 [
   ['e1',['e1',['../structgalsim_1_1hsm_1_1_object_data.html#a85d9bc4f3908f93171d98e4e7388c1f7',1,'galsim::hsm::ObjectData']]],
   ['e2',['e2',['../structgalsim_1_1hsm_1_1_object_data.html#a56dec6d715aff0345b5f9a69a1d1091c',1,'galsim::hsm::ObjectData']]],
-  ['e_5fpower_5ffunction',['e_power_function',['../classgalsim_1_1lensing_1_1_power_spectrum.html#adbe821e6c3acd689850929f397bbc966',1,'galsim::lensing::PowerSpectrum']]],
+  ['e_5fpower_5ffunction',['e_power_function',['../classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a0ade197b0cbf8fb086299ffa00dac880',1,'galsim::lensing_ps::PowerSpectrum']]],
   ['earthmass',['EarthMass',['../_astronomical_constants_8h.html#a0fffcc72ce86fcb183b5b31563021dfb',1,'AstronomicalConstants.h']]],
   ['eb_5frot',['eb_rot',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a2a49b242168e97f36b681af8f294e869',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['eclipticinclination',['EclipticInclination',['../_astronomical_constants_8h.html#a00dccbc230c3c8a55e7586176e6001e9',1,'AstronomicalConstants.h']]],
@@ -11,6 +11,6 @@ var searchData=
   ['err_5fg1obs',['err_g1obs',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#af3258a3d0812771f120d8f50be8904e3',1,'galsim::utilities::ComparisonShapeData']]],
   ['err_5fg2obs',['err_g2obs',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#ac0378c53d908318250798eeea4e630cd',1,'galsim::utilities::ComparisonShapeData']]],
   ['err_5fsigma',['err_sigma',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#ab62cfec36b16aafc81dc0fc7efc68ff5',1,'galsim::utilities::ComparisonShapeData']]],
-  ['error_5fmessage',['error_message',['../structgalsim_1_1hsm_1_1_cpp_h_s_m_shape_data.html#a133de3a3b304437b11c0ca009dac29ad',1,'galsim::hsm::CppHSMShapeData::error_message()'],['../classgalsim_1_1psfcorr_1_1_h_s_m_shape_data.html#a6f93bd9922a6dafb6a647e82da13eef3',1,'galsim.psfcorr.HSMShapeData.error_message()']]],
-  ['exp2ipsi',['exp2ipsi',['../classgalsim_1_1lensing_1_1_power_spectrum_realizer.html#a695eec419e555d9cd9b6f15b85460b1d',1,'galsim::lensing::PowerSpectrumRealizer']]]
+  ['error_5fmessage',['error_message',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#ad8210a5d5e91323c7584a2e6eb4f20b2',1,'galsim::hsm::CppShapeData::error_message()'],['../classgalsim_1_1hsm_1_1_shape_data.html#abb9e6329ee0a9688a30ddb7d0b96b8dc',1,'galsim::hsm.ShapeData.error_message()']]],
+  ['exp2ipsi',['exp2ipsi',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a75dc5461f928d57aef7089ae883bbf43',1,'galsim::lensing_ps::PowerSpectrumRealizer']]]
 ];

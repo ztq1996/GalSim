@@ -7,7 +7,7 @@ var searchData=
   ['interpolant2d',['Interpolant2d',['../classgalsim_1_1_interpolant2d.html',1,'galsim']]],
   ['interpolantfunction',['InterpolantFunction',['../classgalsim_1_1_interpolant_function.html',1,'galsim']]],
   ['interpolantxy',['InterpolantXY',['../classgalsim_1_1_interpolant_x_y.html',1,'galsim']]],
-  ['interpolatedimage',['InterpolatedImage',['../classgalsim_1_1base_1_1_interpolated_image.html',1,'galsim::base']]],
+  ['interpolatedimage',['InterpolatedImage',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html',1,'galsim::interpolatedimage']]],
   ['interval',['Interval',['../classgalsim_1_1_interval.html',1,'galsim']]],
   ['intfailure',['IntFailure',['../structgalsim_1_1integ_1_1_int_failure.html',1,'galsim::integ']]],
   ['intregion',['IntRegion',['../structgalsim_1_1integ_1_1_int_region.html',1,'galsim::integ']]]

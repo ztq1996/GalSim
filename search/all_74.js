@@ -1,7 +1,7 @@
 var searchData=
 [
   ['table',['Table',['../classgalsim_1_1_table.html',1,'galsim']]],
-  ['table',['table',['../classgalsim_1_1table_1_1_lookup_table.html#a57131bbde38600b4f12616aaaf86bd07',1,'galsim.table.LookupTable.table()'],['../classgalsim_1_1_table.html#a640b84f160553fc88456bab36aff7220',1,'galsim::Table::Table(interpolant i=linear)'],['../classgalsim_1_1_table.html#a29a2dd8a13196d626c01c1cb01ff77e5',1,'galsim::Table::Table(const A *argvec, const V *valvec, int N, interpolant in=linear)'],['../classgalsim_1_1_table.html#a6d6a01132ff00719c0e6521a14c1e63b',1,'galsim::Table::Table(const std::vector&lt; A &gt; &amp;a, const std::vector&lt; V &gt; &amp;v, interpolant in=linear)'],['../classgalsim_1_1_table.html#a042da75113474ee80f369189a73e9745',1,'galsim::Table::Table(std::istream &amp;is, interpolant in=linear)']]],
+  ['table',['Table',['../classgalsim_1_1_table.html#a640b84f160553fc88456bab36aff7220',1,'galsim::Table::Table(interpolant i=linear)'],['../classgalsim_1_1_table.html#a29a2dd8a13196d626c01c1cb01ff77e5',1,'galsim::Table::Table(const A *argvec, const V *valvec, int N, interpolant in=linear)'],['../classgalsim_1_1_table.html#a6d6a01132ff00719c0e6521a14c1e63b',1,'galsim::Table::Table(const std::vector&lt; A &gt; &amp;a, const std::vector&lt; V &gt; &amp;v, interpolant in=linear)'],['../classgalsim_1_1_table.html#a042da75113474ee80f369189a73e9745',1,'galsim::Table::Table(std::istream &amp;is, interpolant in=linear)'],['../classgalsim_1_1table_1_1_lookup_table.html#a57131bbde38600b4f12616aaaf86bd07',1,'galsim.table.LookupTable.table()']]],
   ['table_2eh',['Table.h',['../_table_8h.html',1,'']]],
   ['table_2epy',['table.py',['../table_8py.html',1,'']]],
   ['table_3c_20double_2c_20double_20_3e',['Table&lt; double, double &gt;',['../classgalsim_1_1_table.html',1,'galsim']]],
@@ -10,7 +10,7 @@ var searchData=
   ['tableentry',['TableEntry',['../classgalsim_1_1_table_entry.html',1,'galsim']]],
   ['tableentry',['TableEntry',['../classgalsim_1_1_table_entry.html#a5e7dae10181787a624291c324d96a52d',1,'galsim::TableEntry']]],
   ['takeyfrom',['takeYFrom',['../classgalsim_1_1_photon_array.html#a08f1eea7336abefed945ba35426056b8',1,'galsim::PhotonArray']]],
-  ['theorytoobserved',['theoryToObserved',['../namespacegalsim_1_1lensing.html#acdb4e6513e9124c1f35ee49b68446e10',1,'galsim::lensing']]],
+  ['theorytoobserved',['theoryToObserved',['../namespacegalsim_1_1lensing__ps.html#a74a4dfa16142714963642f846b0a40d7',1,'galsim::lensing_ps']]],
   ['time',['time',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a504309f572774ab8cd29c9e8f63d5825',1,'galsim::utilities::ComparisonShapeData']]],
   ['tpi',['TPI',['../_astronomical_constants_8h.html#ae0563db88ec40dfb8c9b8b07aeb93f90',1,'AstronomicalConstants.h']]],
   ['transform',['transform',['../classgalsim_1_1_k_table.html#aa63e7638c3ab685bea09220d2983258e',1,'galsim::KTable::transform() const '],['../classgalsim_1_1_k_table.html#ad7c1bcddc3111639391c95a4621c21c3',1,'galsim::KTable::transform(XTable &amp;xt) const '],['../classgalsim_1_1_x_table.html#a5ce7dd7a3c87f8b28543a61fa4966b89',1,'galsim::XTable::transform() const '],['../classgalsim_1_1_x_table.html#a4a431baf577cf9e56c2557ad51942b16',1,'galsim::XTable::transform(KTable &amp;kt) const ']]],
