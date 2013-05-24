@@ -115,12 +115,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a3b02518ad082885608ebea6950bf4a9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a3b02518ad082885608ebea6950bf4a9c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a3b02518ad082885608ebea6950bf4a9c">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; int &gt; &amp;object_mask_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0, boost::shared_ptr&lt; HSMParams &gt; hsmparams=boost::shared_ptr&lt; HSMParams &gt;())</td></tr>
 <tr class="memdesc:a3b02518ad082885608ebea6950bf4a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#a3b02518ad082885608ebea6950bf4a9c"></a><br/></td></tr>
-<tr class="memitem:aa3e73b23fdc2060c56b2c7f79b47b973"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:aa3e73b23fdc2060c56b2c7f79b47b973"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#aa3e73b23fdc2060c56b2c7f79b47b973">general_shear_estimator</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; gal_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; gal_mask, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; U &gt; PSF_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; PSF_mask, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;PSF_data, const std::string &amp;shear_est, unsigned long flags, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
-<tr class="memdesc:aa3e73b23fdc2060c56b2c7f79b47b973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#aa3e73b23fdc2060c56b2c7f79b47b973"></a><br/></td></tr>
-<tr class="memitem:a33eec9c79c7082635996e17dd9cff059"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a33eec9c79c7082635996e17dd9cff059"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a33eec9c79c7082635996e17dd9cff059">find_ellipmom_2</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; T &gt; data, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; int &gt; mask, double &amp;A, double &amp;x0, double &amp;y0, double &amp;Mxx, double &amp;Mxy, double &amp;Myy, double &amp;rho4, double epsilon, int &amp;num_iter, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
-<tr class="memdesc:a33eec9c79c7082635996e17dd9cff059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a33eec9c79c7082635996e17dd9cff059"></a><br/></td></tr>
+<tr class="memitem:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a9ce66ba4ec411c491b53754a8fefb2ab">general_shear_estimator</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; gal_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; PSF_image, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;PSF_data, const std::string &amp;shear_est, unsigned long flags, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
+<tr class="memdesc:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#a9ce66ba4ec411c491b53754a8fefb2ab"></a><br/></td></tr>
+<tr class="memitem:a8d79efe1e4d4f94b6ea1a42e4bf1a97f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a8d79efe1e4d4f94b6ea1a42e4bf1a97f">find_ellipmom_2</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; data, double &amp;A, double &amp;x0, double &amp;y0, double &amp;Mxx, double &amp;Mxy, double &amp;Myy, double &amp;rho4, double epsilon, int &amp;num_iter, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
+<tr class="memdesc:a8d79efe1e4d4f94b6ea1a42e4bf1a97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a8d79efe1e4d4f94b6ea1a42e4bf1a97f"></a><br/></td></tr>
 <tr class="memitem:a3e4df98f3d16186ddeeac25b3d1c50e8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8">EstimateShear</a></td></tr>
 <tr class="memdesc:a3e4df98f3d16186ddeeac25b3d1c50e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out moments-based PSF correction routines.  <a href="#a3e4df98f3d16186ddeeac25b3d1c50e8"></a><br/></td></tr>
 <tr class="memitem:a609965656c1fb90e664a6439312ac1fc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a609965656c1fb90e664a6439312ac1fc">FindAdaptiveMom</a></td></tr>
@@ -397,23 +395,15 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a33eec9c79c7082635996e17dd9cff059"></a>
+<a class="anchor" id="a8d79efe1e4d4f94b6ea1a42e4bf1a97f"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void galsim::hsm::find_ellipmom_2 </td>
           <td>(</td>
-          <td class="paramtype">ConstImageView&lt; T &gt;&#160;</td>
+          <td class="paramtype">ConstImageView&lt; double &gt;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -488,7 +478,6 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> for the object being measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> for the object being measured (integers: 1=use pixel, 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>The amplitude of the best-fit elliptical Gaussian (total image intensity for the Gaussian is 2A). </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>The x centroid of the best-fit elliptical Gaussian. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>The y centroid of the best-fit elliptical Gaussian. </td></tr>
@@ -680,35 +669,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa3e73b23fdc2060c56b2c7f79b47b973"></a>
+<a class="anchor" id="a9ce66ba4ec411c491b53754a8fefb2ab"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">unsigned int galsim::hsm::general_shear_estimator </td>
           <td>(</td>
-          <td class="paramtype">ConstImageView&lt; T &gt;&#160;</td>
+          <td class="paramtype">ConstImageView&lt; double &gt;&#160;</td>
           <td class="paramname"><em>gal_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>gal_mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ConstImageView&lt; U &gt;&#160;</td>
+          <td class="paramtype">ConstImageView&lt; double &gt;&#160;</td>
           <td class="paramname"><em>PSF_image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ConstImageView&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>PSF_mask</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -753,9 +728,7 @@ template&lt;typename T , typename U &gt; </div>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The galaxy <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gal_mask</td><td>The galaxy mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (integers: 1=use pixel, 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The PSF <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_mask</td><td>The PSF mask <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> (integers: 1=use pixel, 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gal_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the galaxy </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">PSF_data</td><td>The <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html" title="Characterizes the shape and other parameters of objects.">ObjectData</a> object for the PSF </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB. </td></tr>

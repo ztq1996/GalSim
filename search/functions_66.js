@@ -5,7 +5,7 @@ var searchData=
   ['fill',['fill',['../classgalsim_1_1_k_table.html#a08dfe7286f81ad546df87fc15b22e026',1,'galsim::KTable::fill(function1 func)'],['../classgalsim_1_1_k_table.html#ace10a8fe80387e886c232b80a865a531',1,'galsim::KTable::fill(const T &amp;f)'],['../classgalsim_1_1_x_table.html#a479318796402c7ddadf89b221eb2244d',1,'galsim::XTable::fill()'],['../classgalsim_1_1_image_view.html#a194454148b6c07e279ca75f407d97e6a',1,'galsim::ImageView::fill()'],['../classgalsim_1_1_image.html#a4830b09652b42ebf542999f3ef46cff8',1,'galsim::Image::fill()']]],
   ['fill_5fpixel',['fill_pixel',['../namespacegalsim.html#a7a9ce802a096fae2916488a3f2e8b1f1',1,'galsim::fill_pixel(const ImageView&lt; T &gt; &amp;image, Op f)'],['../namespacegalsim.html#a46dfbd09c3894e0f4510a0fd3d7e6e1d',1,'galsim::fill_pixel(const ImageView&lt; T &gt; &amp;image, const Bounds&lt; int &gt; &amp;bounds, Op f)']]],
   ['find',['find',['../classgalsim_1_1_probability_tree.html#a545bfc975e3c563380fa9b321cde62d8',1,'galsim::ProbabilityTree']]],
-  ['find_5fellipmom_5f2',['find_ellipmom_2',['../namespacegalsim_1_1hsm.html#a33eec9c79c7082635996e17dd9cff059',1,'galsim::hsm']]],
+  ['find_5fellipmom_5f2',['find_ellipmom_2',['../namespacegalsim_1_1hsm.html#a8d79efe1e4d4f94b6ea1a42e4bf1a97f',1,'galsim::hsm']]],
   ['findadaptivemom',['FindAdaptiveMom',['../namespacegalsim_1_1hsm.html#a609965656c1fb90e664a6439312ac1fc',1,'galsim::hsm']]],
   ['findadaptivemomview',['FindAdaptiveMomView',['../namespacegalsim_1_1hsm.html#a3b02518ad082885608ebea6950bf4a9c',1,'galsim::hsm']]],
   ['findzerocrossings',['findZeroCrossings',['../structgalsim_1_1integ_1_1_int_region.html#a87211211987889c1f42ed68890d00097',1,'galsim::integ::IntRegion']]],
