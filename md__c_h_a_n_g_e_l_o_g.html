@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added a utility that can take an input set of shears on a grid, and reconstruct the convergence. (Issue #304)</li>
 </ul>
 <ul>
+<li>Sped up the HSM module. (Issue #340)</li>
+</ul>
+<ul>
 <li>Added the ability to modify parameters that control the precise rendering of GSObjects using the new GSParams class. (Issue #343)</li>
 </ul>
 <ul>
@@ -130,6 +133,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added the ability to modify algorithmic parameter settings for the moments and shape measurement routines using the new HSMParams class. (Issue #365)</li>
 </ul>
 <ul>
+<li>Deprecated <code>AtmosphericPSF</code> and <code>Ellipse</code> classes. (Issue #372) (They will both eventually be replaced by significantly different functionality, so they should not be used.)</li>
+</ul>
+<ul>
+<li>Changed HSM routines to require an explicit <code><a class="el" href="namespacegalsim_1_1hsm.html">galsim.hsm</a>.</code> prefix and edited some of the function names. e.g. <code>galsim.EstimateShearHSM</code> -&gt; <code><a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines.">galsim.hsm.EstimateShear</a></code>. (Issue #372)</li>
+</ul>
+<ul>
+<li>Added <code>kmin_factor</code> and <code>kmax_factor</code> parameters to PowerSpectrum <code>buildGrid</code> function. (Issue #377)</li>
+</ul>
+<ul>
 <li>Changed the default centering convention for even-sized images to be in the actual center, rather than 1/2 pixel up and to the right of the center. This behavior can be turned off with a use_true_center=False keyword in draw or drawShoot. (Issue #380)</li>
 </ul>
 <ul>
@@ -151,7 +163,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added ability to truncate Sersic profiles with optional trunc parameter. (Issue #388)</li>
 </ul>
 <ul>
-<li>Added trefoil to optical aberration. (Issue #390) </li>
+<li>Added trefoil to optical aberration. (Issue #390)</li>
+</ul>
+<ul>
+<li>Added utilities <code>galsim.utilities.compare_dft_vs_photon*</code>. (Issue #401)</li>
+</ul>
+<ul>
+<li>Fix bugs in <code>obj.drawK()</code> function. (Issue #407)</li>
+</ul>
+<ul>
+<li>Improved speed and accuracy of non-truncated Moffat. (Issue #407)</li>
+</ul>
+<ul>
+<li>Fix some errors in code and documentation of the fits module related to writing to an HDUList. (Issue #417)</li>
+</ul>
+<ul>
+<li>Add new function <code><a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file.">galsim.fits.writeFile</a></code>. (Issue #417) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

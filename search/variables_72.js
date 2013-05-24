@@ -2,7 +2,6 @@ var searchData=
 [
   ['radtoarcsec',['RadToArcsec',['../_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1',1,'AstronomicalConstants.h']]],
   ['range_5fdivision_5ffor_5fextrema',['RANGE_DIVISION_FOR_EXTREMA',['../namespacegalsim_1_1odd.html#a721bb3032840e1c1d1ff8fba61e337f2',1,'galsim::odd']]],
-  ['read_5ffile',['read_file',['../namespacegalsim_1_1fits.html#adb3deb80791f0f41f0d6f8cbdb444905',1,'galsim::fits']]],
   ['realspace_5fabserr',['realspace_abserr',['../structgalsim_1_1_g_s_params.html#a7fbf0d18a476c2f1acf11901aae68e79',1,'galsim::GSParams']]],
   ['realspace_5frelerr',['realspace_relerr',['../structgalsim_1_1_g_s_params.html#aaa3b4a7b32194973550186a0db09723b',1,'galsim::GSParams']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],

@@ -31,6 +31,8 @@ var searchData=
   ['_5f_5fsub_5f_5f',['__sub__',['../classgalsim_1_1deprecated_1_1ellipse_1_1_ellipse.html#ad8242d2f66aba2f4bbe267ba9d10dbeb',1,'galsim.deprecated.ellipse.Ellipse.__sub__()'],['../classgalsim_1_1shear_1_1_shear.html#a0c515a0e31ba7e8234f5c09d22232d41',1,'galsim.shear.Shear.__sub__()']]],
   ['_5f_5ftruediv_5f_5f',['__truediv__',['../classgalsim_1_1base_1_1_g_s_object.html#adf331fe434ce3c71b64ce2745d0b75ca',1,'galsim.base.GSObject.__truediv__()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#ae591b70182e821825a4f194fa5350d13',1,'galsim.correlatednoise._BaseCorrelatedNoise.__truediv__()']]],
   ['_5fbasecorrelatednoise',['_BaseCorrelatedNoise',['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html',1,'galsim::correlatednoise']]],
+  ['_5fread_5ffile',['_read_file',['../namespacegalsim_1_1fits.html#aba9065630b6f270c7e5a7331f7ce73f6',1,'galsim::fits']]],
   ['_5freadfile',['_ReadFile',['../classgalsim_1_1fits_1_1___read_file.html',1,'galsim::fits']]],
+  ['_5fwrite_5ffile',['_write_file',['../namespacegalsim_1_1fits.html#ae1346ba8cb7bef208aba542d013f6ac7',1,'galsim::fits']]],
   ['_5fwritefile',['_WriteFile',['../classgalsim_1_1fits_1_1___write_file.html',1,'galsim::fits']]]
 ];
