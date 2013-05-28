@@ -1251,6 +1251,7 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">obj.draw(image)
 assert image.added_flux &gt; 0.99 * obj.getFlux()
 </pre><p>The appropriate threshold will depend on your particular application, including what kind of profile the object has, how big your image is relative to the size of your object, etc.</p>
+<p>Given the periodicity implicitly assumed by use of FFTs, there can occasionally be artifacts due to wrapping at the edges, particularly for objects that are quite extended (e.g., due to the nature of the radial profile). Use of the keyword parameter <code>wmult &gt; 1</code> can be used to reduce the size of these artifacts, at the expense of the calculations taking longer and using more memory. Alternatively, the objects that go into the image can be created with a <code>gsparams</code> keyword that has a lower-than-default value for <code>alias_threshold</code>; see help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.ImageF()</code>), then it will be resized appropriately based on the profile's size (default <code>image = None</code>).</td></tr>
