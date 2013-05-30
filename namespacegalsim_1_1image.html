@@ -99,6 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Functions</h2></td></tr>
 <tr class="memitem:aaa9839e6f272e13a218d56719265c0af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#aaa9839e6f272e13a218d56719265c0af">Image_setitem</a></td></tr>
 <tr class="memitem:abd4af2744ef9f2d47a073a47f2262196"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#abd4af2744ef9f2d47a073a47f2262196">Image_getitem</a></td></tr>
+<tr class="memitem:adabdc5b11f42c66ada2be8388e0c7f26"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#adabdc5b11f42c66ada2be8388e0c7f26">check_image_consistency</a></td></tr>
 <tr class="memitem:a0b5bb3dcd618abe082c090c6617cf513"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a0b5bb3dcd618abe082c090c6617cf513">Image_add</a></td></tr>
 <tr class="memitem:a8a6675ee16f0938cacaab2e8576c5980"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a8a6675ee16f0938cacaab2e8576c5980">Image_iadd</a></td></tr>
 <tr class="memitem:a176ad4982ca8e025d996baa8bd60f551"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a176ad4982ca8e025d996baa8bd60f551">Image_sub</a></td></tr>
@@ -107,6 +108,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a2403012d588ea91457db4a1b1147d22c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a2403012d588ea91457db4a1b1147d22c">Image_imul</a></td></tr>
 <tr class="memitem:a60d39575864e8b0469360d7f111cbc26"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a60d39575864e8b0469360d7f111cbc26">Image_div</a></td></tr>
 <tr class="memitem:a2438a3aca2f66afe4e46754f182a7232"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a2438a3aca2f66afe4e46754f182a7232">Image_idiv</a></td></tr>
+<tr class="memitem:aafa2e29921961db677877b3ab3ecf5cd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#aafa2e29921961db677877b3ab3ecf5cd">Image_pow</a></td></tr>
+<tr class="memitem:a37670437708627ec8e45fcd78fe7dfda"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a37670437708627ec8e45fcd78fe7dfda">Image_ipow</a></td></tr>
 <tr class="memitem:aa4068c25fe01f9b32f23ddb5fd787b9e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#aa4068c25fe01f9b32f23ddb5fd787b9e">Image_and</a></td></tr>
 <tr class="memitem:a52f36505cd2e4227625d5e72e25cb21f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a52f36505cd2e4227625d5e72e25cb21f">Image_iand</a></td></tr>
 <tr class="memitem:a1d153a14891dc04446ab42bbafc77466"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#a1d153a14891dc04446ab42bbafc77466">Image_xor</a></td></tr>
@@ -124,6 +127,32 @@ Variables</h2></td></tr>
 <tr class="memitem:af7d369af7210f6bc92a57606384165d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1image.html#af7d369af7210f6bc92a57606384165d0">__class__</a></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="adabdc5b11f42c66ada2be8388e0c7f26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.check_image_consistency </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>im1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>im2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0b5bb3dcd618abe082c090c6617cf513"></a>
 <div class="memitem">
 <div class="memproto">
@@ -390,6 +419,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a37670437708627ec8e45fcd78fe7dfda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image_ipow </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a69b804b7fd416bfbde636cb4649be3ce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -474,6 +529,32 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">def galsim.image.Image_or </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aafa2e29921961db677877b3ab3ecf5cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image_pow </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
