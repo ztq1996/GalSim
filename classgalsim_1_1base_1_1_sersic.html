@@ -118,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a26c8b27671f1a9c056dddc313edea8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> index <code>n</code> for this profile.  <a href="#a26c8b27671f1a9c056dddc313edea8f4"></a><br/></td></tr>
 <tr class="memitem:ad6ca39293c6b478fc052d07ea51d086f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_sersic.html#ad6ca39293c6b478fc052d07ea51d086f">getHalfLightRadius</a></td></tr>
 <tr class="memdesc:ad6ca39293c6b478fc052d07ea51d086f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the half light radius for this <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> profile.  <a href="#ad6ca39293c6b478fc052d07ea51d086f"></a><br/></td></tr>
+<tr class="memitem:a41998286de66f5ce76556544e4c59a2b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_sersic.html#a41998286de66f5ce76556544e4c59a2b">getScaleRadius</a></td></tr>
+<tr class="memdesc:a41998286de66f5ce76556544e4c59a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scale radius for this <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> profile.  <a href="#a41998286de66f5ce76556544e4c59a2b"></a><br/></td></tr>
 <tr class="memitem:ace2781f482d5599469ba51aea46b5b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ace2781f482d5599469ba51aea46b5b82">__add__</a></td></tr>
 <tr class="memitem:a40b1f56421ff947a547b1ba8646b561b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a40b1f56421ff947a547b1ba8646b561b">__iadd__</a></td></tr>
 <tr class="memitem:ad36fb2c961a3612312ad0139d1a1ce53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad36fb2c961a3612312ad0139d1a1ce53">__imul__</a></td></tr>
@@ -195,36 +197,103 @@ Public Attributes</h2></td></tr>
 <p>Has an <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute.</p>
 <p>For more details of the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> Surface Brightness profile, please see the <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a> documentation produced by doxygen, or refer to <a href="http://en.wikipedia.org/wiki/Sersic_profile">http://en.wikipedia.org/wiki/Sersic_profile</a>.</p>
 <h2>Initialization</h2>
-<p>A <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> is initialized with <code>n</code>, the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> index of the profile, and the half light radius size parameter <code>half_light_radius</code>. Optional parameters are truncation radius <code>trunc</code> [default <code>trunc = 0.</code>, indicating no truncation] and a <code>flux</code> parameter [default <code>flux = 1</code>]. If <code>trunc</code> is set to a non-zero value, then it is assumed to be in the same system of units as <code>half_light_radius</code>.</p>
-<p>Note that the code will be more efficient if the truncation is always the same multiple of <code>half_light_radius</code>, since it caches many calculations that depend on the ratio <code>trunc/half_light_radius</code>.</p>
+<p>A <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> is initialized with <code>n</code>, the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> index of the profile, and using one (and only one) of two possible size parameters </p>
+<pre class="fragment">half_light_radius
+scale_radius
+</pre><p>where <code>I_n(r) ~ exp[-(r/scale_radius)^{1/n}] = exp[-b_n (r/half_light_radius)^{1/n}]</code>, and where <code>b_n</code> is implicitly defined by the condition <code>\int_{0}^{half_light_radius} I_n(r) 2pi r dr} = 0.5 \int_{0}^{infinity} I_n(r) 2pi r dr</code>. Note that <code>b_n = (half_light_radius/scale_radius)^{1/n}</code> (when there is no truncation; see below).</p>
+<p>The code is limited to 0.3 &lt;= n &lt;= 4.2, with an exception thrown for values outside that range.</p>
+<p>Several optional parameters are available: Truncation radius <code>trunc</code> [default <code>trunc = 0.</code>, indicating no truncation] and a <code>flux</code> parameter [default <code>flux = 1</code>]. If <code>trunc</code> is set to a non-zero value, then it is assumed to be in the same system of units as <code>half_light_radius</code> or <code>scale_radius</code>.</p>
+<p>Note that the code will be more efficient if the truncation is always the same multiple of <code>half_light_radius</code>, since it caches many calculations that depend on the ratio <code>trunc/half_light_radius</code>. The <code>half_light_radius</code> is always calculated internally for a <code>scale_radius</code> input, and vice versa.</p>
 <p>Example: </p>
 <pre class="fragment">&gt;&gt;&gt; sersic_obj = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40.)
 &gt;&gt;&gt; sersic_obj.getHalfLightRadius()
 2.5
+&gt;&gt;&gt; sersic_obj.getScaleRadius()
+0.003262738739835313
 &gt;&gt;&gt; sersic_obj.getN()
 3.5
-</pre><p>Another optional parameter, <code>flux_untruncated</code>, specifies whether the <code>flux</code> and <code>half_light_radius</code> correspond to the untruncated profile or the truncated profile. If <code>flux_untruncated</code> is True (and <code>trunc &gt; 0</code> of course), then the profile will be identical to the version without truncation up to the truncation radius, at which point it drops to 0. If <code>flux_untruncated</code> is False (the default), then the scale radius will be larger and the central peak will be higher than the untruncated profile, in order to maintain the correct provided <code>flux</code> and <code>half_light_radius</code>.</p>
-<p>When <code>trunc &gt; 0.</code> and <code>flux_untruncated == True</code>, the actual half-light radius will be different from the specified half-light radius. The <a class="el" href="classgalsim_1_1base_1_1_sersic.html#ad6ca39293c6b478fc052d07ea51d086f" title="Return the half light radius for this Sersic profile.">getHalfLightRadius()</a> method will return the true half-light radius. Similarly, the actual flux will not be the same as the specified value; the true flux is also returned by the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a662d8ce421ecd90080bdcaaf6890aed8" title="Returns the flux of the object.">getFlux()</a> method.</p>
+&gt;&gt;&gt; sersic_obj = galsim.Sersic(n=1.5, scale_radius=0.5, flux=40.)
+&gt;&gt;&gt; sersic_obj.getHalfLightRadius()
+2.1863858209590648
+&gt;&gt;&gt; sersic_obj.getScaleRadius()
+0.5
+&gt;&gt;&gt; sersic_obj.getN()
+1.5
+</pre><p>Another optional parameter, <code>flux_untruncated</code>, specifies whether the <code>flux</code> and <code>half_light_radius</code> (or <code>scale_radius</code>) correspond to the untruncated profile or the truncated profile. If <code>flux_untruncated</code> is True (and <code>trunc &gt; 0</code>), then the profile will be identical to the version without truncation up to the truncation radius, beyond which it drops to 0. In this case, the actual half-light radius will be different from the specified half-light radius. The <a class="el" href="classgalsim_1_1base_1_1_sersic.html#ad6ca39293c6b478fc052d07ea51d086f" title="Return the half light radius for this Sersic profile.">getHalfLightRadius()</a> method will return the true half-light radius. Similarly, the actual flux will not be the same as the specified value; the true flux is also returned by the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a662d8ce421ecd90080bdcaaf6890aed8" title="Returns the flux of the object.">getFlux()</a> method.</p>
 <p>Example: </p>
-<pre class="fragment">&gt;&gt;&gt; sersic_obj = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40.)
-&gt;&gt;&gt; sersic_obj2 = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40., trunc=10., \\
+<pre class="fragment">&gt;&gt;&gt; sersic_obj1 = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40.)
+&gt;&gt;&gt; sersic_obj2 = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40., trunc=10.)
+&gt;&gt;&gt; sersic_obj3 = galsim.Sersic(n=3.5, half_light_radius=2.5, flux=40., trunc=10., \\
                                 flux_untruncated=True)
-&gt;&gt;&gt; sersic_obj.xValue(galsim.PositionD(0.,0.))
+
+&gt;&gt;&gt; sersic_obj1.xValue(galsim.PositionD(0.,0.))
 237.3094228614579
 &gt;&gt;&gt; sersic_obj2.xValue(galsim.PositionD(0.,0.))
-237.3094228614579     # The xValues are the same inside the truncation radius ...
-&gt;&gt;&gt; sersic_obj.xValue(galsim.PositionD(10.,0.))
+142.54505376523912    # Normalization and scale radius adjusted (same half-light radius)
+&gt;&gt;&gt; sersic_obj3.xValue(galsim.PositionD(0.,0.))
+237.3094228614579
+
+&gt;&gt;&gt; sersic_obj1.xValue(galsim.PositionD(10.,0.))
 0.011776164687306839
 &gt;&gt;&gt; sersic_obj2.xValue(galsim.PositionD(10.,0.))
-0.0                   # ... but different outside the truncation radius
-&gt;&gt;&gt; sersic_obj.getHalfLightRadius()
+0.0
+&gt;&gt;&gt; sersic_obj3.xValue(galsim.PositionD(10.,0.))
+0.0
+
+&gt;&gt;&gt; sersic_obj1.getHalfLightRadius()
 2.5
 &gt;&gt;&gt; sersic_obj2.getHalfLightRadius()
+2.5
+&gt;&gt;&gt; sersic_obj3.getHalfLightRadius()
 1.9795101421751533    # The true half-light radius is smaller than the specified value
-&gt;&gt;&gt; sersic_obj.getFlux()
+
+&gt;&gt;&gt; sersic_obj1.getFlux()
 40.0
 &gt;&gt;&gt; sersic_obj2.getFlux()
+40.0
+&gt;&gt;&gt; sersic_obj3.getFlux()
 34.56595186009358     # Flux is missing due to truncation
+
+&gt;&gt;&gt; sersic_obj1.getScaleRadius()
+0.003262738739835313
+&gt;&gt;&gt; sersic_obj2.getScaleRadius()
+0.004754602453643055  # the scale radius needed adjustment to accommodate HLR
+&gt;&gt;&gt; sersic_obj3.getScaleRadius()
+0.003262738739835313  # the scale radius is still identical to the untruncated case
+</pre><p>When the truncated <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> scale is specified with <code>scale_radius</code>, the behavior between the three cases (untruncated, <code>flux_untruncated=true</code> and <code>flux_untruncated=false</code>) will be somewhat different from above. Since it is the scale radius that is being specified, and since truncation does not change the scale radius the way it can change the half-light radius, the scale radius will remain unchanged in all cases. This also results in the half-light radius being the same between the two truncated cases (although different from the untruncated case). The flux normalization is the only difference between <code>flux_untruncated=true</code> and <code>flux_untruncated=false</code>.</p>
+<p>Example: </p>
+<pre class="fragment">&gt;&gt;&gt; sersic_obj1 = galsim.Sersic(n=3.5, scale_radius=0.05, flux=40.)
+&gt;&gt;&gt; sersic_obj2 = galsim.Sersic(n=3.5, scale_radius=0.05, flux=40., trunc=10.)
+&gt;&gt;&gt; sersic_obj3 = galsim.Sersic(n=3.5, scale_radius=0.05, flux=40., trunc=10., \\
+                                flux_untruncated=True)
+
+&gt;&gt;&gt; sersic_obj1.xValue(galsim.PositionD(0.,0.))
+1.0105075749813057
+&gt;&gt;&gt; sersic_obj2.xValue(galsim.PositionD(0.,0.))
+5.808620231907939     # Normalization adjusted to accomodate the flux within trunc radius
+&gt;&gt;&gt; sersic_obj3.xValue(galsim.PositionD(0.,0.))
+1.010507574981306
+
+&gt;&gt;&gt; sersic_obj1.getHalfLightRadius()
+38.311372739273985
+&gt;&gt;&gt; sersic_obj2.getHalfLightRadius()
+5.142758708673917     # The half-light radius is smaller than the specified value
+&gt;&gt;&gt; sersic_obj3.getHalfLightRadius()
+5.142758708673917     # Since the trunc and scale radius are the same, the HLR is the same
+
+&gt;&gt;&gt; sersic_obj1.getFlux()
+40.0
+&gt;&gt;&gt; sersic_obj2.getFlux()
+40.0
+&gt;&gt;&gt; sersic_obj3.getFlux()
+6.958675448812308     # Flux is missing due to truncation
+
+&gt;&gt;&gt; sersic_obj1.getScaleRadius()
+0.05
+&gt;&gt;&gt; sersic_obj2.getScaleRadius()
+0.05
+&gt;&gt;&gt; sersic_obj3.getScaleRadius()
+0.05
 </pre><p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
 <h2>Methods</h2>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> is a <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a>, and inherits all of the <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html" title="Base class for defining the interface with which all GalSim Objects access their shared methods and a...">GSObject</a> methods (<a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae0b346a8b438dedbc7f60a52220869d8" title="Draws an Image of the object, with bounds optionally set by an input Image.">draw()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a42ac334d2840ba3fa832988e998beca0" title="Draw an image of the object by shooting individual photons drawn from the surface brightness profile ...">drawShoot()</a>, <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a85cc0094dcf470cfbff93d9830ab80bd" title="Apply a shear to this object, where arguments are either a galsim.Shear, or arguments that will be us...">applyShear()</a> etc.) and operator bindings. </p>
@@ -249,7 +318,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>half_light_radius</em>, </td>
+          <td class="paramname"><em>half_light_radius</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scale_radius</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1560,6 +1635,24 @@ assert image.added_flux &gt; 0.99 * obj.getFlux()
 </div><div class="memdoc">
 
 <p>Return the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> index <code>n</code> for this profile. </p>
+
+</div>
+</div>
+<a class="anchor" id="a41998286de66f5ce76556544e4c59a2b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.base.Sersic.getScaleRadius </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the scale radius for this <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing Sersic profile objects.">Sersic</a> profile. </p>
 
 </div>
 </div>

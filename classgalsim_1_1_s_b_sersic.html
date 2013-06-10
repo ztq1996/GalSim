@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">galsim::SBSersic Class Reference</div>  </div>
@@ -113,16 +114,24 @@ Inheritance diagram for galsim::SBSersic:</div>
 
 <p><a href="classgalsim_1_1_s_b_sersic-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab4d96f6c870d4d25e896ecbb0af1e743"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743">RadiusType</a> { <a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743a208e1a5503f6556a5f1334cf59d53b21">HALF_LIGHT_RADIUS</a>, 
+<a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743a9a3f9140f636132b8ed3acb3f9626ea5">SCALE_RADIUS</a>
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab57c421be210c0ad3904646ac2f50dbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#ab57c421be210c0ad3904646ac2f50dbf">SBSersic</a> (double n, double re, double flux=1., double trunc=0., bool flux_untruncated=false, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
-<tr class="memdesc:ab57c421be210c0ad3904646ac2f50dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab57c421be210c0ad3904646ac2f50dbf"></a><br/></td></tr>
+<tr class="memitem:a899bd65fe4dd7e16feb25ca993ccc9a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a899bd65fe4dd7e16feb25ca993ccc9a8">SBSersic</a> (double n, double size, <a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743">RadiusType</a> rType, double flux=1., double trunc=0., bool flux_untruncated=false, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
+<tr class="memdesc:a899bd65fe4dd7e16feb25ca993ccc9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a899bd65fe4dd7e16feb25ca993ccc9a8"></a><br/></td></tr>
 <tr class="memitem:a8906b21e2c830ad0eb9c859bdadd30b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a8906b21e2c830ad0eb9c859bdadd30b5">SBSersic</a> (const <a class="el" href="classgalsim_1_1_s_b_sersic.html">SBSersic</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a8906b21e2c830ad0eb9c859bdadd30b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a8906b21e2c830ad0eb9c859bdadd30b5"></a><br/></td></tr>
 <tr class="memitem:a1231803713c791d91632f88ae673dae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a1231803713c791d91632f88ae673dae0">~SBSersic</a> ()</td></tr>
 <tr class="memdesc:a1231803713c791d91632f88ae673dae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a1231803713c791d91632f88ae673dae0"></a><br/></td></tr>
 <tr class="memitem:adf4a729b16ae4e3d27ec1ff763a29087"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#adf4a729b16ae4e3d27ec1ff763a29087">getN</a> () const </td></tr>
 <tr class="memdesc:adf4a729b16ae4e3d27ec1ff763a29087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Sersic index <code>n</code> of the profile.  <a href="#adf4a729b16ae4e3d27ec1ff763a29087"></a><br/></td></tr>
+<tr class="memitem:ac8ca8abf7eeddde8013e1a7cb0a9075d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#ac8ca8abf7eeddde8013e1a7cb0a9075d">getScaleRadius</a> () const </td></tr>
+<tr class="memdesc:ac8ca8abf7eeddde8013e1a7cb0a9075d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scale radius r0 of the Sersic profile <code>exp[-(r/r_0)^(1/n)]</code>.  <a href="#ac8ca8abf7eeddde8013e1a7cb0a9075d"></a><br/></td></tr>
 <tr class="memitem:a77f98a620a069a653d28a51f380fbb7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b">getHalfLightRadius</a> () const </td></tr>
 <tr class="memdesc:a77f98a620a069a653d28a51f380fbb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half light radius of the Sersic profile.  <a href="#a77f98a620a069a653d28a51f380fbb7b"></a><br/></td></tr>
 <tr class="memitem:a11558695546a3b4129971d09df8332bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
@@ -196,13 +205,35 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Sersic Surface Brightness Profile. </p>
-<p>The Sersic Surface Brightness Profile is characterized by three properties: its Sersic index <code>n</code>, its <code>flux</code> and the half-light radius <code>re</code>. Given these properties, the surface brightness profile scales as I(r) propto exp[-(r/r_0)^{1/n}]. Currently the code is limited to 0.5&lt;=n&lt;=4.2, with an exception thrown for values outside that range.</p>
-<p>The <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> representation of a Sersic profile also includes an optional truncation beyond a given radius, by the parameter <code>trunc</code>. The resolution of the truncation radius in units of half light radius <code>re</code> is limited to 2 decimal places, in order not to overload the Sersic information caching.</p>
-<p>Another optional parameter, <code>flux_untruncated</code>, allows the setting of the flux to the untruncated Sersic, while generating a truncated Sersic. This facilitates the comparison of truncated and untruncated Sersic, as both the amplitude and the scale parameter <code>b=r_0^{-1/n}</code> change when a truncated Sersic is specified to the same flux as the untruncated version with the same Sersic index <code>n</code>. The <code>flux_untruncated</code> variable is ignored if <code>trunc = 0</code>.</p>
-<p>Note that when <code>trunc &gt; 0.</code> and <code>flux_untruncated == true</code>, the actual half-light radius will be different from the specified half-light radius. The <a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b" title="Returns the half light radius of the Sersic profile.">getHalfLightRadius()</a> method will return the true half-light radius. Similarly, the actual flux will not be the the same as the specified value; the true flux is returned by the <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a> method.</p>
+<p>The Sersic Surface Brightness Profile is characterized by three properties: its Sersic index <code>n</code>, its <code>flux</code>, and the half-light radius <code>re</code> (or scale radius <code>r0</code>). Given these properties, the surface brightness profile scales as <code>I(r) propto exp[-(r/r0)^{1/n}]</code>, or <code>I(r) propto exp[-b*(r/re)^{1/n}]</code>. The code is limited to 0.3 &lt;= n &lt;= 4.2, with an exception thrown for values outside that range.</p>
+<p>The <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> representation of a Sersic profile also includes an optional truncation beyond a given radius, by the parameter <code>trunc</code>. The resolution of the truncation radius (in units of half light radius <code>re</code>) is limited to 2 decimal places, in order not to overload the Sersic information caching.</p>
+<p>When the Sersic profile is specfied by the scale radius with truncation, the normalization is adjusted such that the truncated profile has the specified flux (its half-light radius will differ from an equivalent Sersic without truncation). Similarly, when the Sersic profile is specified by the half-light radius with truncation, <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a> generates a profile whose flux and half-light radius is as specified, by adjusting its normalization and scale radius.</p>
+<p>Another optional parameter, <code>flux_untruncated = true</code>, allows the setting of the flux to the untruncated Sersic, while generating a truncated Sersic (i.e., the normalizaton is the same with respect to the untruncated case). This facilitates the comparison of truncated and untruncated Sersic, as the amplitude (as well as the scale parameter <code>b=(re/r0)^{1/n}</code>, if half-light radius is specified) changes when a truncated Sersic is specified in the default setting [<code>flux_untruncated = false</code>]. The <code>flux_untruncated</code> variable is ignored if <code>trunc = 0</code>.</p>
+<p>Note that when <code>trunc &gt; 0.</code> and <code>flux_untruncated == true</code>, the actual flux will not be the same as the specified value; its true flux is returned by the <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a> method. Similarly for the half-light radius, when the Sersic profile is specified by the half-light radius; the <a class="el" href="classgalsim_1_1_s_b_sersic.html#a77f98a620a069a653d28a51f380fbb7b" title="Returns the half light radius of the Sersic profile.">getHalfLightRadius()</a> method will return the true half-light radius. The scale radius will remain at the same value, if this quantity was used to specify the profile.</p>
 <p>There are several special cases of the Sersic profile that have their own SBProfiles: n=4 (<a class="el" href="classgalsim_1_1_s_b_de_vaucouleurs.html" title="Surface Brightness for the de Vaucouleurs Profile, a special case of the Sersic with n = 4...">SBDeVaucouleurs</a>), n=1 (<a class="el" href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile.">SBExponential</a>), n=0.5 (<a class="el" href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile.">SBGaussian</a>). These special cases use several simplifications in all calculations, whereas for general n, the Fourier transform must be treated numerically. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab57c421be210c0ad3904646ac2f50dbf"></a>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ab4d96f6c870d4d25e896ecbb0af1e743"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743">galsim::SBSersic::RadiusType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ab4d96f6c870d4d25e896ecbb0af1e743a208e1a5503f6556a5f1334cf59d53b21"></a>HALF_LIGHT_RADIUS</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab4d96f6c870d4d25e896ecbb0af1e743a9a3f9140f636132b8ed3acb3f9626ea5"></a>SCALE_RADIUS</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a899bd65fe4dd7e16feb25ca993ccc9a8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -216,7 +247,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>re</em>, </td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743">RadiusType</a>&#160;</td>
+          <td class="paramname"><em>rType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -254,7 +291,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Sersic index. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">re</td><td>Half-light radius. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size specification. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rType</td><td>Kind of size being specified (HALF_LIGHT_RADIUS or SCALE_RADIUS). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">trunc</td><td>Outer truncation radius in same physical units as size; <code>trunc = 0.</code> for no truncation (default <code>trunc = 0.</code>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flux_untruncated</td><td>If <code>true</code>, sets the flux to the untruncated version of the Sersic profile with the same index <code>n</code> (default flux_untruncated = false<code>). Ignored if</code>trunc = 0.`. </td></tr>
@@ -920,6 +958,23 @@ template&lt;typename T &gt; </div>
 <p>Returns expectation value of flux returned in positive-valued photons when <a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94">shoot()</a> is called for this object. Default implementation is to return <a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a>, if it is positive, or 0 otherwise, which will be the case when the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> is constructed entirely from elements of the same sign.</p>
 <p>It should be generally true that <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a9e31ecd8ecf842abba08120cd8cb7e82" title="Return expectation value of flux in positive photons when shoot() is called.">getPositiveFlux()</a> - <a class="el" href="classgalsim_1_1_s_b_profile.html#a873e64397c04624cc8454f037f709dce" title="Return expectation value of absolute value of flux in negative photons from shoot()">getNegativeFlux()</a></code> returns the same thing as <code><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f" title="Get the total flux of the SBProfile.">getFlux()</a></code>. Small difference may accrue from finite numerical accuracy in cases involving lookup tables, etc.</p>
 <dl class="section return"><dt>Returns:</dt><dd>Expected positive-photon flux. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8ca8abf7eeddde8013e1a7cb0a9075d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::SBSersic::getScaleRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the scale radius r0 of the Sersic profile <code>exp[-(r/r_0)^(1/n)]</code>. </p>
 
 </div>
 </div>

@@ -3,7 +3,7 @@ var searchData=
   ['readme',['README',['../md__r_e_a_d_m_e.html',1,'']]],
   ['rad',['rad',['../classgalsim_1_1_angle.html#a86f2fbdcef0f440548769a1e8a164ca9',1,'galsim::Angle']]],
   ['radians',['radians',['../namespacegalsim.html#aed8d3e3dc27c52616a6006600ec00fea',1,'galsim']]],
-  ['radiustype',['RadiusType',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792',1,'galsim::SBMoffat']]],
+  ['radiustype',['RadiusType',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792',1,'galsim::SBMoffat::RadiusType()'],['../classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743',1,'galsim::SBSersic::RadiusType()']]],
   ['radtoarcsec',['RadToArcsec',['../_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1',1,'AstronomicalConstants.h']]],
   ['rand_5farr',['rand_arr',['../namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27',1,'galsim::utilities']]],
   ['random_2eh',['Random.h',['../_random_8h.html',1,'']]],

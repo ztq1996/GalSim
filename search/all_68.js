@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['half_5flight_5fradius',['HALF_LIGHT_RADIUS',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f',1,'galsim::SBMoffat']]],
+  ['half_5flight_5fradius',['HALF_LIGHT_RADIUS',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f',1,'galsim::SBMoffat::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743a208e1a5503f6556a5f1334cf59d53b21',1,'galsim::SBSersic::HALF_LIGHT_RADIUS()']]],
   ['halo_5fpos',['halo_pos',['../classgalsim_1_1nfw__halo_1_1_n_f_w_halo.html#af0301671e90f268d74819d4326604a1a',1,'galsim::nfw_halo::NFWHalo']]],
   ['hashardedges',['hasHardEdges',['../classgalsim_1_1_s_b_profile.html#a3d9f16bb409318f98b5fafb2a577c1a9',1,'galsim::SBProfile::hasHardEdges()'],['../classgalsim_1_1base_1_1_g_s_object.html#a4f480514538e924d29af411563384a6d',1,'galsim.base.GSObject.hasHardEdges()']]],
   ['header',['header',['../classgalsim_1_1fits_1_1_fits_header.html#ab308bef72992f2ae57d469a1230d4bb0',1,'galsim::fits::FitsHeader']]],
