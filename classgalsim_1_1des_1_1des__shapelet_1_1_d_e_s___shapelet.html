@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Class that handles DES files describing interpolated shapelet decompositions.  
+<p>Class that handles DES files describing interpolated polar shapelet decompositions.  
  <a href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#details">More...</a></p>
 
 <p><a href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet-members.html">List of all members.</a></p>
@@ -106,9 +106,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ebb8099231c880ca8433b13146af87a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a5ebb8099231c880ca8433b13146af87a">__init__</a></td></tr>
 <tr class="memitem:a6ef6ad7be6e7722300db47aec593fc55"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a6ef6ad7be6e7722300db47aec593fc55">read_ascii</a></td></tr>
-<tr class="memdesc:a6ef6ad7be6e7722300db47aec593fc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated shapelet decompositions.">DES_Shapelet</a> stored using the the ASCII-file version.  <a href="#a6ef6ad7be6e7722300db47aec593fc55"></a><br/></td></tr>
+<tr class="memdesc:a6ef6ad7be6e7722300db47aec593fc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated polar shapelet decompositions.">DES_Shapelet</a> stored using the the ASCII-file version.  <a href="#a6ef6ad7be6e7722300db47aec593fc55"></a><br/></td></tr>
 <tr class="memitem:a9a6df8405dac2ba5e0730dc319f8017a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a9a6df8405dac2ba5e0730dc319f8017a">read_fits</a></td></tr>
-<tr class="memdesc:a9a6df8405dac2ba5e0730dc319f8017a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated shapelet decompositions.">DES_Shapelet</a> stored using the the FITS-file version.  <a href="#a9a6df8405dac2ba5e0730dc319f8017a"></a><br/></td></tr>
+<tr class="memdesc:a9a6df8405dac2ba5e0730dc319f8017a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated polar shapelet decompositions.">DES_Shapelet</a> stored using the the FITS-file version.  <a href="#a9a6df8405dac2ba5e0730dc319f8017a"></a><br/></td></tr>
 <tr class="memitem:aa2f3dc9e02451f6ef6836a2cd8c357d9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#aa2f3dc9e02451f6ef6836a2cd8c357d9">getPSF</a></td></tr>
 <tr class="memdesc:aa2f3dc9e02451f6ef6836a2cd8c357d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PSF at position pos.  <a href="#aa2f3dc9e02451f6ef6836a2cd8c357d9"></a><br/></td></tr>
 </table><table class="memberdecls">
@@ -127,7 +127,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a29b284cd7e63dc0a08ed2978437814a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a29b284cd7e63dc0a08ed2978437814a4">interp_matrix</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Class that handles DES files describing interpolated shapelet decompositions. </p>
+<div class="textblock"><p>Class that handles DES files describing interpolated polar shapelet decompositions. </p>
 <p>These are usually stored as *_fitpsf.fits files, although there is also an ASCII version stored as *_fitpsf.dat.</p>
 <p>Typical usage: </p>
 <pre class="fragment">des_shapelet = galsim.des.DES_Shapelet(fitpsf_file_name)
@@ -137,7 +137,7 @@ Public Attributes</h2></td></tr>
 pos = galsim.Position(image_x, image_y)  # position in pixels on the image
                                          # NOT in arcsec on the sky!
 psf = des_shapelet.getPSF(pos)
-</pre><p>Note that the <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated shapelet decompositions.">DES_Shapelet</a> profile is measured with respect to sky coordinates, not pixel coordinates. So if you want the drawn image to look like the original, it should be drawn with the same WCS as found in the original image. However, GalSim doesn't yet have the ability to handle such WCS functions. This is Issue #364. Until then, an approximate workaround is to use pixel_scale=0.262, and apply a rotation of -90 degrees before drawing.</p>
+</pre><p>Note that the <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated polar shapelet decompositions.">DES_Shapelet</a> profile is measured with respect to sky coordinates, not pixel coordinates. So if you want the drawn image to look like the original, it should be drawn with the same WCS as found in the original image. However, GalSim doesn't yet have the ability to handle such WCS functions. This is Issue #364. Until then, an approximate workaround is to use pixel_scale=0.262, and apply a rotation of -90 degrees before drawing.</p>
 <p>This class will only interpolate within the defining bounds. It won't extrapolate beyond the bounding box of where the stars defined the interpolation. If you try to use it with an invalid position, it will throw an IndexError. You can check whether a position is valid with </p>
 <pre class="fragment">if des_shapelet.bounds.includes(pos):
     psf = des_shapelet.getPSF(pos)
@@ -229,7 +229,7 @@ else:
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns:</dt><dd>a Shapelet instance. </dd></dl>
+<dl class="section return"><dt>Returns:</dt><dd>a galsim.Shapelet instance. </dd></dl>
 
 </div>
 </div>
@@ -247,7 +247,7 @@ else:
       </table>
 </div><div class="memdoc">
 
-<p>Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated shapelet decompositions.">DES_Shapelet</a> stored using the the ASCII-file version. </p>
+<p>Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated polar shapelet decompositions.">DES_Shapelet</a> stored using the the ASCII-file version. </p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ else:
       </table>
 </div><div class="memdoc">
 
-<p>Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated shapelet decompositions.">DES_Shapelet</a> stored using the the FITS-file version. </p>
+<p>Read in a <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html" title="Class that handles DES files describing interpolated polar shapelet decompositions.">DES_Shapelet</a> stored using the the FITS-file version. </p>
 
 </div>
 </div>
