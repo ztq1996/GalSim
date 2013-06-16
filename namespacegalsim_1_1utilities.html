@@ -110,6 +110,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae3d1586e7c70ecfd9582b71f6f5147ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the tuple kx, ky corresponding to the DFT of a unit integer-sampled array of input shape.  <a href="#ae3d1586e7c70ecfd9582b71f6f5147ab"></a><br/></td></tr>
 <tr class="memitem:a9e5623a48fc511636b486d42816ba940"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a9e5623a48fc511636b486d42816ba940">g1g2_to_e1e2</a></td></tr>
 <tr class="memdesc:a9e5623a48fc511636b486d42816ba940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for going from (g1, g2) -&gt; (e1, e2).  <a href="#a9e5623a48fc511636b486d42816ba940"></a><br/></td></tr>
+<tr class="memitem:af0e66b2539898963681cd1bf1fba0214"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#af0e66b2539898963681cd1bf1fba0214">rotate_xy</a></td></tr>
+<tr class="memdesc:af0e66b2539898963681cd1bf1fba0214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates points in the xy-Cartesian plane counter-clockwise through an angle theta about the origin of the Cartesian coordinate system.  <a href="#af0e66b2539898963681cd1bf1fba0214"></a><br/></td></tr>
 <tr class="memitem:abbd8593ea30d16263c2f03e1147b5b27"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27">rand_arr</a></td></tr>
 <tr class="memdesc:abbd8593ea30d16263c2f03e1147b5b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a 2d array of random deviates (of any sort).  <a href="#abbd8593ea30d16263c2f03e1147b5b27"></a><br/></td></tr>
 <tr class="memitem:acea0edb61ecb4fee9e1ed17af11a1559"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#acea0edb61ecb4fee9e1ed17af11a1559">convert_interpolant_to_2d</a></td></tr>
@@ -572,6 +574,49 @@ verified with a convergence test.
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>the rolled image. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af0e66b2539898963681cd1bf1fba0214"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.rotate_xy </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>theta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates points in the xy-Cartesian plane counter-clockwise through an angle theta about the origin of the Cartesian coordinate system. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>NumPy array of input x coordinates </td></tr>
+    <tr><td class="paramname">y</td><td>NumPy array of input y coordinates </td></tr>
+    <tr><td class="paramname">theta</td><td>Rotation angle (+ve counter clockwise) as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>x_rot, yrot Coordinates rotated by <code>theta</code> around the origin </dd></dl>
 
 </div>
 </div>

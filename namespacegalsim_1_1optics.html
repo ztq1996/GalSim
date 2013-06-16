@@ -158,7 +158,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,7 +193,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">dx</td><td>grid spacing of PSF in real space units. </td></tr>
     <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for dx (user responsible for consistency). </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.)</td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -263,7 +284,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -291,7 +330,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -378,7 +420,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -406,7 +466,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -493,7 +556,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -521,7 +602,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -608,7 +692,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -636,7 +738,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -729,6 +834,24 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
@@ -757,8 +880,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
-    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.] </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -851,6 +977,24 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
@@ -879,8 +1023,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
-    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.] </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -967,7 +1114,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -996,6 +1161,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
     <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1082,7 +1250,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1111,6 +1297,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
     <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1197,7 +1386,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1226,7 +1433,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.)</td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -1314,7 +1524,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obscuration</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nstruts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_thick</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1344,7 +1572,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>trefoil (one of the arrows along x) in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">spher</td><td>spherical aberration in units of incident light wavelength. </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
+    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle.">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees">galsim.degrees</a></code>]. </td></tr>
   </table>
   </dd>
 </dl>
