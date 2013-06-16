@@ -129,35 +129,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792a6753922303d7374452ab55b483d62f40">   47</a></span>&#160;            <a class="code" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792a6753922303d7374452ab55b483d62f40">SCALE_RADIUS</a></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        };</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#a488fac7ed3bb7a188ee90c76551d7498" title="Constructor.">SBMoffat</a>(<span class="keywordtype">double</span> beta, <span class="keywordtype">double</span> size, <a class="code" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType, <span class="keywordtype">double</span> trunc=0., <span class="keywordtype">double</span> flux=1.,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                 boost::shared_ptr&lt;GSParams&gt; gsparams = boost::shared_ptr&lt;GSParams&gt;());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#a488fac7ed3bb7a188ee90c76551d7498" title="Constructor.">SBMoffat</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a>&amp; rhs);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#a864f02c88892b9a176b287180d6a163e" title="Destructor.">~SBMoffat</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#a3483ac355299977b3ac6ea669394e1ee" title="Returns beta of the Moffat profile [1 + (r / rD)^2]^beta.">getBeta</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#a31ef007351781ad0c46336101f2ba8e1" title="Returns the FWHM of the Moffat profile.">getFWHM</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#ad59e8ab1b10da4d71d6d034a53f06e3b" title="Returns the scale radius rD of the Moffat profile [1 + (r / rD)^2]^beta.">getScaleRadius</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#ac68d1e6c918a5c0f282c226cd7217ece" title="Returns the half light radius of the Moffat profile.">getHalfLightRadius</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#ad461c6bf1844ba85eb6f8b99fc02cca6" title="Constructor.">SBMoffat</a>(<span class="keywordtype">double</span> beta, <span class="keywordtype">double</span> size, <a class="code" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType, <span class="keywordtype">double</span> trunc, <span class="keywordtype">double</span> flux,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                 <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#ad461c6bf1844ba85eb6f8b99fc02cca6" title="Constructor.">SBMoffat</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a>&amp; rhs);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_moffat.html#a864f02c88892b9a176b287180d6a163e" title="Destructor.">~SBMoffat</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#a3483ac355299977b3ac6ea669394e1ee" title="Returns beta of the Moffat profile [1 + (r / rD)^2]^beta.">getBeta</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#a31ef007351781ad0c46336101f2ba8e1" title="Returns the FWHM of the Moffat profile.">getFWHM</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#ad59e8ab1b10da4d71d6d034a53f06e3b" title="Returns the scale radius rD of the Moffat profile [1 + (r / rD)^2]^beta.">getScaleRadius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html#ac68d1e6c918a5c0f282c226cd7217ece" title="Returns the half light radius of the Moffat profile.">getHalfLightRadius</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">class </span>SBMoffatImpl;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a>&amp; rhs);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">class </span>SBMoffatImpl;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)...">SBMoffat</a>&amp; rhs);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // SBMOFFAT_H</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // SBMOFFAT_H</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

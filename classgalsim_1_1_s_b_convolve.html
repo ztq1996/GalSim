@@ -114,8 +114,8 @@ Inheritance diagram for galsim::SBConvolve:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af61a6d9e925995bbec4e63044c8e1617"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve.html#af61a6d9e925995bbec4e63044c8e1617">SBConvolve</a> (const std::list&lt; <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &gt; &amp;slist, bool real_space=false, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
-<tr class="memdesc:af61a6d9e925995bbec4e63044c8e1617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, list of inputs.  <a href="#af61a6d9e925995bbec4e63044c8e1617"></a><br/></td></tr>
+<tr class="memitem:aa5a469e7c150df045e4b369af00e96e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve.html#aa5a469e7c150df045e4b369af00e96e0">SBConvolve</a> (const std::list&lt; <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &gt; &amp;slist, bool real_space, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:aa5a469e7c150df045e4b369af00e96e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, list of inputs.  <a href="#aa5a469e7c150df045e4b369af00e96e0"></a><br/></td></tr>
 <tr class="memitem:a5dcf106d9ba08165021aec4a03d08b47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve.html#a5dcf106d9ba08165021aec4a03d08b47">SBConvolve</a> (const <a class="el" href="classgalsim_1_1_s_b_convolve.html">SBConvolve</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a5dcf106d9ba08165021aec4a03d08b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a5dcf106d9ba08165021aec4a03d08b47"></a><br/></td></tr>
 <tr class="memitem:a1b862883c72720a1521466284d5fc372"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_convolve.html#a1b862883c72720a1521466284d5fc372">~SBConvolve</a> ()</td></tr>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 <p>There is also an option to do the convolution as integrals in real space. Each constructor has an optional boolean parameter, real_space, that comes immediately after the list of profiles to convolve. Currently, the real-space integration is only enabled for 2 profiles. If you try to use it for more than 2 profiles, an exception will be thrown.</p>
 <p>The real-space convolution is normally slower than the DFT convolution. The exception is if both component profiles have hard edges (e.g. a truncated Moffat with a Box). In that case, the maxK for each component is quite large since the ringing dies off fairly slowly. So it can be quicker to use real-space convolution instead. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af61a6d9e925995bbec4e63044c8e1617"></a>
+<a class="anchor" id="aa5a469e7c150df045e4b369af00e96e0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -213,13 +213,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>real_space</em> = <code>false</code>, </td>
+          <td class="paramname"><em>real_space</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;&#160;</td>
-          <td class="paramname"><em>gsparams</em> = <code>boost::shared_ptr&lt;&#160;<a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>&#160;&gt;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -233,8 +233,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">slist</td><td>Input: list of SBProfiles. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">real_space</td><td>Do convolution in real space? (default <code>real_space = false</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> to use, if different from the default. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">real_space</td><td>Do convolution in real space? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of image operations and rendering, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

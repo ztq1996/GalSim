@@ -114,8 +114,8 @@ Inheritance diagram for galsim::SBShapelet:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa56a1772757d5eb4b0eb8be5cc7fa89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_shapelet.html#afa56a1772757d5eb4b0eb8be5cc7fa89">SBShapelet</a> (double sigma, LVector bvec, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
-<tr class="memdesc:afa56a1772757d5eb4b0eb8be5cc7fa89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#afa56a1772757d5eb4b0eb8be5cc7fa89"></a><br/></td></tr>
+<tr class="memitem:a446856219c045e3ef3da4f1d3037387d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_shapelet.html#a446856219c045e3ef3da4f1d3037387d">SBShapelet</a> (double sigma, LVector bvec, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:a446856219c045e3ef3da4f1d3037387d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a446856219c045e3ef3da4f1d3037387d"></a><br/></td></tr>
 <tr class="memitem:a18822cf70cc383f799204d93fd038709"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_shapelet.html#a18822cf70cc383f799204d93fd038709">SBShapelet</a> (const <a class="el" href="classgalsim_1_1_s_b_shapelet.html">SBShapelet</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a18822cf70cc383f799204d93fd038709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor.  <a href="#a18822cf70cc383f799204d93fd038709"></a><br/></td></tr>
 <tr class="memitem:adb1b095c1257c592e526026d679065b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_shapelet.html#adb1b095c1257c592e526026d679065b1">~SBShapelet</a> ()</td></tr>
@@ -194,7 +194,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for describing polar shapelet surface brightness profiles. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afa56a1772757d5eb4b0eb8be5cc7fa89"></a>
+<a class="anchor" id="a446856219c045e3ef3da4f1d3037387d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -213,8 +213,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;&#160;</td>
-          <td class="paramname"><em>gsparams</em> = <code>boost::shared_ptr&lt;&#160;<a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>&#160;&gt;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -229,6 +229,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sigma</td><td>scale size of Gauss-Laguerre basis set. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bvec</td><td><code>bvec[n,m]</code> contains flux information for the <code>(n, m)</code> basis function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of image operations and rendering, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

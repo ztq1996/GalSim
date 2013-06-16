@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Delta:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3af2062aadfeca6dddfd14af80cf7c5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_delta.html#a3af2062aadfeca6dddfd14af80cf7c5b">Delta</a> (double width=1.e-3)</td></tr>
-<tr class="memdesc:a3af2062aadfeca6dddfd14af80cf7c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a3af2062aadfeca6dddfd14af80cf7c5b"></a><br/></td></tr>
+<tr class="memitem:a3a0a45683b29c111d4bcff9465f4b962"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_delta.html#a3a0a45683b29c111d4bcff9465f4b962">Delta</a> (double width=1.e-3, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:a3a0a45683b29c111d4bcff9465f4b962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a3a0a45683b29c111d4bcff9465f4b962"></a><br/></td></tr>
 <tr class="memitem:a6af53f327b597b5f52b3f722ad67692a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_delta.html#a6af53f327b597b5f52b3f722ad67692a">~Delta</a> ()</td></tr>
 <tr class="memitem:a18475aac8ce0b36675407b289af39b74"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_delta.html#a18475aac8ce0b36675407b289af39b74">xrange</a> () const </td></tr>
 <tr class="memdesc:a18475aac8ce0b36675407b289af39b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#a18475aac8ce0b36675407b289af39b74"></a><br/></td></tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Delta-function interpolant in 1d. </p>
 <p>The interpolant for when you do not want to interpolate between samples. It is not really intended to be used for any analytic drawing because it is infinite in the x domain at the location of samples, and it extends to infinity in the u domain. But it could be useful for photon-shooting, where it is trivially implemented as no displacements. The argument in the constructor is used to make a crude box approximation to the x-space delta function and to give a large but finite urange. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3af2062aadfeca6dddfd14af80cf7c5b"></a>
+<a class="anchor" id="a3a0a45683b29c111d4bcff9465f4b962"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -150,8 +150,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::Delta::Delta </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>width</em> = <code>1.e-3</code></td><td>)</td>
+          <td class="paramname"><em>width</em> = <code>1.e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -159,7 +169,8 @@ Public Member Functions</h2></td></tr>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Width of tiny boxcar used to approximate delta function in real space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Width of tiny boxcar used to approximate delta function in real space (default=1.e-3). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

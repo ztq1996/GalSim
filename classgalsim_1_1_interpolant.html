@@ -111,7 +111,7 @@ Inheritance diagram for galsim::Interpolant:</div>
 <area href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n." alt="galsim::Lanczos" shape="rect" coords="294,56,431,80"/>
 <area href="classgalsim_1_1_linear.html" title="Linear interpolant." alt="galsim::Linear" shape="rect" coords="441,56,578,80"/>
 <area href="classgalsim_1_1_nearest.html" title="Nearest-neighbor interpolation: boxcar." alt="galsim::Nearest" shape="rect" coords="588,56,725,80"/>
-<area href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for k-space interpolation." alt="galsim::Quintic" shape="rect" coords="735,56,872,80"/>
+<area href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation." alt="galsim::Quintic" shape="rect" coords="735,56,872,80"/>
 <area href="classgalsim_1_1_sinc_interpolant.html" title="Sinc interpolation: inverse of Nearest-neighbor." alt="galsim::SincInterpolant" shape="rect" coords="882,56,1019,80"/>
 </map>
  </div></div>
@@ -120,8 +120,8 @@ Inheritance diagram for galsim::Interpolant:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad188f405e29cd5bae7fa5cbbb6d4ea03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#ad188f405e29cd5bae7fa5cbbb6d4ea03">Interpolant</a> ()</td></tr>
-<tr class="memdesc:ad188f405e29cd5bae7fa5cbbb6d4ea03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad188f405e29cd5bae7fa5cbbb6d4ea03"></a><br/></td></tr>
+<tr class="memitem:ab88df95b13057993800ed453061bf167"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#ab88df95b13057993800ed453061bf167">Interpolant</a> (const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:ab88df95b13057993800ed453061bf167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab88df95b13057993800ed453061bf167"></a><br/></td></tr>
 <tr class="memitem:aadcdc7a3b920290867f370d82976fd35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aadcdc7a3b920290867f370d82976fd35">Interpolant</a> (const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;rhs)</td></tr>
 <tr class="memdesc:aadcdc7a3b920290867f370d82976fd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor: does not copy photon sampler, will need to rebuild.  <a href="#aadcdc7a3b920290867f370d82976fd35"></a><br/></td></tr>
 <tr class="memitem:a60d75d58eed81b3064872c64adf8cdcb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a60d75d58eed81b3064872c64adf8cdcb">~Interpolant</a> ()</td></tr>
@@ -150,23 +150,30 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Base class representing one-dimensional interpolant functions. </p>
-<p>One-dimensional interpolant function. X units are in pixels and the frequency-domain u values are in cycles per pixel.</p>
+<p>One-dimensional interpolant function. X units are in pixels and the frequency-domain u values are in cycles per pixel. This differs from the usual definition of k in radians per arcsec, hence the different letter variable.</p>
 <p>All Interpolants are assumed symmetric so that frequency-domain values are real. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad188f405e29cd5bae7fa5cbbb6d4ea03"></a>
+<a class="anchor" id="ab88df95b13057993800ed453061bf167"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::Interpolant::Interpolant </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

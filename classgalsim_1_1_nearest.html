@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Nearest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad732e5dd33c3f1f1ed7cad4be67819d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#ad732e5dd33c3f1f1ed7cad4be67819d2">Nearest</a> (double tol=1.e-3)</td></tr>
-<tr class="memdesc:ad732e5dd33c3f1f1ed7cad4be67819d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad732e5dd33c3f1f1ed7cad4be67819d2"></a><br/></td></tr>
+<tr class="memitem:a205a33fab86c584fa556851617858b98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a205a33fab86c584fa556851617858b98">Nearest</a> (double tol=1.e-3, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:a205a33fab86c584fa556851617858b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a205a33fab86c584fa556851617858b98"></a><br/></td></tr>
 <tr class="memitem:a2442c76040c21cae2eaff1301f77618e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a2442c76040c21cae2eaff1301f77618e">~Nearest</a> ()</td></tr>
 <tr class="memitem:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">getTolerance</a> () const </td></tr>
 <tr class="memdesc:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#acd3ac70d5a0690d3d4a64a1a05f85be6"></a><br/></td></tr>
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <p>The nearest-neighbor interpolant performs poorly as a k-space or x-space interpolant for <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. (See document by Bernstein &amp; Gruen, devel/modules/finterp.pdf in the GalSim repository.) The objection to its use in Fourier space does not apply when shooting photons to generate an image; in that case, the nearest-neighbor interpolant is quite efficient (but not necessarily the best choice in terms of accuracy).</p>
 <p>Tolerance determines how far onto sinc wiggles the uval will go. Very far, by default! </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad732e5dd33c3f1f1ed7cad4be67819d2"></a>
+<a class="anchor" id="a205a33fab86c584fa556851617858b98"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -151,8 +151,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::Nearest::Nearest </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-3</code></td><td>)</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -161,6 +171,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Tolerance determines how far onto sinc wiggles the uval will go. Very far, by default! </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

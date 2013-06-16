@@ -123,25 +123,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#aa597a9f0eef91fe0550c36e1ea53d9e5" title="Constructor, list of inputs.">SBAdd</a>(<span class="keyword">const</span> std::list&lt;SBProfile&gt;&amp; slist,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;              boost::shared_ptr&lt;GSParams&gt; gsparams = boost::shared_ptr&lt;GSParams&gt;());</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#aa597a9f0eef91fe0550c36e1ea53d9e5" title="Constructor, list of inputs.">SBAdd</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles.">SBAdd</a>&amp; rhs);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#a2fc4427f3fc7b7c5151177ffcefd7487" title="Destructor.">~SBAdd</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">class </span>SBAddImpl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles.">SBAdd</a>&amp; rhs);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif // SBPROFILE_H</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#a8bacf460671bf8c95fe1397be8d9a0e7" title="Constructor, list of inputs.">SBAdd</a>(<span class="keyword">const</span> std::list&lt;SBProfile&gt;&amp; slist, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#a8bacf460671bf8c95fe1397be8d9a0e7" title="Constructor, list of inputs.">SBAdd</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles.">SBAdd</a>&amp; rhs);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_add.html#a2fc4427f3fc7b7c5151177ffcefd7487" title="Destructor.">~SBAdd</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">class </span>SBAddImpl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles.">SBAdd</a>&amp; rhs);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // SBPROFILE_H</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>

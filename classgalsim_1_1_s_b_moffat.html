@@ -122,8 +122,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a488fac7ed3bb7a188ee90c76551d7498"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a488fac7ed3bb7a188ee90c76551d7498">SBMoffat</a> (double beta, double size, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType, double trunc=0., double flux=1., boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
-<tr class="memdesc:a488fac7ed3bb7a188ee90c76551d7498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a488fac7ed3bb7a188ee90c76551d7498"></a><br/></td></tr>
+<tr class="memitem:ad461c6bf1844ba85eb6f8b99fc02cca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ad461c6bf1844ba85eb6f8b99fc02cca6">SBMoffat</a> (double beta, double size, <a class="el" href="classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792">RadiusType</a> rType, double trunc, double flux, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:ad461c6bf1844ba85eb6f8b99fc02cca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad461c6bf1844ba85eb6f8b99fc02cca6"></a><br/></td></tr>
 <tr class="memitem:ae366186bbd72f74d51bfd1f1a8e7a75a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#ae366186bbd72f74d51bfd1f1a8e7a75a">SBMoffat</a> (const <a class="el" href="classgalsim_1_1_s_b_moffat.html">SBMoffat</a> &amp;rhs)</td></tr>
 <tr class="memdesc:ae366186bbd72f74d51bfd1f1a8e7a75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ae366186bbd72f74d51bfd1f1a8e7a75a"></a><br/></td></tr>
 <tr class="memitem:a864f02c88892b9a176b287180d6a163e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_moffat.html#a864f02c88892b9a176b287180d6a163e">~SBMoffat</a> ()</td></tr>
@@ -232,7 +232,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a488fac7ed3bb7a188ee90c76551d7498"></a>
+<a class="anchor" id="ad461c6bf1844ba85eb6f8b99fc02cca6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -258,19 +258,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>trunc</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>trunc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>flux</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;&#160;</td>
-          <td class="paramname"><em>gsparams</em> = <code>boost::shared_ptr&lt;&#160;<a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>&#160;&gt;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -286,8 +286,9 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>Moffat beta parameter for profile <code>[1 + (r / rD)^2]^beta</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size specification. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">rType</td><td>Kind of size being specified (one of FWHM, HALF_LIGHT_RADIUS, SCALE_RADIUS). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">trunc</td><td>Outer truncation radius in same physical units as size, trunc = 0. for no truncation (default <code>trunc = 0.</code>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trunc</td><td>Outer truncation radius in same physical units as size, trunc = 0. for no truncation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of image operations and rendering, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

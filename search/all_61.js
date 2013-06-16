@@ -2,7 +2,6 @@ var searchData=
 [
   ['a',['a',['../classgalsim_1_1nfw__halo_1_1_cosmology.html#a4980288aea7ed5d91d5a3b21036b9e87',1,'galsim::nfw_halo::Cosmology']]],
   ['abserr',['abserr',['../_int_8h.html#aa11c2f12c3630ba41a493ce0bf1cc349',1,'Int.h']]],
-  ['absolute_5ferror',['ABSOLUTE_ERROR',['../namespacegalsim_1_1odd.html#a3d8f7eb5d4ac671624b0e545dc6dab07',1,'galsim::odd']]],
   ['abzeropoint',['ABZeropoint',['../_astronomical_constants_8h.html#a04cdda147e4061c975a013366ff0555b',1,'AstronomicalConstants.h']]],
   ['accumulate',['accumulate',['../classgalsim_1_1_k_table.html#a5803288e635d7ab9dd07eaca9ad45935',1,'galsim::KTable::accumulate()'],['../classgalsim_1_1_x_table.html#a99f71a8b904fbeab225cc1d4aea946fd',1,'galsim::XTable::accumulate()']]],
   ['adapt_5forder',['adapt_order',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a4e60d118ed60bda1ee907d076fabfe8f',1,'galsim::hsm::HSMParams']]],
@@ -18,7 +17,7 @@ var searchData=
   ['addto',['addTo',['../classgalsim_1_1_photon_array.html#aef2ff1aaa1da223d1c48222ecd819caf',1,'galsim::PhotonArray']]],
   ['airy',['Airy',['../classgalsim_1_1base_1_1_airy.html',1,'galsim::base']]],
   ['alias_5fthreshold',['alias_threshold',['../structgalsim_1_1_g_s_params.html#ac65aa7675d9f0402cd610ff1e77f41ee',1,'galsim::GSParams']]],
-  ['allowed_5fflux_5fvariation',['ALLOWED_FLUX_VARIATION',['../namespacegalsim_1_1odd.html#a18395b5e45fb268c96c6d0f573d4c534',1,'galsim::odd']]],
+  ['allowed_5fflux_5fvariation',['allowed_flux_variation',['../structgalsim_1_1_g_s_params.html#a0d97a2d423b926c19afe54813cb88048',1,'galsim::GSParams']]],
   ['alt_5fint32',['alt_int32',['../namespacegalsim_1_1image.html#ac508989418521341d682d5f3f417701a',1,'galsim::image']]],
   ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a532ed2fdbd9f7a351233b30eff53d32e',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['amplitude_5fe',['amplitude_E',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a702945e4bba827150c1868f183c08f8b',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],

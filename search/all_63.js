@@ -67,7 +67,7 @@ var searchData=
   ['createrotated',['createRotated',['../classgalsim_1_1base_1_1_g_s_object.html#a6c29613e57067e6ba5ec7297e746cdc4',1,'galsim.base.GSObject.createRotated()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0b77431718dbc891a474c1a14c948a24',1,'galsim.correlatednoise._BaseCorrelatedNoise.createRotated()']]],
   ['createsheared',['createSheared',['../classgalsim_1_1base_1_1_g_s_object.html#a8c54a001124280ae550c57c8fdce3563',1,'galsim.base.GSObject.createSheared()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a83c5e70898919a61c2c744bad7ab9efa',1,'galsim.correlatednoise._BaseCorrelatedNoise.createSheared()']]],
   ['createshifted',['createShifted',['../classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126',1,'galsim::base::GSObject']]],
-  ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a514133d6f71da65e2b9aa1594dacfa9b',1,'galsim::Cubic']]],
+  ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a7e8b983e7b2cf9459b45f6ede20aaecf',1,'galsim::Cubic']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]],
   ['changes_20from_20v0_2e4_20to_20current_20version_3a',['Changes from v0.4 to current version:',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
 ];

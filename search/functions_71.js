@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quintic',['Quintic',['../classgalsim_1_1_quintic.html#a63e6abd4a8ae53cd2cd7e10bf75df183',1,'galsim::Quintic']]]
+  ['quintic',['Quintic',['../classgalsim_1_1_quintic.html#ac594cd6d0123949379a19fe82dc3ad97',1,'galsim::Quintic']]]
 ];

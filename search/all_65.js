@@ -21,6 +21,7 @@ var searchData=
   ['estimateshear',['EstimateShear',['../namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8',1,'galsim::hsm']]],
   ['estimateshearview',['EstimateShearView',['../namespacegalsim_1_1hsm.html#aabaa80600235fd7f7c3be065904288b8',1,'galsim::hsm']]],
   ['eta',['eta',['../classgalsim_1_1shear_1_1_shear.html#a23c89fc1ae47920dddd41ae950651f5e',1,'galsim::shear::Shear']]],
+  ['evaluatebounds',['evaluateBounds',['../classgalsim_1_1_solve.html#ae13ce3be2704e6ad7cd970715d5ddb49',1,'galsim::Solve']]],
   ['exp2ipsi',['exp2ipsi',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a75dc5461f928d57aef7089ae883bbf43',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['expand',['expand',['../classgalsim_1_1_bounds.html#a491239e823fc257356a6b1481eb2b7eb',1,'galsim::Bounds']]],
   ['exponential',['Exponential',['../classgalsim_1_1base_1_1_exponential.html',1,'galsim::base']]]

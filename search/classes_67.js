@@ -5,5 +5,6 @@ var searchData=
   ['gaussiandeviate',['GaussianDeviate',['../classgalsim_1_1_gaussian_deviate.html',1,'galsim']]],
   ['gaussiannoise',['GaussianNoise',['../classgalsim_1_1_gaussian_noise.html',1,'galsim']]],
   ['gsobject',['GSObject',['../classgalsim_1_1base_1_1_g_s_object.html',1,'galsim::base']]],
-  ['gsparams',['GSParams',['../structgalsim_1_1_g_s_params.html',1,'galsim']]]
+  ['gsparams',['GSParams',['../structgalsim_1_1_g_s_params.html',1,'galsim']]],
+  ['gsparamsptr',['GSParamsPtr',['../structgalsim_1_1_g_s_params_ptr.html',1,'galsim']]]
 ];

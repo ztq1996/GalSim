@@ -105,8 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af1c2c4a8d5376170db66e93d66f4b347"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#af1c2c4a8d5376170db66e93d66f4b347">Interval</a> (const <a class="el" href="classgalsim_1_1_flux_density.html">FluxDensity</a> &amp;fluxDensity, double xLower, double xUpper, bool isRadial=false)</td></tr>
-<tr class="memdesc:af1c2c4a8d5376170db66e93d66f4b347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af1c2c4a8d5376170db66e93d66f4b347"></a><br/></td></tr>
+<tr class="memitem:a33236d2048e628b5b2be6281c7fca6ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a33236d2048e628b5b2be6281c7fca6ab">Interval</a> (const <a class="el" href="classgalsim_1_1_flux_density.html">FluxDensity</a> &amp;fluxDensity, double xLower, double xUpper, bool isRadial, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:a33236d2048e628b5b2be6281c7fca6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a33236d2048e628b5b2be6281c7fca6ab"></a><br/></td></tr>
 <tr class="memitem:a08bb56af4a637c1169676279c9f10188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#a08bb56af4a637c1169676279c9f10188">drawWithin</a> (double unitRandom, double &amp;x, double &amp;flux, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
 <tr class="memdesc:a08bb56af4a637c1169676279c9f10188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw one photon position and flux from within this interval.  <a href="#a08bb56af4a637c1169676279c9f10188"></a><br/></td></tr>
 <tr class="memitem:ac5a894135818b1c645350f7376adc885"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interval.html#ac5a894135818b1c645350f7376adc885">getFlux</a> () const </td></tr>
@@ -118,7 +118,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class used to represent a linear interval or an annulus of probability function. </p>
-<p>An <code><a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a></code> is a contiguous domain over which a <code><a class="el" href="classgalsim_1_1_flux_density.html" title="An interface class for functions giving differential flux vs x or r.">FluxDensity</a></code> function is well-behaved, having no sign changes or extrema, which will makes it easier to sample the <a class="el" href="classgalsim_1_1_flux_density.html" title="An interface class for functions giving differential flux vs x or r.">FluxDensity</a> function over its domain using either rejection sampling or by weighting uniformly distributed photons.</p>
+<p>An <code><a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a></code> is a contiguous domain over which a <code><a class="el" href="classgalsim_1_1_flux_density.html" title="An interface class for functions giving differential flux vs x or r.">FluxDensity</a></code> function is well-behaved, having no sign changes or extrema, which will make it easier to sample the <a class="el" href="classgalsim_1_1_flux_density.html" title="An interface class for functions giving differential flux vs x or r.">FluxDensity</a> function over its domain using either rejection sampling or by weighting uniformly distributed photons.</p>
 <p>This class could be made a subclass of <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code> as it should only be used by methods of that class.</p>
 <p>The <code><a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a></code> represents flux (or unnormalized probability) density in a continguous interval on on the line, or, for <code>_isRadial=true</code>, represents axisymmetric density in an annulus on the plane.</p>
 <p>The object keeps track of the integrated flux (or unnormalized probability) in its interval/annulus, and the cumulative flux of all intervals up to and including this one.</p>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <p>If <code>_useRejectionMethod=false</code>, then no rejection is done. The photon is kept, but is given a flux value equal to the <a class="el" href="classgalsim_1_1_flux_density.html" title="An interface class for functions giving differential flux vs x or r.">FluxDensity</a> at x relative to the mean over the interval. This is faster but makes the statistics of the photons harder to interpret.</p>
 <p>See the <code><a class="el" href="classgalsim_1_1_one_dimensional_deviate.html" title="Class which implements random sampling of an arbitrary one-dimensional distribution, for photon shooting.">OneDimensionalDeviate</a></code> docstrings for more information. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af1c2c4a8d5376170db66e93d66f4b347"></a>
+<a class="anchor" id="a33236d2048e628b5b2be6281c7fca6ab"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -152,7 +152,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isRadial</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>isRadial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -170,6 +176,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">xLower</td><td>Lower bound in x (or radius) of this interval. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">xUpper</td><td>Upper bound in x (or radius) of this interval. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">isRadial</td><td>Set true if this is an annulus on a plane, false for linear interval. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

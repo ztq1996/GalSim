@@ -114,8 +114,8 @@ Inheritance diagram for galsim::SBExponential:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7a69c716962538604eeef736439812b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential.html#a7a69c716962538604eeef736439812b7">SBExponential</a> (double r0, double flux=1., boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt; gsparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;())</td></tr>
-<tr class="memdesc:a7a69c716962538604eeef736439812b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor - note that <code>r0</code> is scale length, NOT half-light radius <code>re</code> as in <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a>.  <a href="#a7a69c716962538604eeef736439812b7"></a><br/></td></tr>
+<tr class="memitem:af9a791f1cfd188fdee4cca99ed90d647"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">SBExponential</a> (double r0, double flux, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:af9a791f1cfd188fdee4cca99ed90d647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor - note that <code>r0</code> is scale length, NOT half-light radius <code>re</code> as in <a class="el" href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile.">SBSersic</a>.  <a href="#af9a791f1cfd188fdee4cca99ed90d647"></a><br/></td></tr>
 <tr class="memitem:ad182bf0e09adb2829126d8274ec65929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential.html#ad182bf0e09adb2829126d8274ec65929">SBExponential</a> (const <a class="el" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a> &amp;rhs)</td></tr>
 <tr class="memdesc:ad182bf0e09adb2829126d8274ec65929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ad182bf0e09adb2829126d8274ec65929"></a><br/></td></tr>
 <tr class="memitem:a94c3f8f4170507dfd80df14580de380a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a">~SBExponential</a> ()</td></tr>
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Exponential Surface Brightness Profile. </p>
 <p>Surface brightness profile with I(r) propto exp[-r/r_0] for some scale-length r_0. This is a special case of the Sersic profile, but is given a separate class since the Fourier transform has closed form and can be generated without lookup tables. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7a69c716962538604eeef736439812b7"></a>
+<a class="anchor" id="af9a791f1cfd188fdee4cca99ed90d647"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -209,13 +209,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>flux</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;&#160;</td>
-          <td class="paramname"><em>gsparams</em> = <code>boost::shared_ptr&lt;&#160;<a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>&#160;&gt;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -229,7 +229,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">r0</td><td>scale length for the profile that scales as <code>exp[-(r / r0)]</code>, NOT the half-light radius <code>re</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux (default <code>flux = 1.</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>flux. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of image operations and rendering, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

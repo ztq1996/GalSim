@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Linear:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c11e86f98734054d64ac996802f9fc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#a0c11e86f98734054d64ac996802f9fc8">Linear</a> (double tol=1.e-3)</td></tr>
-<tr class="memdesc:a0c11e86f98734054d64ac996802f9fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0c11e86f98734054d64ac996802f9fc8"></a><br/></td></tr>
+<tr class="memitem:ad0bc1eaec1ce1ac617dba73dc7190900"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#ad0bc1eaec1ce1ac617dba73dc7190900">Linear</a> (double tol=1.e-3, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:ad0bc1eaec1ce1ac617dba73dc7190900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad0bc1eaec1ce1ac617dba73dc7190900"></a><br/></td></tr>
 <tr class="memitem:ac8669149decfef8785c6e612d8a3c786"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#ac8669149decfef8785c6e612d8a3c786">~Linear</a> ()</td></tr>
 <tr class="memitem:ae7228ec7b641762a8db33f196618b788"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">getTolerance</a> () const </td></tr>
 <tr class="memdesc:ae7228ec7b641762a8db33f196618b788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ae7228ec7b641762a8db33f196618b788"></a><br/></td></tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> interpolant. </p>
 <p>The linear interpolant is a poor choice for FFT-based operations on <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, as it rings to high frequencies. (See Bernstein &amp; Gruen, devel/modules/finterp.pdf in the GalSim repository.) This objection does not apply when shooting photons, in which case the linear interpolant is quite efficient (but not necessarily the best choice in terms of accuracy). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0c11e86f98734054d64ac996802f9fc8"></a>
+<a class="anchor" id="ad0bc1eaec1ce1ac617dba73dc7190900"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -150,8 +150,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::Linear::Linear </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-3</code></td><td>)</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -159,7 +169,8 @@ Public Member Functions</h2></td></tr>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Tolerance determines how far onto sinc^2 wiggles the kval will go. Very far, by default! </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Tolerance determines how far onto sinc^2 wiggles the uval will go. Very far, by default! </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

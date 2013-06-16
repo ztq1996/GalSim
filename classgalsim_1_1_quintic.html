@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Piecewise-quintic polynomial interpolant, ideal for k-space interpolation.  
+<p>Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation.  
  <a href="classgalsim_1_1_quintic.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_interpolant_8h_source.html">Interpolant.h</a>&gt;</code></p>
@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Quintic:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63e6abd4a8ae53cd2cd7e10bf75df183"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_quintic.html#a63e6abd4a8ae53cd2cd7e10bf75df183">Quintic</a> (double tol=1.e-4)</td></tr>
-<tr class="memdesc:a63e6abd4a8ae53cd2cd7e10bf75df183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a63e6abd4a8ae53cd2cd7e10bf75df183"></a><br/></td></tr>
+<tr class="memitem:ac594cd6d0123949379a19fe82dc3ad97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_quintic.html#ac594cd6d0123949379a19fe82dc3ad97">Quintic</a> (double tol=1.e-4, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:ac594cd6d0123949379a19fe82dc3ad97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ac594cd6d0123949379a19fe82dc3ad97"></a><br/></td></tr>
 <tr class="memitem:ab22becfadba4c0ed418247d9876f35d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_quintic.html#ab22becfadba4c0ed418247d9876f35d0">~Quintic</a> ()</td></tr>
 <tr class="memitem:ae3fea861cc7a886d51676405e290b9ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">getTolerance</a> () const </td></tr>
 <tr class="memdesc:ae3fea861cc7a886d51676405e290b9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ae3fea861cc7a886d51676405e290b9ee"></a><br/></td></tr>
@@ -141,10 +141,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adf88d2c8548b5280603dfcf535d71262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#adf88d2c8548b5280603dfcf535d71262"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Piecewise-quintic polynomial interpolant, ideal for k-space interpolation. </p>
+<div class="textblock"><p>Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. </p>
 <p>See Bernstein &amp; Gruen, devel/modules/finterp.pdf in the GalSim repository. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a63e6abd4a8ae53cd2cd7e10bf75df183"></a>
+<a class="anchor" id="ac594cd6d0123949379a19fe82dc3ad97"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -152,8 +152,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::Quintic::Quintic </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-4</code></td><td>)</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-4</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -162,6 +172,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Sets accuracy and extent of Fourier transform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

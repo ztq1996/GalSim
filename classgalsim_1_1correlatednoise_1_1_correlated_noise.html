@@ -244,6 +244,9 @@ image has a zero population mean will be reasonable, and won't introduce a bias 
 from an imperfectly-estimated sample mean subtraction.  If this is not possible, just be aware 
 that `subtract_mean=True` will bias the correlation function low to some level.
 
+You may also specify a gsparams argument.  See the docstring for galsim.GSParams using
+help(galsim.GSParams) for more information about this option.
+
 Methods and Use
 ---------------
 The main way that a CorrelatedNoise is used is to add or assign correlated noise to an image.
@@ -366,7 +369,13 @@ described above.  The random number generators are not affected by these scaling
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>subtract_mean</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>subtract_mean</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

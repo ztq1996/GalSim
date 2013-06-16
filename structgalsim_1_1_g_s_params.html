@@ -97,32 +97,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_s_b_profile_8h_source.html">SBProfile.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_g_s_params_8h_source.html">GSParams.h</a>&gt;</code></p>
 
 <p><a href="structgalsim_1_1_g_s_params-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61214d1baf2d40de22f79813a73d0bf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a61214d1baf2d40de22f79813a73d0bf6">GSParams</a> (int _minimum_fft_size, int _maximum_fft_size, double _alias_threshold, double _maxk_threshold, double _kvalue_accuracy, double _xvalue_accuracy, double _shoot_accuracy, double _realspace_relerr, double _realspace_abserr, double _integration_relerr, double _integration_abserr)</td></tr>
-<tr class="memdesc:a61214d1baf2d40de22f79813a73d0bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of numbers that govern how SBProfiles make various speed/accuracy tradeoff decisions.  <a href="#a61214d1baf2d40de22f79813a73d0bf6"></a><br/></td></tr>
+<tr class="memitem:ab1e82e83e962c312aca0265fb7aafaeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ab1e82e83e962c312aca0265fb7aafaeb">GSParams</a> (int _minimum_fft_size, int _maximum_fft_size, double _alias_threshold, double _stepk_minimum_hlr, double _maxk_threshold, double _kvalue_accuracy, double _xvalue_accuracy, double _table_spacing, double _realspace_relerr, double _realspace_abserr, double _integration_relerr, double _integration_abserr, double _shoot_accuracy, double _shoot_relerr, double _shoot_abserr, double _allowed_flux_variation, int _range_division_for_extrema, double _small_fraction_of_flux)</td></tr>
+<tr class="memdesc:ab1e82e83e962c312aca0265fb7aafaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of numbers that govern how SBProfiles make various speed/accuracy tradeoff decisions.  <a href="#ab1e82e83e962c312aca0265fb7aafaeb"></a><br/></td></tr>
 <tr class="memitem:af4b159f3946928d86c3572b700e15a57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#af4b159f3946928d86c3572b700e15a57">GSParams</a> ()</td></tr>
+<tr class="memitem:a04edd4a44d04058e69def8d9098342de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a04edd4a44d04058e69def8d9098342de">operator==</a> (const <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &amp;rhs) const </td></tr>
+<tr class="memitem:a1bce0d447a3a8ad8fb2dd9b842e82f63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a1bce0d447a3a8ad8fb2dd9b842e82f63">operator&lt;</a> (const <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &amp;rhs) const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad8ec2fb22c68ae93be0c6e6f3a76f01a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ad8ec2fb22c68ae93be0c6e6f3a76f01a">minimum_fft_size</a></td></tr>
 <tr class="memitem:ab45611edd317537fbb704888e6fc86a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ab45611edd317537fbb704888e6fc86a6">maximum_fft_size</a></td></tr>
 <tr class="memitem:ac65aa7675d9f0402cd610ff1e77f41ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ac65aa7675d9f0402cd610ff1e77f41ee">alias_threshold</a></td></tr>
+<tr class="memitem:a1fa4bfc2e1037556b8b6a3a0165a8bcb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a1fa4bfc2e1037556b8b6a3a0165a8bcb">stepk_minimum_hlr</a></td></tr>
 <tr class="memitem:adb55ea418137d299c3c3257bdb24260b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#adb55ea418137d299c3c3257bdb24260b">maxk_threshold</a></td></tr>
 <tr class="memitem:ae30354f3faf550e1fcb3462900f33773"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ae30354f3faf550e1fcb3462900f33773">kvalue_accuracy</a></td></tr>
 <tr class="memitem:a994386f02937c48e081b6d0b1e7a210f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a994386f02937c48e081b6d0b1e7a210f">xvalue_accuracy</a></td></tr>
-<tr class="memitem:a7c8b3ff6f8158ed816586ff0537ed542"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a7c8b3ff6f8158ed816586ff0537ed542">shoot_accuracy</a></td></tr>
+<tr class="memitem:a5090743fdfbbfa40c10f6f33c186cee7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a5090743fdfbbfa40c10f6f33c186cee7">table_spacing</a></td></tr>
 <tr class="memitem:aaa3b4a7b32194973550186a0db09723b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#aaa3b4a7b32194973550186a0db09723b">realspace_relerr</a></td></tr>
 <tr class="memitem:a7fbf0d18a476c2f1acf11901aae68e79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a7fbf0d18a476c2f1acf11901aae68e79">realspace_abserr</a></td></tr>
 <tr class="memitem:ab13477f9c07267a80d129d8baed9660b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ab13477f9c07267a80d129d8baed9660b">integration_relerr</a></td></tr>
 <tr class="memitem:ac5641e3ef0ea5341017e2437cea111b2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ac5641e3ef0ea5341017e2437cea111b2">integration_abserr</a></td></tr>
+<tr class="memitem:a7c8b3ff6f8158ed816586ff0537ed542"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a7c8b3ff6f8158ed816586ff0537ed542">shoot_accuracy</a></td></tr>
+<tr class="memitem:af2a09781dcb2f8282f89ef93209eecc7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#af2a09781dcb2f8282f89ef93209eecc7">shoot_relerr</a></td></tr>
+<tr class="memitem:ace9768c3198c1495b4c271770e965542"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#ace9768c3198c1495b4c271770e965542">shoot_abserr</a></td></tr>
+<tr class="memitem:a0d97a2d423b926c19afe54813cb88048"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a0d97a2d423b926c19afe54813cb88048">allowed_flux_variation</a></td></tr>
+<tr class="memitem:a4b216aabc88c9a0caba07a96fff6be2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a4b216aabc88c9a0caba07a96fff6be2a">range_division_for_extrema</a></td></tr>
+<tr class="memitem:a4b3d0ea8a7c8edf149ae387bb7b3881a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_g_s_params.html#a4b3d0ea8a7c8edf149ae387bb7b3881a">small_fraction_of_flux</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a61214d1baf2d40de22f79813a73d0bf6"></a>
+<a class="anchor" id="ab1e82e83e962c312aca0265fb7aafaeb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -148,6 +157,12 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_stepk_minimum_hlr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>_maxk_threshold</em>, </td>
         </tr>
         <tr>
@@ -166,7 +181,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>_shoot_accuracy</em>, </td>
+          <td class="paramname"><em>_table_spacing</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,7 +205,43 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>_integration_abserr</em>&#160;</td>
+          <td class="paramname"><em>_integration_abserr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_shoot_accuracy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_shoot_relerr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_shoot_abserr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_allowed_flux_variation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_range_division_for_extrema</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_small_fraction_of_flux</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,19 +252,34 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A set of numbers that govern how SBProfiles make various speed/accuracy tradeoff decisions. </p>
+<p>These parameters can be broadly split into two groups: i) parameters that affect the rendering of objects by Discrete Fourier Transform (DFT) and by real space convolution; and ii) parameters that affect rendering by Photon Shooting, invoked using the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> .draw() and .drawShoot() member functions, respectively.</p>
+<p>The DFT and real space convolution relevant params are:</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">minimum_fft_size</td><td>Constant giving minimum FFT size we're willing to do. </td></tr>
     <tr><td class="paramname">maximum_fft_size</td><td>Constant giving maximum FFT size we're willing to do. </td></tr>
     <tr><td class="paramname">alias_threshold</td><td>A threshold parameter used for setting the stepK value for FFTs. The FFT's stepK is set so that at most a fraction alias_threshold of the flux of any profile is aliased. </td></tr>
+    <tr><td class="paramname">stepk_minimum_hlr</td><td>In addition to the above constraint for aliasing, also set stepk such that pi/stepk is at least stepk_minimum_hlr times the profile's half-light radius (for profiles that have a well-defined half-light radius). </td></tr>
     <tr><td class="paramname">maxk_threshold</td><td>A threshold parameter used for setting the maxK value for FFTs. The FFT's maxK is set so that the k-values that are excluded off the edge of the image are less than maxk_threshold. </td></tr>
     <tr><td class="paramname">kvalue_accuracy</td><td>Accuracy of values in k-space. If a k-value is less than kvalue_accuracy, then it may be set to zero. Similarly, if an alternate calculation has errors less than kvalue_accuracy, then it may be used instead of an exact calculation. Note: This does not necessarily imply that all kvalues are this accurate. There may be cases where other choices we have made lead to errors greater than this. But whenever we do an explicit calculation about this, this is the value we use. This should typically be set to a lower, more stringent value than maxk_threshold. </td></tr>
     <tr><td class="paramname">xvalue_accuracy</td><td>Accuracy of values in real space. If a value in real space is less than xvalue_accuracy, then it may be set to zero. Similarly, if an alternate calculation has errors less than xvalue_accuracy, then it may be used instead of an exact calculation. </td></tr>
-    <tr><td class="paramname">shoot_accuracy</td><td>Accuracy of total flux for photon shooting The photon shooting algorithm sometimes needs to sample the radial profile out to some value. We choose the outer radius such that the integral encloses at least (1-shoot_accuracy) of the flux. </td></tr>
-    <tr><td class="paramname">realspace_relerr</td><td>The target relative accuracy for realspace convolution. </td></tr>
-    <tr><td class="paramname">realspace_abserr</td><td>The target absolute accuracy for realspace convolution. </td></tr>
+    <tr><td class="paramname">table_spacing</td><td>Several profiles use lookup tables for either the Hankel transform (Sersic, truncated Moffat) or the real space radial function (Kolmogorov). We try to estimate a good spacing between values in the lookup tables based on either xvalue_accuracy or kvalue_accuracy as appropriate. However, you may change the spacing with table_spacing. Using table_spacing &lt; 1 will use a spacing value that much smaller than the default, which should produce more accurate interpolations. </td></tr>
+    <tr><td class="paramname">realspace_relerr</td><td>The target relative accuracy for real-space convolution. </td></tr>
+    <tr><td class="paramname">realspace_abserr</td><td>The target absolute accuracy for real-space convolution. </td></tr>
     <tr><td class="paramname">integration_relerr</td><td>Target relative accuracy for integrals (other than real-space convolution). </td></tr>
-    <tr><td class="paramname">integration_abserr</td><td>Target absolute accuracy for integrals (other than real-space convolution). </td></tr>
+    <tr><td class="paramname">integration_abserr</td><td>Target absolute accuracy for integrals (other than real-space convolution).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The Photon Shooting relevant params are:</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shoot_accuracy</td><td>Accuracy of total flux for photon shooting. The photon shooting algorithm sometimes needs to sample the radial profile out to some value. We choose the outer radius such that the integral encloses at least (1-shoot_accuracy) of the flux. </td></tr>
+    <tr><td class="paramname">shoot_relerr</td><td>The target relative error allowed on any flux integral for photon shooting. </td></tr>
+    <tr><td class="paramname">shoot_abserr</td><td>The target absolute error allowed on any flux integral for photon shooting. </td></tr>
+    <tr><td class="paramname">allowed_flux_variation</td><td>Max range of allowed (abs value of) photon fluxes within an <a class="el" href="classgalsim_1_1_interval.html" title="Class used to represent a linear interval or an annulus of probability function.">Interval</a> before rejection sampling is invoked. </td></tr>
+    <tr><td class="paramname">range_division_for_extrema</td><td>Range will be split into this many parts to bracket extrema. </td></tr>
+    <tr><td class="paramname">small_fraction_of_flux</td><td>Intervals with less than this fraction of probability are ok to use dominant-sampling method. </td></tr>
   </table>
   </dd>
 </dl>
@@ -236,6 +302,39 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1bce0d447a3a8ad8fb2dd9b842e82f63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::GSParams::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a04edd4a44d04058e69def8d9098342de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::GSParams::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="ac65aa7675d9f0402cd610ff1e77f41ee"></a>
 <div class="memitem">
@@ -243,6 +342,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double galsim::GSParams::alias_threshold</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d97a2d423b926c19afe54813cb88048"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::allowed_flux_variation</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -321,6 +432,18 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4b216aabc88c9a0caba07a96fff6be2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::GSParams::range_division_for_extrema</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7fbf0d18a476c2f1acf11901aae68e79"></a>
 <div class="memitem">
 <div class="memproto">
@@ -345,12 +468,72 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ace9768c3198c1495b4c271770e965542"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::shoot_abserr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7c8b3ff6f8158ed816586ff0537ed542"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">double galsim::GSParams::shoot_accuracy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af2a09781dcb2f8282f89ef93209eecc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::shoot_relerr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b3d0ea8a7c8edf149ae387bb7b3881a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::small_fraction_of_flux</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1fa4bfc2e1037556b8b6a3a0165a8bcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::stepk_minimum_hlr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5090743fdfbbfa40c10f6f33c186cee7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::GSParams::table_spacing</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -370,7 +553,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/galsim/<a class="el" href="_s_b_profile_8h_source.html">SBProfile.h</a></li>
+<li>include/galsim/<a class="el" href="_g_s_params_8h_source.html">GSParams.h</a></li>
 </ul>
 </div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

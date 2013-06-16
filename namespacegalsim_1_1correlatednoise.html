@@ -140,7 +140,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>x_interpolant</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>x_interpolant</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -166,6 +172,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>A <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields.">_BaseCorrelatedNoise</a> instance representing correlated noise in F814W COSMOS images.</dd></dl>
 <p>The interpolation used if <code>x_interpolant=None</code> (default) is a <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y.">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">galsim.Linear</a>(tol=1.e-4)), which uses bilinear interpolation. Initial tests indicate the favourable performance of this interpolant in applications involving correlated noise.</p>
+<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
 <h2>Important note regarding units</h2>
 <p>The ACS coadd images in COSMOS have a pixel scale of 0.03 arcsec, and so the pixel scale <code>dx_cosmos</code> adopted in the representation of of the correlation function takes a default value </p>
 <pre class="fragment">dx_cosmos = 0.03

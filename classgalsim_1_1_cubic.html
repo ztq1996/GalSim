@@ -114,8 +114,8 @@ Inheritance diagram for galsim::Cubic:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a514133d6f71da65e2b9aa1594dacfa9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a514133d6f71da65e2b9aa1594dacfa9b">Cubic</a> (double tol=1.e-4)</td></tr>
-<tr class="memdesc:a514133d6f71da65e2b9aa1594dacfa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a514133d6f71da65e2b9aa1594dacfa9b"></a><br/></td></tr>
+<tr class="memitem:a7e8b983e7b2cf9459b45f6ede20aaecf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a7e8b983e7b2cf9459b45f6ede20aaecf">Cubic</a> (double tol=1.e-4, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:a7e8b983e7b2cf9459b45f6ede20aaecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a7e8b983e7b2cf9459b45f6ede20aaecf"></a><br/></td></tr>
 <tr class="memitem:a31657a457f441ded282e1546abe5ae8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a31657a457f441ded282e1546abe5ae8c">~Cubic</a> ()</td></tr>
 <tr class="memitem:ad56556c04eba6e8fb7067ec774ad5725"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">getTolerance</a> () const </td></tr>
 <tr class="memdesc:ad56556c04eba6e8fb7067ec774ad5725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad56556c04eba6e8fb7067ec774ad5725"></a><br/></td></tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <p>From R. G. Keys, IEEE Trans. Acoustics, Speech, &amp; Signal Proc 29, p 1153, 1981</p>
 <p>The cubic interpolant is a reasonable choice for a four-point interpolant for <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>. (See Bernstein &amp; Gruen, devel/modules/finterp.pdf in the GalSim repository.) </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a514133d6f71da65e2b9aa1594dacfa9b"></a>
+<a class="anchor" id="a7e8b983e7b2cf9459b45f6ede20aaecf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -153,8 +153,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::Cubic::Cubic </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-4</code></td><td>)</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-4</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,6 +173,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Sets accuracy and extent of Fourier transform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>

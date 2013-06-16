@@ -114,8 +114,8 @@ Inheritance diagram for galsim::SincInterpolant:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a629dee7b72832c2d19467f44d9d6d57b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a629dee7b72832c2d19467f44d9d6d57b">SincInterpolant</a> (double tol=1.e-3)</td></tr>
-<tr class="memdesc:a629dee7b72832c2d19467f44d9d6d57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a629dee7b72832c2d19467f44d9d6d57b"></a><br/></td></tr>
+<tr class="memitem:a50e5a12ed31d72599338e49deadd84dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a50e5a12ed31d72599338e49deadd84dc">SincInterpolant</a> (double tol=1.e-3, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:a50e5a12ed31d72599338e49deadd84dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a50e5a12ed31d72599338e49deadd84dc"></a><br/></td></tr>
 <tr class="memitem:a1a3a68f170e56475a2e5e7eb2f69d4b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a1a3a68f170e56475a2e5e7eb2f69d4b5">~SincInterpolant</a> ()</td></tr>
 <tr class="memitem:a0cadb8131e71ed5eb49777e901f2bd46"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">getTolerance</a> () const </td></tr>
 <tr class="memdesc:a0cadb8131e71ed5eb49777e901f2bd46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#a0cadb8131e71ed5eb49777e901f2bd46"></a><br/></td></tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Sinc interpolation: inverse of Nearest-neighbor. </p>
 <p>The Sinc interpolant (K(x) = sin(pi x)/(pi x)) is mathematically perfect for band-limited data, introducing no spurious frequency content beyond kmax = pi/dx for input data with pixel scale dx. However, it is formally infinite in extent and, even with reasonable trunction, is still quite large. It will give exact results in <a class="el" href="classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06" title="Return value of SBProfile at a chosen 2D position in k space.">SBInterpolatedImage::kValue()</a> when it is used as a k-space interpolant, but is extremely slow. The usual compromise between sinc accuracy vs. speed is the <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolant (see its documentation for details). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a629dee7b72832c2d19467f44d9d6d57b"></a>
+<a class="anchor" id="a50e5a12ed31d72599338e49deadd84dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -150,8 +150,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::SincInterpolant::SincInterpolant </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1.e-3</code></td><td>)</td>
+          <td class="paramname"><em>tol</em> = <code>1.e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code><a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,6 +170,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Tolerance determines how far onto sinc wiggles the xval will go. Very far, by default! </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
   </dd>
 </dl>
