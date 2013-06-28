@@ -442,7 +442,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#ifdef FFT_DEBUG</span></div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">void</span> check_array()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">if</span> (!array.get()) <span class="keywordflow">throw</span> FFTError(<span class="stringliteral">&quot;KTable operation on null array&quot;</span>); }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">if</span> (!_array.get()) <span class="keywordflow">throw</span> FFTError(<span class="stringliteral">&quot;KTable operation on null array&quot;</span>); }</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">void</span> check_array()<span class="keyword"> const </span>{}</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">#endif</span></div>

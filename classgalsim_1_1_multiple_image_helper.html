@@ -113,9 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a1ebbc0c5e533260fd3de78b99c388f5f">MultipleImageHelper</a> (const std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt; &gt; &amp;images, double dx=0., double pad_factor=0.)</td></tr>
 <tr class="memdesc:a1ebbc0c5e533260fd3de78b99c388f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a std::vector of images.  <a href="#a1ebbc0c5e533260fd3de78b99c388f5f"></a><br/></td></tr>
-<tr class="memitem:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#ac1ef0a40ea7a7de1c8b7ed911aed8132">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, double dx=0., double pad_factor=0., boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt; pad_image=<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt;())</td></tr>
-<tr class="memdesc:ac1ef0a40ea7a7de1c8b7ed911aed8132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience constructor that only takes a single image.  <a href="#ac1ef0a40ea7a7de1c8b7ed911aed8132"></a><br/></td></tr>
+<tr class="memitem:ab05d1bad79bbed82ebde04b0af840776"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab05d1bad79bbed82ebde04b0af840776"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#ab05d1bad79bbed82ebde04b0af840776">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, double dx=0., double pad_factor=0., boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt; pad_image=<a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt;())</td></tr>
+<tr class="memdesc:ab05d1bad79bbed82ebde04b0af840776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience constructor that only takes a single image.  <a href="#ab05d1bad79bbed82ebde04b0af840776"></a><br/></td></tr>
 <tr class="memitem:a7a93234c8f79236c29beac4b504a0894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894">MultipleImageHelper</a> (const <a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a7a93234c8f79236c29beac4b504a0894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies are shallow, so can pass by value without any copying.  <a href="#a7a93234c8f79236c29beac4b504a0894"></a><br/></td></tr>
 <tr class="memitem:a45f6734db1655c7b9c85bd050d92e27e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a45f6734db1655c7b9c85bd050d92e27e">operator=</a> (const <a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;rhs)</td></tr>
@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac40f7d79a0722517dd88d534a5b1e08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y-weighted flux of the i-th image.  <a href="#ac40f7d79a0722517dd88d534a5b1e08f"></a><br/></td></tr>
 <tr class="memitem:adec5791a43e0836e825adba756aa1321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#adec5791a43e0836e825adba756aa1321">getNin</a> () const </td></tr>
 <tr class="memdesc:adec5791a43e0836e825adba756aa1321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial (unpadded) size of the images.  <a href="#adec5791a43e0836e825adba756aa1321"></a><br/></td></tr>
+<tr class="memitem:ab5e150550851ce1d2cce166bb128d274"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#ab5e150550851ce1d2cce166bb128d274">getInitBounds</a> () const </td></tr>
+<tr class="memdesc:ab5e150550851ce1d2cce166bb128d274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds of the original image. (Or union of them if multiple.)  <a href="#ab5e150550851ce1d2cce166bb128d274"></a><br/></td></tr>
 <tr class="memitem:ad8d5a312104f95458289bbe332402489"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#ad8d5a312104f95458289bbe332402489">getNft</a> () const </td></tr>
 <tr class="memdesc:ad8d5a312104f95458289bbe332402489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the images in k-space.  <a href="#ad8d5a312104f95458289bbe332402489"></a><br/></td></tr>
 <tr class="memitem:a359166e628878eae97ac823cb4699f9f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_multiple_image_helper.html#a359166e628878eae97ac823cb4699f9f">getScale</a> () const </td></tr>
@@ -189,7 +191,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac1ef0a40ea7a7de1c8b7ed911aed8132"></a>
+<a class="anchor" id="ab05d1bad79bbed82ebde04b0af840776"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -216,7 +218,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt;&#160;</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt;&#160;</td>
           <td class="paramname"><em>pad_image</em> = <code><a class="el" href="classgalsim_1_1_image.html">Image</a>&lt;&#160;T&#160;&gt;()</code>&#160;</td>
         </tr>
         <tr>
@@ -289,6 +291,23 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the flux of the i-th image. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5e150550851ce1d2cce166bb128d274"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt;int&gt;&amp; galsim::MultipleImageHelper::getInitBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the bounds of the original image. (Or union of them if multiple.) </p>
 
 </div>
 </div>

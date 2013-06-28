@@ -111,12 +111,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9d12a39aa8cac4c5c1e094545db97e14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#a9d12a39aa8cac4c5c1e094545db97e14">x_interpolant</a></td></tr>
-<tr class="memitem:a74a1e58ec1e9d3f19b292df7789984a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#a74a1e58ec1e9d3f19b292df7789984a1">k_interpolant</a></td></tr>
 <tr class="memitem:abe77bd2103063b1dbb3c09d5f65387b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#abe77bd2103063b1dbb3c09d5f65387b0">catalog_file</a></td></tr>
 <tr class="memitem:af9a0ff166fb38557f6905978bb196f52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#af9a0ff166fb38557f6905978bb196f52">index</a></td></tr>
 <tr class="memitem:a426dea31e07e372c5279412199c0e670"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#a426dea31e07e372c5279412199c0e670">pixel_scale</a></td></tr>
-<tr class="memitem:ae1076f8b6385a89cf2b544827a8c65a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#ae1076f8b6385a89cf2b544827a8c65a1">pad_variance</a></td></tr>
 <tr class="memitem:abf162a7209a130179a752f5861230fe9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#abf162a7209a130179a752f5861230fe9">original_image</a></td></tr>
 <tr class="memitem:ac63856c5dfc98b41af21214c9323142f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#ac63856c5dfc98b41af21214c9323142f">original_PSF</a></td></tr>
 </table>
@@ -130,7 +127,7 @@ Public Attributes</h2></td></tr>
                                 rng=None, x_interpolant=None, k_interpolant=None,
                                 flux=None, pad_factor = 0, noise_pad=False, pad_image=None,
                                 use_cache = True)
-</pre><p>This initializes real_galaxy with three <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> objects (one for the deconvolved galaxy, and saved versions of the original HST image and PSF). Note that there are multiple keywords for choosing a galaxy; exactly one must be set. In future we may add more such options, e.g., to choose at random but accounting for the non-constant weight factors (probabilities for objects to make it into the training sample). Like other GSObjects, the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> contains an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute which is an <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a> representing the deconvolved HST galaxy.</p>
+</pre><p>This initializes real_galaxy with three InterpolatedImage objects (one for the deconvolved galaxy, and saved versions of the original HST image and PSF). Note that there are multiple keywords for choosing a galaxy; exactly one must be set. In future we may add more such options, e.g., to choose at random but accounting for the non-constant weight factors (probabilities for objects to make it into the training sample). Like other GSObjects, the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset.">RealGalaxy</a> contains an <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute which is an <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a> representing the deconvolved HST galaxy.</p>
 <p>Note that preliminary tests suggest that for optimal balance between accuracy and speed, <code>k_interpolant</code> and <code>pad_factor</code> should be kept at their default values. The user should be aware that significant inaccuracy can result from using other combinations of these parameters; see devel/modules/finterp.pdf, especially table 1, in the GalSim repository.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -142,8 +139,8 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">x_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which real-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default `x_interpolant = <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">galsim.Lanczos</a>(5,...)']. </td></tr>
     <tr><td class="paramname">k_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface.">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a>) instance or a string indicating which k-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. We strongly recommend leaving this parameter at its default value; see text above for details. [default `k_interpolant = galsim.Quintic()']. </td></tr>
     <tr><td class="paramname">flux</td><td>Total flux, if None then original flux in galaxy is adopted without change [default <code>flux = None</code>]. </td></tr>
-    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. We strongly recommend leaving this parameter at its default value; see text above for details. [Default <code>pad_factor = 0</code>.] </td></tr>
-    <tr><td class="paramname">noise_pad</td><td>When creating the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute for this GSObject, pad the SBInterpolated image with zeros, or with noise of a level specified in the training dataset? There are several options here: Use <code>noise_pad = False</code> if you wish to pad with zeros. Use <code>noise_pad = True</code> if you wish to pad with uncorrelated noise of the proper variance. Set <code>noise_pad</code> equal to a galsim.CorrelatedNoise, an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, or a filename containing an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of an example noise field that will be used to calculate the noise power spectrum and generate noise in the padding region. Any random number generator passed to the <code>rng</code> keyword will take precedence over that carried in an input galsim.CorrelatedNoise. In the last case, if the same file is used repeatedly, then use of the <code>use_cache</code> keyword (see below) can be used to prevent the need for repeated galsim.CorrelatedNoise initializations. [default <code>noise_pad = False</code>] </td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Factor by which to pad the <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> when creating the InterpolatedImage; <code>pad_factor &lt;= 0</code> results in the use of the default value, 4. We strongly recommend leaving this parameter at its default value; see text above for details. [Default <code>pad_factor = 0</code>.] </td></tr>
+    <tr><td class="paramname">noise_pad</td><td>When creating the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute for this GSObject, pad the Interpolated image with zeros, or with noise of a level specified in the training dataset? There are several options here: Use <code>noise_pad = False</code> if you wish to pad with zeros. Use <code>noise_pad = True</code> if you wish to pad with uncorrelated noise of the proper variance. Set <code>noise_pad</code> equal to a galsim.CorrelatedNoise, an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a>, or a filename containing an <a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> of an example noise field that will be used to calculate the noise power spectrum and generate noise in the padding region. Any random number generator passed to the <code>rng</code> keyword will take precedence over that carried in an input galsim.CorrelatedNoise. In the last case, if the same file is used repeatedly, then use of the <code>use_cache</code> keyword (see below) can be used to prevent the need for repeated galsim.CorrelatedNoise initializations. [default <code>noise_pad = False</code>] </td></tr>
     <tr><td class="paramname">pad_image</td><td><a class="el" href="classgalsim_1_1_image.html" title="Image class.">Image</a> to be used for deterministically padding the original image. This can be specified in two ways: (a) as a <a class="el" href="classgalsim_1_1_image.html" title="Image class.">galsim.Image</a>; or (b) as a string which is interpreted as a filename containing an image to use. The size of the image that is passed in is taken to specify the amount of padding, and so the <code>pad_factor</code> keyword should be equal to 1, i.e., no padding. The <code>pad_image</code> scale is ignored, and taken to be equal to that of the <code>image</code>. Note that <code>pad_image</code> can be used together with <code>noise_pad</code>. However, the user should be careful to ensure that the image used for padding has roughly zero mean. The purpose of this keyword is to allow for a more flexible representation of some noise field around an object; if the user wishes to represent the sky level around an object, they should do that when they have drawn the final image instead. (Default <code>pad_image = None</code>.) </td></tr>
     <tr><td class="paramname">use_cache</td><td>Specify whether to cache noise_pad read in from a file to save having to build an CorrelatedNoise repeatedly from the same image. (Default <code>use_cache = True</code>) </td></tr>
     <tr><td class="paramname">gsparams</td><td>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</td></tr>
@@ -293,18 +290,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a74a1e58ec1e9d3f19b292df7789984a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.real.RealGalaxy.k_interpolant</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="abf162a7209a130179a752f5861230fe9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -329,36 +314,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae1076f8b6385a89cf2b544827a8c65a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.real.RealGalaxy.pad_variance</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a426dea31e07e372c5279412199c0e670"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim.real.RealGalaxy.pixel_scale</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a9d12a39aa8cac4c5c1e094545db97e14"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.real.RealGalaxy.x_interpolant</td>
         </tr>
       </table>
 </div><div class="memdoc">

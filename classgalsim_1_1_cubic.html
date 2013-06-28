@@ -117,21 +117,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e8b983e7b2cf9459b45f6ede20aaecf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a7e8b983e7b2cf9459b45f6ede20aaecf">Cubic</a> (double tol=1.e-4, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
 <tr class="memdesc:a7e8b983e7b2cf9459b45f6ede20aaecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a7e8b983e7b2cf9459b45f6ede20aaecf"></a><br/></td></tr>
 <tr class="memitem:a31657a457f441ded282e1546abe5ae8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a31657a457f441ded282e1546abe5ae8c">~Cubic</a> ()</td></tr>
-<tr class="memitem:ad56556c04eba6e8fb7067ec774ad5725"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">getTolerance</a> () const </td></tr>
-<tr class="memdesc:ad56556c04eba6e8fb7067ec774ad5725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad56556c04eba6e8fb7067ec774ad5725"></a><br/></td></tr>
 <tr class="memitem:a2b551f607069fbd6756df3e9c27e18d0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a2b551f607069fbd6756df3e9c27e18d0">xrange</a> () const </td></tr>
 <tr class="memdesc:a2b551f607069fbd6756df3e9c27e18d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#a2b551f607069fbd6756df3e9c27e18d0"></a><br/></td></tr>
+<tr class="memitem:a7a4a278c747156a0a7a53731386cf1a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a7a4a278c747156a0a7a53731386cf1a3">ixrange</a> () const </td></tr>
+<tr class="memdesc:a7a4a278c747156a0a7a53731386cf1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total range as an integer. Typically <a class="el" href="classgalsim_1_1_cubic.html#a2b551f607069fbd6756df3e9c27e18d0" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange.  <a href="#a7a4a278c747156a0a7a53731386cf1a3"></a><br/></td></tr>
 <tr class="memitem:ace2024b4ec2375f0fd1754e536abba8f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#ace2024b4ec2375f0fd1754e536abba8f">urange</a> () const </td></tr>
 <tr class="memdesc:ace2024b4ec2375f0fd1754e536abba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in u space (cycles per pixel)  <a href="#ace2024b4ec2375f0fd1754e536abba8f"></a><br/></td></tr>
+<tr class="memitem:ad56556c04eba6e8fb7067ec774ad5725"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">getTolerance</a> () const </td></tr>
+<tr class="memdesc:ad56556c04eba6e8fb7067ec774ad5725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad56556c04eba6e8fb7067ec774ad5725"></a><br/></td></tr>
 <tr class="memitem:a307ebe4328776d9232b510a5ce02ab0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a307ebe4328776d9232b510a5ce02ab0c">xval</a> (double x) const </td></tr>
 <tr class="memdesc:a307ebe4328776d9232b510a5ce02ab0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a307ebe4328776d9232b510a5ce02ab0c"></a><br/></td></tr>
 <tr class="memitem:ac357388d4f812289867ff6ae703e2c28"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#ac357388d4f812289867ff6ae703e2c28">uval</a> (double u) const </td></tr>
 <tr class="memdesc:ac357388d4f812289867ff6ae703e2c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in frequency space.  <a href="#ac357388d4f812289867ff6ae703e2c28"></a><br/></td></tr>
-<tr class="memitem:aa38d4ca89131ead4c98ebf6fedcfa58b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#aa38d4ca89131ead4c98ebf6fedcfa58b">uCalc</a> (double u) const </td></tr>
 <tr class="memitem:abe7a2ca5a0f7d909864e28a10140eeea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#abe7a2ca5a0f7d909864e28a10140eeea">getPositiveFlux</a> () const </td></tr>
-<tr class="memdesc:abe7a2ca5a0f7d909864e28a10140eeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override numerical calculation with known analytic integral.  <a href="#abe7a2ca5a0f7d909864e28a10140eeea"></a><br/></td></tr>
+<tr class="memdesc:abe7a2ca5a0f7d909864e28a10140eeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel.  <a href="#abe7a2ca5a0f7d909864e28a10140eeea"></a><br/></td></tr>
 <tr class="memitem:a412ad573b026920e9f004d2303bbc548"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html#a412ad573b026920e9f004d2303bbc548">getNegativeFlux</a> () const </td></tr>
-<tr class="memdesc:a412ad573b026920e9f004d2303bbc548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override numerical calculation with known analytic integral.  <a href="#a412ad573b026920e9f004d2303bbc548"></a><br/></td></tr>
+<tr class="memdesc:a412ad573b026920e9f004d2303bbc548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (absolute value of) integral of the negative portions of the kernel.  <a href="#a412ad573b026920e9f004d2303bbc548"></a><br/></td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
@@ -217,7 +218,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override numerical calculation with known analytic integral. </p>
+<p>Return the (absolute value of) integral of the negative portions of the kernel. </p>
+<p>Should return 0 unless the kernel has negative portions. Default is to ask the numerical sampler for its stored value.</p>
+<dl class="section return"><dt>Returns:</dt><dd>Integral of abs value of negative portions of kernel </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#a02f9d0cb2a63f1f5421a791713a4be6d">galsim::Interpolant</a>.</p>
 
@@ -244,7 +247,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override numerical calculation with known analytic integral. </p>
+<p>Return the integral of the positive portions of the kernel. </p>
+<p>Should return 1 unless the kernel has negative portions. Default is to ask the numerical sampler for its stored value.</p>
+<dl class="section return"><dt>Returns:</dt><dd>Integral of positive portions of kernel </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#a1b1d24856db9c3b715b8e8a7326623dc">galsim::Interpolant</a>.</p>
 
@@ -305,6 +310,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7a4a278c747156a0a7a53731386cf1a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::Cubic::ixrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The total range as an integer. Typically <a class="el" href="classgalsim_1_1_cubic.html#a2b551f607069fbd6756df3e9c27e18d0" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_interpolant.html#a77a070b92ce48f3f05eee733ffd994fb">galsim::Interpolant</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adf88d2c8548b5280603dfcf535d71262"></a>
 <div class="memitem">
 <div class="memproto">
@@ -349,22 +381,6 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns:</dt><dd>a <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing the vector of displacements for interpolation kernel. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classgalsim_1_1_linear.html#ad50095005b6b0fbb6e5566a15c441efd">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a5941d81dcfc0b3c5c9cc15d531ab47fe">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#acd2e9e524e82add75923473343ea948a">galsim::Delta</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa38d4ca89131ead4c98ebf6fedcfa58b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Cubic::uCalc </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>u</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

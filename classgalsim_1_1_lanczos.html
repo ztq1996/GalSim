@@ -114,15 +114,17 @@ Inheritance diagram for galsim::Lanczos:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1babcdf239e8b64b5bf24f7a230417c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ae1babcdf239e8b64b5bf24f7a230417c">Lanczos</a> (int n, bool fluxConserve=true, double tol=1.e-4, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
-<tr class="memdesc:ae1babcdf239e8b64b5bf24f7a230417c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae1babcdf239e8b64b5bf24f7a230417c"></a><br/></td></tr>
+<tr class="memitem:a0a7ce7342152fde303a03907369f724b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a0a7ce7342152fde303a03907369f724b">Lanczos</a> (int n, bool conserve_flux=true, double tol=1.e-4, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
+<tr class="memdesc:a0a7ce7342152fde303a03907369f724b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0a7ce7342152fde303a03907369f724b"></a><br/></td></tr>
 <tr class="memitem:a5e462cccaa59c2b4210ad516c975aaf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a5e462cccaa59c2b4210ad516c975aaf3">~Lanczos</a> ()</td></tr>
-<tr class="memitem:afbd265cac5e9b7aa688b10fe5d890437"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">getTolerance</a> () const </td></tr>
-<tr class="memdesc:afbd265cac5e9b7aa688b10fe5d890437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#afbd265cac5e9b7aa688b10fe5d890437"></a><br/></td></tr>
 <tr class="memitem:ad619f8ec7d4bfaee75c89cf4446955f7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7">xrange</a> () const </td></tr>
 <tr class="memdesc:ad619f8ec7d4bfaee75c89cf4446955f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#ad619f8ec7d4bfaee75c89cf4446955f7"></a><br/></td></tr>
+<tr class="memitem:a8eacbfc60f841e7edcad1601a26f6d5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a8eacbfc60f841e7edcad1601a26f6d5b">ixrange</a> () const </td></tr>
+<tr class="memdesc:a8eacbfc60f841e7edcad1601a26f6d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total range as an integer. Typically <a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange.  <a href="#a8eacbfc60f841e7edcad1601a26f6d5b"></a><br/></td></tr>
 <tr class="memitem:a7ddabea5f2f38c1e6f3b311cc0e0d459"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a7ddabea5f2f38c1e6f3b311cc0e0d459">urange</a> () const </td></tr>
 <tr class="memdesc:a7ddabea5f2f38c1e6f3b311cc0e0d459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in u space (cycles per pixel)  <a href="#a7ddabea5f2f38c1e6f3b311cc0e0d459"></a><br/></td></tr>
+<tr class="memitem:afbd265cac5e9b7aa688b10fe5d890437"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">getTolerance</a> () const </td></tr>
+<tr class="memdesc:afbd265cac5e9b7aa688b10fe5d890437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#afbd265cac5e9b7aa688b10fe5d890437"></a><br/></td></tr>
 <tr class="memitem:a6f9351713fd6c09096a6cda2111afad3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a6f9351713fd6c09096a6cda2111afad3">xval</a> (double x) const </td></tr>
 <tr class="memdesc:a6f9351713fd6c09096a6cda2111afad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a6f9351713fd6c09096a6cda2111afad3"></a><br/></td></tr>
 <tr class="memitem:a0f8b6aa10783c0a903d73fc50f3f88ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a0f8b6aa10783c0a903d73fc50f3f88ff">uval</a> (double u) const </td></tr>
@@ -143,9 +145,9 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n. </p>
 <p>The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> filter is an approximation to the band-limiting sinc filter with a smooth cutoff at high x. Order n <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> has a range of +/- n pixels. It typically is a good compromise between kernel size and accuracy.</p>
 <p>The filter has accuracy parameters <code>xvalue_accuracy</code> and <code>kvalue_accuracy</code> that relate to the accuracy of building the initial lookup table. For now, these are fixed in src/Interpolant.cpp to be 0.1 times the input <code>tol</code> value, where <code>tol</code> is typically very small already (default 1e-4).</p>
-<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting fluxConserve in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
+<p>Note that pure <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a>, when interpolating a set of constant-valued samples, does not return this constant. Setting conserve_flux in the constructor tweaks the function so that it approximately conserves the value of constant (DC) input data. Only the first order correction is applied, which should be accurate to about 1.e-5. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae1babcdf239e8b64b5bf24f7a230417c"></a>
+<a class="anchor" id="a0a7ce7342152fde303a03907369f724b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -159,7 +161,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fluxConserve</em> = <code>true</code>, </td>
+          <td class="paramname"><em>conserve_flux</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -185,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Filter order; must be given on input and cannot be changed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fluxConserve</td><td>Set true to adjust filter to be more nearly correct for constant inputs. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conserve_flux</td><td>Set true to adjust filter to be more nearly correct for constant inputs. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tol</td><td>Sets accuracy and extent of Fourier transform. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of operations, if different from the default. </td></tr>
   </table>
@@ -320,6 +322,33 @@ Public Member Functions</h2></td></tr>
 <p>Report whether interpolation will reproduce values at samples. </p>
 <p>This will return true if the interpolant is exact at nodes, meaning that F(0)=1 and F(n)=0 for non-zero integer n. Right now this is true for every implementation.</p>
 <dl class="section return"><dt>Returns:</dt><dd>True if samples are returned exactly. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8eacbfc60f841e7edcad1601a26f6d5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::Lanczos::ixrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The total range as an integer. Typically <a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_interpolant.html#a77a070b92ce48f3f05eee733ffd994fb">galsim::Interpolant</a>.</p>
 
 </div>
 </div>

@@ -114,9 +114,9 @@ Inheritance diagram for galsim::SBInterpolatedImage:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad902e9ef6d8e8d56ef738d1012cd77b9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad902e9ef6d8e8d56ef738d1012cd77b9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#ad902e9ef6d8e8d56ef738d1012cd77b9">SBInterpolatedImage</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; xInterp, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; kInterp, double dx, double pad_factor, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt; pad_image, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
-<tr class="memdesc:ad902e9ef6d8e8d56ef738d1012cd77b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize internal quantities and allocate data tables based on a supplied 2D image.  <a href="#ad902e9ef6d8e8d56ef738d1012cd77b9"></a><br/></td></tr>
+<tr class="memitem:aed10be92ae870a4e01e004ffecb89ce0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aed10be92ae870a4e01e004ffecb89ce0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#aed10be92ae870a4e01e004ffecb89ce0">SBInterpolatedImage</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; xInterp, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; kInterp, double dx, double pad_factor, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt; pad_image, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memdesc:aed10be92ae870a4e01e004ffecb89ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize internal quantities and allocate data tables based on a supplied 2D image.  <a href="#aed10be92ae870a4e01e004ffecb89ce0"></a><br/></td></tr>
 <tr class="memitem:a7abc50ba2a0d56d6f22945f407656925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#a7abc50ba2a0d56d6f22945f407656925">SBInterpolatedImage</a> (const <a class="el" href="classgalsim_1_1_multiple_image_helper.html">MultipleImageHelper</a> &amp;multi, const std::vector&lt; double &gt; &amp;weights, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; xInterp, boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_interpolant2d.html">Interpolant2d</a> &gt; kInterp, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
 <tr class="memdesc:a7abc50ba2a0d56d6f22945f407656925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize internal quantities and allocate data tables based on a supplied 2D image.  <a href="#a7abc50ba2a0d56d6f22945f407656925"></a><br/></td></tr>
 <tr class="memitem:aa5f5d2d4f2ec2cf2d36069b8a5d972e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_interpolated_image.html#aa5f5d2d4f2ec2cf2d36069b8a5d972e0">SBInterpolatedImage</a> (const <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html">SBInterpolatedImage</a> &amp;rhs)</td></tr>
@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
 <p>There are also optional arguments for the pixel size (default is to get it from the image), and a factor by which to pad the image (default = 4).</p>
 <p>You can also make an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a> as a weighted sum of several images using <a class="el" href="classgalsim_1_1_multiple_image_helper.html" title="A Helper class that stores multiple images and their fourier transforms.">MultipleImageHelper</a>. This helper object holds the images and their fourier transforms, so it is efficient to make many SBInterpolatedImages with different weight vectors. This version does not take the <code>dx</code> or <code>pad_factor</code> parameters, since these are set in the <a class="el" href="classgalsim_1_1_multiple_image_helper.html" title="A Helper class that stores multiple images and their fourier transforms.">MultipleImageHelper</a> constructor. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad902e9ef6d8e8d56ef738d1012cd77b9"></a>
+<a class="anchor" id="aed10be92ae870a4e01e004ffecb89ce0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -247,7 +247,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_image.html">Image</a>&lt; T &gt; &gt;&#160;</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &gt;&#160;</td>
           <td class="paramname"><em>pad_image</em>, </td>
         </tr>
         <tr>

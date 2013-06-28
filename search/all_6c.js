@@ -1,7 +1,7 @@
 var searchData=
 [
   ['lanczos',['Lanczos',['../classgalsim_1_1_lanczos.html',1,'galsim']]],
-  ['lanczos',['Lanczos',['../classgalsim_1_1_lanczos.html#ae1babcdf239e8b64b5bf24f7a230417c',1,'galsim::Lanczos']]],
+  ['lanczos',['Lanczos',['../classgalsim_1_1_lanczos.html#a0a7ce7342152fde303a03907369f724b',1,'galsim::Lanczos']]],
   ['left',['left',['../structgalsim_1_1integ_1_1_int_region.html#aa90002ee33125a0eee9dd74b91ff9f21',1,'galsim::integ::IntRegion']]],
   ['lensing_5fps_2epy',['lensing_ps.py',['../lensing__ps_8py.html',1,'']]],
   ['linear',['Linear',['../classgalsim_1_1_linear.html',1,'galsim']]],

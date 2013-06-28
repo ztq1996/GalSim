@@ -128,16 +128,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a60d75d58eed81b3064872c64adf8cdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a60d75d58eed81b3064872c64adf8cdcb"></a><br/></td></tr>
 <tr class="memitem:a700240500435a2dad54f0a72c2ff604e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a700240500435a2dad54f0a72c2ff604e">xrange</a> () const =0</td></tr>
 <tr class="memdesc:a700240500435a2dad54f0a72c2ff604e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#a700240500435a2dad54f0a72c2ff604e"></a><br/></td></tr>
+<tr class="memitem:a77a070b92ce48f3f05eee733ffd994fb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a77a070b92ce48f3f05eee733ffd994fb">ixrange</a> () const =0</td></tr>
+<tr class="memdesc:a77a070b92ce48f3f05eee733ffd994fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total range as an integer. Typically <a class="el" href="classgalsim_1_1_interpolant.html#a700240500435a2dad54f0a72c2ff604e" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange.  <a href="#a77a070b92ce48f3f05eee733ffd994fb"></a><br/></td></tr>
 <tr class="memitem:aa75275dce4c0ea81de6d5172e902ee0c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#aa75275dce4c0ea81de6d5172e902ee0c">urange</a> () const =0</td></tr>
 <tr class="memdesc:aa75275dce4c0ea81de6d5172e902ee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in u space (cycles per pixel)  <a href="#aa75275dce4c0ea81de6d5172e902ee0c"></a><br/></td></tr>
+<tr class="memitem:ad628ad52cd50055ed1af1d83a6d25007"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#ad628ad52cd50055ed1af1d83a6d25007">getTolerance</a> () const =0</td></tr>
+<tr class="memdesc:ad628ad52cd50055ed1af1d83a6d25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad628ad52cd50055ed1af1d83a6d25007"></a><br/></td></tr>
 <tr class="memitem:a4e1de0781f317461a53ff0ea463454ae"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a4e1de0781f317461a53ff0ea463454ae">xval</a> (double x) const =0</td></tr>
 <tr class="memdesc:a4e1de0781f317461a53ff0ea463454ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a4e1de0781f317461a53ff0ea463454ae"></a><br/></td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971"></a><br/></td></tr>
 <tr class="memitem:a79ea4025b2d035114ff49ac0a079de5d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a79ea4025b2d035114ff49ac0a079de5d">uval</a> (double u) const =0</td></tr>
 <tr class="memdesc:a79ea4025b2d035114ff49ac0a079de5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in frequency space.  <a href="#a79ea4025b2d035114ff49ac0a079de5d"></a><br/></td></tr>
-<tr class="memitem:ad628ad52cd50055ed1af1d83a6d25007"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#ad628ad52cd50055ed1af1d83a6d25007">getTolerance</a> () const =0</td></tr>
-<tr class="memdesc:ad628ad52cd50055ed1af1d83a6d25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#ad628ad52cd50055ed1af1d83a6d25007"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
 <tr class="memdesc:a9ab7c3d0433bc6b59714c454b2434df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report whether interpolation will reproduce values at samples.  <a href="#a9ab7c3d0433bc6b59714c454b2434df0"></a><br/></td></tr>
 <tr class="memitem:a1b1d24856db9c3b715b8e8a7326623dc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a1b1d24856db9c3b715b8e8a7326623dc">getPositiveFlux</a> () const </td></tr>
@@ -303,7 +305,7 @@ Public Member Functions</h2></td></tr>
 <p>Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated. </p>
 <dl class="section return"><dt>Returns:</dt><dd>Targeted accuracy </dd></dl>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#afd3be792d3e16ffb6faafcb34882772a">galsim::Delta</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#ae3fea861cc7a886d51676405e290b9ee">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ad56556c04eba6e8fb7067ec774ad5725">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#ae7228ec7b641762a8db33f196618b788">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a0cadb8131e71ed5eb49777e901f2bd46">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#afd3be792d3e16ffb6faafcb34882772a">galsim::Delta</a>.</p>
 
 </div>
 </div>
@@ -331,6 +333,33 @@ Public Member Functions</h2></td></tr>
 <p>Report whether interpolation will reproduce values at samples. </p>
 <p>This will return true if the interpolant is exact at nodes, meaning that F(0)=1 and F(n)=0 for non-zero integer n. Right now this is true for every implementation.</p>
 <dl class="section return"><dt>Returns:</dt><dd>True if samples are returned exactly. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a77a070b92ce48f3f05eee733ffd994fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int galsim::Interpolant::ixrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The total range as an integer. Typically <a class="el" href="classgalsim_1_1_interpolant.html#a700240500435a2dad54f0a72c2ff604e" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange. </p>
+
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#a8eacbfc60f841e7edcad1601a26f6d5b">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#aafb3c6bf75ee0f5162c52f2693c8e2ec">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#a7a4a278c747156a0a7a53731386cf1a3">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#a2a50efcbe141b894ea55d02d35052031">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#adc4d85318cde9ff7fd17fa60185e81e1">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#aa56627001ee1779bc922fe745802ea6e">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a96d50764d4aafa90e57a3db21cf6fd21">galsim::Delta</a>.</p>
 
 </div>
 </div>
@@ -405,7 +434,7 @@ Public Member Functions</h2></td></tr>
 <p>Maximum extent of interpolant from origin in u space (cycles per pixel) </p>
 <dl class="section return"><dt>Returns:</dt><dd>Range of non-zero values of interpolant in u space </dd></dl>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#a9a621aa1f6fb605aeea990282e5cff18">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ace2024b4ec2375f0fd1754e536abba8f">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#a7ddabea5f2f38c1e6f3b311cc0e0d459">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#aecf1c77fdb9ab08c8391a0343b17a59d">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a76fe6bebf31b88eafd2078df229ac880">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a401703e89001d8006f4ff2cb0213de71">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#aac202c9dfddfaa77e10d71d6d4cd49e3">galsim::Delta</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#a7ddabea5f2f38c1e6f3b311cc0e0d459">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#a9a621aa1f6fb605aeea990282e5cff18">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ace2024b4ec2375f0fd1754e536abba8f">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#aecf1c77fdb9ab08c8391a0343b17a59d">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a76fe6bebf31b88eafd2078df229ac880">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a401703e89001d8006f4ff2cb0213de71">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#aac202c9dfddfaa77e10d71d6d4cd49e3">galsim::Delta</a>.</p>
 
 </div>
 </div>
@@ -440,7 +469,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>Value of interpolant, normalized so uval(0) = 1 for flux-conserving interpolation. </dd></dl>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#a4d55afe18232e525bc64e7af65103b41">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ac357388d4f812289867ff6ae703e2c28">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#a0f8b6aa10783c0a903d73fc50f3f88ff">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#a42149590fdfe0ae248d213598164c596">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a2e2e619673c03d9bf45165b9198719e8">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#aa65d664597351ed25ca3b4a57f9fdf81">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#af47c2f9ba87e031d9a9f0a2b3571587d">galsim::Delta</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#a0f8b6aa10783c0a903d73fc50f3f88ff">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#a4d55afe18232e525bc64e7af65103b41">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#ac357388d4f812289867ff6ae703e2c28">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#a42149590fdfe0ae248d213598164c596">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a2e2e619673c03d9bf45165b9198719e8">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#aa65d664597351ed25ca3b4a57f9fdf81">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#af47c2f9ba87e031d9a9f0a2b3571587d">galsim::Delta</a>.</p>
 
 </div>
 </div>
@@ -468,7 +497,7 @@ Public Member Functions</h2></td></tr>
 <p>Maximum extent of interpolant from origin in x space (pixels) </p>
 <dl class="section return"><dt>Returns:</dt><dd>Range of non-zero values of interpolant. </dd></dl>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#a3269be329e4eaae04b23327dd652982f">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#a2b551f607069fbd6756df3e9c27e18d0">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#a37f883b180dd35e55de9f78e8a789dfe">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a2ffba89ef5d335c7902aa458c7861a24">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#aa578578643261563a6508c260c985817">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a18475aac8ce0b36675407b289af39b74">galsim::Delta</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#a3269be329e4eaae04b23327dd652982f">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#a2b551f607069fbd6756df3e9c27e18d0">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#a37f883b180dd35e55de9f78e8a789dfe">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a2ffba89ef5d335c7902aa458c7861a24">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#aa578578643261563a6508c260c985817">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a18475aac8ce0b36675407b289af39b74">galsim::Delta</a>.</p>
 
 </div>
 </div>
@@ -503,7 +532,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>Value of interpolant </dd></dl>
 
-<p>Implemented in <a class="el" href="classgalsim_1_1_quintic.html#a4733ac96cc5d9defbee4b89bea24f35f">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#a307ebe4328776d9232b510a5ce02ab0c">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_lanczos.html#a6f9351713fd6c09096a6cda2111afad3">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_linear.html#a11817ec36b9b5a8d88447c1cf985f62c">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a6513b5dcbc5c566c7ae0082c23ab622a">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a48e7867934d813a124b3a1a211480ab8">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a708c2a15f9c6224d69f41c63161cfaa9">galsim::Delta</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_lanczos.html#a6f9351713fd6c09096a6cda2111afad3">galsim::Lanczos</a>, <a class="el" href="classgalsim_1_1_quintic.html#a4733ac96cc5d9defbee4b89bea24f35f">galsim::Quintic</a>, <a class="el" href="classgalsim_1_1_cubic.html#a307ebe4328776d9232b510a5ce02ab0c">galsim::Cubic</a>, <a class="el" href="classgalsim_1_1_linear.html#a11817ec36b9b5a8d88447c1cf985f62c">galsim::Linear</a>, <a class="el" href="classgalsim_1_1_sinc_interpolant.html#a6513b5dcbc5c566c7ae0082c23ab622a">galsim::SincInterpolant</a>, <a class="el" href="classgalsim_1_1_nearest.html#a48e7867934d813a124b3a1a211480ab8">galsim::Nearest</a>, and <a class="el" href="classgalsim_1_1_delta.html#a708c2a15f9c6224d69f41c63161cfaa9">galsim::Delta</a>.</p>
 
 </div>
 </div>

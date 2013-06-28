@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k_5finterpolant',['k_interpolant',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#aac3af99a2355efe2a1eb6367a839075e',1,'galsim.interpolatedimage.InterpolatedImage.k_interpolant()'],['../classgalsim_1_1real_1_1_real_galaxy.html#a74a1e58ec1e9d3f19b292df7789984a1',1,'galsim.real.RealGalaxy.k_interpolant()']]],
+  ['k_5finterpolant',['k_interpolant',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#aac3af99a2355efe2a1eb6367a839075e',1,'galsim::interpolatedimage::InterpolatedImage']]],
   ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing__ps.html#a979b775d8fe6f324ebf32fc304a64b09',1,'galsim::lensing_ps']]],
   ['keys',['keys',['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim::fits::FitsHeader']]],
   ['kolmogorov',['Kolmogorov',['../classgalsim_1_1base_1_1_kolmogorov.html',1,'galsim::base']]],

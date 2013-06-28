@@ -117,12 +117,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a205a33fab86c584fa556851617858b98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a205a33fab86c584fa556851617858b98">Nearest</a> (double tol=1.e-3, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams=<a class="el" href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">GSParamsPtr::getDefault</a>())</td></tr>
 <tr class="memdesc:a205a33fab86c584fa556851617858b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a205a33fab86c584fa556851617858b98"></a><br/></td></tr>
 <tr class="memitem:a2442c76040c21cae2eaff1301f77618e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a2442c76040c21cae2eaff1301f77618e">~Nearest</a> ()</td></tr>
-<tr class="memitem:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">getTolerance</a> () const </td></tr>
-<tr class="memdesc:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#acd3ac70d5a0690d3d4a64a1a05f85be6"></a><br/></td></tr>
 <tr class="memitem:aa578578643261563a6508c260c985817"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#aa578578643261563a6508c260c985817">xrange</a> () const </td></tr>
 <tr class="memdesc:aa578578643261563a6508c260c985817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in x space (pixels)  <a href="#aa578578643261563a6508c260c985817"></a><br/></td></tr>
+<tr class="memitem:aa56627001ee1779bc922fe745802ea6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#aa56627001ee1779bc922fe745802ea6e">ixrange</a> () const </td></tr>
+<tr class="memdesc:aa56627001ee1779bc922fe745802ea6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total range as an integer. Typically <a class="el" href="classgalsim_1_1_nearest.html#aa578578643261563a6508c260c985817" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange.  <a href="#aa56627001ee1779bc922fe745802ea6e"></a><br/></td></tr>
 <tr class="memitem:a401703e89001d8006f4ff2cb0213de71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a401703e89001d8006f4ff2cb0213de71">urange</a> () const </td></tr>
 <tr class="memdesc:a401703e89001d8006f4ff2cb0213de71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extent of interpolant from origin in u space (cycles per pixel)  <a href="#a401703e89001d8006f4ff2cb0213de71"></a><br/></td></tr>
+<tr class="memitem:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#acd3ac70d5a0690d3d4a64a1a05f85be6">getTolerance</a> () const </td></tr>
+<tr class="memdesc:acd3ac70d5a0690d3d4a64a1a05f85be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is calculated.  <a href="#acd3ac70d5a0690d3d4a64a1a05f85be6"></a><br/></td></tr>
 <tr class="memitem:a48e7867934d813a124b3a1a211480ab8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a48e7867934d813a124b3a1a211480ab8">xval</a> (double x) const </td></tr>
 <tr class="memdesc:a48e7867934d813a124b3a1a211480ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a48e7867934d813a124b3a1a211480ab8"></a><br/></td></tr>
 <tr class="memitem:aa65d664597351ed25ca3b4a57f9fdf81"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#aa65d664597351ed25ca3b4a57f9fdf81">uval</a> (double u) const </td></tr>
@@ -132,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a43ab8562e5a730252a8e52b2bf316700"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a43ab8562e5a730252a8e52b2bf316700">getNegativeFlux</a> () const </td></tr>
 <tr class="memdesc:a43ab8562e5a730252a8e52b2bf316700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (absolute value of) integral of the negative portions of the kernel.  <a href="#a43ab8562e5a730252a8e52b2bf316700"></a><br/></td></tr>
 <tr class="memitem:a9a5769bb133a07da5468cf87d367627f"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_nearest.html#a9a5769bb133a07da5468cf87d367627f">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
-<tr class="memdesc:a9a5769bb133a07da5468cf87d367627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearest-neighbor interpolant photon shooting is a simple <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> call.  <a href="#a9a5769bb133a07da5468cf87d367627f"></a><br/></td></tr>
+<tr class="memdesc:a9a5769bb133a07da5468cf87d367627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#a9a5769bb133a07da5468cf87d367627f"></a><br/></td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971"></a><br/></td></tr>
 <tr class="memitem:a9ab7c3d0433bc6b59714c454b2434df0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a9ab7c3d0433bc6b59714c454b2434df0">isExactAtNodes</a> () const </td></tr>
@@ -307,6 +309,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa56627001ee1779bc922fe745802ea6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::Nearest::ixrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The total range as an integer. Typically <a class="el" href="classgalsim_1_1_nearest.html#aa578578643261563a6508c260c985817" title="Maximum extent of interpolant from origin in x space (pixels)">xrange()</a> == 0.5 * ixrange. </p>
+
+<p>Implements <a class="el" href="classgalsim_1_1_interpolant.html#a77a070b92ce48f3f05eee733ffd994fb">galsim::Interpolant</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9a5769bb133a07da5468cf87d367627f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -339,7 +368,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Nearest-neighbor interpolant photon shooting is a simple <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> call. </p>
+<p>Return array of displacements drawn from this kernel. </p>
+<p>Since <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> is 1d, will use only x array of <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a>. It will be assumed that photons returned are randomly ordered (no need to shuffle them). Also assumed that all photons will have nearly equal absolute value of flux. Total flux returned may not equal 1 due to shot noise in negative/positive photons, and small fluctuations in photon weights.</p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>number of photons to shoot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ud</td><td><a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a> used to generate random values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>a <a class="el" href="classgalsim_1_1_photon_array.html" title="Class to hold a list of &quot;photon&quot; arrival positions.">PhotonArray</a> containing the vector of displacements for interpolation kernel. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classgalsim_1_1_interpolant.html#adf88d2c8548b5280603dfcf535d71262">galsim::Interpolant</a>.</p>
 

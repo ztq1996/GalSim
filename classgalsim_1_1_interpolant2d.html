@@ -117,19 +117,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abdbfd3e34ca42aafa25e0e854690aa1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#abdbfd3e34ca42aafa25e0e854690aa1b">Interpolant2d</a> ()</td></tr>
 <tr class="memitem:a2197889c68b050030db607cfa304295d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a2197889c68b050030db607cfa304295d">~Interpolant2d</a> ()</td></tr>
 <tr class="memitem:a26da285da10b455fb583a51a21aab231"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a26da285da10b455fb583a51a21aab231">xrange</a> () const =0</td></tr>
+<tr class="memitem:a969d716e765babc142ed1d77515cd1dc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a969d716e765babc142ed1d77515cd1dc">ixrange</a> () const =0</td></tr>
 <tr class="memitem:a10ee84591384b2f8918b4efa98c508a0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a10ee84591384b2f8918b4efa98c508a0">urange</a> () const =0</td></tr>
+<tr class="memitem:a3752c7992a73301c495bf6e72fc81312"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a3752c7992a73301c495bf6e72fc81312">getTolerance</a> () const =0</td></tr>
 <tr class="memitem:a3caf0648d00d75dfa1c7fd749ee34c75"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a3caf0648d00d75dfa1c7fd749ee34c75">xval</a> (double x, double y) const =0</td></tr>
 <tr class="memitem:a35a90990ef0d19696dd590f672514a3a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a35a90990ef0d19696dd590f672514a3a">xvalWrapped</a> (double x, double y, int N) const =0</td></tr>
 <tr class="memitem:a232ef6f086067f716163e45fe794b62f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a232ef6f086067f716163e45fe794b62f">uval</a> (double u, double v) const =0</td></tr>
-<tr class="memitem:a3752c7992a73301c495bf6e72fc81312"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a3752c7992a73301c495bf6e72fc81312">getTolerance</a> () const =0</td></tr>
-<tr class="memitem:abdb3086ffff98d62faae9d173f8d0618"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#abdb3086ffff98d62faae9d173f8d0618">isExactAtNodes</a> () const </td></tr>
-<tr class="memitem:a45ced6f49814938856babf668a0338ec"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a45ced6f49814938856babf668a0338ec">getPositiveFlux</a> () const </td></tr>
-<tr class="memdesc:a45ced6f49814938856babf668a0338ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integral of the positive portions of the kernel (default=1.)  <a href="#a45ced6f49814938856babf668a0338ec"></a><br/></td></tr>
-<tr class="memitem:aff71af490afb5ba526683a4cd44bd8b1"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#aff71af490afb5ba526683a4cd44bd8b1">getNegativeFlux</a> () const </td></tr>
-<tr class="memdesc:aff71af490afb5ba526683a4cd44bd8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (abs value of) integral of the negative portions of the kernel.  <a href="#aff71af490afb5ba526683a4cd44bd8b1"></a><br/></td></tr>
-<tr class="memitem:a2800b0afbd71a38768a9f05f1062043a"><td class="memItemLeft" align="right" valign="top">virtual boost::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a2800b0afbd71a38768a9f05f1062043a">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
-<tr class="memdesc:a2800b0afbd71a38768a9f05f1062043a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of displacements drawn from this kernel.  <a href="#a2800b0afbd71a38768a9f05f1062043a"></a><br/></td></tr>
+<tr class="memitem:a09171ad633de41602195e67a8022500b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a09171ad633de41602195e67a8022500b">isExactAtNodes</a> () const =0</td></tr>
+<tr class="memitem:a70e00183fb58a2ebad420a86780eca00"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a70e00183fb58a2ebad420a86780eca00">getPositiveFlux</a> () const =0</td></tr>
+<tr class="memitem:a3174323c9b0b96f79d2803fa56811d1b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#a3174323c9b0b96f79d2803fa56811d1b">getNegativeFlux</a> () const =0</td></tr>
+<tr class="memitem:aafecd570f496e8a0cf55fed623b99cba"><td class="memItemLeft" align="right" valign="top">virtual boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant2d.html#aafecd570f496e8a0cf55fed623b99cba">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const =0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Two-dimensional version of the <code><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a></code> interface. </p>
@@ -174,7 +172,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aff71af490afb5ba526683a4cd44bd8b1"></a>
+<a class="anchor" id="a3174323c9b0b96f79d2803fa56811d1b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -190,19 +188,16 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the (abs value of) integral of the negative portions of the kernel. </p>
-<p>Default=0. </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#af46ad8c69709782e26e60f6cdf1369ef">galsim::InterpolantXY</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#af46ad8c69709782e26e60f6cdf1369ef">galsim::InterpolantXY</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a45ced6f49814938856babf668a0338ec"></a>
+<a class="anchor" id="a70e00183fb58a2ebad420a86780eca00"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -218,14 +213,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the integral of the positive portions of the kernel (default=1.) </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a81bc07732f7b95107a6f351a40307ac5">galsim::InterpolantXY</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a81bc07732f7b95107a6f351a40307ac5">galsim::InterpolantXY</a>.</p>
 
 </div>
 </div>
@@ -254,7 +247,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abdb3086ffff98d62faae9d173f8d0618"></a>
+<a class="anchor" id="a09171ad633de41602195e67a8022500b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -270,16 +263,41 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a311aa2d28d4b106424019e69081da03b">galsim::InterpolantXY</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#adeed8b37046179343df7518f821e92d4">galsim::InterpolantXY</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2800b0afbd71a38768a9f05f1062043a"></a>
+<a class="anchor" id="a969d716e765babc142ed1d77515cd1dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int galsim::Interpolant2d::ixrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#af730ada8267588011727271b83ea2322">galsim::InterpolantXY</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafecd570f496e8a0cf55fed623b99cba"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -306,15 +324,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return array of displacements drawn from this kernel. </p>
-<p>Default is to throw an runtime_error </p>
-
-<p>Reimplemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a05b3d4223a1679d8aacd04ea3a0346db">galsim::InterpolantXY</a>.</p>
+<p>Implemented in <a class="el" href="classgalsim_1_1_interpolant_x_y.html#a05b3d4223a1679d8aacd04ea3a0346db">galsim::InterpolantXY</a>.</p>
 
 </div>
 </div>

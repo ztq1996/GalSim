@@ -147,8 +147,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a94cc40ed91c0ba42ce9dde4fd49e7ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel scale.  <a href="#a94cc40ed91c0ba42ce9dde4fd49e7ea4"></a><br/></td></tr>
 <tr class="memitem:a1b2f0e383636b33da939ca9660e75b13"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a1b2f0e383636b33da939ca9660e75b13">getBounds</a> () const </td></tr>
 <tr class="memdesc:a1b2f0e383636b33da939ca9660e75b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bounding box of the image.  <a href="#a1b2f0e383636b33da939ca9660e75b13"></a><br/></td></tr>
-<tr class="memitem:ac4787819c640456776f1140511cc4137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#ac4787819c640456776f1140511cc4137">getPaddedSize</a> (float pad_factor) const </td></tr>
-<tr class="memdesc:ac4787819c640456776f1140511cc4137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the image in one dimension after padding.  <a href="#ac4787819c640456776f1140511cc4137"></a><br/></td></tr>
 <tr class="memitem:a212b602fe0a42c1750c836447d153899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_base_image.html#ac50584bc6b4a7855e359dc20a0eb2526">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a212b602fe0a42c1750c836447d153899">rowBegin</a> (int y) const </td></tr>
 <tr class="memdesc:a212b602fe0a42c1750c836447d153899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator to the beginning of a row.  <a href="#a212b602fe0a42c1750c836447d153899"></a><br/></td></tr>
 <tr class="memitem:a6662e14a8b633e04b4a42e75243091ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_base_image.html#ac50584bc6b4a7855e359dc20a0eb2526">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_image.html#a6662e14a8b633e04b4a42e75243091ae">rowEnd</a> (int y) const </td></tr>
@@ -459,26 +457,6 @@ template&lt;typename T&gt; </div>
 
 <p>Return a shared pointer that manages the lifetime of the image's pixels. </p>
 <p>The actual pointer will point to a parent image rather than the image itself if this is a subimage. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac4787819c640456776f1140511cc4137"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classgalsim_1_1_base_image.html">galsim::BaseImage</a>&lt; T &gt;::getPaddedSize </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pad_factor</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculate the size of the image in one dimension after padding. </p>
 
 </div>
 </div>

@@ -37,6 +37,7 @@ var searchData=
   ['operator_5b_5d',['operator[]',['../classgalsim_1_1_base_image.html#a6d3f11b42810b95dcee9ec3e38b2d263',1,'galsim::BaseImage::operator[]()'],['../classgalsim_1_1_image_view.html#a0b5d3c909b2fe37bf83c982445ecdd08',1,'galsim::ImageView::operator[]()'],['../classgalsim_1_1_image.html#a0cde079f9176d5e52ac5919aea9c3506',1,'galsim::Image::operator[](const Bounds&lt; int &gt; &amp;bounds)'],['../classgalsim_1_1_image.html#ac2d785e08fee9a85966556587dd4de33',1,'galsim::Image::operator[](const Bounds&lt; int &gt; &amp;bounds) const ']]],
   ['opticalpsf',['OpticalPSF',['../classgalsim_1_1optics_1_1_optical_p_s_f.html',1,'galsim::optics']]],
   ['optics_2epy',['optics.py',['../optics_8py.html',1,'']]],
+  ['orig_5fimage',['orig_image',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a2ca9b0f10f54abf8bebde2dfbd6b8155',1,'galsim::interpolatedimage::InterpolatedImage']]],
   ['original_5fimage',['original_image',['../classgalsim_1_1real_1_1_real_galaxy.html#abf162a7209a130179a752f5861230fe9',1,'galsim::real::RealGalaxy']]],
   ['original_5fpsf',['original_PSF',['../classgalsim_1_1real_1_1_real_galaxy.html#ac63856c5dfc98b41af21214c9323142f',1,'galsim::real::RealGalaxy']]],
   ['otf',['otf',['../namespacegalsim_1_1optics.html#a3d272c8bacce2fe18711a86724e96656',1,'galsim::optics']]],

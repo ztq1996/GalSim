@@ -174,12 +174,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sinc interpolation: inverse of Nearest-neighbor.  <a href="classgalsim_1_1_sinc_interpolant.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_linear.html">Linear</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant.">Linear</a> interpolant.  <a href="classgalsim_1_1_linear.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html">Lanczos</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.  <a href="classgalsim_1_1_lanczos.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_cubic.html">Cubic</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_cubic.html" title="Cubic interpolator exact to 3rd order Taylor expansion.">Cubic</a> interpolator exact to 3rd order Taylor expansion.  <a href="classgalsim_1_1_cubic.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_quintic.html">Quintic</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation.  <a href="classgalsim_1_1_quintic.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html">Lanczos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classgalsim_1_1_lanczos.html" title="The Lanczos interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.">Lanczos</a> interpolation filter, nominally sinc(x)*sinc(x/n), truncated at +/-n.  <a href="classgalsim_1_1_lanczos.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_l_r_u_cache_helper.html">LRUCacheHelper</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_l_r_u_cache_helper_3_01_value_00_01std_1_1pair_3_01_key1_00_01_key2_01_4_01_4.html">LRUCacheHelper&lt; Value, std::pair&lt; Key1, Key2 &gt; &gt;</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1_l_r_u_cache_helper_3_01_value_00_01boost_1_1tuple_3_01_key1_01_4_01_4.html">LRUCacheHelper&lt; Value, boost::tuple&lt; Key1 &gt; &gt;</a></td></tr>
@@ -347,13 +347,10 @@ tmv::FortranStyle|tmv::Upper &gt;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a14210f4e6f201aa5fce0eb3cec4277b2"><td class="memTemplItemLeft" align="right" valign="top">Op&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a14210f4e6f201aa5fce0eb3cec4277b2">transform_pixel</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T1 &gt; &amp;image1, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T2 &gt; &amp;image2, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T3 &gt; &amp;image3, Op <a class="el" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">f</a>)</td></tr>
 <tr class="memitem:ae8d0b1ab6c7756d3b95a44ed305d64ca"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename Op &gt; </td></tr>
 <tr class="memitem:ae8d0b1ab6c7756d3b95a44ed305d64ca"><td class="memTemplItemLeft" align="right" valign="top">Op&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ae8d0b1ab6c7756d3b95a44ed305d64ca">transform_pixel</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T1 &gt; &amp;image1, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T2 &gt; &amp;image2, const <a class="el" href="classgalsim_1_1_bounds.html">Bounds</a>&lt; int &gt; &amp;bounds, Op <a class="el" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">f</a>)</td></tr>
-<tr class="memitem:a9426d8521112046d0f4fe3fa35802949"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a9426d8521112046d0f4fe3fa35802949">sinc</a> (double x)</td></tr>
-<tr class="memdesc:a9426d8521112046d0f4fe3fa35802949"><td class="mdescLeft">&#160;</td><td class="mdescRight">sinc function, defined here as sin(Pi*x) / (Pi*x).  <a href="#a9426d8521112046d0f4fe3fa35802949"></a><br/></td></tr>
-<tr class="memitem:a111eda2d14d08867d4b13945708dbe5c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a111eda2d14d08867d4b13945708dbe5c">Si</a> (double x)</td></tr>
-<tr class="memdesc:a111eda2d14d08867d4b13945708dbe5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning integral of sinc function.  <a href="#a111eda2d14d08867d4b13945708dbe5c"></a><br/></td></tr>
 <tr class="memitem:abd34fc0e9c36b5625428ff318a596dd3"><td class="memTemplParams" colspan="2">template&lt;typename D , typename T &gt; </td></tr>
 <tr class="memitem:abd34fc0e9c36b5625428ff318a596dd3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#abd34fc0e9c36b5625428ff318a596dd3">ApplyDeviateToImage</a> (D &amp;dev, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;data)</td></tr>
 <tr class="memitem:ae031e4b0d07104bff8e5e27d9f914523"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ae031e4b0d07104bff8e5e27d9f914523">RealSpaceConvolve</a> (const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;p1, const <a class="el" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> &amp;p2, const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;pos, double flux, const <a class="el" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a> &amp;gsparams)</td></tr>
+<tr class="memitem:a0f2ea039141bafc7335fa222bfa89ee1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#a0f2ea039141bafc7335fa222bfa89ee1">getDefaultPadFactor</a> ()</td></tr>
 <tr class="memitem:ab9e130b285a92245c28c62f2d5a632a4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab9e130b285a92245c28c62f2d5a632a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim.html#ab9e130b285a92245c28c62f2d5a632a4">ShapeletFitImage</a> (double sigma, LVector &amp;bvec, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;image, const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;center)</td></tr>
 </table><table class="memberdecls">
@@ -799,6 +796,21 @@ template&lt;typename T , typename Op &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a0f2ea039141bafc7335fa222bfa89ee1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::getDefaultPadFactor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a31cf42cfadcad3532fd00a3e5403f3ae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1208,57 +1220,6 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a111eda2d14d08867d4b13945708dbe5c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::Si </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Function returning integral of sinc function. </p>
-<p>Utility for calculating the integral of sin(t)/t from 0 to x. Note the official definition does not have pi multiplying t. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Upper limit of integral </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>Integral of sin(t)/t from 0 to x (no pi factors) </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9426d8521112046d0f4fe3fa35802949"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::sinc </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>sinc function, defined here as sin(Pi*x) / (Pi*x). </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>sinc argument </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns:</dt><dd>sinc function </dd></dl>
 
 </div>
 </div>

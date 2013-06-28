@@ -26,6 +26,7 @@ var searchData=
   ['buildimage',['BuildImage',['../namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a',1,'galsim::config::image']]],
   ['buildimages',['BuildImages',['../namespacegalsim_1_1config_1_1image.html#a2c6a709c9c894f223063f759d23ca4e7',1,'galsim::config::image']]],
   ['buildmultifits',['BuildMultiFits',['../namespacegalsim_1_1config_1_1process.html#a1b40d58aa5d6dd2b55cc24f8b10e7ca4',1,'galsim::config::process']]],
+  ['buildnoisepadimage',['buildNoisePadImage',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a24ec49b43ea9a76eea435956afee7956',1,'galsim::interpolatedimage::InterpolatedImage']]],
   ['buildpix',['BuildPix',['../namespacegalsim_1_1config_1_1stamp.html#af3f4e767a41adc964ca1908bcb2b0393',1,'galsim::config::stamp']]],
   ['buildpsf',['BuildPSF',['../namespacegalsim_1_1config_1_1stamp.html#a501de6d6a10da1402ee65cfaacd5bedb',1,'galsim::config::stamp']]],
   ['buildscatteredimage',['BuildScatteredImage',['../namespacegalsim_1_1config_1_1image.html#ae7a8909abd72bba62dc1d92fb45e3a74',1,'galsim::config::image']]],

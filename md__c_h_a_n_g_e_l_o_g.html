@@ -190,7 +190,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added a simple prescription for adding diffraction spikes, due to secondary mirror / instrument support struts obscuring the pupil, to the OpticalPSF. (Issue #302)</li>
 </ul>
 <ul>
-<li>Fixed some bugs in the Sersic class that were leading to low level ringing features in the images when drawn with FFTs. In addition, now Sersic with n=0.5 or 1 agree with Gaussian and Exponential at the expected accuracy tolerance. (Issue #426) </li>
+<li>Fixed some bugs in the Sersic class that were leading to low level ringing features in the images when drawn with FFTs. In addition, now Sersic with n=0.5 or 1 agree with Gaussian and Exponential at the expected accuracy tolerance. (Issue #426)</li>
+</ul>
+<ul>
+<li>Fixed some bugs in the InterpolatedImage class, one related to padding of images with noise fields and one related to real-space convolution. (Issues #389, #432) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
