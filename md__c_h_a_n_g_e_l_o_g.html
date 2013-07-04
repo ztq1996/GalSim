@@ -85,6 +85,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added document describing the operations being carried out by the lensing engine when it draws shears according to a user-specified power spectrum. (Issue #248)</li>
 </ul>
 <ul>
+<li>Added a simple prescription for adding diffraction spikes, due to secondary mirror / instrument support struts obscuring the pupil, to the OpticalPSF. (Issue #302)</li>
+</ul>
+<ul>
 <li>Added the ability to draw lensing shears and convergences self-consistently from the same input shear power spectrum. (Issue #304)</li>
 </ul>
 <ul>
@@ -163,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added ability to truncate Sersic profiles with optional trunc parameter. (Issue #388)</li>
 </ul>
 <ul>
-<li>Added ability to specify Sersic profiles by the scale radius. (Issue #420)</li>
+<li>Fixed some bugs in the InterpolatedImage class, one related to padding of images with noise fields and one related to real-space convolution. (Issues #389, #432)</li>
 </ul>
 <ul>
 <li>Added trefoil to optical aberration. (Issue #390)</li>
@@ -187,13 +190,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Fixed some issues with image arithmetic (failure to check/respect shape and scale), added the ability to raise all elements in an image to a float/int power. (Issue #419)</li>
 </ul>
 <ul>
-<li>Added a simple prescription for adding diffraction spikes, due to secondary mirror / instrument support struts obscuring the pupil, to the OpticalPSF. (Issue #302)</li>
+<li>Added ability to specify Sersic profiles by the scale radius. (Issue #420)</li>
 </ul>
 <ul>
-<li>Fixed some bugs in the Sersic class that were leading to low level ringing features in the images when drawn with FFTs. In addition, now Sersic with n=0.5 or 1 agree with Gaussian and Exponential at the expected accuracy tolerance. (Issue #426)</li>
-</ul>
-<ul>
-<li>Fixed some bugs in the InterpolatedImage class, one related to padding of images with noise fields and one related to real-space convolution. (Issues #389, #432) </li>
+<li>Fixed some bugs in the Sersic class that were leading to low level ringing features in the images when drawn with FFTs. In addition, now Sersic with n=0.5 or 1 agree with Gaussian and Exponential at the expected accuracy tolerance. (Issue #426) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
