@@ -82,6 +82,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Below is a summary of the major changes with each new tagged version of GalSim. Each version also includes various other minor changes and bug fixes, which are not listed here for brevity. See the CHANGLELOG.md files associated with each version for a more complete list.</p>
+<h2>v0.5</h2>
+<ul>
+<li>Updates to functionality of specific classes:<ul>
+<li>Added Shapelet class (sub-class of GSObject) for describing shapelet profiles. (Issue #350)</li>
+<li>Improved speed and accuracy of non-truncated Moffat. (Issue #407)</li>
+<li>Added ability to specify Sersic profiles by the scale radius. (Issue #420)</li>
+<li>Added ability to truncate Sersic profiles with optional trunc parameter. (Issue #388)</li>
+<li>Added trefoil to optical aberration. (Issue #390)</li>
+<li>Added a simple prescription for adding diffraction spikes, due to secondary mirror / instrument support struts obscuring the pupil, to the OpticalPSF. (Issue #302)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Updates to lensing engine:<ul>
+<li>Added document describing the operations being carried out by the lensing engine when it draws shears according to a user-specified power spectrum. (Issue #248)</li>
+<li>Added the ability to draw lensing shears and convergences self-consistently from the same input shear power spectrum. (Issue #304)</li>
+<li>Added a utility that can take an input set of shears on a grid, and reconstruct the convergence. (Issue #304)</li>
+<li>Added <code>kmin_factor</code> and <code>kmax_factor</code> parameters to PowerSpectrum <code>buildGrid</code> function. (Issue #377)</li>
+<li>Added a new script, <a class="el" href="pse_8py.html" title="Module containing code for estimating shear power spectra from shears at gridded positions.">galsim/pse.py</a>, that contains a PowerSpectrumEstimator class that can be used to estimate the shear power spectrum from a set of shears defined on a grid. The main functionality of PowerSpectrumEstimator actually does not require an installed version of GalSim, just Python 2.6 or 2.7 and NumPy. (Issue #382)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Sped up the HSM module (Issue #340), changed HSM routines to require an explicit <code><a class="el" href="namespacegalsim_1_1hsm.html">galsim.hsm</a>.</code> prefix, and edited some of the function names. e.g. <code>galsim.EstimateShearHSM</code> -&gt; <code><a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines.">galsim.hsm.EstimateShear</a></code>. (Issue #372)</li>
+</ul>
+<ul>
+<li>Added the ability to modify parameters that control the precise rendering of GSObjects using the new GSParams class. (Issue #343, #426) Similarly, added the ability to modify algorithmic parameter settings for the moments and shape measurement routines using the new HSMParams class. (Issue #365)</li>
+</ul>
+<ul>
+<li>Made various speed improvements related to drawing images, both in real and Fourier space. (Issue #350)</li>
+</ul>
+<ul>
+<li>Changed <code>obj.draw()</code> to return the added_flux in addition to the image in parallel to existing behavior of <code>drawShoot</code>. (Issue #350)</li>
+</ul>
+<ul>
+<li>Added des module that add some DES-specific types and paves the way for adding similar modules for other telescopes/surveys. Specifically, there are classes for the two ways that DES measures PSFs: DES_Shapelet and DES_PSFEx, demoed in examples/des.py and examples/des.yaml. (Issue #350)</li>
+</ul>
+<ul>
+<li>The <code>ImageCorrFunc</code> has been superseded by the <code>CorrelatedNoise</code>, which like the <code>GaussianNoise</code>, <code>PoissonNoise</code> etc. classes inherits from the <code>BaseNoise</code>. The class contains all the correlation information represented by the <code>ImageCorrFunc</code>, as well as the random number generator required to apply noise. Similarly the get_COSMOS_CorrFunc() is replaced by the <a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">getCOSMOSNoise()</a> function, which now initializes a Noise model with a stored random number generator. The correlated noise classes now have an applyWhiteningTo() method. (Issue #352)</li>
+</ul>
+<ul>
+<li>Changed the default centering convention for even-sized images to be in the actual center, rather than 1/2 pixel up and to the right of the center. This behavior can be turned off with a use_true_center=False keyword in draw or drawShoot. (Issue #380)</li>
+</ul>
+<ul>
+<li>Updates to config:<ul>
+<li>Added index_convention option in config to allow for images with (0,0) as the origin rather than the usual (1,1). (Issue #380)</li>
+<li>Changed the name of the center item for the Scattered image type to image_pos, and added a new sky_pos which can instead specify the location of the object in sky coordinates (typically arcsec) relative to the image center. (Issue #380)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Added LINKFLAGS to the list of SCons options to pass flags to the linker. (Issue #380)</li>
+</ul>
+<ul>
+<li>File i/o:<ul>
+<li>Enabled InputCatalog to read FITS catalogs. (Issue #350)</li>
+<li>Added FitsHeader class and config option. (Issue #350)</li>
+<li>Added the ability to read/write to a specific HDU rather than assuming the first hdu should be used. (Issue #350)</li>
+<li>Fix some errors in code and documentation of the fits module related to writing to an HDUList. (Issue #417)</li>
+<li>Add new function <code><a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file.">galsim.fits.writeFile</a></code>. (Issue #417)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Basic bug fixes:<ul>
+<li>Fixed some bugs in the Sersic class that were leading to low level ringing features in the images when drawn with FFTs. (Issue #426)</li>
+<li>Fixed some issues with image arithmetic (failure to check/respect shape and scale). (Issue #419)</li>
+<li>Fix bugs in <code>obj.drawK()</code> function. (Issue #407)</li>
+<li>Fixed some bugs in the InterpolatedImage class, one related to padding of images with noise fields and one related to real-space convolution. (Issues #389, #432)</li>
+<li>Fixed bug in draw routine that led to spurious shears when an object is shifted or otherwise not radially symmetric. (Issue #380)</li>
+<li>Bug fixed in the generation of correlated noise fields; formerly these erroneously had two-fold rotational symmetry. (Issue #352)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Deprecated <code>AtmosphericPSF</code> and <code>Ellipse</code> classes. (Issue #372) (They will both eventually be replaced by significantly different functionality, so they should not be used.)</li>
+</ul>
 <h2>v0.4</h2>
 <ul>
 <li>Added ability to pad images for InterpolatedImage or RealGalaxy with either correlated or uncorrelated noise. (Issue #238)</li>

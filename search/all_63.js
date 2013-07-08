@@ -69,5 +69,5 @@ var searchData=
   ['createshifted',['createShifted',['../classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126',1,'galsim::base::GSObject']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html#a7e8b983e7b2cf9459b45f6ede20aaecf',1,'galsim::Cubic']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]],
-  ['changes_20from_20v0_2e4_20to_20current_20version_3a',['Changes from v0.4 to current version:',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
+  ['changes_20from_20v0_2e5_20to_20current_20version_3a',['Changes from v0.5 to current version:',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
 ];
