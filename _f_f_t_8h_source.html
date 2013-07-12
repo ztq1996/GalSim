@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">class </span>FFTError : <span class="keyword">public</span> std::runtime_error </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        FFTError(<span class="keyword">const</span> std::string&amp; m=<span class="stringliteral">&quot;&quot;</span>) : std::runtime_error(<span class="stringliteral">&quot;FFT error: &quot;</span> + m) {}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        FFTError(<span class="keyword">const</span> std::string&amp; m) : std::runtime_error(<span class="stringliteral">&quot;FFT error: &quot;</span> + m) {}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">class </span>FFTOutofRange : <span class="keyword">public</span> FFTError </div>

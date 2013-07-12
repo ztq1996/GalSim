@@ -183,8 +183,7 @@ Functions</h2></td></tr>
 &gt;&gt;&gt; import galsim
 &gt;&gt;&gt; rng = galsim.UniformDeviate(123456)
 &gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(rng, filestring)
-&gt;&gt;&gt; im = galsim.ImageD(300, 300)
-&gt;&gt;&gt; im.setScale(0.03)
+&gt;&gt;&gt; im = galsim.ImageD(300, 300, scale=0.03)
 &gt;&gt;&gt; cf.applyTo(im)
 &gt;&gt;&gt; im.write('out.fits')
 </pre><p>The FITS file <code>out.fits</code> should then contain an image of randomly-generated, COSMOS-like noise. </p>

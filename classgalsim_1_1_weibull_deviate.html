@@ -114,10 +114,10 @@ Inheritance diagram for galsim::WeibullDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a81eaac75f520a14258182441e929fa8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a81eaac75f520a14258182441e929fa8c">WeibullDeviate</a> (long lseed=0, double a=1., double b=1.)</td></tr>
-<tr class="memdesc:a81eaac75f520a14258182441e929fa8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Weibull-distributed RNG, using the provided value as seed.  <a href="#a81eaac75f520a14258182441e929fa8c"></a><br/></td></tr>
-<tr class="memitem:a3895a65aafdc873395f265d9a5ce7207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a3895a65aafdc873395f265d9a5ce7207">WeibullDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double a=1., double b=1.)</td></tr>
-<tr class="memdesc:a3895a65aafdc873395f265d9a5ce7207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Weibull-distributed RNG, sharing the random number generator with rhs.  <a href="#a3895a65aafdc873395f265d9a5ce7207"></a><br/></td></tr>
+<tr class="memitem:a73dfcd4dc2bbf604ef6d855971e5612a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a73dfcd4dc2bbf604ef6d855971e5612a">WeibullDeviate</a> (long lseed, double a, double b)</td></tr>
+<tr class="memdesc:a73dfcd4dc2bbf604ef6d855971e5612a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Weibull-distributed RNG, using the provided value as seed.  <a href="#a73dfcd4dc2bbf604ef6d855971e5612a"></a><br/></td></tr>
+<tr class="memitem:a7ddeb74bf62187e399eb5115b78e2b49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a7ddeb74bf62187e399eb5115b78e2b49">WeibullDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs, double a, double b)</td></tr>
+<tr class="memdesc:a7ddeb74bf62187e399eb5115b78e2b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Weibull-distributed RNG, sharing the random number generator with rhs.  <a href="#a7ddeb74bf62187e399eb5115b78e2b49"></a><br/></td></tr>
 <tr class="memitem:a581744b97d8e1cfbfce1eca41ea0f0dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#a581744b97d8e1cfbfce1eca41ea0f0dd">WeibullDeviate</a> (const <a class="el" href="classgalsim_1_1_weibull_deviate.html">WeibullDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a581744b97d8e1cfbfce1eca41ea0f0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a581744b97d8e1cfbfce1eca41ea0f0dd"></a><br/></td></tr>
 <tr class="memitem:abd1df1c5605bc7d3980d9d8872dd1285"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_weibull_deviate.html#abd1df1c5605bc7d3980d9d8872dd1285">operator()</a> ()</td></tr>
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A Weibull-distributed deviate with shape parameter a and scale parameter b. </p>
 <p>The Weibull distribution is related to a number of other probability distributions; in particular, it interpolates between the exponential distribution (a=1) and the Rayleigh distribution (a=2). See <a href="http://en.wikipedia.org/wiki/Weibull_distribution">http://en.wikipedia.org/wiki/Weibull_distribution</a> (a=k and b=lambda in the notation adopted in the Wikipedia article). The Weibull distribution is a real valued distribution producing deviates &gt;= 0. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a81eaac75f520a14258182441e929fa8c"></a>
+<a class="anchor" id="a73dfcd4dc2bbf604ef6d855971e5612a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -151,19 +151,19 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::WeibullDeviate::WeibullDeviate </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em> = <code>0</code>, </td>
+          <td class="paramname"><em>lseed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -177,16 +177,16 @@ Public Member Functions</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use (default = 0) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Shape parameter of the output distribution, must be &gt; 0. (default = 1) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Scale parameter of the distribution, must be &gt; 0. (default = 1) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>Seed to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Shape parameter of the output distribution, must be &gt; 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Scale parameter of the distribution, must be &gt; 0. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a3895a65aafdc873395f265d9a5ce7207"></a>
+<a class="anchor" id="a7ddeb74bf62187e399eb5115b78e2b49"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -200,13 +200,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -411,7 +411,7 @@ Public Member Functions</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
   </table>
   </dd>
 </dl>

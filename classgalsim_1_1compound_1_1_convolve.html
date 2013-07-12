@@ -109,7 +109,6 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A class for convolving 2 or more GSObjects. </p>
-<p>Has an <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles.">SBConvolve</a> in the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> attribute.</p>
 <p>The objects to be convolved may be provided either as multiple unnamed arguments (e.g. <code>Convolve(psf, gal, pix)</code>) or as a list (e.g. <code>Convolve([psf, gal, pix])</code>). Any number of objects may be provided using either syntax. (Even 0 or 1, although that doesn't really make much sense.)</p>
 <p>The convolution will normally be done using discrete Fourier transforms of each of the component profiles, multiplying them together, and then transforming back to real space.</p>
 <p>There is also an option to do the convolution as integrals in real space. To do this, use the optional keyword argument <code>real_space = True</code>. Currently, the real-space integration is only enabled for convolving 2 profiles. (Aside from the trivial implementaion for 1 profile.) If you try to use it for more than 2 profiles, an exception will be raised.</p>

@@ -114,8 +114,8 @@ Inheritance diagram for galsim::CCDNoise:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a82dda9efb1ce4c65f3086b3deb620935"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a82dda9efb1ce4c65f3086b3deb620935">CCDNoise</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng, double sky_level=0., double gain=1., double read_noise=0.)</td></tr>
-<tr class="memdesc:a82dda9efb1ce4c65f3086b3deb620935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, sharing the random number generator with rng.  <a href="#a82dda9efb1ce4c65f3086b3deb620935"></a><br/></td></tr>
+<tr class="memitem:a9859e9ba222223d49257a05d407e4e03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9859e9ba222223d49257a05d407e4e03">CCDNoise</a> (boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &gt; rng, double sky_level, double gain, double read_noise)</td></tr>
+<tr class="memdesc:a9859e9ba222223d49257a05d407e4e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new noise model, sharing the random number generator with rng.  <a href="#a9859e9ba222223d49257a05d407e4e03"></a><br/></td></tr>
 <tr class="memitem:aeb37dd84d317dffc4a1f9a78b6cbedf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#aeb37dd84d317dffc4a1f9a78b6cbedf9">CCDNoise</a> (const <a class="el" href="classgalsim_1_1_c_c_d_noise.html">CCDNoise</a> &amp;rhs)</td></tr>
 <tr class="memdesc:aeb37dd84d317dffc4a1f9a78b6cbedf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#aeb37dd84d317dffc4a1f9a78b6cbedf9"></a><br/></td></tr>
 <tr class="memitem:a9f99c855242ebf69af01cc6c1142d644"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9f99c855242ebf69af01cc6c1142d644">getSkyLevel</a> () const </td></tr>
@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
 <p>gain&lt;=0 will shut off the Poisson noise, and Gaussian noise will have RMS = reasNoise.</p>
 <p>Note that if the image to which you are adding noise already has a sky level on it, then you should not provide the sky level here as well. The sky level here corresponds to a level is taken to be already subtracted from the image, but which was present for the Poisson noise. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a82dda9efb1ce4c65f3086b3deb620935"></a>
+<a class="anchor" id="a9859e9ba222223d49257a05d407e4e03"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -168,19 +168,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sky_level</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>sky_level</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.</code>, </td>
+          <td class="paramname"><em>gain</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>read_noise</em> = <code>0.</code>&#160;</td>
+          <td class="paramname"><em>read_noise</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

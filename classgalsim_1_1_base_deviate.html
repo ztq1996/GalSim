@@ -120,8 +120,8 @@ Inheritance diagram for galsim::BaseDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:add43b677dd1e18a97b84cebab36fa668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#add43b677dd1e18a97b84cebab36fa668">BaseDeviate</a> (long lseed=0)</td></tr>
-<tr class="memdesc:add43b677dd1e18a97b84cebab36fa668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using the provided value as seed.  <a href="#add43b677dd1e18a97b84cebab36fa668"></a><br/></td></tr>
+<tr class="memitem:a27bcdd4b35a75ac1d6d664735195f417"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a27bcdd4b35a75ac1d6d664735195f417">BaseDeviate</a> (long lseed)</td></tr>
+<tr class="memdesc:a27bcdd4b35a75ac1d6d664735195f417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, using the provided value as seed.  <a href="#a27bcdd4b35a75ac1d6d664735195f417"></a><br/></td></tr>
 <tr class="memitem:a074f9323cbfd474ac0ecadbd1ca3fe52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a074f9323cbfd474ac0ecadbd1ca3fe52">BaseDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a074f9323cbfd474ac0ecadbd1ca3fe52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a>, sharing the random number generator with rhs.  <a href="#a074f9323cbfd474ac0ecadbd1ca3fe52"></a><br/></td></tr>
 <tr class="memitem:adf6c50fc180a67b30e399d3627b18e05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#adf6c50fc180a67b30e399d3627b18e05">~BaseDeviate</a> ()</td></tr>
@@ -146,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <p>3) Passing another <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> as the first arguemnt to the constructor. This will make the new Deviate share the same underlying random number generator with the other Deviate. So you can make one Deviate (of any type), and seed it with a particular deterministic value. Then if you pass that Deviate to any other one you make, they will all be using the same rng and have a particular deterministic series of values. (It doesn't have to be the first one &ndash; any one you've made later can also be used to seed a new one.)</p>
 <p>There is not much you can do with something that is only known to be a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates.">BaseDeviate</a> rather than one of the derived classes other than construct it and change the seed, and use it as an argument to pass to other Deviate constructors. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="add43b677dd1e18a97b84cebab36fa668"></a>
+<a class="anchor" id="a27bcdd4b35a75ac1d6d664735195f417"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">galsim::BaseDeviate::BaseDeviate </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -164,7 +164,7 @@ Public Member Functions</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,7 +329,7 @@ Public Member Functions</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
   </table>
   </dd>
 </dl>

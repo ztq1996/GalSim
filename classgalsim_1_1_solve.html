@@ -105,8 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a892eb7d810b36ba92802f45a002f9eb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve.html#a892eb7d810b36ba92802f45a002f9eb8">Solve</a> (const F &amp;func_, T lb_=0., T ub_=1.)</td></tr>
-<tr class="memdesc:a892eb7d810b36ba92802f45a002f9eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking the function to solve, and the range (if known).  <a href="#a892eb7d810b36ba92802f45a002f9eb8"></a><br/></td></tr>
+<tr class="memitem:a033c73ab95526b69899e8acfbc70a1bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve.html#a033c73ab95526b69899e8acfbc70a1bf">Solve</a> (const F &amp;func_, T lb_, T ub_)</td></tr>
+<tr class="memdesc:a033c73ab95526b69899e8acfbc70a1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking the function to solve, and the range (if known).  <a href="#a033c73ab95526b69899e8acfbc70a1bf"></a><br/></td></tr>
 <tr class="memitem:a524e4aa8293b490d8c99a52b7b58d52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve.html#a524e4aa8293b490d8c99a52b7b58d52e">setMaxSteps</a> (int m)</td></tr>
 <tr class="memdesc:a524e4aa8293b490d8c99a52b7b58d52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of steps for the solving algorithm to use.  <a href="#a524e4aa8293b490d8c99a52b7b58d52e"></a><br/></td></tr>
 <tr class="memitem:a71c9d52be54fac377abb1359bf190b7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_solve.html#a71c9d52be54fac377abb1359bf190b7b">setMethod</a> (<a class="el" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> m_)</td></tr>
@@ -187,7 +187,7 @@ class galsim::Solve&lt; F, T &gt;</h3>
 <div class="line"> solver.setMethod(<a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a>);  <span class="comment">// If desired</span></div>
 <div class="line"> <span class="keywordtype">double</span> result = solver.root()</div>
 </div><!-- fragment --> </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a892eb7d810b36ba92802f45a002f9eb8"></a>
+<a class="anchor" id="a033c73ab95526b69899e8acfbc70a1bf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -203,13 +203,13 @@ template&lt;class F , class T  = double&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>lb_</em> = <code>0.</code>, </td>
+          <td class="paramname"><em>lb_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>ub_</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>ub_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

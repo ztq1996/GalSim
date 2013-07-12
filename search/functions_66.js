@@ -11,8 +11,8 @@ var searchData=
   ['findzerocrossings',['findZeroCrossings',['../structgalsim_1_1integ_1_1_int_region.html#a87211211987889c1f42ed68890d00097',1,'galsim::integ::IntRegion']]],
   ['fitimage',['fitImage',['../classgalsim_1_1shapelet_1_1_shapelet.html#a9e8dab94e56263ca9742506a75c23861',1,'galsim::shapelet::Shapelet']]],
   ['for_5feach_5fpixel',['for_each_pixel',['../namespacegalsim.html#aa9a87ad88aad1726ffec050a849bcc26',1,'galsim::for_each_pixel(const ImageView&lt; T &gt; &amp;image, Op f)'],['../namespacegalsim.html#a591035042d365c765fce15122fda1a5d',1,'galsim::for_each_pixel(const ImageView&lt; T &gt; &amp;image, const Bounds&lt; int &gt; &amp;bounds, Op f)']]],
-  ['fourierdraw',['fourierDraw',['../classgalsim_1_1_s_b_profile.html#ac02be0d9d736b3a12d92f5c51518e398',1,'galsim::SBProfile']]],
-  ['fourierdrawk',['fourierDrawK',['../classgalsim_1_1_s_b_profile.html#a95bdbd701e35010b9cdb48134d931f10',1,'galsim::SBProfile']]],
+  ['fourierdraw',['fourierDraw',['../classgalsim_1_1_s_b_profile.html#ab9a7bd7c8920a5d9da0f4dbde13cdf23',1,'galsim::SBProfile']]],
+  ['fourierdrawk',['fourierDrawK',['../classgalsim_1_1_s_b_profile.html#a0b291c735a243fe5edd1c6cb72d26ae7',1,'galsim::SBProfile']]],
   ['frommatrix',['fromMatrix',['../classgalsim_1_1_cpp_ellipse.html#ae71bf3c0c8f842843c83767b084502fd',1,'galsim::CppEllipse::fromMatrix(const tmv::Matrix&lt; double &gt; &amp;m, Angle &amp;rotation, bool &amp;parity)'],['../classgalsim_1_1_cpp_ellipse.html#a1326527231b89a4a425f3d55644dbd42',1,'galsim::CppEllipse::fromMatrix(const tmv::Matrix&lt; double &gt; &amp;m)']]],
   ['function',['function',['../classgalsim_1_1_k_table.html#abb4c2b295a4920cef175460f6d07dff0',1,'galsim::KTable']]],
   ['fwd',['fwd',['../classgalsim_1_1_cpp_shear.html#aa1c1bf4dfaadc3edd73c4172bcd8e6a7',1,'galsim::CppShear::fwd()'],['../classgalsim_1_1_cpp_ellipse.html#a1642c7cadd44863011162bebc8e73442',1,'galsim::CppEllipse::fwd()'],['../classgalsim_1_1deprecated_1_1ellipse_1_1_ellipse.html#a7b3742d9deb7c24e382ad1d15ca4a925',1,'galsim.deprecated.ellipse.Ellipse.fwd()'],['../classgalsim_1_1shear_1_1_shear.html#a678babd28a707068194c5e80a19566ad',1,'galsim.shear.Shear.fwd()']]]

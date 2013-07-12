@@ -115,9 +115,8 @@ Inheritance diagram for galsim::InterpolantFunction:</div>
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aca22818475ceb334d0928ceabbbd4761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_function.html#aca22818475ceb334d0928ceabbbd4761">InterpolantFunction</a> (const <a class="el" href="classgalsim_1_1_interpolant.html">Interpolant</a> &amp;interp)</td></tr>
-<tr class="memdesc:aca22818475ceb334d0928ceabbbd4761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aca22818475ceb334d0928ceabbbd4761"></a><br/></td></tr>
 <tr class="memitem:acff3339ac7757eaec8246891f9d682e9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_function.html#acff3339ac7757eaec8246891f9d682e9">operator()</a> (double x) const </td></tr>
-<tr class="memdesc:acff3339ac7757eaec8246891f9d682e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator() will return the xval() of the <code><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a></code>  <a href="#acff3339ac7757eaec8246891f9d682e9"></a><br/></td></tr>
+<tr class="memdesc:acff3339ac7757eaec8246891f9d682e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface requires implementation of operator()  <a href="#acff3339ac7757eaec8246891f9d682e9"></a><br/></td></tr>
 <tr class="memitem:ab42dd58d226238618a94427c90e8ec2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant_function.html#ab42dd58d226238618a94427c90e8ec2a">~InterpolantFunction</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -136,14 +135,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">interp</td><td><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a> (one-d) that we'll want to sample </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -185,7 +176,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>operator() will return the xval() of the <code><a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions.">Interpolant</a></code> </p>
+<p>Interface requires implementation of operator() </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The linear position or radius </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns:</dt><dd>Flux or probability density at location of argument. </dd></dl>
 
 <p>Implements <a class="el" href="classgalsim_1_1_flux_density.html#a8e1904edc07b457e82d96c84f3c970d4">galsim::FluxDensity</a>.</p>
 

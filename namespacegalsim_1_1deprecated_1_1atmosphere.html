@@ -185,7 +185,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the atmospheric modulation transfer function for long exposures with Kolmogorov turbulence as an ImageViewD. </p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted. for lam_over_r0.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_r0.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the array view of the ImageViewD. </td></tr>
@@ -283,7 +283,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return long exposure Kolmogorov PSF as an ImageViewD. </p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted. for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the array view of the ImageViewD. </td></tr>

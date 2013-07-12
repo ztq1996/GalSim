@@ -2,7 +2,7 @@ var searchData=
 [
   ['wavefront',['wavefront',['../namespacegalsim_1_1optics.html#aed9556b04fe30f45ea8860eb14b5288b',1,'galsim::optics']]],
   ['wavefront_5fimage',['wavefront_image',['../namespacegalsim_1_1optics.html#a238f5021d8e4ab4d5f00ad6a466b15f3',1,'galsim::optics']]],
-  ['weibulldeviate',['WeibullDeviate',['../classgalsim_1_1_weibull_deviate.html#a81eaac75f520a14258182441e929fa8c',1,'galsim::WeibullDeviate::WeibullDeviate(long lseed=0, double a=1., double b=1.)'],['../classgalsim_1_1_weibull_deviate.html#a3895a65aafdc873395f265d9a5ce7207',1,'galsim::WeibullDeviate::WeibullDeviate(const BaseDeviate &amp;rhs, double a=1., double b=1.)'],['../classgalsim_1_1_weibull_deviate.html#a581744b97d8e1cfbfce1eca41ea0f0dd',1,'galsim::WeibullDeviate::WeibullDeviate(const WeibullDeviate &amp;rhs)']]],
+  ['weibulldeviate',['WeibullDeviate',['../classgalsim_1_1_weibull_deviate.html#a73dfcd4dc2bbf604ef6d855971e5612a',1,'galsim::WeibullDeviate::WeibullDeviate(long lseed, double a, double b)'],['../classgalsim_1_1_weibull_deviate.html#a7ddeb74bf62187e399eb5115b78e2b49',1,'galsim::WeibullDeviate::WeibullDeviate(const BaseDeviate &amp;rhs, double a, double b)'],['../classgalsim_1_1_weibull_deviate.html#a581744b97d8e1cfbfce1eca41ea0f0dd',1,'galsim::WeibullDeviate::WeibullDeviate(const WeibullDeviate &amp;rhs)']]],
   ['weibulldeviate',['WeibullDeviate',['../classgalsim_1_1_weibull_deviate.html',1,'galsim']]],
   ['weight',['weight',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aaa969ffc404af2b4c2519d8b9e9e897d',1,'galsim::real::RealGalaxyCatalog']]],
   ['wmult',['wmult',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a2cd1e729db08cc038c2eef168905ce11',1,'galsim::utilities::ComparisonShapeData']]],

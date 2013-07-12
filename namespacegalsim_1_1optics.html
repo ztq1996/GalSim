@@ -450,7 +450,7 @@ Functions</h2></td></tr>
 
 <p>Return the MTF of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
 <p>MTF array element ordering follows the DFT standard of kxky(array_shape), and has mtf[0, 0] = 1 by default. The scale of the output ImageViewD is correct in k space units.</p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -722,7 +722,7 @@ Functions</h2></td></tr>
 
 <p>Return the complex OTF of a circular (default) or square pupil with low-order aberrations as a (real, imag) tuple of ImageViewD objects, rather than a complex NumPy array. </p>
 <p>OTF array element ordering follows the DFT standard of kxky(array_shape), and has otf[0, 0] = 1+0j by default. The scale of the output ImageViewD is correct in k space units.</p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -1007,7 +1007,7 @@ Functions</h2></td></tr>
 
 <p>Return circular (default) or square pupil PSF with low-order aberrations as an ImageViewD. </p>
 <p>The PSF is centred on the array[array_shape[0] / 2, array_shape[1] / 2] pixel by default, and uses surface brightness rather than flux units for pixel values, matching <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.</p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -1280,7 +1280,7 @@ Functions</h2></td></tr>
 
 <p>Return the PTF [radians] of a circular (default) or square pupil with low-order aberrations as an ImageViewD. </p>
 <p>PTF array element ordering follows the DFT standard of kxky(array_shape), and has ptf[0, 0] = 0. by default. The scale of the output ImageViewD is correct in k space units.</p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -1554,7 +1554,7 @@ Functions</h2></td></tr>
 
 <p>Return wavefront as a (real, imag) tuple of ImageViewD objects rather than complex NumPy array. </p>
 <p>Outputs a circular pupil wavefront of unit amplitude that can be easily transformed to produce an optical PSF with lambda/diam = lam_over_diam on an output grid of spacing dx.</p>
-<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its .getScale() method will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
+<p>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image.">ImageView</a> output can be used to directly instantiate an <a class="el" href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images.">SBInterpolatedImage</a>, and its scale will reflect the spacing of the output grid in the system of units adopted for lam_over_diam.</p>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * dx.</p>
 <p>The pupil sample locations are arranged in standard DFT element ordering format, so that (kx, ky) = (0, 0) is the [0, 0] array element. The scale of the output ImageViewD is correct in k space units.</p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention definined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>

@@ -115,8 +115,8 @@ Inheritance diagram for galsim::UniformDeviate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93b967fe374d0aeea8f46374f4b79c07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a93b967fe374d0aeea8f46374f4b79c07">UniformDeviate</a> (long lseed=0)</td></tr>
-<tr class="memdesc:a93b967fe374d0aeea8f46374f4b79c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a>, using the provided value as seed.  <a href="#a93b967fe374d0aeea8f46374f4b79c07"></a><br/></td></tr>
+<tr class="memitem:a640bc8b9a931a94143f4459b327adfa2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a640bc8b9a931a94143f4459b327adfa2">UniformDeviate</a> (long lseed)</td></tr>
+<tr class="memdesc:a640bc8b9a931a94143f4459b327adfa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and seed a new <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a>, using the provided value as seed.  <a href="#a640bc8b9a931a94143f4459b327adfa2"></a><br/></td></tr>
 <tr class="memitem:a57fc76e8fa7f667304bed43750dabd26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a57fc76e8fa7f667304bed43750dabd26">UniformDeviate</a> (const <a class="el" href="classgalsim_1_1_base_deviate.html">BaseDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a57fc76e8fa7f667304bed43750dabd26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.).">UniformDeviate</a>, sharing the random number generator with rhs.  <a href="#a57fc76e8fa7f667304bed43750dabd26"></a><br/></td></tr>
 <tr class="memitem:a6ce631ce7c04536d4f76d12eb5225430"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_uniform_deviate.html#a6ce631ce7c04536d4f76d12eb5225430">UniformDeviate</a> (const <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> &amp;rhs)</td></tr>
@@ -147,7 +147,7 @@ Friends</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Pseudo-random number generator with uniform distribution in interval [0.,1.). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a93b967fe374d0aeea8f46374f4b79c07"></a>
+<a class="anchor" id="a640bc8b9a931a94143f4459b327adfa2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -155,7 +155,7 @@ Friends</h2></td></tr>
           <td class="memname">galsim::UniformDeviate::UniformDeviate </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lseed</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>lseed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -165,7 +165,7 @@ Friends</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. </td></tr>
   </table>
   </dd>
 </dl>
@@ -417,7 +417,7 @@ Friends</h2></td></tr>
 <p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. (default=0)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>
   </table>
   </dd>
 </dl>
