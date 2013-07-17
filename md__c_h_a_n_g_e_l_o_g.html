@@ -88,7 +88,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added the offset parameter to the draw and drawShoot commands, and also to the constructor of InterpolatedImage. (Issue #439)</li>
 </ul>
 <ul>
-<li>Added scale as a constructor parameter for Images. (Issue #439) </li>
+<li>Added scale as a constructor parameter for Images. (Issue #439)</li>
+</ul>
+<ul>
+<li>Improved the ability of Lanczos interpolants to conserve a DC input flux (with the <code>conserve_dc=True</code> parameter). (Issue #442)</li>
+</ul>
+<ul>
+<li>Switched default interpolant for <code>RealGalaxy</code> to <code>Quintic</code>. (Issue #442) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
