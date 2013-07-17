@@ -14,5 +14,9 @@ var searchData=
   ['delta_5fg2obs',['delta_g2obs',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a14f9c0d190ef8ad385c2c19d6798f729',1,'galsim::utilities::ComparisonShapeData']]],
   ['delta_5fsigma',['delta_sigma',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#ae6191b0aea223f58d77511adecff990a',1,'galsim::utilities::ComparisonShapeData']]],
   ['do_5fpreload',['do_preload',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aa2bddf9957f1c8ea8571431d21b3cece',1,'galsim::real::RealGalaxyCatalog']]],
+  ['dudcol',['dudcol',['../classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html#ad57d7c447d69d17772e9a612f60fa77a',1,'galsim::des::des_meds::WCSTransform']]],
+  ['dudrow',['dudrow',['../classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html#a761f525c86314e29e4c942681dd901dc',1,'galsim::des::des_meds::WCSTransform']]],
+  ['dvdcol',['dvdcol',['../classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html#a0ad7a6378b364361279e0736de29a92a',1,'galsim::des::des_meds::WCSTransform']]],
+  ['dvdrow',['dvdrow',['../classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html#a5e5946ba09f86ff35334251b257c59de',1,'galsim::des::des_meds::WCSTransform']]],
   ['dx',['dx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a36f7be3ed1cdc8e270cefeb4d6e853b4',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

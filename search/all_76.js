@@ -2,7 +2,9 @@ var searchData=
 [
   ['val',['val',['../classgalsim_1_1_table_entry.html#a0dfe33943b595768d73494c31f018ac0',1,'galsim::TableEntry::val()'],['../classgalsim_1_1random_1_1_dist_deviate.html#a2bde4e2918355c1b68bd9708122306b4',1,'galsim.random.DistDeviate.val()']]],
   ['valid_5fgsobject_5ftypes',['valid_gsobject_types',['../namespacegalsim_1_1config_1_1gsobject.html#a5f33a5157025a9119a7d4557ea75aace',1,'galsim::config::gsobject']]],
+  ['valid_5fimage_5ftypes',['valid_image_types',['../namespacegalsim_1_1config_1_1image.html#a12766700001eb6d086ca0562c7562f6b',1,'galsim::config::image']]],
   ['valid_5finput_5ftypes',['valid_input_types',['../namespacegalsim_1_1config_1_1process.html#a49188917da7e7f3e40b02ee4cdd23299',1,'galsim::config::process']]],
+  ['valid_5foutput_5ftypes',['valid_output_types',['../namespacegalsim_1_1config_1_1process.html#a50f8752d65d933a7b61a9074d61d8919',1,'galsim::config::process']]],
   ['valid_5fvalue_5ftypes',['valid_value_types',['../namespacegalsim_1_1config_1_1value.html#ad12400ca84f698926856c74962a87910',1,'galsim::config::value']]],
   ['value_2epy',['value.py',['../value_8py.html',1,'']]],
   ['values',['values',['../classgalsim_1_1fits_1_1_fits_header.html#a06e41f2bad698c2607d93657f3e68025',1,'galsim::fits::FitsHeader']]],

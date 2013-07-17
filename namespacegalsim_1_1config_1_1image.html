@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.config.image Namespace Reference</div>  </div>
 </div><!--header-->
@@ -106,6 +107,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:aba8cefafd95d20ef0fae0073def35246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image consisting of a tiled array of postage stamps.  <a href="#aba8cefafd95d20ef0fae0073def35246"></a><br/></td></tr>
 <tr class="memitem:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#ae7a8909abd72bba62dc1d92fb45e3a74">BuildScatteredImage</a></td></tr>
 <tr class="memdesc:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image containing multiple objects placed at arbitrary locations.  <a href="#ae7a8909abd72bba62dc1d92fb45e3a74"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a12766700001eb6d086ca0562c7562f6b"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a12766700001eb6d086ca0562c7562f6b">valid_image_types</a></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="aab1180eb25a725c66f8a556242e6167a"></a>
@@ -163,7 +168,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Build an image according to the information in config. </p>
-<p>This function acts as a wrapper for: BuildSingleImage BuildTiledImage BuildScatteredImage choosing between these three using the contents of config if specified (default = Single)</p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
@@ -201,6 +205,12 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>logger</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -214,12 +224,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -252,10 +256,10 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">nimages</td><td>How many images to build. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
     <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
     <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
     <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
@@ -480,6 +484,24 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns:</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
 
+</div>
+</div>
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="a12766700001eb6d086ca0562c7562f6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.config.image.valid_image_types</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespacegalsim_1_1config_1_1image.html">    1</a></span>&#160;{ </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;Single&#39;</span> : <span class="stringliteral">&#39;BuildSingleImage&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;Tiled&#39;</span> : <span class="stringliteral">&#39;BuildTiledImage&#39;</span>,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;Scattered&#39;</span> : <span class="stringliteral">&#39;BuildScatteredImage&#39;</span>,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

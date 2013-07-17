@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GalSim: galsim/config/image.py File Reference</title>
+<title>GalSim: galsim/des/des_meds.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,41 +83,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_52d5ad23d2d6be9005700a99c881f88b.html">galsim</a></li><li class="navelem"><a class="el" href="dir_60843afc7d3737d7c9cfe0db95e53a72.html">config</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_52d5ad23d2d6be9005700a99c881f88b.html">galsim</a></li><li class="navelem"><a class="el" href="dir_3495a4911856d40841a5c8c45c2ac679.html">des</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Packages</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">image.py File Reference</div>  </div>
+<div class="title">des_meds.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Module for generating DES Multi-Epoch Data Structures (MEDS) in GalSim.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html">galsim.des.des_meds.WCSTransform</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Very simple class which holds a WCS transformation, including a Jacobian and a shifted centroid.  <a href="classgalsim_1_1des_1_1des__meds_1_1_w_c_s_transform.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html">galsim.des.des_meds.MultiExposureObject</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class containing exposures for single object, along with other information.  <a href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#details">More...</a><br/></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Packages</h2></td></tr>
-<tr class="memitem:namespacegalsim_1_1config_1_1image"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html">galsim.config.image</a></td></tr>
+<tr class="memitem:namespacegalsim_1_1des_1_1des__meds"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html">galsim.des.des_meds</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c6a709c9c894f223063f759d23ca4e7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a2c6a709c9c894f223063f759d23ca4e7">galsim.config.image.BuildImages</a></td></tr>
-<tr class="memdesc:a2c6a709c9c894f223063f759d23ca4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a number of postage stamp images as specified by the config dict.  <a href="#a2c6a709c9c894f223063f759d23ca4e7"></a><br/></td></tr>
-<tr class="memitem:aab1180eb25a725c66f8a556242e6167a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#aab1180eb25a725c66f8a556242e6167a">galsim.config.image.BuildImage</a></td></tr>
-<tr class="memdesc:aab1180eb25a725c66f8a556242e6167a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image according to the information in config.  <a href="#aab1180eb25a725c66f8a556242e6167a"></a><br/></td></tr>
-<tr class="memitem:a4ff907c095c04558ff1dd4188cf5e3f7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a4ff907c095c04558ff1dd4188cf5e3f7">galsim.config.image.BuildSingleImage</a></td></tr>
-<tr class="memdesc:a4ff907c095c04558ff1dd4188cf5e3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image consisting of a single stamp.  <a href="#a4ff907c095c04558ff1dd4188cf5e3f7"></a><br/></td></tr>
-<tr class="memitem:aba8cefafd95d20ef0fae0073def35246"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#aba8cefafd95d20ef0fae0073def35246">galsim.config.image.BuildTiledImage</a></td></tr>
-<tr class="memdesc:aba8cefafd95d20ef0fae0073def35246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image consisting of a tiled array of postage stamps.  <a href="#aba8cefafd95d20ef0fae0073def35246"></a><br/></td></tr>
-<tr class="memitem:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#ae7a8909abd72bba62dc1d92fb45e3a74">galsim.config.image.BuildScatteredImage</a></td></tr>
-<tr class="memdesc:ae7a8909abd72bba62dc1d92fb45e3a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an image containing multiple objects placed at arbitrary locations.  <a href="#ae7a8909abd72bba62dc1d92fb45e3a74"></a><br/></td></tr>
+<tr class="memitem:a93d6c092f2e9098e0b142f45798bba9c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a93d6c092f2e9098e0b142f45798bba9c">galsim.des.des_meds.write_meds</a></td></tr>
+<tr class="memdesc:a93d6c092f2e9098e0b142f45798bba9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the galaxy, weights, segmaps images to a MEDS file.  <a href="#a93d6c092f2e9098e0b142f45798bba9c"></a><br/></td></tr>
+<tr class="memitem:a6079c1662c7456527b3eb8ccadb73e24"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a6079c1662c7456527b3eb8ccadb73e24">galsim.des.des_meds.BuildMEDS</a></td></tr>
+<tr class="memdesc:a6079c1662c7456527b3eb8ccadb73e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a meds file as specified in config.  <a href="#a6079c1662c7456527b3eb8ccadb73e24"></a><br/></td></tr>
+<tr class="memitem:a1a1aee6257d8835a22927b183dc7a246"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a1a1aee6257d8835a22927b183dc7a246">galsim.des.des_meds.GetNObjForMEDS</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a12766700001eb6d086ca0562c7562f6b"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1image.html#a12766700001eb6d086ca0562c7562f6b">galsim.config.image.valid_image_types</a></td></tr>
+<tr class="memitem:a64b4fba170883ba5d739670d235dced1"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a64b4fba170883ba5d739670d235dced1">galsim.des.des_meds.BOX_SIZES</a> = [32,48,64,96,128,192,256]</td></tr>
+<tr class="memitem:ab84e846333e1e210262174f2772b2d15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#ab84e846333e1e210262174f2772b2d15">galsim.des.des_meds.MAX_MEMORY</a> = 1</td></tr>
+<tr class="memitem:a8e98caa6e8727fcdbeddf3618b4a63c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a8e98caa6e8727fcdbeddf3618b4a63c4">galsim.des.des_meds.MAX_NCUTOUTS</a> = 11</td></tr>
+<tr class="memitem:a134f22a2de4d41834a02ac53e7ad07d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a134f22a2de4d41834a02ac53e7ad07d3">galsim.des.des_meds.EMPTY_START_INDEX</a> = 9999</td></tr>
+<tr class="memitem:a930e041519b70971cc39b01154a93588"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a930e041519b70971cc39b01154a93588">galsim.des.des_meds.EMPTY_JAC</a> = 999</td></tr>
 </table>
-</div><!-- contents -->
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Module for generating DES Multi-Epoch Data Structures (MEDS) in GalSim. </p>
+<p>This module defines the <code>MultiExposureObject</code> class for representing multiple exposure data for a single object, and the <code>WCSTransform</code> class used to store general, locally-linearized WCS information per exposure. The <code>write_meds</code> function can be used to write a list of <code>MultiExposureObject</code> instances to a single MEDS file.</p>
+<p>Importing this module also adds these data structures to the config framework, so that MEDS file output can subsequently be simulated directly using a config file. </p>
+</div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1</small></address>
 </body>

@@ -214,16 +214,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespacegalsim_1_1config_1_1gsobject.html">    1</a></span>&#160;{</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;None&#39;</span> : <span class="stringliteral">&#39;_BuildNone&#39;</span>,</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;Add&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;Sum&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;Convolve&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;Convolution&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;List&#39;</span> : <span class="stringliteral">&#39;_BuildList&#39;</span>,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;Ring&#39;</span> : <span class="stringliteral">&#39;_BuildRing&#39;</span>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;Pixel&#39;</span> : <span class="stringliteral">&#39;_BuildPixel&#39;</span>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;RealGalaxy&#39;</span> : <span class="stringliteral">&#39;_BuildRealGalaxy&#39;</span>,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="comment"># Note: these are just the types that need a special builder.  Most of GSObject sub-classes</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="comment"># in base.py (and some elsewhere) can use the default builder, called _BuildSimple, which</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="comment"># just uses the req, opt, and single class variables.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment"># See the des module for examples of how to extend this from a module.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;None&#39;</span> : <span class="stringliteral">&#39;_BuildNone&#39;</span>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;Add&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;Sum&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;Convolve&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;Convolution&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;List&#39;</span> : <span class="stringliteral">&#39;_BuildList&#39;</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;Ring&#39;</span> : <span class="stringliteral">&#39;_BuildRing&#39;</span>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&#39;Pixel&#39;</span> : <span class="stringliteral">&#39;_BuildPixel&#39;</span>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="stringliteral">&#39;RealGalaxy&#39;</span> : <span class="stringliteral">&#39;_BuildRealGalaxy&#39;</span>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

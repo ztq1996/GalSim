@@ -452,6 +452,24 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>xsize</em> = <code>0</code>, </td>
         </tr>
         <tr>
@@ -464,18 +482,6 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj_num</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>sky_level_pixel</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -483,12 +489,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>do_noise</em> = <code>True</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>logger</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -521,13 +521,13 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">nobjects</td><td>How many postage stamps to build. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
     <tr><td class="paramname">xsize</td><td>The size of a single stamp in the x direction. (If 0, look for config.image.stamp_xsize, and if that's not there, use automatic sizing.) </td></tr>
     <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction. (If 0, look for config.image.stamp_ysize, and if that's not there, use automatic sizing.) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
     <tr><td class="paramname">sky_level_pixel</td><td>The background sky level to add to the image (in ADU/pixel). </td></tr>
     <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
     <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
     <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
     <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
