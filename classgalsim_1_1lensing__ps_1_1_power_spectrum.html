@@ -319,7 +319,7 @@ g1_r, g2_r, mu = galsim.lensing_ps.theoryToObserved(g1, g2, kappa)
     <tr><td class="paramname">units</td><td>The angular units used for the positions. [default = arcsec] </td></tr>
     <tr><td class="paramname">get_convergence</td><td>Return the convergence in addition to the shear? Regardless of the value of <code>get_convergence</code>, the convergence will still be computed and stored for future use. [Default: <code>get_convergence=False</code>] </td></tr>
     <tr><td class="paramname">kmin_factor</td><td>(Optional) Factor by which the grid spacing in fourier space is smaller than the default. i.e. kmin = 2. * pi / (ngrid * grid_spacing) / kmin_factor [default <code>kmin_factor = 1</code>; must be an integer] </td></tr>
-    <tr><td class="paramname">kmin_factor</td><td>(Optional) Factor by which the overall grid in fourier space is larger than the default. i.e. kmax = pi / grid_spacing * kmax_factor [default <code>kmax_factor = 1</code>; must be an integer]</td></tr>
+    <tr><td class="paramname">kmax_factor</td><td>(Optional) Factor by which the overall grid in fourier space is larger than the default. i.e. kmax = pi / grid_spacing * kmax_factor [default <code>kmax_factor = 1</code>; must be an integer]</td></tr>
   </table>
   </dd>
 </dl>
