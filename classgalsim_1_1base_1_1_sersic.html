@@ -201,7 +201,7 @@ Public Attributes</h2></td></tr>
 <p>A <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing a Sersic profile.">Sersic</a> is initialized with <code>n</code>, the <a class="el" href="classgalsim_1_1base_1_1_sersic.html" title="A class describing a Sersic profile.">Sersic</a> index of the profile, and using one (and only one) of two possible size parameters </p>
 <pre class="fragment">half_light_radius
 scale_radius
-</pre><p>The code is limited to 0.3 &lt;= n &lt;= 4.2, with an exception thrown for values outside that range.</p>
+</pre><p>The code is limited to 0.3 &lt;= n &lt;= 6.2, with an exception thrown for values outside that range. Below n=0.3, there are severe numerical problems. Above n=6.2, we found that the code begins to be inaccurate when sheared or magnified (at the level of upcoming shear surveys), so we do not recommend extending beyond this. See Issues #325 and #450 for more details.</p>
 <p>Several optional parameters are available: Truncation radius <code>trunc</code> [default <code>trunc = 0.</code>, indicating no truncation] and a <code>flux</code> parameter [default <code>flux = 1</code>]. If <code>trunc</code> is set to a non-zero value, then it is assumed to be in the same system of units as <code>half_light_radius</code> or <code>scale_radius</code>.</p>
 <p>Note that the code will be more efficient if the truncation is always the same multiple of <code>scale_radius</code>, since it caches many calculations that depend on the ratio <code>trunc/scale_radius</code>. The <code>scale_radius</code> is always calculated internally for a <code>half_light_radius</code> input, and vice versa. Internal calculations are based on the <code>scale_radius</code>.</p>
 <p>Example: </p>
