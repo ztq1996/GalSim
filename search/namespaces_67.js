@@ -15,6 +15,7 @@ var searchData=
   ['des_5fpsfex',['des_psfex',['../namespacegalsim_1_1des_1_1des__psfex.html',1,'galsim::des']]],
   ['des_5fshapelet',['des_shapelet',['../namespacegalsim_1_1des_1_1des__shapelet.html',1,'galsim::des']]],
   ['ellipse',['ellipse',['../namespacegalsim_1_1deprecated_1_1ellipse.html',1,'galsim::deprecated']]],
+  ['fds_5ftest',['fds_test',['../namespacegalsim_1_1fds__test.html',1,'galsim']]],
   ['fits',['fits',['../namespacegalsim_1_1fits.html',1,'galsim']]],
   ['galsim',['galsim',['../namespacegalsim.html',1,'']]],
   ['gsobject',['gsobject',['../namespacegalsim_1_1config_1_1gsobject.html',1,'galsim::config']]],

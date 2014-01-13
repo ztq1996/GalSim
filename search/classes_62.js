@@ -2,6 +2,7 @@ var searchData=
 [
   ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html',1,'galsim']]],
   ['baseimage',['BaseImage',['../classgalsim_1_1_base_image.html',1,'galsim']]],
+  ['baseimage_3c_20float_20_3e',['BaseImage&lt; float &gt;',['../classgalsim_1_1_base_image.html',1,'galsim']]],
   ['basenoise',['BaseNoise',['../classgalsim_1_1_base_noise.html',1,'galsim']]],
   ['binomialdeviate',['BinomialDeviate',['../classgalsim_1_1_binomial_deviate.html',1,'galsim']]],
   ['bounds',['Bounds',['../classgalsim_1_1_bounds.html',1,'galsim']]],

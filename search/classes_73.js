@@ -21,6 +21,7 @@ var searchData=
   ['shapedata',['ShapeData',['../classgalsim_1_1hsm_1_1_shape_data.html',1,'galsim::hsm']]],
   ['shapelet',['Shapelet',['../classgalsim_1_1shapelet_1_1_shapelet.html',1,'galsim::shapelet']]],
   ['shear',['Shear',['../classgalsim_1_1shear_1_1_shear.html',1,'galsim::shear']]],
+  ['simplegenerator',['SimpleGenerator',['../classgalsim_1_1utilities_1_1_simple_generator.html',1,'galsim::utilities']]],
   ['sincinterpolant',['SincInterpolant',['../classgalsim_1_1_sinc_interpolant.html',1,'galsim']]],
   ['skipthisobject',['SkipThisObject',['../classgalsim_1_1config_1_1gsobject_1_1_skip_this_object.html',1,'galsim::config::gsobject']]],
   ['solve',['Solve',['../classgalsim_1_1_solve.html',1,'galsim']]]

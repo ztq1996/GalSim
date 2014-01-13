@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['i',['i',['../classgalsim_1_1config_1_1process_1_1_input_getter.html#a84ba8469fb8fa8d5157de593a4a51505',1,'galsim::config::process::InputGetter']]],
   ['id',['id',['../classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a20cbfe0f9294761d010df8a14f24581b',1,'galsim::des::des_meds::MultiExposureObject']]],
   ['ident',['ident',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a3531828c0f1bed6a9be5630f1b34f6df',1,'galsim::real::RealGalaxyCatalog']]],
   ['ikx',['ikx',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a0e252acad4048ae53308d4aa9623e7e5',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
@@ -23,5 +24,5 @@ var searchData=
   ['invariableinclination',['InvariableInclination',['../_astronomical_constants_8h.html#a54562f2c74a062048ae649081f96a45d',1,'AstronomicalConstants.h']]],
   ['invariablenode',['InvariableNode',['../_astronomical_constants_8h.html#a46b62d9c886c9d0af750dd17f36e9fab',1,'AstronomicalConstants.h']]],
   ['ir',['ir',['../_int_8h.html#a79e3b453d2571ed14110a426a914785a',1,'Int.h']]],
-  ['isfits',['isfits',['../classgalsim_1_1catalog_1_1_input_catalog.html#a446a2f84d5a41dac13e036ca4f27d6cd',1,'galsim::catalog::InputCatalog']]]
+  ['isfits',['isfits',['../classgalsim_1_1catalog_1_1_catalog.html#a8b737072b2bce1bf2d2867732123780e',1,'galsim::catalog::Catalog']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../classgalsim_1_1_position.html#a72119dac27085a678d8e05c2dfc2cd53',1,'galsim::Position']]],
+  ['x',['x',['../classgalsim_1_1_position.html#a72119dac27085a678d8e05c2dfc2cd53',1,'galsim::Position::x()'],['../classgalsim_1_1fds__test_1_1newfile.html#a777bb4a3528374c0c84a6607cc7e2a2e',1,'galsim.fds_test.newfile.x()']]],
   ['x0',['x0',['../structgalsim_1_1hsm_1_1_object_data.html#acb59cce570c60d3a66f38765f85d869b',1,'galsim::hsm::ObjectData::x0()'],['../classgalsim_1_1deprecated_1_1ellipse_1_1_ellipse.html#ad7fcd2ced426ef8f392bfb1b61a85d35',1,'galsim.deprecated.ellipse.Ellipse.x0()']]],
   ['x_5finterpolant',['x_interpolant',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a3463db401ffe15835cfc29814d365b52',1,'galsim::interpolatedimage::InterpolatedImage']]],
   ['x_5flog',['x_log',['../classgalsim_1_1table_1_1_lookup_table.html#a189055c6cc14a7937b759fcb70580ecc',1,'galsim::table::LookupTable']]],

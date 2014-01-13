@@ -2,10 +2,6 @@ var searchData=
 [
   ['da',['Da',['../classgalsim_1_1nfw__halo_1_1_cosmology.html#acd428059aadd3be7a0562ba6ee384502',1,'galsim::nfw_halo::Cosmology']]],
   ['default_5fhsmparams',['default_hsmparams',['../namespacegalsim_1_1hsm.html#a20b000f241fd1c2a8f4f3b160254107b',1,'galsim::hsm']]],
-  ['defaultkinterpolant1d',['defaultKInterpolant1d',['../namespacegalsim_1_1sbp.html#a9da5c99f00b13344c30a1a25a6c85411',1,'galsim::sbp']]],
-  ['defaultkinterpolant2d',['defaultKInterpolant2d',['../namespacegalsim_1_1sbp.html#aad3e58b51f650dc8f3580afd27adb791',1,'galsim::sbp']]],
-  ['defaultxinterpolant1d',['defaultXInterpolant1d',['../namespacegalsim_1_1sbp.html#a632dcd52db710a936a18d1abc735d2b4',1,'galsim::sbp']]],
-  ['defaultxinterpolant2d',['defaultXInterpolant2d',['../namespacegalsim_1_1sbp.html#afad28ef09196668ea576bd4e2808e2c0',1,'galsim::sbp']]],
   ['degrees',['degrees',['../namespacegalsim.html#ae61b66be379ab254f69728a4873e0274',1,'galsim']]],
   ['delta',['Delta',['../classgalsim_1_1_delta.html#a3a0a45683b29c111d4bcff9465f4b962',1,'galsim::Delta']]],
   ['deviatenoise',['DeviateNoise',['../classgalsim_1_1_deviate_noise.html#a2796a4ab3cf63b8d63b85651e1faf04d',1,'galsim::DeviateNoise::DeviateNoise(boost::shared_ptr&lt; BaseDeviate &gt; dev)'],['../classgalsim_1_1_deviate_noise.html#ae9f998e8f1eba39a48f08abf15a99126',1,'galsim::DeviateNoise::DeviateNoise(const DeviateNoise &amp;rhs)']]],
@@ -18,5 +14,6 @@ var searchData=
   ['drawstampfft',['DrawStampFFT',['../namespacegalsim_1_1config_1_1stamp.html#afece785b2079817ed2d4558689d4da5f',1,'galsim::config::stamp']]],
   ['drawstampphot',['DrawStampPhot',['../namespacegalsim_1_1config_1_1stamp.html#a35f6111ac506b8a68755e424ddbdc726',1,'galsim::config::stamp']]],
   ['drawwithin',['drawWithin',['../classgalsim_1_1_interval.html#a08bb56af4a637c1169676279c9f10188',1,'galsim::Interval']]],
-  ['dump',['dump',['../classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487',1,'galsim::Table']]]
+  ['dump',['dump',['../classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487',1,'galsim::Table']]],
+  ['duplicate',['duplicate',['../structgalsim_1_1_g_s_params_ptr.html#a1daa8516ab0b5c3a0a3cb1de244d11c1',1,'galsim::GSParamsPtr::duplicate()'],['../classgalsim_1_1_base_deviate.html#a24ad76f1ae74197b900cb4abbaf93dc6',1,'galsim::BaseDeviate::duplicate()'],['../classgalsim_1_1_uniform_deviate.html#a0a073fa071ff251a38d18f089a666246',1,'galsim::UniformDeviate::duplicate()'],['../classgalsim_1_1_gaussian_deviate.html#a9f6f62102ea545ee1c0e08144f09f105',1,'galsim::GaussianDeviate::duplicate()'],['../classgalsim_1_1_binomial_deviate.html#a49bd98d4dfa49ac2ff08fb041d08ca1a',1,'galsim::BinomialDeviate::duplicate()'],['../classgalsim_1_1_poisson_deviate.html#a9610af35f327b83332622e1505aa7b09',1,'galsim::PoissonDeviate::duplicate()'],['../classgalsim_1_1_weibull_deviate.html#af3c0c00d7458a5ab7cf0c8338b07d47b',1,'galsim::WeibullDeviate::duplicate()'],['../classgalsim_1_1_gamma_deviate.html#ac0f06e276a7081040f787fa035934d38',1,'galsim::GammaDeviate::duplicate()'],['../classgalsim_1_1_chi2_deviate.html#a7503e051204c57e6834c2d599d38da10',1,'galsim::Chi2Deviate::duplicate()'],['../classgalsim_1_1random_1_1_dist_deviate.html#a0d341436f76cfd232f995f6def857a97',1,'galsim.random.DistDeviate.duplicate()']]]
 ];

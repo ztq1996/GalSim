@@ -1,7 +1,7 @@
 var searchData=
 [
   ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing__ps.html#a979b775d8fe6f324ebf32fc304a64b09',1,'galsim::lensing_ps']]],
-  ['keys',['keys',['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim::fits::FitsHeader']]],
+  ['keys',['keys',['../classgalsim_1_1catalog_1_1_dict.html#a694911db5477e374654bbcfb2137e8ec',1,'galsim.catalog.Dict.keys()'],['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim.fits.FitsHeader.keys()']]],
   ['kolmogorov_5fmtf',['kolmogorov_mtf',['../namespacegalsim_1_1deprecated_1_1atmosphere.html#a55e366481da0c3dd09d0d065c97dd512',1,'galsim::deprecated::atmosphere']]],
   ['kolmogorov_5fmtf_5fimage',['kolmogorov_mtf_image',['../namespacegalsim_1_1deprecated_1_1atmosphere.html#a9a43176f76764e0ab2ab5fe979646e84',1,'galsim::deprecated::atmosphere']]],
   ['kolmogorov_5fpsf',['kolmogorov_psf',['../namespacegalsim_1_1deprecated_1_1atmosphere.html#ae370406739d7e1df415d3bc2886b3d9a',1,'galsim::deprecated::atmosphere']]],

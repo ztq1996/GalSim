@@ -10,5 +10,5 @@ var searchData=
   ['powerspectrumestimator',['PowerSpectrumEstimator',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html',1,'galsim::pse']]],
   ['powerspectrumrealizer',['PowerSpectrumRealizer',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html',1,'galsim::lensing_ps']]],
   ['probabilitytree',['ProbabilityTree',['../classgalsim_1_1_probability_tree.html',1,'galsim']]],
-  ['probabilitytree_3c_20interval_20_3e',['ProbabilityTree&lt; Interval &gt;',['../classgalsim_1_1_probability_tree.html',1,'galsim']]]
+  ['probabilitytree_3c_20galsim_3a_3ainterval_20_3e',['ProbabilityTree&lt; galsim::Interval &gt;',['../classgalsim_1_1_probability_tree.html',1,'galsim']]]
 ];

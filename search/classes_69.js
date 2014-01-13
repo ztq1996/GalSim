@@ -2,7 +2,7 @@ var searchData=
 [
   ['image',['Image',['../classgalsim_1_1_image.html',1,'galsim']]],
   ['imageview',['ImageView',['../classgalsim_1_1_image_view.html',1,'galsim']]],
-  ['inputcatalog',['InputCatalog',['../classgalsim_1_1catalog_1_1_input_catalog.html',1,'galsim::catalog']]],
+  ['inputgetter',['InputGetter',['../classgalsim_1_1config_1_1process_1_1_input_getter.html',1,'galsim::config::process']]],
   ['interpolant',['Interpolant',['../classgalsim_1_1_interpolant.html',1,'galsim']]],
   ['interpolant2d',['Interpolant2d',['../classgalsim_1_1_interpolant2d.html',1,'galsim']]],
   ['interpolantfunction',['InterpolantFunction',['../classgalsim_1_1_interpolant_function.html',1,'galsim']]],
