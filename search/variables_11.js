@@ -3,6 +3,7 @@ var searchData=
   ['r',['r',['../classgalsim_1_1lensing__ps_1_1xip__integrand.html#a27c847b112696060a5995aa3d2a8b964',1,'galsim.lensing_ps.xip_integrand.r()'],['../classgalsim_1_1lensing__ps_1_1xim__integrand.html#a0c9d86bfb07055754cf9f6893b5600ce',1,'galsim.lensing_ps.xim_integrand.r()']]],
   ['radtoarcsec',['RadToArcsec',['../_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1',1,'AstronomicalConstants.h']]],
   ['range_5fdivision_5ffor_5fextrema',['range_division_for_extrema',['../structgalsim_1_1_g_s_params.html#a4b216aabc88c9a0caba07a96fff6be2a',1,'galsim::GSParams']]],
+  ['real_5fspace',['real_space',['../classgalsim_1_1compound_1_1_convolution.html#a705f5e5a76c4f1243b47f28e8ceacd68',1,'galsim.compound.Convolution.real_space()'],['../classgalsim_1_1compound_1_1_auto_convolution.html#a029f97bb0c6c80ae75d6be11853ddc1c',1,'galsim.compound.AutoConvolution.real_space()'],['../classgalsim_1_1compound_1_1_auto_correlation.html#a7ba38174694cf79e70088e5149a28e9d',1,'galsim.compound.AutoCorrelation.real_space()']]],
   ['realspace_5fabserr',['realspace_abserr',['../structgalsim_1_1_g_s_params.html#a7fbf0d18a476c2f1acf11901aae68e79',1,'galsim::GSParams']]],
   ['realspace_5frelerr',['realspace_relerr',['../structgalsim_1_1_g_s_params.html#aaa3b4a7b32194973550186a0db09723b',1,'galsim::GSParams']]],
   ['recombinationredshift',['RecombinationRedshift',['../_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878',1,'AstronomicalConstants.h']]],

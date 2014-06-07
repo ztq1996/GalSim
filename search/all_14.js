@@ -19,7 +19,6 @@ var searchData=
   ['theorytoobserved',['theoryToObserved',['../namespacegalsim_1_1lensing__ps.html#a74a4dfa16142714963642f846b0a40d7',1,'galsim::lensing_ps']]],
   ['thin',['thin',['../classgalsim_1_1bandpass_1_1_bandpass.html#a20a7b1813506e7441e03ef097f0d5bf1',1,'galsim.bandpass.Bandpass.thin()'],['../classgalsim_1_1sed_1_1_s_e_d.html#a24e67cea06205ba94ee75f370a86af46',1,'galsim.sed.SED.thin()']]],
   ['thin_5ftabulated_5fvalues',['thin_tabulated_values',['../namespacegalsim_1_1utilities.html#a726162f079025bf5e5a622702d001ad7',1,'galsim::utilities']]],
-  ['time',['time',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a504309f572774ab8cd29c9e8f63d5825',1,'galsim::utilities::ComparisonShapeData']]],
   ['toimage',['toImage',['../classgalsim_1_1wcs_1_1_base_w_c_s.html#af3cabd4458ae22637937c7537eb86b4b',1,'galsim::wcs::BaseWCS']]],
   ['toworld',['toWorld',['../classgalsim_1_1wcs_1_1_base_w_c_s.html#aa9d725d9df29a4935deaaa240f90e38c',1,'galsim::wcs::BaseWCS']]],
   ['tpi',['TPI',['../_astronomical_constants_8h.html#ae0563db88ec40dfb8c9b8b07aeb93f90',1,'AstronomicalConstants.h']]],

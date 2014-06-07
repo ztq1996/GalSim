@@ -24,6 +24,7 @@ var searchData=
   ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['readmulti',['readMulti',['../namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067',1,'galsim::fits']]],
   ['real_2epy',['real.py',['../real_8py.html',1,'']]],
+  ['real_5fspace',['real_space',['../classgalsim_1_1compound_1_1_convolution.html#a705f5e5a76c4f1243b47f28e8ceacd68',1,'galsim.compound.Convolution.real_space()'],['../classgalsim_1_1compound_1_1_auto_convolution.html#a029f97bb0c6c80ae75d6be11853ddc1c',1,'galsim.compound.AutoConvolution.real_space()'],['../classgalsim_1_1compound_1_1_auto_correlation.html#a7ba38174694cf79e70088e5149a28e9d',1,'galsim.compound.AutoCorrelation.real_space()']]],
   ['realgalaxy',['RealGalaxy',['../classgalsim_1_1real_1_1_real_galaxy.html',1,'galsim::real']]],
   ['realgalaxycatalog',['RealGalaxyCatalog',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html',1,'galsim::real']]],
   ['realspace_5fabserr',['realspace_abserr',['../structgalsim_1_1_g_s_params.html#a7fbf0d18a476c2f1acf11901aae68e79',1,'galsim::GSParams']]],

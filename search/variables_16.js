@@ -5,6 +5,5 @@ var searchData=
   ['wcs_5ftype',['wcs_type',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a8991a5706ee494f85ef1fcff75689e56',1,'galsim::fitswcs::GSFitsWCS']]],
   ['weight',['weight',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aaa969ffc404af2b4c2519d8b9e9e897d',1,'galsim::real::RealGalaxyCatalog']]],
   ['weights',['weights',['../classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a3a0b6a5a5866156843b4a048ec0e5215',1,'galsim::des::des_meds::MultiExposureObject']]],
-  ['wmult',['wmult',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html#a2cd1e729db08cc038c2eef168905ce11',1,'galsim::utilities::ComparisonShapeData']]],
   ['world_5forigin',['world_origin',['../classgalsim_1_1wcs_1_1_uniform_w_c_s.html#aae90061a778c1df16cf19d82274d1e05',1,'galsim.wcs.UniformWCS.world_origin()'],['../classgalsim_1_1wcs_1_1_u_v_function.html#a835b97cee83217ba129c2712390417aa',1,'galsim.wcs.UVFunction.world_origin()']]]
 ];

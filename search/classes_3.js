@@ -14,7 +14,6 @@ var searchData=
   ['chromaticdeconvolution',['ChromaticDeconvolution',['../classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html',1,'galsim::chromatic']]],
   ['chromaticobject',['ChromaticObject',['../classgalsim_1_1chromatic_1_1_chromatic_object.html',1,'galsim::chromatic']]],
   ['chromaticsum',['ChromaticSum',['../classgalsim_1_1chromatic_1_1_chromatic_sum.html',1,'galsim::chromatic']]],
-  ['comparisonshapedata',['ComparisonShapeData',['../classgalsim_1_1utilities_1_1_comparison_shape_data.html',1,'galsim::utilities']]],
   ['constimageview',['ConstImageView',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],
   ['constimageview_3c_20float_20_3e',['ConstImageView&lt; float &gt;',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],
   ['continuousintegrator',['ContinuousIntegrator',['../classgalsim_1_1integ_1_1_continuous_integrator.html',1,'galsim::integ']]],
