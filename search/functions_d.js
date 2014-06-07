@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['magnify',['magnify',['../classgalsim_1_1base_1_1_g_s_object.html#aac64da7ce1c4165ba048300fede29943',1,'galsim.base.GSObject.magnify()'],['../classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769',1,'galsim.chromatic.ChromaticObject.magnify()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8455addeb6443a44fd2db716cdbda8cf',1,'galsim.correlatednoise._BaseCorrelatedNoise.magnify()']]],
   ['makeexpanded',['makeExpanded',['../classgalsim_1_1_bounds.html#a80c8e9b7badfdce8f184005ff184bc50',1,'galsim::Bounds']]],
   ['makeshifted',['makeShifted',['../classgalsim_1_1_bounds.html#a8fa947583964fdf8eeed44146bf9d149',1,'galsim::Bounds::makeShifted(const T dx, const T dy) const '],['../classgalsim_1_1_bounds.html#af14851fa323a15b86dc2b891b249dca0',1,'galsim::Bounds::makeShifted(const Position&lt; T &gt; &amp;delta) const ']]],
   ['makeskyimage',['makeSkyImage',['../classgalsim_1_1wcs_1_1_base_w_c_s.html#ad43f8879742ae443fc127f9a5d5bdfc6',1,'galsim::wcs::BaseWCS']]],

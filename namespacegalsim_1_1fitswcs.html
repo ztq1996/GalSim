@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -186,14 +187,14 @@ Variables</h2></td></tr>
 <p>Note: The list of classes this function will try may be edited, e.g. by an external module that wants to add an additional WCS type. The list is <code>galsim.wcs.fits_wcs_types</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The FITS file from which to read the WCS information. This is probably the usual parameter to provide. [ Default: <code>file_name = None</code> ] </td></tr>
-    <tr><td class="paramname">dir</td><td>Optional directory to prepend to the file name. [ Default <code>dir = None</code> ] </td></tr>
-    <tr><td class="paramname">hdu</td><td>Optionally, the number of the HDU to use if reading from a file. The default is to use either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.) [ Default <code>hdu = None</code> ] </td></tr>
-    <tr><td class="paramname">header</td><td>The header of an open pyfits (or astropy.io) hdu. Or, it can be a galsim.FitsHeader object. [ Default <code>header = None</code> ] </td></tr>
-    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). See <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a> for the available options. [ Default <code>compression = 'auto'</code> ] </td></tr>
-    <tr><td class="paramname">text_file</td><td>Normally a file is taken to be a fits file, but you can also give it a text file with the header information (like the .head file output from SCamp). In this case you should set <code>text_file = True</code> to tell GalSim to parse the file this way. [ Default <code>test_file = False</code> ] </td></tr>
+    <tr><td class="paramname">file_name</td><td>The FITS file from which to read the WCS information. This is probably the usual parameter to provide. [default: None] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optional directory to prepend to the file name. [default: None] </td></tr>
+    <tr><td class="paramname">hdu</td><td>Optionally, the number of the HDU to use if reading from a file. The default is to use either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.) [default: None] </td></tr>
+    <tr><td class="paramname">header</td><td>The header of an open pyfits (or astropy.io) hdu. Or, it can be a galsim.FitsHeader object. [default: None] </td></tr>
+    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). See <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a> for the available options. [default: 'auto'] </td></tr>
+    <tr><td class="paramname">text_file</td><td>Normally a file is taken to be a fits file, but you can also give it a text file with the header information (like the .head file output from SCamp). In this case you should set <code>text_file = True</code> to tell GalSim to parse the file this way. [default: False] </td></tr>
     <tr><td class="paramname">suppress_warning</td><td>Should a warning be emitted if none of the real FITS WCS classes are able to successfully read the file, and we have to reset to an AffineTransform instead? <a href="Note: this is set to True when this function is implicitly called from 
-                           one of the galsim.fits.read* functions.">Default `suppress_warning = False`</a> </td></tr>
+                           one of the galsim.fits.read* functions.">default: False</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -236,11 +237,11 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">affine</td><td>An AffineTransform defining the transformation from image coordinates to the coordinates on the tangent plane. </td></tr>
     <tr><td class="paramname">world_origin</td><td>A CelestialCoord defining the location on the sphere where the tangent plane is centered. </td></tr>
-    <tr><td class="paramname">units</td><td>The angular units of the (u,v) intermediate coordinate system. [ Default <code>units = <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a></code> ]</td></tr>
+    <tr><td class="paramname">units</td><td>The angular units of the (u,v) intermediate coordinate system. [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html" title="This WCS uses a GalSim implementation to read a WCS from a FITS file. ">GSFitsWCS</a> describing this WCS. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html" title="This WCS uses a GalSim implementation to read a WCS from a FITS file. ">GSFitsWCS</a> describing this WCS. </dd></dl>
 
 </div>
 </div>

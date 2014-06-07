@@ -10,5 +10,5 @@ var searchData=
   ['valid_5fvalue_5ftypes',['valid_value_types',['../namespacegalsim_1_1config_1_1value.html#ad12400ca84f698926856c74962a87910',1,'galsim::config::value']]],
   ['valid_5fwcs_5ftypes',['valid_wcs_types',['../namespacegalsim_1_1config_1_1wcs.html#a4b7b2226313acd67dff6a30a55893853',1,'galsim::config::wcs']]],
   ['variance',['variance',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a8f88aca26990573570f3220fdb085934',1,'galsim::real::RealGalaxyCatalog']]],
-  ['version',['version',['../namespacegalsim_1_1base.html#a1399d3395fef8de09804ebe84b664491',1,'galsim::base']]]
+  ['version',['version',['../namespacegalsim.html#a878430f67f66dbc50dd1464e8ed53285',1,'galsim']]]
 ];

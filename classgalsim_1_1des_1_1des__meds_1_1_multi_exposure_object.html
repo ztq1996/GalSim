@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -133,19 +134,21 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class containing exposures for single object, along with other information. </p>
-<p>Available fields: self.images list of images of the object (GalSim Images) self.weights list of weight maps (GalSim Images) self.segs list of segmentation masks (GalSim Images) self.wcs list of WCS transformations (GalSim AffineTransforms) self.n_cutouts number of exposures self.box_size size of each exposure image</p>
-<p>Constructor parameters: </p>
+<h2>Initialization </h2>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">images</td><td>list of images of the object (GalSim Images) </td></tr>
-    <tr><td class="paramname">weights</td><td>list of weight maps (GalSim Images) </td></tr>
-    <tr><td class="paramname">badpix</td><td>list of bad pixel masks (GalSim Images) </td></tr>
-    <tr><td class="paramname">segs</td><td>list of segmentation maps (GalSim Images) </td></tr>
-    <tr><td class="paramname">wcs</td><td>list of WCS transformations (GalSim AffineTransforms) </td></tr>
-    <tr><td class="paramname">id</td><td>galaxy id</td></tr>
+    <tr><td class="paramname">images</td><td>List of images of the object (GalSim Images). </td></tr>
+    <tr><td class="paramname">weights</td><td>List of weight maps (GalSim Images). [default: None] </td></tr>
+    <tr><td class="paramname">badpix</td><td>List of bad pixel masks (GalSim Images). [default: None] </td></tr>
+    <tr><td class="paramname">segs</td><td>List of segmentation maps (GalSim Images). [default: None] </td></tr>
+    <tr><td class="paramname">wcs</td><td>List of WCS transformations (GalSim AffineTransforms). [default: None] </td></tr>
+    <tr><td class="paramname">id</td><td>Galaxy id. [default: 0]</td></tr>
   </table>
   </dd>
 </dl>
+<h2>Attributes </h2>
+<p>self.images List of images of the object (GalSim Images). self.weights List of weight maps (GalSim Images). self.segs List of segmentation masks (GalSim Images). self.wcs List of WCS transformations (GalSim AffineTransforms). self.n_cutouts Number of exposures. self.box_size Size of each exposure image.</p>
+<h2>Module level variables </h2>
 <p>Images, weights and segs have to be square numpy arrays with size in BOX_SIZES = [32,48,64,96,128,196,256]. Number of exposures for all lists (images,weights,segs,wcs) have to be the same and smaller than MAX_NCUTOUTS (default 11). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a207da7623237053a11a6a37bfa64b3d5"></a>

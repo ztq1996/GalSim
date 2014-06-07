@@ -11,6 +11,7 @@ var searchData=
   ['findadaptivemomview',['FindAdaptiveMomView',['../namespacegalsim_1_1hsm.html#a3b02518ad082885608ebea6950bf4a9c',1,'galsim::hsm']]],
   ['findzerocrossings',['findZeroCrossings',['../structgalsim_1_1integ_1_1_int_region.html#a87211211987889c1f42ed68890d00097',1,'galsim::integ::IntRegion']]],
   ['fitimage',['fitImage',['../classgalsim_1_1shapelet_1_1_shapelet.html#a9e8dab94e56263ca9742506a75c23861',1,'galsim::shapelet::Shapelet']]],
+  ['fitshapelet',['FitShapelet',['../namespacegalsim_1_1shapelet.html#a2977643a8edf270e2c9dceee6e0752bb',1,'galsim::shapelet']]],
   ['fitswcs',['FitsWCS',['../namespacegalsim_1_1fitswcs.html#adc43fc0b7458335cdec591d35d5e7f80',1,'galsim::fitswcs']]],
   ['for_5feach_5fpixel',['for_each_pixel',['../namespacegalsim.html#aa9a87ad88aad1726ffec050a849bcc26',1,'galsim::for_each_pixel(const ImageView&lt; T &gt; &amp;image, Op f)'],['../namespacegalsim.html#a591035042d365c765fce15122fda1a5d',1,'galsim::for_each_pixel(const ImageView&lt; T &gt; &amp;image, const Bounds&lt; int &gt; &amp;bounds, Op f)']]],
   ['fourierdraw',['fourierDraw',['../classgalsim_1_1_s_b_profile.html#ab9a7bd7c8920a5d9da0f4dbde13cdf23',1,'galsim::SBProfile']]],

@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -116,14 +117,19 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A special class for convolving a GSObject with itself. </p>
 <p>It is equivalent in functionality to galsim.Convolve([obj,obj]), but takes advantage of the fact that the two profiles are the same for some efficiency gains.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<h2>Initialization </h2>
+<p>The normal way to use this class is to use the <code>AutoConvolve</code> factory function: </p>
+<pre class="fragment">&gt;&gt;&gt; psf_sq = galsim.AutoConvolve(psf)
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>The object to be convolved with itself. </td></tr>
-    <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. Default is to automatically select this according to whether the object has hard edges. </td></tr>
-    <tr><td class="paramname">gsparams</td><td>Optional gsparams argument. </td></tr>
+    <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. [default: None, which means to automatically decide this according to whether the object has hard edges.] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
+<h2>Methods </h2>
+<p>There are no additional methods for <a class="el" href="classgalsim_1_1compound_1_1_auto_convolution.html" title="A special class for convolving a GSObject with itself. ">AutoConvolution</a> beyond the usual GSObject methods. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a64a62fd2e87bf5ea522f326541c4ca15"></a>
 <div class="memitem">

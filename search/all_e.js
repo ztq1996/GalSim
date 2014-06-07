@@ -25,10 +25,12 @@ var searchData=
   ['noise_5fdir',['noise_dir',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#af4316d76cdf744204315c78564db1cf7',1,'galsim::real::RealGalaxyCatalog']]],
   ['noise_5fdiv',['Noise_div',['../namespacegalsim_1_1noise.html#a87e6d843d5b04e7fd937343d070ba05a',1,'galsim::noise']]],
   ['noise_5ffile_5fname',['noise_file_name',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aaab29b291fa7df5d2f5fb1187db10352',1,'galsim::real::RealGalaxyCatalog']]],
-  ['noise_5fidiv',['Noise_idiv',['../namespacegalsim_1_1noise.html#a39c39b8a349bd18e8639f3ba9ed50f9d',1,'galsim::noise']]],
-  ['noise_5fimul',['Noise_imul',['../namespacegalsim_1_1noise.html#a3293fe2dbc763a141dace2081f1d3ea4',1,'galsim::noise']]],
   ['noise_5flock',['noise_lock',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a023bd5cf29577ca2c5cabca256686160',1,'galsim::real::RealGalaxyCatalog']]],
   ['noise_5fmul',['Noise_mul',['../namespacegalsim_1_1noise.html#aae86d8ae3142ce4badb620460138672d',1,'galsim::noise']]],
+  ['noise_5fscalevariance',['Noise_scaleVariance',['../namespacegalsim_1_1noise.html#ac4f28bddee01ca0b3c8f64dcd6ea13c1',1,'galsim::noise']]],
+  ['noise_5fsetvariance',['Noise_setVariance',['../namespacegalsim_1_1noise.html#a3730df582d41ff47e9e28e3b5dc6d0a2',1,'galsim::noise']]],
+  ['noise_5fwithscaledvariance',['Noise_withScaledVariance',['../namespacegalsim_1_1noise.html#a43fa5a0d6fce69ea14db228e722cfbff',1,'galsim::noise']]],
+  ['noise_5fwithvariance',['Noise_withVariance',['../namespacegalsim_1_1noise.html#ac8873a2f8ac01f418c3357cab054c73a',1,'galsim::noise']]],
   ['noisevarccd',['NoiseVarCCD',['../namespacegalsim_1_1config_1_1noise.html#a691ea901a203c9fce8f7832043cbbd0a',1,'galsim::config::noise']]],
   ['noisevarcosmos',['NoiseVarCOSMOS',['../namespacegalsim_1_1config_1_1noise.html#a4cf18f58b37f62b252bb14095dec884a',1,'galsim::config::noise']]],
   ['noisevargaussian',['NoiseVarGaussian',['../namespacegalsim_1_1config_1_1noise.html#a934bd75b20c9037cd0761ce255ac42a8',1,'galsim::config::noise']]],
@@ -39,5 +41,6 @@ var searchData=
   ['num_5fiter_5fdefault',['num_iter_default',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a8ebb94fefb4162846f58dde7bb56dbd8',1,'galsim::hsm::HSMParams']]],
   ['nx',['nx',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#abc1b92b06972c24ddedfefac251463e7',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['ny',['ny',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#ae243d699a2b76c11d895a15d2d6e8196',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
-  ['nyquistdx',['nyquistDx',['../classgalsim_1_1_s_b_profile.html#ae7956c43a3b82f40a5b5014fcf3653f0',1,'galsim::SBProfile::nyquistDx()'],['../classgalsim_1_1base_1_1_g_s_object.html#a98091310691b1ecdd0d8bfacf48b73c5',1,'galsim.base.GSObject.nyquistDx()']]]
+  ['nyquistdx',['nyquistDx',['../classgalsim_1_1_s_b_profile.html#ae7956c43a3b82f40a5b5014fcf3653f0',1,'galsim::SBProfile::nyquistDx()'],['../classgalsim_1_1base_1_1_g_s_object.html#a98091310691b1ecdd0d8bfacf48b73c5',1,'galsim.base.GSObject.nyquistDx()']]],
+  ['nyquistscale',['nyquistScale',['../classgalsim_1_1base_1_1_g_s_object.html#ab95676589d95590c2ce593adcf4f4198',1,'galsim::base::GSObject']]]
 ];

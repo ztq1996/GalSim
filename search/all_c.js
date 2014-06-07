@@ -4,6 +4,7 @@ var searchData=
   ['lanczos',['Lanczos',['../classgalsim_1_1_lanczos.html#a436352a6288e0f538a03917e397820b6',1,'galsim::Lanczos']]],
   ['last_5fn_5feval',['last_n_eval',['../classgalsim_1_1integ_1_1_image_integrator.html#a2f680619aaf5cb7d1c4fdbe406337336',1,'galsim::integ::ImageIntegrator']]],
   ['left',['left',['../structgalsim_1_1integ_1_1_int_region.html#aa90002ee33125a0eee9dd74b91ff9f21',1,'galsim::integ::IntRegion']]],
+  ['lens',['lens',['../classgalsim_1_1base_1_1_g_s_object.html#ae3feadf744ebeb19048ce5b0b85a1678',1,'galsim.base.GSObject.lens()'],['../classgalsim_1_1chromatic_1_1_chromatic_object.html#ab63bfdb4d42677761f5c8ee080bea761',1,'galsim.chromatic.ChromaticObject.lens()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a55d3944508f4d948b81d512d59f25e7d',1,'galsim.correlatednoise._BaseCorrelatedNoise.lens()']]],
   ['lensing_5fps_2epy',['lensing_ps.py',['../lensing__ps_8py.html',1,'']]],
   ['linear',['Linear',['../classgalsim_1_1_linear.html',1,'galsim']]],
   ['linear',['Linear',['../classgalsim_1_1_linear.html#ad0bc1eaec1ce1ac617dba73dc7190900',1,'galsim::Linear::Linear()'],['../classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fadc39a6b07eec8e68c03317a30c9d61b9',1,'galsim::Table::linear()']]],
@@ -24,6 +25,7 @@ var searchData=
   ['lrucachehelper_3c_20value_2c_20boost_3a_3atuple_3c_20key1_2c_20key2_2c_20key3_20_3e_20_3e',['LRUCacheHelper&lt; Value, boost::tuple&lt; Key1, Key2, Key3 &gt; &gt;',['../structgalsim_1_1_l_r_u_cache_helper_3_01_value_00_01boost_1_1tuple_3_01_key1_00_01_key2_00_01_key3_01_4_01_4.html',1,'galsim']]],
   ['lrucachehelper_3c_20value_2c_20boost_3a_3atuple_3c_20key1_2c_20key2_2c_20key3_2c_20key4_20_3e_20_3e',['LRUCacheHelper&lt; Value, boost::tuple&lt; Key1, Key2, Key3, Key4 &gt; &gt;',['../structgalsim_1_1_l_r_u_cache_helper_3_01_value_00_01boost_1_1tuple_3_01_key1_00_01_key2_00_01_key3_00_01_key4_01_4_01_4.html',1,'galsim']]],
   ['lrucachehelper_3c_20value_2c_20std_3a_3apair_3c_20key1_2c_20key2_20_3e_20_3e',['LRUCacheHelper&lt; Value, std::pair&lt; Key1, Key2 &gt; &gt;',['../structgalsim_1_1_l_r_u_cache_helper_3_01_value_00_01std_1_1pair_3_01_key1_00_01_key2_01_4_01_4.html',1,'galsim']]],
+  ['lvectorsize',['LVectorSize',['../namespacegalsim_1_1shapelet.html#aa9a5e7fa8fc7f3ed3f500d3291633439',1,'galsim::shapelet']]],
   ['lx',['lx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a1082bde1d8d3f169daa743de40f4010a',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['ly',['ly',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#aff6ccc101c52037999b76e7cb1bbb8a0',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

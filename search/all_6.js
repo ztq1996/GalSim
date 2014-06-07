@@ -21,6 +21,7 @@ var searchData=
   ['fitimage',['fitImage',['../classgalsim_1_1shapelet_1_1_shapelet.html#a9e8dab94e56263ca9742506a75c23861',1,'galsim::shapelet::Shapelet']]],
   ['fits_2epy',['fits.py',['../fits_8py.html',1,'']]],
   ['fits_5fwcs_5ftypes',['fits_wcs_types',['../namespacegalsim_1_1fitswcs.html#a1118c81c9e09b9000f8663157dc171a6',1,'galsim::fitswcs']]],
+  ['fitshapelet',['FitShapelet',['../namespacegalsim_1_1shapelet.html#a2977643a8edf270e2c9dceee6e0752bb',1,'galsim::shapelet']]],
   ['fitsheader',['FitsHeader',['../classgalsim_1_1fits_1_1_fits_header.html',1,'galsim::fits']]],
   ['fitswcs',['FitsWCS',['../namespacegalsim_1_1fitswcs.html#adc43fc0b7458335cdec591d35d5e7f80',1,'galsim::fitswcs']]],
   ['fitswcs_2epy',['fitswcs.py',['../fitswcs_8py.html',1,'']]],

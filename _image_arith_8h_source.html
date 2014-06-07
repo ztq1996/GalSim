@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -139,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>AssignableToImage;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>BaseImage;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>ImageAlloc;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span>ImageView;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="namespacegalsim_1_1image.html#abf5bf7d4e2e8aba244d8d166838325eb">ImageView</a>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// Templates for stepping through image pixels</span></div>
@@ -696,6 +697,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgalsim_1_1_base_image_html"><div class="ttname"><a href="classgalsim_1_1_base_image.html">galsim::BaseImage</a></div><div class="ttdoc">BaseImage class defines the interface of what you can do with Images without modifying pixels...</div><div class="ttdef"><b>Definition:</b> Image.h:46</div></div>
 <div class="ttc" id="namespacegalsim_html_a4f80013e0447c4d10a160639c8eeb3ce"><div class="ttname"><a href="namespacegalsim.html#a4f80013e0447c4d10a160639c8eeb3ce">galsim::add_function_pixel</a></div><div class="ttdeci">Op add_function_pixel(const ImageView&lt; T &gt; &amp;image, Op f)</div><div class="ttdoc">Add a function of pixel coords to an image. </div><div class="ttdef"><b>Definition:</b> ImageArith.h:152</div></div>
 <div class="ttc" id="classgalsim_1_1_base_image_html_ad04741013519c0cac437170ae18e43a2"><div class="ttname"><a href="classgalsim_1_1_base_image.html#ad04741013519c0cac437170ae18e43a2">galsim::BaseImage::getIter</a></div><div class="ttdeci">const_iterator getIter(int x, int y) const </div><div class="ttdoc">Return an iterator to an arbitrary pixel. </div><div class="ttdef"><b>Definition:</b> Image.h:255</div></div>
+<div class="ttc" id="namespacegalsim_1_1image_html_abf5bf7d4e2e8aba244d8d166838325eb"><div class="ttname"><a href="namespacegalsim_1_1image.html#abf5bf7d4e2e8aba244d8d166838325eb">galsim.image.ImageView</a></div><div class="ttdeci">dictionary ImageView</div><div class="ttdef"><b>Definition:</b> image.py:624</div></div>
 <div class="ttc" id="namespacegalsim_html_aa9a87ad88aad1726ffec050a849bcc26"><div class="ttname"><a href="namespacegalsim.html#aa9a87ad88aad1726ffec050a849bcc26">galsim::for_each_pixel</a></div><div class="ttdeci">Op for_each_pixel(const ImageView&lt; T &gt; &amp;image, Op f)</div><div class="ttdoc">Call a unary function on each pixel value. </div><div class="ttdef"><b>Definition:</b> ImageArith.h:69</div></div>
 <div class="ttc" id="classgalsim_1_1_bounds_html_a3648863c3c87c81a6b687c2f29b335f8"><div class="ttname"><a href="classgalsim_1_1_bounds.html#a3648863c3c87c81a6b687c2f29b335f8">galsim::Bounds::getYMin</a></div><div class="ttdeci">T getYMin() const </div><div class="ttdoc">Get the ymin of the Bounds rectangle. </div><div class="ttdef"><b>Definition:</b> Bounds.h:169</div></div>
 <div class="ttc" id="classgalsim_1_1_image_view_html_a3f7f91da014dd4666eb52e413f221e19"><div class="ttname"><a href="classgalsim_1_1_image_view.html#a3f7f91da014dd4666eb52e413f221e19">galsim::ImageView::iterator</a></div><div class="ttdeci">T * iterator</div><div class="ttdoc">iterator type for pixels within a row (unchecked). </div><div class="ttdef"><b>Definition:</b> Image.h:518</div></div>

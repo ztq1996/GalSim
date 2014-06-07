@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -156,27 +157,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a926fae5ebf1d3f4b6bd03b9ed412402f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a926fae5ebf1d3f4b6bd03b9ed412402f">getFlux</a> () const </td></tr>
 <tr class="memdesc:a926fae5ebf1d3f4b6bd03b9ed412402f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total flux of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.  <a href="#a926fae5ebf1d3f4b6bd03b9ed412402f">More...</a><br/></td></tr>
 <tr class="separator:a926fae5ebf1d3f4b6bd03b9ed412402f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeefb2c61d26fae17c5a55d9e60dd4ac2">scaleFlux</a> (double fluxRatio)</td></tr>
-<tr class="memdesc:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux by fluxRatio.  <a href="#aeefb2c61d26fae17c5a55d9e60dd4ac2">More...</a><br/></td></tr>
-<tr class="separator:aeefb2c61d26fae17c5a55d9e60dd4ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31093a62c9086296fdf519c720edadb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a31093a62c9086296fdf519c720edadb9">setFlux</a> (double flux)</td></tr>
-<tr class="memdesc:a31093a62c9086296fdf519c720edadb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flux to a new value.  <a href="#a31093a62c9086296fdf519c720edadb9">More...</a><br/></td></tr>
-<tr class="separator:a31093a62c9086296fdf519c720edadb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65543ef270317dd630ffda1006eb7795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a65543ef270317dd630ffda1006eb7795">applyExpansion</a> (double scale)</td></tr>
-<tr class="memdesc:a65543ef270317dd630ffda1006eb7795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an overall scale change to the profile, preserving surface brightness.  <a href="#a65543ef270317dd630ffda1006eb7795">More...</a><br/></td></tr>
-<tr class="separator:a65543ef270317dd630ffda1006eb7795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a789dc712e9141115b4b4a43938da344b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a789dc712e9141115b4b4a43938da344b">applyShear</a> (<a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> s)</td></tr>
-<tr class="memdesc:a789dc712e9141115b4b4a43938da344b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a789dc712e9141115b4b4a43938da344b">More...</a><br/></td></tr>
-<tr class="separator:a789dc712e9141115b4b4a43938da344b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d861c3513863ac3c78a853d2f93a4aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a8d861c3513863ac3c78a853d2f93a4aa">applyRotation</a> (const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;theta)</td></tr>
-<tr class="memdesc:a8d861c3513863ac3c78a853d2f93a4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given rotation.  <a href="#a8d861c3513863ac3c78a853d2f93a4aa">More...</a><br/></td></tr>
-<tr class="separator:a8d861c3513863ac3c78a853d2f93a4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab555ceb66994c99f64783b0930e8c543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ab555ceb66994c99f64783b0930e8c543">applyTransformation</a> (double dudx, double dudy, double dvdx, double dvdy)</td></tr>
-<tr class="memdesc:ab555ceb66994c99f64783b0930e8c543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a transformation given by an arbitrary Jacobian matrix.  <a href="#ab555ceb66994c99f64783b0930e8c543">More...</a><br/></td></tr>
-<tr class="separator:ab555ceb66994c99f64783b0930e8c543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957aef3fc71ef162877fe562ac421f3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a957aef3fc71ef162877fe562ac421f3e">applyShift</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;delta)</td></tr>
-<tr class="memdesc:a957aef3fc71ef162877fe562ac421f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a translation.  <a href="#a957aef3fc71ef162877fe562ac421f3e">More...</a><br/></td></tr>
-<tr class="separator:a957aef3fc71ef162877fe562ac421f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6c5c6e321b7231ca859b803f45ecb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a2b6c5c6e321b7231ca859b803f45ecb5">scaleFlux</a> (double fluxRatio) const </td></tr>
+<tr class="memdesc:a2b6c5c6e321b7231ca859b803f45ecb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux by fluxRatio.  <a href="#a2b6c5c6e321b7231ca859b803f45ecb5">More...</a><br/></td></tr>
+<tr class="separator:a2b6c5c6e321b7231ca859b803f45ecb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae516375386ed9d0cdbed3c061e1d818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aae516375386ed9d0cdbed3c061e1d818">expand</a> (double scale) const </td></tr>
+<tr class="memdesc:aae516375386ed9d0cdbed3c061e1d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an overall scale change to the profile, preserving surface brightness.  <a href="#aae516375386ed9d0cdbed3c061e1d818">More...</a><br/></td></tr>
+<tr class="separator:aae516375386ed9d0cdbed3c061e1d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9ba39acff7f44777cb9f0ea5ba1ab7a8">shear</a> (<a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> s) const </td></tr>
+<tr class="memdesc:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a9ba39acff7f44777cb9f0ea5ba1ab7a8">More...</a><br/></td></tr>
+<tr class="separator:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8fc7c15d9e303f7be0170f515d73081"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ab8fc7c15d9e303f7be0170f515d73081">rotate</a> (const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;theta) const </td></tr>
+<tr class="memdesc:ab8fc7c15d9e303f7be0170f515d73081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given rotation.  <a href="#ab8fc7c15d9e303f7be0170f515d73081">More...</a><br/></td></tr>
+<tr class="separator:ab8fc7c15d9e303f7be0170f515d73081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3328d85bec38a7e142fa5ec2afd84a8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a3328d85bec38a7e142fa5ec2afd84a8d">transform</a> (double dudx, double dudy, double dvdx, double dvdy) const </td></tr>
+<tr class="memdesc:a3328d85bec38a7e142fa5ec2afd84a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a transformation given by an arbitrary Jacobian matrix.  <a href="#a3328d85bec38a7e142fa5ec2afd84a8d">More...</a><br/></td></tr>
+<tr class="separator:a3328d85bec38a7e142fa5ec2afd84a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5858b8e0e2735ce5ded7d0b38cefefc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a5858b8e0e2735ce5ded7d0b38cefefc3">shift</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;delta) const </td></tr>
+<tr class="memdesc:a5858b8e0e2735ce5ded7d0b38cefefc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a translation.  <a href="#a5858b8e0e2735ce5ded7d0b38cefefc3">More...</a><br/></td></tr>
+<tr class="separator:a5858b8e0e2735ce5ded7d0b38cefefc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab168c1e486689f65adf9769d062c3f94"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classgalsim_1_1_photon_array.html">PhotonArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94">shoot</a> (int N, <a class="el" href="classgalsim_1_1_uniform_deviate.html">UniformDeviate</a> ud) const </td></tr>
 <tr class="memdesc:ab168c1e486689f65adf9769d062c3f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot photons through this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.  <a href="#ab168c1e486689f65adf9769d062c3f94">More...</a><br/></td></tr>
 <tr class="separator:ab168c1e486689f65adf9769d062c3f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,169 +305,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a65543ef270317dd630ffda1006eb7795"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyExpansion </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>scale</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply an overall scale change to the profile, preserving surface brightness. </p>
-<p>This expands the linear scale factor of the object. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8d861c3513863ac3c78a853d2f93a4aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyRotation </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;&#160;</td>
-          <td class="paramname"><em>theta</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a given rotation. </p>
-<p>This rotates the object by the given angle. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
-
-</div>
-</div>
-<a class="anchor" id="a789dc712e9141115b4b4a43938da344b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyShear </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a>&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a given shear. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td><a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a> object by which to shear the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>. This shears the object by the given shear (see class description for <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a> for more information about shearing conventions). As with scaleFlux, it does not invalidate any previous uses of this object. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a957aef3fc71ef162877fe562ac421f3e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyShift </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>delta</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a translation. </p>
-<p>This shifts the object by the given amount. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab555ceb66994c99f64783b0930e8c543"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void galsim::SBProfile::applyTransformation </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dudx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dudy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dvdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dvdy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a transformation given by an arbitrary Jacobian matrix. </p>
-<p>This transforms the object by the given transformation. As with scaleFlux, it does not invalidate any previous uses of this object.</p>
-<p>The parameters are the four elements of the Jacobian: dudx, dudy, dvdx, dvdy. </p>
-
-</div>
-</div>
 <a class="anchor" id="af07f3685954696376c51d86b3acf2600"></a>
 <div class="memitem">
 <div class="memproto">
@@ -693,6 +528,32 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The total flux of photons the landed inside the image bounds.</dd></dl>
 <p>Note: N is input as a double so that very large values of N don't have to worry about overflowing int on systems with a small MAX_INT. Internally it will be rounded to the nearest integer. </p>
+
+</div>
+</div>
+<a class="anchor" id="aae516375386ed9d0cdbed3c061e1d818"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::expand </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply an overall scale change to the profile, preserving surface brightness. </p>
 
 </div>
 </div>
@@ -1351,7 +1212,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aeefb2c61d26fae17c5a55d9e60dd4ac2"></a>
+<a class="anchor" id="ab8fc7c15d9e303f7be0170f515d73081"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1359,11 +1220,37 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBProfile::scaleFlux </td>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::rotate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;&#160;</td>
+          <td class="paramname"><em>theta</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a given rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2b6c5c6e321b7231ca859b803f45ecb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::scaleFlux </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>fluxRatio</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1374,11 +1261,10 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Multiply the flux by fluxRatio. </p>
-<p>This resets the internal pointer to a new <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> that wraps the old one with a scaled flux. This does not change any previous uses of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>, so if it had been used in some other context (e.g. in <a class="el" href="classgalsim_1_1_s_b_add.html" title="Sums SBProfiles. ">SBAdd</a> or <a class="el" href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles. ">SBConvolve</a>), that object will be unchanged and still valid. </p>
 
 </div>
 </div>
-<a class="anchor" id="a31093a62c9086296fdf519c720edadb9"></a>
+<a class="anchor" id="a9ba39acff7f44777cb9f0ea5ba1ab7a8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1386,11 +1272,11 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void galsim::SBProfile::setFlux </td>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::shear </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>flux</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1400,8 +1286,33 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the flux to a new value. </p>
-<p>This sets the flux to a new value. As with scaleFlux, it does not invalidate any previous uses of this object. </p>
+<p>Apply a given shear. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5858b8e0e2735ce5ded7d0b38cefefc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::shift </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a translation. </p>
 
 </div>
 </div>
@@ -1477,6 +1388,54 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Sampling in k-space necessary to avoid folding too much of image in x space. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3328d85bec38a7e142fa5ec2afd84a8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::transform </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dudx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dudy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dvdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dvdy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply a transformation given by an arbitrary Jacobian matrix. </p>
 
 </div>
 </div>

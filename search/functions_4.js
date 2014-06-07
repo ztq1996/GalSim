@@ -12,6 +12,7 @@ var searchData=
   ['deviatenoise',['DeviateNoise',['../classgalsim_1_1_deviate_noise.html#a2796a4ab3cf63b8d63b85651e1faf04d',1,'galsim::DeviateNoise::DeviateNoise(boost::shared_ptr&lt; BaseDeviate &gt; dev)'],['../classgalsim_1_1_deviate_noise.html#ae9f998e8f1eba39a48f08abf15a99126',1,'galsim::DeviateNoise::DeviateNoise(const DeviateNoise &amp;rhs)']]],
   ['deviatenoise_5fapplyto',['DeviateNoise_applyTo',['../namespacegalsim_1_1noise.html#a652a1f7ad10c1b3fb9f51956492dd0b8',1,'galsim::noise']]],
   ['deviatenoise_5fcopy',['DeviateNoise_copy',['../namespacegalsim_1_1noise.html#ac4007479ddf916e30e9de7af133828da',1,'galsim::noise']]],
+  ['dilate',['dilate',['../classgalsim_1_1base_1_1_g_s_object.html#a0e80b6924c48e9708dd9e475f3b48b5f',1,'galsim.base.GSObject.dilate()'],['../classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1',1,'galsim.chromatic.ChromaticObject.dilate()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a811486de5ecef4c115c455223b907b1d',1,'galsim.correlatednoise._BaseCorrelatedNoise.dilate()']]],
   ['distanceto',['distanceTo',['../classgalsim_1_1celestial_1_1_celestial_coord.html#a2b8b43b29334ad7acc0a6eba820f2041',1,'galsim::celestial::CelestialCoord']]],
   ['divide',['divide',['../classgalsim_1_1_bounds.html#a741523c27fbffa81de6a083559478e0a',1,'galsim::Bounds']]],
   ['dms',['dms',['../namespacegalsim_1_1angle.html#a346b4ffc23d58626a58778a4729dc577',1,'galsim::angle']]],

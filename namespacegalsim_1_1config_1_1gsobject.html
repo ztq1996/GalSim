@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -164,13 +165,13 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">config</td><td>A dict with the configuration information. </td></tr>
     <tr><td class="paramname">key</td><td>The key name in config indicating which object to build. </td></tr>
-    <tr><td class="paramname">base</td><td>A dict which stores potentially useful things like base['rng'] = random number generator base['catalog'] = input catalog for InputCat items base['real_catalog'] = real galaxy catalog for RealGalaxy objects Typically on the initial call to BuildGSObject, this will be the same as config, hence the name base. </td></tr>
-    <tr><td class="paramname">gsparams</td><td>Optionally, provide non-default gsparams items. Any gsparams specified at this level will be added to the list. This should be a dict with whatever kwargs should be used in constructing the <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object. </td></tr>
-    <tr><td class="paramname">logger</td><td>Optionally, provide a logger for logging debug statements.</td></tr>
+    <tr><td class="paramname">base</td><td>A dict which stores potentially useful things like base['rng'] = random number generator base['catalog'] = input catalog for InputCat items base['real_catalog'] = real galaxy catalog for RealGalaxy objects Typically on the initial call to BuildGSObject, this will be the same as config, hence the name base. [default: None] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>Optionally, provide non-default gsparams items. Any gsparams specified at this level will be added to the list. This should be a dict with whatever kwargs should be used in constructing the <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object. [default: {}] </td></tr>
+    <tr><td class="paramname">logger</td><td>Optionally, provide a logger for logging debug statements. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>gsobject, safe gsobject is the built object safe is a bool that says whether it is safe to use this object again next time </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (gsobject, safe), where gsobject is the built object, and safe is a bool that says whether it is safe to use this object again next time. </dd></dl>
 
 </div>
 </div>

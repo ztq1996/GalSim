@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -190,15 +191,15 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">file_num</td><td>If given, the current file_num (default = 0) </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0)</td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">file_num</td><td>If given, the current file_num. [default: 0] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>time Time taken to build file </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the time taken to build file </dd></dl>
 
 </div>
 </div>

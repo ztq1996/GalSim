@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -256,11 +257,11 @@ Public Attributes</h2></td></tr>
 <p>Note that outside of the wavelength range defined by the <code>blue_limit</code> and <code>red_limit</code> attributes, the throughput is assumed to be zero.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wave</td><td>Wavelength in nanometers. </td></tr>
+    <tr><td class="paramname">wave</td><td>Wavelength in nanometers.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Dimensionless throughput. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the dimensionless throughput. </dd></dl>
 
 </div>
 </div>
@@ -453,12 +454,12 @@ Public Attributes</h2></td></tr>
 <p>If the bandpass was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the throughput function. (default: 1.e-4) </td></tr>
-    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) (default: False) </td></tr>
+    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the throughput function. [default: 1.e-4] </td></tr>
+    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The thinned <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the thinned <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a>. </dd></dl>
 
 </div>
 </div>
@@ -503,11 +504,11 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">blue_limit</td><td>Truncate blue side of bandpass here. </td></tr>
     <tr><td class="paramname">red_limit</td><td>Truncate red side of bandpass here. </td></tr>
-    <tr><td class="paramname">relative_throughput</td><td>If the bandpass was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then truncate leading and trailing wavelength ranges where the relative throughput is less than this amount. Do not remove any intermediate wavelength ranges. This option is not available for bandpasses initialized with a function or <code>eval</code> string. </td></tr>
+    <tr><td class="paramname">relative_throughput</td><td>If the bandpass was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then truncate leading and trailing wavelength ranges where the relative throughput is less than this amount. Do not remove any intermediate wavelength ranges. This option is not available for bandpasses initialized with a function or <code>eval</code> string.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The truncated <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the truncated <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a>. </dd></dl>
 
 </div>
 </div>

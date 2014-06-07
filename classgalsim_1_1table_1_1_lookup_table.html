@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -167,12 +168,12 @@ for arg in other_args:
 <p>The user can also opt to interpolate in log(x) and/or log(f), though this is not the default. It may be a wise choice depending on the particular function, e.g., for a nearly power-law f(x) (or at least one that is locally power-law-ish for much of the x range) then it might be a good idea to interpolate in log(x) and log(f) rather than x and f.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The list, tuple, or Numpy array of x values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). </td></tr>
-    <tr><td class="paramname">f</td><td>The list, tuple, or Numpy array of f(x) values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). </td></tr>
-    <tr><td class="paramname">interpolant</td><td>The interpolant to use, with the options being 'floor', 'ceil', 'linear' and 'spline'. [Default <code>interpolant = 'spline'</code>] </td></tr>
-    <tr><td class="paramname">file</td><td>A file from which to read the (x,f) pairs. </td></tr>
-    <tr><td class="paramname">x_log</td><td>Set to True if you wish to interpolate using log(x) rather than x. Note that all inputs / outputs will still be x, it's just a question of how the interpolation is done. [Default <code>x_log = False</code>] </td></tr>
-    <tr><td class="paramname">f_log</td><td>Set to True if you wish to interpolate using log(f) rather than f. Note that all inputs / outputs will still be f, it's just a question of how the interpolation is done. [Default <code>f_log = False</code>] </td></tr>
+    <tr><td class="paramname">x</td><td>The list, tuple, or Numpy array of x values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either x and f or file is required.] </td></tr>
+    <tr><td class="paramname">f</td><td>The list, tuple, or Numpy array of f(x) values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either x and f or file is required.] </td></tr>
+    <tr><td class="paramname">file</td><td>A file from which to read the (x,f) pairs. [Either x and f, or file is required] </td></tr>
+    <tr><td class="paramname">interpolant</td><td>The interpolant to use, with the options being 'floor', 'ceil', 'linear' and 'spline'. [default: 'spline'] </td></tr>
+    <tr><td class="paramname">x_log</td><td>Set to True if you wish to interpolate using log(x) rather than x. Note that all inputs / outputs will still be x, it's just a question of how the interpolation is done. [default: False] </td></tr>
+    <tr><td class="paramname">f_log</td><td>Set to True if you wish to interpolate using log(f) rather than f. Note that all inputs / outputs will still be f, it's just a question of how the interpolation is done. [default: False] </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,13 +204,13 @@ for arg in other_args:
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
+          <td class="paramname"><em>file</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file</em> = <code>None</code>, </td>
+          <td class="paramname"><em>interpolant</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -262,11 +263,11 @@ for arg in other_args:
 <p>When the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> object is called with a single argument, it returns the value at that argument. An exception will be thrown automatically by the _LookupTable class if the x value is outside the range of the original tabulated values. The value that is returned is the same type as that provided as an argument, e.g., if a single value x is provided then a single value of f is returned; if a tuple of x values is provided then a tuple of f values is returned; and so on. Even if interpolation was done using the <code>x_log</code> option, the user should still provide x rather than log(x).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The x value(s) for which f(x) should be calculated via interpolation on the original (x, f) lookup table. x can be a single float/double, or a tuple, list, or arbitrarily shaped Numpy array. </td></tr>
+    <tr><td class="paramname">x</td><td>The x value(s) for which f(x) should be calculated via interpolation on the original (x, f) lookup table. x can be a single float/double, or a tuple, list, or arbitrarily shaped Numpy array.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The interpolated f(x) value(s) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the interpolated f(x) value(s). </dd></dl>
 
 </div>
 </div>

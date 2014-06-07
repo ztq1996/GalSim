@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -264,21 +265,21 @@ image: { type : Single  ... }
 <p>Note that <code>n_photons_per_trial</code> should be large (&gt;~ 1e6) to ensure that any biases detected between the photon shooting and DFT-drawn images are due to numerical differences rather than biases on adaptive moments due to noise itself, a generic feature in this work. This can be verified with a convergence test.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">config</td><td>GalSim config dictionary describing the GSObject we wish to test (see e.g. examples/demo8.py).</td></tr>
-    <tr><td class="paramname">gal_num</td><td>number for the galaxy in the config dictionary, which will be passed to the config system. It related to obj_num in the config system by obj_num = gal_num * n_trials_per_iter (assuming the config is created correctly as explained in the example above)</td></tr>
-    <tr><td class="paramname">random_seed</td><td>integer to be used as the basis of all seeds for the random number generator, overrides any value in config['image'].</td></tr>
-    <tr><td class="paramname">nproc</td><td>number of cpu processes to run in parallel, overrides any value in config['image'].</td></tr>
-    <tr><td class="paramname">pixel_scale</td><td>the pixel scale to use in the test images, overrides any value in config['image'].</td></tr>
-    <tr><td class="paramname">size</td><td>the size of the images in the rendering tests - all test images are currently square, overrides any value in config['image'].</td></tr>
-    <tr><td class="paramname">wmult</td><td>the <code>wmult</code> parameter used in .draw() (see the GSObject .draw() method docs via <code>help(galsim.GSObject.draw)</code> for more details), overrides any value in config['image'].</td></tr>
-    <tr><td class="paramname">abs_tol_ellip</td><td>the test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean ellipticity moments from photon-shot images are smaller than this param value. If moments=False, then using the measurements from HSM.</td></tr>
-    <tr><td class="paramname">abs_tol_size</td><td>the test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean size moments from photon-shot images are smaller than this param value. If moments=False, then using the measurements from HSM.</td></tr>
-    <tr><td class="paramname">n_trials_per_iter</td><td>number of trial images used to estimate (or successively re-estimate) the standard error on the delta quantities above for each iteration of the tests. Default = 32.</td></tr>
-    <tr><td class="paramname">n_max_iter</td><td>maximum number of iterations. After reaching it, the current uncertainty on shape measurement is reported, even if abs_tol_ellip and abs_tol_size was not reported. If a negative number is supplied, then there is no limit of number of iterations. Default=-1.</td></tr>
-    <tr><td class="paramname">n_photons_per_trial</td><td>number of photons shot in drawShoot() for each trial. This should be large enough that any noise bias (a.k.a. noise rectification bias) on moments estimates is small. Default ~1e7 should be sufficient.</td></tr>
-    <tr><td class="paramname">moments</td><td>set True to compare rendered images using AdaptiveMoments estimates of simple observed estimates (default=<code>True</code>).</td></tr>
-    <tr><td class="paramname">hsm</td><td>set True to compare rendered images using HSM shear estimates (i.e. including a PSF correction for shears; default=<code>False</code>)</td></tr>
-    <tr><td class="paramname">logger</td><td>logging Logger instance to record output and pass down to the config layer for debuging / verbose output if desired. </td></tr>
+    <tr><td class="paramname">config</td><td>GalSim config dictionary describing the GSObject we wish to test (see e.g. examples/demo8.py). </td></tr>
+    <tr><td class="paramname">gal_num</td><td>Number for the galaxy in the config dictionary, which will be passed to the config system. It related to obj_num in the config system by obj_num = gal_num * n_trials_per_iter (assuming the config is created correctly as explained in the example above) [default: 0] </td></tr>
+    <tr><td class="paramname">random_seed</td><td>Integer to be used as the basis of all seeds for the random number generator, overrides any value in config['image']. [default: None] </td></tr>
+    <tr><td class="paramname">nproc</td><td>Number of cpu processes to run in parallel, overrides any value in config['image']. [default: None] </td></tr>
+    <tr><td class="paramname">pixel_scale</td><td>The pixel scale to use in the test images, overrides any value in config['image']. [default: None] </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the images in the rendering tests - all test images are currently square, overrides any value in config['image']. [default: None] </td></tr>
+    <tr><td class="paramname">wmult</td><td>The <code>wmult</code> parameter used in .draw() (see the GSObject .draw() method docs via <code>help(galsim.GSObject.draw)</code> for more details), overrides any value in config['image']. [default: None] </td></tr>
+    <tr><td class="paramname">abs_tol_ellip</td><td>The test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean ellipticity moments from photon-shot images are smaller than this param value. If moments=False, then using the measurements from HSM. [default: 1.e-5] </td></tr>
+    <tr><td class="paramname">abs_tol_size</td><td>The test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean size moments from photon-shot images are smaller than this param value. If moments=False, then using the measurements from HSM. [default: 1.e-5] </td></tr>
+    <tr><td class="paramname">n_trials_per_iter</td><td>Number of trial images used to estimate (or successively re-estimate) the standard error on the delta quantities above for each iteration of the tests. [default: 32] </td></tr>
+    <tr><td class="paramname">n_max_iter</td><td>Maximum number of iterations. After reaching it, the current uncertainty on shape measurement is reported, even if abs_tol_ellip and abs_tol_size was not reported. If a negative number is supplied, then there is no limit of number of iterations. [default: -1] </td></tr>
+    <tr><td class="paramname">n_photons_per_trial</td><td>Number of photons shot in drawShoot() for each trial. This should be large enough that any noise bias (a.k.a. noise rectification bias) on moments estimates is small. [default: 1e7] </td></tr>
+    <tr><td class="paramname">moments</td><td>Set True to compare rendered images using AdaptiveMoments estimates of simple observed estimates. [default: True] </td></tr>
+    <tr><td class="paramname">hsm</td><td>Should the rendered images be compared using HSM shear estimates? (i.e. including a PSF correction for shears) [default: False] </td></tr>
+    <tr><td class="paramname">logger</td><td>Logging Logger instance to record output and pass down to the config layer for debuging / verbose output if desired. [default: None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -376,18 +377,18 @@ image: { type : Single  ... }
 <p>Note that <code>n_photons_per_trial</code> should be large (&gt;~ 1e6) to ensure that any biases detected between the photon shooting and DFT-drawn images are due to numerical differences rather than biases on adaptive moments due to noise itself, a generic feature in this work. This can be verified with a convergence test.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gsobject</td><td>the galsim.GSObject for which this test is to be performed (prior to PSF convolution if a PSF is also supplied via <code>psf_object</code>). Note that this function will automatically handle integration over a galsim.Pixel of width <code>pixel_scale</code>, so a galsim.Pixel should not be included in the supplied <code>gsobject</code> (unless you really mean to include it, which will be very rare in normal usage).</td></tr>
-    <tr><td class="paramname">psf_object</td><td>optional additional PSF for tests of convolved objects, also a galsim.GSObject. Note that this function will automatically handle integration over a galsim.Pixel of width <code>pixel_scale</code>, so this should not be included in the supplied <code>psf_object</code>.</td></tr>
-    <tr><td class="paramname">rng</td><td><a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a> or derived deviate class instance to provide the pseudo random numbers for the photon shooting. If <code>None</code> on input (default) a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a> is internally initialized.</td></tr>
-    <tr><td class="paramname">pixel_scale</td><td>the pixel scale to use in the test images.</td></tr>
-    <tr><td class="paramname">size</td><td>the size of the images in the rendering tests - all test images are currently square.</td></tr>
-    <tr><td class="paramname">wmult</td><td>the <code>wmult</code> parameter used in .draw() (see the GSObject .draw() method docs via <code>help(galsim.GSObject.draw)</code> for more details).</td></tr>
-    <tr><td class="paramname">abs_tol_ellip</td><td>the test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean ellipticity moments from photon-shot images are smaller than this param value.</td></tr>
-    <tr><td class="paramname">abs_tol_size</td><td>the test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean size moments from photon-shot images are smaller than this param value.</td></tr>
-    <tr><td class="paramname">n_trials_per_iter</td><td>number of trial images used to estimate (or successively re-estimate) the standard error on the delta quantities above for each iteration of the tests. Default = 32.</td></tr>
-    <tr><td class="paramname">n_photons_per_trial</td><td>number of photons shot in drawShoot() for each trial. This should be large enough that any noise bias (a.k.a. noise rectification bias) on moments estimates is small. Default ~1e7 should be sufficient.</td></tr>
-    <tr><td class="paramname">moments</td><td>set True to compare rendered images using AdaptiveMoments estimates of simple observed estimates (default=<code>True</code>).</td></tr>
-    <tr><td class="paramname">hsm</td><td>set True to compare rendered images using HSM shear estimates (i.e. including a PSF correction for shears; default=<code>False</code> as this feature is not yet implemented!) Convenience function to run ntrials and collect the results, uses only a single core. <pre class="fragment">    Uses a Python for loop but this is very unlikely to be a rate determining factor provided
+    <tr><td class="paramname">gsobject</td><td>The galsim.GSObject for which this test is to be performed (prior to PSF convolution if a PSF is also supplied via <code>psf_object</code>). Note that this function will automatically handle integration over a galsim.Pixel of width <code>pixel_scale</code>, so a galsim.Pixel should not be included in the supplied <code>gsobject</code> (unless you really mean to include it, which will be very rare in normal usage). </td></tr>
+    <tr><td class="paramname">psf_object</td><td>Optional additional PSF for tests of convolved objects, also a galsim.GSObject. Note that this function will automatically handle integration over a galsim.Pixel of width <code>pixel_scale</code>, so this should not be included in the supplied <code>psf_object</code>. [default: None] </td></tr>
+    <tr><td class="paramname">rng</td><td>A <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a> or derived deviate class instance to provide the pseudo random numbers for the photon shooting. [default: None] </td></tr>
+    <tr><td class="paramname">pixel_scale</td><td>The pixel scale to use in the test images. [default: 1] </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the images in the rendering tests - all test images are currently square. [default: 512] </td></tr>
+    <tr><td class="paramname">wmult</td><td>The <code>wmult</code> parameter used in .draw() (see the GSObject .draw() method docs via <code>help(galsim.GSObject.draw)</code> for more details). [default: 4] </td></tr>
+    <tr><td class="paramname">abs_tol_ellip</td><td>The test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean ellipticity moments from photon-shot images are smaller than this param value. [default: 1.e-5] </td></tr>
+    <tr><td class="paramname">abs_tol_size</td><td>The test will keep iterating, adding ever greater numbers of trials, until estimates of the 1-sigma standard error on mean size moments from photon-shot images are smaller than this param value. [default: 1.e-5] </td></tr>
+    <tr><td class="paramname">n_trials_per_iter</td><td>Number of trial images used to estimate (or successively re-estimate) the standard error on the delta quantities above for each iteration of the tests. [default: 32] </td></tr>
+    <tr><td class="paramname">n_photons_per_trial</td><td>Number of photons shot in drawShoot() for each trial. This should be large enough that any noise bias (a.k.a. noise rectification bias) on moments estimates is small. [default: 1e7] </td></tr>
+    <tr><td class="paramname">moments</td><td>Set True to compare rendered images using AdaptiveMoments estimates of simple observed estimates. [default: True] </td></tr>
+    <tr><td class="paramname">hsm</td><td>Should the rendered images be compared using HSM shear estimates? (i.e. including a PSF correction for shears) [not implemented] Convenience function to run ntrials and collect the results, uses only a single core. <pre class="fragment">    Uses a Python for loop but this is very unlikely to be a rate determining factor provided
     n_photons is suitably large (&gt;1e6).</pre> </td></tr>
   </table>
   </dd>
@@ -438,15 +439,15 @@ image: { type : Single  ... }
 </div><div class="memdoc">
 
 <p>Convenience function for going from (g1, g2) -&gt; (e1, e2). </p>
-<p>Here g1 and g2 are reduced shears, and e1 and e2 are distortions - see <a class="el" href="shear_8py.html" title="Redefinition of the Shear class at the Python layer. ">shear.py</a> for definitions of reduced shear and distortion in terms of axis ratios or other ways of specifying ellipses. </p>
+<p>Here g1 and g2 are reduced shears, and e1 and e2 are distortions - see <a class="el" href="shear_8py.html" title="Redefinition of the Shear class at the Python layer. ">shear.py</a> for definitions of reduced shear and distortion in terms of axis ratios or other ways of specifying ellipses.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g1</td><td>First reduced shear component (along pixel axes) </td></tr>
-    <tr><td class="paramname">g2</td><td>Second reduced shear component (at 45 degrees with respect to image axes) </td></tr>
+    <tr><td class="paramname">g2</td><td>Second reduced shear component (at 45 degrees with respect to image axes)</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The corresponding distortions, e1 and e2. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the corresponding distortions, e1 and e2. </dd></dl>
 
 </div>
 </div>
@@ -470,7 +471,7 @@ image: { type : Single  ... }
 <p>Adopts Numpy array index ordering so that the trailing axis corresponds to kx, rather than the leading axis as would be expected in IDL/Fortran. See docstring for numpy.meshgrid which also uses this convention.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the Numpy array shape desired for <code>kx, ky</code>. </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The Numpy array shape desired for <code>kx, ky</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -563,11 +564,11 @@ f(name1=x, name2=y)
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">shape</td><td>A list of length 2, indicating the desired 2d array dimensions </td></tr>
-    <tr><td class="paramname">deviate</td><td>Any GalSim deviate (see <a class="el" href="random_8py.html" title="Addition of docstrings to the Random deviate classes at the Python layer and definition of the DistDe...">random.py</a>) such as <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.). ">UniformDeviate</a>, <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution. ">GaussianDeviate</a>, etc. to be used to generate random numbers </td></tr>
+    <tr><td class="paramname">deviate</td><td>Any GalSim deviate (see <a class="el" href="random_8py.html" title="Addition of docstrings to the Random deviate classes at the Python layer and definition of the DistDe...">random.py</a>) such as <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.). ">UniformDeviate</a>, <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution. ">GaussianDeviate</a>, etc. to be used to generate random numbers</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A Numpy array of the desired dimensions with random numbers generated using the supplied deviate. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a Numpy array of the desired dimensions with random numbers generated using the supplied deviate. </dd></dl>
 
 </div>
 </div>
@@ -604,8 +605,8 @@ f(name1=x, name2=y)
 <p>Perform a 2D roll (circular shift) on a supplied 2D numpy array, conveniently. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>the numpy array to be circular shifted. </td></tr>
-    <tr><td class="paramname">(iroll,jroll)</td><td>the roll in the i and j dimensions, respectively.</td></tr>
+    <tr><td class="paramname">image</td><td>The numpy array to be circular shifted. </td></tr>
+    <tr><td class="paramname">(iroll,jroll)</td><td>The roll in the i and j dimensions, respectively.</td></tr>
   </table>
   </dd>
 </dl>
@@ -648,11 +649,11 @@ f(name1=x, name2=y)
   <table class="params">
     <tr><td class="paramname">x</td><td>NumPy array of input x coordinates </td></tr>
     <tr><td class="paramname">y</td><td>NumPy array of input y coordinates </td></tr>
-    <tr><td class="paramname">theta</td><td>Rotation angle (+ve counter clockwise) as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance </td></tr>
+    <tr><td class="paramname">theta</td><td>Rotation angle (+ve counter clockwise) as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>x_rot, yrot Coordinates rotated by <code>theta</code> around the origin </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the rotated coordinates (x_rot,y_rot). </dd></dl>
 
 </div>
 </div>
@@ -703,7 +704,7 @@ f(name1=x, name2=y)
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>x_new, f_new Lists with the thinned tabulation. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a tuple of lists (x_new, y_new) with the thinned tabulation. </dd></dl>
 
 </div>
 </div>

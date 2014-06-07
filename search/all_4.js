@@ -39,6 +39,7 @@ var searchData=
   ['deviatenoise_5fcopy',['DeviateNoise_copy',['../namespacegalsim_1_1noise.html#ac4007479ddf916e30e9de7af133828da',1,'galsim::noise']]],
   ['dict',['dict',['../classgalsim_1_1catalog_1_1_dict.html#ad5e5fe89dcede68bfcc6df9059e7a114',1,'galsim::catalog::Dict']]],
   ['dict',['Dict',['../classgalsim_1_1catalog_1_1_dict.html',1,'galsim::catalog']]],
+  ['dilate',['dilate',['../classgalsim_1_1base_1_1_g_s_object.html#a0e80b6924c48e9708dd9e475f3b48b5f',1,'galsim.base.GSObject.dilate()'],['../classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1',1,'galsim.chromatic.ChromaticObject.dilate()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a811486de5ecef4c115c455223b907b1d',1,'galsim.correlatednoise._BaseCorrelatedNoise.dilate()']]],
   ['distanceto',['distanceTo',['../classgalsim_1_1celestial_1_1_celestial_coord.html#a2b8b43b29334ad7acc0a6eba820f2041',1,'galsim::celestial::CelestialCoord']]],
   ['distdeviate',['DistDeviate',['../classgalsim_1_1random_1_1_dist_deviate.html',1,'galsim::random']]],
   ['divert_5fboost_5frandom',['DIVERT_BOOST_RANDOM',['../_random_8h.html#aa7f15194f79996fb7331d88b71069c5c',1,'Random.h']]],

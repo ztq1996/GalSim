@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -223,18 +224,18 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">file_num</td><td>If given, the current file_num (default = 0) </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
-    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
-    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file</td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">file_num</td><td>If given, the current file_num. [default: 0] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0] </td></tr>
+    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>time Time taken to build file </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the time taken to build file. </dd></dl>
 
 </div>
 </div>
@@ -327,20 +328,20 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">file_num</td><td>If given, the current file_num (default = 0) </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
-    <tr><td class="paramname">psf_hdu</td><td>If given, write a psf image to this hdu in file_name </td></tr>
-    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
-    <tr><td class="paramname">weight_hdu</td><td>If given, write a weight image to this hdu in file_name </td></tr>
-    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file </td></tr>
-    <tr><td class="paramname">badpix_hdu</td><td>If given, write a badpix image to this hdu in file_name</td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">file_num</td><td>If given, the current file_num. [default: 0] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0] </td></tr>
+    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">psf_hdu</td><td>If given, write a psf image to this hdu in file_name. [default: None] </td></tr>
+    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">weight_hdu</td><td>If given, write a weight image to this hdu in file_name. [default: None] </td></tr>
+    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">badpix_hdu</td><td>If given, write a badpix image to this hdu in file_name. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>time Time taken to build file </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the time taken to build file. </dd></dl>
 
 </div>
 </div>
@@ -421,18 +422,18 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">file_num</td><td>If given, the current file_num (default = 0) </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file </td></tr>
-    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file </td></tr>
-    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file</td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">file_num</td><td>If given, the current file_num. [default: 0] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0] </td></tr>
+    <tr><td class="paramname">psf_file_name</td><td>If given, write a psf image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">weight_file_name</td><td>If given, write a weight image to this file. [default: None] </td></tr>
+    <tr><td class="paramname">badpix_file_name</td><td>If given, write a badpix image to this file. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>time Time taken to build file </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the time taken to build file. </dd></dl>
 
 </div>
 </div>
@@ -686,7 +687,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove any "current values" stored in the config dict at any level. </p>
-<p>If keep_safe = True (default = False), then any current values that are marked as safe will be preserved. If type is provided, it will only clear the current value of objects that use this particular type. If type = None, it remove current values of all types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>The config dict to process. </td></tr>
+    <tr><td class="paramname">keep_safe</td><td>Should current values that are marked as safe be preserved? [default: False] </td></tr>
+    <tr><td class="paramname">type</td><td>If provided, only clear the current value of objects that use this particular type. [default: None, which means to remove current values of all types.] </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

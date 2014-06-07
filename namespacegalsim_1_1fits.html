@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -230,17 +231,18 @@ at `(1,1)` and the scale will be set to 1.0.
 
 This function is called as `im = galsim.fits.read(...)`
 
-@param file_name    The name of the file to read in.  Either `file_name` or `hdu_list` is 
-                    required.
+@param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is 
+                    required.]
 @param dir          Optionally a directory name can be provided if the file_name does not 
-                    already include it.
+                    already include it. [default: None]
 @param hdu_list     Either a `pyfits.HDUList`, a `pyfits.PrimaryHDU`, or `pyfits.ImageHDU`.
                     In the former case, the `hdu` in the list will be selected.  In the latter
-                    two cases, the `hdu` parameter is ignored.  Either `file_name` or 
-                    `hdu_list` is required.
-@param hdu          The number of the HDU to return.  The default is to return either the 
-                    primary or first extension as appropriate for the given compression.
-                    (e.g. for rice, the first extension is the one you normally want.)
+                    two cases, the `hdu` parameter is ignored.  [Either `file_name` or 
+                    `hdu_list` is required.]
+@param hdu          The number of the HDU to return.  [default: None, which means to return
+                    either the primary or first extension as appropriate for the given
+                    compression.  (e.g. for rice, the first extension is the one you normally
+                    want.)]
 @param compression  Which decompression scheme to use (if any).  Options are:
                     - None or 'none' = no decompression
                     - 'rice' = use rice decompression in tiles
@@ -255,7 +257,9 @@ This function is called as `im = galsim.fits.read(...)`
                                '*.gz' =&gt; 'gzip'
                                '*.bz2' =&gt; 'bzip2'
                                otherwise None
-@returns An Image</pre> 
+                    [default: 'auto']
+
+@returns the image as a galsim.Image instance.</pre> 
 </div>
 </div>
 <a class="anchor" id="a2b703b58bd3ff40ff83bf750c73fe3d6"></a>
@@ -305,10 +309,10 @@ This function is called as `im = galsim.fits.read(...)`
 <p>This function is called as <code>image_list = <a class="el" href="namespacegalsim_1_1fits.html#a2b703b58bd3ff40ff83bf750c73fe3d6" title="Construct a Python list of Images from a FITS data cube. ">galsim.fits.readCube</a>(...)</code></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to read in. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">hdu_list</td><td>Either a <code>pyfits.HDUList</code>, a <code>pyfits.PrimaryHDU</code>, or <code>pyfits.ImageHDU</code>. In the former case, the <code>hdu</code> in the list will be selected. In the latter two cases, the <code>hdu</code> parameter is ignored. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
-    <tr><td class="paramname">hdu</td><td>The number of the HDU to return. The default is to return either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.) </td></tr>
+    <tr><td class="paramname">file_name</td><td>The name of the file to read in. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. [default: None] </td></tr>
+    <tr><td class="paramname">hdu_list</td><td>Either a <code>pyfits.HDUList</code>, a <code>pyfits.PrimaryHDU</code>, or <code>pyfits.ImageHDU</code>. In the former case, the <code>hdu</code> in the list will be selected. In the latter two cases, the <code>hdu</code> parameter is ignored. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
+    <tr><td class="paramname">hdu</td><td>The number of the HDU to return. [default: None, which means to return either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.)] </td></tr>
     <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). Options are:<ul>
 <li>None or 'none' = no decompression</li>
 <li>'rice' = use rice decompression in tiles</li>
@@ -317,13 +321,13 @@ This function is called as `im = galsim.fits.read(...)`
 <li>'gzip_tile' = use gzip decompression in tiles</li>
 <li>'hcompress' = use hcompress decompression in tiles</li>
 <li>'plio' = use plio decompression in tiles</li>
-<li>'auto' = determine the decompression from the extension of the file name (requires file_name to be given). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </li>
+<li>'auto' = determine the decompression from the extension of the file name (requires file_name to be given). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None [default: 'auto']</li>
 </ul>
 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A Python list of Images </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a Python list of galsim.Images. </dd></dl>
 
 </div>
 </div>
@@ -372,8 +376,8 @@ This function is called as `im = galsim.fits.read(...)`
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the file to read in. </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">hdu</td><td>The number of the HDU to return. The default is to return either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.) </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. [default: None] </td></tr>
+    <tr><td class="paramname">hdu</td><td>The number of the HDU to return. [default: None, which means to return either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.)] </td></tr>
     <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). Options are:<ul>
 <li>None or 'none' = no decompression</li>
 <li>'rice' = use rice decompression in tiles</li>
@@ -382,13 +386,13 @@ This function is called as `im = galsim.fits.read(...)`
 <li>'gzip_tile' = use gzip decompression in tiles</li>
 <li>'hcompress' = use hcompress decompression in tiles</li>
 <li>'plio' = use plio decompression in tiles</li>
-<li>'auto' = determine the decompression from the extension of the file name (requires file_name to be given). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None </li>
+<li>'auto' = determine the decompression from the extension of the file name (requires file_name to be given). '*.fz' =&gt; 'rice' '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None [default: 'auto']</li>
 </ul>
 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A tuple with three items: (hdu, hdu_list, fin) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a tuple with three items: (hdu, hdu_list, fin). </dd></dl>
 
 </div>
 </div>
@@ -432,12 +436,12 @@ This function is called as `im = galsim.fits.read(...)`
 <p>The normal usage for this function is to read a fits file and return a list of all the images contained therein, automatically decompressing them if necessary. However, you may also pass it an HDUList, in which case it will build the images from these directly.</p>
 <p>Not all FITS pixel types are supported (only those with C++ Image template instantiations: <code>short</code>, <code>int</code>, <code>float</code>, and <code>double</code>). If the FITS header has GS_* keywords, these will be used to initialize the bounding box and WCS. If not, the bounding box will have <code>(xmin,ymin)</code> at <code>(1,1)</code> and the scale will be set to 1.0.</p>
 <p>This function is called as <code>im = <a class="el" href="namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067" title="Construct a list of Images from a FITS file or pyfits HDUList. ">galsim.fits.readMulti</a>(...)</code></p>
-<pre class="fragment"> @param file_name    The name of the file to read in.  Either `file_name` or `hdu_list` is 
-                     required.
+<pre class="fragment"> @param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is 
+                     required.]
  @param dir          Optionally a directory name can be provided if the file_name does not 
-                     already include it.
- @param hdu_list     A `pyfits.HDUList` from which to read the images.  Either `file_name` or
-                     `hdu_list` is required.
+                     already include it. [default: None]
+ @param hdu_list     A `pyfits.HDUList` from which to read the images.  [Either `file_name` or
+                     `hdu_list` is required.]
  @param compression  Which decompression scheme to use (if any).  Options are:
                      - None or 'none' = no decompression
                      - 'rice' = use rice decompression in tiles
@@ -452,7 +456,9 @@ This function is called as `im = galsim.fits.read(...)`
                                 '*.gz' =&gt; 'gzip'
                                 '*.bz2' =&gt; 'bzip2'
                                 otherwise None
- @returns A Python list of Images</pre> 
+                     [default: 'auto']
+
+ @returns a Python list of galsim.Images</pre> 
 </div>
 </div>
 <a class="anchor" id="a9f3f9dce30942b81d85d2f8928ece310"></a>
@@ -512,17 +518,17 @@ an image method: `image.write(...)`.
 @param image        The image to write to file.  Per the description of this method, it may be
                     given explicitly via `galsim.fits.write(image, ...)` or the method may be 
                     called directly as an image method, `image.write(...)`.
-@param file_name    The name of the file to write to.  Either `file_name` or `hdu_list` is 
-                    required.
+@param file_name    The name of the file to write to.  [Either `file_name` or `hdu_list` is 
+                    required.]
 @param dir          Optionally a directory name can be provided if the file_name does not 
-                    already include it.
+                    already include it. [default: None]
 @param hdu_list     A pyfits HDUList.  If this is provided instead of file_name, then the 
                     image is appended to the end of the HDUList as a new HDU. In that case, 
                     the user is responsible for calling either hdu_list.writeto(...) or 
-                    galsim.fits.writeFile(...) afterwards.  Either `file_name` or `hdu_list` 
-                    is required.
+                    galsim.fits.writeFile(...) afterwards.  [Either `file_name` or `hdu_list` 
+                    is required.]
 @param clobber      Setting `clobber=True` when `file_name` is given will silently overwrite 
-                    existing files. (Default `clobber = True`.)
+                    existing files. [default: True]
 @param compression  Which compression scheme to use (if any).  Options are:
                     - None or 'none' = no compression
                     - 'rice' = use rice compression in tiles (preserves header readability)
@@ -536,7 +542,8 @@ an image method: `image.write(...)`.
                                '*.fz' =&gt; 'rice'
                                '*.gz' =&gt; 'gzip'
                                '*.bz2' =&gt; 'bzip2'
-                               otherwise None</pre> 
+                               otherwise None
+                    [default: 'auto']</pre> 
 </div>
 </div>
 <a class="anchor" id="aa4fbd5ed42ffecda339a409296f0f101"></a>
@@ -593,9 +600,9 @@ an image method: `image.write(...)`.
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image_list</td><td>The <code>image_list</code> can also be either an array of NumPy arrays or a 3d NumPy array, in which case this is written to the fits file directly. In the former case, no explicit check is made that the numpy arrays are all the same shape, but a numpy exception will be raised which we let pass upstream unmolested. </td></tr>
-    <tr><td class="paramname">file_name</td><td>The name of the file to write to. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. If this is provided instead of file_name, then the cube is appended to the end of the HDUList as a new HDU. In that case, the user is responsible for calling either hdu_list.writeto(...) or <a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...) afterwards. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
+    <tr><td class="paramname">file_name</td><td>The name of the file to write to. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. [default: None] </td></tr>
+    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. If this is provided instead of file_name, then the cube is appended to the end of the HDUList as a new HDU. In that case, the user is responsible for calling either hdu_list.writeto(...) or <a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...) afterwards. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
     <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Now the primary write functions. ">galsim.fits.write</a> method. </td></tr>
     <tr><td class="paramname">compression</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Now the primary write functions. ">galsim.fits.write</a> method. </td></tr>
   </table>
@@ -650,15 +657,15 @@ an image method: `image.write(...)`.
 <p>If you have used the <code>write</code>, <code>writeMulti</code> or <code>writeCube</code> functions with the hdu_list option rather than writing directly to a file, you may subsequently use the pyfits command <code>hdu_list.writeto(...)</code>. However, it may be more convenient to use this function, <code><a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...)</code> instead, since it treats the compression option consistently with how that option is handled in the above functions.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to write to. (Required) </td></tr>
-    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. (Required) </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">clobber</td><td>Setting <code>clobber=True</code> will silently overwrite existing files. (Default <code>clobber = True</code>.) </td></tr>
+    <tr><td class="paramname">file_name</td><td>The name of the file to write to. </td></tr>
+    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. [default: None] </td></tr>
+    <tr><td class="paramname">clobber</td><td>Setting <code>clobber=True</code> will silently overwrite existing files. [default: True] </td></tr>
     <tr><td class="paramname">compression</td><td>Which compression scheme to use (if any). Options are:<ul>
 <li>None or 'none' = no compression</li>
 <li>'gzip' = use gzip to compress the full file</li>
 <li>'bzip2' = use bzip2 to compress the full file</li>
-<li>'auto' = determine the compression from the extension of the file name (requires file_name to be given): '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None Note that the other options, such as 'rice', that operate on the image directly are not available at this point. If you want to use one of them, it must be applied when writing each hdu. </li>
+<li>'auto' = determine the compression from the extension of the file name (requires file_name to be given): '*.gz' =&gt; 'gzip' '*.bz2' =&gt; 'bzip2' otherwise None Note that the other options, such as 'rice', that operate on the image directly are not available at this point. If you want to use one of them, it must be applied when writing each hdu. [default: 'auto'] </li>
 </ul>
 </td></tr>
   </table>
@@ -720,9 +727,9 @@ an image method: `image.write(...)`.
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image_list</td><td>A Python list of Images. </td></tr>
-    <tr><td class="paramname">file_name</td><td>The name of the file to write to. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. If this is provided instead of file_name, then the image is appended to the end of the HDUList as a new HDU. In that case, the user is responsible for calling either hdu_list.writeto(...) or <a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...) afterwards. Either <code>file_name</code> or <code>hdu_list</code> is required. </td></tr>
+    <tr><td class="paramname">file_name</td><td>The name of the file to write to. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. [default: None] </td></tr>
+    <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. If this is provided instead of file_name, then the image is appended to the end of the HDUList as a new HDU. In that case, the user is responsible for calling either hdu_list.writeto(...) or <a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...) afterwards. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
     <tr><td class="paramname">clobber</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Now the primary write functions. ">galsim.fits.write</a> method. </td></tr>
     <tr><td class="paramname">compression</td><td>See documentation for this parameter on the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Now the primary write functions. ">galsim.fits.write</a> method. </td></tr>
   </table>

@@ -16,6 +16,7 @@ var searchData=
   ['image_5fbounds',['image_bounds',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#a97a2a709666fdcee30dceee9995fefe6',1,'galsim::hsm::CppShapeData::image_bounds()'],['../classgalsim_1_1hsm_1_1_shape_data.html#add3c421817b795c51db8b7c0a885faad',1,'galsim::hsm.ShapeData.image_bounds()']]],
   ['image_5fdir',['image_dir',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a040e46c97d1ce56f86274d041db7f3e1',1,'galsim::real::RealGalaxyCatalog']]],
   ['images',['images',['../classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#af18741072e800e7079b4c48a30002684',1,'galsim::des::des_meds::MultiExposureObject']]],
+  ['imageview',['ImageView',['../namespacegalsim_1_1image.html#abf5bf7d4e2e8aba244d8d166838325eb',1,'galsim::image']]],
   ['index',['index',['../classgalsim_1_1real_1_1_real_galaxy.html#af9a0ff166fb38557f6905978bb196f52',1,'galsim::real::RealGalaxy']]],
   ['integration_5fabserr',['integration_abserr',['../structgalsim_1_1_g_s_params.html#ac5641e3ef0ea5341017e2437cea111b2',1,'galsim::GSParams']]],
   ['integration_5frelerr',['integration_relerr',['../structgalsim_1_1_g_s_params.html#ab13477f9c07267a80d129d8baed9660b',1,'galsim::GSParams']]],

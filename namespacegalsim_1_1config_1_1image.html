@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -187,16 +188,16 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num [default: 0] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (image, psf_image, weight_image, badpix_image).</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
 
 </div>
@@ -272,17 +273,17 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">nimages</td><td>How many images to build. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num [default: 0] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(images, psf_images, weight_images, badpix_images) (All in tuple are lists) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (images, psf_images, weight_images, badpix_images). All in tuple are lists. </dd></dl>
 
 </div>
 </div>
@@ -344,16 +345,16 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default None] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num [default: 0] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (image, psf_image, weight_image, badpix_image).</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
 
 </div>
@@ -416,16 +417,16 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num [default: 0] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (image, psf_image, weight_image, badpix_image).</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
 
 </div>
@@ -488,16 +489,16 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num (default = 0) </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(image, psf_image, weight_image, badpix_image)</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (image, psf_image, weight_image, badpix_image).</dd></dl>
 <p>Note: All 4 images are always returned in the return tuple, but the latter 3 might be None depending on the parameters make_*_image. </p>
 
 </div>

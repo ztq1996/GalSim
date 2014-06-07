@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -153,10 +154,10 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">mass</td><td>Mass defined using a spherical overdensity of 200 times the critical density of the universe, in units of M_solar/h. </td></tr>
     <tr><td class="paramname">conc</td><td>Concentration parameter, i.e., ratio of virial radius to NFW scale radius. </td></tr>
     <tr><td class="paramname">redshift</td><td>Redshift of the halo. </td></tr>
-    <tr><td class="paramname">halo_pos</td><td><a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format. ">Position</a> of halo center (in arcsec). [default=PositionD(0,0)] </td></tr>
-    <tr><td class="paramname">omega_m</td><td>Omega_matter to pass to <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> constructor. [default=None] </td></tr>
-    <tr><td class="paramname">omega_lam</td><td>Omega_lambda to pass to <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> constructor. [default=None] </td></tr>
-    <tr><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> instance. [default=None] </td></tr>
+    <tr><td class="paramname">halo_pos</td><td><a class="el" href="classgalsim_1_1_position.html" title="Class for storing 2d position vectors in an (x, y) format. ">Position</a> of halo center (in arcsec). [default: PositionD(0,0)] </td></tr>
+    <tr><td class="paramname">omega_m</td><td>Omega_matter to pass to <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> constructor. [default: None] </td></tr>
+    <tr><td class="paramname">omega_lam</td><td>Omega_lambda to pass to <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> constructor. [default: None] </td></tr>
+    <tr><td class="paramname">cosmo</td><td>A <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> instance. [default: None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -274,11 +275,11 @@ Public Attributes</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default = arcsec]</td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default: arcsec]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>kappa or list of kappa values. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the convergence, kappa, which matches the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -332,11 +333,11 @@ Public Attributes</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>g1,g2,mu Reduced shears and magnifications. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced shears and magnifications as a tuple (g1,g2,mu), which match the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -390,11 +391,11 @@ Public Attributes</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>mu Numpy array containing the magnification at the specified position(s). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the magnification mu, which matches the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -454,12 +455,12 @@ Public Attributes</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default = arcsec] </td></tr>
-    <tr><td class="paramname">reduced</td><td>Whether returned shear(s) should be reduced shears. [default=True]</td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default: arcsec] </td></tr>
+    <tr><td class="paramname">reduced</td><td>Whether returned shear(s) should be reduced shears. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(g1,g2) [g1 and g2 are each a list if input was a list] </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced shears as a tuple (g1,g2), which match the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>

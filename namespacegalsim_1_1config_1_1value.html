@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -170,7 +171,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check that the parameters for a particular item are all valid. </p>
-<dl class="section return"><dt>Returns</dt><dd>a dict, get, with get[key] = value_type for all keys to get </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a dict, get, with get[key] = value_type for all keys to get. </dd></dl>
 
 </div>
 </div>
@@ -229,7 +230,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check and get all the parameters for a particular item. </p>
-<dl class="section return"><dt>Returns</dt><dd>kwargs, safe </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (kwargs, safe). </dd></dl>
 
 </div>
 </div>
@@ -298,7 +299,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read or generate a parameter value from config. </p>
-<dl class="section return"><dt>Returns</dt><dd>value, safe </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (value, safe). </dd></dl>
 
 </div>
 </div>

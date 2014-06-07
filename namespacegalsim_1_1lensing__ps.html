@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -154,7 +155,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>kappa_E, kappa_B The first element of this tuple represents the convergence field underlying the input shears; the second element is the convergence field generated were all shears rotated by 45 degrees prior to input. Both are NumPy arrays. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (kappa_E, kappa_B), as NumPy arrays.</dd></dl>
+<p>The returned kappa_E represents the convergence field underlying the input shears. The returned kappa_B is the convergence field generated were all shears rotated by 45 degrees prior to input. </p>
 
 </div>
 </div>
@@ -198,7 +200,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>g1, g2, mu The reduced shear and magnification, in the same form as the input gamma1, gamma2, and kappa. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced shear and magnification as a tuple (g1, g2, mu) where each item has the same form as the input gamma1, gamma2, and kappa. </dd></dl>
 
 </div>
 </div>

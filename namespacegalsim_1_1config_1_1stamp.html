@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -99,9 +100,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a8076c27943e842102f0a74ee813e96d2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a8076c27943e842102f0a74ee813e96d2">BuildStamps</a></td></tr>
 <tr class="memdesc:a8076c27943e842102f0a74ee813e96d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a number of postage stamp images as specified by the config dict.  <a href="#a8076c27943e842102f0a74ee813e96d2">More...</a><br/></td></tr>
 <tr class="separator:a8076c27943e842102f0a74ee813e96d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a810e092332f31d6a6debfbc12750a6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a9a810e092332f31d6a6debfbc12750a6">RemoveCurrent</a></td></tr>
-<tr class="memdesc:a9a810e092332f31d6a6debfbc12750a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove any "current values" stored in the config dict at any level.  <a href="#a9a810e092332f31d6a6debfbc12750a6">More...</a><br/></td></tr>
-<tr class="separator:a9a810e092332f31d6a6debfbc12750a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a063879d446e48ece650adb6c1c7e948f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a063879d446e48ece650adb6c1c7e948f">BuildSingleStamp</a></td></tr>
 <tr class="memdesc:a063879d446e48ece650adb6c1c7e948f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a single image using the given config file.  <a href="#a063879d446e48ece650adb6c1c7e948f">More...</a><br/></td></tr>
 <tr class="separator:a063879d446e48ece650adb6c1c7e948f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,18 +258,18 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">xsize</td><td>The xsize of the image to build (if known). </td></tr>
-    <tr><td class="paramname">ysize</td><td>The ysize of the image to build (if known). </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">xsize</td><td>The xsize of the image to build (if known). [default: 0] </td></tr>
+    <tr><td class="paramname">ysize</td><td>The ysize of the image to build (if known). [default: 0] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num [default: 0] </td></tr>
+    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). [default: True] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>image, psf_image, weight_image, badpix_image, current_var, time </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (image, psf_image, weight_image, badpix_image, current_var, time) </dd></dl>
 
 </div>
 </div>
@@ -358,19 +356,19 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">nobjects</td><td>How many postage stamps to build. </td></tr>
     <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num (default = 0) </td></tr>
-    <tr><td class="paramname">xsize</td><td>The size of a single stamp in the x direction. (If 0, look for config.image.stamp_xsize, and if that's not there, use automatic sizing.) </td></tr>
-    <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction. (If 0, look for config.image.stamp_ysize, and if that's not there, use automatic sizing.) </td></tr>
-    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). </td></tr>
-    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. </td></tr>
-    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. </td></tr>
-    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image.</td></tr>
+    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
+    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0] </td></tr>
+    <tr><td class="paramname">xsize</td><td>The size of a single stamp in the x direction. [default: 0, which means to look for config.image.stamp_xsize, and if that's not there, use automatic sizing.] </td></tr>
+    <tr><td class="paramname">ysize</td><td>The size of a single stamp in the y direction. [default: 0, which means to look for config.image.stamp_xsize, and if that's not there, use automatic sizing.] </td></tr>
+    <tr><td class="paramname">do_noise</td><td>Whether to add noise to the image (according to config['noise']). [default: True] </td></tr>
+    <tr><td class="paramname">make_psf_image</td><td>Whether to make psf_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_weight_image</td><td>Whether to make weight_image. [default: False] </td></tr>
+    <tr><td class="paramname">make_badpix_image</td><td>Whether to make badpix_image. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(images, psf_images, weight_images, badpix_images, current_vars) (All in tuple are lists) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple (images, psf_images, weight_images, badpix_images, current_vars). All in tuple are lists. </dd></dl>
 
 </div>
 </div>
@@ -548,35 +546,6 @@ Functions</h2></td></tr>
 
 <p>Draw an image using the given psf and gal profiles (which may be None) using the photon shooting method for doing the convolution. </p>
 <dl class="section return"><dt>Returns</dt><dd>the resulting image. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9a810e092332f31d6a6debfbc12750a6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.config.stamp.RemoveCurrent </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>keep_safe</em> = <code>False</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Remove any "current values" stored in the config dict at any level. </p>
-<p>If keep_safe = True (default = False), then any current values that are marked as safe will be preserved. </p>
 
 </div>
 </div>

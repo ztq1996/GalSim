@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -151,11 +152,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">wave</td><td>Wavelength array in nanometers </td></tr>
     <tr><td class="paramname">pressure</td><td>Air pressure in kiloPascals. </td></tr>
     <tr><td class="paramname">temperature</td><td>Temperature in Kelvins. </td></tr>
-    <tr><td class="paramname">H2O_pressure</td><td>Water vapor pressure in kiloPascals. </td></tr>
+    <tr><td class="paramname">H2O_pressure</td><td>Water vapor pressure in kiloPascals.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>refractive index </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the refractive index minus 1. </dd></dl>
 
 </div>
 </div>
@@ -195,11 +196,11 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">wave</td><td>Wavelength array in nanometers </td></tr>
     <tr><td class="paramname">zenith_angle</td><td>as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> </td></tr>
-    <tr><td class="paramname">kwargs</td><td>Keyword arguments to pass to air_refractive_index() to override default pressure, temperature, and/or H2O_pressure. </td></tr>
+    <tr><td class="paramname">kwargs</td><td>Keyword arguments to pass to air_refractive_index() to override default pressure, temperature, and/or H2O_pressure.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Absolute value of change in zenith angle as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the absolute value of change in zenith angle as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a>. </dd></dl>
 
 </div>
 </div>
@@ -246,11 +247,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">obj_coord</td><td>A <code>galsim.CelestialCoord</code> object for which the zenith and parallactic angles will be computed. </td></tr>
     <tr><td class="paramname">zenith_coord</td><td>A <code>galsim.CelestialCoord</code> indicating the coordinates of the zenith. </td></tr>
     <tr><td class="paramname">HA</td><td>The hour angle (as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>) of the coordinate for which the zenith and parallactic angles will be computed. </td></tr>
-    <tr><td class="paramname">latitude</td><td>The observer's latitude, as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>. </td></tr>
+    <tr><td class="paramname">latitude</td><td>The observer's latitude, as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>zenith_angle, parallactic_angle as <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>s. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the zenith_angle, parallactic_angle as galsim.Angles. </dd></dl>
 
 </div>
 </div>

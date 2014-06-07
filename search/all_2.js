@@ -67,6 +67,7 @@ var searchData=
   ['buildtree',['buildTree',['../classgalsim_1_1_probability_tree.html#aea01c28fb02a5ac7671aefb1dbbe687e',1,'galsim::ProbabilityTree']]],
   ['buildwcs',['BuildWCS',['../namespacegalsim_1_1config_1_1wcs.html#a96ff1f958f93fe52ea1eeeefcb510a77',1,'galsim::config::wcs']]],
   ['bunzip2_5fcall',['bunzip2_call',['../classgalsim_1_1fits_1_1___read_file.html#a0e128142ab0e894081209788577712fc',1,'galsim::fits::_ReadFile']]],
+  ['bvec',['bvec',['../classgalsim_1_1shapelet_1_1_shapelet.html#aac9b16f8d80bac5a2ea61d7ec4fde63e',1,'galsim::shapelet::Shapelet']]],
   ['bz2',['bz2',['../classgalsim_1_1fits_1_1___read_file.html#a6a8f1ed4357d010ae226d76d5e96ab13',1,'galsim.fits._ReadFile.bz2()'],['../classgalsim_1_1fits_1_1___write_file.html#acda9c5087253debb6a247a99766cf7a9',1,'galsim.fits._WriteFile.bz2()']]],
   ['bz2_5fin_5fmem',['bz2_in_mem',['../classgalsim_1_1fits_1_1___read_file.html#afd47eb751e2d3b2ded9bfccd50a9808b',1,'galsim.fits._ReadFile.bz2_in_mem()'],['../classgalsim_1_1fits_1_1___write_file.html#a6e3a4a944f04c385796f40afede0eed9',1,'galsim.fits._WriteFile.bz2_in_mem()']]],
   ['bz2_5findex',['bz2_index',['../classgalsim_1_1fits_1_1___read_file.html#ae4e296b3d7860c5d576edfcc9afec937',1,'galsim.fits._ReadFile.bz2_index()'],['../classgalsim_1_1fits_1_1___write_file.html#a930963cad7c1930a29ba517a229cfff0',1,'galsim.fits._WriteFile.bz2_index()']]],

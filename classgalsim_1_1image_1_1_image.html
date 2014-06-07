@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -98,9 +99,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">galsim.image.Image Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>A class for storing image data along with the pixel scale or wcs information.  
- <a href="classgalsim_1_1image_1_1_image.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.image.Image:</div>
 <div class="dyncontent">
@@ -181,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a947375926981cee5c925fb663477b1b2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a947375926981cee5c925fb663477b1b2">__call__</a></td></tr>
 <tr class="memdesc:a947375926981cee5c925fb663477b1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pixel value at given position.  <a href="#a947375926981cee5c925fb663477b1b2">More...</a><br/></td></tr>
 <tr class="separator:a947375926981cee5c925fb663477b1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a929dd9a1df345c79f1dd5a94eba2676e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a929dd9a1df345c79f1dd5a94eba2676e">at</a></td></tr>
+<tr class="memdesc:a929dd9a1df345c79f1dd5a94eba2676e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is a synonym for im(x,y).  <a href="#a929dd9a1df345c79f1dd5a94eba2676e">More...</a><br/></td></tr>
+<tr class="separator:a929dd9a1df345c79f1dd5a94eba2676e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee3001b7791ba8e62fc4db0aa2e96556"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#aee3001b7791ba8e62fc4db0aa2e96556">setValue</a></td></tr>
 <tr class="memdesc:aee3001b7791ba8e62fc4db0aa2e96556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel value at given position.  <a href="#aee3001b7791ba8e62fc4db0aa2e96556">More...</a><br/></td></tr>
 <tr class="separator:aee3001b7791ba8e62fc4db0aa2e96556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,72 +213,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a8848a2c56a8b87be08ed30bdc0beed98">valid_dtypes</a> = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+alias_dtypes.keys()</td></tr>
 <tr class="separator:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for storing image data along with the pixel scale or wcs information. </p>
-<p>The python layer <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class is mostly a wrapper around the C++ classes <a class="el" href="classgalsim_1_1_image_alloc.html" title="ImageAlloc class. ">ImageAlloc</a> and <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a>. The former allocates its own memory, and the latter views memory allocated by some other object (typically an <a class="el" href="classgalsim_1_1_image_alloc.html" title="ImageAlloc class. ">ImageAlloc</a> or a numpy array).</p>
-<p>The <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class contains an <code>image</code> attribute, which holds the appropriate C++ <a class="el" href="classgalsim_1_1_image_alloc.html" title="ImageAlloc class. ">ImageAlloc</a> or <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> object. Most operations that act on the pixel values will just pass the command to the C++ layer.</p>
-<p>There are 4 data types that the image object can use for the data values. These are numpy.int16, numpy.int32, numpy.float32, and numpy.float64. If you are constructing a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> from scratch, the default is numpy.float32, but you can specify one of the other data types. If you construct an <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> from an existing allocation such as a numpy array, then the dtype must be one of these or you will get an error.</p>
-<p>There are several ways to construct an <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>: </p>
-<pre class="fragment">Image(ncol, nrow, dtype=numpy.float32, init_value=0, ...)
-
-            Construct a new image, allocating memory for the pixel values according
-            to the number of columns and rows.  You can specify the data type as `dtype` 
-            if you want.  The default is `numpy.float32` if you don't specify it.  You can 
-            also optionally provide an initial value for the pixels, which defaults to 0.
-
-Image(bounds, dtype=numpy.float32, init_value=0, ...)
-
-            Construct a new image, allocating memory for the pixel values according
-            to a given bounds object.  The bounds should be a galsim.BoundsI instance.
-            You can specify the data type as `dtype` if you want.  The default is 
-            `numpy.float32` if you don't specify it.  You can also optionally provide
-            an initial value for the pixels, which defaults to 0.
-
-Image(array, xmin=1, ymin=1, make_const=False, ...)
-
-            View an existing numpy array as a galsim Image.  The dtype is taken from
-            the dtype of the numpy array, which must be one of the allowed types listed
-            above.  You can also optionally set the origin (xmin, ymin) if you want it to 
-            be something other than (1,1).  You can also optionally force the image to
-            be read-only with `make_const=True`.
-
-Image(image)
-
-            Cast a C++-layer image object (an ImageArray, ImageView or ConstImageView)
-            as an Image.
-</pre><p>You can specify the <code>ncol</code>, <code>nrow</code>, <code>bounds</code>, <code>array</code>, or <code>image</code> parameters by keyword argument if you want, or you can pass them as simple args, and the constructor will figure out what they are.</p>
-<p>The other arguments (shown as ... above) relate to the conversion between sky coordinates, which is how all the galsim objects are defined, and the pixel coordinates. There are three options for this: </p>
-<pre class="fragment">scale       You can optionally specify a pixel scale to use.  This would normally have
-            units arcsec/pixel, but it doesn't have to be arcsec.  If you want to 
-            use different units for the physical scale of your galsim objects, then
-            the same unit would be used here.
-wcs         A WCS object that provides a non-trivial mapping between sky units and
-            pixel units.  The scale parameter is equivalent to wcs=PixelScale(scale).
-            But there are a number of more complicated options.  See the WCS class
-            for more details.
-None        If you do not provide either of the above, then the conversion is undefined.
-            When drawing onto such an image, a suitable pixel scale will be automatically
-            set according to the Nyquist scale of the object being drawn.
-</pre><p>After construction, you can set or change the scale or wcs with </p>
-<pre class="fragment">im.scale = new_scale
-im.wcs = new_wcs
-</pre><p>Note that im.scale will only work if the WCS is a galsim.PixelScale. Once you set the wcs to be something non-trivial, then you must interact with it via the wcs attribute. The im.scale syntax will raise an exception.</p>
-<p>There are also two read-only attributes: </p>
-<pre class="fragment">im.bounds
-im.array
-</pre><p>The 'array' attribute provides a numpy view into the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>'s pixels. The individual elements in the array attribute are accessed as im.array[y,x], matching the standard numpy convention, while the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class's own accessor uses (x,y).</p>
-<p>Methods: </p>
-<pre class="fragment">view        Return a view of the image.
-subImage    Return a view of a portion of the full image.
-shift       Shift the origin of the image by (dx,dy).
-setCenter   Set a new position for the center of the image.
-setOrigin   Set a new position for the origin (x,y) = (0,0) of the image.
-im(x,y)     Get the value of a single pixel.
-setValue    Set the value of a single pixel.
-resize      Resize the image to have a new bounds.
-fill        Fill the image with the same value in all pixels.
-setZero     Fill the image with zeros.
-invertSelf  Convert each value x to 1/x.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abd4cfb47eac16fe6e29a090a0b87d439"></a>
 <div class="memitem">
 <div class="memproto">
@@ -421,6 +357,41 @@ invertSelf  Convert each value x to 1/x.</pre> </div><h2 class="groupheader">Con
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a929dd9a1df345c79f1dd5a94eba2676e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image.at </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is a synonym for im(x,y). </p>
+<p>It is a bit faster than im(x,y), since GalSim does not have to parse the different options available for <b>call</b>. (i.e. im(x,y) or im(pos) or im(x=x,y=y)) </p>
 
 </div>
 </div>

@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -188,9 +189,9 @@ Public Attributes</h2></td></tr>
 <p>Note that the <code>wave_type</code> and <code>flux_type</code> parameters do not propagate into other methods of <code><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a></code>. For instance, <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ae346d86e8b9dce5cd09a30a256a2f993" title="Return photon density at wavelength wave. ">SED.__call__</a> assumes its input argument is in nanometers and returns flux proportional to photons/nm.</p>
 <pre class="fragment"> @param spec          Function defining the spectrum at each wavelength.  See above for
                       valid options for this parameter.
+ @param wave_type     String specifying units for wavelength input to `spec`. [default: 'nm']
  @param flux_type     String specifying what type of spectral density `spec` represents.  See
-                      above for valid options for this parameter.
- @param wave_type     String specifying units for wavelength input to `spec`.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+                      above for valid options for this parameter. [default: 'flambda']</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ada1e8ef6de244f3aa82586b9ca25cad1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -284,11 +285,11 @@ Public Attributes</h2></td></tr>
 <p>Note that outside of the wavelength range defined by the <code>blue_limit</code> and <code>red_limit</code> attributes, the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is considered undefined, and this method will raise an exception if a flux at a wavelength outside the defined range is requested.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wave</td><td>Wavelength in nanometers at which to evaluate the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
+    <tr><td class="paramname">wave</td><td>Wavelength in nanometers at which to evaluate the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Photon density, Units proportional to photons/nm </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the photon density in units of photons/nm </dd></dl>
 
 </div>
 </div>
@@ -505,7 +506,7 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Redshifted <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the redshifted <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -536,11 +537,11 @@ Public Attributes</h2></td></tr>
 <p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a bandpass. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bandpass</td><td>galsim.Bandpass object representing a filter, or None for bolometric flux (over defined wavelengths). </td></tr>
+    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object representing a filter, or None for bolometric flux (over defined wavelengths).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Flux through bandpass. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the flux through the bandpass. </dd></dl>
 
 </div>
 </div>
@@ -593,12 +594,12 @@ Public Attributes</h2></td></tr>
 <p>If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then remove tabulated values while keeping the integral over the over the set of tabulated values still accurate to <code>rel_err</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> (default: 1.e-4) </td></tr>
-    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) (default: False) </td></tr>
+    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> [default: 1.e-4] </td></tr>
+    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: False]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The thinned <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the thinned <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -636,12 +637,12 @@ Public Attributes</h2></td></tr>
 <p>Note that this normalization is <em>relative</em> to the <code>flux</code> attribute of the chromaticized GSObject.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_flux</td><td>Desired <em>relative</em> flux normalization of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
-    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object defining a filter bandpass. </td></tr>
+    <tr><td class="paramname">target_flux</td><td>The desired <em>relative</em> flux normalization of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
+    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object defining a filter bandpass.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -680,11 +681,11 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target_flux_density</td><td>The target <em>relative</em> normalization in photons / nm. </td></tr>
-    <tr><td class="paramname">wavelength</td><td>The wavelength, in nanometers, at which flux density will be set. </td></tr>
+    <tr><td class="paramname">wavelength</td><td>The wavelength, in nm, at which flux density will be set.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>

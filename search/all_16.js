@@ -16,7 +16,7 @@ var searchData=
   ['vargaussiannoise',['VarGaussianNoise',['../classgalsim_1_1_var_gaussian_noise.html',1,'galsim']]],
   ['variablegaussiannoise',['VariableGaussianNoise',['../classgalsim_1_1noise_1_1_variable_gaussian_noise.html',1,'galsim::noise']]],
   ['variance',['variance',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a8f88aca26990573570f3220fdb085934',1,'galsim::real::RealGalaxyCatalog']]],
-  ['version',['version',['../namespacegalsim_1_1base.html#a1399d3395fef8de09804ebe84b664491',1,'galsim::base']]],
+  ['version',['version',['../namespacegalsim.html#a878430f67f66dbc50dd1464e8ed53285',1,'galsim']]],
   ['vfunc',['vfunc',['../classgalsim_1_1wcs_1_1_u_v_function.html#a698fcae5092c5f68389ff27689aa270b',1,'galsim::wcs::UVFunction']]],
   ['view',['view',['../classgalsim_1_1_base_image.html#a9fc8d4bc3545ef60b1a8a4e04c2e27e2',1,'galsim::BaseImage::view()'],['../classgalsim_1_1_const_image_view.html#a306ad6c68644cbdd72c5831be06fe703',1,'galsim::ConstImageView::view()'],['../classgalsim_1_1_image_view.html#adae82c6be0c6fd72e36e96185c53c7c3',1,'galsim::ImageView::view()'],['../classgalsim_1_1_image_alloc.html#a206fd7732b028139e27c1b9c9bf4eed9',1,'galsim::ImageAlloc::view()'],['../classgalsim_1_1_image_alloc.html#a5abef55109009d44356a57a8c3f82728',1,'galsim::ImageAlloc::view() const '],['../classgalsim_1_1image_1_1_image.html#ad8ba5007481a9bbffb23a5c1e15f21d4',1,'galsim.image.Image.view()']]]
 ];

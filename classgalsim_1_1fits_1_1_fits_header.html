@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -182,23 +183,23 @@ to write to a fits header, so this class will work regardless of which version o
 
 Constructor parameters:
 
-@param header       A pyfits Header object.  One of `file_name`, `hdu_list` or `header`
+@param header       A pyfits Header object.  [One of `file_name`, `hdu_list` or `header`
                     is required.  The `header` parameter may be given without the keyword
                     name.  Also, if `header` is a string, it is interpreted as a file name,
                     so a file name may be passed as an arg like most other galsim.fits 
-                    read functions.
-@param file_name    The name of the file to read in.  One of `file_name`, `hdu_list` or 
-                    `header` is required.
+                    read functions.]
+@param file_name    The name of the file to read in.  [One of `file_name`, `hdu_list` or 
+                    `header` is required.]
 @param dir          Optionally a directory name can be provided if the file_name does not 
-                    already include it.
+                    already include it. [default: None]
 @param hdu_list     Either a `pyfits.HDUList`, a `pyfits.PrimaryHDU`, or `pyfits.ImageHDU`.
                     In the former case, the `hdu` in the list will be selected.  In the latter
-                    two cases, the `hdu` parameter is ignored.  One of `file_name`, `hdu_list`
-                    or `header is required.
-@param hdu          The number of the HDU from which to read the header.  The default is to 
-                    use either the primary or first extension as appropriate for the given 
-                    compression.  (e.g. for rice, the first extension is the one you normally 
-                    want.)
+                    two cases, the `hdu` parameter is ignored.  [One of `file_name`, `hdu_list`
+                    or `header is required.]
+@param hdu          The number of the HDU to return.  [default: None, which means to return
+                    either the primary or first extension as appropriate for the given
+                    compression.  (e.g. for rice, the first extension is the one you normally
+                    want.)]
 @param compression  Which decompression scheme to use (if any).  Options are:
                     - None or 'none' = no decompression
                     - 'rice' = use rice decompression in tiles
@@ -213,10 +214,11 @@ Constructor parameters:
                                '*.gz' =&gt; 'gzip'
                                '*.bz2' =&gt; 'bzip2'
                                otherwise None
+                    [default: 'auto']
 @param text_file    Normally a file is taken to be a fits file, but you can also give it a 
                     text file with the header information (like the .head file output from 
                     SCamp).  In this case you should set `text_file = True` to tell GalSim
-                    to parse the file this way.  [ Default `test_file = False` ]</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+                    to parse the file this way.  [default: False]</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa72a547f0e7616e0a868add94328eb6e"></a>
 <div class="memitem">
 <div class="memproto">

@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -206,16 +207,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>scaleFlux()
 : <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#af4193645a9af52e7d54a044cafec8ab9">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic.html#a80e873fd7f912d188920aa5c02669018">galsim.chromatic.Chromatic</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a5119d7f87c4b2c391ec4db4744cc63c8">galsim.chromatic.ChromaticAutoConvolution</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#af566261dfcb6ce0664f5c22e84483415">galsim.chromatic.ChromaticAutoCorrelation</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_convolution.html#aec8cbc26c138c192b768846ee75710cd">galsim.chromatic.ChromaticConvolution</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html#a26b250f9083af059e773f52fc658d782">galsim.chromatic.ChromaticDeconvolution</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad58a234921709077b3c6e126df4fa1b2">galsim.chromatic.ChromaticObject</a>
-, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_sum.html#a5373f8852b0277a999a06d7abbec2285">galsim.chromatic.ChromaticSum</a>
-, <a class="el" href="classgalsim_1_1shapelet_1_1_shapelet.html#a28f477a41ef99387debbe55864776e08">galsim.shapelet.Shapelet</a>
 , <a class="el" href="classgalsim_1_1_photon_array.html#a38cb428c22e3b3490d327069189a9670">galsim::PhotonArray</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#aeefb2c61d26fae17c5a55d9e60dd4ac2">galsim::SBProfile</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a2b6c5c6e321b7231ca859b803f45ecb5">galsim::SBProfile</a>
 </li>
 <li>scaleVariance()
 : <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#acc51ea992074bdb172be77a210e85282">galsim.correlatednoise._BaseCorrelatedNoise</a>
@@ -241,7 +234,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_sum.html#a98720bd80b73fa9f62870b2942feb828">galsim.chromatic.ChromaticSum</a>
 </li>
 <li>seed()
-: <a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">galsim::BaseDeviate</a>
+: <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html#a46321167e2ccd1d6f4eb908d73b7eee3">galsim.random.DistDeviate</a>
+, <a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">galsim::BaseDeviate</a>
 , <a class="el" href="classgalsim_1_1_uniform_deviate.html#a36af3510253f3ac19c00e0c2d4d1247a">galsim::UniformDeviate</a>
 </li>
 <li>segs
@@ -305,8 +299,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>setFlux()
 : <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a1993652591ddc802b734186391b28894">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1shapelet_1_1_shapelet.html#a169eef88b4cfb8e89249c5678bc274ef">galsim.shapelet.Shapelet</a>
-, <a class="el" href="classgalsim_1_1_s_b_profile.html#a31093a62c9086296fdf519c720edadb9">galsim::SBProfile</a>
 </li>
 <li>setG1G2()
 : <a class="el" href="classgalsim_1_1shear_1_1_shear.html#a586fcf374e23b8ae98e59ba7ab2cd563">galsim.shear.Shear</a>
@@ -343,7 +335,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>setOrigin()
 : <a class="el" href="classgalsim_1_1image_1_1_image.html#ae84bd8b3ec2104057ad0f39f88cca271">galsim.image.Image</a>
-, <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#a5741aaf904a4bb16b38f4ffab2a818ef">galsim.wcs.BaseWCS</a>
 </li>
 <li>setP()
 : <a class="el" href="classgalsim_1_1_binomial_deviate.html#a7d7fe7f17f5c07a3070db27c89036634">galsim::BinomialDeviate</a>
@@ -417,13 +408,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classgalsim_1_1_image_view.html#aa768a8cfae431906f3a9cf2b5c182bce">galsim::ImageView&lt; T &gt;</a>
 </li>
 <li>shear()
-: <a class="el" href="classgalsim_1_1wcs_1_1_offset_shear_w_c_s.html#a7e23c59cabdc05055083287a45b9d69a">galsim.wcs.OffsetShearWCS</a>
-, <a class="el" href="classgalsim_1_1wcs_1_1_shear_w_c_s.html#a77a8e9dac2e5623c5c5c612005470d15">galsim.wcs.ShearWCS</a>
+: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#acc3ac16f75958b4a14246e944662ce3f">galsim.base.GSObject</a>
+, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d">galsim.chromatic.ChromaticObject</a>
+, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#abca5ea803247b19465b6b06405712663">galsim.correlatednoise._BaseCorrelatedNoise</a>
+, <a class="el" href="classgalsim_1_1wcs_1_1_offset_shear_w_c_s.html#a7e23c59cabdc05055083287a45b9d69a">galsim.wcs.OffsetShearWCS</a>
+, <a class="el" href="classgalsim_1_1wcs_1_1_shear_w_c_s.html#a37d56b3d93934c80c7ec6f78ad150f16">galsim.wcs.ShearWCS</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a9ba39acff7f44777cb9f0ea5ba1ab7a8">galsim::SBProfile</a>
 </li>
 <li>shift()
-: <a class="el" href="classgalsim_1_1image_1_1_image.html#a4ec7ac1c77a030f244b16bec29f2f626">galsim.image.Image</a>
+: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a17a4998b3d8ba6e13e9f0779e56f3697">galsim.base.GSObject</a>
+, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2">galsim.chromatic.ChromaticObject</a>
+, <a class="el" href="classgalsim_1_1image_1_1_image.html#a4ec7ac1c77a030f244b16bec29f2f626">galsim.image.Image</a>
 , <a class="el" href="classgalsim_1_1_base_image.html#ad15a2561cc523eb535776736bddbfd22">galsim::BaseImage&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_bounds.html#adde9c54a2681c66f9f8ed80e0679f5c6">galsim::Bounds&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_bounds.html#a5b2586c3e0e16d853edb43cfda4ded39">galsim::Bounds&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_s_b_profile.html#a5858b8e0e2735ce5ded7d0b38cefefc3">galsim::SBProfile</a>
 </li>
 <li>shoot()
 : <a class="el" href="classgalsim_1_1_delta.html#acd2e9e524e82add75923473343ea948a">galsim::Delta</a>
@@ -450,6 +448,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>sigma
 : <a class="el" href="classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a96dc3b3ce78a099ec1a67bcf3114ecc4">galsim.des.des_shapelet.DES_Shapelet</a>
+, <a class="el" href="classgalsim_1_1shapelet_1_1_shapelet.html#a984fafd686cb870f5989e6afade0b37a">galsim.shapelet.Shapelet</a>
 , <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html#a9609fdee193b52a5cd0ed28f87fba0f6">galsim::hsm::ObjectData</a>
 </li>
 <li>sigma_draw

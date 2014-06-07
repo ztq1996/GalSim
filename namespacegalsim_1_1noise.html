@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -104,18 +105,26 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa45903c801b069774d5eafdbee54bda7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7">addNoise</a></td></tr>
-<tr class="memdesc:aa45903c801b069774d5eafdbee54bda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Noise addition Image method, adding noise according to a supplied noise model.  <a href="#aa45903c801b069774d5eafdbee54bda7">More...</a><br/></td></tr>
 <tr class="separator:aa45903c801b069774d5eafdbee54bda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86f91278331ac9c134c25b16d4c67a32"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">addNoiseSNR</a></td></tr>
-<tr class="memdesc:a86f91278331ac9c134c25b16d4c67a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <a class="el" href="classgalsim_1_1_c_c_d_noise.html" title="Class implementing basic CCD noise model. ">CCDNoise</a> to an image in a way that achieves the specified signal-to-noise ratio.  <a href="#a86f91278331ac9c134c25b16d4c67a32">More...</a><br/></td></tr>
 <tr class="separator:a86f91278331ac9c134c25b16d4c67a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3293fe2dbc763a141dace2081f1d3ea4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a3293fe2dbc763a141dace2081f1d3ea4">Noise_imul</a></td></tr>
-<tr class="separator:a3293fe2dbc763a141dace2081f1d3ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3730df582d41ff47e9e28e3b5dc6d0a2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a3730df582d41ff47e9e28e3b5dc6d0a2">Noise_setVariance</a></td></tr>
+<tr class="memdesc:a3730df582d41ff47e9e28e3b5dc6d0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an obsolete method that is rougly equivalent to noise = noise.withVariance(variance).  <a href="#a3730df582d41ff47e9e28e3b5dc6d0a2">More...</a><br/></td></tr>
+<tr class="separator:a3730df582d41ff47e9e28e3b5dc6d0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f28bddee01ca0b3c8f64dcd6ea13c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#ac4f28bddee01ca0b3c8f64dcd6ea13c1">Noise_scaleVariance</a></td></tr>
+<tr class="memdesc:ac4f28bddee01ca0b3c8f64dcd6ea13c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an obsolete method that is rougly equivalent to noise = noise * variance_ratio.  <a href="#ac4f28bddee01ca0b3c8f64dcd6ea13c1">More...</a><br/></td></tr>
+<tr class="separator:ac4f28bddee01ca0b3c8f64dcd6ea13c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8873a2f8ac01f418c3357cab054c73a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#ac8873a2f8ac01f418c3357cab054c73a">Noise_withVariance</a></td></tr>
+<tr class="memdesc:ac8873a2f8ac01f418c3357cab054c73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new noise object (of the same type as the current one) with the specified variance.  <a href="#ac8873a2f8ac01f418c3357cab054c73a">More...</a><br/></td></tr>
+<tr class="separator:ac8873a2f8ac01f418c3357cab054c73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fa5a0d6fce69ea14db228e722cfbff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a43fa5a0d6fce69ea14db228e722cfbff">Noise_withScaledVariance</a></td></tr>
+<tr class="memdesc:a43fa5a0d6fce69ea14db228e722cfbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new noise object with the variance scaled up by the specified factor.  <a href="#a43fa5a0d6fce69ea14db228e722cfbff">More...</a><br/></td></tr>
+<tr class="separator:a43fa5a0d6fce69ea14db228e722cfbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae86d8ae3142ce4badb620460138672d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#aae86d8ae3142ce4badb620460138672d">Noise_mul</a></td></tr>
+<tr class="memdesc:aae86d8ae3142ce4badb620460138672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the variance of the noise by variance_ratio.  <a href="#aae86d8ae3142ce4badb620460138672d">More...</a><br/></td></tr>
 <tr class="separator:aae86d8ae3142ce4badb620460138672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39c39b8a349bd18e8639f3ba9ed50f9d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a39c39b8a349bd18e8639f3ba9ed50f9d">Noise_idiv</a></td></tr>
-<tr class="separator:a39c39b8a349bd18e8639f3ba9ed50f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e6d843d5b04e7fd937343d070ba05a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#a87e6d843d5b04e7fd937343d070ba05a">Noise_div</a></td></tr>
+<tr class="memdesc:a87e6d843d5b04e7fd937343d070ba05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to self * (1/variance_ratio)  <a href="#a87e6d843d5b04e7fd937343d070ba05a">More...</a><br/></td></tr>
 <tr class="separator:a87e6d843d5b04e7fd937343d070ba05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae216eb5c8bcd6df517cc632e9867837c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1noise.html#ae216eb5c8bcd6df517cc632e9867837c">GaussianNoise_applyTo</a></td></tr>
 <tr class="memdesc:ae216eb5c8bcd6df517cc632e9867837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Gaussian noise to an input Image.  <a href="#ae216eb5c8bcd6df517cc632e9867837c">More...</a><br/></td></tr>
@@ -147,7 +156,7 @@ Functions</h2></td></tr>
           <td class="memname">def galsim.noise.addNoise </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -162,23 +171,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">Add noise to the image adding noise according to a supplied noise model.
 
-<p>Noise addition Image method, adding noise according to a supplied noise model. </p>
-<blockquote class="doxtable">
-<blockquote class="doxtable">
-<blockquote class="doxtable">
-<p>Image.addNoise(noise) </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre class="fragment"> Noise following supplied model will be added to the image.
-
- @param  image  The image on which to add the noise.
- @param  noise  Instantiated noise model (currently CCDNoise, UniformDeviate, BinomialDeviate,
-                GaussianDeviate and PoissonDeviate are supported).
-
- If the supplied noise model object does not have an applyTo() method, then this will raise an
- AttributeError exception.</pre> 
+@param noise        The noise (galsim.BaseNoise) model to use.
+</pre> 
 </div>
 </div>
 <a class="anchor" id="a86f91278331ac9c134c25b16d4c67a32"></a>
@@ -189,7 +185,7 @@ Functions</h2></td></tr>
           <td class="memname">def galsim.noise.addNoiseSNR </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -216,41 +212,34 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">Adds noise to the image in a way that achieves the specified signal-to-noise ratio.
 
-<p>Adds <a class="el" href="classgalsim_1_1_c_c_d_noise.html" title="Class implementing basic CCD noise model. ">CCDNoise</a> to an image in a way that achieves the specified signal-to-noise ratio. </p>
-<blockquote class="doxtable">
-<blockquote class="doxtable">
-<blockquote class="doxtable">
-<p>Image.addNoiseSNR(noise, snr, preserve_flux) </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre class="fragment"> Noise following the supplied model will be added to the image modifying either the flux of the
- object (if `preserve_flux=True`) or the variance of the noise (if `preserve_flux=False`) such
- that the given signal-to-noise ratio, `snr`, is reached.
+The given SNR can be achieved either by scaling the flux of the object while keeping
+the noise level fixed, or the flux can be preserved and the noise variance changed.
+This is set using the parameter `preserve_flux`.
 
- If `preserve_flux=False` (the default), the flux of the input image will be rescaled to achieve
- the desired signal-to-noise ratio (useful if adding noise separately to multiple galaxies with
- the same sky_level).
+The definition of SNR is equivalent to the one used by Great08.  Taking a weighted integral 
+of the flux:
+    S = sum W(x,y) I(x,y) / sum W(x,y)
+    N^2 = Var(S) = sum W(x,y)^2 Var(I(x,y)) / (sum W(x,y))^2
+and assuming that Var(I(x,y)) is constant
+    Var(I(x,y)) = noise_var
+We then assume that we are using a matched filter for W, so W(x,y) = I(x,y).  Then a few things 
+cancel and we find that
+    snr = S/N = sqrt( sum I(x,y)^2 / noise_var )
+and therefore, for a given I(x,y) and snr,
+    noise_var = sum I(x,y)^2/snr^2.
 
- If `preserve_flux=True`, then the variance of the noise model is modified.
+Note that for noise models such as Poisson and CCDNoise, the constant Var(I(x,y)) assumption
+is only approximate, since the flux of the object adds to the Poisson noise in those pixels.
+Thus, the real S/N on the final image will be slightly lower than the target `snr` value, 
+and this effect will be larger for brighter objects.
 
- The definition of SNR is equivalent to the one used by Great08.  Taking a weighted integral 
- of the flux:
-     S = sum W(x,y) I(x,y) / sum W(x,y)
-     N^2 = Var(S) = sum W(x,y)^2 Var(I(x,y)) / (sum W(x,y))^2
- and assuming that Var(I(x,y)) is constant
-     Var(I(x,y)) = noise_var
- We then assume that we are using a matched filter for W, so W(x,y) = I(x,y).  Then a few things 
- cancel and we find that
-     snr = S/N = sqrt( sum I(x,y)^2 / noise_var )
- and therefore, for a given I(x,y) and snr,
-     noise_var = sum I(x,y)^2/snr^2.
-
- Note that for noise models such as Poisson and CCDNoise, the constant Var(I(x,y)) assumption
- is only approximate, since the flux of the object adds to the Poisson noise in those pixels.
- Thus, the real S/N on the final image will be slightly lower than the target `snr` value, 
- and this effect will be larger for brighter objects.</pre> 
+@param noise        The noise (galsim.BaseNoise) model to use.
+@param snr          The desired signal-to-noise after the noise is applied.
+@param preserve_flux  Whether to preserve the flux of the object (True) or the variance of
+                    the noise model (False) to achieve the desired SNR. [default: False]
+</pre> 
 </div>
 </div>
 <a class="anchor" id="a80dec8dd1bff369512f181367e14f31a"></a>
@@ -329,7 +318,7 @@ Functions</h2></td></tr>
 <h2>Calling </h2>
 <pre class="fragment">&gt;&gt;&gt; dev_noise.applyTo(image)
 </pre><p>On output the Image instance image will have been given additional noise according to the given <a class="el" href="classgalsim_1_1_deviate_noise.html" title="Add noise according to a given Deviate. ">DeviateNoise</a> instance.</p>
-<p>To add deviates to every element of an image, the syntax <a class="el" href="namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7" title="Noise addition Image method, adding noise according to a supplied noise model. ">image.addNoise()</a> is preferred. </p>
+<p>To add deviates to every element of an image, the syntax <a class="el" href="namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7">image.addNoise()</a> is preferred. </p>
 
 </div>
 </div>
@@ -411,7 +400,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
+          <td class="paramname"><em>variance_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -421,57 +410,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a39c39b8a349bd18e8639f3ba9ed50f9d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.noise.Noise_idiv </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a3293fe2dbc763a141dace2081f1d3ea4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.noise.Noise_imul </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Equivalent to self * (1/variance_ratio) </p>
 
 </div>
 </div>
@@ -489,7 +428,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
+          <td class="paramname"><em>variance_ratio</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -498,6 +437,142 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Multiply the variance of the noise by variance_ratio. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variance_ratio</td><td>The factor by which to scale the variance of the correlation function profile.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Noise object whose variance has been scaled by the given amount. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4f28bddee01ca0b3c8f64dcd6ea13c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.Noise_scaleVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an obsolete method that is rougly equivalent to noise = noise * variance_ratio. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3730df582d41ff47e9e28e3b5dc6d0a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.Noise_setVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an obsolete method that is rougly equivalent to noise = noise.withVariance(variance). </p>
+
+</div>
+</div>
+<a class="anchor" id="a43fa5a0d6fce69ea14db228e722cfbff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.Noise_withScaledVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a new noise object with the variance scaled up by the specified factor. </p>
+<p>This is equivalent to noise * variance_ratio.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variance_ratio</td><td>The factor by which to scale the variance of the correlation function profile.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Noise object whose variance has been scaled by the given amount. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8873a2f8ac01f418c3357cab054c73a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.Noise_withVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a new noise object (of the same type as the current one) with the specified variance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variance</td><td>The desired variance in the noise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Noise object with the given variance. </dd></dl>
 
 </div>
 </div>

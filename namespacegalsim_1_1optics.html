@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -201,14 +202,14 @@ Functions</h2></td></tr>
 <p>Generate a pupil plane, including a central obscuration such as caused by a secondary mirror. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units. </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>].</td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units. </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: 0] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>]</td></tr>
   </table>
   </dd>
 </dl>
@@ -288,15 +289,15 @@ Functions</h2></td></tr>
 <p>Output double NumPy array is C-contiguous.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -375,15 +376,15 @@ Functions</h2></td></tr>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * scale.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the array view of the Image. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the array view of the Image. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0`] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -462,15 +463,15 @@ Functions</h2></td></tr>
 <p>Output complex NumPy array is C-contiguous.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -549,15 +550,15 @@ Functions</h2></td></tr>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * scale.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for array views of Image tuple. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for array views of Image tuple. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -642,16 +643,16 @@ Functions</h2></td></tr>
 <p>Ouput NumPy array is C-contiguous.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
-    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">flux</td><td>Total flux of the profile. [default: 1.] </td></tr>
   </table>
   </dd>
 </dl>
@@ -736,16 +737,16 @@ Functions</h2></td></tr>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * scale.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the array view of the Image. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the array view of the Image. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
-    <tr><td class="paramname">flux</td><td>total flux of the profile [default flux=1.]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">flux</td><td>Total flux of the profile. [default flux=1.] </td></tr>
   </table>
   </dd>
 </dl>
@@ -824,15 +825,15 @@ Functions</h2></td></tr>
 <p>Output double NumPy array is C-contiguous.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -911,15 +912,15 @@ Functions</h2></td></tr>
 <p>To ensure properly Nyquist sampled output any user should set lam_over_diam &gt;= 2. * scale.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the array view of the Image. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the array view of the Image. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.) [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -999,15 +1000,15 @@ Functions</h2></td></tr>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention defined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>].</td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>]</td></tr>
   </table>
   </dd>
 </dl>
@@ -1089,15 +1090,15 @@ Functions</h2></td></tr>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention defined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_shape</td><td>the NumPy array shape desired for the output array. </td></tr>
-    <tr><td class="paramname">scale</td><td>grid spacing of PSF in real space units </td></tr>
-    <tr><td class="paramname">lam_over_diam</td><td>lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape desired for the output array. </td></tr>
+    <tr><td class="paramname">scale</td><td>Grid spacing of PSF in real space units </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
     <tr><td class="paramname">aberrations</td><td>NumPy array containing the supported aberrations in units of incident light wavelength, ordered according to the Noll convention: defocus, astig1, astig2, coma1, coma2, trefoil1, trefoil2, spher. Since these are aberrations 4-11 in the Noll convention, 'aberrations' should have length 12, with defocus corresponding to index 4 and so on. The first four numbers in this array will be ignored. </td></tr>
-    <tr><td class="paramname">circular_pupil</td><td>adopt a circular pupil? </td></tr>
-    <tr><td class="paramname">obscuration</td><td>linear dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). </td></tr>
-    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration [default <code>nstruts = 0</code>]. </td></tr>
-    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter [default <code>strut_thick = 0.05</code>]. </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance [default <code>strut_angle = 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a></code>]. </td></tr>
+    <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
+    <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
+    <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>

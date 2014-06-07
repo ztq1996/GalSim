@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -126,6 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60122cd8bf87621701c1636e9774a57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb7f06e93149fc7ebc12c6339998b4d7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html#aeb7f06e93149fc7ebc12c6339998b4d7">getVariance</a></td></tr>
 <tr class="separator:aeb7f06e93149fc7ebc12c6339998b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ce35abfcb033a564fbbd80f17bede7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html#a50ce35abfcb033a564fbbd80f17bede7">withVariance</a></td></tr>
+<tr class="separator:a50ce35abfcb033a564fbbd80f17bede7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab971781b4589fe99261e3e06d246cf25"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html#ab971781b4589fe99261e3e06d246cf25">withScaledVariance</a></td></tr>
+<tr class="separator:ab971781b4589fe99261e3e06d246cf25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fdd386ffa558a90c02fe900593d046d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html#a9fdd386ffa558a90c02fe900593d046d">setVariance</a></td></tr>
 <tr class="separator:a9fdd386ffa558a90c02fe900593d046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f74496cbedfd2228e18d3a95cde4708"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html#a6f74496cbedfd2228e18d3a95cde4708">scaleVariance</a></td></tr>
@@ -140,11 +145,15 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Class implementing Gaussian noise that has a different variance in each pixel. </p>
 <h2>Initialization </h2>
 <pre class="fragment">&gt;&gt;&gt; variable_noise = galsim.VariableGaussianNoise(rng, var_image)
-</pre><p>Parameters: </p>
-<pre class="fragment">rng         A BaseDeviate instance to use for generating the random numbers.
-var_image   The variance of the noise to apply to each pixel.  This image must be the 
-            same shape as the image for which you eventually call addNoise.
-</pre><h2>Methods </h2>
+</pre><p>Parameters:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng</td><td>A <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> instance to use for generating the random numbers. </td></tr>
+    <tr><td class="paramname">var_image</td><td>The variance of the noise to apply to each pixel. This image must be the same shape as the image for which you eventually call addNoise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>Methods </h2>
 <p>To add noise to every element of an image, use the syntax image.addNoise(variable_noise). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a737556d1f9b65705894949641ffb21fd"></a>
@@ -334,6 +343,58 @@ var_image   The variance of the noise to apply to each pixel.  This image must b
       <table class="memname">
         <tr>
           <td class="memname">def galsim.noise.VariableGaussianNoise.setVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab971781b4589fe99261e3e06d246cf25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.VariableGaussianNoise.withScaledVariance </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>variance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a50ce35abfcb033a564fbbd80f17bede7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.noise.VariableGaussianNoise.withVariance </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>

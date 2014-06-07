@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -162,8 +163,9 @@ self.names      For a fits catalog, the valid column names.
   <table class="params">
     <tr><td class="paramname">file_name</td><td>Filename of the input catalog. (Required) </td></tr>
     <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">file_type</td><td>Either 'ASCII' or 'FITS'. If None, infer from the file name ending. (default <code>file_type = None</code>) </td></tr>
-    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog. (default `comments='#'<code>) @param hdu Which hdu to use for FITS files. (default</code>hdu = 1`) </td></tr>
+    <tr><td class="paramname">file_type</td><td>Either 'ASCII' or 'FITS'. If None, infer from the file name ending. [default: None] </td></tr>
+    <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog. [default: '#'] </td></tr>
+    <tr><td class="paramname">hdu</td><td>Which hdu to use for FITS files. [default: 1] </td></tr>
   </table>
   </dd>
 </dl>

@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -365,7 +366,7 @@ Public Member Functions</h2></td></tr>
 <p>Return the jacobian of the deprojection. </p>
 <p>i.e. if the input position is (u,v) (in arcsec) then return the matrix is</p>
 <p>J = ( dra/du cos(dec) dra/dv cos(dec) ) ( ddec/du ddec/dv )</p>
-<p>The matrix is returned as a tuple (J00, J01, J10, J11) </p>
+<dl class="section return"><dt>Returns</dt><dd>the matrix as a tuple (J00, J01, J10, J11) </dd></dl>
 
 </div>
 </div>
@@ -465,8 +466,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the longitude and latitude in galactic coordinates corresponding to this position. </p>
-<p>It returns the longitude and latitude as a tuple (el, b). They are each given as <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instances.</p>
-<p>The formulae are implemented in terms of the 1950 coordinates, so we need to precess from the current epoch to 1950. The current epoch is assumed to be 2000 by default, but you may also specify a different value with the epoch parameter. </p>
+<p>The formulae are implemented in terms of the 1950 coordinates, so we need to precess from the current epoch to 1950. The current epoch is assumed to be 2000 by default, but you may also specify a different value with the epoch parameter.</p>
+<dl class="section return"><dt>Returns</dt><dd>the longitude and latitude as a tuple (el, b), given as <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instances. </dd></dl>
 
 </div>
 </div>
@@ -538,7 +539,7 @@ Public Member Functions</h2></td></tr>
 <p>Use the currect coord as the center point of a tangent plane projection to project the other coordinate onto that plane. </p>
 <p>This function return the position (u,v) in the Euclidean coordinate system defined by a tangent plane projection around the current coordinate, with +v pointing north and +u pointing west.</p>
 <p>There are currently three options for the projection, which you can specify with the optional <code>projection</code> keyword argument: </p>
-<pre class="fragment">'lambert' (the default) uses a Lambert azimuthal projection, which preserves
+<pre class="fragment">'lambert' [default] uses a Lambert azimuthal projection, which preserves
         area, but not angles.  For more information, see
         http://mathworld.wolfram.com/LambertAzimuthalEqual-AreaProjection.html
 'stereographic' uses a stereographic proejection, which preserves angles, but
@@ -552,7 +553,7 @@ Public Member Functions</h2></td></tr>
         the projection point, but not area or angles.  For more information, see
         http://mathworld.wolfram.com/AzimuthalEquidistantProjection.html
 </pre><p>The distance or angle errors increase with distance from the projection point of course.</p>
-<p>Returns (u,v) in arcsec as a PositionD object. </p>
+<dl class="section return"><dt>Returns</dt><dd>(u,v) in arcsec as a PositionD object. </dd></dl>
 
 </div>
 </div>

@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -117,13 +118,19 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A class for deconvolving a GSObject. </p>
 <p>The <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> class represents a deconvolution kernel. Note that the <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> class, or compound objects (<a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a>, <a class="el" href="classgalsim_1_1compound_1_1_convolution.html" title="A class for convolving 2 or more GSObjects. ">Convolution</a>) that include a <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> as one of the components, cannot be photon-shot using the drawShoot method.</p>
 <p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option. Note: if gsparams is unspecified (or None), then the <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the object being deconvolved.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<h2>Initialization </h2>
+<p>The normal way to use this class is to use the <code>Deconvolve</code> factory function: </p>
+<pre class="fragment">&gt;&gt;&gt; inv_psf = galsim.Deconvolve(psf)
+&gt;&gt;&gt; deconv_gal = galsim.Convolve(inv_psf, gal)
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>The object to deconvolve. </td></tr>
-    <tr><td class="paramname">gsparams</td><td>Optional gsparams argument. </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
+<h2>Methods </h2>
+<p>There are no additional methods for <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> beyond the usual GSObject methods. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0b1211f9951275bd82744df1177175c9"></a>
 <div class="memitem">

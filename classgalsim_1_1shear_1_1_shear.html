@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -114,14 +115,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a037b18bb46426158e610257a588ab49b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a037b18bb46426158e610257a588ab49b">__init__</a></td></tr>
 <tr class="separator:a037b18bb46426158e610257a588ab49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb32c9c0d934e4a922cdfd6480fc778"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#abcb32c9c0d934e4a922cdfd6480fc778">setE1E2</a></td></tr>
+<tr class="memdesc:abcb32c9c0d934e4a922cdfd6480fc778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discouraged method that will be deprecated eventually.  <a href="#abcb32c9c0d934e4a922cdfd6480fc778">More...</a><br/></td></tr>
 <tr class="separator:abcb32c9c0d934e4a922cdfd6480fc778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af27ce5bace356e95514ea49038feb42c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#af27ce5bace356e95514ea49038feb42c">setEBeta</a></td></tr>
+<tr class="memdesc:af27ce5bace356e95514ea49038feb42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discouraged method that will be deprecated eventually.  <a href="#af27ce5bace356e95514ea49038feb42c">More...</a><br/></td></tr>
 <tr class="separator:af27ce5bace356e95514ea49038feb42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b777b3e69d9853d06e8e1f1ce669510"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a5b777b3e69d9853d06e8e1f1ce669510">setEta1Eta2</a></td></tr>
+<tr class="memdesc:a5b777b3e69d9853d06e8e1f1ce669510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discouraged method that will be deprecated eventually.  <a href="#a5b777b3e69d9853d06e8e1f1ce669510">More...</a><br/></td></tr>
 <tr class="separator:a5b777b3e69d9853d06e8e1f1ce669510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3bac7b778db53c1b62dada6eeb6901e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#ac3bac7b778db53c1b62dada6eeb6901e">setEtaBeta</a></td></tr>
+<tr class="memdesc:ac3bac7b778db53c1b62dada6eeb6901e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discouraged method that will be deprecated eventually.  <a href="#ac3bac7b778db53c1b62dada6eeb6901e">More...</a><br/></td></tr>
 <tr class="separator:ac3bac7b778db53c1b62dada6eeb6901e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586fcf374e23b8ae98e59ba7ab2cd563"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a586fcf374e23b8ae98e59ba7ab2cd563">setG1G2</a></td></tr>
+<tr class="memdesc:a586fcf374e23b8ae98e59ba7ab2cd563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discouraged method that will be deprecated eventually.  <a href="#a586fcf374e23b8ae98e59ba7ab2cd563">More...</a><br/></td></tr>
 <tr class="separator:a586fcf374e23b8ae98e59ba7ab2cd563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d81d19fdfa1d050f152d5e0784fa979"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1shear_1_1_shear.html#a4d81d19fdfa1d050f152d5e0784fa979">getE1</a></td></tr>
 <tr class="separator:a4d81d19fdfa1d050f152d5e0784fa979"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,7 +214,7 @@ Properties</h2></td></tr>
 &gt;&gt;&gt; s = galsim.Shear(e=0.3, beta=30.0*galsim.degrees)
 &gt;&gt;&gt; s = galsim.Shear(q=0.5, beta=0.0*galsim.radians)
 </pre><p>There can be no mixing and matching, e.g., specifying <code>g1</code> and <code>e2</code>. It is permissible to only specify one of two components, with the other assumed to be zero. If a magnitude such as <code>e</code>, <code>g</code>, <code>eta</code>, or <code>q</code> is specified, then <code>beta</code> is also required to be specified. It is possible to initialize a <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways. ">Shear</a> with zero reduced shear by specifying no args or kwargs, i.e. galsim.Shear(). The galsim.Shear contains a C++ <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a> object, and operations on <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways. ">Shear</a> rely on wrapped methods of the <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a>.</p>
-<p>Since we have defined a galsim.Shear as a transformation that preserves area, this means that it is not a precise description of what happens during the process of weak lensing. The coordinate transformation that occurs during the actual weak lensing process is such that if a galaxy is sheared by some (gamma_1, gamma_2), and then sheared by (-gamma_1, -gamma_2), it will in the end return to its original shape, but will have changed in area due to the magnification, mu = 1/((1.-kappa)**2 - (gamma_1**2 + gamma_2**2)), which is not equal to one for non-zero shear even for convergence kappa=0. Application of a galsim.Shear using the applyShear method does not include this area change. To properly incorporate the effective change in area due to shear, it is necessary to either (a) define the galsim.Shear object, use the applyShear() method, and separately use the applyMagnification method(), or (b) use the applyLensing() method that simultaneously magnifies and shears. </p>
+<p>Since we have defined a galsim.Shear as a transformation that preserves area, this means that it is not a precise description of what happens during the process of weak lensing. The coordinate transformation that occurs during the actual weak lensing process is such that if a galaxy is sheared by some (gamma_1, gamma_2), and then sheared by (-gamma_1, -gamma_2), it will in the end return to its original shape, but will have changed in area due to the magnification, mu = 1/((1.-kappa)**2 - (gamma_1**2 + gamma_2**2)), which is not equal to one for non-zero shear even for convergence kappa=0. Application of a galsim.Shear using the GSObject.shear method does not include this area change. To properly incorporate the effective change in area due to shear, it is necessary to either (a) define the galsim.Shear object, use the shear() method, and separately use the magnify() method, or (b) use the lens() method that simultaneously magnifies and shears. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a037b18bb46426158e610257a588ab49b"></a>
 <div class="memitem">
@@ -715,6 +721,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Discouraged method that will be deprecated eventually. </p>
+
 </div>
 </div>
 <a class="anchor" id="af27ce5bace356e95514ea49038feb42c"></a>
@@ -746,6 +754,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Discouraged method that will be deprecated eventually. </p>
 
 </div>
 </div>
@@ -779,6 +789,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Discouraged method that will be deprecated eventually. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac3bac7b778db53c1b62dada6eeb6901e"></a>
@@ -811,6 +823,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Discouraged method that will be deprecated eventually. </p>
+
 </div>
 </div>
 <a class="anchor" id="a586fcf374e23b8ae98e59ba7ab2cd563"></a>
@@ -842,6 +856,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Discouraged method that will be deprecated eventually. </p>
 
 </div>
 </div>

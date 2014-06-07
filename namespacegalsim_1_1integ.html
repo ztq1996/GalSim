@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -222,11 +223,12 @@ Variables</h2></td></tr>
     <tr><td class="paramname">func</td><td>The function to be integrated. y = func(x) should be valid. </td></tr>
     <tr><td class="paramname">min</td><td>The lower end of the integration bounds (anything &lt; -1.e10 is treated as negative infinity). </td></tr>
     <tr><td class="paramname">max</td><td>The upper end of the integration bounds (anything &gt; 1.e10 is treated as positive infinity). </td></tr>
-    <tr><td class="paramname">rel_err</td><td>The desired relative error (default <code>rel_err = 1.e-6</code>) </td></tr>
-    <tr><td class="paramname">abs_err</td><td>The desired absolute error (default <code>abs_err = 1.e-12</code>) </td></tr>
+    <tr><td class="paramname">rel_err</td><td>The desired relative error [default: 1.e-6] </td></tr>
+    <tr><td class="paramname">abs_err</td><td>The desired absolute error [default: 1.e-12]</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>the value of the integral. </dd></dl>
 
 </div>
 </div>
@@ -720,11 +722,11 @@ template&lt;class TF &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fvals</td><td>Samples of the integrand </td></tr>
-    <tr><td class="paramname">x</td><td>Locations at which the integrand was sampled. </td></tr>
+    <tr><td class="paramname">x</td><td>Locations at which the integrand was sampled.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Midpoint rule approximation of the integral. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>midpoint rule approximation of the integral. </dd></dl>
 
 </div>
 </div>

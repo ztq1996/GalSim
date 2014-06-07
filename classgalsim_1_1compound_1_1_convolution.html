@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -121,20 +122,28 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for convolving 2 or more GSObjects. </p>
-<p>The objects to be convolved may be provided either as multiple unnamed arguments (e.g. <code>Convolve(psf, gal, pix)</code>) or as a list (e.g. <code>Convolve([psf, gal, pix])</code>). Any number of objects may be provided using either syntax. (Even 0 or 1, although that doesn't really make much sense.)</p>
 <p>The convolution will normally be done using discrete Fourier transforms of each of the component profiles, multiplying them together, and then transforming back to real space.</p>
 <p>There is also an option to do the convolution as integrals in real space. To do this, use the optional keyword argument <code>real_space = True</code>. Currently, the real-space integration is only enabled for convolving 2 profiles. (Aside from the trivial implementaion for 1 profile.) If you try to use it for more than 2 profiles, an exception will be raised.</p>
 <p>The real-space convolution is normally slower than the DFT convolution. The exception is if both component profiles have hard edges, e.g. a truncated Moffat or Sersic with a Pixel. In that case, the highest frequency <code>maxK</code> for each component is quite large since the ringing dies off fairly slowly. So it can be quicker to use real-space convolution instead. Also, real-space convolution tends to be more accurate in this case as well.</p>
 <p>If you do not specify either <code>real_space = True</code> or <code>False</code> explicitly, then we check if there are 2 profiles, both of which have hard edges. In this case, we automatically use real-space convolution. In all other cases, the default is not to use real-space convolution.</p>
-<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option. Note: if gsparams is unspecified (or None), then the Convolve instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the first item in the list. Also, note that parameters related to the Fourier-space calculations must be set when initializing the individual GSObjects that go into the Convolve, NOT when creating the Convolve (at which point the accuracy and threshold parameters will simply be ignored).</p>
+<h2>Initialization </h2>
+<p>The normal way to use this class is to use the <code>Convolve</code> factory function: </p>
+<pre class="fragment">&gt;&gt;&gt; gal = galsim.Sersic(n, half_light_radius)
+&gt;&gt;&gt; psf = galsim.Gaussian(sigma)
+&gt;&gt;&gt; pix = galsim.Pixel(scale)
+&gt;&gt;&gt; final = galsim.Convolve([gal, psf, pix])
+</pre><p>The objects to be convolved may be provided either as multiple unnamed arguments (e.g. <code>Convolve(psf, gal, pix)</code>) or as a list (e.g. <code>Convolve([psf, gal, pix])</code>). Any number of objects may be provided using either syntax. (Well, the list has to include at least 1 item.)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>Unnamed args should be a list of objects to convolve. </td></tr>
-    <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. Default is to automatically select this according to whether the object has hard edges. </td></tr>
-    <tr><td class="paramname">gsparams</td><td>Optional gsparams argument. </td></tr>
+    <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. [default: None, which means to automatically decide this according to whether the objects have hard edges.] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
+<p>Note: if gsparams is unspecified (or None), then the <a class="el" href="classgalsim_1_1compound_1_1_convolution.html" title="A class for convolving 2 or more GSObjects. ">Convolution</a> instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the first item in the list. Also, note that parameters related to the Fourier- space calculations must be set when initializing the individual GSObjects that go into the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a>, NOT when creating the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a> (at which point the accuracy and threshold parameters will simply be ignored).</p>
+<h2>Methods </h2>
+<p>There are no additional methods for <a class="el" href="classgalsim_1_1compound_1_1_convolution.html" title="A class for convolving 2 or more GSObjects. ">Convolution</a> beyond the usual GSObject methods. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a94426002b9677a441a803cb8b3e64099"></a>
 <div class="memitem">

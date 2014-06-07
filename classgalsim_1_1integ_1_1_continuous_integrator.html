@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -133,10 +134,10 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Create a chromatic surface brightness profile integrator, which will integrate over wavelength using a <code>galsim.Bandpass</code> as a weight function. </p>
 <p>This integrator will evaluate the integrand only at the wavelengths in <code>bandpass.wave_list</code>. See <code><a class="el" href="classgalsim_1_1integ_1_1_continuous_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">ContinuousIntegrator</a></code> for an integrator that evaluates the integrand at a given number of points equally spaced apart.</p>
-<p><b>init</b> parameters:  rule What integration rule to apply to the wavelength and monochromatic surface brightness samples. Options include: <a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a> &ndash; Use the midpoint integration rule numpy.trapz &ndash; Use the trapezoidal integration rule  N Number of equally-wavelength-spaced monochromatic surface brightness samples to evaluate. (default: 250) </p>
+<p><b>init</b> parameters:  rule What integration rule to apply to the wavelength and monochromatic surface brightness samples. Options include: <a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a> &ndash; Use the midpoint integration rule numpy.trapz &ndash; Use the trapezoidal integration rule  N Number of equally-wavelength-spaced monochromatic surface brightness samples to evaluate. [default: 250] </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">use_endpoints</td><td>Whether to sample the endpoints <code>bandpass.blue_limit</code> and <code>bandpass.red_limit</code>. This should probably be True for a rule like numpy.trapz, which explicitly samples the integration limits. For a rule like the midpoint rule, however, the integration limits are not generally sampled, (only the midpoint between each integration limit and its nearest interior point is sampled), thus <code>use_endpoints</code> should be set to False in this case. (default: True)</td></tr>
+    <tr><td class="paramname">use_endpoints</td><td>Whether to sample the endpoints <code>bandpass.blue_limit</code> and <code>bandpass.red_limit</code>. This should probably be True for a rule like numpy.trapz, which explicitly samples the integration limits. For a rule like the midpoint rule, however, the integration limits are not generally sampled, (only the midpoint between each integration limit and its nearest interior point is sampled), thus <code>use_endpoints</code> should be set to False in this case. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
@@ -144,16 +145,16 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">evaluateAtWavelength</td><td>Function that returns a monochromatic surface brightness profile as a function of wavelength. </td></tr>
-    <tr><td class="paramname">bandpass</td><td>galsim.Bandpass object representing the filter being imaged through. </td></tr>
-    <tr><td class="paramname">image</td><td>galsim.Image used to set size and scale of output </td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing the filter being imaged through. </td></tr>
+    <tr><td class="paramname">image</td><td>An Image used to set size and scale of output </td></tr>
     <tr><td class="paramname">gain</td><td>See GSObject.draw() </td></tr>
     <tr><td class="paramname">wmult</td><td>See GSObject.draw() </td></tr>
     <tr><td class="paramname">use_true_center</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">offset</td><td>See GSObject.draw() </td></tr>
+    <tr><td class="paramname">offset</td><td>See GSObject.draw()</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>result of integral as a galsim.Image </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the result of integral as a galsim.Image </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a41dec16d13d3f6317a5e26916861404c"></a>
 <div class="memitem">

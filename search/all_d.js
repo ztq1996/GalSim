@@ -2,6 +2,7 @@ var searchData=
 [
   ['m',['M',['../classgalsim_1_1nfw__halo_1_1_n_f_w_halo.html#aa1005d380e665732b4651e19624cca6f',1,'galsim::nfw_halo::NFWHalo']]],
   ['mag',['mag',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a89d18fef6798d13ad3ed95a900c4b122',1,'galsim::real::RealGalaxyCatalog']]],
+  ['magnify',['magnify',['../classgalsim_1_1base_1_1_g_s_object.html#aac64da7ce1c4165ba048300fede29943',1,'galsim.base.GSObject.magnify()'],['../classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769',1,'galsim.chromatic.ChromaticObject.magnify()'],['../classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8455addeb6443a44fd2db716cdbda8cf',1,'galsim.correlatednoise._BaseCorrelatedNoise.magnify()']]],
   ['makeexpanded',['makeExpanded',['../classgalsim_1_1_bounds.html#a80c8e9b7badfdce8f184005ff184bc50',1,'galsim::Bounds']]],
   ['makeshifted',['makeShifted',['../classgalsim_1_1_bounds.html#a8fa947583964fdf8eeed44146bf9d149',1,'galsim::Bounds::makeShifted(const T dx, const T dy) const '],['../classgalsim_1_1_bounds.html#af14851fa323a15b86dc2b891b249dca0',1,'galsim::Bounds::makeShifted(const Position&lt; T &gt; &amp;delta) const ']]],
   ['makeskyimage',['makeSkyImage',['../classgalsim_1_1wcs_1_1_base_w_c_s.html#ad43f8879742ae443fc127f9a5d5bdfc6',1,'galsim::wcs::BaseWCS']]],
@@ -22,6 +23,7 @@ var searchData=
   ['maxlinearscale',['maxLinearScale',['../classgalsim_1_1wcs_1_1_base_w_c_s.html#ab97917ebf3d82a87efdee368b02d2f7f',1,'galsim::wcs::BaseWCS']]],
   ['meas_5ftype',['meas_type',['../structgalsim_1_1hsm_1_1_object_data.html#a9914f47c6c8a9aea60780fc63e2df2cb',1,'galsim::hsm::ObjectData::meas_type()'],['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#a3d5c806d1a095671dd73f8e6505b8e1a',1,'galsim::hsm::CppShapeData::meas_type()'],['../classgalsim_1_1hsm_1_1_shape_data.html#a8e0e29c9926a0429a3b4e3e6a0849cba',1,'galsim::hsm.ShapeData.meas_type()']]],
   ['merge',['merge',['../classgalsim_1_1utilities_1_1_attribute_dict.html#a8dc3a0eb0cb414c3d96567273510b6be',1,'galsim::utilities::AttributeDict']]],
+  ['metaimage',['MetaImage',['../classgalsim_1_1image_1_1_meta_image.html',1,'galsim::image']]],
   ['method',['Method',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045',1,'galsim']]],
   ['micron',['Micron',['../_astronomical_constants_8h.html#a62e1c874d2cf1a788c5fbb046a6cac28',1,'AstronomicalConstants.h']]],
   ['midpt',['midpt',['../namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93',1,'galsim::integ']]],
@@ -43,6 +45,6 @@ var searchData=
   ['mtf',['mtf',['../namespacegalsim_1_1optics.html#ad884b16b42ed977b21e0f90cc9102898',1,'galsim::optics']]],
   ['mtf_5fimage',['mtf_image',['../namespacegalsim_1_1optics.html#a1d08038b20fafcdb94f130fdb25cade4',1,'galsim::optics']]],
   ['multiexposureobject',['MultiExposureObject',['../classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html',1,'galsim::des::des_meds']]],
-  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html',1,'galsim']]],
-  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#ac79b36e2cb2595f9fafa40e0fa4107d4',1,'galsim::MultipleImageHelper::MultipleImageHelper(const std::vector&lt; boost::shared_ptr&lt; BaseImage&lt; T &gt; &gt; &gt; &amp;images, double pad_factor)'],['../classgalsim_1_1_multiple_image_helper.html#ab9674b7eab1510834d2f12ff63c917ac',1,'galsim::MultipleImageHelper::MultipleImageHelper(const BaseImage&lt; T &gt; &amp;image, double pad_factor)'],['../classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894',1,'galsim::MultipleImageHelper::MultipleImageHelper(const MultipleImageHelper &amp;rhs)']]]
+  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html#ac79b36e2cb2595f9fafa40e0fa4107d4',1,'galsim::MultipleImageHelper::MultipleImageHelper(const std::vector&lt; boost::shared_ptr&lt; BaseImage&lt; T &gt; &gt; &gt; &amp;images, double pad_factor)'],['../classgalsim_1_1_multiple_image_helper.html#ab9674b7eab1510834d2f12ff63c917ac',1,'galsim::MultipleImageHelper::MultipleImageHelper(const BaseImage&lt; T &gt; &amp;image, double pad_factor)'],['../classgalsim_1_1_multiple_image_helper.html#a7a93234c8f79236c29beac4b504a0894',1,'galsim::MultipleImageHelper::MultipleImageHelper(const MultipleImageHelper &amp;rhs)']]],
+  ['multipleimagehelper',['MultipleImageHelper',['../classgalsim_1_1_multiple_image_helper.html',1,'galsim']]]
 ];
