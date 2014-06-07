@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -171,25 +171,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>use_true_center</em> = <code>True</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>offset</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>drawImageKwargs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -198,6 +180,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evaluateAtWavelength</td><td>Function that returns a monochromatic surface brightness profile as a function of wavelength. </td></tr>
+    <tr><td class="paramname">bandpass</td><td>Bandpass object representing the filter being imaged through. </td></tr>
+    <tr><td class="paramname">image</td><td>Image used to set size and scale of output </td></tr>
+    <tr><td class="paramname">drawImageKwargs</td><td>dict with other kwargs to send to drawImage function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the result of integral as an Image </dd></dl>
 
 </div>
 </div>

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -160,22 +160,22 @@ the image part of the FITS file, it gives you access to the header information.
 
 After construction, you can access a header value by
 
-    value = fits_header[key]
+    &gt;&gt;&gt; value = fits_header[key]
 
 or write to it with
 
-    fits_header[key] = value                # If you just want to set a value.
-    fits_header[key] = (value, comment)     # If you want to include a comment field.
+    &gt;&gt;&gt; fits_header[key] = value                # If you just want to set a value.
+    &gt;&gt;&gt; fits_header[key] = (value, comment)     # If you want to include a comment field.
 
 In fact, most of the normal functions available for a dict are available:
 
-    keys = fits_header.keys()
-    items = fits_header.items()
-    for key in fits_header:
-        value = fits_header[key]
-    value = fits_header.get(key, default)
-    del fits_header[key]
-    etc.
+    &gt;&gt;&gt; keys = fits_header.keys()
+    &gt;&gt;&gt; items = fits_header.items()
+    &gt;&gt;&gt; for key in fits_header:
+    &gt;&gt;&gt;     value = fits_header[key]
+    &gt;&gt;&gt; value = fits_header.get(key, default)
+    &gt;&gt;&gt; del fits_header[key]
+    &gt;&gt;&gt; etc.
 
 This is a particularly useful abstraction, since pyfits has changed its syntax for how 
 to write to a fits header, so this class will work regardless of which version of pyfits
@@ -190,7 +190,7 @@ Constructor parameters:
                     read functions.]
 @param file_name    The name of the file to read in.  [One of `file_name`, `hdu_list` or 
                     `header` is required.]
-@param dir          Optionally a directory name can be provided if the file_name does not 
+@param dir          Optionally a directory name can be provided if `file_name` does not 
                     already include it. [default: None]
 @param hdu_list     Either a `pyfits.HDUList`, a `pyfits.PrimaryHDU`, or `pyfits.ImageHDU`.
                     In the former case, the `hdu` in the list will be selected.  In the latter
@@ -209,7 +209,7 @@ Constructor parameters:
                     - 'hcompress' = use hcompress decompression in tiles
                     - 'plio' = use plio decompression in tiles
                     - 'auto' = determine the decompression from the extension of the file name
-                               (requires file_name to be given).  
+                               (requires `file_name` to be given).  
                                '*.fz' =&gt; 'rice'
                                '*.gz' =&gt; 'gzip'
                                '*.bz2' =&gt; 'bzip2'

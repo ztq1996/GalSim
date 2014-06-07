@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -116,13 +116,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6cb360f08f37aec7dd188ba5e2739c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#ae6cb360f08f37aec7dd188ba5e2739c7">__init__</a></td></tr>
 <tr class="separator:ae6cb360f08f37aec7dd188ba5e2739c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b022fdf9d7f7b1ce423dc1548064e3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#aa1b022fdf9d7f7b1ce423dc1548064e3">evaluateAtWavelength</a></td></tr>
-<tr class="memdesc:aa1b022fdf9d7f7b1ce423dc1548064e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate this chromatic object at a particular wavelength.  <a href="#aa1b022fdf9d7f7b1ce423dc1548064e3">More...</a><br/></td></tr>
+<tr class="memdesc:aa1b022fdf9d7f7b1ce423dc1548064e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate this chromatic object at a particular wavelength <code>wave</code>.  <a href="#aa1b022fdf9d7f7b1ce423dc1548064e3">More...</a><br/></td></tr>
 <tr class="separator:aa1b022fdf9d7f7b1ce423dc1548064e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e738204eca03902dacb4f2b9b0ae290"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#a3e738204eca03902dacb4f2b9b0ae290">withScaledFlux</a></td></tr>
-<tr class="memdesc:a3e738204eca03902dacb4f2b9b0ae290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux of the object by flux_ratio.  <a href="#a3e738204eca03902dacb4f2b9b0ae290">More...</a><br/></td></tr>
+<tr class="memdesc:a3e738204eca03902dacb4f2b9b0ae290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the flux of the object by <code>flux_ratio</code>.  <a href="#a3e738204eca03902dacb4f2b9b0ae290">More...</a><br/></td></tr>
 <tr class="separator:a3e738204eca03902dacb4f2b9b0ae290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4228098295ee04e4f491567a9ce3b28f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a4228098295ee04e4f491567a9ce3b28f">drawImage</a></td></tr>
+<tr class="memdesc:a4228098295ee04e4f491567a9ce3b28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base implementation for drawing an image of a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a>.  <a href="#a4228098295ee04e4f491567a9ce3b28f">More...</a><br/></td></tr>
+<tr class="separator:a4228098295ee04e4f491567a9ce3b28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af50ec3e3ea71090fb7a7b7c5633a7903"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af50ec3e3ea71090fb7a7b7c5633a7903">draw</a></td></tr>
-<tr class="memdesc:af50ec3e3ea71090fb7a7b7c5633a7903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base chromatic image draw method.  <a href="#af50ec3e3ea71090fb7a7b7c5633a7903">More...</a><br/></td></tr>
+<tr class="memdesc:af50ec3e3ea71090fb7a7b7c5633a7903"><td class="mdescLeft">&#160;</td><td class="mdescRight">An obsolete synonym for obj.drawImage(method='no_pixel')  <a href="#af50ec3e3ea71090fb7a7b7c5633a7903">More...</a><br/></td></tr>
 <tr class="separator:af50ec3e3ea71090fb7a7b7c5633a7903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c2743c7188ca54731189c773354c350"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a3c2743c7188ca54731189c773354c350">__mul__</a></td></tr>
 <tr class="memdesc:a3c2743c7188ca54731189c773354c350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the flux of the object by the given flux ratio.  <a href="#a3c2743c7188ca54731189c773354c350">More...</a><br/></td></tr>
@@ -141,22 +144,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abcf13fcbc0cbe5494caa38db00296748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of an object.  <a href="#abcf13fcbc0cbe5494caa38db00296748">More...</a><br/></td></tr>
 <tr class="separator:abcf13fcbc0cbe5494caa38db00296748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af943881ba68128016a022848f884804f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f">expand</a></td></tr>
-<tr class="memdesc:af943881ba68128016a022848f884804f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor, while preserving surface brightness.  <a href="#af943881ba68128016a022848f884804f">More...</a><br/></td></tr>
+<tr class="memdesc:af943881ba68128016a022848f884804f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor <code>scale</code>, while preserving surface brightness.  <a href="#af943881ba68128016a022848f884804f">More...</a><br/></td></tr>
 <tr class="separator:af943881ba68128016a022848f884804f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb05a4f0dadc3c7cbc361ec97984e6f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1">dilate</a></td></tr>
-<tr class="memdesc:adb05a4f0dadc3c7cbc361ec97984e6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale, while preserving flux.  <a href="#adb05a4f0dadc3c7cbc361ec97984e6f1">More...</a><br/></td></tr>
+<tr class="memdesc:adb05a4f0dadc3c7cbc361ec97984e6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dilate the linear size of the profile by the given (possibly wavelength-dependent) <code>scale</code>, while preserving flux.  <a href="#adb05a4f0dadc3c7cbc361ec97984e6f1">More...</a><br/></td></tr>
 <tr class="separator:adb05a4f0dadc3c7cbc361ec97984e6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d0397a02c32de2efb6999d5dc212769"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769">magnify</a></td></tr>
-<tr class="memdesc:a2d0397a02c32de2efb6999d5dc212769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness.  <a href="#a2d0397a02c32de2efb6999d5dc212769">More...</a><br/></td></tr>
+<tr class="memdesc:a2d0397a02c32de2efb6999d5dc212769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a lensing magnification, scaling the area and flux by <code>mu</code> at fixed surface brightness.  <a href="#a2d0397a02c32de2efb6999d5dc212769">More...</a><br/></td></tr>
 <tr class="separator:a2d0397a02c32de2efb6999d5dc212769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1fa7a70a490d59f20ba1cac3d24a00d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d">shear</a></td></tr>
-<tr class="memdesc:ad1fa7a70a490d59f20ba1cac3d24a00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an area-preserving shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one.  <a href="#ad1fa7a70a490d59f20ba1cac3d24a00d">More...</a><br/></td></tr>
+<tr class="memdesc:ad1fa7a70a490d59f20ba1cac3d24a00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an area-preserving shear to this object, where arguments are either a Shear, or arguments that will be used to initialize one.  <a href="#ad1fa7a70a490d59f20ba1cac3d24a00d">More...</a><br/></td></tr>
 <tr class="separator:ad1fa7a70a490d59f20ba1cac3d24a00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab63bfdb4d42677761f5c8ee080bea761"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab63bfdb4d42677761f5c8ee080bea761">lens</a></td></tr>
 <tr class="memdesc:ab63bfdb4d42677761f5c8ee080bea761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a lensing shear and magnification to this object.  <a href="#ab63bfdb4d42677761f5c8ee080bea761">More...</a><br/></td></tr>
 <tr class="separator:ab63bfdb4d42677761f5c8ee080bea761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a358b2a6ec77a2266c1211416dddca734"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a358b2a6ec77a2266c1211416dddca734">rotate</a></td></tr>
-<tr class="memdesc:a358b2a6ec77a2266c1211416dddca734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate this object by an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> theta.  <a href="#a358b2a6ec77a2266c1211416dddca734">More...</a><br/></td></tr>
+<tr class="memdesc:a358b2a6ec77a2266c1211416dddca734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate this object by an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> <code>theta</code>.  <a href="#a358b2a6ec77a2266c1211416dddca734">More...</a><br/></td></tr>
 <tr class="separator:a358b2a6ec77a2266c1211416dddca734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14c9efe36d2fd70f11f3a146fb01f206"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a14c9efe36d2fd70f11f3a146fb01f206">transform</a></td></tr>
 <tr class="memdesc:a14c9efe36d2fd70f11f3a146fb01f206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a transformation to this object defined by an arbitrary Jacobian matrix.  <a href="#a14c9efe36d2fd70f11f3a146fb01f206">More...</a><br/></td></tr>
@@ -186,7 +189,7 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">obj</td><td>The object to be convolved with itself. </td></tr>
     <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. [default: None, which means to automatically decide this according to whether the objects have hard edges.] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -498,9 +501,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale, while preserving flux. </p>
+<p>Dilate the linear size of the profile by the given (possibly wavelength-dependent) <code>scale</code>, while preserving flux. </p>
 <p>e.g. <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * scale</code></p>
-<p>See <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a> and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a> for versions that preserve surface brightness, and thus change the flux.</p>
+<p>See <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a> and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a> for versions that preserve surface brightness, and thus change the flux.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scale</td><td>The linear rescaling factor to apply. <code>scale</code> may be callable, in which case the argument should be wavelength in nanometers and the return value the scale for that wavelength.</td></tr>
@@ -528,67 +531,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>bandpass</em>, </td>
+          <td class="paramname"><em>args</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>scale</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wcs</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>gain</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>normalization</em> = <code>&quot;flux&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>add_to_image</em> = <code>False</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>use_true_center</em> = <code>True</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>offset</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>integrator</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -603,29 +552,77 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Base chromatic image draw method. </p>
-<p>Some subclasses may choose to override this for specific efficiency gains. For instance, most GalSim use cases will probably finish with a convolution, in which case <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_convolution.html#a583418f09434ee93e7829f10d59415de" title="Optimized draw method for ChromaticConvolution. ">ChromaticConvolution.draw()</a> will be used.</p>
-<p>The task of ChromaticObject.draw(bandpass) is to integrate a chromatic surface brightness profile multiplied by the throughput of <code>bandpass</code>, over the wavelength interval indicated by <code>bandpass</code>.</p>
-<p>Several integrators are available in <a class="el" href="namespacegalsim_1_1integ.html">galsim.integ</a> to do this integration. By default, <a class="el" href="classgalsim_1_1integ_1_1_sample_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">galsim.integ.SampleIntegrator</a>(rule=numpy.trapz) will be used if either <code>bandpass.wave_list</code> or <code>self.wave_list</code> have len() &gt; 0. If lengths of both <code>wave_list</code>s is zero, which may happen if both the bandpass throughput and the SED associated with <code>self</code> are analytic python functions, for example, then <a class="el" href="classgalsim_1_1integ_1_1_continuous_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">galsim.integ.ContinuousIntegrator</a>(rule=numpy.trapz) will be used instead. This latter case by default will evaluate the integrand at 250 equally-spaced wavelengths between <code>bandpass.blue_limit</code> and <code>bandpass.red_limit</code>.</p>
-<p>By default, the above two integrators will use the trapezoidal rule for integration. The midpoint rule for integration can be specified instead by passing an integrator that has been initialized with the <code>rule=<a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a></code> argument. Finally, when creating a ContinuousIntegrator, the number of samples <code>N</code> is also an argument. For example:</p>
-<p>&gt;&gt;&gt; integrator = galsim.ContinuousIntegrator(rule=<a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a>, N=100) &gt;&gt;&gt; image = chromatic_obj.draw(bandpass, integrator=integrator)</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>An obsolete synonym for obj.drawImage(method='no_pixel') </p>
+
+</div>
+</div>
+<a class="anchor" id="a4228098295ee04e4f491567a9ce3b28f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.chromatic.ChromaticObject.drawImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bandpass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>integrator</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Base implementation for drawing an image of a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a>. </p>
+<p>Some subclasses may choose to override this for specific efficiency gains. For instance, most GalSim use cases will probably finish with a convolution, in which case <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_convolution.html#ad1aca5f9bee61d5c48dee7dd37bc5bcf" title="Optimized draw method for the ChromaticConvolution class. ">ChromaticConvolution.drawImage()</a> will be used.</p>
+<p>The task of <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a4228098295ee04e4f491567a9ce3b28f" title="Base implementation for drawing an image of a ChromaticObject. ">drawImage()</a> in a chromatic context is to integrate a chromatic surface brightness profile multiplied by the throughput of <code>bandpass</code>, over the wavelength interval indicated by <code>bandpass</code>.</p>
+<p>Several integrators are available in <a class="el" href="namespacegalsim_1_1integ.html">galsim.integ</a> to do this integration. By default, <code><a class="el" href="classgalsim_1_1integ_1_1_sample_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">galsim.integ.SampleIntegrator</a>(rule=numpy.trapz)</code> will be used if either <code>bandpass.wave_list</code> or <code>self.wave_list</code> have len() &gt; 0. If lengths of both are zero, which may happen if both the bandpass throughput and the SED associated with <code>self</code> are analytic python functions, for example, then <code><a class="el" href="classgalsim_1_1integ_1_1_continuous_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">galsim.integ.ContinuousIntegrator</a>(rule=numpy.trapz)</code> will be used instead. This latter case by default will evaluate the integrand at 250 equally-spaced wavelengths between <code>bandpass.blue_limit</code> and <code>bandpass.red_limit</code>.</p>
+<p>By default, the above two integrators will use the trapezoidal rule for integration. The midpoint rule for integration can be specified instead by passing an integrator that has been initialized with the <code>rule=<a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a></code> argument. Finally, when creating a ContinuousIntegrator, the number of samples <code>N</code> is also an argument. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; integrator = galsim.ContinuousIntegrator(rule=galsim.integ.midpt, N=100)
+&gt;&gt;&gt; image = chromatic_obj.drawImage(bandpass, integrator=integrator)
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object representing the filter against which to integrate. </td></tr>
-    <tr><td class="paramname">image</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">scale</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">wcs</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">gain</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">wmult</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">normalization</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">add_to_image</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">use_true_center</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">offset</td><td>See GSObject.draw() </td></tr>
-    <tr><td class="paramname">integrator</td><td>One of the image integrators from <a class="el" href="namespacegalsim_1_1integ.html">galsim.integ</a> [default: None, which will try to select an appropriate integrator automatically.]</td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing the filter against which to integrate. </td></tr>
+    <tr><td class="paramname">image</td><td>Optionally, the Image to draw onto. (See GSObject.drawImage() for details.) [default: None] </td></tr>
+    <tr><td class="paramname">integrator</td><td>One of the image integrators from <a class="el" href="namespacegalsim_1_1integ.html">galsim.integ</a> [default: None, which will try to select an appropriate integrator automatically.] </td></tr>
+    <tr><td class="paramname">**kwargs</td><td>For all other kwarg options, see GSObject.drawImage()</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the drawn image. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the drawn Image. </dd></dl>
 
 </div>
 </div>
@@ -653,7 +650,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Evaluate this chromatic object at a particular wavelength. </p>
+<p>Evaluate this chromatic object at a particular wavelength <code>wave</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wave</td><td>Wavelength in nanometers.</td></tr>
@@ -696,7 +693,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor, while preserving surface brightness. </p>
+<p>Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor <code>scale</code>, while preserving surface brightness. </p>
 <p>This doesn't correspond to either of the normal operations one would typically want to do to a galaxy. The functions <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a> and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a> are the more typical usage. But this function is conceptually simple. It rescales the linear dimension of the profile, while preserving surface brightness. As a result, the flux will necessarily change as well.</p>
 <p>See <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a> for a version that applies a linear scale factor while preserving flux.</p>
 <p>See <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a> for a version that applies a scale factor to the area while preserving surface brightness.</p>
@@ -755,8 +752,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a lensing shear and magnification to this object. </p>
-<p>This <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a> method applies a lensing (reduced) shear and magnification. The shear must be specified using the g1, g2 definition of shear (see galsim.Shear documentation for more details). This is the same definition as the outputs of the galsim.PowerSpectrum and galsim.NFWHalo classes, which compute shears according to some lensing power spectrum or lensing by an NFW dark matter halo. The magnification determines the rescaling factor for the object area and flux, preserving surface brightness.</p>
-<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!) If you find a use case for this, however, please submit an issue to </p>
+<p>This <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a> method applies a lensing (reduced) shear and magnification. The shear must be specified using the g1, g2 definition of shear (see Shear documentation for more details). This is the same definition as the outputs of the PowerSpectrum and NFWHalo classes, which compute shears according to some lensing power spectrum or lensing by an NFW dark matter halo. The magnification determines the rescaling factor for the object area and flux, preserving surface brightness.</p>
+<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!). If you find a use case for this, however, please submit an issue to </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/issues
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -802,9 +799,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. </p>
-<p>This process applies a lensing magnification mu, which scales the linear dimensions of the image by the factor sqrt(mu), i.e., <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * sqrt(mu)</code> while increasing the flux by a factor of mu. Thus, magnify preserves surface brightness.</p>
-<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!) If you find a use case for this, however, please submit an issue to </p>
+<p>Apply a lensing magnification, scaling the area and flux by <code>mu</code> at fixed surface brightness. </p>
+<p>This process applies a lensing magnification <code>mu</code>, which scales the linear dimensions of the image by the factor sqrt(mu), i.e., <code>half_light_radius</code> &lt;&ndash; <code>half_light_radius * sqrt(mu)</code> while increasing the flux by a factor of <code>mu</code>. Thus, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a> preserves surface brightness.</p>
+<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!). If you find a use case for this, however, please submit an issue to </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/issues
 </pre><p>See <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a> for a version that applies a linear scale factor while preserving flux.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -849,8 +846,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rotate this object by an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> theta. </p>
-<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument. If you find a use case for this, however, please submit an issue to </p>
+<p>Rotate this object by an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> <code>theta</code>. </p>
+<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument. If you find a use case for this, however, please submit an issue to </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/issues
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -900,14 +897,14 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Apply an area-preserving shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one. </p>
-<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!) If you find a use case for this, however, please submit an issue to </p>
+<p>Apply an area-preserving shear to this object, where arguments are either a Shear, or arguments that will be used to initialize one. </p>
+<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument (lensing is achromatic, after all!). If you find a use case for this, however, please submit an issue to </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/issues
-</pre><p>For more details about the allowed keyword arguments, see the documentation for galsim.Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways. ">galsim.shear.Shear</a>).</p>
-<p>The <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d" title="Apply an area-preserving shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one. ">shear()</a> method precisely preserves the area. To include a lensing distortion with the appropriate change in area, either use <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d" title="Apply an area-preserving shear to this object, where arguments are either a galsim.Shear, or arguments that will be used to initialize one. ">shear()</a> with <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a>, or use <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab63bfdb4d42677761f5c8ee080bea761" title="Apply a lensing shear and magnification to this object. ">lens()</a>, which combines both operations.</p>
+</pre><p>For more details about the allowed keyword arguments, see the documentation for Shear (for doxygen documentation, see <a class="el" href="classgalsim_1_1shear_1_1_shear.html" title="A class to represent shears in a variety of ways. ">galsim.shear.Shear</a>).</p>
+<p>The <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d" title="Apply an area-preserving shear to this object, where arguments are either a Shear, or arguments that will be used to initialize one. ">shear()</a> method precisely preserves the area. To include a lensing distortion with the appropriate change in area, either use <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ad1fa7a70a490d59f20ba1cac3d24a00d" title="Apply an area-preserving shear to this object, where arguments are either a Shear, or arguments that will be used to initialize one. ">shear()</a> with <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a2d0397a02c32de2efb6999d5dc212769" title="Apply a lensing magnification, scaling the area and flux by mu at fixed surface brightness. ">magnify()</a>, or use <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab63bfdb4d42677761f5c8ee080bea761" title="Apply a lensing shear and magnification to this object. ">lens()</a>, which combines both operations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shear</td><td>The shear to be applied. Or, as described above, you may instead supply parameters do construct a shear directly. eg. <code>obj.shear(g1=g1,g2=g2)</code>.</td></tr>
+    <tr><td class="paramname">shear</td><td>The shear to be applied. Or, as described above, you may instead supply parameters do construct a Shear directly. eg. <code>obj.shear(g1=g1,g2=g2)</code>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -954,8 +951,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. </p>
-<p>For a wavelength-independent shift, you may supply dx,dy as either two arguments, as a tuple, or as a galsim.PositionD or galsim.PositionI object.</p>
-<p>For a wavelength-dependent shift, you may supply two functions of wavelength in nanometers which will be interpretted as dx(wave) and dy(wave), or a single function of wavelength in nanometers that returns either a 2-tuple, galsim.PositionD, or galsim.PositionI.</p>
+<p>For a wavelength-independent shift, you may supply <code>dx,dy</code> as either two arguments, as a tuple, or as a PositionD or PositionI object.</p>
+<p>For a wavelength-dependent shift, you may supply two functions of wavelength in nanometers which will be interpreted as <code>dx(wave)</code> and <code>dy(wave)</code>, or a single function of wavelength in nanometers that returns either a 2-tuple, PositionD, or PositionI.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dx</td><td>Horizontal shift to apply (float or function). </td></tr>
@@ -1018,8 +1015,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Apply a transformation to this object defined by an arbitrary Jacobian matrix. </p>
-<p>This works the same as GSObject.transform, so see that method's docstring for more details.</p>
-<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument. If you find a use case for this, however, please submit an issue to </p>
+<p>This works the same as GSObject.transform(), so see that method's docstring for more details.</p>
+<p>Note that, in contrast to <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#adb05a4f0dadc3c7cbc361ec97984e6f1" title="Dilate the linear size of the profile by the given (possibly wavelength-dependent) scale...">dilate()</a>, <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#af943881ba68128016a022848f884804f" title="Expand the linear size of the profile by the given (possibly wavelength-dependent) scale factor scale...">expand()</a>, and <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#ab266ee1207d60ba7a9fb6b32a4ef6ab2" title="Apply a (possibly wavelength-dependent) (dx, dy) shift to this chromatic object. ">shift()</a>, this method cannot accept a function of wavelength as its argument. If you find a use case for this, however, please submit an issue to </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/issues
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1058,7 +1055,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Multiply the flux of the object by flux_ratio. </p>
+<p>Multiply the flux of the object by <code>flux_ratio</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flux_ratio</td><td>The factor by which to scale the flux.</td></tr>

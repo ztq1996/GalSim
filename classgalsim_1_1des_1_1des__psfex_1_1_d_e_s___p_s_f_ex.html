@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -160,17 +160,17 @@ Public Attributes</h2></td></tr>
 <p>Note that while the interpolation is done in image coordinates, GalSim usually deals with object profiles in world coordinates. However, PSFEx does not consider the WCS of the image when building its bases. The bases are built in image coordinates. So there are two options to get GalSim to handle this difference.</p>
 <ol type="1">
 <li><p class="startli">Ignore the WCS of the original image. In this case, the *.psf files have all the information you need: </p>
-<pre class="fragment">des_psfex = galsim.des.DES_PSFEx(fitpsf_file_name)
-image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
-                                                  # NOT in arcsec on the sky!
-psf = des_psfex.getPSF(image_pos)      # profile is in image coordinates
+<pre class="fragment">&gt;&gt;&gt; des_psfex = galsim.des.DES_PSFEx(fitpsf_file_name)
+&gt;&gt;&gt; image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
+&gt;&gt;&gt;                                                   # NOT in arcsec on the sky!
+&gt;&gt;&gt; psf = des_psfex.getPSF(image_pos)      # profile is in image coordinates
 </pre><p class="startli">The psf profile that is returned will be in image coordinates. Therefore, it should be drawn onto an image with no wcs. (Or equivalently, one with <code>scale = 1</code>.) If you want to use this to convolve a galaxy profile, you would want to either project the galaxy (typically constructed in world coordinates) to the correct image coordinates or project the PSF up into world coordinates.</p>
 </li>
 <li><p class="startli">Build the PSF in world coordinates directly. The <a class="el" href="classgalsim_1_1des_1_1des__psfex_1_1_d_e_s___p_s_f_ex.html" title="Class that handles DES files describing interpolated principal component images of the PSF...">DES_PSFEx</a> constructor can take an extra argument, either <code>image_file_name</code> or <code>wcs</code>, to tell GalSim what WCS to use for the coversion between image and world coordinates. The former option is the name of the file from which to read the WCS, which will often be more convenient, but you can also just pass in a WCS object directly. </p>
-<pre class="fragment">des_psfex = galsim.des.DES_PSFEx(fitpsf_file_name, image_file_name)
-image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
-                                                  # NOT in arcsec on the sky!
-psf = des_psfex.getPSF(image_pos)      # profile is in world coordinates
+<pre class="fragment">&gt;&gt;&gt; des_psfex = galsim.des.DES_PSFEx(fitpsf_file_name, image_file_name)
+&gt;&gt;&gt; image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
+&gt;&gt;&gt;                                                   # NOT in arcsec on the sky!
+&gt;&gt;&gt; psf = des_psfex.getPSF(image_pos)      # profile is in world coordinates
 </pre><p class="startli">This time the psf profile that is returned will already be in world coordinates as GalSim normally expects, so you can use it in the normal ways. If you want to draw it (or a convolved object) onto an image with the original WCS at that location, you can use <code>des_psfex.getLocalWCS(image_pos)</code> for the local wcs at the location of the PSF.</p>
 </li>
 </ol>

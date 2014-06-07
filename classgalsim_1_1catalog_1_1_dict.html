@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -150,23 +150,23 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that reads a python dict from a file. </p>
-<p>After construction, it behaves like a regular python dict, with one exception. In order to facilitate getting values in a hierarchy of fields, we allow the '.' character to chain keys together for the get method. So, </p>
-<pre class="fragment">d.get('noise.properties.variance')
+<p>After construction, it behaves like a regular python dict, with one exception. In order to facilitate getting values in a hierarchy of fields, we allow the '.' character to chain keys together for the <a class="el" href="classgalsim_1_1catalog_1_1_dict.html#adb12de682e7d5a988e62e080a8a1295b">get()</a> method. So, </p>
+<pre class="fragment">&gt;&gt;&gt; d.get('noise.properties.variance')
 </pre><p>is expanded into </p>
-<pre class="fragment">d['noise']['properties']['variance'] 
+<pre class="fragment">&gt;&gt;&gt; d['noise']['properties']['variance'] 
 </pre><p>Furthermore, if a "key" is really an integer, then it is used as such, which accesses the corresponding element in a list. e.g. </p>
-<pre class="fragment">d.get('noise_models.2.variance')
+<pre class="fragment">&gt;&gt;&gt; d.get('noise_models.2.variance')
 </pre><p>is equivalent to </p>
-<pre class="fragment">d['noise_models'][2]['variance']
+<pre class="fragment">&gt;&gt;&gt; d['noise_models'][2]['variance']
 </pre><p>This makes it much easier to access arbitrary elements within parameter files.</p>
 <p>Caveat: The above prescription means that an element whose key really has a '.' in it won't be accessed correctly. This is probably a rare occurrence, but the workaround is to set <code>key_split</code> to a different character or string and use that to chain the keys.</p>
-<pre class="fragment"> @param file_name     Filename storing the dict. (Required)
- @param dir           Optionally a directory name can be provided if the file_name does not 
-                      already include it.
+<pre class="fragment"> @param file_name     Filename storing the dict.
+ @param dir           Optionally a directory name can be provided if `file_name` does not 
+                      already include it. [default: None]
  @param file_type     Options are 'Pickle', 'YAML', or 'JSON' or None.  If None, infer from 
-                      the file name extension ('.p*', '.y*', '.j*' respectively).
+                      `file_name` extension ('.p*', '.y*', '.j*' respectively).
                       [default: None]
- @param key_split     The character (or string) to use to split chained keys.  (c.f. the 
+ @param key_split     The character (or string) to use to split chained keys.  (cf. the 
                       description of this feature above.)  [default: '.']</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a86e4d20bdffe260e6a8c89029d521f48"></a>
 <div class="memitem">

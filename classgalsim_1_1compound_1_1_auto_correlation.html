@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classgalsim_1_1compound_1_1_auto_correlation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.compound.AutoCorrelation Class Reference</div>  </div>
@@ -113,19 +114,26 @@ Inheritance diagram for galsim.compound.AutoCorrelation:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aade257b463a0dddf1522c07073412d8e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_auto_correlation.html#aade257b463a0dddf1522c07073412d8e">__init__</a></td></tr>
 <tr class="separator:aade257b463a0dddf1522c07073412d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a7ba38174694cf79e70088e5149a28e9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_auto_correlation.html#a7ba38174694cf79e70088e5149a28e9d">real_space</a></td></tr>
+<tr class="separator:a7ba38174694cf79e70088e5149a28e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3ed903e2794415bd2fd4dbfd650734"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_auto_correlation.html#a0a3ed903e2794415bd2fd4dbfd650734">orig_obj</a></td></tr>
+<tr class="separator:a0a3ed903e2794415bd2fd4dbfd650734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A special class for correlating a GSObject with itself. </p>
 <p>It is equivalent in functionality to galsim.Convolve([obj,obj.createRotated(180.*galsim.degrees)]) but takes advantage of the fact that the two profiles are the same for some efficiency gains.</p>
-<p>This class is primarily targeted for use by the galsim.CorrelatedNoise models when convolving with a GSObject.</p>
+<p>This class is primarily targeted for use by the CorrelatedNoise models when convolving with a GSObject.</p>
 <h2>Initialization </h2>
-<p>The normal way to use this class is to use the <code>AutoCorrelate</code> factory function: </p>
+<p>The normal way to use this class is to use the <a class="el" href="namespacegalsim_1_1compound.html#a1ae9ed61c71a77efb3fa9865e0e0e43c" title="A function for autocorrelating either a GSObject or ChromaticObject. ">AutoCorrelate()</a> factory function: </p>
 <pre class="fragment">&gt;&gt;&gt; psf_sq = galsim.AutoCorrelate(psf)
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>The object to be convolved with itself. </td></tr>
     <tr><td class="paramname">real_space</td><td>Whether to use real space convolution. [default: None, which means to automatically decide this according to whether the object has hard edges.] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
@@ -164,6 +172,31 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0a3ed903e2794415bd2fd4dbfd650734"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.compound.AutoCorrelation.orig_obj</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ba38174694cf79e70088e5149a28e9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.compound.AutoCorrelation.real_space</td>
         </tr>
       </table>
 </div><div class="memdoc">

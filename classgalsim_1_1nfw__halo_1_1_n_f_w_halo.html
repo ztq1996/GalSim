@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -146,9 +146,9 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for NFW halos. </p>
-<p>Compute the lensing fields shear and convergence of a NFW halo of given mass, concentration, redshift, assuming <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a>. No mass-concentration relation is employed.</p>
+<p>Compute the lensing fields shear and convergence of a spherically symmetric NFW halo of given mass, concentration, redshift, assuming <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a>. No mass-concentration relation is employed.</p>
 <p>Based on Matthias Bartelmann's libastro.</p>
-<p>The cosmology to use can be set either by providing a <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> instance as cosmo, or by providing omega_m and/or omega_lam. If only one of the latter is provided, the other is taken to be one minus that. If no cosmology parameters are set, a default Cosmology() is constructed.</p>
+<p>The cosmology to use can be set either by providing a <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> instance as cosmo, or by providing omega_m and/or omega_lam. If only one of the latter is provided, the other is taken to be one minus that. If no cosmology parameters are set, a default <a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html" title="Basic cosmology calculations. ">Cosmology</a> is constructed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mass</td><td>Mass defined using a spherical overdensity of 200 times the critical density of the universe, in units of M_solar/h. </td></tr>
@@ -265,21 +265,21 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! Valid ways to input this:<ul>
-<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>Single PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
-<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>list of PositionD (or PositionI) instances</li>
 <li>tuple of lists: ( xlist, ylist )</li>
-<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>NumPy array of PositionD (or PositionI) instances</li>
 <li>tuple of NumPy arrays: ( xarray, yarray )</li>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default: arcsec]</td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the convergence, kappa, which matches the format of the input <code>pos</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the convergence, <code>kappa</code>, which matches the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -323,21 +323,21 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! Valid ways to input this:<ul>
-<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>Single PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
-<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>list of PositionD (or PositionI) instances</li>
 <li>tuple of lists: ( xlist, ylist )</li>
-<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>NumPy array of PositionD (or PositionI) instances</li>
 <li>tuple of NumPy arrays: ( xarray, yarray )</li>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far).</td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the reduced shears and magnifications as a tuple (g1,g2,mu), which match the format of the input <code>pos</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced shears and magnifications as a tuple <code>(g1,g2,mu)</code>, which match the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -381,21 +381,21 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! Valid ways to input this:<ul>
-<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>Single PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
-<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>list of PositionD (or PositionI) instances</li>
 <li>tuple of lists: ( xlist, ylist )</li>
-<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>NumPy array of PositionD (or PositionI) instances</li>
 <li>tuple of NumPy arrays: ( xarray, yarray )</li>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far).</td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the magnification mu, which matches the format of the input <code>pos</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the magnification <code>mu</code>, which matches the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>
@@ -445,22 +445,22 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Position(s) of the source(s), assumed to be post-lensing! Valid ways to input this:<ul>
-<li>Single galsim.PositionD (or PositionI) instance</li>
+<li>Single PositionD (or PositionI) instance</li>
 <li>tuple of floats: (x,y)</li>
-<li>list of galsim.PositionD (or PositionI) instances</li>
+<li>list of PositionD (or PositionI) instances</li>
 <li>tuple of lists: ( xlist, ylist )</li>
-<li>NumPy array of galsim.PositionD (or PositionI) instances</li>
+<li>NumPy array of PositionD (or PositionI) instances</li>
 <li>tuple of NumPy arrays: ( xarray, yarray )</li>
 <li>Multidimensional NumPy array, as long as array[0] contains x-positions and array[1] contains y-positions </li>
 </ul>
 </td></tr>
     <tr><td class="paramname">z_s</td><td>Source redshift(s). </td></tr>
-    <tr><td class="paramname">units</td><td>Angular units of coordinates. [default: arcsec] </td></tr>
+    <tr><td class="paramname">units</td><td>Angular units of coordinates (only arcsec implemented so far). [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>] </td></tr>
     <tr><td class="paramname">reduced</td><td>Whether returned shear(s) should be reduced shears. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the reduced shears as a tuple (g1,g2), which match the format of the input <code>pos</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced shears as a tuple <code>(g1,g2)</code>, which match the format of the input <code>pos</code>. </dd></dl>
 
 </div>
 </div>

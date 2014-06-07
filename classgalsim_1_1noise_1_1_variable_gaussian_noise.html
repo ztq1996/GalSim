@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -149,13 +149,15 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rng</td><td>A <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> instance to use for generating the random numbers. </td></tr>
-    <tr><td class="paramname">var_image</td><td>The variance of the noise to apply to each pixel. This image must be the same shape as the image for which you eventually call addNoise.</td></tr>
+    <tr><td class="paramname">var_image</td><td>The variance of the noise to apply to each pixel. This image must be the same shape as the image for which you eventually call <a class="el" href="namespacegalsim_1_1noise.html#aa45903c801b069774d5eafdbee54bda7">addNoise()</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <h2>Methods </h2>
-<p>To add noise to every element of an image, use the syntax image.addNoise(variable_noise). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>To add noise to every element of an image, use the syntax <code>image.addNoise(variable_noise)</code>.</p>
+<h2>Attributes </h2>
+<pre class="fragment">noise.rng           # The internal random number generator (read-only)
+noise.var_image     # The value of the constructor parameter var_image (read-only)</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a737556d1f9b65705894949641ffb21fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -216,8 +218,8 @@ Public Attributes</h2></td></tr>
 <p>Add VariableGaussian noise to an input Image. </p>
 <h2>Calling </h2>
 <pre class="fragment">&gt;&gt;&gt; variable_noise.applyTo(image)
-</pre><p>On output the Image instance image will have been given additional Gaussian noise according to the variance image of the given <a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html" title="Class implementing Gaussian noise that has a different variance in each pixel. ">VariableGaussianNoise</a> instance.</p>
-<p>Note: The syntax image.addNoise(variable_noise) is preferred. </p>
+</pre><p>On output the Image instance <code>image</code> will have been given additional Gaussian noise according to the variance image of the given <a class="el" href="classgalsim_1_1noise_1_1_variable_gaussian_noise.html" title="Class implementing Gaussian noise that has a different variance in each pixel. ">VariableGaussianNoise</a> instance.</p>
+<p>Note: The syntax <code>image.addNoise(variable_noise)</code> is preferred. </p>
 
 </div>
 </div>

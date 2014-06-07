@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -93,64 +93,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_s_b_box_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2012-2014 The GalSim developers:</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2014 by the GalSim developers team on GitHub</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * GalSim is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * https://github.com/GalSim-developers/GalSim</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * GalSim is free software: redistribution and use in source and binary forms,</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * with or without modification, are permitted provided that the following</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * conditions are met:</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GalSim is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * along with GalSim.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef SBBOX_H</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define SBBOX_H</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_b_profile_8h.html">SBProfile.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>galsim {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_box.html">   39</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">SBBox</a>(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> height, <span class="keywordtype">double</span> flux, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">SBBox</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a>&amp; rhs);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73">~SBBox</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_box.html#a373c4e97a443c1f72d4978bc2eba760b">getWidth</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_box.html#ad62144b89448540675c9ad0fca64521e">getHeight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">class </span>SBBoxImpl;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a>&amp; rhs);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // SBBOX_H</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice, this</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *    list of conditions, and the disclaimer given in the accompanying LICENSE</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *    file.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *    this list of conditions, and the disclaimer given in the documentation</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *    and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef SBBOX_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define SBBOX_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_b_profile_8h.html">SBProfile.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>galsim {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_box.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">SBBox</a>(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> height, <span class="keywordtype">double</span> flux, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">SBBox</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a>&amp; rhs);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73">~SBBox</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_box.html#a373c4e97a443c1f72d4978bc2eba760b">getWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_box.html#ad62144b89448540675c9ad0fca64521e">getHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">class </span>SBBoxImpl;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a>&amp; rhs);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // SBBOX_H</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_a6ec42a9537ea9d944622ac1d99f0bf4d"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">galsim::SBBox::SBBox</a></div><div class="ttdeci">SBBox(double width, double height, double flux, const GSParamsPtr &amp;gsparams)</div><div class="ttdoc">Constructor. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_ac166f6b4d0fee97ed00ad3ad2ef87f73"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73">galsim::SBBox::~SBBox</a></div><div class="ttdeci">~SBBox()</div><div class="ttdoc">Destructor. </div></div>
-<div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:112</div></div>
-<div class="ttc" id="classgalsim_1_1_s_b_box_html"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html">galsim::SBBox</a></div><div class="ttdoc">Surface Brightness Profile for the Boxcar function. </div><div class="ttdef"><b>Definition:</b> SBBox.h:39</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:111</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_box_html"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html">galsim::SBBox</a></div><div class="ttdoc">Surface Brightness Profile for the Boxcar function. </div><div class="ttdef"><b>Definition:</b> SBBox.h:38</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_ad62144b89448540675c9ad0fca64521e"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#ad62144b89448540675c9ad0fca64521e">galsim::SBBox::getHeight</a></div><div class="ttdeci">double getHeight() const </div><div class="ttdoc">Returns the y dimension width of the Boxcar. </div></div>
 <div class="ttc" id="_s_b_profile_8h_html"><div class="ttname"><a href="_s_b_profile_8h.html">SBProfile.h</a></div><div class="ttdoc">Contains a class definition for two-dimensional Surface Brightness Profiles. </div></div>
-<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:281</div></div>
+<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:262</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_a373c4e97a443c1f72d4978bc2eba760b"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#a373c4e97a443c1f72d4978bc2eba760b">galsim::SBBox::getWidth</a></div><div class="ttdeci">double getWidth() const </div><div class="ttdoc">Returns the x dimension width of the Boxcar. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

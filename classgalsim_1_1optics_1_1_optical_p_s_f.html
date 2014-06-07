@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -126,10 +126,10 @@ Public Member Functions</h2></td></tr>
                                     interpolant=None, oversampling=1.5, pad_factor=1.5,
                                     max_size=None, nstruts=0, strut_thick=0.05,
                                     strut_angle=0.*galsim.degrees)
-</pre><p>Initializes optical_psf as a galsim.OpticalPSF() instance.</p>
+</pre><p>Initializes <code>optical_psf</code> as an <a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics. ">OpticalPSF</a> instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for scale (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for <code>scale</code> (user responsible for consistency). </td></tr>
     <tr><td class="paramname">defocus</td><td>Defocus in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">astig1</td><td>Astigmatism (like e2) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">astig2</td><td>Astigmatism (like e1) in units of incident light wavelength. [default: 0] </td></tr>
@@ -138,19 +138,19 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">trefoil1</td><td>Trefoil (one of the arrows along y) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">trefoil2</td><td>Trefoil (one of the arrows along x) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">spher</td><td>Spherical aberration in units of incident light wavelength. [default: 0] </td></tr>
-    <tr><td class="paramname">aberrations</td><td>Optional keyword, to pass in a list, tuple, or NumPy array of aberrations in units of incident light wavelength (ordered according to the Noll convention), rather than passing in individual values for each individual aberration. Currently GalSim supports aberrations from defocus through third-order spherical ('spher'), which are aberrations 4-11 in the Noll convention, and hence 'aberrations' should be an object of length 12, with the first four numbers being ignored, the 5th (index 4) being defocus, and so on through index 11 corresponding to 'spher'. [default: None] </td></tr>
+    <tr><td class="paramname">aberrations</td><td>Optional keyword, to pass in a list, tuple, or NumPy array of aberrations in units of incident light wavelength (ordered according to the Noll convention), rather than passing in individual values for each individual aberration. Currently GalSim supports aberrations from defocus through third-order spherical (<code>spher</code>), which are aberrations 4-11 in the Noll convention, and hence <code>aberrations</code> should be an object of length 12, with the first four numbers being ignored, the 5th (index 4) being defocus, and so on through index 11 corresponding to <code>spher</code>. [default: None] </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
     <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
     <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface. ">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">galsim.Quintic()</a>] </td></tr>
-    <tr><td class="paramname">oversampling</td><td>Optional oversampling factor for the InterpolatedImage. Setting oversampling &lt; 1 will produce aliasing in the PSF (not good). Usually oversampling should be somewhat larger than 1. 1.5 is usually a safe choice. [default: 1.5] </td></tr>
-    <tr><td class="paramname">pad_factor</td><td>Additional multiple by which to zero-pad the PSF image to avoid folding compared to what would be employed for a simple galsim.Airy. Note that <code>pad_factor</code> may need to be increased for stronger aberrations, i.e. those larger than order unity. [default: 1.5] </td></tr>
-    <tr><td class="paramname">suppress_warning</td><td>If pad_factor is too small, the code will emit a warning telling you its best guess about how high you might want to raise it. However, you can suppress this warning by using suppress_warning=True. [default: False] </td></tr>
-    <tr><td class="paramname">max_size</td><td>Set a maximum size of the internal image for the optical PSF profile in arcsec. Sometimes the code calculates a rather large image size to describe the optical PSF profile. If you will eventually be drawing onto a smallish postage stamp, you might want to save some CPU time by setting max_size to be the size of your postage stamp. [default: None] </td></tr>
+    <tr><td class="paramname">oversampling</td><td>Optional oversampling factor for the InterpolatedImage. Setting <code>oversampling &lt; 1</code> will produce aliasing in the PSF (not good). Usually <code>oversampling</code> should be somewhat larger than 1. 1.5 is usually a safe choice. [default: 1.5] </td></tr>
+    <tr><td class="paramname">pad_factor</td><td>Additional multiple by which to zero-pad the PSF image to avoid folding compared to what would be employed for a simple Airy. Note that <code>pad_factor</code> may need to be increased for stronger aberrations, i.e. those larger than order unity. [default: 1.5] </td></tr>
+    <tr><td class="paramname">suppress_warning</td><td>If <code>pad_factor</code> is too small, the code will emit a warning telling you its best guess about how high you might want to raise it. However, you can suppress this warning by using <code>suppress_warning=True</code>. [default: False] </td></tr>
+    <tr><td class="paramname">max_size</td><td>Set a maximum size of the internal image for the optical PSF profile in arcsec. Sometimes the code calculates a rather large image size to describe the optical PSF profile. If you will eventually be drawing onto a smallish postage stamp, you might want to save some CPU time by setting <code>max_size</code> to be the size of your postage stamp. [default: None] </td></tr>
     <tr><td class="paramname">flux</td><td>Total flux of the profile. [default: 1.] </td></tr>
     <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
     <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default:`0.05] </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>

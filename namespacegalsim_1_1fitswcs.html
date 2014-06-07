@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -188,10 +188,10 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The FITS file from which to read the WCS information. This is probably the usual parameter to provide. [default: None] </td></tr>
-    <tr><td class="paramname">dir</td><td>Optional directory to prepend to the file name. [default: None] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optional directory to prepend to <code>file_name</code>. [default: None] </td></tr>
     <tr><td class="paramname">hdu</td><td>Optionally, the number of the HDU to use if reading from a file. The default is to use either the primary or first extension as appropriate for the given compression. (e.g. for rice, the first extension is the one you normally want.) [default: None] </td></tr>
-    <tr><td class="paramname">header</td><td>The header of an open pyfits (or astropy.io) hdu. Or, it can be a galsim.FitsHeader object. [default: None] </td></tr>
-    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). See <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a> for the available options. [default: 'auto'] </td></tr>
+    <tr><td class="paramname">header</td><td>The header of an open pyfits (or astropy.io) hdu. Or, it can be a FitsHeader object. [default: None] </td></tr>
+    <tr><td class="paramname">compression</td><td>Which decompression scheme to use (if any). See <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read()</a> for the available options. [default: 'auto'] </td></tr>
     <tr><td class="paramname">text_file</td><td>Normally a file is taken to be a fits file, but you can also give it a text file with the header information (like the .head file output from SCamp). In this case you should set <code>text_file = True</code> to tell GalSim to parse the file this way. [default: False] </td></tr>
     <tr><td class="paramname">suppress_warning</td><td>Should a warning be emitted if none of the real FITS WCS classes are able to successfully read the file, and we have to reset to an AffineTransform instead? <a href="Note: this is set to True when this function is implicitly called from 
                            one of the galsim.fits.read* functions.">default: False</a> </td></tr>

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -93,71 +93,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_s_b_exponential_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2012-2014 The GalSim developers:</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2014 by the GalSim developers team on GitHub</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * GalSim is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * https://github.com/GalSim-developers/GalSim</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * GalSim is free software: redistribution and use in source and binary forms,</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * with or without modification, are permitted provided that the following</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * conditions are met:</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GalSim is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * along with GalSim.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef SBEXPONENTIAL_H</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define SBEXPONENTIAL_H</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_b_profile_8h.html">SBProfile.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>galsim {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">namespace </span>sbp {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// How many Exponential profiles to save in the cache</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">   34</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">max_exponential_cache</a> = 100;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_exponential.html">   45</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">SBExponential</a>(<span class="keywordtype">double</span> r0, <span class="keywordtype">double</span> flux, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">SBExponential</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a>&amp; rhs);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a">~SBExponential</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9">getScaleRadius</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">class </span>SBExponentialImpl;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a>&amp; rhs);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // SBEXPONENTIAL_H</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice, this</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *    list of conditions, and the disclaimer given in the accompanying LICENSE</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *    file.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *    this list of conditions, and the disclaimer given in the documentation</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *    and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef SBEXPONENTIAL_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define SBEXPONENTIAL_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_b_profile_8h.html">SBProfile.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>galsim {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">namespace </span>sbp {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// How many Exponential profiles to save in the cache</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">   33</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">max_exponential_cache</a> = 100;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_exponential.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">SBExponential</a>(<span class="keywordtype">double</span> r0, <span class="keywordtype">double</span> flux, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">SBExponential</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a>&amp; rhs);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a">~SBExponential</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9">getScaleRadius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">class </span>SBExponentialImpl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_exponential.html">SBExponential</a>&amp; rhs);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif // SBEXPONENTIAL_H</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="ttc" id="classgalsim_1_1_s_b_exponential_html_af9a791f1cfd188fdee4cca99ed90d647"><div class="ttname"><a href="classgalsim_1_1_s_b_exponential.html#af9a791f1cfd188fdee4cca99ed90d647">galsim::SBExponential::SBExponential</a></div><div class="ttdeci">SBExponential(double r0, double flux, const GSParamsPtr &amp;gsparams)</div><div class="ttdoc">Constructor - note that r0 is scale length, NOT half-light radius re as in SBSersic. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_exponential_html_a03e8f7c2a52b9a8db5ffd72689c526a9"><div class="ttname"><a href="classgalsim_1_1_s_b_exponential.html#a03e8f7c2a52b9a8db5ffd72689c526a9">galsim::SBExponential::getScaleRadius</a></div><div class="ttdeci">double getScaleRadius() const </div><div class="ttdoc">Returns the scale radius of the Exponential profile. </div></div>
-<div class="ttc" id="classgalsim_1_1_s_b_exponential_html"><div class="ttname"><a href="classgalsim_1_1_s_b_exponential.html">galsim::SBExponential</a></div><div class="ttdoc">Exponential Surface Brightness Profile. </div><div class="ttdef"><b>Definition:</b> SBExponential.h:45</div></div>
-<div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:112</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_exponential_html"><div class="ttname"><a href="classgalsim_1_1_s_b_exponential.html">galsim::SBExponential</a></div><div class="ttdoc">Exponential Surface Brightness Profile. </div><div class="ttdef"><b>Definition:</b> SBExponential.h:44</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:111</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_exponential_html_a94c3f8f4170507dfd80df14580de380a"><div class="ttname"><a href="classgalsim_1_1_s_b_exponential.html#a94c3f8f4170507dfd80df14580de380a">galsim::SBExponential::~SBExponential</a></div><div class="ttdeci">~SBExponential()</div><div class="ttdoc">Destructor. </div></div>
 <div class="ttc" id="_s_b_profile_8h_html"><div class="ttname"><a href="_s_b_profile_8h.html">SBProfile.h</a></div><div class="ttdoc">Contains a class definition for two-dimensional Surface Brightness Profiles. </div></div>
-<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:281</div></div>
-<div class="ttc" id="namespacegalsim_1_1sbp_html_a0d080087b86249e6a215550234d13e90"><div class="ttname"><a href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">galsim::sbp::max_exponential_cache</a></div><div class="ttdeci">const int max_exponential_cache</div><div class="ttdef"><b>Definition:</b> SBExponential.h:34</div></div>
+<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:262</div></div>
+<div class="ttc" id="namespacegalsim_1_1sbp_html_a0d080087b86249e6a215550234d13e90"><div class="ttname"><a href="namespacegalsim_1_1sbp.html#a0d080087b86249e6a215550234d13e90">galsim::sbp::max_exponential_cache</a></div><div class="ttdeci">const int max_exponential_cache</div><div class="ttdef"><b>Definition:</b> SBExponential.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6</small></address>

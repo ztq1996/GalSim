@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -195,12 +195,12 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wave</td><td>Wavelength array in nanometers </td></tr>
-    <tr><td class="paramname">zenith_angle</td><td>as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> </td></tr>
+    <tr><td class="paramname">zenith_angle</td><td>as an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> </td></tr>
     <tr><td class="paramname">kwargs</td><td>Keyword arguments to pass to air_refractive_index() to override default pressure, temperature, and/or H2O_pressure.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the absolute value of change in zenith angle as a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the absolute value of change in zenith angle as an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a>. </dd></dl>
 
 </div>
 </div>
@@ -241,17 +241,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compute the zenith angle and parallactic angle of a celestial coordinate, given either the celestial coordinate of the zenith, or equivalently, the hour angle of the coordinate and the latitude of the observer. </p>
-<p>This is useful for the function ChromaticAtmosphere in the <a class="el" href="namespacegalsim_1_1chromatic.html">galsim.chromatic</a> module.</p>
+<p>This is useful for the function <a class="el" href="namespacegalsim_1_1chromatic.html#a90f867f2cde815b9048117e9e426e968" title="Return a ChromaticObject implementing two atmospheric chromatic effects: differential chromatic refra...">ChromaticAtmosphere()</a> in the <a class="el" href="namespacegalsim_1_1chromatic.html">galsim.chromatic</a> module.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj_coord</td><td>A <code>galsim.CelestialCoord</code> object for which the zenith and parallactic angles will be computed. </td></tr>
-    <tr><td class="paramname">zenith_coord</td><td>A <code>galsim.CelestialCoord</code> indicating the coordinates of the zenith. </td></tr>
-    <tr><td class="paramname">HA</td><td>The hour angle (as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>) of the coordinate for which the zenith and parallactic angles will be computed. </td></tr>
-    <tr><td class="paramname">latitude</td><td>The observer's latitude, as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>.</td></tr>
+    <tr><td class="paramname">obj_coord</td><td>A CelestialCoord object for which the zenith and parallactic angles will be computed. </td></tr>
+    <tr><td class="paramname">zenith_coord</td><td>A CelestialCoord indicating the coordinates of the zenith. </td></tr>
+    <tr><td class="paramname">HA</td><td>The hour angle (as an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a>) of the coordinate for which the zenith and parallactic angles will be computed. </td></tr>
+    <tr><td class="paramname">latitude</td><td>The observer's latitude, as an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the zenith_angle, parallactic_angle as galsim.Angles. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple <code>(zenith_angle, parallactic_angle)</code>, each of which is an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a>. </dd></dl>
 
 </div>
 </div>

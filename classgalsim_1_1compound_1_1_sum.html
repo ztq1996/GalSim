@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A class for adding 2 or more GSObjects.  
+<p>A class for adding 2 or more GSObject instances.  
  <a href="classgalsim_1_1compound_1_1_sum.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.compound.Sum:</div>
@@ -117,30 +117,32 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ad6c3bae8d3f5d5d48fa553778cf74c6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_sum.html#ad6c3bae8d3f5d5d48fa553778cf74c6a">obj_list</a></td></tr>
+<tr class="separator:ad6c3bae8d3f5d5d48fa553778cf74c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8ef0f1e584e431d7f5c2fe933d00b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_sum.html#a6a8ef0f1e584e431d7f5c2fe933d00b7">noise</a></td></tr>
 <tr class="separator:a6a8ef0f1e584e431d7f5c2fe933d00b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for adding 2 or more GSObjects. </p>
-<p>The <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a> class is used to represent the sum of multiple GSObjects. For example, it might be used to represent a multiple-component galaxy as the sum of an Exponential and a DeVaucouleurs, or to represent a PSF as the sum of multiple Gaussians.</p>
+<div class="textblock"><p>A class for adding 2 or more GSObject instances. </p>
+<p>The <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> class is used to represent the sum of multiple GSObject instances. For example, it might be used to represent a multiple-component galaxy as the sum of an Exponential and a DeVaucouleurs, or to represent a PSF as the sum of multiple Gaussian objects.</p>
 <h2>Initialization </h2>
-<p>Typically, you do not need to construct a <code><a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a></code> object explicitly. Normally, you would just use the + operator, which returns a <code><a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a></code>: </p>
+<p>Typically, you do not need to construct a <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> object explicitly. Normally, you would just use the + operator, which returns a <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a>: </p>
 <pre class="fragment">&gt;&gt;&gt; bulge = galsim.Sersic(n=3, half_light_radius=0.8)
 &gt;&gt;&gt; disk = galsim.Exponential(half_light_radius=1.4)
 &gt;&gt;&gt; gal = bulge + disk
 &gt;&gt;&gt; psf = galsim.Gaussian(sigma=0.3, flux=0.3) + galsim.Gaussian(sigma=0.8, flux=0.7)
-</pre><p>You can also use the <code>Add</code> factory function, which returns a <code><a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a></code> object if none of the individual objects are chromatic: </p>
+</pre><p>You can also use the <a class="el" href="namespacegalsim_1_1compound.html#ad3f305087db1b740376666d9c022d94e" title="A function for adding 2 or more GSObject or ChromaticObject instances. ">Add()</a> factory function, which returns a <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> object if none of the individual objects are chromatic: </p>
 <pre class="fragment">&gt;&gt;&gt; gal = galsim.Add([bulge,disk])
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>Unnamed args should be a list of objects to add. </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
-<p>Note: if gsparams is unspecified (or None), then the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a> instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the first item in the list. Also, note that parameters related to the Fourier-space calculations must be set when initializing the individual GSObjects that go into the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a>, NOT when creating the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a> (at which point the accuracy and threshold parameters will simply be ignored).</p>
+<p>Note: if <code>gsparams</code> is unspecified (or None), then the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> instance inherits the same <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> as the first item in the list. Also, note that parameters related to the Fourier-space calculations must be set when initializing the individual GSObject instances that go into the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a>, NOT when creating the <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> (at which point the accuracy and threshold parameters will simply be ignored).</p>
 <h2>Methods </h2>
-<p>There are no additional methods for <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObjects. ">Sum</a> beyond the usual GSObject methods. </p>
+<p>There are no additional methods for <a class="el" href="classgalsim_1_1compound_1_1_sum.html" title="A class for adding 2 or more GSObject instances. ">Sum</a> beyond the usual GSObject methods. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a17cbbcfc4e4d759fbc067231df6c71dd"></a>
 <div class="memitem">
@@ -181,6 +183,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.compound.Sum.noise</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad6c3bae8d3f5d5d48fa553778cf74c6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.compound.Sum.obj_list</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -123,13 +123,13 @@ Functions</h2></td></tr>
           <td class="memname">def galsim.correlatednoise.getCOSMOSNoise </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>rng</em>, </td>
+          <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -175,32 +175,32 @@ Functions</h2></td></tr>
 <pre class="fragment">/YOUR/REPO/PATH/GalSim/examples/data/acs_I_unrot_sci_20_cf.fits
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rng</td><td>Must be a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a> or derived class instance, provides the random number generator used by the returned <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields. ">_BaseCorrelatedNoise</a> instance. </td></tr>
     <tr><td class="paramname">file_name</td><td>String containing the path and filename above but modified to match the location of the GalSim repository on your system. </td></tr>
-    <tr><td class="paramname">cosmos_scale</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim: defaults to 0.03 arcsec, see below for more information. </td></tr>
-    <tr><td class="paramname">variance</td><td>Scales the correlation function so that its point variance, equivalent to its value at zero separation distance, matches this value. The default <code>variance = 0.</code> uses the variance in the original COSMOS noise fields. </td></tr>
+    <tr><td class="paramname">rng</td><td>If provided, a random number generator to use as the random number generator of the resulting noise object. (may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object) [default: None, in which case, one will be automatically created, using the time as a seed.] </td></tr>
+    <tr><td class="paramname">cosmos_scale</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim. [default: 0.03 (arcsec), see below for more information.] </td></tr>
+    <tr><td class="paramname">variance</td><td>Scales the correlation function so that its point variance, equivalent to its value at zero separation distance, matches this value. [default: 0., which means to use the variance in the original COSMOS noise fields.] </td></tr>
     <tr><td class="paramname">x_interpolant</td><td>Forces use of a non-default interpolant for interpolation of the internal lookup table in real space. See below for more details. [default: <a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4)] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields. ">_BaseCorrelatedNoise</a> instance representing correlated noise in F814W COSMOS images.</dd></dl>
-<p>The default x_interpolant is a <a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y. ">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4)), which uses bilinear interpolation. The use of this interpolant is an approximation that gives good empirical results without requiring internal convolution of the correlation function profile by a galsim.Pixel object when applying correlated noise to images: such an internal convolution has been found to be computationally costly in practice, requiring the Fourier transform of very large arrays.</p>
+<p>The default <code>x_interpolant</code> is a <code><a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y. ">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4))</code>, which uses bilinear interpolation. The use of this interpolant is an approximation that gives good empirical results without requiring internal convolution of the correlation function profile by a Pixel object when applying correlated noise to images: such an internal convolution has been found to be computationally costly in practice, requiring the Fourier transform of very large arrays.</p>
 <p>The use of the bilinear interpolants means that the representation of correlated noise will be noticeably inaccurate in at least the following two regimes:</p>
-<p>i) If the pixel scale of the desired final output (e.g. the target image of <code>.draw()</code>, <code>.applyTo()</code> or <code>.applyWhiteningTo()</code>) is small relative to the separation between pixels in the <code>image</code> used to instantiate <code>cn</code> as shown above. ii) If the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>cn</code> was instantiated with an image of scale comparable to that in the final output, and <code>cn</code> has been rotated or otherwise transformed (e.g. via the <code>.rotate()</code>, <code>.shear()</code> methods, see below).</p>
+<p>i) If the pixel scale of the desired final output (e.g. the target image of drawImage(), applyTo() or applyWhiteningTo()) is small relative to the separation between pixels in the <code>image</code> used to instantiate <code>cn</code> as shown above. ii) If the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>cn</code> was instantiated with an image of scale comparable to that in the final output, and <code>cn</code> has been rotated or otherwise transformed (e.g. via the rotate(), shear() methods, see below).</p>
 <p>Conversely, the approximation will work best in the case where the correlated noise used to instantiate the <code>cn</code> is taken from an input image for which <code>image.scale</code> is smaller than that in the desired output. This is the most common use case in the practical treatment of correlated noise when simulating galaxies from COSMOS, for which this function is expressly designed.</p>
 <p>Changing from the default bilinear interpolant is made possible, but not recommended. For more information please see the discussion on <a href="https://github.com/GalSim-developers/GalSim/pull/452">https://github.com/GalSim-developers/GalSim/pull/452</a>.</p>
-<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
+<p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
 <h2>Important note regarding units </h2>
 <p>The ACS coadd images in COSMOS have a pixel scale of 0.03 arcsec, and so the pixel scale <code>cosmos_scale</code> adopted in the representation of of the correlation function takes a default value </p>
 <pre class="fragment">cosmos_scale = 0.03
 </pre><p>If you wish to use other units, ensure that the input keyword <code>cosmos_scale</code> takes the value corresponding to 0.03 arcsec in your chosen system.</p>
 <h2>Example usage </h2>
 <p>The following commands use this function to generate a 300 pixel x 300 pixel image of noise with HST COSMOS correlation properties (substitute in your own file and path for the <code>filestring</code>). </p>
-<pre class="fragment">&gt;&gt;&gt; filestring='/YOUR/REPO/PATH/GalSim/devel/external/hst/acs_I_unrot_sci_20_cf.fits'
+<pre class="fragment">&gt;&gt;&gt; file_name='/YOUR/REPO/PATH/GalSim/devel/external/hst/acs_I_unrot_sci_20_cf.fits'
 &gt;&gt;&gt; import galsim
 &gt;&gt;&gt; rng = galsim.UniformDeviate(123456)
-&gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(rng, filestring)
+&gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(file_name, rng=rng)
 &gt;&gt;&gt; im = galsim.ImageD(300, 300, scale=0.03)
 &gt;&gt;&gt; cf.applyTo(im)
 &gt;&gt;&gt; im.write('out.fits')

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7a0487a44550531f5a48380efff9c3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> object given some grid parameters.  <a href="#a7a0487a44550531f5a48380efff9c3fa">More...</a><br/></td></tr>
 <tr class="separator:a7a0487a44550531f5a48380efff9c3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad759563ffc164be26cfb47860c485135"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html#ad759563ffc164be26cfb47860c485135">estimate</a></td></tr>
-<tr class="memdesc:ad759563ffc164be26cfb47860c485135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the EE, BB, and EB power spectra of two 2D arrays g1 and g2.  <a href="#ad759563ffc164be26cfb47860c485135">More...</a><br/></td></tr>
+<tr class="memdesc:ad759563ffc164be26cfb47860c485135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the EE, BB, and EB power spectra of two 2D arrays <code>g1</code> and <code>g2</code>.  <a href="#ad759563ffc164be26cfb47860c485135">More...</a><br/></td></tr>
 <tr class="separator:ad759563ffc164be26cfb47860c485135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -142,32 +142,35 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Class for estimating the shear power spectrum from gridded shears. </p>
 <p>The <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> class can be used even on systems where GalSim is not installed. It just requires Python v2.6 or 2.7 and NumPy.</p>
 <p>This class stores all the data used in power spectrum estimation that is fixed with the geometry of the problem - the binning and spin weighting factors.</p>
-<p>The only public method is <code><a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html#ad759563ffc164be26cfb47860c485135" title="Compute the EE, BB, and EB power spectra of two 2D arrays g1 and g2. ">estimate()</a></code>, which is called with 2D g1 and g2 arrays on a square grid. It assumes the flat sky approximation (where ell and k are interchangeable), and rebins the observed ell modes into a user-defined number of logarithimic bins in ell. Given that the grid parameters are precomputed and stored when the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> is initialized, computation of the PS for multiple sets of shears corresponding to the same grid setup can proceed more rapidly than if everything had to be recomputed each time.</p>
+<p>The only public method is <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html#ad759563ffc164be26cfb47860c485135" title="Compute the EE, BB, and EB power spectra of two 2D arrays g1 and g2. ">estimate()</a>, which is called with 2D <code>g1</code> and <code>g2</code> arrays on a square grid. It assumes the flat sky approximation (where <code>ell</code> and <code>k</code> are interchangeable), and rebins the observed ell modes into a user-defined number of logarithimic bins in ell. Given that the grid parameters are precomputed and stored when the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> is initialized, computation of the PS for multiple sets of shears corresponding to the same grid setup can proceed more rapidly than if everything had to be recomputed each time.</p>
 <p>Below is an example of how to use this code (relying on GalSim to provide the arrays of g1 and g2, though that is by no means required, and assuming that the user is sitting in the examples/ directory): </p>
-<pre class="fragment"># Define the total grid extent, in degrees
-grid_size = 10.
-# Define the number of grid points in each dimension, i.e., an N x N grid
-ngrid = 100
-# Choose the number of logarithmic bins in ell or k for outputs
-n_ell = 15
-# Define a lookup-table for the power spectrum as a function of k based on the outputs of
-# iCosmo (see demo11.py for more description of how this was generated).
-my_tab = galsim.LookupTable(file='data/cosmo-fid.zmed1.00.out')
-# Generate a galsim.PowerSpectrum with this P(k), noting the units.
-my_ps = galsim.PowerSpectrum(my_tab, units=galsim.radians)
-# Build a grid of shear values with the desired parameters.
-g1, g2 = my_ps.buildGrid(grid_spacing=grid_size/ngrid, ngrid=ngrid, units=galsim.degrees)
-# Initialize a PowerSpectrumEstimator with the chosen grid geometry and number of ell bins.
-# Note that these values are actually the default, so we didn't technically have to specify
-# them.
-my_pse = galsim.pse.PowerSpectrumEstimator(ngrid, grid_size, n_ell)
-# Estimate the power based on this set of g1, g2.  If we get another set of shears for the
-# same grid geometry, we can reuse the same PowerSpectrumEstimator object.
-ell, P_e, P_b, P_eb = my_pse.estimate(g1, g2)
-</pre><p>The output NumPy arrays ell, P_e, P_b, and P_eb contain the effective ell value, the E-mode auto-power spectrum, the B-mode auto-power spectrum, and the EB cross-power spectrum. The units are inverse radians for ell, and radians^2 for the output power spectra.</p>
+<pre class="fragment">&gt;&gt;&gt; grid_size = 10.  # Define the total grid extent, in degrees
+&gt;&gt;&gt; ngrid = 100      # Define the number of grid points in each dimension: (ngrid x ngrid)
+&gt;&gt;&gt; n_ell = 15       # Choose the number of logarithmic bins in ell or k for outputs
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Define a lookup-table for the power spectrum as a function of k based on the outputs
+&gt;&gt;&gt; # of iCosmo (see demo11.py for more description of how this was generated).
+&gt;&gt;&gt; my_tab = galsim.LookupTable(file='data/cosmo-fid.zmed1.00.out')
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Generate a galsim.PowerSpectrum with this P(k), noting the units.
+&gt;&gt;&gt; my_ps = galsim.PowerSpectrum(my_tab, units=galsim.radians)
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Build a grid of shear values with the desired parameters.
+&gt;&gt;&gt; g1, g2 = my_ps.buildGrid(grid_spacing=grid_size/ngrid, ngrid=ngrid,
+...                          units=galsim.degrees)
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Initialize a PowerSpectrumEstimator with the chosen grid geometry and number of ell
+&gt;&gt;&gt; # bins. Note that these values are actually the default, so we didn't technically have
+&gt;&gt;&gt; # to specifythem.
+&gt;&gt;&gt; my_pse = galsim.pse.PowerSpectrumEstimator(ngrid, grid_size, n_ell)
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Estimate the power based on this set of g1, g2.  If we get another set of shears for
+&gt;&gt;&gt; # the same grid geometry, we can reuse the same PowerSpectrumEstimator object.
+&gt;&gt;&gt; ell, P_e, P_b, P_eb = my_pse.estimate(g1, g2)
+</pre><p>The output NumPy arrays <code>ell</code>, <code>P_e</code>, <code>P_b</code>, and <code>P_eb</code> contain the effective ell value, the E-mode auto-power spectrum, the B-mode auto-power spectrum, and the EB cross-power spectrum. The units are inverse radians for ell, and radians^2 for the output power spectra.</p>
 <p>Some important notes:</p>
-<p>1) Power spectrum estimation requires a weight function which decides how the averaging is done across ell within each bin. By default that weighting is flat in ell using an analytic calculation of the area in ell space, but this is easy to change with the <code>_bin_power</code> function. (Note this area averaged bin weighting is only approximate for the higher frequency bins in which the lower ell edge is greater than pi * ngrid / grid_size, due to the annular ell region being cut off by the square grid edges beyond this value.) A keyword allows for weighting by the power itself, but use of this functionality requires the GalSim software package.</p>
-<p>2) This is the power spectrum of the gridded <em>data</em>, not the underlying field - we do not account for the effects of the finite grid (basically, ignoring all the reasons why power spectrum estimation is hard - see devel/modules/lensing_engine.pdf in the GalSim repository). Users must account for the contribution of noise in g1, g2 and any masking.</p>
+<p>1) Power spectrum estimation requires a weight function which decides how the averaging is done across ell within each bin. By default that weighting is flat in ell using an analytic calculation of the area in ell space, but this is easy to change with the <code>_bin_power</code> function. (Note this area averaged bin weighting is only approximate for the higher frequency bins in which the lower <code>ell</code> edge is greater than <code>pi * ngrid / grid_size</code>, due to the annular <code>ell</code> region being cut off by the square grid edges beyond this value.) A keyword allows for weighting by the power itself, but use of this functionality requires the GalSim software package.</p>
+<p>2) This is the power spectrum of the gridded <em>data</em>, not the underlying field - we do not account for the effects of the finite grid (basically, ignoring all the reasons why power spectrum estimation is hard - see devel/modules/lensing_engine.pdf in the GalSim repository). Users must account for the contribution of noise in <code>g1</code>, <code>g2</code> and any masking.</p>
 <p>3) The binning is currently fixed as uniform in log(ell).</p>
 <p>4) The code for this class uses the notation of the GREAT10 handbook (Kitching et al. 2011, <a href="http://dx.doi.org/10.1214/11-AOAS484">http://dx.doi.org/10.1214/11-AOAS484</a>), equations 17-21. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -213,7 +216,7 @@ ell, P_e, P_b, P_eb = my_pse.estimate(g1, g2)
   <table class="params">
     <tr><td class="paramname">N</td><td>The number of pixels along each side of the grid. [default: 100] </td></tr>
     <tr><td class="paramname">sky_size_deg</td><td>The total grid width (in one dimension) in degrees. [default: 10] </td></tr>
-    <tr><td class="paramname">nbin</td><td>The number of evenly-spaced logarithmic ell bins to use for estimating the power spectrum. [default: 15] </td></tr>
+    <tr><td class="paramname">nbin</td><td>The number of evenly-spaced logarithmic <code>ell</code> bins to use for estimating the power spectrum. [default: 15] </td></tr>
   </table>
   </dd>
 </dl>
@@ -269,7 +272,7 @@ ell, P_e, P_b, P_eb = my_pse.estimate(g1, g2)
       </table>
 </div><div class="memdoc">
 
-<p>Compute the EE, BB, and EB power spectra of two 2D arrays g1 and g2. </p>
+<p>Compute the EE, BB, and EB power spectra of two 2D arrays <code>g1</code> and <code>g2</code>. </p>
 <p>For example usage, see the docstring for the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> class.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

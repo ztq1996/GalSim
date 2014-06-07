@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -212,12 +212,12 @@ Public Attributes</h2></td></tr>
 v = (y-y0) * scale + v0
 </pre><h2>Initialization </h2>
 <p>An <a class="el" href="classgalsim_1_1wcs_1_1_offset_w_c_s.html" title="This WCS is similar to PixelScale, except the origin is not necessarily (0,0) in both the image and w...">OffsetWCS</a> is initialized with the command: </p>
-<pre class="fragment">wcs = galsim.OffsetWCS(scale, origin=None, world_origin=None)
+<pre class="fragment">&gt;&gt;&gt; wcs = galsim.OffsetWCS(scale, origin=None, world_origin=None)
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scale</td><td>The pixel scale, typically in units of arcsec/pixel. </td></tr>
-    <tr><td class="paramname">origin</td><td>Optional origin position for the image coordinate system. If provided, it should be a PostionD or PositionI. [default: galsim.PositionD(0., 0.)] </td></tr>
-    <tr><td class="paramname">world_origin</td><td>Optional origin position for the world coordinate system. If provided, it should be a PostionD. [default: galsim.PositionD(0., 0.)] </td></tr>
+    <tr><td class="paramname">origin</td><td>Optional origin position for the image coordinate system. If provided, it should be a PositionD or PositionI. [default: PositionD(0., 0.)] </td></tr>
+    <tr><td class="paramname">world_origin</td><td>Optional origin position for the world coordinate system. If provided, it should be a PositionD. [default: galsim.PositionD(0., 0.)] </td></tr>
   </table>
   </dd>
 </dl>
@@ -387,15 +387,15 @@ v = (y-y0) * scale + v0
 <p>This returns a linearized version of the current WCS at a given point. It returns an <a class="el" href="classgalsim_1_1wcs_1_1_affine_transform.html" title="This WCS is the most general linear transformation. ">AffineTransform</a> that is locally approximately the same as the WCS in the vicinity of the given point.</p>
 <p>It is similar to <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#a74f8b19333548e62fe85ecd59d21d904" title="Return the local JacobianWCS of the WCS at a given point. ">jacobian()</a>, except that this preserves the offset information between the image coordinates and world coordinates rather than setting both origins to (0,0). Instead, the image origin is taken to be <code>image_pos</code>.</p>
 <p>For non-celestial coordinate systems, the world origin is taken to be <code>wcs.toWorld(image_pos)</code>. In fact, <code>wcs.affine(image_pos)</code> is really just shorthand for: </p>
-<pre class="fragment">    wcs.jacobian(image_pos).withOrigin(image_pos, wcs.toWorld(image_pos))
+<pre class="fragment">&gt;&gt;&gt; wcs.jacobian(image_pos).withOrigin(image_pos, wcs.toWorld(image_pos))
 </pre><p>For celestial coordinate systems, there is no well-defined choice for the origin of the Euclidean world coordinate system. So we just take (u,v) = (0,0) at the given position. So, <code>wcs.affine(image_pos)</code> is equivalent to: </p>
-<pre class="fragment">    wcs.jacobian(image_pos).withOrigin(image_pos)
+<pre class="fragment">&gt;&gt;&gt; wcs.jacobian(image_pos).withOrigin(image_pos)
 </pre><p>You can use the returned <a class="el" href="classgalsim_1_1wcs_1_1_affine_transform.html" title="This WCS is the most general linear transformation. ">AffineTransform</a> to access the relevant values of the 2x2 Jacobian matrix and the origins directly: </p>
-<pre class="fragment">    affine = wcs.affine(image_pos)
-    x,y = np.meshgrid(np.arange(0,32,1), np.arange(0,32,1))
-    u = affine.dudx * (x-affine.x0) + jac.dudy * (y-affine.y0) + affine.u0
-    v = affine.dvdx * (x-affine.x0) + jac.dvdy * (y-affine.y0) + affine.v0
-    ... use u,v values to work directly in sky coordinates.
+<pre class="fragment">&gt;&gt;&gt; affine = wcs.affine(image_pos)
+&gt;&gt;&gt; x,y = np.meshgrid(np.arange(0,32,1), np.arange(0,32,1))
+&gt;&gt;&gt; u = affine.dudx * (x-affine.x0) + jac.dudy * (y-affine.y0) + affine.u0
+&gt;&gt;&gt; v = affine.dvdx * (x-affine.x0) + jac.dvdy * (y-affine.y0) + affine.v0
+&gt;&gt;&gt; # ... use u,v values to work directly in sky coordinates.
 </pre><p>As usual, you may provide either <code>image_pos</code> or <code>world_pos</code> as you prefer to specify the location at which to approximate the WCS.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -475,7 +475,7 @@ v = (y-y0) * scale + v0
 
 <p>Return whether the world coordinates are CelestialCoord (i.e. </p>
 <p>ra,dec). </p>
-<pre class="fragment">    wcs.isCelestial() is shorthand for isinstance(wcs, galsim.CelestialWCS).</pre> 
+<pre class="fragment">    `wcs.isCelestial()` is shorthand for `isinstance(wcs, galsim.CelestialWCS)`.</pre> 
 </div>
 </div>
 <a class="anchor" id="a989d44174e5a7688622860f72395e344"></a>
@@ -501,7 +501,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Return whether the WCS transformation is a local, linear approximation. </p>
-<p>wcs.isLocal() is shorthand for isinstance(wcs, galsim.LocalWCS). </p>
+<p><code>wcs.isLocal()</code> is shorthand for <code>isinstance(wcs, galsim.LocalWCS)</code>. </p>
 
 </div>
 </div>
@@ -584,13 +584,13 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Return the local <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a> of the WCS at a given point. </p>
-<p>This is basically the same as wcs.local(...), but the return value is guaranteed to be a <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a>, which can be useful in some situations, since you can access the values of the 2x2 Jacobian matrix directly: </p>
-<pre class="fragment">    jac = wcs.jacobian(image_pos)
-    x,y = np.meshgrid(np.arange(0,32,1), np.arange(0,32,1))
-    u = jac.dudx * x + jac.dudy * y
-    v = jac.dvdx * x + jac.dvdy * y
-    ... use u,v values to work directly in world coordinates.
-</pre><p>If you do not need the extra functionality, then you should use wcs.local() instead, since it may be more efficient.</p>
+<p>This is basically the same as <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#accb68bf578024ddb6b6bad985629a16c" title="Return the local linear approximation of the WCS at a given point. ">local()</a>, but the return value is guaranteed to be a <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a>, which can be useful in some situations, since you can access the values of the 2x2 Jacobian matrix directly: </p>
+<pre class="fragment">&gt;&gt;&gt; jac = wcs.jacobian(image_pos)
+&gt;&gt;&gt; x,y = np.meshgrid(np.arange(0,32,1), np.arange(0,32,1))
+&gt;&gt;&gt; u = jac.dudx * x + jac.dudy * y
+&gt;&gt;&gt; v = jac.dvdx * x + jac.dvdy * y
+&gt;&gt;&gt; # ... use u,v values to work directly in world coordinates.
+</pre><p>If you do not need the extra functionality, then you should use <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#accb68bf578024ddb6b6bad985629a16c" title="Return the local linear approximation of the WCS at a given point. ">local()</a> instead, since it may be more efficient.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image_pos</td><td>The image coordinate position (for non-uniform WCS types) </td></tr>
@@ -740,7 +740,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Return the maximum linear scale of the transformation in any direction. </p>
-<p>This is basically the semi-major axis of the Jacobian. Sometimes you need a linear scale size for some calculation. This function returns the largest scale in any direction. The function minLinearScale returns the smallest.</p>
+<p>This is basically the semi-major axis of the Jacobian. Sometimes you need a linear scale size for some calculation. This function returns the largest scale in any direction. The function <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#ae01ed1dce3e41df1a7e2151eaec43f24" title="Return the minimum linear scale of the transformation in any direction. ">minLinearScale()</a> returns the smallest.</p>
 <p>For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the pixel is located.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -792,7 +792,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Return the minimum linear scale of the transformation in any direction. </p>
-<p>This is basically the semi-minor axis of the Jacobian. Sometimes you need a linear scale size for some calculation. This function returns the smallest scale in any direction. The function maxLinearScale returns the largest.</p>
+<p>This is basically the semi-minor axis of the Jacobian. Sometimes you need a linear scale size for some calculation. This function returns the smallest scale in any direction. The function <a class="el" href="classgalsim_1_1wcs_1_1_base_w_c_s.html#ab97917ebf3d82a87efdee368b02d2f7f" title="Return the maximum linear scale of the transformation in any direction. ">maxLinearScale()</a> returns the largest.</p>
 <p>For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the pixel is located.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -905,7 +905,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Convert a position from world coordinates to image coordinates. </p>
-<p>This is equivalent to wcs.toImage(world_pos). </p>
+<p>This is equivalent to <code>wcs.toImage(world_pos)</code>. </p>
 
 </div>
 </div>
@@ -942,7 +942,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Convert a position from image coordinates to world coordinates. </p>
-<p>This is equivalent to wcs.toWorld(image_pos). </p>
+<p>This is equivalent to <code>wcs.toWorld(image_pos)</code>. </p>
 
 </div>
 </div>
@@ -991,7 +991,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Convert a profile from world coordinates to image coordinates. </p>
-<p>This is equivalent to wcs.toImage(world_profile, ...). </p>
+<p>This is equivalent to <code>wcs.toImage(world_profile, ...)</code>. </p>
 
 </div>
 </div>
@@ -1040,7 +1040,7 @@ v = (y-y0) * scale + v0
 </div><div class="memdoc">
 
 <p>Convert a profile from image coordinates to world coordinates. </p>
-<p>This is equivalent to wcs.toWorld(image_profile, ...). </p>
+<p>This is equivalent to <code>wcs.toWorld(image_profile, ...)</code>. </p>
 
 </div>
 </div>
@@ -1101,9 +1101,9 @@ v = (y-y0) * scale + v0
 <p>Convert from world coordinates to image coordinates. </p>
 <p>There are essentially two overloaded versions of this function here.</p>
 <ol type="1">
-<li>The first converts a position from world coordinates to image coordinates. If the WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a>, the argument may be either a PositionD or PositionI argument. If it is a <a class="el" href="classgalsim_1_1wcs_1_1_celestial_w_c_s.html" title="A CelestialWCS is a BaseWCS whose world coordinates are on the celestial sphere. ">CelestialWCS</a>, then the argument must be a CelestialCoord. It returns the corresponding position in image coordinates as a PositionD. <pre class="fragment">image_pos = wcs.toImage(world_pos)
+<li>The first converts a position from world coordinates to image coordinates. If the WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a>, the argument may be either a PositionD or PositionI argument. If it is a <a class="el" href="classgalsim_1_1wcs_1_1_celestial_w_c_s.html" title="A CelestialWCS is a BaseWCS whose world coordinates are on the celestial sphere. ">CelestialWCS</a>, then the argument must be a CelestialCoord. It returns the corresponding position in image coordinates as a PositionD. <pre class="fragment">&gt;&gt;&gt; image_pos = wcs.toImage(world_pos)
 </pre></li>
-<li>The second converts a surface brightness profile (a GSObject) from world coordinates to image coordinates, returning the profile in image coordinates as a new GSObject. For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the profile is located so the right transformation can be performed. <pre class="fragment">image_profile = wcs.toImage(world_profile, image_pos=None, world_pos=None)</pre> </li>
+<li>The second converts a surface brightness profile (a GSObject) from world coordinates to image coordinates, returning the profile in image coordinates as a new GSObject. For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the profile is located so the right transformation can be performed. <pre class="fragment">&gt;&gt;&gt; image_profile = wcs.toImage(world_profile, image_pos=None, world_pos=None)</pre> </li>
 </ol>
 
 </div>
@@ -1149,9 +1149,9 @@ v = (y-y0) * scale + v0
 <p>Convert from image coordinates to world coordinates. </p>
 <p>There are essentially two overloaded versions of this function here.</p>
 <ol type="1">
-<li>The first converts a position from image coordinates to world coordinates. The argument may be either a PositionD or PositionI argument. It returns the corresponding position in world coordinates as a PositionD if the WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a>, or a CelestialCoord if it is a <a class="el" href="classgalsim_1_1wcs_1_1_celestial_w_c_s.html" title="A CelestialWCS is a BaseWCS whose world coordinates are on the celestial sphere. ">CelestialWCS</a>. <pre class="fragment">world_pos = wcs.toWorld(image_pos)
+<li>The first converts a position from image coordinates to world coordinates. The argument may be either a PositionD or PositionI argument. It returns the corresponding position in world coordinates as a PositionD if the WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a>, or a CelestialCoord if it is a <a class="el" href="classgalsim_1_1wcs_1_1_celestial_w_c_s.html" title="A CelestialWCS is a BaseWCS whose world coordinates are on the celestial sphere. ">CelestialWCS</a>. <pre class="fragment">&gt;&gt;&gt; world_pos = wcs.toWorld(image_pos)
 </pre></li>
-<li>The second converts a surface brightness profile (a GSObject) from image coordinates to world coordinates, returning the profile in world coordinates as a new GSObject. For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the profile is located, so the right transformation can be performed. <pre class="fragment">world_profile = wcs.toWorld(image_profile, image_pos=None, world_pos=None)</pre> </li>
+<li>The second converts a surface brightness profile (a GSObject) from image coordinates to world coordinates, returning the profile in world coordinates as a new GSObject. For non-uniform WCS transforms, you must provide either <code>image_pos</code> or <code>world_pos</code> to say where the profile is located, so the right transformation can be performed. <pre class="fragment">&gt;&gt;&gt; world_profile = wcs.toWorld(image_profile, image_pos=None, world_pos=None)</pre> </li>
 </ol>
 
 </div>
@@ -1245,18 +1245,18 @@ v = (y-y0) * scale + v0
 <p>Recenter the current WCS function at a new origin location, returning the new WCS. </p>
 <p>This function creates a new WCS instance (always a non-local WCS) that treats the origin position the same way the current WCS treats (x,y) = (0,0).</p>
 <p>If the current WCS is a local WCS, this essentially declares where on the image you want the origin of the world coordinate system to be. i.e. where is (u,v) = (0,0). So, for example, to set a WCS that has a constant pixel size with the world coordinates centered at the center of an image, you could write: </p>
-<pre class="fragment">    wcs = galsim.PixelScale(scale).withOrigin(im.center())
+<pre class="fragment">&gt;&gt;&gt; wcs = galsim.PixelScale(scale).withOrigin(im.center())
 </pre><p>This is equivalent to the following: </p>
-<pre class="fragment">    wcs = galsim.OffsetWCS(scale, origin=im.center())
+<pre class="fragment">&gt;&gt;&gt; wcs = galsim.OffsetWCS(scale, origin=im.center())
 </pre><p>For non-local WCS types, the origin defines the location in the image coordinate system should mean the same thing as (x,y) = (0,0) does for the current WCS. The following example should work regardless of what kind of WCS this is: </p>
-<pre class="fragment">    world_pos1 = wcs.toWorld(PositionD(0,0))
-    wcs2 = wcs.withOrigin(new_origin)
-    world_pos2 = wcs2.toWorld(new_origin)
-    # world_pos1 should be equal to world_pos2
-</pre><p>Furthermore, if the current WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a> (wcs.isCelestial() == False) you may also provide a world_origin argument which defines what (u,v) position you want to correspond to the new origin. Continuing the previous example: </p>
-<pre class="fragment">    wcs3 = wcs.withOrigin(new_origin, new_world_origin)
-    world_pos3 = wcs3.toWorld(new_origin)
-    # world_pos3 should be equal to new_world_origin
+<pre class="fragment">&gt;&gt;&gt; world_pos1 = wcs.toWorld(PositionD(0,0))
+&gt;&gt;&gt; wcs2 = wcs.withOrigin(new_origin)
+&gt;&gt;&gt; world_pos2 = wcs2.toWorld(new_origin)
+&gt;&gt;&gt; # world_pos1 should be equal to world_pos2
+</pre><p>Furthermore, if the current WCS is a <a class="el" href="classgalsim_1_1wcs_1_1_euclidean_w_c_s.html" title="Our class hierarchy is: ">EuclideanWCS</a> (wcs.isCelestial() == False) you may also provide a <code>world_origin</code> argument which defines what (u,v) position you want to correspond to the new origin. Continuing the previous example: </p>
+<pre class="fragment">&gt;&gt;&gt; wcs3 = wcs.withOrigin(new_origin, new_world_origin)
+&gt;&gt;&gt; world_pos3 = wcs3.toWorld(new_origin)
+&gt;&gt;&gt; # world_pos3 should be equal to new_world_origin
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">origin</td><td>The image coordinate position to use as the origin. </td></tr>
@@ -1326,7 +1326,7 @@ v = (y-y0) * scale + v0
 <p>This is normally called automatically from within the <a class="el" href="namespacegalsim_1_1fits.html#a9f3f9dce30942b81d85d2f8928ece310" title="Now the primary write functions. ">galsim.fits.write()</a> function.</p>
 <p>The code will attempt to write standard FITS WCS keys so that the WCS will be readable by other software (e.g. ds9). It may not be able to do so accurately, in which case a linearized version will be used instead. (Specifically, it will use the local affine transform with respect to the image center.)</p>
 <p>However, this is not necessary for the WCS to survive a round trip through the FITS header, as it will also write GalSim-specific key words that should allow it to reconstruct the WCS correctly.</p>
-<p>Caveat: For <a class="el" href="classgalsim_1_1wcs_1_1_u_v_function.html" title="This WCS takes two arbitrary functions for u(x,y) and v(x,y). ">UVFunction</a> and <a class="el" href="classgalsim_1_1wcs_1_1_ra_dec_function.html" title="This WCS takes an arbitrary function for the Right Ascension and Declination. ">RaDecFunction</a>, if the functions are real python functions (rather than a string that is converted to a function), then the mechanism we use to convert the function to a string that can be written to the header has a few limitations.</p>
+<p>Caveat: For <a class="el" href="classgalsim_1_1wcs_1_1_u_v_function.html" title="This WCS takes two arbitrary functions for u(x,y) and v(x,y). ">UVFunction</a> and <a class="el" href="classgalsim_1_1wcs_1_1_ra_dec_function.html" title="This WCS takes an arbitrary function for the Right Ascension (ra) and Declination (dec)...">RaDecFunction</a>, if the functions are real python functions (rather than a string that is converted to a function), then the mechanism we use to convert the function to a string that can be written to the header has a few limitations.</p>
 <ol type="1">
 <li>It apparently only works for cpython implementations.</li>
 <li>It probably won't work to write from one version of python and read from another. (At least for major version differences.)</li>
@@ -1336,7 +1336,7 @@ v = (y-y0) * scale + v0
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">header</td><td>A galsim.FitsHeader object to write the data to. </td></tr>
+    <tr><td class="paramname">header</td><td>A FitsHeader object to write the data to. </td></tr>
     <tr><td class="paramname">bounds</td><td>The bounds of the image. </td></tr>
   </table>
   </dd>

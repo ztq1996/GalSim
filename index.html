@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -87,14 +87,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <pre class="fragment">http://great3challenge.info/
 </pre><p>However, the code has numerous additional capabilities beyond those needed for the challenge, and has been useful for a number of projects that needed to simulate high-fidelity galaxy images with accurate sizes and shears. At the end of this file, there is a list of the code capabilities and plans for future development.</p>
 <h2>Distribution </h2>
-<p>The current released version of GalSim is version 1.0. To get the code, you can grab the tarball (or zip file) from </p>
-<pre class="fragment">https://github.com/GalSim-developers/GalSim/releases/tag/v1.0.0
+<p>The current released version of GalSim is version 1.1. To get the code, you can grab the tarball (or zip file) from </p>
+<pre class="fragment">https://github.com/GalSim-developers/GalSim/releases/tag/v1.1.0
 </pre><p>Also, feel free to fork the repository: </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/fork
 </pre><p>Or clone the master branch with either of the following: </p>
 <pre class="fragment">git clone git@github.com:GalSim-developers/GalSim.git
 git clone https://github.com/GalSim-developers/GalSim.git
 </pre><p>The code is also distributed via Fink, Macports, and Homebrew for Mac users. See <a class="el" href="_i_n_s_t_a_l_l_8md.html">INSTALL.md</a> for more information.</p>
+<p>The code is licensed under a BSD-style license. See the file LICENSE for more details.</p>
 <h2>Keeping up-to-date with GalSim </h2>
 <p>There is a GalSim mailing list, organized through the Google Group galsim-announce. Members of the group will receive news and updates about the GalSim code, including notifications of major version releases, new features and bugfixes.</p>
 <p>You do not need a Google Account to subscribe to the group, simply send any email to </p>
@@ -120,7 +121,7 @@ git clone https://github.com/GalSim-developers/GalSim.git
 </pre></li>
 </ul>
 <h2>Reference documentation </h2>
-<p>For an overview of GalSim workflow and python tools, please see <code>doc/GalSim_Quick_Reference.pdf</code> in the GalSim repository. A guide to using the configuration files to generate simulations, a FAQ for installation issues, and other useful references can be found on the GalSim wiki, </p>
+<p>For an overview of GalSim workflow and python tools, please see the file <code>doc/GalSim_Quick_Reference.pdf</code> in the GalSim repository. A guide to using the configuration files to generate simulations, a FAQ for installation issues, and other useful references can be found on the GalSim wiki, </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/wiki
 </pre><p>More thorough documentation for all parts of the code can be found in the doxygen documentation mentioned in the previous section, or in the python docstrings in <code>galsim/*.py</code>.</p>
 <h2>Repository directory structure </h2>
@@ -141,20 +142,12 @@ git clone https://github.com/GalSim-developers/GalSim.git
 <p>There are a number of scripts in <code>examples/</code> that demonstrate how the code can be used. These are called <code>demo1.py</code>...<code>demo12.py</code>. You can run them by typing (e.g.) <code>python demo1.py</code> while sitting in <code>examples/</code>, All demo scripts are designed to be run in the <code>examples/</code> directory. Some of them access files in subdirectories of the <code>examples/</code> directory, so they would not work correctly from other locations.</p>
 <p>A completely parallel sequence of configuration files, called <code>demo1.yaml</code>... <code>demo12.yaml</code>, demonstrates how to make the same set of simulations using config files that are parsed by the executable <code>bin/galsim</code>.</p>
 <p>As the project develops through further versions, and adds further capabilities to the software, more demo scripts may be added to <code>examples/</code> to illustrate what GalSim can do.</p>
-<h2>Additional scripts </h2>
-<p>There are some additional scripts in the <code>examples/</code> directory as well. These utilities take various command-line arguments, which are explained in comments at the top of each file.</p>
-<ul>
-<li><code>ShootInterpolated.py</code> is a script that takes as input a filename for a FITS image, which it will simulate (optionally sheared and/or resampled) via photon-shooting.</li>
-<li><code>MeasMoments.py</code> can be used to measure the adaptive moments (best-fit elliptical Gaussian) for a FITS image.</li>
-<li><code>MeasShape.py</code> can be used to carry out PSF correction using one of four methods, given FITS images of the galaxy and PSF.</li>
-<li><code>des.py</code> creates an image based on DES PSF estimates using DES catalogs as input. It is primarily designed to demonstrate the usage of the des module, and is accompanies by a config file, <code>des.yaml</code> that does the same thing.</li>
-</ul>
 <h2>Tagged versions </h2>
 <p>Each GalSim release is tagged in git with the tag name <code>vX.X.X</code>. You can see the available tags using the command </p>
 <pre class="fragment">git tag -l
 </pre><p>at a terminal from within the repository. In addition to the official releases, we also have tags for various other milestones that were important at one time or another.</p>
 <p>The version of the code at any given snapshot can be downloaded from our GitHub webpage, or checked out from the repository using the tag name, e.g.: </p>
-<pre class="fragment">git checkout v1.0.0
+<pre class="fragment">git checkout v1.1.0
 </pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.)</p>
 <p>For a version history and a description of how the current version of the code differs from the last tagged version, see <a class="el" href="_h_i_s_t_o_r_y_8md.html">HISTORY.md</a> and <a class="el" href="_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a> (respectively). These files are found in the main GalSim directory, and are also displayed on our wiki which is linked above.</p>
 <h2>Summary of current capabilities </h2>

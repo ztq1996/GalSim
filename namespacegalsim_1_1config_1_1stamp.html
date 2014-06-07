@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -109,12 +109,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a974de3e2e2a4a2cc8c258bf935777b1f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a974de3e2e2a4a2cc8c258bf935777b1f">BuildGal</a></td></tr>
 <tr class="memdesc:a974de3e2e2a4a2cc8c258bf935777b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the field config['gal'] returning the built gal object.  <a href="#a974de3e2e2a4a2cc8c258bf935777b1f">More...</a><br/></td></tr>
 <tr class="separator:a974de3e2e2a4a2cc8c258bf935777b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afece785b2079817ed2d4558689d4da5f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#afece785b2079817ed2d4558689d4da5f">DrawStampFFT</a></td></tr>
-<tr class="memdesc:afece785b2079817ed2d4558689d4da5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf, pix and gal profiles (which may be None) using the FFT method for doing the convolution.  <a href="#afece785b2079817ed2d4558689d4da5f">More...</a><br/></td></tr>
-<tr class="separator:afece785b2079817ed2d4558689d4da5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35f6111ac506b8a68755e424ddbdc726"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a35f6111ac506b8a68755e424ddbdc726">DrawStampPhot</a></td></tr>
-<tr class="memdesc:a35f6111ac506b8a68755e424ddbdc726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf and gal profiles (which may be None) using the photon shooting method for doing the convolution.  <a href="#a35f6111ac506b8a68755e424ddbdc726">More...</a><br/></td></tr>
-<tr class="separator:a35f6111ac506b8a68755e424ddbdc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f614193281f91db93898a58abc61acd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#a0f614193281f91db93898a58abc61acd">DrawStamp</a></td></tr>
+<tr class="memdesc:a0f614193281f91db93898a58abc61acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf and gal profiles (which may be None) using the FFT method for doing the convolution.  <a href="#a0f614193281f91db93898a58abc61acd">More...</a><br/></td></tr>
+<tr class="separator:a0f614193281f91db93898a58abc61acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8ad4122a54595985074f3fecb65ce5f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1stamp.html#af8ad4122a54595985074f3fecb65ce5f">DrawPSFStamp</a></td></tr>
 <tr class="memdesc:af8ad4122a54595985074f3fecb65ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image using the given psf profile.  <a href="#af8ad4122a54595985074f3fecb65ce5f">More...</a><br/></td></tr>
 <tr class="separator:af8ad4122a54595985074f3fecb65ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -404,13 +401,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>no_pixel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>real_space</em>&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -425,12 +416,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afece785b2079817ed2d4558689d4da5f"></a>
+<a class="anchor" id="a0f614193281f91db93898a58abc61acd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.config.stamp.DrawStampFFT </td>
+          <td class="memname">def galsim.config.stamp.DrawStamp </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>psf</em>, </td>
@@ -469,13 +460,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>no_pixel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>real_space</em>&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -485,66 +470,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draw an image using the given psf, pix and gal profiles (which may be None) using the FFT method for doing the convolution. </p>
-<dl class="section return"><dt>Returns</dt><dd>the resulting image. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a35f6111ac506b8a68755e424ddbdc726"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.config.stamp.DrawStampPhot </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>psf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>gal</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>xsize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ysize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>rng</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>offset</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw an image using the given psf and gal profiles (which may be None) using the photon shooting method for doing the convolution. </p>
+<p>Draw an image using the given psf and gal profiles (which may be None) using the FFT method for doing the convolution. </p>
 <dl class="section return"><dt>Returns</dt><dd>the resulting image. </dd></dl>
 
 </div>

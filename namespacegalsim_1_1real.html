@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -195,11 +195,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">target_pixel_scale</td><td>The pixel scale for the final image, in arcsec. </td></tr>
     <tr><td class="paramname">g1</td><td>First component of shear to impose (components defined with respect to pixel coordinates), [default: 0] </td></tr>
     <tr><td class="paramname">g2</td><td>Second component of shear to impose, [default: 0] </td></tr>
-    <tr><td class="paramname">rotation_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> by which to rotate the galaxy (must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instance). [default: None] </td></tr>
-    <tr><td class="paramname">rand_rotate</td><td>Should the galaxy be rotated by some random angle? [default: True; unless rotation_angle is set, then False] </td></tr>
+    <tr><td class="paramname">rotation_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> by which to rotate the galaxy (must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance). [default: None] </td></tr>
+    <tr><td class="paramname">rand_rotate</td><td>Should the galaxy be rotated by some random angle? [default: True; unless <code>rotation_angle</code> is set, then False] </td></tr>
     <tr><td class="paramname">rng</td><td>A <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> instance to use for the random selection or rotation angle. [default: None] </td></tr>
     <tr><td class="paramname">target_flux</td><td>The target flux in the output galaxy image, [default: 1000.] </td></tr>
-    <tr><td class="paramname">image</td><td>As with the GSObject.draw() function, if an image is provided, then it will be used and returned. [default: None, which means an appropriately-sized image will be created.]</td></tr>
+    <tr><td class="paramname">image</td><td>As with the GSObject.drawImage() function, if an image is provided, then it will be used and returned. [default: None, which means an appropriately-sized image will be created.]</td></tr>
   </table>
   </dd>
 </dl>

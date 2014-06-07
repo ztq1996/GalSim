@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7901ebab205629ba2501ac8f340367b1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1table_1_1_lookup_table.html#a7901ebab205629ba2501ac8f340367b1">__init__</a></td></tr>
 <tr class="separator:a7901ebab205629ba2501ac8f340367b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4eec746d3c0fe7130f16b41e2a608f7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1table_1_1_lookup_table.html#ae4eec746d3c0fe7130f16b41e2a608f7">__call__</a></td></tr>
-<tr class="memdesc:ae4eec746d3c0fe7130f16b41e2a608f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> to get f(x) at some x value(s).  <a href="#ae4eec746d3c0fe7130f16b41e2a608f7">More...</a><br/></td></tr>
+<tr class="memdesc:ae4eec746d3c0fe7130f16b41e2a608f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> to get <code>f(x)</code> at some <code>x</code> value(s).  <a href="#ae4eec746d3c0fe7130f16b41e2a608f7">More...</a><br/></td></tr>
 <tr class="separator:ae4eec746d3c0fe7130f16b41e2a608f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a085639e85d058d068bb0b8c7dd094c04"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1table_1_1_lookup_table.html#a085639e85d058d068bb0b8c7dd094c04">getArgs</a></td></tr>
 <tr class="separator:a085639e85d058d068bb0b8c7dd094c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,18 +145,18 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> represents a lookup table to store function values that may be slow to calculate, for which interpolating from a lookup table is sufficiently accurate. </p>
-<p>A <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> may be constructed from two arrays (lists, tuples, or Numpy arrays of floats/doubles). </p>
-<pre class="fragment">args = [...]
-vals = []
-for arg in args:
-    val = calculateVal(arg)
-    vals.append(val)
-table = galsim.LookupTable(x=args,f=vals)
+<p>A <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> may be constructed from two arrays (lists, tuples, or NumPy arrays of floats/doubles). </p>
+<pre class="fragment">&gt;&gt;&gt; args = [...]
+&gt;&gt;&gt; vals = []
+&gt;&gt;&gt; for arg in args:
+...     val = calculateVal(arg)
+...     vals.append(val)
+&gt;&gt;&gt; table = galsim.LookupTable(x=args,f=vals)
 </pre><p>Then you can use this table as a replacement for the slow calculation: </p>
-<pre class="fragment">other_args = [...]
-for arg in other_args:
-    val = table(arg)
-    [... use val ...]
+<pre class="fragment">&gt;&gt;&gt; other_args = [...]
+&gt;&gt;&gt; for arg in other_args:
+...     val = table(arg)
+...     [... use val ...]
 </pre><p>The default interpolation method is cubic spline interpolation. This is usually the best choice, but we also provide three other options, which can be specified by the <code>interpolant</code> kwarg. The choices are 'floor', 'ceil', 'linear' and 'spline':</p>
 <ul>
 <li>'floor' takes the value from the previous argument in the table.</li>
@@ -164,13 +164,13 @@ for arg in other_args:
 <li>'linear' does linear interpolation between these two values.</li>
 <li>'spline' uses a cubic spline interpolation, so the interpolated values are smooth at each argument in the table.</li>
 </ul>
-<p>Another option is to read in the values from an ascii file. The file should have two columns of numbers, which are taken to be the x and f values.</p>
+<p>Another option is to read in the values from an ascii file. The file should have two columns of numbers, which are taken to be the <code>x</code> and <code>f</code> values.</p>
 <p>The user can also opt to interpolate in log(x) and/or log(f), though this is not the default. It may be a wise choice depending on the particular function, e.g., for a nearly power-law f(x) (or at least one that is locally power-law-ish for much of the x range) then it might be a good idea to interpolate in log(x) and log(f) rather than x and f.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The list, tuple, or Numpy array of x values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either x and f or file is required.] </td></tr>
-    <tr><td class="paramname">f</td><td>The list, tuple, or Numpy array of f(x) values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either x and f or file is required.] </td></tr>
-    <tr><td class="paramname">file</td><td>A file from which to read the (x,f) pairs. [Either x and f, or file is required] </td></tr>
+    <tr><td class="paramname">x</td><td>The list, tuple, or NumPy array of <code>x</code> values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either <code>x</code> and <code>f</code> or <code>file</code> is required.] </td></tr>
+    <tr><td class="paramname">f</td><td>The list, tuple, or NumPy array of <code>f(x)</code> values (floats, doubles, or ints, which get silently converted to floats for the purpose of interpolation). [Either <code>x</code> and <code>f</code> or <code>file</code> is required.] </td></tr>
+    <tr><td class="paramname">file</td><td>A file from which to read the <code>(x,f)</code> pairs. [Either <code>x</code> and <code>f</code>, or <code>file</code> is required] </td></tr>
     <tr><td class="paramname">interpolant</td><td>The interpolant to use, with the options being 'floor', 'ceil', 'linear' and 'spline'. [default: 'spline'] </td></tr>
     <tr><td class="paramname">x_log</td><td>Set to True if you wish to interpolate using log(x) rather than x. Note that all inputs / outputs will still be x, it's just a question of how the interpolation is done. [default: False] </td></tr>
     <tr><td class="paramname">f_log</td><td>Set to True if you wish to interpolate using log(f) rather than f. Note that all inputs / outputs will still be f, it's just a question of how the interpolation is done. [default: False] </td></tr>
@@ -259,15 +259,15 @@ for arg in other_args:
       </table>
 </div><div class="memdoc">
 
-<p>Interpolate the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> to get f(x) at some x value(s). </p>
-<p>When the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> object is called with a single argument, it returns the value at that argument. An exception will be thrown automatically by the _LookupTable class if the x value is outside the range of the original tabulated values. The value that is returned is the same type as that provided as an argument, e.g., if a single value x is provided then a single value of f is returned; if a tuple of x values is provided then a tuple of f values is returned; and so on. Even if interpolation was done using the <code>x_log</code> option, the user should still provide x rather than log(x).</p>
+<p>Interpolate the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> to get <code>f(x)</code> at some <code>x</code> value(s). </p>
+<p>When the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> object is called with a single argument, it returns the value at that argument. An exception will be thrown automatically by the _LookupTable class if the <code>x</code> value is outside the range of the original tabulated values. The value that is returned is the same type as that provided as an argument, e.g., if a single value <code>x</code> is provided then a single value of <code>f</code> is returned; if a tuple of <code>x</code> values is provided then a tuple of <code>f</code> values is returned; and so on. Even if interpolation was done using the <code>x_log</code> option, the user should still provide <code>x</code> rather than <code>log(x)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The x value(s) for which f(x) should be calculated via interpolation on the original (x, f) lookup table. x can be a single float/double, or a tuple, list, or arbitrarily shaped Numpy array.</td></tr>
+    <tr><td class="paramname">x</td><td>The <code>x</code> value(s) for which <code>f(x)</code> should be calculated via interpolation on the original <code>(x,f)</code> lookup table. <code>x</code> can be a single float/double, or a tuple, list, or arbitrarily shaped NumPy array.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the interpolated f(x) value(s). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the interpolated <code>f(x)</code> value(s). </dd></dl>
 
 </div>
 </div>

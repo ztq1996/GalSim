@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>This is class defines a position on the celestial sphere, normally given by two angles, ra and dec.  
+<p>This class defines a position on the celestial sphere, normally given by two angles, <code>ra</code> and <code>dec</code>.  
  <a href="classgalsim_1_1celestial_1_1_celestial_coord.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.celestial.CelestialCoord:</div>
@@ -121,19 +121,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2b8b43b29334ad7acc0a6eba820f2041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the great circle distance between this coord and another one.  <a href="#a2b8b43b29334ad7acc0a6eba820f2041">More...</a><br/></td></tr>
 <tr class="separator:a2b8b43b29334ad7acc0a6eba820f2041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba630c55a34994f8963388e81c7027de"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#aba630c55a34994f8963388e81c7027de">angleBetween</a></td></tr>
-<tr class="memdesc:aba630c55a34994f8963388e81c7027de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the open angle at the location of the current coord between coord1 and coord2.  <a href="#aba630c55a34994f8963388e81c7027de">More...</a><br/></td></tr>
+<tr class="memdesc:aba630c55a34994f8963388e81c7027de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the open angle at the location of the current coord between <code>coord1</code> and <code>coord2</code>.  <a href="#aba630c55a34994f8963388e81c7027de">More...</a><br/></td></tr>
 <tr class="separator:aba630c55a34994f8963388e81c7027de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76297a7a5dfa0add84f8613633cb1883"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883">project</a></td></tr>
-<tr class="memdesc:a76297a7a5dfa0add84f8613633cb1883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the currect coord as the center point of a tangent plane projection to project the other coordinate onto that plane.  <a href="#a76297a7a5dfa0add84f8613633cb1883">More...</a><br/></td></tr>
+<tr class="memdesc:a76297a7a5dfa0add84f8613633cb1883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the currect coord as the center point of a tangent plane projection to project the <code>other</code> coordinate onto that plane.  <a href="#a76297a7a5dfa0add84f8613633cb1883">More...</a><br/></td></tr>
 <tr class="separator:a76297a7a5dfa0add84f8613633cb1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59055fd194356ebb8656d7217c06b0c8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a59055fd194356ebb8656d7217c06b0c8">project_rad</a></td></tr>
-<tr class="memdesc:a59055fd194356ebb8656d7217c06b0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is basically identical to the project function except that the input ra, dec are given in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object.  <a href="#a59055fd194356ebb8656d7217c06b0c8">More...</a><br/></td></tr>
+<tr class="memdesc:a59055fd194356ebb8656d7217c06b0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is basically identical to the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883" title="Use the currect coord as the center point of a tangent plane projection to project the other coordina...">project()</a> function except that the input <code>ra</code>, <code>dec</code> are given in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object.  <a href="#a59055fd194356ebb8656d7217c06b0c8">More...</a><br/></td></tr>
 <tr class="separator:a59055fd194356ebb8656d7217c06b0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c46e7040c120420b5673ddc1aa84a67"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a0c46e7040c120420b5673ddc1aa84a67">deproject</a></td></tr>
-<tr class="memdesc:a0c46e7040c120420b5673ddc1aa84a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do the reverse process from the project function.  <a href="#a0c46e7040c120420b5673ddc1aa84a67">More...</a><br/></td></tr>
+<tr class="memdesc:a0c46e7040c120420b5673ddc1aa84a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do the reverse process from the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883" title="Use the currect coord as the center point of a tangent plane projection to project the other coordina...">project()</a> function.  <a href="#a0c46e7040c120420b5673ddc1aa84a67">More...</a><br/></td></tr>
 <tr class="separator:a0c46e7040c120420b5673ddc1aa84a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a60ad6aba00523f336d8aec2218016a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a3a60ad6aba00523f336d8aec2218016a">deproject_rad</a></td></tr>
-<tr class="memdesc:a3a60ad6aba00523f336d8aec2218016a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is basically identical to the deproject function except that the output ra, dec are returned as a tuple (ra, dec) in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object.  <a href="#a3a60ad6aba00523f336d8aec2218016a">More...</a><br/></td></tr>
+<tr class="memdesc:a3a60ad6aba00523f336d8aec2218016a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is basically identical to the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a0c46e7040c120420b5673ddc1aa84a67" title="Do the reverse process from the project() function. ">deproject()</a> function except that the output <code>ra</code>, <code>dec</code> are returned as a tuple (ra, dec) in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object.  <a href="#a3a60ad6aba00523f336d8aec2218016a">More...</a><br/></td></tr>
 <tr class="separator:a3a60ad6aba00523f336d8aec2218016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff29e34d40566b6b866ccba960027046"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#aff29e34d40566b6b866ccba960027046">deproject_jac</a></td></tr>
 <tr class="memdesc:aff29e34d40566b6b866ccba960027046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the jacobian of the deprojection.  <a href="#aff29e34d40566b6b866ccba960027046">More...</a><br/></td></tr>
@@ -150,29 +150,29 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8b760ee74bfac026edf4fe354c6cf88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. </p>
-<p>Mostly this class exists to enforce the units when a position is really a location on the celestial sphere rather than using PositionD as we normally do for positions. In that role, it can be considered a lightweight wrapper around two angles, ra and dec. They are accessible as coord.ra and coord.dec.</p>
+<div class="textblock"><p>This class defines a position on the celestial sphere, normally given by two angles, <code>ra</code> and <code>dec</code>. </p>
+<p>Mostly this class exists to enforce the units when a position is really a location on the celestial sphere rather than using PositionD as we normally do for positions. In that role, it can be considered a lightweight wrapper around two angles, <code>ra</code> and <code>dec</code>. They are accessible as <code>coord.ra</code> and <code>coord.dec</code>.</p>
 <p>However, there are a few useful functions that we provide.</p>
 <p>The distance between two coordinate positions can be calculated with </p>
-<pre class="fragment">    d = coord.distanceTo(other_coord)
+<pre class="fragment">&gt;&gt;&gt; d = coord.distanceTo(other_coord)
 </pre><p>There are several tangent plane projections you can use:</p>
 <ul>
 <li>a Lambert projection, which preserves area</li>
 <li>a stereographic projection, which preserves angles</li>
 <li>a gnomonic projection, which makes all great circles straight lines</li>
-<li>a Postel projection, which preserves distances from the tangent point See the project and deproject functions for details.</li>
+<li>a Postel projection, which preserves distances from the tangent point See the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883" title="Use the currect coord as the center point of a tangent plane projection to project the other coordina...">project()</a> and <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a0c46e7040c120420b5673ddc1aa84a67" title="Do the reverse process from the project() function. ">deproject()</a> functions for details.</li>
 </ul>
 <p>You can also precess a coordinate from one epoch to another and get galactic coordinates with, e.g. </p>
-<pre class="fragment">    coord1950 = coord2000.precess(2000, 1950)
-    el, b = coord.galactic()
+<pre class="fragment">&gt;&gt;&gt; coord1950 = coord2000.precess(2000, 1950)
+&gt;&gt;&gt; el, b = coord.galactic()
 </pre><p>We don't use either of these for anything within GalSim, but I had the code to do it lying around, so I included it here in case someone might find it useful.</p>
 <h2>Initialization </h2>
-<p>A <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object is initialized with the following command: </p>
-<pre class="fragment">coord = galsim.CelestialCoord(ra, dec)
+<p>A <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object is initialized with the following command: </p>
+<pre class="fragment">&gt;&gt;&gt; coord = galsim.CelestialCoord(ra, dec)
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ra</td><td>The right ascension. Must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> object. </td></tr>
-    <tr><td class="paramname">dec</td><td>The declination. Must be a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> object. </td></tr>
+    <tr><td class="paramname">ra</td><td>The right ascension. Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> object. </td></tr>
+    <tr><td class="paramname">dec</td><td>The declination. Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -256,7 +256,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Find the open angle at the location of the current coord between coord1 and coord2. </p>
+<p>Find the open angle at the location of the current coord between <code>coord1</code> and <code>coord2</code>. </p>
 
 </div>
 </div>
@@ -322,7 +322,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Do the reverse process from the project function. </p>
+<p>Do the reverse process from the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883" title="Use the currect coord as the center point of a tangent plane projection to project the other coordina...">project()</a> function. </p>
 <p>i.e. This takes in a position (u,v) as a PositionD object and returns the corresponding celestial coordinate, using the current coordinate as the center point of the tangent plane projection. </p>
 
 </div>
@@ -364,7 +364,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the jacobian of the deprojection. </p>
-<p>i.e. if the input position is (u,v) (in arcsec) then return the matrix is</p>
+<p>i.e. if the input position is (u,v) (in arcsec) then the return matrix is</p>
 <p>J = ( dra/du cos(dec) dra/dv cos(dec) ) ( ddec/du ddec/dv )</p>
 <dl class="section return"><dt>Returns</dt><dd>the matrix as a tuple (J00, J01, J10, J11) </dd></dl>
 
@@ -406,9 +406,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This is basically identical to the deproject function except that the output ra, dec are returned as a tuple (ra, dec) in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object. </p>
+<p>This is basically identical to the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a0c46e7040c120420b5673ddc1aa84a67" title="Do the reverse process from the project() function. ">deproject()</a> function except that the output <code>ra</code>, <code>dec</code> are returned as a tuple (ra, dec) in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object. </p>
 <p>Also, the input is taken as a tuple (u,v), rather than packaged as a PositionD object.</p>
-<p>The main advantage to this is that it will work if u and v are numpy arrays, in which case the output ra, dec will also be numpy arrays. </p>
+<p>The main advantage to this is that it will work if <code>u</code> and <code>v</code> are NumPy arrays, in which case the output <code>ra</code>, <code>dec</code> will also be NumPy arrays. </p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the great circle distance between this coord and another one. </p>
-<p>The return value is a <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> object </p>
+<p>The return value is an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> object </p>
 
 </div>
 </div>
@@ -467,7 +467,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the longitude and latitude in galactic coordinates corresponding to this position. </p>
 <p>The formulae are implemented in terms of the 1950 coordinates, so we need to precess from the current epoch to 1950. The current epoch is assumed to be 2000 by default, but you may also specify a different value with the epoch parameter.</p>
-<dl class="section return"><dt>Returns</dt><dd>the longitude and latitude as a tuple (el, b), given as <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a> instances. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the longitude and latitude as a tuple (el, b), given as <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instances. </dd></dl>
 
 </div>
 </div>
@@ -502,7 +502,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function precesses equatorial ra and dec from one epoch to another. </p>
-<p>It is adapted from a set of fortran subroutines found in precess.f, which were based on (a) pages 30-34 fo the Explanatory Supplement to the AE, (b) Lieske, et al. (1977) A&amp;A 58, 1-16, and (c) Lieske (1979) A&amp;A 73, 282-284. </p>
+<p>It is adapted from a set of fortran subroutines based on (a) pages 30-34 of the Explanatory Supplement to the AE, (b) Lieske, et al. (1977) A&amp;A 58, 1-16, and (c) Lieske (1979) A&amp;A 73, 282-284. </p>
 
 </div>
 </div>
@@ -536,7 +536,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Use the currect coord as the center point of a tangent plane projection to project the other coordinate onto that plane. </p>
+<p>Use the currect coord as the center point of a tangent plane projection to project the <code>other</code> coordinate onto that plane. </p>
 <p>This function return the position (u,v) in the Euclidean coordinate system defined by a tangent plane projection around the current coordinate, with +v pointing north and +u pointing west.</p>
 <p>There are currently three options for the projection, which you can specify with the optional <code>projection</code> keyword argument: </p>
 <pre class="fragment">'lambert' [default] uses a Lambert azimuthal projection, which preserves
@@ -593,9 +593,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This is basically identical to the project function except that the input ra, dec are given in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This is class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object. </p>
+<p>This is basically identical to the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883" title="Use the currect coord as the center point of a tangent plane projection to project the other coordina...">project()</a> function except that the input <code>ra</code>, <code>dec</code> are given in radians rather than packaged as a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> object. </p>
 <p>Also, the output is returned as a tuple (x,y), rather than packaged as a PositionD object.</p>
-<p>The main advantage to this is that it will work if ra and dec are numpy arrays, in which case the output x, y will also be numpy arrays. </p>
+<p>The main advantage to this is that it will work if <code>ra</code> and <code>dec</code> are NumPy arrays, in which case the output <code>x</code>, <code>y</code> will also be NumPy arrays. </p>
 
 </div>
 </div>

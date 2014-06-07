@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -132,8 +132,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a18d9b49746fa0c2eb86dcbdc0daf7c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab377f0ccc79862a81b5b66db245c6783"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html#ab377f0ccc79862a81b5b66db245c6783">omega_c</a></td></tr>
 <tr class="separator:ab377f0ccc79862a81b5b66db245c6783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c1918db3f6a91684a9df30975682b1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1nfw__halo_1_1_cosmology.html#a8c1918db3f6a91684a9df30975682b1a">omega_r</a></td></tr>
-<tr class="separator:a8c1918db3f6a91684a9df30975682b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Basic cosmology calculations. </p>
@@ -141,8 +139,8 @@ Public Attributes</h2></td></tr>
 <p>Based on Matthias Bartelmann's libastro.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">omega_m</td><td>Present day energy density of matter relative to critical density. </td></tr>
-    <tr><td class="paramname">omega_lam</td><td>Present day density of Dark Energy relative to critical density. </td></tr>
+    <tr><td class="paramname">omega_m</td><td>Present day energy density of matter relative to critical density. [default: 0.3] </td></tr>
+    <tr><td class="paramname">omega_lam</td><td>Present day density of Dark Energy relative to critical density. [default: 0.7] </td></tr>
   </table>
   </dd>
 </dl>
@@ -245,11 +243,11 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compute angular diameter distance between two redshifts in units of c/H0. </p>
-<p>In order to get the distance in Mpc/h, multiply by ~3000.</p>
+<p>In order to get the distance in Mpc/h, multiply by c/H0~3000.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">z</td><td>Redshift. </td></tr>
-    <tr><td class="paramname">z_ref</td><td>Reference redshift, with z_ref &lt;= z. </td></tr>
+    <tr><td class="paramname">z_ref</td><td>Reference redshift, with z_ref &lt;= z. [default: 0] </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,18 +319,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.nfw_halo.Cosmology.omega_m</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8c1918db3f6a91684a9df30975682b1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.nfw_halo.Cosmology.omega_r</td>
         </tr>
       </table>
 </div><div class="memdoc">

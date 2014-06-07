@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -125,13 +125,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abad3d5dc6a3ceb20f382364d912c55dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in an input catalog from a FITS file.  <a href="#abad3d5dc6a3ceb20f382364d912c55dd">More...</a><br/></td></tr>
 <tr class="separator:abad3d5dc6a3ceb20f382364d912c55dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad939fe141f1d5240970e92c7951d5d2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1catalog_1_1_catalog.html#aad939fe141f1d5240970e92c7951d5d2">get</a></td></tr>
-<tr class="memdesc:aad939fe141f1d5240970e92c7951d5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given index and col in its native type.  <a href="#aad939fe141f1d5240970e92c7951d5d2">More...</a><br/></td></tr>
+<tr class="memdesc:aad939fe141f1d5240970e92c7951d5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given <code>index</code> and <code>col</code> in its native type.  <a href="#aad939fe141f1d5240970e92c7951d5d2">More...</a><br/></td></tr>
 <tr class="separator:aad939fe141f1d5240970e92c7951d5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97126cdcd427e9d6af3415c0082e0a8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1catalog_1_1_catalog.html#aa97126cdcd427e9d6af3415c0082e0a8">getFloat</a></td></tr>
-<tr class="memdesc:aa97126cdcd427e9d6af3415c0082e0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given index and col as a float if possible.  <a href="#aa97126cdcd427e9d6af3415c0082e0a8">More...</a><br/></td></tr>
+<tr class="memdesc:aa97126cdcd427e9d6af3415c0082e0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given <code>index</code> and <code>col</code> as a float if possible.  <a href="#aa97126cdcd427e9d6af3415c0082e0a8">More...</a><br/></td></tr>
 <tr class="separator:aa97126cdcd427e9d6af3415c0082e0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d0848277fc4632abe535167fd79685f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1catalog_1_1_catalog.html#a7d0848277fc4632abe535167fd79685f">getInt</a></td></tr>
-<tr class="memdesc:a7d0848277fc4632abe535167fd79685f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given index and col as an int if possible.  <a href="#a7d0848277fc4632abe535167fd79685f">More...</a><br/></td></tr>
+<tr class="memdesc:a7d0848277fc4632abe535167fd79685f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data for the given <code>index</code> and <code>col</code> as an int if possible.  <a href="#a7d0848277fc4632abe535167fd79685f">More...</a><br/></td></tr>
 <tr class="separator:a7d0848277fc4632abe535167fd79685f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -154,22 +154,23 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class storing the data from an input catalog. </p>
 <p>Each row corresponds to a different object to be built, and each column stores some item of information about that object (e.g. flux or half_light_radius).</p>
-<p>After construction, the following fields are available: </p>
-<pre class="fragment">self.nobjects   The number of objects in the catalog.
-self.ncols      The number of columns in the catalog.
-self.isfits     Whether the catalog is a fits catalog.
-self.names      For a fits catalog, the valid column names.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<h2>Initialization </h2>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>Filename of the input catalog. (Required) </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. </td></tr>
-    <tr><td class="paramname">file_type</td><td>Either 'ASCII' or 'FITS'. If None, infer from the file name ending. [default: None] </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if <code>file_name</code> does not already include it. </td></tr>
+    <tr><td class="paramname">file_type</td><td>Either 'ASCII' or 'FITS'. If None, infer from <code>file_name</code> ending. [default: None] </td></tr>
     <tr><td class="paramname">comments</td><td>The character used to indicate the start of a comment in an ASCII catalog. [default: '#'] </td></tr>
-    <tr><td class="paramname">hdu</td><td>Which hdu to use for FITS files. [default: 1] </td></tr>
+    <tr><td class="paramname">hdu</td><td>Which hdu to use for FITS files. [default: 1]</td></tr>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2>Attributes </h2>
+<p>After construction, the following attributes are available: </p>
+<pre class="fragment">nobjects   The number of objects in the catalog.
+ncols      The number of columns in the catalog.
+isfits     Whether the catalog is a fits catalog.
+names      For a fits catalog, the valid column names.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae67cc2761475569dc72e908913dded3d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -257,8 +258,8 @@ self.names      For a fits catalog, the valid column names.
       </table>
 </div><div class="memdoc">
 
-<p>Return the data for the given index and col in its native type. </p>
-<p>For ASCII catalogs, col is the column number. For FITS catalogs, col is a string giving the name of the column in the FITS table.</p>
+<p>Return the data for the given <code>index</code> and <code>col</code> in its native type. </p>
+<p>For ASCII catalogs, <code>col</code> is the column number. For FITS catalogs, <code>col</code> is a string giving the name of the column in the FITS table.</p>
 <p>Also, for ASCII catalogs, the "native type" is always str. For FITS catalogs, it is whatever type is specified for each field in the binary table. </p>
 
 </div>
@@ -293,7 +294,7 @@ self.names      For a fits catalog, the valid column names.
       </table>
 </div><div class="memdoc">
 
-<p>Return the data for the given index and col as a float if possible. </p>
+<p>Return the data for the given <code>index</code> and <code>col</code> as a float if possible. </p>
 
 </div>
 </div>
@@ -327,7 +328,7 @@ self.names      For a fits catalog, the valid column names.
       </table>
 </div><div class="memdoc">
 
-<p>Return the data for the given index and col as an int if possible. </p>
+<p>Return the data for the given <code>index</code> and <code>col</code> as an int if possible. </p>
 
 </div>
 </div>

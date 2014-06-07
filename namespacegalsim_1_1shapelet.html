@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -161,12 +161,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fit for a shapelet decomposition of a given image. </p>
-<p>The optional normalization parameter mirrors the parameter in the GSObject <code>draw</code> method. If the fitted shapelet is drawn with the same normalization value as was used when it was fit, then the resulting image should be an approximate match to the original image.</p>
-<p>For example: </p>
-<pre class="fragment">image = ...
-shapelet = galsim.FitShapelet(sigma, order, image, normalization='sb')
-shapelet.draw(image=image2, dx=image.scale, normalization='sb')
-</pre><p>Then image2 and image should be as close to the same as possible for the given sigma and order. Increasing the order can improve the fit, as can having sigma match the natural scale size of the image. However, it should be noted that some images are not well fit by a shapelet for any (reasonable) order.</p>
+<p>The optional <code>normalization</code> parameter mirrors the parameter of the InterpolatedImage class. The following sequence should produce drawn images that are approximate matches to the original image: </p>
+<pre class="fragment">&gt;&gt;&gt; image = [...]
+&gt;&gt;&gt; shapelet = galsim.FitShapelet(sigma, order, image, normalization='sb')
+&gt;&gt;&gt; im2 = shapelet.drawImage(image=im2, scale=image.scale, method='sb')
+&gt;&gt;&gt; shapelet = galsim.FitShapelet(sigma, order, image, normalization='flux')
+&gt;&gt;&gt; im3 = shapelet.drawImage(image=im3, scale=image.scale, method='no_pixel')
+</pre><p>Then <code>im2</code> and <code>im3</code> should be as close as possible to <code>image</code> for the given <code>sigma</code> and <code>order</code>. Increasing the order can improve the fit, as can having <code>sigma</code> match the natural scale size of the image. However, it should be noted that some images are not well fit by a shapelet for any (reasonable) order.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sigma</td><td>The scale size in the standard units (usually arcsec). </td></tr>
@@ -174,7 +175,7 @@ shapelet.draw(image=image2, dx=image.scale, normalization='sb')
     <tr><td class="paramname">image</td><td>The Image for which to fit the shapelet decomposition </td></tr>
     <tr><td class="paramname">center</td><td>The position in pixels to use for the center of the decomposition. [default: image.bounds.trueCenter()] </td></tr>
     <tr><td class="paramname">normalization</td><td>The normalization to assume for the image. [default: "flux"] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a> for details. [default: None]</td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
 </dl>

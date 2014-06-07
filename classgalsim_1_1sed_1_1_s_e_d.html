@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -145,10 +145,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9d49d109ff539f61ab022e1be6391b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with redshifted wavelengths.  <a href="#a9d49d109ff539f61ab022e1be6391b12">More...</a><br/></td></tr>
 <tr class="separator:a9d49d109ff539f61ab022e1be6391b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ab20b0c861f5b6a6604fe838b83a4d6cc">calculateFlux</a></td></tr>
-<tr class="memdesc:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a bandpass.  <a href="#ab20b0c861f5b6a6604fe838b83a4d6cc">More...</a><br/></td></tr>
+<tr class="memdesc:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a Bandpass <code>bandpass</code>.  <a href="#ab20b0c861f5b6a6604fe838b83a4d6cc">More...</a><br/></td></tr>
 <tr class="separator:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e67cea06205ba94ee75f370a86af46"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a24e67cea06205ba94ee75f370a86af46">thin</a></td></tr>
-<tr class="memdesc:a24e67cea06205ba94ee75f370a86af46"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then remove tabulated values while keeping the integral over the over the set of tabulated values still accurate to <code>rel_err</code>.  <a href="#a24e67cea06205ba94ee75f370a86af46">More...</a><br/></td></tr>
+<tr class="memdesc:a24e67cea06205ba94ee75f370a86af46"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>.  <a href="#a24e67cea06205ba94ee75f370a86af46">More...</a><br/></td></tr>
 <tr class="separator:a24e67cea06205ba94ee75f370a86af46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -171,14 +171,14 @@ Public Attributes</h2></td></tr>
 <p>SEDs have <code>blue_limit</code> and <code>red_limit</code> attributes, which may be set to <code>None</code> in the case that the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is defined by a python function or lambda <code>eval</code> string. SEDs are considered undefined outside of this range, and <b>call</b> will raise an exception if a flux is requested outside of this range.</p>
 <p>SEDs may be multiplied by scalars or scalar functions of wavelength.</p>
 <p>SEDs may be added together. The resulting <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> will only be defined on the wavelength region where both of the operand SEDs are defined. <code>blue_limit</code> and <code>red_limit</code> will be reset accordingly.</p>
-<p>The input parameter, spec, may be one of several possible forms:</p>
+<p>The input parameter, <code>spec</code>, may be one of several possible forms:</p>
 <ol type="1">
 <li>a regular python function (or an object that acts like a function)</li>
-<li>a galsim.LookupTable</li>
+<li>a LookupTable</li>
 <li>a file from which a LookupTable can be read in</li>
 <li>a string which can be evaluated into a function of <code>wave</code> via `eval('lambda wave : '+spec) e.g. spec = '0.8 + 0.2 * (wave-800)`</li>
 </ol>
-<p>The argument of <code>spec</code> will be the wavelength in either nanometers (default) or Angstroms depending on the value of <code>wave_type</code>. The output should be the flux density at that wavelength. (Note we use wave rather than lambda, since lambda is a python reserved word.)</p>
+<p>The argument of <code>spec</code> will be the wavelength in either nanometers (default) or Angstroms depending on the value of <code>wave_type</code>. The output should be the flux density at that wavelength. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.)</p>
 <p>The argument <code>wave_type</code> specifies the units to assume for wavelength and must be one of 'nm', 'nanometer', 'nanometers', 'A', 'Ang', 'Angstrom', or 'Angstroms'. Text case here is unimportant. If these wavelength options are insufficient, please submit an issue to the GalSim github issues page: <a href="https://github.com/GalSim-developers/GalSim/issues">https://github.com/GalSim-developers/GalSim/issues</a></p>
 <p>The argument <code>flux_type</code> specifies the type of spectral density and must be one of:</p>
 <ol type="1">
@@ -534,10 +534,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a bandpass. </p>
+<p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a Bandpass <code>bandpass</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object representing a filter, or None for bolometric flux (over defined wavelengths).</td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None for bolometric flux (over defined wavelengths).</td></tr>
   </table>
   </dd>
 </dl>
@@ -591,7 +591,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a galsim.LookupTable or from a file (which internally creates a galsim.LookupTable), then remove tabulated values while keeping the integral over the over the set of tabulated values still accurate to <code>rel_err</code>. </p>
+<p>If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> [default: 1.e-4] </td></tr>
@@ -638,7 +638,7 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target_flux</td><td>The desired <em>relative</em> flux normalization of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
-    <tr><td class="paramname">bandpass</td><td>A galsim.Bandpass object defining a filter bandpass.</td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object defining a filter bandpass.</td></tr>
   </table>
   </dd>
 </dl>

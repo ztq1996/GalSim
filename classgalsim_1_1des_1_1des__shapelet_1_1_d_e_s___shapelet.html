@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -164,16 +164,16 @@ Public Attributes</h2></td></tr>
 <p>The shapelet PSFs are built as part of the WL portion of the DES pipeline. They measure a shapelet decomposition of each star and interpolate the shapelet coefficients over the image positions.</p>
 <p>Unlike PSFEx, these PSF models are built directly in world coordinates. The shapelets know about the WCS, so they are able to fit the shapelet model directly in terms of arcsec. Thus, the getPSF function always returns a profile in world coordinates.</p>
 <p>Typical usage: </p>
-<pre class="fragment">des_shapelet = galsim.des.DES_Shapelet(fitpsf_file_name)
-image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
-                                                  # NOT in arcsec on the sky!
-psf = des_shapelet.getPSF(image_pos)   # profile is in world coordinates
+<pre class="fragment">&gt;&gt;&gt; des_shapelet = galsim.des.DES_Shapelet(fitpsf_file_name)
+&gt;&gt;&gt; image_pos = galsim.PositionD(image_x, image_y)    # position in pixels on the image
+&gt;&gt;&gt;                                                   # NOT in arcsec on the sky!
+&gt;&gt;&gt; psf = des_shapelet.getPSF(image_pos)   # profile is in world coordinates
 </pre><p>Note that the returned psf here already includes the pixel. This is what is sometimes called an "effective PSF". Thus, you should not convolve by the pixel profile again (nor integrate over the pixel). This would effectively include the pixel twice!</p>
 <p>This class will only interpolate within the defining bounds. It won't extrapolate beyond the bounding box of where the stars defined the interpolation. If you try to use it with an invalid position, it will throw an IndexError. You can check whether a position is valid with </p>
-<pre class="fragment">if des_shapelet.bounds.includes(pos):
-    psf = des_shapelet.getPSF(pos)
-else:
-    [...skip this object...]
+<pre class="fragment">&gt;&gt;&gt; if des_shapelet.bounds.includes(pos):
+&gt;&gt;&gt;     psf = des_shapelet.getPSF(pos)
+&gt;&gt;&gt; else:
+&gt;&gt;&gt;     [...skip this object...]
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the file to be read in. </td></tr>
