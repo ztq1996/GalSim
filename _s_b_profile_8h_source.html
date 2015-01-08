@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -111,8 +110,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *    and/or other materials provided with the distribution.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef SBPROFILE_H</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define SBPROFILE_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef GalSim_SBProfile_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define GalSim_SBProfile_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
@@ -251,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;}</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="preprocessor">#endif // SBPROFILE_H</span></div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;</div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a3328d85bec38a7e142fa5ec2afd84a8d"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a3328d85bec38a7e142fa5ec2afd84a8d">galsim::SBProfile::transform</a></div><div class="ttdeci">SBTransform transform(double dudx, double dudy, double dvdx, double dvdy) const </div><div class="ttdoc">Apply a transformation given by an arbitrary Jacobian matrix. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a9ba39acff7f44777cb9f0ea5ba1ab7a8"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a9ba39acff7f44777cb9f0ea5ba1ab7a8">galsim::SBProfile::shear</a></div><div class="ttdeci">SBTransform shear(CppShear s) const </div><div class="ttdoc">Apply a given shear. </div></div>
@@ -281,7 +280,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_aeeef4c5230553a57f35a70490b97eb06"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06">galsim::SBProfile::kValue</a></div><div class="ttdeci">std::complex&lt; double &gt; kValue(const Position&lt; double &gt; &amp;k) const </div><div class="ttdoc">Return value of SBProfile at a chosen 2D position in k space. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a20a8cdf69b7c134ebd815fe272771b21"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21">galsim::SBProfile::maxK</a></div><div class="ttdeci">double maxK() const </div><div class="ttdoc">Value of k beyond which aliasing can be neglected. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a752163179fa64df1b24d51cc13649b7d"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a752163179fa64df1b24d51cc13649b7d">galsim::SBProfile::isAxisymmetric</a></div><div class="ttdeci">bool isAxisymmetric() const </div><div class="ttdoc">Check whether the SBProfile is known to have rotational symmetry about x=y=0. </div></div>
-<div class="ttc" id="classgalsim_1_1_angle_html"><div class="ttname"><a href="classgalsim_1_1_angle.html">galsim::Angle</a></div><div class="ttdoc">A class representing an Angle. </div><div class="ttdef"><b>Definition:</b> Angle.h:144</div></div>
+<div class="ttc" id="classgalsim_1_1_angle_html"><div class="ttname"><a href="classgalsim_1_1_angle.html">galsim::Angle</a></div><div class="ttdoc">A class representing an Angle. </div><div class="ttdef"><b>Definition:</b> Angle.h:145</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a33d700d8f2f313dda2ccad857e012090"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a33d700d8f2f313dda2ccad857e012090">galsim::SBProfile::drawK</a></div><div class="ttdeci">void drawK(ImageView&lt; T &gt; re, ImageView&lt; T &gt; im, double gain, double wmult) const </div><div class="ttdoc">Draw an image of the SBProfile in k space. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_ab8fc7c15d9e303f7be0170f515d73081"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#ab8fc7c15d9e303f7be0170f515d73081">galsim::SBProfile::rotate</a></div><div class="ttdeci">SBTransform rotate(const Angle &amp;theta) const </div><div class="ttdoc">Apply a given rotation. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_ab168c1e486689f65adf9769d062c3f94"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#ab168c1e486689f65adf9769d062c3f94">galsim::SBProfile::shoot</a></div><div class="ttdeci">boost::shared_ptr&lt; PhotonArray &gt; shoot(int N, UniformDeviate ud) const </div><div class="ttdoc">Shoot photons through this SBProfile. </div></div>
@@ -298,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgalsim_1_1_image_view_html"><div class="ttname"><a href="classgalsim_1_1_image_view.html">galsim::ImageView</a></div><div class="ttdoc">ImageView class is a mutable view of an Image. </div><div class="ttdef"><b>Definition:</b> Image.h:47</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a11558695546a3b4129971d09df8332bf"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">galsim::SBProfile::xValue</a></div><div class="ttdeci">double xValue(const Position&lt; double &gt; &amp;p) const </div><div class="ttdoc">Return value of SBProfile at a chosen 2D position in real space. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a3fc25a15c465df01a218d99f0e6a262f"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a3fc25a15c465df01a218d99f0e6a262f">galsim::SBProfile::getYRange</a></div><div class="ttdeci">void getYRange(double &amp;ymin, double &amp;ymax, std::vector&lt; double &gt; &amp;splits) const </div></div>
-<div class="ttc" id="classgalsim_1_1_uniform_deviate_html"><div class="ttname"><a href="classgalsim_1_1_uniform_deviate.html">galsim::UniformDeviate</a></div><div class="ttdoc">Pseudo-random number generator with uniform distribution in interval [0.,1.). </div><div class="ttdef"><b>Definition:</b> Random.h:247</div></div>
+<div class="ttc" id="classgalsim_1_1_uniform_deviate_html"><div class="ttname"><a href="classgalsim_1_1_uniform_deviate.html">galsim::UniformDeviate</a></div><div class="ttdoc">Pseudo-random number generator with uniform distribution in interval [0.,1.). </div><div class="ttdef"><b>Definition:</b> Random.h:255</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html_a5858b8e0e2735ce5ded7d0b38cefefc3"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html#a5858b8e0e2735ce5ded7d0b38cefefc3">galsim::SBProfile::shift</a></div><div class="ttdeci">SBTransform shift(const Position&lt; double &gt; &amp;delta) const </div><div class="ttdoc">Apply a translation. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

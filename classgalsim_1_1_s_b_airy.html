@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -231,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Surface Brightness Profile for the Airy disk (perfect diffraction-limited PSF for a circular aperture), with central obscuration. </p>
-<p><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected. ">maxK()</a> is set at the hard limit for Airy disks, <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space. ">stepK()</a> makes transforms go to at least 5 lam/D or EE&gt;(1-alias_threshold). Schroeder (10.1.18) gives limit of EE at large radius. This stepK could probably be relaxed, it makes overly accurate FFTs. Note x &amp; y are in units of lambda/D here. Integral over area will give unity in this normalization. </p>
+<p><a class="el" href="classgalsim_1_1_s_b_profile.html#a20a8cdf69b7c134ebd815fe272771b21" title="Value of k beyond which aliasing can be neglected. ">maxK()</a> is set at the hard limit for Airy disks, <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space. ">stepK()</a> makes transforms go to at least 5 lam/D or EE&gt;(1-folding_threshold). Schroeder (10.1.18) gives limit of EE at large radius. This stepK could probably be relaxed, it makes overly accurate FFTs. Note x &amp; y are in units of lambda/D here. Integral over area will give unity in this normalization. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a99aa725e9d414ee76096718accd06381"></a>
 <div class="memitem">

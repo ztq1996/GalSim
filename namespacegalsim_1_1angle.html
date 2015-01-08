@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -111,7 +110,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7bef6ff369e3cbbac153bd2e148b9d81"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1angle.html#a7bef6ff369e3cbbac153bd2e148b9d81">__neg__</a></td></tr>
 <tr class="separator:a7bef6ff369e3cbbac153bd2e148b9d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc5d8b2996aa0a77e018ec3a8048a74"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1angle.html#a8bc5d8b2996aa0a77e018ec3a8048a74">hms</a></td></tr>
-<tr class="memdesc:a8bc5d8b2996aa0a77e018ec3a8048a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an HMS representation of the angle as a string: (+/-)hh:mm:ss.decimal.  <a href="#a8bc5d8b2996aa0a77e018ec3a8048a74">More...</a><br/></td></tr>
+<tr class="memdesc:a8bc5d8b2996aa0a77e018ec3a8048a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an HMS representation of the angle as a string: hh:mm:ss.decimal.  <a href="#a8bc5d8b2996aa0a77e018ec3a8048a74">More...</a><br/></td></tr>
 <tr class="separator:a8bc5d8b2996aa0a77e018ec3a8048a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a346b4ffc23d58626a58778a4729dc577"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1angle.html#a346b4ffc23d58626a58778a4729dc577">dms</a></td></tr>
 <tr class="memdesc:a346b4ffc23d58626a58778a4729dc577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a DMS representation of the angle as a string: (+/-)ddmmss.decimal An optional <code>sep</code> parameter can change the : to something else (e.g.  <a href="#a346b4ffc23d58626a58778a4729dc577">More...</a><br/></td></tr>
@@ -278,7 +277,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return a DMS representation of the angle as a string: (+/-)ddmmss.decimal An optional <code>sep</code> parameter can change the : to something else (e.g. </p>
-<p>a space or nothing at all). </p>
+<p>a space or nothing at all).</p>
+<p>Note: the reverse process is effected by DMS_Angle: </p>
+<pre class="fragment">&gt;&gt;&gt; angle = -(5 * galsim.degrees + 13 * galsim.arcmin + 23 * galsim.arcsec)
+&gt;&gt;&gt; dms = angle.dms()
+&gt;&gt;&gt; print dms
+-05:13:23.00000000
+&gt;&gt;&gt; angle2 = galsim.DMS_Angle(dms)
+&gt;&gt;&gt; print angle2 / galsim.degrees
+-5.22305555556
+&gt;&gt;&gt; print angle2 - angle
+0.0 radians
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sep</td><td>The token to put between the dd and mm, and beteen mm and ss. [default: ':']</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string of the DMS representation of the angle. </dd></dl>
 
 </div>
 </div>
@@ -344,8 +360,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return an HMS representation of the angle as a string: (+/-)hh:mm:ss.decimal. </p>
-<p>An optional <code>sep</code> parameter can change the : to something else (e.g. a space or nothing at all). </p>
+<p>Return an HMS representation of the angle as a string: hh:mm:ss.decimal. </p>
+<p>The returned representation will have 0 &lt;= hh &lt; 24.</p>
+<p>An optional <code>sep</code> parameter can change the : to something else (e.g. a space or nothing at all).</p>
+<p>Note: the reverse process is effected by HMS_Angle: </p>
+<pre class="fragment">&gt;&gt;&gt; angle = -5.357 * galsim.hours
+&gt;&gt;&gt; hms = angle.hms()
+&gt;&gt;&gt; print hms
++18:38:34.80000000
+&gt;&gt;&gt; angle2 = galsim.HMS_Angle(hms)
+&gt;&gt;&gt; print angle2 / galsim.hours
+18.643
+&gt;&gt;&gt; print angle2 / galsim.hours - 24
+-5.357
+&gt;&gt;&gt; print angle2 - angle - 24 * galsim.hours
+0.0 radians
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sep</td><td>The token to put between the hh and mm, and beteen mm and ss. [default: ':']</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string of the HMS representation of the angle. </dd></dl>
 
 </div>
 </div>
@@ -365,7 +401,19 @@ Functions</h2></td></tr>
 
 <p>Convert a string of the form hh:mm:ss.decimal into an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a>. </p>
 <p>There may be an initial + or - (or neither), then two digits for the hours, two for the minutes, and two for the seconds. Then there may be a decimal point followed by more digits. There may be a colon separating hh, mm, and ss, or whitespace, or nothing at all. In fact, the code will ignore any non-digits between the hours, minutes, and seconds.</p>
-<dl class="section return"><dt>Returns</dt><dd>the corresponding <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance </dd></dl>
+<p>Note: the reverse process is effected by <a class="el" href="namespacegalsim_1_1angle.html#a8bc5d8b2996aa0a77e018ec3a8048a74" title="Return an HMS representation of the angle as a string: hh:mm:ss.decimal. ">Angle.hms()</a>: </p>
+<pre class="fragment">&gt;&gt;&gt; angle = -5.357 * galsim.hours
+&gt;&gt;&gt; hms = angle.hms()
+&gt;&gt;&gt; print hms
++18:38:34.80000000
+&gt;&gt;&gt; angle2 = galsim.HMS_Angle(hms)
+&gt;&gt;&gt; print angle2 / galsim.hours
+18.643
+&gt;&gt;&gt; print angle2 / galsim.hours - 24
+-5.357
+&gt;&gt;&gt; print angle2 - angle - 24 * galsim.hours
+0.0 radians
+</pre><dl class="section return"><dt>Returns</dt><dd>the corresponding <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance </dd></dl>
 
 </div>
 </div>

@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -278,7 +277,7 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">g1</td><td>The shear component g1 as a square 2D NumPy array. </td></tr>
     <tr><td class="paramname">g2</td><td>The shear component g2 as a square 2D NumPy array. </td></tr>
-    <tr><td class="paramname">weight_EE</td><td>If True, then the E auto-power spectrum is re-computed weighting by the power within each logarithmically-spaced ell bin. Note that use of this option requires a usable GalSim installation, unlike the rest of the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> functionality. [defaul: False] </td></tr>
+    <tr><td class="paramname">weight_EE</td><td>If True, then the E auto-power spectrum is re-computed weighting by the power within each logarithmically-spaced ell bin. Note that use of this option requires a usable GalSim installation, unlike the rest of the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> functionality. [default: False] </td></tr>
     <tr><td class="paramname">weight_BB</td><td>If True, then the B auto-power spectrum is re-computed weighting by the power within each logarithmically-spaced ell bin. Note that use of this option requires a usable GalSim installation, unlike the rest of the <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a> functionality. [default: False] </td></tr>
     <tr><td class="paramname">theory_func</td><td>An optional callable function that can be used to get an idealized value of power at each point on the grid, and then see what results it gives for our chosen ell binning. Unlike the main <a class="el" href="classgalsim_1_1pse_1_1_power_spectrum_estimator.html" title="Class for estimating the shear power spectrum from gridded shears. ">PowerSpectrumEstimator</a>, this option requires a usable GalSim installation. [default: None] </td></tr>
   </table>

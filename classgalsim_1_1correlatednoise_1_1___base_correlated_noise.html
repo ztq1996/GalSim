@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -128,9 +127,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a1fd2775afe89b89f5d004aa0fa5149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88874c45aa2be7aa38a5504ff8a0d828"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a88874c45aa2be7aa38a5504ff8a0d828">applyToView</a></td></tr>
 <tr class="separator:a88874c45aa2be7aa38a5504ff8a0d828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39b3141a36a515022acabae5c973817"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817">whitenImage</a></td></tr>
+<tr class="memdesc:af39b3141a36a515022acabae5c973817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply noise designed to whiten correlated Gaussian random noise in an input Image.  <a href="#af39b3141a36a515022acabae5c973817">More...</a><br/></td></tr>
+<tr class="separator:af39b3141a36a515022acabae5c973817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e3376af85f80571a8355f4bd2d67c9e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0e3376af85f80571a8355f4bd2d67c9e">applyWhiteningTo</a></td></tr>
-<tr class="memdesc:a0e3376af85f80571a8355f4bd2d67c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply noise designed to whiten correlated Gaussian random noise in an input Image.  <a href="#a0e3376af85f80571a8355f4bd2d67c9e">More...</a><br/></td></tr>
+<tr class="memdesc:a0e3376af85f80571a8355f4bd2d67c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An obsolete synonym for whitenImage.  <a href="#a0e3376af85f80571a8355f4bd2d67c9e">More...</a><br/></td></tr>
 <tr class="separator:a0e3376af85f80571a8355f4bd2d67c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4cb9995d9e097a35aaf87da1b72ec1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1">symmetrizeImage</a></td></tr>
+<tr class="memdesc:a8f4cb9995d9e097a35aaf87da1b72ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image.  <a href="#a8f4cb9995d9e097a35aaf87da1b72ec1">More...</a><br/></td></tr>
+<tr class="separator:a8f4cb9995d9e097a35aaf87da1b72ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a480f5fb6c1e34813e6d2582f4d11f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#ad5a480f5fb6c1e34813e6d2582f4d11f">expand</a></td></tr>
 <tr class="memdesc:ad5a480f5fb6c1e34813e6d2582f4d11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the linear scale of correlations in this noise model by <code>scale</code>.  <a href="#ad5a480f5fb6c1e34813e6d2582f4d11f">More...</a><br/></td></tr>
 <tr class="separator:ad5a480f5fb6c1e34813e6d2582f4d11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -691,32 +696,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Apply noise designed to whiten correlated Gaussian random noise in an input Image. </p>
-<p>On output the Image instance <code>image</code> will have been given additional noise according to a specified <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance, designed to whiten any correlated noise that may have originally existed in <code>image</code>.</p>
-<h2>Calling </h2>
-<pre class="fragment">&gt;&gt;&gt; correlated_noise.applyWhiteningTo(image)
-</pre><p>If the <code>image</code> originally contained noise with a correlation function described by the <code>correlated_noise</code> instance, the combined noise after using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0e3376af85f80571a8355f4bd2d67c9e" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">applyWhiteningTo()</a> method will be approximately uncorrelated. Tests using COSMOS noise fields suggest ~0.3% residual off-diagonal covariances after whitening, relative to the variance, although results may vary depending on the precise correlation function of the noise field. (See <code>devel/external/hst/compare_whitening_subtraction.py</code> for the COSMOS tests.)</p>
-<p>Note that the code doesn't check that the "if" above is true: the user MUST make sure this is the case for the final noise to be uncorrelated.</p>
-<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, a pixel scale of 1 is assumed. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
-<p>If you are interested in a theoretical calculation of the variance in the final noise field after whitening, the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0e3376af85f80571a8355f4bd2d67c9e" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">applyWhiteningTo()</a> method in fact returns this variance. For example: </p>
-<pre class="fragment">&gt;&gt;&gt; variance = correlated_noise.applyWhiteningTo(image)
-</pre><h2>Example </h2>
-<p>To see noise whitening in action, let us use a model of the correlated noise in COSMOS as returned by the <a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">getCOSMOSNoise()</a> function. Let's initialize and add noise to an image: </p>
-<pre class="fragment">&gt;&gt;&gt; cosmos_file='YOUR/REPO/PATH/GalSim/examples/data/acs_I_unrot_sci_20_cf.fits'
-&gt;&gt;&gt; cn = galsim.getCOSMOSNoise(cosmos_file)
-&gt;&gt;&gt; image = galsim.ImageD(256, 256, scale=0.03)
-      # The scale should match the COSMOS default since didn't specify another
-&gt;&gt;&gt; image.addNoise(cn)
-</pre><p>The <code>image</code> will then contain a realization of a random noise field with COSMOS-like correlation. Using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0e3376af85f80571a8355f4bd2d67c9e" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">applyWhiteningTo()</a> method, we can now add more noise to <code>image</code> with a power spectrum specifically designed to make the combined noise fields uncorrelated: </p>
-<pre class="fragment">&gt;&gt;&gt; cn.applyWhiteningTo(image)
-</pre><p>Of course, this whitening comes at the cost of adding further noise to the image, but the algorithm is designed to make this additional noise (nearly) as small as possible.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">image</td><td>The input Image object.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the theoretically calculated variance of the combined noise fields in the updated image. </dd></dl>
+<p>An obsolete synonym for whitenImage. </p>
 
 </div>
 </div>
@@ -1154,31 +1134,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image</em> = <code>None</code>, </td>
+          <td class="paramname"><em>args</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>scale</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dtype</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>add_to_image</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1230,7 +1192,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>add_to_image</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>add_to_image</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dx</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1244,9 +1212,9 @@ template&lt;typename T &gt; </div>
 <p>This is a mild reimplementation of the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a1ca26ba7127e5aab446e77ab3573048f" title="A method for drawing profiles storing correlation functions. ">drawImage()</a> method for GSObjects. The <code>method</code> is automatically set to 'sb' and cannot be changed, and the <code>gain</code> is set to unity. Also, not all the normal parameters of the GSObject method are available.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized Image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.Image()</code>), then it will be resized appropriately based on the profile's size [default: None]. </td></tr>
-    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. If <code>scale</code> is <code>None</code> and <code>image != None</code>, then take the provided image's pixel scale. If <code>scale</code> is <code>None</code> and <code>image == None</code>, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>image</code>), then use the Nyquist scale. [default: None] </td></tr>
-    <tr><td class="paramname">dtype</td><td>The data type to use for an automatically constructed image. Only valid if <code>image = None</code>. [default: None, which means to use numpy.float32] </td></tr>
+    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image</code> is None, then an automatically-sized Image will be created. If <code>image</code> is given, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.Image()</code>), then it will be resized appropriately based on the profile's size [default: None]. </td></tr>
+    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. If <code>scale</code> is None and image is given, then take the provided image's pixel scale. If <code>scale</code> is None and image is None, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>image</code>), then use the Nyquist scale. [default: None] </td></tr>
+    <tr><td class="paramname">dtype</td><td>The data type to use for an automatically constructed image. Only valid if <code>image</code> is None. [default: None, which means to use numpy.float32] </td></tr>
     <tr><td class="paramname">wmult</td><td>A multiplicative factor by which to enlarge (in each direction) the default automatically calculated FFT grid size used for any intermediate calculations in Fourier space. See the description in GSObject.drawImage() for more details. [default: 1] </td></tr>
     <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that <code>image</code> be provided and that it have defined bounds. [default: False]</td></tr>
   </table>
@@ -1662,6 +1630,60 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a8f4cb9995d9e097a35aaf87da1b72ec1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise._BaseCorrelatedNoise.symmetrizeImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>order</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image. </p>
+<p>When called for a non-square image, this method will raise an exception, unlike the noise whitening routines.</p>
+<p>The order <code>N</code> of the symmetry can be supplied as a keyword argument, with the default being 4 because this is presumably the minimum required for the anisotropy of noise correlations to not affect shear statistics.</p>
+<p>Note: the syntax <code>image.symmetrizeNoise(noise, order)</code> is preferred.</p>
+<p>On output the Image instance <code>image</code> will have been given additional noise according to a specified <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance, designed to symmetrize the correlated noise that may have originally existed in <code>image</code>.</p>
+<h2>Calling </h2>
+<pre class="fragment">&gt;&gt;&gt; correlated_noise.symmetrizeImage(image, order=order)
+</pre><p>If the <code>image</code> originally contained noise with a correlation function described by the <code>correlated_noise</code> instance, the combined noise after using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> method will have a noise correlation function with N-fold symmetry, where <code>N=order</code>.</p>
+<p>Note that the code doesn't check that the "if" above is true: the user MUST make sure this is the case for the final noise correlation function to be symmetric in the requested way.</p>
+<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, a pixel scale of 1 is assumed. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
+<p>If you are interested in a theoretical calculation of the variance in the final noise field after imposing symmetry, the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> method in fact returns this variance. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; variance = correlated_noise.symmetrizeImage(image, order=order)
+</pre><p>For context, in comparison with the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method for the case of noise correlation functions that are roughly like those in the COSMOS HST data, the amount of noise added to impose N-fold symmetry is usually much less than what is added to fully whiten the noise. The usage of <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> is totally analogous to the usage of <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The square input Image object. </td></tr>
+    <tr><td class="paramname">order</td><td>The order at which to require the noise to be symmetric. All noise fields are already 2-fold symmetric, so <code>order</code> should be an even integer &gt;2. [default: 4].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the theoretically calculated variance of the combined noise fields in the updated image. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a009ccdca1c4e22c510359817cf67542b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1715,6 +1737,59 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a new <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> object with the specified transformation. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af39b3141a36a515022acabae5c973817"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise._BaseCorrelatedNoise.whitenImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply noise designed to whiten correlated Gaussian random noise in an input Image. </p>
+<p>On output the Image instance <code>image</code> will have been given additional noise according to a specified <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance, designed to whiten any correlated noise that may have originally existed in <code>image</code>.</p>
+<p>Note: the syntax <code>image.whitenNoise(noise)</code> is preferred.</p>
+<h2>Calling </h2>
+<pre class="fragment">&gt;&gt;&gt; correlated_noise.whitenImage(image)
+</pre><p>If the <code>image</code> originally contained noise with a correlation function described by the <code>correlated_noise</code> instance, the combined noise after using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method will be approximately uncorrelated. Tests using COSMOS noise fields suggest ~0.3% residual off-diagonal covariances after whitening, relative to the variance, although results may vary depending on the precise correlation function of the noise field. (See <code>devel/external/hst/compare_whitening_subtraction.py</code> for the COSMOS tests.)</p>
+<p>Note that the code doesn't check that the "if" above is true: the user MUST make sure this is the case for the final noise to be uncorrelated.</p>
+<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, a pixel scale of 1 is assumed. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
+<p>If you are interested in a theoretical calculation of the variance in the final noise field after whitening, the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method in fact returns this variance. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; variance = correlated_noise.whitenImage(image)
+</pre><h2>Example </h2>
+<p>To see noise whitening in action, let us use a model of the correlated noise in COSMOS as returned by the <a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">getCOSMOSNoise()</a> function. Let's initialize and add noise to an image: </p>
+<pre class="fragment">&gt;&gt;&gt; cn = galsim.getCOSMOSNoise()
+&gt;&gt;&gt; image = galsim.ImageD(256, 256, scale=0.03)
+&gt;&gt;&gt; # The scale should match the COSMOS default since didn't specify another
+&gt;&gt;&gt; image.addNoise(cn)
+</pre><p>The <code>image</code> will then contain a realization of a random noise field with COSMOS-like correlation. Using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method, we can now add more noise to <code>image</code> with a power spectrum specifically designed to make the combined noise fields uncorrelated: </p>
+<pre class="fragment">&gt;&gt;&gt; cn.whitenImage(image)
+</pre><p>Of course, this whitening comes at the cost of adding further noise to the image, but the algorithm is designed to make this additional noise (nearly) as small as possible.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The input Image object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the theoretically calculated variance of the combined noise fields in the updated image. </dd></dl>
 
 </div>
 </div>

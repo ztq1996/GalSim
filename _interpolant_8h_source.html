@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -111,8 +110,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *    and/or other materials provided with the distribution.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef INTERPOLANT_H</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define INTERPOLANT_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef GalSim_Interpolant_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define GalSim_Interpolant_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_interpolant_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">   24</a></span>&#160;<span class="preprocessor">#define BOOST_NO_CXX11_SMART_PTR</span></div>
@@ -460,7 +459,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;}</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="preprocessor">#endif //INTERPOLANT_H</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html_a0e66dc0a721d212168a59ab2133b8743"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html#a0e66dc0a721d212168a59ab2133b8743">galsim::GSParamsPtr::getDefault</a></div><div class="ttdeci">static const GSParamsPtr &amp; getDefault()</div><div class="ttdef"><b>Definition:</b> GSParams.h:289</div></div>
 <div class="ttc" id="classgalsim_1_1_interpolant_x_y_html_aa05e27cf9239c5d73619b5da4f059b8d"><div class="ttname"><a href="classgalsim_1_1_interpolant_x_y.html#aa05e27cf9239c5d73619b5da4f059b8d">galsim::InterpolantXY::uval</a></div><div class="ttdeci">double uval(double u, double v) const </div><div class="ttdef"><b>Definition:</b> Interpolant.h:247</div></div>
 <div class="ttc" id="classgalsim_1_1_interpolant2d_html_a2197889c68b050030db607cfa304295d"><div class="ttname"><a href="classgalsim_1_1_interpolant2d.html#a2197889c68b050030db607cfa304295d">galsim::Interpolant2d::~Interpolant2d</a></div><div class="ttdeci">virtual ~Interpolant2d()</div><div class="ttdef"><b>Definition:</b> Interpolant.h:208</div></div>
@@ -592,7 +591,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgalsim_1_1_delta_html_a3a0a45683b29c111d4bcff9465f4b962"><div class="ttname"><a href="classgalsim_1_1_delta.html#a3a0a45683b29c111d4bcff9465f4b962">galsim::Delta::Delta</a></div><div class="ttdeci">Delta(double width=1.e-3, const GSParamsPtr &amp;gsparams=GSParamsPtr::getDefault())</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> Interpolant.h:286</div></div>
 <div class="ttc" id="_table_8h_html"><div class="ttname"><a href="_table_8h.html">Table.h</a></div></div>
 <div class="ttc" id="classgalsim_1_1_delta_html"><div class="ttname"><a href="classgalsim_1_1_delta.html">galsim::Delta</a></div><div class="ttdoc">Delta-function interpolant in 1d. </div><div class="ttdef"><b>Definition:</b> Interpolant.h:276</div></div>
-<div class="ttc" id="classgalsim_1_1_uniform_deviate_html"><div class="ttname"><a href="classgalsim_1_1_uniform_deviate.html">galsim::UniformDeviate</a></div><div class="ttdoc">Pseudo-random number generator with uniform distribution in interval [0.,1.). </div><div class="ttdef"><b>Definition:</b> Random.h:247</div></div>
+<div class="ttc" id="classgalsim_1_1_uniform_deviate_html"><div class="ttname"><a href="classgalsim_1_1_uniform_deviate.html">galsim::UniformDeviate</a></div><div class="ttdoc">Pseudo-random number generator with uniform distribution in interval [0.,1.). </div><div class="ttdef"><b>Definition:</b> Random.h:255</div></div>
 <div class="ttc" id="classgalsim_1_1_nearest_html_a205a33fab86c584fa556851617858b98"><div class="ttname"><a href="classgalsim_1_1_nearest.html#a205a33fab86c584fa556851617858b98">galsim::Nearest::Nearest</a></div><div class="ttdeci">Nearest(double tol=1.e-3, const GSParamsPtr &amp;gsparams=GSParamsPtr::getDefault())</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> Interpolant.h:332</div></div>
 <div class="ttc" id="classgalsim_1_1_lanczos_html_a5e462cccaa59c2b4210ad516c975aaf3"><div class="ttname"><a href="classgalsim_1_1_lanczos.html#a5e462cccaa59c2b4210ad516c975aaf3">galsim::Lanczos::~Lanczos</a></div><div class="ttdeci">~Lanczos()</div><div class="ttdef"><b>Definition:</b> Interpolant.h:559</div></div>
 <div class="ttc" id="classgalsim_1_1_cubic_html_abe7a2ca5a0f7d909864e28a10140eeea"><div class="ttname"><a href="classgalsim_1_1_cubic.html#abe7a2ca5a0f7d909864e28a10140eeea">galsim::Cubic::getPositiveFlux</a></div><div class="ttdeci">double getPositiveFlux() const </div><div class="ttdoc">Return the integral of the positive portions of the kernel. </div><div class="ttdef"><b>Definition:</b> Interpolant.h:463</div></div>

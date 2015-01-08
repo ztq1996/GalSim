@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -133,7 +132,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Create a chromatic surface brightness profile integrator, which will integrate over wavelength using a Bandpass as a weight function. </p>
-<p>This integrator will evaluate the integrand only at the wavelengths in <code>bandpass.wave_list</code>. See <a class="el" href="classgalsim_1_1integ_1_1_continuous_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">ContinuousIntegrator</a> for an integrator that evaluates the integrand at a given number of points equally spaced apart.</p>
+<p>This integrator will evaluate the integrand at a given number <code>N</code> of equally spaced wavelengths over the interval defined by bandpass.blue_limit and bandpass.red_limit. See <a class="el" href="classgalsim_1_1integ_1_1_sample_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">SampleIntegrator</a> for an integrator that only evaluates the integrand at the predefined set of wavelengths in <code>bandpass.wave_list</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rule</td><td>Which integration rule to apply to the wavelength and monochromatic surface brightness samples. Options include: <a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a> &ndash; Use the midpoint integration rule numpy.trapz &ndash; Use the trapezoidal integration rule </td></tr>

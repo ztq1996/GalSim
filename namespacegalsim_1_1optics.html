@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -104,6 +103,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab99a431fd280b8cab4f0812284868760"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#ab99a431fd280b8cab4f0812284868760">load_pupil_plane</a></td></tr>
+<tr class="memdesc:ab99a431fd280b8cab4f0812284868760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the pupil plane based on using or loading a previously generated image.  <a href="#ab99a431fd280b8cab4f0812284868760">More...</a><br/></td></tr>
+<tr class="separator:ab99a431fd280b8cab4f0812284868760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a582b3550f1ac69d5abc2885a0458c223"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1optics.html#a582b3550f1ac69d5abc2885a0458c223">generate_pupil_plane</a></td></tr>
 <tr class="memdesc:a582b3550f1ac69d5abc2885a0458c223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pupil plane, including a central obscuration such as caused by a secondary mirror.  <a href="#a582b3550f1ac69d5abc2885a0458c223">More...</a><br/></td></tr>
 <tr class="separator:a582b3550f1ac69d5abc2885a0458c223"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +212,65 @@ Functions</h2></td></tr>
     <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
     <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
     <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a tuple <code>(rho, in_pupil)</code>, the first of which is the coordinate of the pupil in unit disc-scaled coordinates for use by Zernike polynomials (as a complex number) for describing the wavefront across the pupil plane. The array <code>in_pupil</code> is a vector of Bools used to specify where in the pupil plane described by <code>rho</code> is illuminated. See also <a class="el" href="namespacegalsim_1_1optics.html#aed9556b04fe30f45ea8860eb14b5288b" title="Return a complex, aberrated wavefront across a circular (default) or square pupil. ">wavefront()</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab99a431fd280b8cab4f0812284868760"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.optics.load_pupil_plane </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_plane_im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>array_shape</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up the pupil plane based on using or loading a previously generated image. </p>
+<p>This routine also has to set up the array for the rho values associated with that image.</p>
+<p>If you want the routine to do an automated, approximate check for sufficient sampling, you should supply it with <code>lam_over_diam</code> and <code>obscuration</code> keywords that it can use. Even so, this check does not check for adequate sampling of the struts, just the basic features like the obscuration.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pupil_plane_im</td><td>The GalSim.Image, NumPy array, or name of file containing the pupil plane image. Note that if the image is saved as unsigned integers, you will get a warning about conversion to floats, which is harmless. </td></tr>
+    <tr><td class="paramname">pupil_angle</td><td>Rotation angle for the pupil plane (positive in the counter-clockwise direction). Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0.*galsim.degrees] </td></tr>
+    <tr><td class="paramname">array_shape</td><td>The NumPy array shape required for the output image. If None, then use the shape of the input <code>pupil_plane_im</code>. [default: None] </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>The lam/diam defining the diffraction-limited PSF, to use for checks of sampling as described in the docstring. If not supplied, the tests will not be carried out. [default: None] </td></tr>
+    <tr><td class="paramname">obscuration</td><td>The obscuration defining the diffraction-limited PSF, to use for checks of sampling as described in the docstring. If not supplied, the tests will not be carried out. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
@@ -627,7 +688,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_plane_im</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -653,6 +726,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
     <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
     <tr><td class="paramname">flux</td><td>Total flux of the profile. [default: 1.] </td></tr>
+    <tr><td class="paramname">pupil_plane_im</td><td>The GalSim.Image, NumPy array, or name of file containing the pupil plane image, to be used instead of generating one based on the obscuration and strut parameters. Note that if the image is saved as unsigned integers, you will get a warning about conversion to floats, which is harmless. [default: None] </td></tr>
+    <tr><td class="paramname">pupil_angle</td><td>If <code>pupil_plane_im</code> is not None, rotation angle for the pupil plane (positive in the counter-clockwise direction). Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
   </table>
   </dd>
 </dl>
@@ -721,7 +796,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_plane_im</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>oversampling</em> = <code>1.5</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -747,6 +840,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
     <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
     <tr><td class="paramname">flux</td><td>Total flux of the profile. [default flux=1.] </td></tr>
+    <tr><td class="paramname">pupil_plane_im</td><td>The GalSim.Image, NumPy array, or name of file containing the pupil plane image, to be used instead of generating one based on the obscuration and strut parameters. Note that if the image is saved as unsigned integers, you will get a warning about conversion to floats, which is harmless. [default: None] </td></tr>
+    <tr><td class="paramname">pupil_angle</td><td>If <code>pupil_plane_im</code> is not None, rotation angle for the pupil plane (positive in the counter-clockwise direction). Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">oversampling</td><td>Effective level of oversampling requested. </td></tr>
   </table>
   </dd>
 </dl>
@@ -983,7 +1079,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
+          <td class="paramname"><em>strut_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_plane_im</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pupil_angle</em> = <code>0.*<a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274">galsim.degrees</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1008,7 +1116,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). [default: 0] </td></tr>
     <tr><td class="paramname">nstruts</td><td>Number of radial support struts to add to the central obscuration. [default: 0] </td></tr>
     <tr><td class="paramname">strut_thick</td><td>Thickness of support struts as a fraction of pupil diameter. [default: 0.05] </td></tr>
-    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>]</td></tr>
+    <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">pupil_plane_im</td><td>The GalSim.Image, NumPy array, or name of file containing the pupil plane image, to be used instead of generating one based on the obscuration and strut parameters. Note that if the image is saved as unsigned integers, you will get a warning about conversion to floats, which is harmless. [default: None] </td></tr>
+    <tr><td class="paramname">pupil_angle</td><td>If <code>pupil_plane_im</code> is not None, rotation angle for the pupil plane (positive in the counter-clockwise direction). Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>]</td></tr>
   </table>
   </dd>
 </dl>

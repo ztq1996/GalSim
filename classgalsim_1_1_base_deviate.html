@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -178,7 +177,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct and seed a new <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a>, using the provided value as seed. </p>
-<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
+<p>If lseed == 0, this means to use a random seed from the system: either /dev/urandom if possible, or the time of day otherwise. Note that in the latter case, the microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG. </td></tr>
@@ -331,7 +330,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Like seed(lseed), but severs the relationship between other Deviates. </p>
-<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seeding by the current time. </p>
+<p>Other Deviates that had been using the same RNG will be unaffected, while this Deviate will obtain a fresh RNG seed according to lseed. </p>
 
 </div>
 </div>
@@ -377,7 +376,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Re-seed the PRNG using specified seed. </p>
-<p>If lseed == 0, this means to use the time of day as the seed. Note that microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
+<p>If lseed == 0, this means to use a random seed from the system: either /dev/urandom if possible, or the time of day otherwise. Note that in the latter case, the microsecond counter is the seed, so BaseDeviates constructed in rapid succession may not be independent.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lseed</td><td>A long-integer seed for the RNG.</td></tr>

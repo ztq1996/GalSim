@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -123,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba630c55a34994f8963388e81c7027de"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#aba630c55a34994f8963388e81c7027de">angleBetween</a></td></tr>
 <tr class="memdesc:aba630c55a34994f8963388e81c7027de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the open angle at the location of the current coord between <code>coord1</code> and <code>coord2</code>.  <a href="#aba630c55a34994f8963388e81c7027de">More...</a><br/></td></tr>
 <tr class="separator:aba630c55a34994f8963388e81c7027de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840ed5a72922311ee44ec8fc2e4b37fe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a840ed5a72922311ee44ec8fc2e4b37fe">area</a></td></tr>
+<tr class="memdesc:a840ed5a72922311ee44ec8fc2e4b37fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the area of the spherical triangle defined by the current coord, <code>coord1</code>, and <code>coord2</code>, returning the area in steradians.  <a href="#a840ed5a72922311ee44ec8fc2e4b37fe">More...</a><br/></td></tr>
+<tr class="separator:a840ed5a72922311ee44ec8fc2e4b37fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76297a7a5dfa0add84f8613633cb1883"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a76297a7a5dfa0add84f8613633cb1883">project</a></td></tr>
 <tr class="memdesc:a76297a7a5dfa0add84f8613633cb1883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the currect coord as the center point of a tangent plane projection to project the <code>other</code> coordinate onto that plane.  <a href="#a76297a7a5dfa0add84f8613633cb1883">More...</a><br/></td></tr>
 <tr class="separator:a76297a7a5dfa0add84f8613633cb1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,6 +259,40 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Find the open angle at the location of the current coord between <code>coord1</code> and <code>coord2</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a840ed5a72922311ee44ec8fc2e4b37fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.celestial.CelestialCoord.area </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coord1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coord2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the area of the spherical triangle defined by the current coord, <code>coord1</code>, and <code>coord2</code>, returning the area in steradians. </p>
 
 </div>
 </div>
@@ -538,7 +574,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Use the currect coord as the center point of a tangent plane projection to project the <code>other</code> coordinate onto that plane. </p>
 <p>This function return the position (u,v) in the Euclidean coordinate system defined by a tangent plane projection around the current coordinate, with +v pointing north and +u pointing west.</p>
-<p>There are currently three options for the projection, which you can specify with the optional <code>projection</code> keyword argument: </p>
+<p>There are currently four options for the projection, which you can specify with the optional <code>projection</code> keyword argument: </p>
 <pre class="fragment">'lambert' [default] uses a Lambert azimuthal projection, which preserves
         area, but not angles.  For more information, see
         http://mathworld.wolfram.com/LambertAzimuthalEqual-AreaProjection.html

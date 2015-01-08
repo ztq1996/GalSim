@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -99,6 +98,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">galsim.image.Image Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for storing image data along with the pixel scale or wcs information.  
+ <a href="classgalsim_1_1image_1_1_image.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.image.Image:</div>
 <div class="dyncontent">
@@ -213,7 +215,85 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a8848a2c56a8b87be08ed30bdc0beed98">valid_dtypes</a> = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+alias_dtypes.keys()</td></tr>
 <tr class="separator:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class for storing image data along with the pixel scale or wcs information. </p>
+<p>The <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class encapsulates all the relevant information about an image including a NumPy array for the pixel values, a bounding box, and some kind of WCS that converts between pixel coordinates and world coordinates. The NumPy array may be constructed by the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class itself, or an existing array can be provided by the user.</p>
+<p>This class creates shallow copies unless a deep copy is explicitly requested using the <code>copy</code> method. The main reason for this is that it allows users to work directly with and modify subimages of larger images (for example, to successively draw many galaxies into one large image). For other implications of this convention, see the description of initialization instructions below.</p>
+<p>There are 4 data types that the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> can use for the data values. These are <code>numpy.int16</code>, <code>numpy.int32</code>, <code>numpy.float32</code>, and <code>numpy.float64</code>. If you are constructing a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> from scratch, the default is <code>numpy.float32</code>, but you can specify one of the other data types.</p>
+<h2>Initialization </h2>
+<p>There are several ways to construct an <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>: </p>
+<pre class="fragment">Image(ncol, nrow, dtype=numpy.float32, init_value=0, ...)
+
+        This constructs a new image, allocating memory for the pixel values according to
+        the number of columns and rows.  You can specify the data type as `dtype` if you
+        want.  The default is `numpy.float32` if you don't specify it.  You can also
+        optionally provide an initial value for the pixels, which defaults to 0.
+
+Image(bounds, dtype=numpy.float32, init_value=0, ...)
+
+        This constructs a new image, allocating memory for the pixel values according to a
+        given bounds object.  The bounds should be a BoundsI instance.  You can specify the
+        data type as `dtype` if you want.  The default is `numpy.float32` if you don't
+        specify it.  You can also optionally provide an initial value for the pixels, which
+        defaults to 0.
+
+Image(array, xmin=1, ymin=1, make_const=False, ...)
+
+        This views an existing NumPy array as an Image, with updates to the array or Image
+        being affecting the other object unless `Image(array.copy(), ...)` is used.  The
+        dtype is taken from `array.dtype`, which must be one of the allowed types listed
+        above.  You can also optionally set the origin `(xmin, ymin)` if you want it to be
+        something other than (1,1).  You can also optionally force the Image to be read-only
+        with `make_const=True`, though if the original NumPy array is modified then the
+        contents of `Image.array` will change.
+
+Image(image, dtype=dtype)
+
+        This creates a shallow copy of an Image, possibly changing the type.  e.g.
+
+            &gt;&gt;&gt; image_float = galsim.Image(64, 64) # default dtype=numpy.float32
+            &gt;&gt;&gt; image_double = galsim.Image(image_float, dtype=numpy.float64)
+
+        To get a deep copy, use the `copy` method rather than the `Image` constructor.
+</pre><p>You can specify the <code>ncol</code>, <code>nrow</code>, <code>bounds</code>, <code>array</code>, or <code>image</code> parameters by keyword argument if you want, or you can pass them as simple arg as shown aboves, and the constructor will figure out what they are.</p>
+<p>The other keyword arguments (shown as ... above) relate to the conversion between sky coordinates, which is how all the GalSim objects are defined, and the pixel coordinates. There are three options for this: </p>
+<pre class="fragment">scale       You can optionally specify a pixel scale to use.  This would normally have
+            units arcsec/pixel, but it doesn't have to be arcsec.  If you want to
+            use different units for the physical scale of your galsim objects, then
+            the same unit would be used here.
+wcs         A WCS object that provides a non-trivial mapping between sky units and
+            pixel units.  The `scale` parameter is equivalent to `wcs=PixelScale(scale)`.
+            But there are a number of more complicated options.  See the WCS class
+            for more details.
+None        If you do not provide either of the above, then the conversion is undefined.
+            When drawing onto such an image, a suitable pixel scale will be automatically
+            set according to the Nyquist scale of the object being drawn.
+</pre><h2>Attributes </h2>
+<p>After construction, you can set or change the scale or wcs with </p>
+<pre class="fragment">&gt;&gt;&gt; image.scale = new_scale
+&gt;&gt;&gt; image.wcs = new_wcs
+</pre><p>Note that <code>image.scale</code> will only work if the WCS is a PixelScale. Once you set the wcs to be something non-trivial, then you must interact with it via the <code>wcs</code> attribute. The <code>image.scale</code> syntax will raise an exception.</p>
+<p>There are also two read-only attributes: </p>
+<pre class="fragment">&gt;&gt;&gt; image.bounds
+&gt;&gt;&gt; image.array
+</pre><p>The <code>array</code> attribute is a NumPy array of the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>'s pixels. The individual elements in the array attribute are accessed as <code>image.array[y,x]</code>, matching the standard NumPy convention, while the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class's own accessor uses <code>(x,y)</code>.</p>
+<pre class="fragment"> Methods
+ -------
+
+     view        Return a view of the image.
+     subImage    Return a view of a portion of the full image.
+     shift       Shift the origin of the image by (dx,dy).
+     setCenter   Set a new position for the center of the image.
+     setOrigin   Set a new position for the origin (x,y) = (0,0) of the image.
+     im(x,y)     Get the value of a single pixel.
+     setValue    Set the value of a single pixel.
+     resize      Resize the image to have a new bounds.
+     fill        Fill the image with the same value in all pixels.
+     setZero     Fill the image with zeros.
+     invertSelf  Convert each value x to 1/x.
+     copy        Return a deep copy of the image.
+
+ See their doc strings for more details.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abd4cfb47eac16fe6e29a090a0b87d439"></a>
 <div class="memitem">
 <div class="memproto">
@@ -645,6 +725,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resize the image to have a new bounds (must be a BoundsI instance) </p>
+<p>Note that the resized image will have uninitialized data. If you want to preserve the existing data values, you should either use <code>subImage</code> (if you want a smaller portion of the current <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>) or make a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> and copy over the current values into a portion of the new image (if you are resizing to a larger <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>). </p>
 
 </div>
 </div>
@@ -1009,8 +1090,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;= {</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        int : cpp_valid_dtypes[1],    <span class="comment"># int32</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        float : cpp_valid_dtypes[3],  <span class="comment"># float64</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        int : numpy.int32,          <span class="comment"># So that user gets what they would expect</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        float : numpy.float64,      <span class="comment"># if using dtype=int or float</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>

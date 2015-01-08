@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>GalSim: Changes from v1.0 to v1.1</title>
+<title>GalSim: Changes from v1.1 to v1.2</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -79,247 +78,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Changes from v1.0 to v1.1 </div>  </div>
+<div class="title">Changes from v1.1 to v1.2 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In this release, we introduce two big pieces of new functionality: arbitrary WCS transformations (conversions between image and world coordinates more complicated than a simple pixel scale) and chromatic objects (objects whose surface brightness profile is a function of wavelength). Each of these topics has its own section below, so see those for more details.</p>
-<p>In addition, we decided to make quite a few changes to the API. Some of these changes were necessary (or at least helpful) for implementing the new functionality. But since we were doing some API changes, we decided to go ahead and include a number of other API changes that we had been reluctant to introduce previously for backwards-compatibility reasons. Getting them all in now means that the API will hopefully be more stable going forward.</p>
-<p>We tried to implement the changes in as backwards-compatible a way as possible. In most cases, the previous syntax will still work correctly for the time being. The old functions are merely marked as obsolete or discouraged in the doc strings with a pointer to the new preferred syntax. At some point (probably version 1.2), the old syntax will be officially deprecated, and use of them will raise DeprecationWarnings. Then eventually (probably version 2.0), the deprecated versions will be removed. Hopefully, this will provide for a relatively easy transition to the new style, giving you time to convert any existing GalSim code you may have.</p>
-<p>The most significant API changes are:</p>
-<ol type="1">
-<li>A new <code>Image</code> class combines the functionality of all the various different image classes we used to have (<code>ImageF</code>, <code>ImageD</code>, <code>ImageViewF</code>, etc.).</li>
-<li>We changed the way objects are transformed (sheared, dilated, rotated, etc.) to use expressions like <code>obj = obj.shear(s)</code> rather than either <code>obj.applyShear(s)</code> or <code>obj = obj.createSheared(s)</code>.</li>
-<li>We combined the functionality of the <code>draw</code> and <code>drawShoot</code> commands into a single <code>drawImage</code> command using a <code>method</code> keyword to specify which rendering method to use.</li>
-<li>The default method for the new <code>drawImage</code> command handles the convolution by the pixel for you, so you no longer need to include the pixel convolution yourself, unless you are doing something slightly non-standard.</li>
-</ol>
-<p>See the sections below on the API changes for more details about these and the various other more minor changes we have made in this release. Again, we sincerely hope that doing these all at once means that we will not have very many (or any) big API changes going forward.</p>
-<h2>Non-backward-compatible API changes </h2>
-<p>We believe that these changes will not impose much hardship on the majority of GalSim users. The funtions are either expected to be rarely used, or the change does not affect the most common uses of the function.</p>
+<div class="textblock"><p>Note: v1.2 is the official version we are tying the GalSim paper to. (Nearly published &ndash; we are responding to the referee report now!) A few of the changes herein were made to address perceived deficiencies we noticed as we were writing the paper.</p>
+<h2>New Features </h2>
 <ul>
-<li>Changed the <code>xw</code> and <code>yw</code> parameters of the <code>Pixel</code> constructor to a single <code>scale</code> parameter. (Issue #364)<ul>
-<li><code>pix = Pixel(xw=scale)</code> should now be either <code>pix = Pixel(scale=scale)</code> or simply <code>pix = Pixel(scale)</code>.</li>
+<li>Changed name of noise whitening routine from noise.applyWhiteningTo(image) to image.whitenNoise(noise), parallel to image.addNoise(noise); use of noise.applyWhiteningTo() is deprecated. (#529)</li>
+<li>Added an option to impose N-fold symmetry (for user-selected even values of N&gt;=4) on the noise in images with correlated noise rather than fully whiten the noise called image.symmetrizeNoise(noise, N). (#529)</li>
+<li>Added magnitudes as a method to set the flux of SED objects. (#547)</li>
+<li>Added SED.calculateDCRMomentShifts and SED.calculateChromaticSeeingRatio convenience functions for estimating chromatic PSF moment shifts. (#547)</li>
+<li>Added new methods of the image class to simulate two detector effects: nonlinearity and reciprocity failure. (#552)</li>
+<li>Renamed the GSParams parameter <code>alias_threshold</code> to <code>folding_threshold</code>, a clearer term for the profile image folding in real space that this GSParam controls. (#562)</li>
+<li>Modified the internals of noise generation by correlated noise models to use Hermitian symmetry, for greater efficiency. (#563)</li>
+<li>Extended to the <code>rotate</code>, <code>shear</code>, and <code>transform</code> methods of ChromaticObject the ability to take functions of wavelength for the arguments. (#581)</li>
+<li>Added a module to describe charge deflection in CCD pixels (also known as the "brighter-fatter" effect) following model of Antilogus et al (2014). (#524)</li>
+<li>Make it possible for OpticalPSF to model non-trivially complicated obscuration and/or struts by allowing it to take an optional image of the pupil plane. (#601)</li>
+<li>Added <code>nx</code>, <code>ny</code>, and <code>bounds</code> keywords to drawImage() and drawKImage() methods. (#603)</li>
 </ul>
-</li>
-<li>Added new <code>Box</code> class to take up the functionality that had been <code>Pixel</code> with unequal values of <code>xw</code> and <code>yw</code>. (Issue #364)<ul>
-<li><code>box = Pixel(xw=width, yw=height)</code> should now be either <code>box = Box(width=width, height=height)</code> or <code>box = Box(width, height)</code>.</li>
-</ul>
-</li>
-<li>Changed the handling of the <code>scale</code> and <code>init_value</code> parameters of the <code>Image</code> constructor, so that now they have to be named keyword arguments rather than positional arguments. (Issue #364)<ul>
-<li><code>im = ImageF(nx, ny, scale, init_val)</code> should now be <code>im = ImageF(nx, ny, scale=scale, init_value=init_val)</code>.</li>
-</ul>
-</li>
-<li>Changed <code>Angle.wrap()</code> to return the wrapped angle rather than modifying the original. (Issue #364)<ul>
-<li><code>angle.wrap()</code> should now be <code>angle = angle.wrap()</code>.</li>
-</ul>
-</li>
-<li>Removed the previously deprecated <code>Ellipse</code> and <code>AtmosphericPSF</code> classes. Also removed <code>PhotonArray</code> from the python layer, since it is only used by the C++ layer. (Issue #364)</li>
-<li>Changed Bounds methods <code>addBorder</code>, <code>shift</code>, and <code>expand</code> to return new Bounds objects rather than changing the original (in the python layer only). (Issue #364)</li>
-<li>Stopped importing everything from the <code>galsim._galsim</code> namespace into the main <code>galsim</code> namespace. Now only the classes and functions which we document and use in examples are imported into the <code>galsim</code> namespace. The rest are considered implementation details, and are not guaranteed to maintain backward compatibility of syntax and/or functionality in future versions. (Issue #511)<ul>
-<li>e.g. <code><a class="el" href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile. ">galsim.SBGaussian</a></code> should now be <code>galsim._galsim.SBGaussian</code>.</li>
-<li>Or better, switch to using the documented <code>galsim.Gaussian</code> class instead.</li>
-<li>Similarly for other <code>SB*</code> classes along with a few other undocumented classes and functions.</li>
-</ul>
-</li>
-<li>Changed the name of the parameter used to seed various Deviate objects from <code>lseed</code> to <code>seed</code>. The documentation described it as an unnamed arg, rather than a named kwarg, so probably no one was using it by name. But if you were, just change <code>lseed</code> to <code>seed</code>. (Issue #511)</li>
-<li>Added a default value for the <code>rng</code> parameter of <code>CorrelatedNoise</code> objects. The consequence of this is that if you were relying on the order of the construction parameters, you will need to rearrange, since <code>rng</code> is no longer first (because it is a kwarg now). (Issue #526)<ul>
-<li><code>CorrelatedNoise(rng, image)</code> should now be <code>CorrelatedNoise(image, rng=rng)</code> or <code>CorrelatedNoise(rng=rng, image=image)</code>.</li>
-<li><code>UncorrelatedNoise(rng, scale, variance)</code> should now be <code>UncorrelatedNoise( variance, rng=rng, scale=scale)</code> or <code>UncorrelatedNoise(rng=rng, scale=scale, variance=variance)</code>.</li>
-<li><code>getCOSMOSNoise(rng, file_name)</code> should now be <code>getCOSMOSNoise(file_name, rng=rng)</code> or <code>getCOSMOSNoise(rng=rng, file_name=file_name)</code>.</li>
-</ul>
-</li>
-<li>Merged the GSParams parameters <code>shoot_relerr</code> and <code>shoot_abserr</code> into the parameters <code>integration_relerr</code> and <code>integration_abserr</code>. The latter items now cover all integrations other than real-space rendering. (Issue #535)</li>
-</ul>
-<h2>Other changes to the API </h2>
-<p>For these changes, we are currently still allowing the old syntax for ease of transition, but that syntax is now discouraged. It is usually marked in the code as being obsolete. At some point (probably version 1.2) use of the old syntax will raise a DeprecationWarning, and with version 2.0, it will be removed.</p>
+<h2>Bug Fixes and Improvements </h2>
 <ul>
-<li>Changed the name of the <code>dx</code> parameter of the <code>draw</code>, <code>drawShoot</code> and <code>drawK</code> methods of <code>GSObject</code> to the name <code>scale</code> in the new <code>drawImage</code> and <code>drawKImage</code> methods (see below). Similarly, the <code>dx</code> parameter of the <code>InterpolatedImage</code> and <code>CorrelatedNoise</code> constructors is also now named <code>scale</code>, and the <code>dx_cosmos</code> parameter of <code>getCOSMOSNoise</code> is now <code>cosmos_scale</code>. (Issue #364)</li>
-<li>Combined the old <code>Image</code>, <code>ImageView</code> and <code>ConstImageView</code> arrays of class names into a single python layer <code>Image</code> class that automatically constructs the appropriate C++ image class as an attribute. (Issue #364)<ul>
-<li><code>im = ImageF(...)</code> and similar is still valid.</li>
-<li><code>im = ImageF(...)</code> <em>may</em> now be written as <code>im = Image(...)</code>. That is, the numpy.float32 type is the default data type if you do not specify something else either through the type letter or the <code>dtype</code> parameter.</li>
-<li><code>im = ImageViewF(...)</code> and similar should now be <code>im = ImageF(...)</code> (preserving the same type letter S, I, F or D).</li>
-<li><code>im = ConstImageViewF(...)</code> and similar should now be <code>im = ImageF(..., make_const=True)</code> (again preserving the type letter).</li>
-<li><code>im = Image[type](...)</code> should now be <code>Image(..., dtype=type)</code></li>
-<li><code>im = ImageView[type](numpy_array.astype(type))</code> should now be <code>im = Image(numpy_array.astype(type))</code>. i.e. the data type inherits from the numpy_array argument when appropriate. If it is already the correct type, you do not need the <code>astype(type)</code> part.</li>
-<li><code>im = ConstImageView[type](numpy_array.astype(type))</code> should now be <code>im = Image(numpy_array.astype(type), make_const=True)</code></li>
-</ul>
-</li>
-<li>Changed DES_PSFEx class to take in the original image file to get the correct WCS information to convert from image coordinates to world coordinates. If unavailable, then the returned PSF profiles will be in image coordinates. The old <code>scale</code> parameter in <code>psfex.getPSF</code> is obsolete since it is not really accurate. The new behavior accurately converts the PSFEx profile between image and world coordinates. (Issue #364)<ul>
-<li><code>psfex = galsim.des.DES_PSFEx(psf_file)</code> <code>psf = psfex.getPSF(pos, scale)</code> should become <code>psfex = galsim.des.DES_PSFEx(psf_file, image_file)</code> <code>psf = psfex.getPSF(pos)</code>.</li>
-</ul>
-</li>
-<li>Changed the methods createSheared, createRotated, etc. to more succinct names. The applyShear, applyRotation, etc. methods are also discouraged and will eventually be deprecated. All such usage should be changed to the version the returns a new object, rather than modify the object in place. (Issue #511)<ul>
-<li><code>gal = gal.createSheared(shear)</code> or <code>gal.applyShear(shear)</code> should now be <code>gal = gal.shear(shear)</code>.</li>
-<li><code>gal = gal.createRotated(theta)</code> or <code>gal.applyRotation(theta)</code> should now be <code>gal = gal.rotate(theta)</code>.</li>
-<li><code>gal = gal.createDilated(scale)</code> or <code>gal.applyDilation(scale)</code> should now be <code>gal = gal.dilate(scale)</code>.</li>
-<li><code>gal = gal.createExpanded(scale)</code> or <code>gal.applyExpansion(scale)</code> should now be <code>gal = gal.expand(scale)</code>.</li>
-<li><code>gal = gal.createMagnified(mu)</code> or <code>gal.applyMagnification(mu)</code> should now be <code>gal = gal.magnify(mu)</code>.</li>
-<li><code>gal = gal.createShifted(shift)</code> or <code>gal.applyShift(shift)</code> should now be <code>gal = gal.shift(shift)</code>.</li>
-<li><code>gal = gal.createTransformed(...)</code> or <code>gal.applyTransformation(...)</code> should now be <code>gal = gal.transform(...)</code>.</li>
-<li><code>gal = gal.createLensed(g1,g2,mu)</code> or <code>gal.applyLensing(g1,g2,mu)</code> should now be <code>gal = gal.lens(g1,g2,mu)</code>.</li>
-</ul>
-</li>
-<li>Changed the <code>setFlux</code> and <code>scaleFlux</code> methods to versions that return new objects, rather than change the object in place. (Issue #511)<ul>
-<li><code>gal.setFlux(flux)</code> should now be <code>gal = gal.withFlux(flux)</code></li>
-<li><code>gal.scaleFlux(flux_ratio)</code> should now be <code>gal = gal * flux_ratio</code></li>
-<li><code>gal *= flux_ratio</code> is fine, since python converts it to the above behind the scenes.</li>
-</ul>
-</li>
-<li>Changed the corresponding methods of CorrelatedNoise similarly. (Issue #511)<ul>
-<li><code>cn = cn.createSheared(shear)</code> or <code>cn.applyShear(shear)</code> should now be <code>cn = cn.shear(shear)</code>.</li>
-<li><code>cn = cn.createRotated(theta)</code> or <code>cn.applyRotation(theta)</code> should now be <code>cn = cn.rotate(theta)</code>.</li>
-<li><code>cn = cn.createDilated(scale)</code> or <code>cn.applyDilation(scale)</code> should now be <code>cn = cn.dilate(scale)</code>.</li>
-<li><code>cn = cn.createExpanded(scale)</code> or <code>cn.applyExpansion(scale)</code> should now be <code>cn = cn.expand(scale)</code>.</li>
-<li><code>cn = cn.createMagnified(mu)</code> or <code>cn.applyMagnification(mu)</code> should now be <code>cn = cn.magnify(mu)</code>.</li>
-<li><code>cn = cn.createShifted(shift)</code> or <code>cn.applyShift(shift)</code> should now be <code>cn = cn.shift(shift)</code>.</li>
-<li><code>cn = cn.createTransformed(...)</code> or <code>cn.applyTransformation(...)</code> should now be <code>cn = cn.transform(...)</code>.</li>
-<li><code>cn = cn.createLensed(g1,g2,mu)</code> or <code>cn.applyLensing(g1,g2,mu)</code> should now be <code>cn = cn.lens(g1,g2,mu)</code>.</li>
-</ul>
-</li>
-<li>Changed how to set the variance of the various <code>Noise</code> methods (including <code>CorrelatedNoise</code> and all other subclasses of <code>BaseNoise</code>). (Issue #511)<ul>
-<li><code>n.setVariance(variance)</code> should now be <code>n = n.withVariance(variance)</code></li>
-<li><code>n.scaleVariance(variance_ratio)</code> should now be <code>n = n * variance_ratio</code></li>
-</ul>
-</li>
-<li>Changed the <code>CorrelatedNoise.convolveWith</code> method to <code>convolvedWith</code>, which returns a new object corresponding to the convolution. (Issue #511)<ul>
-<li><code>cn.convolveWith(obj)</code> should now be <code>cn = cn.convolvedWith(obj)</code>.</li>
-</ul>
-</li>
-<li>Changed the Shapelet.fitImage method to a factory function named <code>FitShapelet</code> that constructs a new Shapelet object rather than modify an existing object in place.<ul>
-<li><code>shapelet = galsim.Shapelet(sigma,order); shapelet.fitImage(image)</code> should now be <code>shapelet = galsim.FitShapelet(sigma, order, image)</code></li>
-</ul>
-</li>
-<li>Changed the name of LVectorSize to ShapeletSize. (Issue #511)</li>
-<li>Changed the <code>nyquistDx</code> method to <code>nyquistScale</code>. (Issue #511)</li>
-<li>In general, moved as many classes as possible toward an immutable design. The bulk of these changes are the ones listed above, but we also now discourage use of setters in various classes that had them. These methods will eventually be deprecated. The classes are all "light" classes, that have trivial constructors, so the preferred syntax is now to create a new instance, rather than modifiy an existing instance. (Issue #511)<ul>
-<li><code>GaussianNoise.setSigma</code></li>
-<li><code>PoissonNoise.setSkyLevel</code></li>
-<li><code>CCDNoise</code>: <code>setSkyLevel</code>, <code>setGain</code>, <code>setReadNoise</code></li>
-<li><code>BaseDeviate</code> subclasses: all <code>set*</code> methods.</li>
-<li><code>Shear</code>: <code>setG1G2</code>, <code>setE1E2</code>, <code>setEBeta</code>, <code>setEta1Eta2</code>, <code>setEtaBeta</code></li>
-<li><code>Shapelet</code>: <code>setSigma</code>, <code>setOrder</code>, <code>setBVec</code>, <code>setNM</code>, <code>setPQ</code></li>
-</ul>
-</li>
-<li>Changed how to build a <code>CorrelatedNoise</code> object from an <code>Image</code> to use the <code>CorrelatedNoise</code> constructor rather than <code>getCorrelatedNoise</code>. (Issue #527)<ul>
-<li><code>image.getCorrelatedNoise()</code> should now be <code>galsim.CorrelatedNoise(image)</code>.</li>
-</ul>
-</li>
-<li>Combined the <code>draw</code> and <code>drawShoot</code> methods into a single <code>drawImage</code> method with more options about how the profile should be rendered. Furthermore, in most cases, you no longer need to convolve by a Pixel by hand. The default rendering method will include the pixel convolution for you. (Issue #535) So, if <code>obj</code> is a GSObject, then:<ul>
-<li><code>obj_pix = galsim.Convolve(obj, galsim.Pixel(scale));</code> <code>im = obj_pix.draw(...)</code> -&gt; <code>im = obj.drawImage(...)</code></li>
-<li><code>obj_pix = galsim.Convolve(obj, galsim.Pixel(scale), real_space=False);</code> <code>im = obj_pix.draw(...)</code> -&gt; `im = obj.drawImage(method='fft', ...)<code> *</code>obj_pix = galsim.Convolve(obj, galsim.Pixel(scale), real_space=True);<code> </code>im = obj_pix.draw(...)<code> -&gt;</code>im = obj.drawImage(method='real_space', ...)<code> *</code>im = obj.drawShoot(...)<code> -&gt;</code>im = obj.drawImage(method='phot', ...)<code> *</code>im = obj.draw(...)<code> -&gt;</code>im = obj.drawImage(method='no_pixel', ...)<code> *</code>im = obj.draw(normalization='sb', ...)<code> -&gt;</code>im = obj.drawImage(method='sb', ...)<code></code></li>
-</ul>
-</li>
-<li><code>Changed the name of</code>drawK<code>to</code>drawKImage<code>to be more parallel with the new</code>drawImage<code>name. (Issue #535) *</code>re, im = obj.drawK(...)<code>-&gt;</code>re, im = obj.drawKImage(...)`</li>
-</ul>
-<h2>New WCS classes (Issue #364) </h2>
-<ul>
-<li>Every place in the code that can take a <code>scale</code> parameter (e.g. the <code>Image</code> constructor, <code>GSObject.drawImage()</code>, <code>InterpolatedImage</code>, etc.) can now take a <code>wcs</code> parameter. The <code>scale</code> parameter is still an option, but now it is just shorthand for <code>wcs = PixelScale(scale)</code>.</li>
-<li>There are three LocalWCS classes that have a common origin for image and world coordinates:<ul>
-<li><code>PixelScale</code> describes a simple scale conversion from pixels to arcsec.</li>
-<li><code>ShearWCS</code> describes a uniformly sheared coordinate system.</li>
-<li><code>JacobianWCS</code> describes an arbitrary 2x2 Jacobian matrix.</li>
-</ul>
-</li>
-<li>There are three non-local UniformWCS classes that have a uniform pixel size and shape, but not necessarily the same origin.<ul>
-<li><code>OffsetWCS</code> is a <code>PixelScale</code> with the world (0,0) location offset from the (0,0) position in image coordinates.</li>
-<li><code>OffsetShearWCS</code> is a <code>ShearWCS</code> with a similar offset.</li>
-<li><code>AffineTransform</code> is a <code>JacobianWCS</code> with an offset. It is the most general possible <em>uniform</em> WCS transformation. i.e. one where the pixel shape is uniform across the image.</li>
-</ul>
-</li>
-<li>There is one non-uniform EuclideanWCS class that uses Euclidean coordinates for the world coordinate system:<ul>
-<li><code>UVFunction</code> is an arbitrary transformation from (x,y) coordinates to Euclidean (u,v) coordinates. It takes arbitrary functions u(x,y) and v(x,y) as inputs. (And optionally x(u,v) and y(u,v) for the inverse transformations.)</li>
-</ul>
-</li>
-<li>There are five CelestialWCS classes that use celestial coordinates for the world coordinate system. i.e. the world coordinates are in terms of right ascension and declination (RA, Dec). There is a new CelestialCoord class that encapsulates this kind of position on the sphere.<ul>
-<li><code>RaDecFunction</code> takes an arbitrary functions ra(x,y) and dec(x,y) that return the RA and Dec.</li>
-<li><code>AstropyWCS</code> uses the astropy.wcs package to read in a given FITS file.</li>
-<li><code>PyAstWCS</code> uses the starlink.Ast package to read in a given FITS file.</li>
-<li><code>WcsToolsWCS</code> uses wcstools commands for a given FITS file.</li>
-<li><code>GSFitsWCS</code> is GalSim code to read FITS files that use TAN and TPV WCS types. Less flexible than the others, but still useful since these are probably the most common WCS types for optical astronomical images. Plus it is quite a bit faster than the others.</li>
-</ul>
-</li>
-<li>There is a factory function called <code>FitsWCS</code> that will try the various classes that can read FITS files until it finds one that works. It will revert to <code>AffineTransform</code> if it cannot find anything better.</li>
-<li>Another function, <code>TanWCS</code>, acts like a WCS class. It builds a WCS using TAN projection and returns a <code>GSFitsWCS</code> implementing it.</li>
-<li>When reading in an image from a FITS file, the image will automatically try to read the WCS information from the header with the <code>FitsWCS</code> function.</li>
-</ul>
-<p>See the docstring for <code>BaseWCS</code> (the base class for all of these WCS classes) for information about how to use these classes. Also, check out demo3, demo9, demo10, and demo11 for example usage.</p>
-<h2>New CelestialCoord class (Issue #364) </h2>
-<ul>
-<li>This class describes a position on the celestial sphere according to RightAscension (RA) and Declination (Dec). These two values are accessible as <code>coord.ra</code> and <code>coord.dec</code>. So it is used by some of the WCS classes for the world coordinate positions.</li>
-<li>It has methods to handle a number of spherical trigonometry operations that are sometimes required when dealing with celestial coordinates:<ul>
-<li><code>coord1.distanceTo(coord2)</code> returns the great circle distance between two coordinates (as a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>).</li>
-<li><code>coord1.angleBetween(coord2,coord3)</code> returns the angle between the two great circles (coord1-coord2) and (coord1-coord3).</li>
-<li><code>coord1.project(coord2)</code> applies a tangent plane projection of coord2 with respect to the tangent point coord1 using one of 4 possible projection schemes specified by the optional keyword <code>projection</code>: lambert, stereographic, gnomonic, or postel. See the docstring for this function for details.</li>
-<li><code>coord1.deproject(pos)</code> reverses the projection to go from the position on the tangent plane back to celestial coordinates.</li>
-<li><code>coord.precess(from_epoch, to_epoch)</code> precesses the coordinates to a different epoch.</li>
-<li><code>coord.getGalaxyPos()</code> returns the longitude and latitude in the galactic coordinate system as a tuple (el, b).</li>
-</ul>
-</li>
-</ul>
-<h2>New chromatic functionality (Issues #467, #520) </h2>
-<ul>
-<li>New <code>Bandpass</code> class to represent throughput functions, which can either represent a complete imaging system, or the individual components thereof, such as the atmosphere, mirrors, lenses, filters, detector quantum efficiency, etc. These can be initialized from 2-column ascii files, python functions, <code>eval()</code> string expressions, or <code>galsim.LookupTable</code>s.<ul>
-<li>Two methods are available to reduce the samples used to evaluate integrals over wavelength, and hence reduce the time to draw <code>ChromaticObject</code>s:<ul>
-<li><code>Bandpass.truncate(blue_limit, red_limit)</code> returns a truncated Bandpass.</li>
-<li><code>Bandpass.thin(rel_err)</code> Returns a thinned Bandpass that nonetheless still integrates to the unthinned result within <code>rel_err</code> relative error.</li>
-</ul>
-</li>
-<li>Bandpasses can be multiplied and divided by other Bandpasses.</li>
-</ul>
-</li>
-<li>New <code>SED</code> class to represent stellar and galactic spectra. These can be initialized from 2-column ascii files, python functions, <code>eval()</code> string expressions or <code>galsim.LookupTable</code>s.<ul>
-<li><code>sed.withFluxDensity(flux_density, wavelength) returns an SED normalized to have</code>flux_density<code>(photons/nm) at</code>wavelength<code>. *</code>sed.withFlux(flux, bandpass)<code>returns an SED normalized to have</code>flux<code> (photons) through</code>bandpass<code>. *</code>sed.atRedshift(z)<code>will return a new SED with redshift set to</code>z`.</li>
-<li>SEDs can be added and subtracted from each other, and multiplied and divided by constants and functions of wavelength.</li>
-</ul>
-</li>
-<li>New <code>ChromaticObject</code> class to represent wavelength-dependent surface brightness profiles:<ul>
-<li><code>Chromatic(gsobj, sed)</code> subclass creates a separable wavelength-dependent surface brightness profile: I.e. one that takes the form f(x, y, ) = g(x, y) * h()</li>
-<li><code>gsobj * sed</code> is a shortcut for <code>Chromatic(gsobj, sed)</code>.</li>
-<li>Galaxies with color gradients can be created as sums of separable chromatic profiles. E.g. <code>gal = bulge_prof * bulge_sed + disk_prof * disk_sed</code>.</li>
-<li><code>ChromaticObject.applyDilation()</code>, <code>.applyExpansion()</code>, and <code>.applyShift()</code>, can take function(s) of wavelength in nanometers as their argument(s), which can be used to create a variety of chromatic effects, for instance, a wavelength-dependent diffraction limit.</li>
-<li><code>ChromaticAtmosphere(fiducial_PSF, fiducial_wave, zenith_angle)</code> will modify the monochromatic GSObject PSF <code>fiducial_PSF</code> defined at wavelength <code>fiducial_wave</code> to account for atmospheric differential chromatic refraction and Kolmogorov chromatic seeing for an observation at <code>zenith_angle</code>.</li>
-<li><code>ChromaticObject</code>s are drawn with almost identical syntax to <code>GSObjects</code>. The one difference is that <code>ChromaticObject</code>s require an additional argument, (given first) which is the <code>Bandpass</code> throughput function against which to integrate over wavelength. E.g. <code>image = chroma_obj.drawImage(bandpass, ...)</code></li>
-</ul>
-</li>
-<li>Added demo12.py for wavelength dependence examples.</li>
+<li>Modified BoundsI and PositionI initialization to ensure that integer elements in NumPy arrays with <code>dtype==int</code> are handled without error. (#486)</li>
+<li>Changed the default seed used for Deviate objects when no seed is given to use /dev/urandom if it is available. If not, it reverts to the old behavior of using the current time to generate a seed value. (#537)</li>
+<li>Changed SED and Bandpass methods that return a new SED or Bandpass to attempt to preserve the type of the calling object if it is a subclass of SED or Bandpass respectively. (#547)</li>
+<li>Changed the the <code>file_name</code> argument to <code><a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">CorrelatedNoise.getCOSMOSNoise()</a></code> to no longer be required. The normal file to use is now installed along with GalSim (in the directory PREFIX/share/galsim), so that file can be used by default. (#548)</li>
+<li>Fixed the <code>dtype=</code> kwarg used when initializing <code>Image</code> instances to interpret the aliases <code>int</code> and <code>float</code> as the <code>numpy.int32</code> and <code>numpy.float64</code> data types, respectively. Previously the behavior was unpredictable and platform dependent. (#571)</li>
+<li>Added workaround for bug in pyfits 3.0 that affected <code><a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a></code>. (#572)</li>
+<li>Fixed the Image constructor so that if it is passed a NumPy array with the opposite byteorder as the native one on the system, it does not return an Image with different contents. (#594)</li>
+<li>Fixed bug that prevented calling LookupTables on non-square 2d arrays. (#599)</li>
+<li>Updated the code to account for a planned change in NumPy that <code>array==None</code> will be an element-wise comparison rather than equivalent to <code>array is None</code>. (#604)</li>
+<li>Fixed a bug where the dtype of an Image could change when resizing, which should not be the case. (#604)</li>
+<li>Defined a hidden <code>__version__</code> attribute according to PEP 8 standards. (#610)</li>
 </ul>
 <h2>Updates to config options </h2>
-<p>Some of these changes are not backwards compatible, but we believe they are only in rarely used functionality, so we do not expect most users to have to change their yaml files.</p>
 <ul>
-<li>Changed the previous behavior of the <code>image.wcs</code> field to allow several WCS types: 'PixelScale', 'Shear', 'Jacobian', 'Affine', 'UVFunction', 'RaDecFunction', 'Fits', and 'Tan'. (Issue #364)</li>
-<li>Changed the name of <code>sky_pos</code> to <code>world_pos</code>. (Issue #364)</li>
-<li>Removed <code>pix</code> top layer in config structure. Add <code>draw_method=no_pixel</code> to do what <code>pix : None</code> used to do. (Issue #364)</li>
-<li>Added <code>draw_method=real_space</code> to try to use real-space convolution. This had been an option for the psf image (via the <code>real_space=True</code> parameter), but not the main image. It corresponds to the <code>method='real_space'</code> option for drawImage() described above. (Issue #364)</li>
-<li>Added ability to index <code>Sequence</code> types by any running index, rather than just the default by specifying an <code>index_key</code> parameter. The options are 'obj_num', 'image_num', 'file_num', or 'obj_num_in_file'. (Issue #364, #536)</li>
-<li>Added <code>Sum</code> type for value types for which it makes sense: float, int, angle, shear, position. (Issue #457)</li>
-<li>Allowed the user to modify or add config parameters from the command line. (Issue #479)</li>
-<li>Added a new <code>image.retry_failures</code> item that can be set so that if the construction of a GSObject fails for any reason, you can ask it to retry. An example of this functionality has been added to demo8. (Issue #482)</li>
-<li>Added a new <code>output.retry_io</code> item that can be set so that if the output write command fails (due to hard drive overloading for example), then it will wait a second and try again. (Issue #482)</li>
-<li>Changed the default sequence indexing for most things to be 'obj_num_in_file' rather than 'obj_num'. Functionally, this would usually only matter if the number of objects per file or image is not a constant. If the number of objects is constant, the automatic looping of the sequencing index essentially did this for you for most use cases. (Issue #487)</li>
-<li>Added <code>draw_method=sb</code> to make this parameter completely consistent with the way the <code>method</code> parameter for drawImage() now works. (Issue #535)</li>
-<li>Changed the <code>output.psf.real_space</code> option to <code>output.psf.draw_method</code> and allow all of the options that exist for <code>image.draw_method</code>. So if you had been using <code>real_space = True</code>, switch to <code>draw_method = real_space</code>. (Issue #535)</li>
-<li>Switched the GSParams of the final object to inherit from the galaxy rather than the PSF. This is likely more intuitive, since the user is more likely to put the gsparams item in the gal profile, and sometimes the values do not take effect until the profiles are combined in the Convolution object. (Issue #535)</li>
-<li>Added an <code>index</code> item for Ring objects in case you want to index the ring items in an unusual way. (Issue #536)</li>
-</ul>
-<h2>Other new features </h2>
-<ul>
-<li>Sped up the gzip and bzip2 I/O by using the shell gzip and bzip2 executables if they are available on the system. (Issue #344)</li>
-<li>Added some new functions to convert an angle to/from DMS strings. Sometimes handy when dealing with RA or Dec. (Issue #364)<ul>
-<li><code><a class="el" href="namespacegalsim_1_1angle.html#a346b4ffc23d58626a58778a4729dc577" title="Return a DMS representation of the angle as a string: (+/-)ddmmss.decimal An optional sep parameter c...">angle.dms()</a></code> returns the angle as a string in the form +/-ddmmss.decimal.</li>
-<li><code><a class="el" href="namespacegalsim_1_1angle.html#a8bc5d8b2996aa0a77e018ec3a8048a74" title="Return an HMS representation of the angle as a string: (+/-)hh:mm:ss.decimal. ">angle.hms()</a></code> returns the angle as a string in the form +/-hhmmss.decimal.</li>
-<li><code>angle = DMS_Angle(str)</code> converts from a dms string to a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>.</li>
-<li><code>angle = HMS_Angle(str)</code> converts from an hms string to a <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>.</li>
-</ul>
-</li>
-<li>Added <code>profile.applyTransformation(dudx, dudy, dvdx, dvdy)</code> applies a general (linear) coordinate transformation to a GSObject profile. It is a generalization of <code>applyShear</code>, <code>applyRotation</code>, etc. There is also the corresponding <code>createTransformed</code> as well. (Issue #364)</li>
-<li>Added <code><a class="el" href="namespacegalsim_1_1fits.html#a9bab532310c7ff757c7182c8b04c82e4" title="Read in a Pyfits hdu_list from a FITS file, taking care of the GalSim compression options...">galsim.fits.readFile()</a></code> function, which reads a FITS file and returns the hdu_list. Normally, this is equivalent to <code>pyfits.open(file_name)</code>, but it has a <code>compression</code> option that works the same way <code>compression</code> works for the other <code><a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a>*</code> functions, so it may be convenient at times. (Issue #364)</li>
-<li>Added some additional options and changed default interpolant for the lensing engine. (Issue #387)</li>
-<li>Permit users to initialize <code>OpticalPSF</code> with a list or array of aberrations, as an alternative to specifying each one individually. (The innards of OpticalPSF were also rearranged to use arrays instead of individual values, but this is not important for users, just developers.) (Issue #409)</li>
-<li>Added <code>max_size</code> optional parameter to OpticalPSF that lets you limit the size of the image that it constructs internally. (Issue #478)</li>
-<li>Added option to FitsHeader and FitsWCS to read in SCamp-style text files with the header information using the parameter <code>text_file=True</code>. (Issue #508)</li>
-<li>Fixed some bugs in the treatment of correlated noise. (Issues #526, #528)</li>
-<li>Modified <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">addNoiseSNR()</a> method to return the variance of the noise that was added. (Issue #526)</li>
-<li>Added <code>dtype</code> option to <code>drawImage</code> and <code>drawKImage</code>, which sets the data type to use for automatically constructed images. (Issue #526)</li>
-<li>Improved the real-space rendering, and integrations in general, to be a bit more accurate. (Issue #535) </li>
+<li>Moved noise whitening option from being an attribute of the RealGalaxy class, to being a part of the description of the noise. (#529)</li>
+<li>Added RandomPoisson, RandomBinomial, RandomWeibull, RandomGamma, and RandomChi2 random number generators, corresponding to the random deviate classes in the python layer. (#537) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

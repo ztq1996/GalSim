@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -101,13 +100,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>It may be that there is or soon will be more than one version of Python installed on your operating system, in which case please see the "Making sure
 you are using the right Python" Section below.</p>
 <h3>Getting Python and required modules</h3>
-<p>For a list of places to download Python, see <a href="http://www.python.org/getit/">http://www.python.org/getit/</a>.</p>
+<p>For a list of places to download Python, see <a href="http://www.python.org/download/">http://www.python.org/download/</a>.</p>
 <p>The GalSim package also requires</p>
 <ul>
 <li>the numerical Python module NumPy (<a href="http://www.numpy.org">http://www.numpy.org</a>)</li>
 <li>the astronomical FITS file input/output module PyFITS available either as a standalone package: <a href="http://www.stsci.edu/institute/software_hardware/pyfits">http://www.stsci.edu/institute/software_hardware/pyfits</a> or as part of the astropy library: <a href="http://www.astropy.org/">http://www.astropy.org/</a> The latter is preferred, since this is now where all future development of this package is happening.</li>
 <li>Optional dependency: the Python YAML parser and emitter module PyYAML (<a href="http://pyyaml.org/wiki/PyYAML">http://pyyaml.org/wiki/PyYAML</a>) Note: PyYAML is in fact only required for full config file parsing functionality, and can be omitted if users are happy to use JSON-style config parsing or prefer to write python scripts directly.</li>
-<li>Optional dependency: PyAst WCS package. This is a really nice front end for the Starlink AST astrometry code. It seems to support pretty much every WCS encoding there is. (At least every one we tried.) Their preferred installation method is via pip: pip install startlink-pyast For more information, see their website: <a href="https://pypi.python.org/pypi/starlink-pyast/">https://pypi.python.org/pypi/starlink-pyast/</a> With this installed, you can use the galsim.PyAstWCS class, which in turn means that galsim.FitsWCS will pretty much always work.</li>
+<li>Optional dependency: PyAst WCS package. This is a really nice front end for the Starlink AST astrometry code. It seems to support pretty much every WCS encoding there is. (At least every one we tried.) Their preferred installation method is via pip: pip install starlink-pyast For more information, see their website: <a href="https://pypi.python.org/pypi/starlink-pyast/">https://pypi.python.org/pypi/starlink-pyast/</a> With this installed, you can use the galsim.PyAstWCS class, which in turn means that galsim.FitsWCS will pretty much always work.</li>
 <li>Optional dependency: Astropy WCS package. We already mentioned astropy above for astropy.io.fits. Another package we can use from astropy is their WCS package, astropy.wcs. They cannot read all that many WCS types (compared to PyAst at least), but hopefully the functionality will include in time. Unfortunately, this package has scipy as a dependency, which is kind of a gargantuan package. But if you are willing to install that too, then you can use the galsim.AstropyWCS class.</li>
 </ul>
 <p>These should installed onto your Python system so that they can be imported by: </p>
@@ -136,7 +135,7 @@ pip install scipy
 <p>There are a number of third party-maintained packages which bundle Python with many of the numerical and scientific libraries that are commonly used, and many of these are free for non-commercial or academic use.</p>
 <p>One good example of such a package, which includes all of the Python dependencies required by GalSim (NumPy, PyFITS, PyYAML as well as SCons and nosetests; see Section 2 below) was the Enthought Python Distribution (EPD; see <a href="https://enthought.com/products/canopy/academic/">https://enthought.com/products/canopy/academic/</a> for the academic download instructions).</p>
 <p>The new Enthought "Canopy" package, a successor to EPD, provides the same functionality. However, it has been found that Canopy on Mac OSX can give problems building against Boost.Python, another GalSim dependency. A solution to these issues is described here: <a href="https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-canopy">https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-canopy</a></p>
-<p>Other re-packaged Python downloads can be found at <a href="http://www.python.org/getit/">http://www.python.org/getit/</a>.</p>
+<p>Other re-packaged Python downloads can be found at <a href="http://www.python.org/download/">http://www.python.org/download/</a>.</p>
 <h3>Making sure you are using the right Python</h3>
 <p>Some users will find they have a few versions of Python around their operating system (determined, for example, using <code>locate python</code> at the prompt). A common way this will happen if there is already an older build (e.g. Python 2.4.X) being used by the operating system and then you install a newer version from one of the sources described above.</p>
 <p>It will be important to make sure that the version of Python for which NumPy, PyFITS and PyYAML etc. are installed is also the one being used for GalSim, and that this is the one <em>you</em> want to use GalSim from! Knowing which installed version of Python will be used is also important for the installation of the Boost libraries (see Section 1.v, below).</p>
@@ -151,7 +150,7 @@ pip install scipy
 </pre><p>See Section 4 for some more suggestions about installing this on your platform.</p>
 <h2>iii) FFTW (<a href="http://www.fftw.org">http://www.fftw.org</a>) </h2>
 <p>These Fast Fourier Transform libraries must be installed, as GalSim will link to them during the build. We require version 3 (or greater presumably), which is often distributed as fftw3. See Section 4 for some suggestions about installing this on your platform.</p>
-<h2>iv) TMV (<a href="http://code.google.com/p/tmv-cpp/">http://code.google.com/p/tmv-cpp/</a>) (version &gt;= 0.71 required) </h2>
+<h2>iv) TMV (<a href="http://code.google.com/p/tmv-cpp/">http://code.google.com/p/tmv-cpp/</a>) (version &gt;= 0.72 required) </h2>
 <p>GalSim uses the TMV library for its linear algebra routines. You should download it from the site above and follow the instructions in its INSTALL file for how to install it. Usually installing TMV just requires the command </p>
 <pre class="fragment">scons install PREFIX=&lt;installdir&gt;
 </pre><p>but there are additional options you might consider, so you should read the TMV INSTALL file for full details. Also note, you may not need to specify the installation directory if you are comfortable installing it into <code>/usr/local</code>. However, if you are trying to install it into a system directory then you need to use sudo scons install [PREFIX=&lt;installdir&gt;].</p>

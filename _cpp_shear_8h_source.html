@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -111,8 +110,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *    and/or other materials provided with the distribution.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef SHEAR_H</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define SHEAR_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef GalSim_Shear_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define GalSim_Shear_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;TMV.h&quot;</span></div>
@@ -267,7 +266,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#endif // SHEAR_H</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_a5bbd58e8743534b574fe25c40bf6a56a"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#a5bbd58e8743534b574fe25c40bf6a56a">galsim::CppShear::operator==</a></div><div class="ttdeci">bool operator==(const CppShear &amp;rhs) const </div><div class="ttdoc">Test equivalence by comparing e1 and e2. </div><div class="ttdef"><b>Definition:</b> CppShear.h:249</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_ad2a747d35c3ce26449a6347c113fced3"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#ad2a747d35c3ce26449a6347c113fced3">galsim::CppShear::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;is, CppShear &amp;s)</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_a1cc1dd6ef41bf82ef9562a656c6dde5a"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#a1cc1dd6ef41bf82ef9562a656c6dde5a">galsim::CppShear::operator-=</a></div><div class="ttdeci">CppShear &amp; operator-=(const CppShear &amp;)</div><div class="ttdoc">Inplace composition (with RHS negation) operation. </div></div>
@@ -293,7 +292,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_a619002be67ca66e978fe3d17219c1051"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#a619002be67ca66e978fe3d17219c1051">galsim::CppShear::getG2</a></div><div class="ttdeci">double getG2() const </div><div class="ttdoc">Get g1 using reduced shear |g| = (a-b)/(a+b) definition. </div><div class="ttdef"><b>Definition:</b> CppShear.h:160</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_af7697e601f70df9bc28d8cfd4afb77f8"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#af7697e601f70df9bc28d8cfd4afb77f8">galsim::CppShear::operator*</a></div><div class="ttdeci">friend CppShear operator*(const double, const CppShear &amp;)</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_ae59eb611854cca4cefaf48cb79315d32"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#ae59eb611854cca4cefaf48cb79315d32">galsim::CppShear::getBeta</a></div><div class="ttdeci">Angle getBeta() const </div><div class="ttdoc">Get polar angle beta (returns an Angle class object). </div><div class="ttdef"><b>Definition:</b> CppShear.h:139</div></div>
-<div class="ttc" id="classgalsim_1_1_angle_html"><div class="ttname"><a href="classgalsim_1_1_angle.html">galsim::Angle</a></div><div class="ttdoc">A class representing an Angle. </div><div class="ttdef"><b>Definition:</b> Angle.h:144</div></div>
+<div class="ttc" id="classgalsim_1_1_angle_html"><div class="ttname"><a href="classgalsim_1_1_angle.html">galsim::Angle</a></div><div class="ttdoc">A class representing an Angle. </div><div class="ttdef"><b>Definition:</b> Angle.h:145</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_a41f281559ab4796f12df0ed1d18831eb"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#a41f281559ab4796f12df0ed1d18831eb">galsim::CppShear::CppShear</a></div><div class="ttdeci">CppShear()</div><div class="ttdoc">Default constructor = (0,0) </div><div class="ttdef"><b>Definition:</b> CppShear.h:82</div></div>
 <div class="ttc" id="classgalsim_1_1_cpp_shear_html_a4bd6b82bdae635c87f0e71ed8ff13aad"><div class="ttname"><a href="classgalsim_1_1_cpp_shear.html#a4bd6b82bdae635c87f0e71ed8ff13aad">galsim::CppShear::operator!=</a></div><div class="ttdeci">bool operator!=(const CppShear &amp;rhs) const </div><div class="ttdoc">Test non-equivalence by comparing e1 and e2. </div><div class="ttdef"><b>Definition:</b> CppShear.h:253</div></div>
 <div class="ttc" id="classgalsim_1_1_position_html_a72119dac27085a678d8e05c2dfc2cd53"><div class="ttname"><a href="classgalsim_1_1_position.html#a72119dac27085a678d8e05c2dfc2cd53">galsim::Position::x</a></div><div class="ttdeci">T x</div><div class="ttdoc">Publicly visible x & y attributes of the position. </div><div class="ttdef"><b>Definition:</b> Bounds.h:38</div></div>

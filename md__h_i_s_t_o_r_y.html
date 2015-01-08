@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -83,16 +82,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Below is a summary of the major changes with each new tagged version of GalSim. Each version also includes various other minor changes and bug fixes, which are not listed here for brevity. See the CHANGLELOG.md files associated with each version for a more complete list. Issue numbers related to each change are given in parentheses.</p>
-<h2>v1.0.1 </h2>
+<h1>v1.1 </h1>
+<h2>Non-backward-compatible API changes </h2>
+<ul>
+<li>Changed the <code>xw</code> and <code>yw</code> parameters of the <code>Pixel</code> constructor to a single <code>scale</code> parameter. (#364)</li>
+<li>Added new <code>Box</code> class to take up the functionality that had been <code>Pixel</code> with unequal values of <code>xw</code> and <code>yw</code>. (#364)</li>
+<li>Changed <code>Angle.wrap()</code> to return the wrapped angle rather than modifying the original. (#364)</li>
+<li>Changed Bounds methods <code>addBorder</code>, <code>shift</code>, and <code>expand</code> to return new Bounds objects rather than changing the original. (#364)</li>
+<li>Merged the GSParams parameters <code>shoot_relerr</code> and <code>shoot_abserr</code> into the parameters <code>integration_relerr</code> and <code>integration_abserr</code>. The latter items now cover all integrations other than real-space rendering. (#535)</li>
+</ul>
+<h2>Other changes to the API </h2>
+<ul>
+<li>Changed the name of the <code>dx</code> parameter in various places to <code>scale</code>. (#364)</li>
+<li>Combined the old <code>Image</code>, <code>ImageView</code> and <code>ConstImageView</code> arrays of class names into a single python layer <code>Image</code> class. (#364)</li>
+<li>Changed the methods createSheared, createRotated, etc. to more succinct names. The applyShear, applyRotation, etc. methods are also discouraged and will eventually be deprecated. (#511)</li>
+<li>Changed the <code>setFlux</code> and <code>scaleFlux</code> methods to versions that return new objects, rather than change the object in place. (#511)</li>
+<li>Changed the Shapelet.fitImage method to a factory function named <code>FitShapelet</code> (#511)</li>
+<li>Changed the <code>nyquistDx</code> method to <code>nyquistScale</code>. (#511)</li>
+<li>Moved as many classes as possible toward an immutable design, meaning that we discourage use of setters in various classes that had them. (#511)</li>
+<li>Combined the <code>draw</code> and <code>drawShoot</code> methods into a single <code>drawImage</code> method with more options about how the profile should be rendered. Furthermore, in most cases, you no longer need to convolve by a Pixel by hand. The default rendering method will include the pixel convolution for you. (#535)</li>
+<li>Changed the name of <code>drawK</code> to <code>drawKImage</code> to be more parallel with the new <code>drawImage</code> name. (#535)</li>
+</ul>
+<h2>New Features </h2>
+<ul>
+<li>Added new set of WCS classes. See wcs.py and <a class="el" href="fitswcs_8py.html" title="The function FitsWCS() acts like a BaseWCS class, but it really calls one of several other classes de...">fitswcs.py</a> for details. (#364)</li>
+<li>Every place in the code that can take a <code>scale</code> parameter can now take a <code>wcs</code> parameter. (#364)</li>
+<li>Added <code>CelestialCoord</code> class to represent (ra,dec) coordinates. (#364)</li>
+<li>Added <code>Bandpass</code> class to represent throughput functions. (#467)</li>
+<li>Added <code>SED</code> class to represent stellar and galactic spectra. (#467)</li>
+<li>Added <code>ChromaticObject</code> class to represent wavelength-dependent surface brightness profiles. (#467)</li>
+<li>Added <code>ChromaticAtmosphere</code> function to easily handle chromatic effects due to the atmosphere. (#467)</li>
+<li>Permit users to initialize <code>OpticalPSF</code> with a list or array of aberrations, as an alternative to specifying each one individually. (#409)</li>
+<li>Added <code>max_size</code> optional parameter to OpticalPSF that lets you limit the size of the image that it constructs internally. (#478)</li>
+<li>Added option to FitsHeader and FitsWCS to read in SCamp-style text files with the header information using the parameter <code>text_file=True</code>. (#508)</li>
+<li>Modified <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">addNoiseSNR()</a> method to return the variance of the noise that was added. (#526)</li>
+<li>Added <code>dtype</code> option to <code>drawImage</code> and <code>drawKImage</code>, which sets the data type to use for automatically constructed images. (#526)</li>
+</ul>
+<h2>Bug fixes and improvements </h2>
+<ul>
+<li>Sped up the gzip and bzip2 I/O. (#344)</li>
+<li>Fixed some bugs in the treatment of correlated noise. (#526, #528)</li>
+</ul>
+<h2>Updates to config options </h2>
+<ul>
+<li>Changed the previous behavior of the <code>image.wcs</code> field to allow several WCS types: 'PixelScale', 'Shear', 'Jacobian', 'Affine', 'UVFunction', 'RaDecFunction', 'Fits', and 'Tan'. (#364)</li>
+<li>Changed the name of <code>sky_pos</code> to <code>world_pos</code>. (#364)</li>
+<li>Removed <code>pix</code> top layer in config structure. Add <code>draw_method=no_pixel</code> to do what <code>pix : None</code> used to do. (#364)</li>
+<li>Added <code>draw_method=real_space</code> to try to use real-space convolution. (#364)</li>
+<li>Added ability to index <code>Sequence</code> types by any running index, rather than just the default by specifying an <code>index_key</code> parameter. The options are 'obj_num', 'image_num', 'file_num', or 'obj_num_in_file'. (#364, #536)</li>
+<li>Added <code>Sum</code> type for value types for which it makes sense: float, int, angle, shear, position. (#457)</li>
+<li>Allowed the user to modify or add config parameters from the command line. (#479)</li>
+<li>Added <code>image.retry_failures</code> to retry making a GSObject that fails for any reason. (#482)</li>
+<li>Added <code>output.retry_io</code> item to retry failed write commands. (#482)</li>
+<li>Changed the default sequence indexing for most things to be 'obj_num_in_file' rather than 'obj_num'. (#487)</li>
+<li>Added <code>draw_method=sb</code> to make this parameter completely consistent with the way the <code>method</code> parameter for drawImage() now works. (#535)</li>
+<li>Changed the <code>output.psf.real_space</code> option to <code>output.psf.draw_method</code> and allow all of the options that exist for <code>image.draw_method</code>. (#535)</li>
+<li>Added an <code>index</code> item for Ring objects. (#536)</li>
+</ul>
+<h1>v1.0.1 </h1>
 <ul>
 <li>Fixed some bugs in the config machinery when files have varying numbers of objects. (#487)</li>
 <li>Support astropy.io.fits in lieu of stand-alone pyfits module. (#488)</li>
 <li>Fixed a bug in config where 'safe' objects were not being correctly invalidated when a new input item should have invalidated them.</li>
 <li>Fixed a bug in the drawing of a Pixel all by itself. (#497)</li>
 </ul>
-<h2>v1.0 </h2>
+<h1>v1.0 </h1>
+<h2>Notable bug fixes and improvements </h2>
 <ul>
-<li>Notable bug fixes and improvements:<ul>
 <li>Fixed bug in the rendering of shifted images. (#424)</li>
 <li>Improved the fidelity of the Lanczos <code>conserve_dc=True</code> option. (#442)</li>
 <li>Switched default interpolant for RealGalaxy to Quintic, since it was found to be more accurate in general. (#442)</li>
@@ -101,9 +157,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Sped up OpticalPSF and RealGalaxy significantly. (#466, #474)</li>
 <li>Fixed a bug in the fourier rendering of truncated Sersic profiles. (#470)</li>
 </ul>
-</li>
+<h2>New features </h2>
+<ul>
 <li>Added <code>galsim</code> executable (instead of <code>galsim_yaml</code>, <code>galsim_json</code>). (#460)</li>
-<li>Updates to functionality of specific classes and functions:<ul>
 <li>Updated the allowed range for Sersic n to 0.3 &ndash; 6.2. (#325)</li>
 <li>Made RealGalaxy objects keep track of their (correlated) noise. (#430)</li>
 <li>Changed noise padding options for RealGalaxy and InterpolatedImage. (#430)</li>
@@ -111,9 +167,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added offset parameter to both draw and drawShoot. (#439)</li>
 <li>Changed the name of InputCatalog to just Catalog. (#449)</li>
 <li>Added Dict class. (#449)</li>
+<li>Added MEDS file output to des module. (#376)</li>
+<li>Removed des module from default imports of GalSim. Now need to import <a class="el" href="namespacegalsim_1_1des.html">galsim.des</a> explicitly or load with <code>galsim -m des ...</code> (#460)</li>
 </ul>
-</li>
-<li>Updates to config options:<ul>
+<h2>Updates to config options </h2>
+<ul>
 <li>Added RealGalaxyOriginal galaxy type. (#389)</li>
 <li>Added whiten option for RealGalaxy objects. (#430)</li>
 <li>Added <code>Current</code> type. (#430)</li>
@@ -122,21 +180,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added <code>signal_to_noise</code> option for PSFs when there is no galaxy. (#459)</li>
 <li>Added <code>output.skip</code> and <code>output.noclobber</code> options. (#474)</li>
 </ul>
-</li>
-<li>Updates to des module:<ul>
-<li>Added MEDS file output. (#376)</li>
-<li>Removed des module from default imports of GalSim. Now need to import <a class="el" href="namespacegalsim_1_1des.html">galsim.des</a> explicitly or load with <code>galsim -m des ...</code> (#460)</li>
-</ul>
-</li>
-</ul>
-<h2>v0.5 </h2>
+<h1>v0.5 </h1>
+<h2>New features </h2>
 <ul>
-<li>Updates to functionality of specific classes:<ul>
 <li>Added Shapelet class. (#350)</li>
 <li>Added ability to truncate Sersic profiles. (#388)</li>
 <li>Added trefoil and struts to OpticalPSF. (#302, #390)</li>
-</ul>
-</li>
 <li>Updates to lensing engine:<ul>
 <li>Added document describing how lensing engine code works. (#248)</li>
 <li>Added ability to draw (gamma,kappa) from same power spectrum. (#304)</li>
@@ -148,31 +197,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added des module and example scripts. (#350)</li>
 <li>Added applyWhiteningTo method to CorrelatedNoise class. (#352)</li>
 <li>Changed the default centering convention for even-sized images to be in the actual center, rather than 1/2 pixel off-center. (#380)</li>
-<li>Updates to config:<ul>
-<li>Added index_convention option. (#380)</li>
-<li>Changed the name of the center item for the Scattered image type to image_pos, and added a new sky_pos item. (#380)</li>
-</ul>
-</li>
-<li>Added LINKFLAGS SCons option. (#380)</li>
-<li>File I/O:<ul>
 <li>Enabled InputCatalog to read FITS catalogs. (#350)</li>
 <li>Added FitsHeader class and config option. (#350)</li>
 <li>Added the ability to read/write to a specific HDU. (#350)</li>
-<li>Fix some errors related to writing to an HDUList. (#417)</li>
 <li>Add new function <a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>. (#417)</li>
+<li>Added LINKFLAGS SCons option. (#380)</li>
 </ul>
-</li>
-<li>Basic bug fixes:<ul>
+<h2>Updates to config </h2>
+<ul>
+<li>Added index_convention option. (#380)</li>
+<li>Changed the name of the center item for the Scattered image type to image_pos, and added a new sky_pos item. (#380)</li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fix some errors related to writing to an HDUList. (#417)</li>
 <li>Fixed ringing when Sersic objectss were drawn with FFTs. (#426)</li>
 <li>Fixed bugs in obj.drawK() function. (#407)</li>
 <li>Fixed bugs with InterpolatedImage objects. (#389, #432)</li>
 <li>Fixed bug in draw routine for shifted objects. (#380)</li>
 <li>Fixed bug in the generation of correlated noise fields. (#352)</li>
 </ul>
-</li>
-<li>Deprecated AtmosphericPSF and Ellipse classes. (#372)</li>
-</ul>
-<h2>v0.4 </h2>
+<h1>v0.4 </h1>
 <ul>
 <li>Added ability to pad images for InterpolatedImage or RealGalaxy with either correlated or uncorrelated noise. (#238)</li>
 <li>Added python-level LookupTable class which wraps the existing C++ Table class. (#305)</li>
@@ -186,9 +231,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added galsim.correlatednoise.get_COSMOS_CorrFunc(...). (#345)</li>
 <li>Added <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">im.addNoiseSNR()</a>. (#349)</li>
 <li>Made a new Noise hierarchy for CCDNoise (no longer a BaseDeviate), GaussianNoise, PoissonNoise, DeviateNoise. (#349)</li>
-<li>Added demo11 script. (#305, #306, #345)</li>
 </ul>
-<h2>v0.3 </h2>
+<h1>v0.3 </h1>
 <ul>
 <li>Fixed several bugs in the Sersic class that had been causing ringing. (#319, #330)</li>
 <li>Added support for reading and writing compressed fits files. (#299)</li>
@@ -200,7 +244,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Updated the moments and PSF correction code to use the Image class and TMV; to handle weight and bad pixel maps for the input Images; and to run ~2-3 times faster. (#331, #332)</li>
 <li>Fixed bug in config RandomCircle when using inner_radius option.</li>
 </ul>
-<h2>v0.2 </h2>
+<h1>v0.2 </h1>
 <ul>
 <li>Significant revamping and commenting of demos, including both python and config versions (#243, #285, #289).</li>
 <li>Added python-level int1d function to wrap C++-level integrator, which allowed us to remove our dependency on scipy. (#288)</li>
@@ -208,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Fixed some bugs in Image handling (including bugs related to duplicate numpy.int32 types), and made Image handling generally more robust (#293, #294).</li>
 <li>Fixed bug in wrapping of angles (now not automatic &ndash; use wrap() explicitly).</li>
 </ul>
-<h2>v0.1 </h2>
+<h1>v0.1 </h1>
 <p>Initial version of GalSim with most of the basic functionality. </p>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

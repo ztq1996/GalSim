@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -110,6 +109,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a720d87f1f602083056f0231ac0841058"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1correlatednoise.html#a720d87f1f602083056f0231ac0841058">whitenNoise</a></td></tr>
+<tr class="separator:a720d87f1f602083056f0231ac0841058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161193281f2b195785c885bf1d692bcc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1correlatednoise.html#a161193281f2b195785c885bf1d692bcc">symmetrizeNoise</a></td></tr>
+<tr class="separator:a161193281f2b195785c885bf1d692bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93de6f1703f446b8c44aca7e0e7308bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd">getCOSMOSNoise</a></td></tr>
 <tr class="memdesc:a93de6f1703f446b8c44aca7e0e7308bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images.  <a href="#a93de6f1703f446b8c44aca7e0e7308bd">More...</a><br/></td></tr>
 <tr class="separator:a93de6f1703f446b8c44aca7e0e7308bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,7 +126,7 @@ Functions</h2></td></tr>
           <td class="memname">def galsim.correlatednoise.getCOSMOSNoise </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
+          <td class="paramname"><em>file_name</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -171,11 +174,13 @@ Functions</h2></td></tr>
 
 <p>Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images. </p>
 <p>See <a href="http://cosmos.astro.caltech.edu/astronomer/hst.html">http://cosmos.astro.caltech.edu/astronomer/hst.html</a> for information about the COSMOS survey, and Leauthaud et al (2007) for detailed information about the unrotated F814W coadds used for weak lensing science.</p>
-<p>This function uses a stacked estimate of the correlation function in COSMOS noise fields, the location of which should be input to this function via the <code>file_name</code> argument. This image is stored in FITS format, and is generated as described in <code>YOUR/REPO/PATH/GalSim/devel/external/hst/make_cosmos_cfimage.py</code>. The image itself can also be found within the GalSim repo, located at: </p>
-<pre class="fragment">/YOUR/REPO/PATH/GalSim/examples/data/acs_I_unrot_sci_20_cf.fits
+<p>This function uses a stacked estimate of the correlation function in COSMOS noise fields. The correlation function was computed by the GalSim team as described in </p>
+<pre class="fragment">/YOUR/REPO/PATH/GalSim/devel/external/hst/make_cosmos_cfimage.py
+</pre><p>and the resulting file is distributed with GalSim as </p>
+<pre class="fragment">/YOUR/REPO/PATH/GalSim/share/acs_I_unrot_sci_20_cf.fits
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>String containing the path and filename above but modified to match the location of the GalSim repository on your system. </td></tr>
+    <tr><td class="paramname">file_name</td><td>If provided, override the usual location of the file with the given file name. [default: None] </td></tr>
     <tr><td class="paramname">rng</td><td>If provided, a random number generator to use as the random number generator of the resulting noise object. (may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object) [default: None, in which case, one will be automatically created, using the time as a seed.] </td></tr>
     <tr><td class="paramname">cosmos_scale</td><td>COSMOS ACS F814W coadd image pixel scale in the units you are using to describe GSObjects and image scales in GalSim. [default: 0.03 (arcsec), see below for more information.] </td></tr>
     <tr><td class="paramname">variance</td><td>Scales the correlation function so that its point variance, equivalent to its value at zero separation distance, matches this value. [default: 0., which means to use the variance in the original COSMOS noise fields.] </td></tr>
@@ -187,7 +192,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields. ">_BaseCorrelatedNoise</a> instance representing correlated noise in F814W COSMOS images.</dd></dl>
 <p>The default <code>x_interpolant</code> is a <code><a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y. ">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4))</code>, which uses bilinear interpolation. The use of this interpolant is an approximation that gives good empirical results without requiring internal convolution of the correlation function profile by a Pixel object when applying correlated noise to images: such an internal convolution has been found to be computationally costly in practice, requiring the Fourier transform of very large arrays.</p>
 <p>The use of the bilinear interpolants means that the representation of correlated noise will be noticeably inaccurate in at least the following two regimes:</p>
-<p>i) If the pixel scale of the desired final output (e.g. the target image of drawImage(), applyTo() or applyWhiteningTo()) is small relative to the separation between pixels in the <code>image</code> used to instantiate <code>cn</code> as shown above. ii) If the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>cn</code> was instantiated with an image of scale comparable to that in the final output, and <code>cn</code> has been rotated or otherwise transformed (e.g. via the rotate(), shear() methods, see below).</p>
+<p>i) If the pixel scale of the desired final output (e.g. the target image of drawImage(), applyTo() or whitenImage()) is small relative to the separation between pixels in the <code>image</code> used to instantiate <code>cn</code> as shown above. ii) If the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>cn</code> was instantiated with an image of scale comparable to that in the final output, and <code>cn</code> has been rotated or otherwise transformed (e.g. via the rotate(), shear() methods, see below).</p>
 <p>Conversely, the approximation will work best in the case where the correlated noise used to instantiate the <code>cn</code> is taken from an input image for which <code>image.scale</code> is smaller than that in the desired output. This is the most common use case in the practical treatment of correlated noise when simulating galaxies from COSMOS, for which this function is expressly designed.</p>
 <p>Changing from the default bilinear interpolant is made possible, but not recommended. For more information please see the discussion on <a href="https://github.com/GalSim-developers/GalSim/pull/452">https://github.com/GalSim-developers/GalSim/pull/452</a>.</p>
 <p>You may also specify a gsparams argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> using help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>) for more information about this option.</p>
@@ -197,15 +202,92 @@ Functions</h2></td></tr>
 </pre><p>If you wish to use other units, ensure that the input keyword <code>cosmos_scale</code> takes the value corresponding to 0.03 arcsec in your chosen system.</p>
 <h2>Example usage </h2>
 <p>The following commands use this function to generate a 300 pixel x 300 pixel image of noise with HST COSMOS correlation properties (substitute in your own file and path for the <code>filestring</code>). </p>
-<pre class="fragment">&gt;&gt;&gt; file_name='/YOUR/REPO/PATH/GalSim/devel/external/hst/acs_I_unrot_sci_20_cf.fits'
-&gt;&gt;&gt; import galsim
+<pre class="fragment">&gt;&gt;&gt; import galsim
 &gt;&gt;&gt; rng = galsim.UniformDeviate(123456)
-&gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(file_name, rng=rng)
+&gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(rng=rng)
 &gt;&gt;&gt; im = galsim.ImageD(300, 300, scale=0.03)
 &gt;&gt;&gt; cf.applyTo(im)
 &gt;&gt;&gt; im.write('out.fits')
 </pre><p>The FITS file <code>out.fits</code> should then contain an image of randomly-generated, COSMOS-like noise. </p>
 
+</div>
+</div>
+<a class="anchor" id="a161193281f2b195785c885bf1d692bcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise.symmetrizeNoise </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>noise</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>order</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Impose N-fold symmetry (where N=`order` is an even integer &gt;=4) on the noise in a square
+image assuming that the noise currently in the image can be described by the CorrelatedNoise
+object `noise`.  See CorrelatedNoise.symmetrizeImage() docstring for more details of how this
+method works.
+
+@param noise        The CorrelatedNoise model to use when figuring out how much noise to add to
+                    make the final noise have symmetry at the desired order.
+@param order        Desired symmetry order.  Must be an even integer larger than 2.
+                    [default: 4]
+
+@returns the theoretically calculated variance of the combined noise fields in the
+         updated image.
+</pre> 
+</div>
+</div>
+<a class="anchor" id="a720d87f1f602083056f0231ac0841058"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise.whitenNoise </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>noise</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Whiten the noise in the image assuming that the noise currently in the image can be described
+by the CorrelatedNoise object `noise`.  See CorrelatedNoise.whitenImage() docstring for more
+details of how this method works.
+
+@param noise        The CorrelatedNoise model to use when figuring out how much noise to add to
+                    make the final noise white.
+@returns the theoretically calculated variance of the combined noise fields in the
+         updated image.
+</pre> 
 </div>
 </div>
 </div><!-- contents -->

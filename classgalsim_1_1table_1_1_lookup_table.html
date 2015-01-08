@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -263,7 +262,7 @@ Public Attributes</h2></td></tr>
 <p>When the <a class="el" href="classgalsim_1_1table_1_1_lookup_table.html" title="LookupTable represents a lookup table to store function values that may be slow to calculate...">LookupTable</a> object is called with a single argument, it returns the value at that argument. An exception will be thrown automatically by the _LookupTable class if the <code>x</code> value is outside the range of the original tabulated values. The value that is returned is the same type as that provided as an argument, e.g., if a single value <code>x</code> is provided then a single value of <code>f</code> is returned; if a tuple of <code>x</code> values is provided then a tuple of <code>f</code> values is returned; and so on. Even if interpolation was done using the <code>x_log</code> option, the user should still provide <code>x</code> rather than <code>log(x)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The <code>x</code> value(s) for which <code>f(x)</code> should be calculated via interpolation on the original <code>(x,f)</code> lookup table. <code>x</code> can be a single float/double, or a tuple, list, or arbitrarily shaped NumPy array.</td></tr>
+    <tr><td class="paramname">x</td><td>The <code>x</code> value(s) for which <code>f(x)</code> should be calculated via interpolation on the original <code>(x,f)</code> lookup table. <code>x</code> can be a single float/double, or a tuple, list, or arbitrarily shaped 1- or 2-dimensional NumPy array.</td></tr>
   </table>
   </dd>
 </dl>

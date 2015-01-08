@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">GalSim
-   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">The modular galaxy image simulation toolkit</div>
   </td>
@@ -1410,6 +1409,24 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ny</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bounds</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>scale</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -1511,7 +1528,17 @@ Public Attributes</h2></td></tr>
 
 <p>Draws an Image of the object. </p>
 <p>The <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> method is used to draw an Image of the current object using one of several possible rendering methods (see below). It can create a new Image or can draw onto an existing one if provided by the <code>image</code> parameter. If the <code>image</code> is given, you can also optionally add to the given Image if <code>add_to_image = True</code>, but the default is to replace the current contents with new values.</p>
-<p>If <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> will be creating the image from scratch for you, it will decide a good size to use based on the size of the object being drawn. Basically, it will try to use an area large enough to include at least 99.5% of the flux. (Note: the value 0.995 is really <code>1 - alias_threshold</code>. You can change the value of <code>alias_threshold</code> for any object via <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>. See <code>help(GSParams)</code> for more details.) You can set the pixel scale of the constructed image with the <code>scale</code> parameter, or set a WCS function with <code>wcs</code>. If you do not provide either <code>scale</code> or <code>wcs</code>, then <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> will default to using the Nyquist scale for the current object. You can also set the data type used in the new Image with the <code>dtype</code> parameter that has the same options as for the Image constructor.</p>
+<p>Note that if you provide an <code>image</code> parameter, it is the image onto which the profile will be drawn. The provided image <em>will be modified</em>. A reference to the same image is also returned to provide a parallel return behavior to when <code>image</code> is <code>None</code> (described above).</p>
+<p>This option is useful in practice because you may want to construct the image first and then draw onto it, perhaps multiple times. For example, you might be drawing onto a subimage of a larger image. Or you may want to draw different components of a complex profile separately. In this case, the returned value is typically ignored. For example: </p>
+<pre class="fragment">    &gt;&gt;&gt; im1 = bulge.drawImage()
+    &gt;&gt;&gt; im2 = disk.drawImage(image=im1, add_to_image=True)
+    &gt;&gt;&gt; assert im1 is im2
+
+    &gt;&gt;&gt; full_image = galsim.Image(2048, 2048, scale=pixel_scale)
+    &gt;&gt;&gt; b = galsim.BoundsI(x-32, x+32, y-32, y+32)
+    &gt;&gt;&gt; stamp = obj.drawImage(image = full_image[b])
+    &gt;&gt;&gt; assert (stamp.array == full_image[b].array).all()
+</pre><p>If <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> will be creating the image from scratch for you, then there are several ways to control the size of the new image. If the <code>nx</code> and <code>ny</code> keywords are present, then an image with these numbers of pixels on a side will be created. Similarly, if the <code>bounds</code> keyword is present, then an image with the specified bounds will be created. Note that it is an error to provide an existing Image when also specifying <code>nx</code>, <code>ny</code>, or <code>bounds</code>. In the absence of <code>nx</code>, <code>ny</code>, and <code>bounds</code>, drawImage will decide a good size to use based on the size of the object being drawn. Basically, it will try to use an area large enough to include at least 99.5% of the flux. (Note: the value 0.995 is really <code>1 - folding_threshold</code>. You can change the value of <code>folding_threshold</code> for any object via <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>. See <code>help(GSParams)</code> for more details.) You can set the pixel scale of the constructed image with the <code>scale</code> parameter, or set a WCS function with <code>wcs</code>. If you do not provide either <code>scale</code> or <code>wcs</code>, then <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> will default to using the Nyquist scale for the current object. You can also set the data type used in the new Image with the <code>dtype</code> parameter that has the same options as for the Image constructor.</p>
 <p>There are several different possible methods <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aafe6ca9d84fe81543fbc105b897273db" title="Draws an Image of the object. ">drawImage()</a> can use for rendering the image. This is set by the <code>method</code> parameter. The options are: </p>
 <pre class="fragment">'auto'      This is the default, which will normally be equivalent to 'fft'.  However,
             if the object being rendered is simple (no convolution) and has hard edges
@@ -1570,13 +1597,16 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">&gt;&gt;&gt; obj.drawImage(image)
 &gt;&gt;&gt; assert image.added_flux &gt; 0.99 * obj.getFlux()
 </pre><p>The appropriate threshold will depend on your particular application, including what kind of profile the object has, how big your image is relative to the size of your object, whether you are keeping <code>poisson_flux=True</code>, etc.</p>
-<p>Given the periodicity implicit in the use of FFTs, there can occasionally be artifacts due to wrapping at the edges, particularly for objects that are quite extended (e.g., due to the nature of the radial profile). Use of the keyword parameter <code>wmult &gt; 1</code> can be used to reduce the size of these artifacts (by making larger FFT images), at the expense of the calculations taking longer and using more memory. Alternatively, the objects that go into the image can be created with a <code>gsparams</code> keyword that has a lower-than-default value for <code>alias_threshold</code>; see <code>help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>)</code> for more information.</p>
+<p>Given the periodicity implicit in the use of FFTs, there can occasionally be artifacts due to wrapping at the edges, particularly for objects that are quite extended (e.g., due to the nature of the radial profile). Use of the keyword parameter <code>wmult &gt; 1</code> can be used to reduce the size of these artifacts (by making larger FFT images), at the expense of the calculations taking longer and using more memory. Alternatively, the objects that go into the image can be created with a <code>gsparams</code> keyword that has a lower-than-default value for <code>folding_threshold</code>; see <code>help(<a class="el" href="structgalsim_1_1_g_s_params.html">galsim.GSParams</a>)</code> for more information.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image = None</code>, then an automatically-sized Image will be created. If <code>image != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.Image()</code>), then it will be resized appropriately based on the profile's size [default: None]. </td></tr>
-    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. If <code>scale</code> is <code>None</code> and <code>image != None</code>, then take the provided image's pixel scale. If <code>scale</code> is <code>None</code> and <code>image == None</code>, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>image</code>), then use the Nyquist scale. [default: None] </td></tr>
-    <tr><td class="paramname">wcs</td><td>If provided, use this as the wcs for the image. At most one of <code>scale</code> or <code>wcs</code> may be provided. [default: None] </td></tr>
-    <tr><td class="paramname">dtype</td><td>The data type to use for an automatically constructed image. Only valid if <code>image = None</code>. [default: None, which means to use numpy.float32] </td></tr>
+    <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image</code> is None, then an automatically-sized Image will be created. If <code>image</code> is given, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.Image()</code>), then it will be resized appropriately based on the profile's size [default: None]. </td></tr>
+    <tr><td class="paramname">nx</td><td>If provided and <code>image</code> is None, use to set the x-direction size of the image. Must be accompanied by <code>ny</code>. </td></tr>
+    <tr><td class="paramname">ny</td><td>If provided and <code>image</code> is None, use to set the y-direction size of the image. Must be accompanied by <code>nx</code>. </td></tr>
+    <tr><td class="paramname">bounds</td><td>If provided and <code>image</code> is None, use to set the bounds of the image. </td></tr>
+    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. If <code>scale</code> is None and <code>image</code> is given, then take the provided image's pixel scale. If <code>scale</code> is None and <code>image</code> is None, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>image</code>), then use the Nyquist scale. If <code>scale &gt; 0</code> and <code>image</code> is given, then override <code>image.scale</code> with the value given as a keyword. [default: None] </td></tr>
+    <tr><td class="paramname">wcs</td><td>If provided, use this as the wcs for the image (possibly overriding any existing <code>image.wcs</code>). At most one of <code>scale</code> or <code>wcs</code> may be provided. [default: None] </td></tr>
+    <tr><td class="paramname">dtype</td><td>The data type to use for an automatically constructed image. Only valid if <code>image</code> is None. [default: None, which means to use numpy.float32] </td></tr>
     <tr><td class="paramname">method</td><td>Which method to use for rendering the image. See discussion above for the various options and what they do. [default: 'auto'] </td></tr>
     <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). [default: 1] </td></tr>
     <tr><td class="paramname">wmult</td><td>A multiplicative factor by which to enlarge (in each direction) the default automatically calculated FFT grid size used for any intermediate calculations in Fourier space. The size of the intermediate images is normally automatically chosen to reach some preset accuracy targets [cf. <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>]; however, if you see strange artifacts in the image, you might try using <code>wmult &gt; 1</code>. This will take longer of course, but it will produce more accurate images, since they will have less "folding" in Fourier space. If the image size is not specified, then the output real-space image will be enlarged by a factor of <code>wmult</code>. If the image size is specified by the user, rather than automatically-sized, use of <code>wmult&gt;1</code> will still affect the size of the images used for the Fourier-space calculations and hence can reduce image artifacts, even though the image that is returned will be the requested size. [default: 1] </td></tr>
@@ -1584,7 +1614,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">use_true_center</td><td>Normally, the profile is drawn to be centered at the true center of the image (using the function image.bounds.trueCenter()). If you would rather use the integer center (given by image.bounds.center()), set this to <code>False</code>. [default: True] </td></tr>
     <tr><td class="paramname">offset</td><td>The location at which to center the profile being drawn relative to the center of the image (either the true center if <code>use_true_center=True</code>, or the nominal center if <code>use_true_center=False</code>). [default: None] </td></tr>
     <tr><td class="paramname">n_photons</td><td>If provided, the number of photons to use for photon shooting. If not provided (i.e. <code>n_photons = 0</code>), use as many photons as necessary to result in an image with the correct Poisson shot noise for the object's flux. For positive definite profiles, this is equivalent to <code>n_photons = flux</code>. However, some profiles need more than this because some of the shot photons are negative (usually due to interpolants). [default: 0] </td></tr>
-    <tr><td class="paramname">rng</td><td>If provided, a random number generator to use for photon shooting, which may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object. If <code>rng=None</code>, one will be automatically created, using the time as a seed. [default: None] </td></tr>
+    <tr><td class="paramname">rng</td><td>If provided, a random number generator to use for photon shooting, which may be any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object. If <code>rng</code> is None, one will be automatically created, using the time as a seed. [default: None] </td></tr>
     <tr><td class="paramname">max_extra_noise</td><td>If provided, the allowed extra noise in each pixel when photon shooting. This is only relevant if <code>n_photons=0</code>, so the number of photons is being automatically calculated. In that case, if the image noise is dominated by the sky background, then you can get away with using fewer shot photons than the full <code>n_photons = flux</code>. Essentially each shot photon can have a <code>flux &gt; 1</code>, which increases the noise in each pixel. The <code>max_extra_noise</code> parameter specifies how much extra noise per pixel is allowed because of this approximation. A typical value for this might be <code>max_extra_noise = sky_level / 100</code> where <code>sky_level</code> is the flux per pixel due to the sky. Note that this uses a "variance" definition of noise, not a "sigma" definition. [default: 0.] </td></tr>
     <tr><td class="paramname">poisson_flux</td><td>Whether to allow total object flux scaling to vary according to Poisson statistics for <code>n_photons</code> samples when photon shooting. [default: True, unless <code>n_photons</code> is given, in which case the default is False] </td></tr>
     <tr><td class="paramname">setup_only</td><td>Don't actually draw anything on the image. Just make sure the image is set up correctly. This is used internally by GalSim, but there may be cases where the user will want the same functionality. [default: False]</td></tr>
@@ -1666,6 +1696,24 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ny</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bounds</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>scale</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -1717,13 +1765,13 @@ Public Attributes</h2></td></tr>
 <p>Also, there is no convolution by a pixel. This is just a direct image of the Fourier transform of the surface brightness profile.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">re</td><td>If provided, this will be the real part of the k-space image. If <code>re = None</code>, then an automatically-sized image will be created. If <code>re != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>re = galsim.Image()</code>), then it will be resized appropriately based on the profile's size. [default: None] </td></tr>
-    <tr><td class="paramname">im</td><td>If provided, this will be the imaginary part of the k-space image. A provided <code>im</code> must match the size and scale of <code>re</code>. If <code>im = None</code>, then an automatically-sized image will be created. If <code>im != None</code>, but its bounds are undefined (e.g. if it was constructed with <code>im = galsim.Image()</code>), then it will be resized appropriately based on the profile's size. [default: None] </td></tr>
-    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale, dk, for the images. If <code>scale</code> is <code>None</code> and <code>re, im != None</code>, then take the provided images' pixel scale (which must be equal). If <code>scale</code> is <code>None</code> and <code>re, im == None</code>, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>re</code>, <code>im</code>), then use the Nyquist scale. [default: None] </td></tr>
-    <tr><td class="paramname">dtype</td><td>The data type to use for automatically constructed images. Only valid if <code>re = None</code> and <code>im = None</code>. [default: None, which means to use numpy.float32] </td></tr>
+    <tr><td class="paramname">re</td><td>If provided, this will be the real part of the k-space image. If <code>re</code> and <code>im</code> are None, then automatically-sized images will be created. If they are given, but their bounds are undefined, then they will be resized appropriately based on the profile's size. [default: None] </td></tr>
+    <tr><td class="paramname">im</td><td>If provided, this will be the imaginary part of the k-space image. A provided <code>im</code> must match the size and scale of <code>re</code>. If <code>im</code> is None, then <code>re</code> must also be None. [default: None] </td></tr>
+    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale, dk, for the images. If <code>scale</code> is None and <code>re</code> and <code>im</code> are given, then take the provided images' pixel scale (which must be equal). If <code>scale</code> is None and <code>re</code> and <code>im</code> are None, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>re</code>, <code>im</code>), then use the Nyquist scale. [default: None] </td></tr>
+    <tr><td class="paramname">dtype</td><td>The data type to use for automatically constructed images. Only valid if <code>re</code> and <code>im</code> are None. [default: None, which means to use numpy.float32] </td></tr>
     <tr><td class="paramname">gain</td><td>The number of photons per ADU ("analog to digital units", the units of the numbers output from a CCD). [default: 1.] </td></tr>
     <tr><td class="paramname">wmult</td><td>A multiplicative factor by which to enlarge (in each direction) the size of the image, if you are having <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ae00cbdbb8cdac6d650bae682b5dc2367" title="Draws the k-space Image (both real and imaginary parts) of the object, with bounds optionally set by ...">drawKImage()</a> automatically construct the images for you. [default: 1] </td></tr>
-    <tr><td class="paramname">add_to_image</td><td>Whether to add to the existing images rather than clear out anything in the image before drawing. Note: This requires that images be provided (i.e. <code>re</code>, <code>im</code> are not <code>None</code>) and that they have defined bounds. [default: False]</td></tr>
+    <tr><td class="paramname">add_to_image</td><td>Whether to add to the existing images rather than clear out anything in the image before drawing. Note: This requires that <code>re</code> and <code>im</code> be provided and that they have defined bounds. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
