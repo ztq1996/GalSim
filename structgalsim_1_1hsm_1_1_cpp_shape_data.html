@@ -117,9 +117,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0a22fbc32c8bf33cfa56fc0860ac5bf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a0a22fbc32c8bf33cfa56fc0860ac5bf8">moments_status</a></td></tr>
 <tr class="memdesc:a0a22fbc32c8bf33cfa56fc0860ac5bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status after measuring adaptive moments; -1 indicates no attempt to measure them.  <a href="#a0a22fbc32c8bf33cfa56fc0860ac5bf8">More...</a><br/></td></tr>
 <tr class="separator:a0a22fbc32c8bf33cfa56fc0860ac5bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fec820afb57b8e47ef545b1cfc5b2a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a7fec820afb57b8e47ef545b1cfc5b2a2">observed_shape</a></td></tr>
-<tr class="memdesc:a7fec820afb57b8e47ef545b1cfc5b2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">galsim::CppShear</a> object representing the observed shape  <a href="#a7fec820afb57b8e47ef545b1cfc5b2a2">More...</a><br/></td></tr>
-<tr class="separator:a7fec820afb57b8e47ef545b1cfc5b2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df4173f98c05309b22e0b380075c482"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a9df4173f98c05309b22e0b380075c482">observed_e1</a></td></tr>
+<tr class="memdesc:a9df4173f98c05309b22e0b380075c482"><td class="mdescLeft">&#160;</td><td class="mdescRight">The observed shape e1,e2.  <a href="#a9df4173f98c05309b22e0b380075c482">More...</a><br/></td></tr>
+<tr class="separator:a9df4173f98c05309b22e0b380075c482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605172ef76500892a97002aacc8df6bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a605172ef76500892a97002aacc8df6bc">observed_e2</a></td></tr>
+<tr class="separator:a605172ef76500892a97002aacc8df6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33dceb0a53ac96b98d33856befe2cead"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a33dceb0a53ac96b98d33856befe2cead">moments_sigma</a></td></tr>
 <tr class="memdesc:a33dceb0a53ac96b98d33856befe2cead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size sigma = (det M)^(1/4) from the adaptive moments, in units of pixels; -1 if not measured.  <a href="#a33dceb0a53ac96b98d33856befe2cead">More...</a><br/></td></tr>
 <tr class="separator:a33dceb0a53ac96b98d33856befe2cead"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,13 +164,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aceb531bbd424d238d5e6197eeefac4a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#aceb531bbd424d238d5e6197eeefac4a2">resolution_factor</a></td></tr>
 <tr class="memdesc:aceb531bbd424d238d5e6197eeefac4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolution factor R_2; 0 indicates object is consistent with a PSF, 1 indicates perfect resolution; default -1.  <a href="#aceb531bbd424d238d5e6197eeefac4a2">More...</a><br/></td></tr>
 <tr class="separator:aceb531bbd424d238d5e6197eeefac4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ff4e2ef2aa308214feb59e135e4103"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a67ff4e2ef2aa308214feb59e135e4103">psf_sigma</a></td></tr>
+<tr class="memdesc:a67ff4e2ef2aa308214feb59e135e4103"><td class="mdescLeft">&#160;</td><td class="mdescRight">PSF size sigma = (det M)^(1/4) from the adaptive moments, in units of pixels; default -1.  <a href="#a67ff4e2ef2aa308214feb59e135e4103">More...</a><br/></td></tr>
+<tr class="separator:a67ff4e2ef2aa308214feb59e135e4103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f932dad96840866f93eb630459f892e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a4f932dad96840866f93eb630459f892e">psf_e1</a></td></tr>
+<tr class="memdesc:a4f932dad96840866f93eb630459f892e"><td class="mdescLeft">&#160;</td><td class="mdescRight">PSF shape from the adaptive moments.  <a href="#a4f932dad96840866f93eb630459f892e">More...</a><br/></td></tr>
+<tr class="separator:a4f932dad96840866f93eb630459f892e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d7a92b8f8d27d5136b91b1cb7a89ec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#a46d7a92b8f8d27d5136b91b1cb7a89ec">psf_e2</a></td></tr>
+<tr class="separator:a46d7a92b8f8d27d5136b91b1cb7a89ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8210a5d5e91323c7584a2e6eb4f20b2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#ad8210a5d5e91323c7584a2e6eb4f20b2">error_message</a></td></tr>
 <tr class="memdesc:ad8210a5d5e91323c7584a2e6eb4f20b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing any error messages from the attempted measurements, to facilitate proper error handling in both C++ and python.  <a href="#ad8210a5d5e91323c7584a2e6eb4f20b2">More...</a><br/></td></tr>
 <tr class="separator:ad8210a5d5e91323c7584a2e6eb4f20b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct containing information about the shape of an object. </p>
-<p>This representation of an object shape contains information about observed shapes and shape estimators after PSF correction. It also contains information about what PSF correction was used; if no PSF correction was carried out and only the observed moments were measured, the PSF correction method will be 'None'. Note that observed shapes are bounded to lie in the range |e| &lt; 1 or |g| &lt; 1, so they can be represented using a <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a> object. In contrast, the PSF-corrected distortions and shears are not bounded at a maximum of 1 since they are shear estimators, and placing such a bound would bias the mean. Thus, the corrected results are not represented using <a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">CppShear</a> objects, since it may not be possible to make a meaningful per-object conversion from distortion to shear (e.g., if |e|&gt;1). </p>
+<p>This representation of an object shape contains information about observed shapes and shape estimators after PSF correction. It also contains information about what PSF correction was used; if no PSF correction was carried out and only the observed moments were measured, the PSF correction method will be 'None'. Note that observed shapes are bounded to lie in the range |e| &lt; 1 or |g| &lt; 1, so they can be represented using a CppShear object. In contrast, the PSF-corrected distortions and shears are not bounded at a maximum of 1 since they are shear estimators, and placing such a bound would bias the mean. Thus, the corrected results are not represented using CppShear objects, since it may not be possible to make a meaningful per-object conversion from distortion to shear (e.g., if |e|&gt;1). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab0937d97b3075b3cf0670a369b190139"></a>
 <div class="memitem">
@@ -412,17 +422,69 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7fec820afb57b8e47ef545b1cfc5b2a2"></a>
+<a class="anchor" id="a9df4173f98c05309b22e0b380075c482"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> galsim::hsm::CppShapeData::observed_shape</td>
+          <td class="memname">float galsim::hsm::CppShapeData::observed_e1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgalsim_1_1_cpp_shear.html" title="A base class representing shears. ">galsim::CppShear</a> object representing the observed shape </p>
+<p>The observed shape e1,e2. </p>
+
+</div>
+</div>
+<a class="anchor" id="a605172ef76500892a97002aacc8df6bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppShapeData::observed_e2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f932dad96840866f93eb630459f892e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppShapeData::psf_e1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PSF shape from the adaptive moments. </p>
+
+</div>
+</div>
+<a class="anchor" id="a46d7a92b8f8d27d5136b91b1cb7a89ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppShapeData::psf_e2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a67ff4e2ef2aa308214feb59e135e4103"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float galsim::hsm::CppShapeData::psf_sigma</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PSF size sigma = (det M)^(1/4) from the adaptive moments, in units of pixels; default -1. </p>
 
 </div>
 </div>

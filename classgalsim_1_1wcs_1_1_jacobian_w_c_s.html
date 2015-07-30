@@ -141,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c29b80a637bcd2442bece1f0dec21c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf876ac4be01da8b7b8ce62b05d3c3a3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html#aaf876ac4be01da8b7b8ce62b05d3c3a3">__repr__</a></td></tr>
 <tr class="separator:aaf876ac4be01da8b7b8ce62b05d3c3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1977bb7a931b9db56897be0ec836a0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html#aec1977bb7a931b9db56897be0ec836a0">__hash__</a></td></tr>
+<tr class="separator:aec1977bb7a931b9db56897be0ec836a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa30a3f18d7b04c128e3375f476a7d729"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1wcs_1_1_local_w_c_s.html#aa30a3f18d7b04c128e3375f476a7d729">isLocal</a></td></tr>
 <tr class="separator:aa30a3f18d7b04c128e3375f476a7d729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ab3bff7c1be30886396702eb22ba71"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1wcs_1_1_uniform_w_c_s.html#ab7ab3bff7c1be30886396702eb22ba71">isUniform</a></td></tr>
@@ -230,7 +232,7 @@ Public Attributes</h2></td></tr>
 <p>The conversion functions are: </p>
 <pre class="fragment">u = dudx x + dudy y
 v = dvdx x + dvdy y
-</pre><p>A <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a> has attributes dudx, dudy, dvdx, dvdy that you can access directly if that is convenient. You can also access these as a NumPy matrix directly with </p>
+</pre><p>A <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a> has attributes dudx, dudy, dvdx, dvdy that you can access directly if that is convenient. You can also access these as a NumPy array directly with </p>
 <pre class="fragment">&gt;&gt;&gt; J = jac_wcs.getMatrix()
 </pre><p>Also, <a class="el" href="classgalsim_1_1wcs_1_1_jacobian_w_c_s.html" title="This WCS is the most general local linear WCS implementing a 2x2 Jacobian matrix. ...">JacobianWCS</a> has another method that other WCS classes do not have. The call </p>
 <pre class="fragment">&gt;&gt;&gt; scale, shear, theta, flip = jac_wcs.getDecomposition()
@@ -313,6 +315,22 @@ v = dvdx x + dvdy y
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aec1977bb7a931b9db56897be0ec836a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.wcs.JacobianWCS.__hash__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -557,7 +575,7 @@ v = dvdx x + dvdy y
 </div><div class="memdoc">
 
 <p>Get the Jacobian as a NumPy matrix: </p>
-<p>numpy.matrix( [[ dudx, dudy ], [ dvdx, dvdy ]] ) </p>
+<p>numpy.array( [[ dudx, dudy ], [ dvdx, dvdy ]] ) </p>
 
 </div>
 </div>

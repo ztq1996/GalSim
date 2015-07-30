@@ -112,26 +112,40 @@ Inheritance diagram for galsim.optics.OpticalPSF:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9db056f8f2a7c3df426f0a25d103d3fe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html#a9db056f8f2a7c3df426f0a25d103d3fe">__init__</a></td></tr>
 <tr class="separator:a9db056f8f2a7c3df426f0a25d103d3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdd13e3783b416668bbde6ca7ce7363"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html#a6bdd13e3783b416668bbde6ca7ce7363">__repr__</a></td></tr>
+<tr class="separator:a6bdd13e3783b416668bbde6ca7ce7363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508b24faf78552abb108c41247c7b414"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html#a508b24faf78552abb108c41247c7b414">__str__</a></td></tr>
+<tr class="separator:a508b24faf78552abb108c41247c7b414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d4dd29347212892987746f3a70ec10"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html#ad5d4dd29347212892987746f3a70ec10">__getstate__</a></td></tr>
+<tr class="separator:ad5d4dd29347212892987746f3a70ec10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f73b4982cbb9ce8d5a4df07f9fdfb3f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html#a8f73b4982cbb9ce8d5a4df07f9fdfb3f">__setstate__</a></td></tr>
+<tr class="separator:a8f73b4982cbb9ce8d5a4df07f9fdfb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class describing aberrated PSFs due to telescope optics. </p>
 <p>Its underlying implementation uses an InterpolatedImage to characterize the profile.</p>
+<p>The diffraction effects are characterized by the diffraction angle, which is a function of the ratio lambda / D, where lambda is the wavelength of the light and D is the diameter of the telescope. Users can specify this diffraction angle in one of two ways. The first option is to specify the ratio as <code>lam_over_diam</code> in whatever arbitrary units they choose (and then self-consistently specify the image scale in the same units). The second option is to specify the wavelength as <code>lam</code> in units of nanometers and the telescope diameter as <code>diam</code> in units of meters. <a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics. ">OpticalPSF</a> will then convert the ratio to units of <code>scale_units</code>, and image scales must be specified in <code>scale_units</code> as well.</p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention defined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>
 <p>There are two ways to specify the geometry of the pupil plane, i.e., the obscuration disk size and the areas that will be illuminated outside of it. The first way is to use keywords that specify the size of the obscuration, and the nature of the support struts holding up the secondary mirror (or prime focus cage, etc.). These are taken to be rectangular obscurations extending from the outer edge of the pupil to the outer edge of the obscuration disk (or the pupil center if <code>obscuration = 0.</code>). You can specify how many struts there are (evenly spaced in angle), how thick they are as a fraction of the pupil diameter, and what angle they start at relative to the positive y direction.</p>
 <p>The second way to specify the pupil plane configuration is by passing in an image of it. This can be useful for example if the struts are not evenly spaced or are not radially directed, as is assumed by the simple model for struts described above. In this case, keywords related to struts are ignored; moreover, the <code>obscuration</code> keyword is used to ensure that the images are properly sampled (so it is still needed), but the keyword is then ignored when using the supplied image of the pupil plane. The <code>pupil_plane_im</code> that is passed in can be rotated during internal calculations by specifying a <code>pupil_angle</code> keyword. Also note that given how the <code>obscuration</code> keyword is used, the obscuration in the supplied pupil plane image should indeed be reasonably circular rather than having an arbitrary shape; however, minor deviations from a perfect circle do not cause significant problems.</p>
 <p>If you choose to pass in a pupil plane image, it must be a square array in which the image of the pupil is centered. The areas that are illuminated should have some value &gt;0, and the other areas should have a value of precisely zero. Based on what the <a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics. ">OpticalPSF</a> class thinks is the required sampling to make the PSF image, the image that is passed in of the pupil plane might be zero-padded during internal calculations. If the pupil plane image has a scale associated with it, that scale will be completely ignored; the scale is determined internally using basic physical considerations. Finally, to ensure accuracy of calculations using a pupil plane image, we recommend sampling it as finely as possible.</p>
 <h2>Initialization </h2>
-<pre class="fragment">&gt;&gt;&gt; optical_psf = galsim.OpticalPSF(lam_over_diam, defocus=0., astig1=0., astig2=0.,
-                                    coma1=0., coma2=0., trefoil1=0., trefoil2=0., spher=0.,
-                                    aberrations=None, circular_pupil=True, obscuration=0.,
-                                    interpolant=None, oversampling=1.5, pad_factor=1.5,
-                                    max_size=None, nstruts=0, strut_thick=0.05,
-                                    strut_angle=0.*galsim.degrees, pupil_plane_im=None,
-                                    pupil_angle=0.*galsim.degrees)
-</pre><p>Initializes <code>optical_psf</code> as an <a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics. ">OpticalPSF</a> instance.</p>
+<p>Either specify the lam/diam ratio directly in arbitrary units: </p>
+<pre class="fragment">&gt;&gt;&gt; optical_psf = galsim.OpticalPSF(lam_over_diam=lam_over_diam, defocus=0., astig1=0., 
+                                    astig2=0., coma1=0., coma2=0., trefoil1=0., trefoil2=0.,
+                                    spher=0., aberrations=None, circular_pupil=True,
+                                    obscuration=0., interpolant=None, oversampling=1.5,
+                                    pad_factor=1.5, max_size=None, nstruts=0,
+                                    strut_thick=0.05, strut_angle=0.*galsim.degrees,
+                                    pupil_plane_im=None, pupil_angle=0.*galsim.degrees)
+</pre><p>or, use separate keywords for the telescope diameter and wavelength in meters and nanometers, respectively: </p>
+<pre class="fragment">&gt;&gt;&gt; optical_psf = galsim.OpticalPSF(lam=lam, diam=diam, defocus=0., ...)
+</pre><p>Either of these options initializes <code>optical_psf</code> as an <a class="el" href="classgalsim_1_1optics_1_1_optical_p_s_f.html" title="A class describing aberrated PSFs due to telescope optics. ">OpticalPSF</a> instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for <code>scale</code> (user responsible for consistency). </td></tr>
+    <tr><td class="paramname">lam_over_diam</td><td>Lambda / telescope diameter in the physical units adopted for <code>scale</code> (user responsible for consistency). Either <code>lam_over_diam</code>, or <code>lam</code> and <code>diam</code>, must be supplied. </td></tr>
+    <tr><td class="paramname">lam</td><td>Lambda (wavelength) in units of nanometers. Must be supplied with <code>diam</code>, and in this case, image scales (<code>scale</code>) should be specified in units of <code>scale_unit</code>. </td></tr>
+    <tr><td class="paramname">diam</td><td>Telescope diameter in units of meters. Must be supplied with <code>lam</code>, and in this case, image scales (<code>scale</code>) should be specified in units of <code>scale_unit</code>. </td></tr>
     <tr><td class="paramname">defocus</td><td>Defocus in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">astig1</td><td>Astigmatism (like e2) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">astig2</td><td>Astigmatism (like e1) in units of incident light wavelength. [default: 0] </td></tr>
@@ -140,10 +154,10 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">trefoil1</td><td>Trefoil (one of the arrows along y) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">trefoil2</td><td>Trefoil (one of the arrows along x) in units of incident light wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">spher</td><td>Spherical aberration in units of incident light wavelength. [default: 0] </td></tr>
-    <tr><td class="paramname">aberrations</td><td>Optional keyword, to pass in a list, tuple, or NumPy array of aberrations in units of incident light wavelength (ordered according to the Noll convention), rather than passing in individual values for each individual aberration. Currently GalSim supports aberrations from defocus through third-order spherical (<code>spher</code>), which are aberrations 4-11 in the Noll convention, and hence <code>aberrations</code> should be an object of length 12, with the first four numbers being ignored, the 5th (index 4) being defocus, and so on through index 11 corresponding to <code>spher</code>. [default: None] </td></tr>
+    <tr><td class="paramname">aberrations</td><td>Optional keyword, to pass in a list, tuple, or NumPy array of aberrations in units of incident light wavelength (ordered according to the Noll convention), rather than passing in individual values for each individual aberration. Currently GalSim supports aberrations from defocus through third-order spherical (<code>spher</code>), which are aberrations 4-11 in the Noll convention, and hence <code>aberrations</code> should be an object of length 12, with the 5th number (index 4) being the defocus, and so on through index 11 corresponding to <code>spher</code>. Orders 1-3 (piston, tip, and tilt), while not true optical aberrations, are permitted to be non-zero and will be treated appropriately, while the first number will be ignored. [default: None] </td></tr>
     <tr><td class="paramname">circular_pupil</td><td>Adopt a circular pupil? [default: True] </td></tr>
     <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of pupil linear dimension, [0., 1.). This should be specified even if you are providing a <code>pupil_plane_im</code>, since we need an initial value of obscuration to use to figure out the necessary image sampling. [default: 0] </td></tr>
-    <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface. ">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a>) instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">galsim.Quintic()</a>] </td></tr>
+    <tr><td class="paramname">interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a> instance or a string indicating which interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">galsim.Quintic()</a>] </td></tr>
     <tr><td class="paramname">oversampling</td><td>Optional oversampling factor for the InterpolatedImage. Setting <code>oversampling &lt; 1</code> will produce aliasing in the PSF (not good). Usually <code>oversampling</code> should be somewhat larger than 1. 1.5 is usually a safe choice. [default: 1.5] </td></tr>
     <tr><td class="paramname">pad_factor</td><td>Additional multiple by which to zero-pad the PSF image to avoid folding compared to what would be employed for a simple Airy. Note that <code>pad_factor</code> may need to be increased for stronger aberrations, i.e. those larger than order unity. [default: 1.5] </td></tr>
     <tr><td class="paramname">suppress_warning</td><td>If <code>pad_factor</code> is too small, the code will emit a warning telling you its best guess about how high you might want to raise it. However, you can suppress this warning by using <code>suppress_warning=True</code>. [default: False] </td></tr>
@@ -154,6 +168,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">strut_angle</td><td><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> made between the vertical and the strut starting closest to it, defined to be positive in the counter-clockwise direction; must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
     <tr><td class="paramname">pupil_plane_im</td><td>The GalSim.Image, NumPy array, or name of file containing the pupil plane image, to be used instead of generating one based on the obscuration and strut parameters. Note that if the image is saved as unsigned integers, you will get a warning about conversion to floats, which is harmless. [default: None] </td></tr>
     <tr><td class="paramname">pupil_angle</td><td>If <code>pupil_plane_im</code> is not None, rotation angle for the pupil plane (positive in the counter-clockwise direction). Must be an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance. [default: 0. * <a class="el" href="namespacegalsim.html#ae61b66be379ab254f69728a4873e0274" title="constant with units of degrees ">galsim.degrees</a>] </td></tr>
+    <tr><td class="paramname">scale_unit</td><td>Units used to define the diffraction limit and draw images, if the user has supplied a separate value for <code>lam</code> and <code>diam</code>. Should be either a <a class="el" href="classgalsim_1_1_angle_unit.html" title="A class defining angle units. ">galsim.AngleUnit</a>, or a string that can be used to construct one (e.g., 'arcsec', 'radians', etc.). [default: <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a>] </td></tr>
     <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
   </table>
   </dd>
@@ -175,7 +190,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lam_over_diam</em>, </td>
+          <td class="paramname"><em>lam_over_diam</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lam</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>diam</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -313,12 +340,93 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scale_unit</em> = <code><a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790">galsim.arcsec</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad5d4dd29347212892987746f3a70ec10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.optics.OpticalPSF.__getstate__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6bdd13e3783b416668bbde6ca7ce7363"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.optics.OpticalPSF.__repr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f73b4982cbb9ce8d5a4df07f9fdfb3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.optics.OpticalPSF.__setstate__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a508b24faf78552abb108c41247c7b414"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.optics.OpticalPSF.__str__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -114,14 +114,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a20b000f241fd1c2a8f4f3b160254107b"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a20b000f241fd1c2a8f4f3b160254107b">default_hsmparams</a> (new <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a>())</td></tr>
 <tr class="separator:a20b000f241fd1c2a8f4f3b160254107b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabaa80600235fd7f7c3be065904288b8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:aabaa80600235fd7f7c3be065904288b8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#aabaa80600235fd7f7c3be065904288b8">EstimateShearView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; U &gt; &amp;PSF_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; int &gt; &amp;gal_mask_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, const std::string &amp;recompute_flux=&quot;FIT&quot;, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0, boost::shared_ptr&lt; HSMParams &gt; hsmparams=boost::shared_ptr&lt; HSMParams &gt;())</td></tr>
-<tr class="memdesc:aabaa80600235fd7f7c3be065904288b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using ImageViews.  <a href="#aabaa80600235fd7f7c3be065904288b8">More...</a><br/></td></tr>
-<tr class="separator:aabaa80600235fd7f7c3be065904288b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b02518ad082885608ebea6950bf4a9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3b02518ad082885608ebea6950bf4a9c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a3b02518ad082885608ebea6950bf4a9c">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; &amp;object_image, const <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; int &gt; &amp;object_mask_image, double guess_sig=5.0, double precision=1.0e-6, double guess_x_centroid=-1000.0, double guess_y_centroid=-1000.0, boost::shared_ptr&lt; HSMParams &gt; hsmparams=boost::shared_ptr&lt; HSMParams &gt;())</td></tr>
-<tr class="memdesc:a3b02518ad082885608ebea6950bf4a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using ImageViews.  <a href="#a3b02518ad082885608ebea6950bf4a9c">More...</a><br/></td></tr>
-<tr class="separator:a3b02518ad082885608ebea6950bf4a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affac0466d7e41e5f9ee9ae8d54e8ff22"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:affac0466d7e41e5f9ee9ae8d54e8ff22"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#affac0466d7e41e5f9ee9ae8d54e8ff22">EstimateShearView</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;gal_image, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; U &gt; &amp;PSF_image, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; int &gt; &amp;gal_mask_image, float sky_var=0.0, const char *shear_est=&quot;REGAUSS&quot;, const std::string &amp;recompute_flux=&quot;FIT&quot;, double guess_sig_gal=5.0, double guess_sig_PSF=3.0, double precision=1.0e-6, galsim::Position&lt; double &gt; guess_centroid=galsim::Position&lt; double &gt;(-1000.,-1000.), boost::shared_ptr&lt; HSMParams &gt; hsmparams=boost::shared_ptr&lt; HSMParams &gt;())</td></tr>
+<tr class="memdesc:affac0466d7e41e5f9ee9ae8d54e8ff22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction directly using Images.  <a href="#affac0466d7e41e5f9ee9ae8d54e8ff22">More...</a><br/></td></tr>
+<tr class="separator:affac0466d7e41e5f9ee9ae8d54e8ff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6984a83d5ee1060aa555b9ebb973cbf5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6984a83d5ee1060aa555b9ebb973cbf5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a6984a83d5ee1060aa555b9ebb973cbf5">FindAdaptiveMomView</a> (const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; T &gt; &amp;object_image, const <a class="el" href="classgalsim_1_1_base_image.html">BaseImage</a>&lt; int &gt; &amp;object_mask_image, double guess_sig=5.0, double precision=1.0e-6, galsim::Position&lt; double &gt; guess_centroid=galsim::Position&lt; double &gt;(-1000.,-1000.), boost::shared_ptr&lt; HSMParams &gt; hsmparams=boost::shared_ptr&lt; HSMParams &gt;())</td></tr>
+<tr class="memdesc:a6984a83d5ee1060aa555b9ebb973cbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object directly using Images.  <a href="#a6984a83d5ee1060aa555b9ebb973cbf5">More...</a><br/></td></tr>
+<tr class="separator:a6984a83d5ee1060aa555b9ebb973cbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a9ce66ba4ec411c491b53754a8fefb2ab">general_shear_estimator</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; gal_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; PSF_image, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;PSF_data, const std::string &amp;shear_est, unsigned long flags, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
 <tr class="memdesc:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#a9ce66ba4ec411c491b53754a8fefb2ab">More...</a><br/></td></tr>
 <tr class="separator:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,13 +220,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>guess_x_centroid</em> = <code>-1000.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>guess_y_centroid</em> = <code>-1000.0</code>, </td>
+          <td class="paramname"><em>guess_centroid</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,25 +245,26 @@ Functions</h2></td></tr>
 <p>Carry out moments-based PSF correction routines. </p>
 <p>Carry out PSF correction using one of the methods of the HSM package (see references in docstring for file <a class="el" href="hsm_8py.html" title="Routines for adaptive moment estimation and PSF correction. ">hsm.py</a>) to estimate galaxy shears, correcting for the convolution by the PSF.</p>
 <p>This method works from Image inputs rather than GSObject inputs, which provides additional flexibility (e.g., it is possible to work from an Image that was read from file and corresponds to no particular GSObject), but this also means that users who wish to apply it to simple combinations of GSObjects (e.g., a Convolve) must take the additional step of drawing their GSObjects into Images.</p>
+<p>This routine assumes that (at least locally) the WCS can be approximated as a PixelScale, with no distortion or non-trivial remapping. Any non-trivial WCS gets completely ignored.</p>
 <p>Note that the method will fail if the PSF or galaxy are too point-like to easily fit an elliptical Gaussian; when running on batches of many galaxies, it may be preferable to set <code>strict=False</code> and catch errors explicitly, as in the second example below.</p>
 <p>This function has a number of keyword parameters, many of which a typical user will not need to change from the default.</p>
 <h2>Example usage </h2>
 <p>Typical application to a single object: </p>
-<pre class="fragment">&gt;&gt;&gt; galaxy = galsim.Gaussian(flux = 1.0, sigma = 1.0)
+<pre class="fragment">&gt;&gt;&gt; galaxy = galsim.Gaussian(flux=1.0, sigma=1.0)
 &gt;&gt;&gt; galaxy = galaxy.shear(g1=0.05, g2=0.0)  # shears the Gaussian by (0.05, 0) using the 
-&gt;&gt;&gt;                                         # |g| = (a - b)/(a + b) definition
-&gt;&gt;&gt; psf = galsim.Kolmogorov(flux = 1.0, fwhm = 0.7)
-&gt;&gt;&gt; final = galsim.Convolve([galaxy, psf])
-&gt;&gt;&gt; final_image = final.drawImage(dx = 0.2)
-&gt;&gt;&gt; final_epsf_image = psf.drawImage(dx = 0.2)
+&gt;&gt;&gt;                                         # |g| = (a-b)/(a+b) definition
+&gt;&gt;&gt; psf = galsim.Kolmogorov(flux=1.0, fwhm=0.7)
+&gt;&gt;&gt; final = galsim.Convolve(galaxy, psf)
+&gt;&gt;&gt; final_image = final.drawImage(scale=0.2)
+&gt;&gt;&gt; final_epsf_image = psf.drawImage(scale=0.2)
 &gt;&gt;&gt; result = galsim.hsm.EstimateShear(final_image, final_epsf_image)
-</pre><p>After running the above code, <code>result.observed_shape</code> ["shape" = distortion, the (a^2 - b^2)/(a^2 + b^2) definition of ellipticity] is <code>(0.0438925351523, -1.12519277137e-18)</code> and <code>result.corrected_e1</code>, <code>result_corrected_e2</code> are <code>(0.0993412658572,-1.84832327221e-09)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
+</pre><p>After running the above code, <code>result.observed_shape</code> is a galsim.Shear object with a value of <code>(0.0438925349133, -2.85747392701e-18)</code> and <code>result.corrected_e1</code>, <code>result_corrected_e2</code> are <code>(0.09934103488922119, -3.746108423463568e-10)</code>, compared with the expected <code>(0.09975, 0)</code> for a perfect PSF correction method.</p>
 <p>The code below gives an example of how one could run this routine on a large batch of galaxies, explicitly catching and tracking any failures: </p>
 <pre class="fragment">&gt;&gt;&gt; n_image = 100
 &gt;&gt;&gt; n_fail = 0
 &gt;&gt;&gt; for i=0, range(n_image):
 &gt;&gt;&gt;     #...some code defining this_image, this_final_epsf_image...
-&gt;&gt;&gt;     result = galsim.hsm.EstimateShear(this_image, this_final_epsf_image, strict = False)
+&gt;&gt;&gt;     result = galsim.hsm.EstimateShear(this_image, this_final_epsf_image, strict=False)
 &gt;&gt;&gt;     if result.error_message != "":
 &gt;&gt;&gt;         n_fail += 1
 &gt;&gt;&gt; print "Number of failures: ", n_fail
@@ -280,14 +275,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">weight</td><td>The optional weight image for the galaxy being measured. Can be an int or a float array. Currently, GalSim does not account for the variation in non-zero weights, i.e., a weight map is converted to an image with 0 and 1 for pixels that are not and are used. Full use of spatial variation in non-zero weights will be included in a future version of the code. </td></tr>
     <tr><td class="paramname">badpix</td><td>The optional bad pixel mask for the image being used. Zero should be used for pixels that are good, and any nonzero value indicates a bad pixel. </td></tr>
     <tr><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape. [default: 0.] </td></tr>
-    <tr><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: 'REGAUSS', 'LINEAR', 'BJ', or 'KSB'. [default: 'REGAUSS'] </td></tr>
+    <tr><td class="paramname">shear_est</td><td>A string indicating the desired method of PSF correction: 'REGAUSS', 'LINEAR', 'BJ', or 'KSB'. The first three options return an e-type distortion, whereas the last option returns a g-type shear. [default: 'REGAUSS'] </td></tr>
     <tr><td class="paramname">recompute_flux</td><td>A string indicating whether to recompute the object flux, which should be 'NONE' (for no recomputation), 'SUM' (for recomputation via an unweighted sum over unmasked pixels), or 'FIT' (for recomputation using the Gaussian + quartic fit). [default: 'FIT'] </td></tr>
     <tr><td class="paramname">guess_sig_gal</td><td>Optional argument with an initial guess for the Gaussian sigma of the galaxy (in pixels). [default: 5.] </td></tr>
     <tr><td class="paramname">guess_sig_PSF</td><td>Optional argument with an initial guess for the Gaussian sigma of the PSF (in pixels). [default: 3.] </td></tr>
     <tr><td class="paramname">precision</td><td>The convergence criterion for the moments. [default: 1e-6] </td></tr>
-    <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). The convention for centroids is such that the center of the lower-left pixel is (0,0). [default: gal_image.trueCenter().x] </td></tr>
-    <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). The convention for centroids is such that the center of the lower-left pixel is (0,0). [default: gal_image.trueCenter().y] </td></tr>
-    <tr><td class="paramname">strict</td><td>Whether to require success. If <code>strict = True</code>, then there will be a <code>RuntimeError</code> exception if shear estimation fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1hsm_1_1_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines. ">ShapeData</a> object. [default: True] </td></tr>
+    <tr><td class="paramname">guess_centroid</td><td>An initial guess for the object centroid (useful in case it is not located at the center, which is used if this keyword is not set). The convention for centroids is such that the center of the lower-left pixel is (image.xmin, image.ymin). [default: gal_image.trueCenter()] </td></tr>
+    <tr><td class="paramname">strict</td><td>Whether to require success. If <code>strict=True</code>, then there will be a <code>RuntimeError</code> exception if shear estimation fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1hsm_1_1_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines. ">ShapeData</a> object. [default: True] </td></tr>
     <tr><td class="paramname">hsmparams</td><td>The hsmparams keyword can be used to change the settings used by <a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines. ">EstimateShear()</a> when estimating shears; see <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> documentation using help(<a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">galsim.hsm.HSMParams</a>) for more information. [default: None]</td></tr>
   </table>
   </dd>
@@ -296,7 +290,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aabaa80600235fd7f7c3be065904288b8"></a>
+<a class="anchor" id="affac0466d7e41e5f9ee9ae8d54e8ff22"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -305,19 +299,19 @@ template&lt;typename T , typename U &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a> galsim::hsm::EstimateShearView </td>
           <td>(</td>
-          <td class="paramtype">const ImageView&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const BaseImage&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>gal_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ImageView&lt; U &gt; &amp;&#160;</td>
+          <td class="paramtype">const BaseImage&lt; U &gt; &amp;&#160;</td>
           <td class="paramname"><em>PSF_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ImageView&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype">const BaseImage&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>gal_mask_image</em>, </td>
         </tr>
         <tr>
@@ -359,14 +353,8 @@ template&lt;typename T , typename U &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>guess_x_centroid</em> = <code>-1000.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>guess_y_centroid</em> = <code>-1000.0</code>, </td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_position.html">galsim::Position</a>&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>guess_centroid</em> = <code><a class="el" href="classgalsim_1_1_position.html">galsim::Position</a>&lt;&#160;double&#160;&gt;(-1000.,-1000.)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -382,21 +370,20 @@ template&lt;typename T , typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Carry out PSF correction directly using ImageViews. </p>
-<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input ImageViews. The input arguments get repackaged before calling general_shear_estimator, and results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html" title="Struct containing information about the shape of an object. ">CppShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and recompute_flux (for the REGAUSS method only).</p>
+<p>Carry out PSF correction directly using Images. </p>
+<p>A template function to carry out one of the multiple possible methods of PSF correction using the HSM package, directly accessing the input Images. The input arguments get repackaged before calling general_shear_estimator, and results for the shape measurement are returned as <a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html" title="Struct containing information about the shape of an object. ">CppShapeData</a>. There are two arguments that have default values, namely shear_est (the type of shear estimator) and recompute_flux (for the REGAUSS method only).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> for the galaxy being measured </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> for the PSF </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gal_mask_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> for the mask image to be applied to the galaxy being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_image</td><td>The <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> for the galaxy being measured </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PSF_image</td><td>The <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> for the PSF </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gal_mask_image</td><td>The <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> for the mask image to be applied to the galaxy being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">sky_var</td><td>The variance of the sky level, used for estimating uncertainty on the measured shape; default 0. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">*shear_est</td><td>A string indicating the desired method of PSF correction: REGAUSS, LINEAR, BJ, or KSB; default REGAUSS. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">*recompute_flux</td><td>A string indicating whether to recompute the object flux, which should be NONE (for no recomputation), SUM (for recomputation via an unweighted sum over unmasked pixels), or FIT (for recomputation using the Gaussian + quartic fit). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig_gal</td><td>Optional argument with an initial guess for the Gaussian sigma of the galaxy, default 5.0 (pixels). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig_PSF</td><td>Optional argument with an initial guess for the Gaussian sigma of the PSF, default 3.0 (pixels). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_x_centroid</td><td>Optional argument with an initial guess for the x centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_y_centroid</td><td>Optional argument with an initial guess for the y centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">guess_centroid</td><td>Optional argument with an initial guess for the centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hsmparams</td><td>Optional argument to specify parameters to be used for shape measurement routines, as an <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> object. </td></tr>
   </table>
   </dd>
@@ -542,13 +529,7 @@ template&lt;typename T , typename U &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>guess_x_centroid</em> = <code>-1000.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>guess_y_centroid</em> = <code>-1000.0</code>, </td>
+          <td class="paramname"><em>guess_centroid</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -572,23 +553,24 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Measure adaptive moments of an object. </p>
 <p>This method estimates the best-fit elliptical Gaussian to the object (see Hirata &amp; Seljak 2003 for more discussion of adaptive moments). This elliptical Gaussian is computed iteratively by initially guessing a circular Gaussian that is used as a weight function, computing the weighted moments, recomputing the moments using the result of the previous step as the weight function, and so on until the moments that are measured are the same as those used for the weight function. <a class="el" href="namespacegalsim_1_1hsm.html#a609965656c1fb90e664a6439312ac1fc" title="Measure adaptive moments of an object. ">FindAdaptiveMom()</a> can be used either as a free function, or as a method of the Image class.</p>
+<p>This routine assumes that (at least locally) the WCS can be approximated as a PixelScale, with no distortion or non-trivial remapping. Any non-trivial WCS gets completely ignored.</p>
 <p>Like <a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines. ">EstimateShear()</a>, <a class="el" href="namespacegalsim_1_1hsm.html#a609965656c1fb90e664a6439312ac1fc" title="Measure adaptive moments of an object. ">FindAdaptiveMom()</a> works on Image inputs, and fails if the object is small compared to the pixel scale. For more details, see <a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines. ">EstimateShear()</a>.</p>
 <h2>Example usage </h2>
-<pre class="fragment">&gt;&gt;&gt; my_gaussian = galsim.Gaussian(flux = 1.0, sigma = 1.0)
-&gt;&gt;&gt; my_gaussian_image = my_gaussian.drawImage(dx = 0.2, method='no_pixel')
+<pre class="fragment">&gt;&gt;&gt; my_gaussian = galsim.Gaussian(flux=1.0, sigma=1.0)
+&gt;&gt;&gt; my_gaussian_image = my_gaussian.drawImage(scale=0.2, method='no_pixel')
 &gt;&gt;&gt; my_moments = galsim.hsm.FindAdaptiveMom(my_gaussian_image)
 </pre><p>OR </p>
 <pre class="fragment">&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom()
-</pre><p>Assuming a successful measurement, the most relevant pieces of information are <code>my_moments.moments_sigma</code>, which is <code>|det(M)|^(1/4)</code> [=<code>sigma</code> for a circular Gaussian] and <code>my_moments.observed_shape</code>, which is a Shear.</p>
-<p>Methods of the Shear class can be used to get the distortion <code>(e1, e2) = (a^2 - b^2)/(a^2 + b^2)</code>, e.g. <code>my_moments.observed_shape.getE1()</code>, or to get the shear <code>g</code>, the conformal shear <code>eta</code>, and so on.</p>
+</pre><p>Assuming a successful measurement, the most relevant pieces of information are <code>my_moments.moments_sigma</code>, which is <code>|det(M)|^(1/4)</code> [=<code>sigma</code> for a circular Gaussian] and <code>my_moments.observed_shape</code>, which is a Shear. In this case, <code>my_moments.moments_sigma</code> is precisely 5.0 (in units of pixels), and <code>my_moments.observed_shape</code> is consistent with zero.</p>
+<p>Methods of the Shear class can be used to get the distortion <code>e</code>, the shear <code>g</code>, the conformal shear <code>eta</code>, and so on.</p>
 <p>As an example of how to use the optional <code>hsmparams</code> argument, consider cases where the input images have unusual properties, such as being very large. This could occur when measuring the properties of a very over-sampled image such as that generated using </p>
-<pre class="fragment">&gt;&gt;&gt; my_gaussian = galsim.Gaussian(sigma = 5.0)
-&gt;&gt;&gt; my_gaussian_image = my_gaussian.drawImage(dx = 0.01, method='no_pixel')
-</pre><p>If the user attempts to measure the moments of this 4000 x 4000 pixel image using the standard syntax, </p>
+<pre class="fragment">&gt;&gt;&gt; my_gaussian = galsim.Gaussian(sigma=5.0)
+&gt;&gt;&gt; my_gaussian_image = my_gaussian.drawImage(scale=0.01, method='no_pixel')
+</pre><p>If the user attempts to measure the moments of this very large image using the standard syntax, </p>
 <pre class="fragment">&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom()
 </pre><p>then the result will be a RuntimeError due to moment measurement failing because the object is so large. While the list of all possible settings that can be changed is accessible in the docstring of the <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> class, in this case we need to modify <code>max_amoment</code> which is the maximum value of the moments in units of pixel^2. The following measurement, using the default values for every parameter except for <code>max_amoment</code>, will be successful: </p>
 <pre class="fragment">&gt;&gt;&gt; new_params = galsim.hsm.HSMParams(max_amoment=5.0e5)
-&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom(hsmparams = new_params)
+&gt;&gt;&gt; my_moments = my_gaussian_image.FindAdaptiveMom(hsmparams=new_params)
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object_image</td><td>The Image for the object being measured. </td></tr>
@@ -596,9 +578,8 @@ template&lt;typename T , typename U &gt; </div>
     <tr><td class="paramname">badpix</td><td>The optional bad pixel mask for the image being used. Zero should be used for pixels that are good, and any nonzero value indicates a bad pixel. [default: None] </td></tr>
     <tr><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object (in pixels). [default: 5.0] </td></tr>
     <tr><td class="paramname">precision</td><td>The convergence criterion for the moments. [default: 1e-6] </td></tr>
-    <tr><td class="paramname">guess_x_centroid</td><td>An initial guess for the x component of the object centroid (useful in case it is not located at the center, which is the default assumption). The convention for centroids is such that the center of the lower-left pixel is (0,0). [default: gal_image.trueCenter().x] </td></tr>
-    <tr><td class="paramname">guess_y_centroid</td><td>An initial guess for the y component of the object centroid (useful in case it is not located at the center, which is the default assumption). The convention for centroids is such that the center of the lower-left pixel is (0,0). [default: gal_image.trueCenter().y] </td></tr>
-    <tr><td class="paramname">strict</td><td>Whether to require success. If <code>strict = True</code>, then there will be a <code>RuntimeError</code> exception if shear estimation fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1hsm_1_1_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines. ">ShapeData</a> object. [default: True] </td></tr>
+    <tr><td class="paramname">guess_centroid</td><td>An initial guess for the object centroid (useful in case it is not located at the center, which is used if this keyword is not set). The convention for centroids is such that the center of the lower-left pixel is (image.xmin, image.ymin). [default: object_image.trueCenter()] </td></tr>
+    <tr><td class="paramname">strict</td><td>Whether to require success. If <code>strict=True</code>, then there will be a <code>RuntimeError</code> exception if shear estimation fails. If set to <code>False</code>, then information about failures will be silently stored in the output <a class="el" href="classgalsim_1_1hsm_1_1_shape_data.html" title="A class to contain the outputs of using the HSM shape and moments measurement routines. ">ShapeData</a> object. [default: True] </td></tr>
     <tr><td class="paramname">hsmparams</td><td>The hsmparams keyword can be used to change the settings used by FindAdaptiveMom when estimating moments; see <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> documentation using help(<a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">galsim.hsm.HSMParams</a>) for more information. [default: None]</td></tr>
   </table>
   </dd>
@@ -607,7 +588,7 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a3b02518ad082885608ebea6950bf4a9c"></a>
+<a class="anchor" id="a6984a83d5ee1060aa555b9ebb973cbf5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -616,13 +597,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html">CppShapeData</a> galsim::hsm::FindAdaptiveMomView </td>
           <td>(</td>
-          <td class="paramtype">const ImageView&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const BaseImage&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>object_image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ImageView&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype">const BaseImage&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>object_mask_image</em>, </td>
         </tr>
         <tr>
@@ -640,14 +621,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>guess_x_centroid</em> = <code>-1000.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>guess_y_centroid</em> = <code>-1000.0</code>, </td>
+          <td class="paramtype"><a class="el" href="classgalsim_1_1_position.html">galsim::Position</a>&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>guess_centroid</em> = <code><a class="el" href="classgalsim_1_1_position.html">galsim::Position</a>&lt;&#160;double&#160;&gt;(-1000.,-1000.)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -663,16 +638,15 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Measure the adaptive moments of an object directly using ImageViews. </p>
-<p>This function repackages the input <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> in a format that find_ellipmom_2 accepts, in order to iteratively compute the adaptive moments of an object. The key result is the best-fit elliptical Gaussian to the object, which is computed by initially guessing a circular Gaussian that is used as a weight function, computing the weighted moments, recomputing the moments using the result of the previous step as the weight function, and so on until the moments that are measured are the same as those used for the weight function.</p>
+<p>Measure the adaptive moments of an object directly using Images. </p>
+<p>This function repackages the input <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> in a format that find_ellipmom_2 accepts, in order to iteratively compute the adaptive moments of an object. The key result is the best-fit elliptical Gaussian to the object, which is computed by initially guessing a circular Gaussian that is used as a weight function, computing the weighted moments, recomputing the moments using the result of the previous step as the weight function, and so on until the moments that are measured are the same as those used for the weight function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> for the object being measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_mask_image</td><td>The <a class="el" href="classgalsim_1_1_image_view.html" title="ImageView class is a mutable view of an Image. ">ImageView</a> for the mask image to be applied to the object being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_image</td><td>The <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> for the object being measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_mask_image</td><td>The <a class="el" href="classgalsim_1_1_base_image.html" title="BaseImage class defines the interface of what you can do with Images without modifying pixels...">BaseImage</a> for the mask image to be applied to the object being measured (integer array, 1=use pixel and 0=do not use pixel). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">guess_sig</td><td>Optional argument with an initial guess for the Gaussian sigma of the object, default 5.0 (pixels). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>The convergence criterion for the moments; default 1e-6. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_x_centroid</td><td>Optional argument with an initial guess for the x centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">guess_y_centroid</td><td>Optional argument with an initial guess for the y centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">guess_centroid</td><td>Optional argument with an initial guess for the centroid of the galaxy; if not set, then the code will try the center of the image. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hsmparams</td><td>Optional argument to specify parameters to be used for shape measurement routines, as an <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> object. </td></tr>
   </table>
   </dd>

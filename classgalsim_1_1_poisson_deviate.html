@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a247c8726647f7ed5607001cac6ba5fb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#a247c8726647f7ed5607001cac6ba5fb8">PoissonDeviate</a> (const <a class="el" href="classgalsim_1_1_poisson_deviate.html">PoissonDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a247c8726647f7ed5607001cac6ba5fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a247c8726647f7ed5607001cac6ba5fb8">More...</a><br/></td></tr>
 <tr class="separator:a247c8726647f7ed5607001cac6ba5fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55cb7acf58af5f669fd6ef6bfd37a703"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#a55cb7acf58af5f669fd6ef6bfd37a703">PoissonDeviate</a> (const std::string &amp;str, double mean)</td></tr>
+<tr class="memitem:a55cb7acf58af5f669fd6ef6bfd37a703"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#a55cb7acf58af5f669fd6ef6bfd37a703">PoissonDeviate</a> (const std::string &amp;<a class="el" href="classgalsim_1_1_base_deviate.html#a80e6898883248a94a2ef4a9b6d2b9dd2">str</a>, double mean)</td></tr>
 <tr class="memdesc:a55cb7acf58af5f669fd6ef6bfd37a703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_poisson_deviate.html" title="A Poisson deviate with specified mean. ">PoissonDeviate</a> from a serialization string.  <a href="#a55cb7acf58af5f669fd6ef6bfd37a703">More...</a><br/></td></tr>
 <tr class="separator:a55cb7acf58af5f669fd6ef6bfd37a703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9610af35f327b83332622e1505aa7b09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_poisson_deviate.html">PoissonDeviate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_poisson_deviate.html#a9610af35f327b83332622e1505aa7b09">duplicate</a> ()</td></tr>
@@ -155,6 +155,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec66a9bd30c113fe00f95cb165f203cd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#aec66a9bd30c113fe00f95cb165f203cd">serialize</a> ()</td></tr>
 <tr class="memdesc:aec66a9bd30c113fe00f95cb165f203cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a serialization string for this <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a>  <a href="#aec66a9bd30c113fe00f95cb165f203cd">More...</a><br/></td></tr>
 <tr class="separator:aec66a9bd30c113fe00f95cb165f203cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab329c75c3112f9c7e925301ef67bde43"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#ab329c75c3112f9c7e925301ef67bde43">repr</a> ()</td></tr>
+<tr class="memdesc:ab329c75c3112f9c7e925301ef67bde43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that can act as the repr in python.  <a href="#ab329c75c3112f9c7e925301ef67bde43">More...</a><br/></td></tr>
+<tr class="separator:ab329c75c3112f9c7e925301ef67bde43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e6898883248a94a2ef4a9b6d2b9dd2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a80e6898883248a94a2ef4a9b6d2b9dd2">str</a> ()</td></tr>
+<tr class="memdesc:a80e6898883248a94a2ef4a9b6d2b9dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that can act as the str in python.  <a href="#a80e6898883248a94a2ef4a9b6d2b9dd2">More...</a><br/></td></tr>
+<tr class="separator:a80e6898883248a94a2ef4a9b6d2b9dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a4f50e24d2d3c73e10fc5d7a3ae7308ee">seed</a> (long lseed)</td></tr>
 <tr class="memdesc:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-seed the PRNG using specified seed.  <a href="#a4f50e24d2d3c73e10fc5d7a3ae7308ee">More...</a><br/></td></tr>
 <tr class="separator:a4f50e24d2d3c73e10fc5d7a3ae7308ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,6 +460,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab329c75c3112f9c7e925301ef67bde43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::BaseDeviate::repr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a string that can act as the repr in python. </p>
+
+</div>
+</div>
 <a class="anchor" id="a467ee386aebd84bb837c016718e8c6ec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -606,6 +637,32 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a80e6898883248a94a2ef4a9b6d2b9dd2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::BaseDeviate::str </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a string that can act as the str in python. </p>
+<p>For this we use the same thing as the repr, but omit the (verbose!) seed parameter. </p>
 
 </div>
 </div>

@@ -114,6 +114,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d3894964c2a59ff6c4b7a55977bb53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_angle.html">Angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#a4d3894964c2a59ff6c4b7a55977bb53c">wrap</a> ()</td></tr>
 <tr class="memdesc:a4d3894964c2a59ff6c4b7a55977bb53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps this angle to the range (-pi, pi].  <a href="#a4d3894964c2a59ff6c4b7a55977bb53c">More...</a><br/></td></tr>
 <tr class="separator:a4d3894964c2a59ff6c4b7a55977bb53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c52f42cea52b0d3dd5e97d4880bda3e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#a2c52f42cea52b0d3dd5e97d4880bda3e">sin</a> () const </td></tr>
+<tr class="separator:a2c52f42cea52b0d3dd5e97d4880bda3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d08a5b34cdd546200f1d45ca85e0366"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#a9d08a5b34cdd546200f1d45ca85e0366">cos</a> () const </td></tr>
+<tr class="separator:a9d08a5b34cdd546200f1d45ca85e0366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d2a1f46358cc8183be3df451464958"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#a26d2a1f46358cc8183be3df451464958">tan</a> () const </td></tr>
+<tr class="separator:a26d2a1f46358cc8183be3df451464958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32a7680b9b5ce9ed260f73927298a5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#ad32a7680b9b5ce9ed260f73927298a5b">sincos</a> (double &amp;sint, double &amp;cost) const </td></tr>
+<tr class="separator:ad32a7680b9b5ce9ed260f73927298a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a26b8b874ef75e4ef9cbfdebd6a032ce7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_angle.html#a26b8b874ef75e4ef9cbfdebd6a032ce7">operator/</a> (<a class="el" href="classgalsim_1_1_angle_unit.html">AngleUnit</a> unit) const </td></tr>
 <tr class="memdesc:a26b8b874ef75e4ef9cbfdebd6a032ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define conversion to a pure value.  <a href="#a26b8b874ef75e4ef9cbfdebd6a032ce7">More...</a><br/></td></tr>
@@ -263,6 +271,21 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9d08a5b34cdd546200f1d45ca85e0366"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Angle::cos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa427b504b9acbfd31dc874bae88e2385"></a>
 <div class="memitem">
 <div class="memproto">
@@ -517,6 +540,62 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double galsim::Angle::rad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c52f42cea52b0d3dd5e97d4880bda3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Angle::sin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad32a7680b9b5ce9ed260f73927298a5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::Angle::sincos </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>sint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26d2a1f46358cc8183be3df451464958"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double galsim::Angle::tan </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

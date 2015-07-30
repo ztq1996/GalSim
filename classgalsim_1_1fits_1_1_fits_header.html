@@ -145,6 +145,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6ad89d6740752eff2f43c059fdd3e929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06e41f2bad698c2607d93657f3e68025"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a06e41f2bad698c2607d93657f3e68025">values</a></td></tr>
 <tr class="separator:a06e41f2bad698c2607d93657f3e68025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf894f72f658a0d124812163b8fee981"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#abf894f72f658a0d124812163b8fee981">append</a></td></tr>
+<tr class="memdesc:abf894f72f658a0d124812163b8fee981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an item to the end of the header.  <a href="#abf894f72f658a0d124812163b8fee981">More...</a><br/></td></tr>
+<tr class="separator:abf894f72f658a0d124812163b8fee981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8591542dfd72aa8f3c8ed398ed0d87"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a1b8591542dfd72aa8f3c8ed398ed0d87">__repr__</a></td></tr>
+<tr class="separator:a1b8591542dfd72aa8f3c8ed398ed0d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edfee69d01ec8774df349ec986eb729"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a5edfee69d01ec8774df349ec986eb729">__str__</a></td></tr>
+<tr class="separator:a5edfee69d01ec8774df349ec986eb729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891ace6eef367b835e93f1f3c26c797d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a891ace6eef367b835e93f1f3c26c797d">__eq__</a></td></tr>
+<tr class="separator:a891ace6eef367b835e93f1f3c26c797d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ae86eed1de389c3338449d420a985b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a72ae86eed1de389c3338449d420a985b">__ne__</a></td></tr>
+<tr class="separator:a72ae86eed1de389c3338449d420a985b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8e4a932bf995c3d37cff6368f10414"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a3c8e4a932bf995c3d37cff6368f10414">__hash__</a></td></tr>
+<tr class="separator:a3c8e4a932bf995c3d37cff6368f10414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4760a5123892ac20bc4e8209b5071dd1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1fits_1_1_fits_header.html#a4760a5123892ac20bc4e8209b5071dd1">__deepcopy__</a></td></tr>
+<tr class="separator:a4760a5123892ac20bc4e8209b5071dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -180,21 +195,35 @@ This is a particularly useful abstraction, since pyfits has changed its syntax f
 to write to a fits header, so this class will work regardless of which version of pyfits
 (or astropy.io.fits) is installed.
 
+The underlying pyfits.Header object is available as a `.header` attribute:
+
+    &gt;&gt;&gt; pyf_header = fits_header.header
+
+A FitsHeader may be constructed from a file name, an open PyFits (or astropy.io.fits) HDUList
+object, or a PyFits (or astropy.io.fits) Header object.  It can also be constructed with
+no parameters, in which case a blank Header will be constructed with no keywords yet if 
+you want to add the keywords you want by hand.
+
+    &gt;&gt;&gt; h1 = galsim.FitsHeader(file_name = file_name)
+    &gt;&gt;&gt; h2 = galsim.FitsHeader(header = header)
+    &gt;&gt;&gt; h3 = galsim.FitsHeader(hdu_list = hdu_list)
+    &gt;&gt;&gt; h4 = galsim.FitsHeader()
+
+For convenience, the first parameter may be unnamed as either a header or a file_name:
+
+    &gt;&gt;&gt; h1 = galsim.FitsHeader(file_name)
+    &gt;&gt;&gt; h2 = galsim.FitsHeader(header)
+
 Constructor parameters:
 
-@param header       A pyfits Header object.  [One of `file_name`, `hdu_list` or `header`
-                    is required.  The `header` parameter may be given without the keyword
-                    name.  Also, if `header` is a string, it is interpreted as a file name,
-                    so a file name may be passed as an arg like most other galsim.fits 
-                    read functions.]
-@param file_name    The name of the file to read in.  [One of `file_name`, `hdu_list` or 
-                    `header` is required.]
+@param header       A pyfits Header object or in fact any dict-like object or list of 
+                    (key,value) pairs.  [default: None]
+@param file_name    The name of the file to read in.  [default: None]
 @param dir          Optionally a directory name can be provided if `file_name` does not 
                     already include it. [default: None]
 @param hdu_list     Either a `pyfits.HDUList`, a `pyfits.PrimaryHDU`, or `pyfits.ImageHDU`.
                     In the former case, the `hdu` in the list will be selected.  In the latter
-                    two cases, the `hdu` parameter is ignored.  [One of `file_name`, `hdu_list`
-                    or `header is required.]
+                    two cases, the `hdu` parameter is ignored.  [default: None]
 @param hdu          The number of the HDU to return.  [default: None, which means to return
                     either the primary or first extension as appropriate for the given
                     compression.  (e.g. for rice, the first extension is the one you normally
@@ -307,6 +336,32 @@ Constructor parameters:
 
 </div>
 </div>
+<a class="anchor" id="a4760a5123892ac20bc4e8209b5071dd1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__deepcopy__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a11498c80f625eb806d7841574fb2ee02"></a>
 <div class="memitem">
 <div class="memproto">
@@ -322,6 +377,32 @@ Constructor parameters:
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a891ace6eef367b835e93f1f3c26c797d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__eq__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -353,6 +434,22 @@ Constructor parameters:
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3c8e4a932bf995c3d37cff6368f10414"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__hash__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -407,6 +504,48 @@ Constructor parameters:
 
 </div>
 </div>
+<a class="anchor" id="a72ae86eed1de389c3338449d420a985b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__ne__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b8591542dfd72aa8f3c8ed398ed0d87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__repr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a129df95ba19bcb00a03a04eeab013c26"></a>
 <div class="memitem">
 <div class="memproto">
@@ -436,6 +575,71 @@ Constructor parameters:
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5edfee69d01ec8774df349ec986eb729"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.__str__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf894f72f658a0d124812163b8fee981"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.fits.FitsHeader.append </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em> = <code>''</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>useblanks</em> = <code>True</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append an item to the end of the header. </p>
+<p>This breaks convention a bit by treating the header more like a list than a dict, but sometimes that is necessary to get the header structured the way you want it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key of the entry to append </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the entry to append </td></tr>
+    <tr><td class="paramname">useblanks</td><td>If there are blank entries currently at the end, should they be overwritten with the new entry? [default: True] </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

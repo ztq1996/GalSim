@@ -132,14 +132,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 &#160;
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>calculateCovarianceMatrix()
-: <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a7d48ccf32d4338cbb124ae813cfd2a2e">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
 <li>calculateDCRMomentShifts()
 : <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a9b66d8de07826c2c95db59b34d9f0309">galsim.sed.SED</a>
 </li>
+<li>calculateEffectiveWavelength()
+: <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#ab24c4d6a7d3cfe555f36447ab8ec49a7">galsim.bandpass.Bandpass</a>
+</li>
 <li>calculateFlux()
 : <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ab20b0c861f5b6a6604fe838b83a4d6cc">galsim.sed.SED</a>
+</li>
+<li>calculateFluxRadius()
+: <a class="el" href="classgalsim_1_1_s_b_spergel.html#a94eb14512250e8c1f94d5105e2ed78b2">galsim::SBSpergel</a>
+</li>
+<li>calculateIntegratedFlux()
+: <a class="el" href="classgalsim_1_1_s_b_spergel.html#a5b076df69b59add283f532a64b2592f3">galsim::SBSpergel</a>
 </li>
 <li>calculateMagnitude()
 : <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a487693ba2178da5345f265b3193707d6">galsim.sed.SED</a>
@@ -164,8 +170,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structgalsim_1_1_calculate_center.html#a965404d6ebfae64e02a3a3e4362a8984">galsim::CalculateCenter&lt; T, U, is_int &gt;</a>
 , <a class="el" href="structgalsim_1_1_calculate_center_3_01_t_00_01_u_00_01true_01_4.html#a70e75fc1cbe74078c30194f961824b94">galsim::CalculateCenter&lt; T, U, true &gt;</a>
 </li>
+<li>canMakeReal()
+: <a class="el" href="classgalsim_1_1scene_1_1_c_o_s_m_o_s_catalog.html#aa34bdc98cacf27b5adb520b2cc3199e8">galsim.scene.COSMOSCatalog</a>
+</li>
 <li>CCDNoise()
 : <a class="el" href="classgalsim_1_1_c_c_d_noise.html#a9859e9ba222223d49257a05d407e4e03">galsim::CCDNoise</a>
+</li>
+<li>cenIsSet()
+: <a class="el" href="classgalsim_1_1_s_b_interpolated_k_image.html#ace81f72c001771ef347724684743e911">galsim::SBInterpolatedKImage</a>
 </li>
 <li>center()
 : <a class="el" href="classgalsim_1_1image_1_1_image.html#a391a0ac484a6582255ed6fe26a0ae96e">galsim.image.Image</a>
@@ -201,8 +213,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgalsim_1_1fds__test_1_1newfile.html#ac8de04d6a3269790a4cac3086f38b015">galsim.fds_test.newfile</a>
 , <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#a3f59db8b4303d90f5bc251e749dee896">galsim.real.RealGalaxyCatalog</a>
 </li>
+<li>conservesDC()
+: <a class="el" href="classgalsim_1_1_lanczos.html#a78198b0e28aa621b14bce9a71a7d1deb">galsim::Lanczos</a>
+</li>
 <li>ConstImageView()
-: <a class="el" href="classgalsim_1_1_const_image_view.html#abc42c4ee4374b7f87c7fc5ef377239e5">galsim::ConstImageView&lt; T &gt;</a>
+: <a class="el" href="classgalsim_1_1_const_image_view.html#a41a8d3c8522cd26bc7b9fd27154b4f1b">galsim::ConstImageView&lt; T &gt;</a>
 </li>
 <li>convolve()
 : <a class="el" href="classgalsim_1_1_photon_array.html#a925f0c162ca3c5aeae03b84891433be5">galsim::PhotonArray</a>
@@ -212,9 +227,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>convolveShuffle()
 : <a class="el" href="classgalsim_1_1_photon_array.html#a9e71bf94a32bf3114fe542a003e4cac6">galsim::PhotonArray</a>
-</li>
-<li>convolveWith()
-: <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#ad1bda3e74b16b3792af619a34d82ca30">galsim.correlatednoise._BaseCorrelatedNoise</a>
 </li>
 <li>copy()
 : <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a9125180bb825937071651948856efe1d">galsim.bandpass.Bandpass</a>
@@ -243,47 +255,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>copyFrom()
 : <a class="el" href="classgalsim_1_1image_1_1_image.html#a9af84db0b2fb19ff71bfd44c0f5d2635">galsim.image.Image</a>
 , <a class="el" href="classgalsim_1_1_image_alloc.html#a842eb72ac4c2a9765d3af9d5372cf0e3">galsim::ImageAlloc&lt; T &gt;</a>
-, <a class="el" href="classgalsim_1_1_image_view.html#a9b96b29ad3308bc6e68a6f36c834af2f">galsim::ImageView&lt; T &gt;</a>
+, <a class="el" href="classgalsim_1_1_image_view.html#a7a33dfbde2d70f437a0a4d777cc56d35">galsim::ImageView&lt; T &gt;</a>
+</li>
+<li>cos()
+: <a class="el" href="classgalsim_1_1_angle.html#a9d08a5b34cdd546200f1d45ca85e0366">galsim::Angle</a>
 </li>
 <li>CppEllipse()
-: <a class="el" href="classgalsim_1_1_cpp_ellipse.html#ad18dc9bfbea45b3660bf3489af089d6c">galsim::CppEllipse</a>
+: <a class="el" href="classgalsim_1_1_cpp_ellipse.html#aa04b5eb4f4a130c9324895ed4d40d619">galsim::CppEllipse</a>
 </li>
 <li>CppShapeData()
 : <a class="el" href="structgalsim_1_1hsm_1_1_cpp_shape_data.html#ab0937d97b3075b3cf0670a369b190139">galsim::hsm::CppShapeData</a>
-</li>
-<li>CppShear()
-: <a class="el" href="classgalsim_1_1_cpp_shear.html#a41f281559ab4796f12df0ed1d18831eb">galsim::CppShear</a>
-</li>
-<li>createDilated()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ad21997fcb7ef6db0cea9d51a16498283">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#ac9eeda8deb9ffc3aaeceab25bd157227">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createExpanded()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#aa412029f08750972b5714dc518eb0c94">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a9abfa637a96030ee4fdbdb0391991b38">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createLensed()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a48d3432b800095e5cb949a64cded86d9">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#adb04f754bc25ecfdf8b065a11cd4cce2">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createMagnified()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ab1c086513d5d569e6cd1c4269e83dd2d">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8ee794bd2762021b9b73ae7bc9303e0b">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createRotated()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a6c29613e57067e6ba5ec7297e746cdc4">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0b77431718dbc891a474c1a14c948a24">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createSheared()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a8c54a001124280ae550c57c8fdce3563">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a83c5e70898919a61c2c744bad7ab9efa">galsim.correlatednoise._BaseCorrelatedNoise</a>
-</li>
-<li>createShifted()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#a96c05ef4b77187b6d02d877232e81126">galsim.base.GSObject</a>
-</li>
-<li>createTransformed()
-: <a class="el" href="classgalsim_1_1base_1_1_g_s_object.html#ac545bacc95772067d082a68a282265e7">galsim.base.GSObject</a>
-, <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a7657a74cf67b928a49298ae38005a900">galsim.correlatednoise._BaseCorrelatedNoise</a>
 </li>
 <li>Cubic()
 : <a class="el" href="classgalsim_1_1_cubic.html#a7e8b983e7b2cf9459b45f6ede20aaecf">galsim::Cubic</a>

@@ -176,10 +176,10 @@ Public Attributes</h2></td></tr>
 <p>Note that the returned psf here already includes the pixel. This is what is sometimes called an "effective PSF". Thus, you should not convolve by the pixel profile again (nor integrate over the pixel). This would effectively include the pixel twice!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The file name to be read in. </td></tr>
+    <tr><td class="paramname">file_name</td><td>The file name to be read in, or a pyfits HDU in which case it is used directly instead of being opened. </td></tr>
     <tr><td class="paramname">image_file_name</td><td>The name of the fits file of the original image (needed for the WCS information in the header). If unavailable, you may omit this (or use None), but then the returned profiles will be in image coordinates, not world coordinates. (Default <code>image_file_name = None</code>) </td></tr>
     <tr><td class="paramname">wcs</td><td>Optional way to provide the WCS if you already have it loaded from the image file. (Default <code>wcs = None</code>) </td></tr>
-    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. (The image file is assumed to be in the same directory.) (Default <code>dir = None</code>) </td></tr>
+    <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if the file_name does not already include it. (The image file is assumed to be in the same directory.) (Default <code>dir = None</code>). Cannot pass an HDU with this option. </td></tr>
   </table>
   </dd>
 </dl>
@@ -299,7 +299,7 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">image_pos</td><td>The position in image coordinates at which to build the PSF. </td></tr>
     <tr><td class="paramname">gsparams</td><td>(Optional) A <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> instance to pass to the constructed GSObject. </td></tr>
-    <tr><td class="paramname">pixel_scale</td><td>An obsolete parameter that is only present for backwards compatibility. If the constructor did not provide an image file or wcs, then this will use the pixel scale for an approximate wcs.</td></tr>
+    <tr><td class="paramname">pixel_scale</td><td>A deprecated parameter that is only present for backwards compatibility. If the constructor did not provide an image file or wcs, then this will use the pixel scale for an approximate wcs.</td></tr>
   </table>
   </dd>
 </dl>

@@ -89,23 +89,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">chromatic.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Define wavelength-dependent surface brightness profiles.  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html">galsim.chromatic.ChromaticObject</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for defining wavelength dependent objects.  <a href="classgalsim_1_1chromatic_1_1_chromatic_object.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for defining wavelength-dependent objects.  <a href="classgalsim_1_1chromatic_1_1_chromatic_object.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_interpolated_chromatic_object.html">galsim.chromatic.InterpolatedChromaticObject</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> that uses interpolation of predrawn images to speed up subsequent rendering.  <a href="classgalsim_1_1chromatic_1_1_interpolated_chromatic_object.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html">galsim.chromatic.ChromaticAtmosphere</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> implementing two atmospheric chromatic effects: differential chromatic refraction (DCR) and wavelength-dependent seeing.  <a href="classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic.html">galsim.chromatic.Chromatic</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct chromatic versions of galsim GSObjects.  <a href="classgalsim_1_1chromatic_1_1_chromatic.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_transformation.html">galsim.chromatic.ChromaticTransformation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for modeling a wavelength-dependent affine transformation of a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> instance.  <a href="classgalsim_1_1chromatic_1_1_chromatic_transformation.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_sum.html">galsim.chromatic.ChromaticSum</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add ChromaticObjects and/or GSObjects together.  <a href="classgalsim_1_1chromatic_1_1_chromatic_sum.html#details">More...</a><br/></td></tr>
@@ -114,31 +119,27 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve ChromaticObjects and/or GSObjects together.  <a href="classgalsim_1_1chromatic_1_1_chromatic_convolution.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html">galsim.chromatic.ChromaticDeconvolution</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for deconvolving a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a>.  <a href="classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for deconvolving a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a>.  <a href="classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html">galsim.chromatic.ChromaticAutoConvolution</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special class for convolving a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a> with itself.  <a href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special class for convolving a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> with itself.  <a href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html">galsim.chromatic.ChromaticAutoCorrelation</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special class for correlating a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a> with itself.  <a href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special class for correlating a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> with itself.  <a href="classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html">galsim.chromatic.ChromaticOpticalPSF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A subclass of <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> meant to represent chromatic optical PSFs.  <a href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html">galsim.chromatic.ChromaticAiry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A subclass of <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength-dependent objects. ">ChromaticObject</a> meant to represent chromatic Airy profiles.  <a href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacegalsim_1_1chromatic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1chromatic.html">galsim.chromatic</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a90f867f2cde815b9048117e9e426e968"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1chromatic.html#a90f867f2cde815b9048117e9e426e968">galsim.chromatic.ChromaticAtmosphere</a></td></tr>
-<tr class="memdesc:a90f867f2cde815b9048117e9e426e968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html" title="Base class for defining wavelength dependent objects. ">ChromaticObject</a> implementing two atmospheric chromatic effects: differential chromatic refraction (DCR) and wavelength-dependent seeing.  <a href="#a90f867f2cde815b9048117e9e426e968">More...</a><br/></td></tr>
-<tr class="separator:a90f867f2cde815b9048117e9e426e968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Define wavelength-dependent surface brightness profiles. </p>
-<p>Implementation is done by constructing GSObjects as functions of wavelength. The drawImage() method then integrates over wavelength while also multiplying by a throughput function.</p>
-<p>Possible uses include galaxies with color gradients, automatically drawing a given galaxy through different filters, or implementing wavelength-dependent point spread functions. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6</small></address>
 </body>

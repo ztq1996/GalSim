@@ -130,12 +130,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afbd265cac5e9b7aa688b10fe5d890437"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#afbd265cac5e9b7aa688b10fe5d890437">getTolerance</a> () const </td></tr>
 <tr class="memdesc:afbd265cac5e9b7aa688b10fe5d890437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a generic indication of the accuracy to which <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a> is calculated.  <a href="#afbd265cac5e9b7aa688b10fe5d890437">More...</a><br/></td></tr>
 <tr class="separator:afbd265cac5e9b7aa688b10fe5d890437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec42e278b42dca1ca9d42ef78a2c9bba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#aec42e278b42dca1ca9d42ef78a2c9bba">getN</a> () const </td></tr>
+<tr class="separator:aec42e278b42dca1ca9d42ef78a2c9bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78198b0e28aa621b14bce9a71a7d1deb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a78198b0e28aa621b14bce9a71a7d1deb">conservesDC</a> () const </td></tr>
+<tr class="separator:a78198b0e28aa621b14bce9a71a7d1deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9351713fd6c09096a6cda2111afad3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a6f9351713fd6c09096a6cda2111afad3">xval</a> (double x) const </td></tr>
 <tr class="memdesc:a6f9351713fd6c09096a6cda2111afad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in real space.  <a href="#a6f9351713fd6c09096a6cda2111afad3">More...</a><br/></td></tr>
 <tr class="separator:a6f9351713fd6c09096a6cda2111afad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f8b6aa10783c0a903d73fc50f3f88ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#a0f8b6aa10783c0a903d73fc50f3f88ff">uval</a> (double u) const </td></tr>
 <tr class="memdesc:a0f8b6aa10783c0a903d73fc50f3f88ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant in frequency space.  <a href="#a0f8b6aa10783c0a903d73fc50f3f88ff">More...</a><br/></td></tr>
 <tr class="separator:a0f8b6aa10783c0a903d73fc50f3f88ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bdf133185583da9fc8ff31410401eb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_lanczos.html#aa3bdf133185583da9fc8ff31410401eb">makeStr</a> () const </td></tr>
+<tr class="separator:aa3bdf133185583da9fc8ff31410401eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f6e9096752493ac6c3a24400a7c971"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_interpolant.html#a34f6e9096752493ac6c3a24400a7c971">xvalWrapped</a> (double x, int N) const </td></tr>
 <tr class="memdesc:a34f6e9096752493ac6c3a24400a7c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of interpolant, wrapped at period N.  <a href="#a34f6e9096752493ac6c3a24400a7c971">More...</a><br/></td></tr>
 <tr class="separator:a34f6e9096752493ac6c3a24400a7c971"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +230,36 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a78198b0e28aa621b14bce9a71a7d1deb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool galsim::Lanczos::conservesDC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aec42e278b42dca1ca9d42ef78a2c9bba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int galsim::Lanczos::getN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a02f9d0cb2a63f1f5421a791713a4be6d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -361,6 +397,31 @@ Public Member Functions</h2></td></tr>
 <p>The total range as an integer. Typically <a class="el" href="classgalsim_1_1_lanczos.html#ad619f8ec7d4bfaee75c89cf4446955f7" title="Maximum extent of interpolant from origin in x space (pixels) ">xrange()</a> == 0.5 * <a class="el" href="classgalsim_1_1_lanczos.html#a8eacbfc60f841e7edcad1601a26f6d5b" title="The total range as an integer. Typically xrange() == 0.5 * ixrange(). ">ixrange()</a>. </p>
 
 <p>Implements <a class="el" href="classgalsim_1_1_interpolant.html#a77a070b92ce48f3f05eee733ffd994fb">galsim::Interpolant</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3bdf133185583da9fc8ff31410401eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::Lanczos::makeStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgalsim_1_1_interpolant.html#a6043498deca16f05d697846d766be1c1">galsim::Interpolant</a>.</p>
 
 </div>
 </div>

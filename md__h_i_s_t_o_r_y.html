@@ -82,41 +82,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Below is a summary of the major changes with each new tagged version of GalSim. Each version also includes various other minor changes and bug fixes, which are not listed here for brevity. See the CHANGLELOG.md files associated with each version for a more complete list. Issue numbers related to each change are given in parentheses.</p>
+<h1>v1.2 </h1>
+<h2>New Features </h2>
+<ul>
+<li>Changed name of noise whitening routine from noise.applyWhiteningTo(image) to image.whitenNoise(noise). (#529)</li>
+<li>Added image.symmetrizeNoise. (#529)</li>
+<li>Added magnitudes as a method to set the flux of SED objects. (#547)</li>
+<li>Added SED.calculateDCRMomentShifts, SED.calculateChromaticSeeingRatio. (#547)</li>
+<li>Added image.applyNonlinearity and image.addReciprocityFaiure. (#552)</li>
+<li>Renamed <code>alias_threshold</code> to <code>folding_threshold</code>. (#562)</li>
+<li>Extended to the <code>rotate</code>, <code>shear</code>, and <code>transform</code> methods of ChromaticObject the ability to take functions of wavelength for the arguments. (#581)</li>
+<li>Added cdmodel module to describe charge deflection in CCD pixels. (#524)</li>
+<li>Added <code>pupil_plane_im</code> option to OpticalPSF. (#601)</li>
+<li>Added <code>nx</code>, <code>ny</code>, and <code>bounds</code> keywords to drawImage() and drawKImage() methods. (#603)</li>
+</ul>
+<h2>Bug Fixes and Improvements </h2>
+<ul>
+<li>Improved efficiency of noise generation by correlated noise models. (#563)</li>
+<li>Modified BoundsI and PositionI initialization to ensure that integer elements in NumPy arrays with <code>dtype==int</code> are handled without error. (#486)</li>
+<li>Changed the default seed used for Deviate objects when no seed is given to use /dev/urandom if it is available. (#537)</li>
+<li>Changed SED and Bandpass methods to preserve type when returning a new object when possible. (#547)</li>
+<li>Made <code>file_name</code> argument to <code><a class="el" href="namespacegalsim_1_1correlatednoise.html#a93de6f1703f446b8c44aca7e0e7308bd" title="Returns a representation of correlated noise in the HST COSMOS F814W unrotated science coadd images...">CorrelatedNoise.getCOSMOSNoise()</a></code> be able to have a default value in the repo. (#548)</li>
+<li>Fixed the <code>dtype=</code> kwarg of <code>Image</code> constructor on some platforms. (#571)</li>
+<li>Added workaround for bug in pyfits 3.0 in <code><a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a></code>. (#572)</li>
+<li>Fixed a bug in the Image constructor when passed a NumPy array with the opposite byteorder as the system native one. (#594)</li>
+<li>Fixed bug that prevented calling LookupTables on non-square 2d arrays. (#599)</li>
+<li>Updated the code to account for a planned change in NumPy 1.9. (#604)</li>
+<li>Fixed a bug where the dtype of an Image could change when resizing. (#604)</li>
+<li>Defined a hidden <code>__version__</code> attribute according to PEP 8 standards. (#610)</li>
+</ul>
+<h2>Updates to config options </h2>
+<ul>
+<li>Moved noise whitening option from being an attribute of the RealGalaxy class, to being a part of the description of the noise. (#529)</li>
+<li>Added RandomPoisson, RandomBinomial, RandomWeibull, RandomGamma, and RandomChi2 random number generators. (#537)</li>
+</ul>
 <h1>v1.1 </h1>
 <h2>Non-backward-compatible API changes </h2>
 <ul>
-<li>Changed the <code>xw</code> and <code>yw</code> parameters of the <code>Pixel</code> constructor to a single <code>scale</code> parameter. (#364)</li>
-<li>Added new <code>Box</code> class to take up the functionality that had been <code>Pixel</code> with unequal values of <code>xw</code> and <code>yw</code>. (#364)</li>
-<li>Changed <code>Angle.wrap()</code> to return the wrapped angle rather than modifying the original. (#364)</li>
-<li>Changed Bounds methods <code>addBorder</code>, <code>shift</code>, and <code>expand</code> to return new Bounds objects rather than changing the original. (#364)</li>
-<li>Merged the GSParams parameters <code>shoot_relerr</code> and <code>shoot_abserr</code> into the parameters <code>integration_relerr</code> and <code>integration_abserr</code>. The latter items now cover all integrations other than real-space rendering. (#535)</li>
+<li>Changed <code>Pixel</code> to take a single <code>scale</code> parameter. (#364)</li>
+<li>Added new <code>Box</code> class. (#364)</li>
+<li>Changed <code>Angle.wrap()</code> to return the wrapped angle. (#364)</li>
+<li>Changed Bounds methods <code>addBorder</code>, <code>shift</code>, and <code>expand</code> to return new Bounds objects. (#364)</li>
+<li>Merged the GSParams parameters <code>shoot_relerr</code> and <code>shoot_abserr</code> into the parameters <code>integration_relerr</code> and <code>integration_abserr</code>. (#535)</li>
 </ul>
 <h2>Other changes to the API </h2>
 <ul>
 <li>Changed the name of the <code>dx</code> parameter in various places to <code>scale</code>. (#364)</li>
 <li>Combined the old <code>Image</code>, <code>ImageView</code> and <code>ConstImageView</code> arrays of class names into a single python layer <code>Image</code> class. (#364)</li>
-<li>Changed the methods createSheared, createRotated, etc. to more succinct names. The applyShear, applyRotation, etc. methods are also discouraged and will eventually be deprecated. (#511)</li>
-<li>Changed the <code>setFlux</code> and <code>scaleFlux</code> methods to versions that return new objects, rather than change the object in place. (#511)</li>
-<li>Changed the Shapelet.fitImage method to a factory function named <code>FitShapelet</code> (#511)</li>
+<li>Changed the methods createSheared, createRotated, etc. to more succinct names <code>shear</code>, <code>rotate</code>, etc. (#511)</li>
+<li>Changed the <code>setFlux</code> and <code>scaleFlux</code> methods to return new objects. (#511)</li>
+<li>Changed the Shapelet.fitImage method to <code>FitShapelet</code> (#511)</li>
 <li>Changed the <code>nyquistDx</code> method to <code>nyquistScale</code>. (#511)</li>
-<li>Moved as many classes as possible toward an immutable design, meaning that we discourage use of setters in various classes that had them. (#511)</li>
-<li>Combined the <code>draw</code> and <code>drawShoot</code> methods into a single <code>drawImage</code> method with more options about how the profile should be rendered. Furthermore, in most cases, you no longer need to convolve by a Pixel by hand. The default rendering method will include the pixel convolution for you. (#535)</li>
-<li>Changed the name of <code>drawK</code> to <code>drawKImage</code> to be more parallel with the new <code>drawImage</code> name. (#535)</li>
+<li>Moved as many classes as possible toward an immutable design. (#511)</li>
+<li>Combined the <code>draw</code> and <code>drawShoot</code> methods into a single <code>drawImage</code> method with more options about how the profile should be rendered. (#535)</li>
+<li>Changed the name of <code>drawK</code> to <code>drawKImage</code>. (#535)</li>
 </ul>
 <h2>New Features </h2>
 <ul>
-<li>Added new set of WCS classes. See wcs.py and <a class="el" href="fitswcs_8py.html" title="The function FitsWCS() acts like a BaseWCS class, but it really calls one of several other classes de...">fitswcs.py</a> for details. (#364)</li>
-<li>Every place in the code that can take a <code>scale</code> parameter can now take a <code>wcs</code> parameter. (#364)</li>
+<li>Added new set of WCS classes. (#364)</li>
 <li>Added <code>CelestialCoord</code> class to represent (ra,dec) coordinates. (#364)</li>
-<li>Added <code>Bandpass</code> class to represent throughput functions. (#467)</li>
-<li>Added <code>SED</code> class to represent stellar and galactic spectra. (#467)</li>
-<li>Added <code>ChromaticObject</code> class to represent wavelength-dependent surface brightness profiles. (#467)</li>
-<li>Added <code>ChromaticAtmosphere</code> function to easily handle chromatic effects due to the atmosphere. (#467)</li>
-<li>Permit users to initialize <code>OpticalPSF</code> with a list or array of aberrations, as an alternative to specifying each one individually. (#409)</li>
-<li>Added <code>max_size</code> optional parameter to OpticalPSF that lets you limit the size of the image that it constructs internally. (#478)</li>
-<li>Added option to FitsHeader and FitsWCS to read in SCamp-style text files with the header information using the parameter <code>text_file=True</code>. (#508)</li>
-<li>Modified <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">addNoiseSNR()</a> method to return the variance of the noise that was added. (#526)</li>
-<li>Added <code>dtype</code> option to <code>drawImage</code> and <code>drawKImage</code>, which sets the data type to use for automatically constructed images. (#526)</li>
+<li>Added <code>Bandpass</code>, <code>SED</code>, and <code>ChromaticObject</code> classes. (#467)</li>
+<li>Added <code>aberrations</code> parameter of OpticalPSF. (#409)</li>
+<li>Added <code>max_size</code> parameter to OpticalPSF. (#478)</li>
+<li>Added <code>text_file</code> parameter to FitsHeader and FitsWCS. (#508)</li>
+<li>Modified <a class="el" href="namespacegalsim_1_1noise.html#a86f91278331ac9c134c25b16d4c67a32">addNoiseSNR()</a> method to return the added variance. (#526)</li>
+<li>Added <code>dtype</code> option to <code>drawImage</code> and <code>drawKImage</code>. (#526)</li>
 </ul>
 <h2>Bug fixes and improvements </h2>
 <ul>
@@ -125,17 +155,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>Updates to config options </h2>
 <ul>
-<li>Changed the previous behavior of the <code>image.wcs</code> field to allow several WCS types: 'PixelScale', 'Shear', 'Jacobian', 'Affine', 'UVFunction', 'RaDecFunction', 'Fits', and 'Tan'. (#364)</li>
+<li>Added more options for <code>image.wcs</code> field. (#364)</li>
 <li>Changed the name of <code>sky_pos</code> to <code>world_pos</code>. (#364)</li>
 <li>Removed <code>pix</code> top layer in config structure. Add <code>draw_method=no_pixel</code> to do what <code>pix : None</code> used to do. (#364)</li>
 <li>Added <code>draw_method=real_space</code> to try to use real-space convolution. (#364)</li>
-<li>Added ability to index <code>Sequence</code> types by any running index, rather than just the default by specifying an <code>index_key</code> parameter. The options are 'obj_num', 'image_num', 'file_num', or 'obj_num_in_file'. (#364, #536)</li>
-<li>Added <code>Sum</code> type for value types for which it makes sense: float, int, angle, shear, position. (#457)</li>
-<li>Allowed the user to modify or add config parameters from the command line. (#479)</li>
-<li>Added <code>image.retry_failures</code> to retry making a GSObject that fails for any reason. (#482)</li>
+<li>Added ability to index <code>Sequence</code> types by any running index. (#364, #536)</li>
+<li>Added <code>Sum</code> type for value types for which it makes sense. (#457)</li>
+<li>Allowed modification of config parameters from the command line. (#479)</li>
+<li>Added <code>image.retry_failures</code>. (#482)</li>
 <li>Added <code>output.retry_io</code> item to retry failed write commands. (#482)</li>
 <li>Changed the default sequence indexing for most things to be 'obj_num_in_file' rather than 'obj_num'. (#487)</li>
-<li>Added <code>draw_method=sb</code> to make this parameter completely consistent with the way the <code>method</code> parameter for drawImage() now works. (#535)</li>
+<li>Added <code>draw_method=sb</code>. (#535)</li>
 <li>Changed the <code>output.psf.real_space</code> option to <code>output.psf.draw_method</code> and allow all of the options that exist for <code>image.draw_method</code>. (#535)</li>
 <li>Added an <code>index</code> item for Ring objects. (#536)</li>
 </ul>

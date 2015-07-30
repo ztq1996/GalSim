@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_s_b_transform_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2014 by the GalSim developers team on GitHub</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2015 by the GalSim developers team on GitHub</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
@@ -120,34 +120,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_transform.html">   41</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#a1aa096e442e5132ae202217c45440d7d">SBTransform</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>&amp; sbin, <span class="keywordtype">double</span> mA, <span class="keywordtype">double</span> mB, <span class="keywordtype">double</span> mC, <span class="keywordtype">double</span> mD,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classgalsim_1_1_position.html">Position&lt;double&gt;</a>&amp; cen=<a class="code" href="classgalsim_1_1_position.html">Position&lt;double&gt;</a>(0.,0.), </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordtype">double</span> fluxScaling=1.,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams=<a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>());</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#a1aa096e442e5132ae202217c45440d7d">SBTransform</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&amp; rhs);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#adf65ab999eaac1fe4e2077027df9fd67">~SBTransform</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#a1aa096e442e5132ae202217c45440d7d">SBTransform</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a>&amp; sbin, <span class="keywordtype">double</span> mA, <span class="keywordtype">double</span> mB, <span class="keywordtype">double</span> mC, <span class="keywordtype">double</span> mD,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classgalsim_1_1_position.html">Position&lt;double&gt;</a>&amp; cen=<a class="code" href="classgalsim_1_1_position.html">Position&lt;double&gt;</a>(0.,0.), </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <span class="keywordtype">double</span> fluxScaling=1.,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams=<a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#a1aa096e442e5132ae202217c45440d7d">SBTransform</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&amp; rhs);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_transform.html#adf65ab999eaac1fe4e2077027df9fd67">~SBTransform</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> <a class="code" href="classgalsim_1_1_s_b_transform.html#a2b44fde41c5f4fcccae1972f4d344734">getObj</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_s_b_transform.html#ac49c74160c8b9994631b4dc3ec2e85ca">getJac</a>(<span class="keywordtype">double</span>&amp; mA, <span class="keywordtype">double</span>&amp; mB, <span class="keywordtype">double</span>&amp; mC, <span class="keywordtype">double</span>&amp; mD) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classgalsim_1_1_position.html">Position&lt;double&gt;</a> <a class="code" href="classgalsim_1_1_s_b_transform.html#a9f561c0b4670d9cadf743af60a4cab70">getOffset</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">class </span>SBTransformImpl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_transform.html#a9be76979e10ba2c5fc566e9d4b810418">getFluxScaling</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// op= is undefined</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&amp; rhs);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">class </span>SBTransformImpl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&amp; rhs);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="ttc" id="classgalsim_1_1_s_b_transform_html_a1aa096e442e5132ae202217c45440d7d"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#a1aa096e442e5132ae202217c45440d7d">galsim::SBTransform::SBTransform</a></div><div class="ttdeci">SBTransform(const SBProfile &amp;sbin, double mA, double mB, double mC, double mD, const Position&lt; double &gt; &amp;cen=Position&lt; double &gt;(0., 0.), double fluxScaling=1., const GSParamsPtr &amp;gsparams=GSParamsPtr())</div><div class="ttdoc">General constructor. </div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_transform_html_ac49c74160c8b9994631b4dc3ec2e85ca"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#ac49c74160c8b9994631b4dc3ec2e85ca">galsim::SBTransform::getJac</a></div><div class="ttdeci">void getJac(double &amp;mA, double &amp;mB, double &amp;mC, double &amp;mD) const </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_transform_html"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html">galsim::SBTransform</a></div><div class="ttdoc">An affine transformation of another SBProfile. </div><div class="ttdef"><b>Definition:</b> SBTransform.h:41</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_transform_html_a2b44fde41c5f4fcccae1972f4d344734"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#a2b44fde41c5f4fcccae1972f4d344734">galsim::SBTransform::getObj</a></div><div class="ttdeci">SBProfile getObj() const </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:111</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_transform_html_a9f561c0b4670d9cadf743af60a4cab70"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#a9f561c0b4670d9cadf743af60a4cab70">galsim::SBTransform::getOffset</a></div><div class="ttdeci">Position&lt; double &gt; getOffset() const </div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_transform_html_a9be76979e10ba2c5fc566e9d4b810418"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#a9be76979e10ba2c5fc566e9d4b810418">galsim::SBTransform::getFluxScaling</a></div><div class="ttdeci">double getFluxScaling() const </div></div>
 <div class="ttc" id="classgalsim_1_1_position_html"><div class="ttname"><a href="classgalsim_1_1_position.html">galsim::Position&lt; double &gt;</a></div></div>
 <div class="ttc" id="_s_b_profile_8h_html"><div class="ttname"><a href="_s_b_profile_8h.html">SBProfile.h</a></div><div class="ttdoc">Contains a class definition for two-dimensional Surface Brightness Profiles. </div></div>
-<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:262</div></div>
+<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:176</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_transform_html_adf65ab999eaac1fe4e2077027df9fd67"><div class="ttname"><a href="classgalsim_1_1_s_b_transform.html#adf65ab999eaac1fe4e2077027df9fd67">galsim::SBTransform::~SBTransform</a></div><div class="ttdeci">~SBTransform()</div><div class="ttdoc">Destructor. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

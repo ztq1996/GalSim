@@ -190,7 +190,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html" title="A Base Class describing 2D correlated Gaussian random noise fields. ">_BaseCorrelatedNoise</a> instance representing correlated noise in F814W COSMOS images.</dd></dl>
-<p>The default <code>x_interpolant</code> is a <code><a class="el" href="classgalsim_1_1_interpolant_x_y.html" title="An interpolant that is product of same 1d Interpolant in x and y. ">galsim.InterpolantXY</a>(<a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4))</code>, which uses bilinear interpolation. The use of this interpolant is an approximation that gives good empirical results without requiring internal convolution of the correlation function profile by a Pixel object when applying correlated noise to images: such an internal convolution has been found to be computationally costly in practice, requiring the Fourier transform of very large arrays.</p>
+<p>The default <code>x_interpolant</code> is a <code><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">galsim.Linear</a>(tol=1.e-4)</code>, which uses bilinear interpolation. The use of this interpolant is an approximation that gives good empirical results without requiring internal convolution of the correlation function profile by a Pixel object when applying correlated noise to images: such an internal convolution has been found to be computationally costly in practice, requiring the Fourier transform of very large arrays.</p>
 <p>The use of the bilinear interpolants means that the representation of correlated noise will be noticeably inaccurate in at least the following two regimes:</p>
 <p>i) If the pixel scale of the desired final output (e.g. the target image of drawImage(), applyTo() or whitenImage()) is small relative to the separation between pixels in the <code>image</code> used to instantiate <code>cn</code> as shown above. ii) If the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>cn</code> was instantiated with an image of scale comparable to that in the final output, and <code>cn</code> has been rotated or otherwise transformed (e.g. via the rotate(), shear() methods, see below).</p>
 <p>Conversely, the approximation will work best in the case where the correlated noise used to instantiate the <code>cn</code> is taken from an input image for which <code>image.scale</code> is smaller than that in the desired output. This is the most common use case in the practical treatment of correlated noise when simulating galaxies from COSMOS, for which this function is expressly designed.</p>
@@ -202,12 +202,14 @@ Functions</h2></td></tr>
 </pre><p>If you wish to use other units, ensure that the input keyword <code>cosmos_scale</code> takes the value corresponding to 0.03 arcsec in your chosen system.</p>
 <h2>Example usage </h2>
 <p>The following commands use this function to generate a 300 pixel x 300 pixel image of noise with HST COSMOS correlation properties (substitute in your own file and path for the <code>filestring</code>). </p>
-<pre class="fragment">&gt;&gt;&gt; import galsim
-&gt;&gt;&gt; rng = galsim.UniformDeviate(123456)
-&gt;&gt;&gt; cf = galsim.correlatednoise.getCOSMOSNoise(rng=rng)
-&gt;&gt;&gt; im = galsim.ImageD(300, 300, scale=0.03)
-&gt;&gt;&gt; cf.applyTo(im)
-&gt;&gt;&gt; im.write('out.fits')
+<pre class="fragment">&gt;&gt;&gt; rng = galsim.BaseDeviate(123456)
+&gt;&gt;&gt; noise = galsim.getCOSMOSNoise(rng=rng)
+&gt;&gt;&gt; image = galsim.ImageD(nx, ny, scale=0.03)
+&gt;&gt;&gt; image.addNoise(cf)
+</pre><p>If your image has some other pixel scale or a complicated WCS, then the applied noise will have the correct correlations in world coordinates, which may not be what you wanted if you expected the pixel-to-pixel correlations to match the COSMOS noise profile. However, in this case, you would want to view your image with the COSMOS pixel scale when you apply the noise: </p>
+<pre class="fragment">&gt;&gt;&gt; image = galsim.Image(nx, ny, wcs=complicated_wcs)
+&gt;&gt;&gt; noise = galsim.getCOSMOSNoise(rng=rng)
+&gt;&gt;&gt; image.view(wcs=noise.wcs).addNoise(noise)
 </pre><p>The FITS file <code>out.fits</code> should then contain an image of randomly-generated, COSMOS-like noise. </p>
 
 </div>

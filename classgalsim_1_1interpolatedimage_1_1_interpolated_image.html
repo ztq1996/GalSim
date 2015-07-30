@@ -116,6 +116,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24ec49b43ea9a76eea435956afee7956"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a24ec49b43ea9a76eea435956afee7956">buildNoisePadImage</a></td></tr>
 <tr class="memdesc:a24ec49b43ea9a76eea435956afee7956"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper function that builds the <code>pad_image</code> from the given <code>noise_pad</code> specification.  <a href="#a24ec49b43ea9a76eea435956afee7956">More...</a><br/></td></tr>
 <tr class="separator:a24ec49b43ea9a76eea435956afee7956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b80469df7772ea2c413bf81c55c8a7e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a5b80469df7772ea2c413bf81c55c8a7e">__repr__</a></td></tr>
+<tr class="separator:a5b80469df7772ea2c413bf81c55c8a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fd1681474750db94bf42c374d3bf8d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a35fd1681474750db94bf42c374d3bf8d">__str__</a></td></tr>
+<tr class="separator:a35fd1681474750db94bf42c374d3bf8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18a126d5795bea0320b9a94703ccece"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#ab18a126d5795bea0320b9a94703ccece">__getstate__</a></td></tr>
+<tr class="separator:ab18a126d5795bea0320b9a94703ccece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91c8216f6ca90024c52d657af5586c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#ae91c8216f6ca90024c52d657af5586c1">__setstate__</a></td></tr>
+<tr class="separator:ae91c8216f6ca90024c52d657af5586c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -127,6 +135,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4f231eb0559edb8a44960a5358f5a524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961dc526bf8a80057c7483b577574e0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a961dc526bf8a80057c7483b577574e0f">use_cache</a></td></tr>
 <tr class="separator:a961dc526bf8a80057c7483b577574e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0454deae3e30fd4086aa999fbc2d7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#a2c0454deae3e30fd4086aa999fbc2d7e">min_scale</a></td></tr>
+<tr class="separator:a2c0454deae3e30fd4086aa999fbc2d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85f3ee84c593728ae617a4bd2070d20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#ad85f3ee84c593728ae617a4bd2070d20">max_scale</a></td></tr>
+<tr class="separator:ad85f3ee84c593728ae617a4bd2070d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class describing non-parametric profiles specified using an Image, which can be interpolated for the purpose of carrying out transformations. </p>
@@ -156,8 +168,8 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>The Image from which to construct the object. This may be either an Image instance or a string indicating a fits file from which to read the image. </td></tr>
-    <tr><td class="paramname">x_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface. ">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a>) instance or a string indicating which real-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">Quintic</a>] </td></tr>
-    <tr><td class="paramname">k_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant2d.html" title="Two-dimensional version of the Interpolant interface. ">Interpolant2d</a> (or <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a>) instance or a string indicating which k-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. We strongly recommend leaving this parameter at its default value; see text above for details. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">Quintic</a>] </td></tr>
+    <tr><td class="paramname">x_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a> instance or a string indicating which real-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">galsim.Quintic()</a>] </td></tr>
+    <tr><td class="paramname">k_interpolant</td><td>Either an <a class="el" href="classgalsim_1_1_interpolant.html" title="Base class representing one-dimensional interpolant functions. ">Interpolant</a> instance or a string indicating which k-space interpolant should be used. Options are 'nearest', 'sinc', 'linear', 'cubic', 'quintic', or 'lanczosN' where N should be the integer order to use. We strongly recommend leaving this parameter at its default value; see text above for details. [default: <a class="el" href="classgalsim_1_1_quintic.html" title="Piecewise-quintic polynomial interpolant, ideal for Fourier-space interpolation. ">galsim.Quintic()</a>] </td></tr>
     <tr><td class="paramname">normalization</td><td>Two options for specifying the normalization of the input Image: "flux" or "f" means that the sum of the pixels is normalized to be equal to the total flux. "surface brightness" or "sb" means that the pixels sample the surface brightness distribution at each location. [default: "flux"] </td></tr>
     <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the Image; this will override the pixel scale stored by the provided Image, in any. If <code>scale</code> is <code>None</code>, then take the provided image's pixel scale. [default: None] </td></tr>
     <tr><td class="paramname">wcs</td><td>If provided, use this as the wcs for the image. At most one of <code>scale</code> or <code>wcs</code> may be provided. [default: None] </td></tr>
@@ -301,7 +313,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>dx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_force_stepk</em> = <code>0.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_force_maxk</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -314,6 +338,80 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab18a126d5795bea0320b9a94703ccece"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.interpolatedimage.InterpolatedImage.__getstate__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5b80469df7772ea2c413bf81c55c8a7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.interpolatedimage.InterpolatedImage.__repr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae91c8216f6ca90024c52d657af5586c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.interpolatedimage.InterpolatedImage.__setstate__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a35fd1681474750db94bf42c374d3bf8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.interpolatedimage.InterpolatedImage.__str__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a24ec49b43ea9a76eea435956afee7956"></a>
 <div class="memitem">
 <div class="memproto">
@@ -373,6 +471,30 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.interpolatedimage.InterpolatedImage.k_interpolant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad85f3ee84c593728ae617a4bd2070d20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.interpolatedimage.InterpolatedImage.max_scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c0454deae3e30fd4086aa999fbc2d7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.interpolatedimage.InterpolatedImage.min_scale</td>
         </tr>
       </table>
 </div><div class="memdoc">

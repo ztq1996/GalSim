@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_solve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2014 by the GalSim developers team on GitHub</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2015 by the GalSim developers team on GitHub</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
@@ -125,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// All code between the @cond and @endcond is excluded from Doxygen documentation</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">class </span>SolveError : <span class="keyword">public</span> std::runtime_error </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">class </span>SolveError : <span class="keyword">public</span> std::runtime_error</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        SolveError(<span class="keyword">const</span> std::string m) : std::runtime_error(<span class="stringliteral">&quot;Solve error: &quot;</span>+m) {}</div>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">   48</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045">Method</a> { <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e">Bisect</a>, <a class="code" href="namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3">Brent</a> };</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> F, <span class="keyword">class</span> T=<span class="keywordtype">double</span>&gt;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html">  131</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_solve.html">Solve</a> </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html">  131</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_solve.html">Solve</a></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">const</span> F&amp;  func;</div>
@@ -179,10 +179,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">  188</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">bracket</a>() </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">  188</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a7eb39f1fca16eeef8c01861f46dc8378">bracket</a>()</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keyword">const</span> T factor=2.0;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracket()&quot;</span>);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <a class="code" href="classgalsim_1_1_solve.html#ae13ce3be2704e6ad7cd970715d5ddb49">evaluateBounds</a>();</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
@@ -223,25 +223,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">  238</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">bracketUpper</a>() </div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">  238</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae09e393edf3722d544f6a6dde4d6d10e">bracketUpper</a>()</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound)</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketUpper()&quot;</span>);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="classgalsim_1_1_solve.html#ae13ce3be2704e6ad7cd970715d5ddb49">evaluateBounds</a>();</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classgalsim_1_1_solve.html#abd89df920b0b55de6865964263ad47b7">bracket1</a>(lBound,uBound,flower,fupper))</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketUpper()&quot;</span>);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">  252</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">bracketLower</a>() </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">  252</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ac6d0325d664ece6713b79efe3994eacf">bracketLower</a>()</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound)</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketLower()&quot;</span>);</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <a class="code" href="classgalsim_1_1_solve.html#ae13ce3be2704e6ad7cd970715d5ddb49">evaluateBounds</a>();</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classgalsim_1_1_solve.html#abd89df920b0b55de6865964263ad47b7">bracket1</a>(uBound,lBound,fupper,flower))</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketLower()&quot;</span>);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// General purpose one-sided bracket with limit.  </span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// General purpose one-sided bracket with limit.</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// Used by bracketUpperWithLimit and bracketLowerWithLimit.</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="comment">// Expand in the direction of b.</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#af2c474f6fcd3ddc34f5fe015efccfdc7">  264</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classgalsim_1_1_solve.html#af2c474f6fcd3ddc34f5fe015efccfdc7">bracket1WithLimit</a>(T&amp; a, T&amp; b, T&amp; fa, T&amp; fb, T&amp; c)</div>
@@ -283,8 +283,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">//    = c - d(c-a)/2(c-a)</span></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="comment">//    = c - d/2</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="comment">//</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="comment">// So when far from the limit (1), the iteration is just like the version without </span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// the limit.  But when the variable approaches the limit (2), it just goes half the </span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="comment">// So when far from the limit (1), the iteration is just like the version without</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// the limit.  But when the variable approaches the limit (2), it just goes half the</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// remaining distance each time.</span></div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            xdbg&lt;&lt;<span class="stringliteral">&quot;Bracket with limits:\n&quot;</span>;</div>
@@ -306,11 +306,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ae21cd78e673e06860435d6cfafbc9819">  329</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae21cd78e673e06860435d6cfafbc9819">bracketUpperWithLimit</a>(T upper_limit) </div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#ae21cd78e673e06860435d6cfafbc9819">  329</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#ae21cd78e673e06860435d6cfafbc9819">bracketUpperWithLimit</a>(T upper_limit)</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound)</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketUpperWithLimit()&quot;</span>);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">if</span> (uBound == upper_limit) </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">if</span> (uBound == upper_limit)</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=upper_limit in bracketUpperWithLimit()&quot;</span>);</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">if</span> ((uBound-lBound) * (upper_limit-uBound) &lt;= 0)</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound not between lBound and upper_limit&quot;</span>);</div>
@@ -319,11 +319,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;Too many iterations in bracketUpperWithLimit()&quot;</span>);</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#a3aed902043c7c3aef488504cbdcd423d">  345</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a3aed902043c7c3aef488504cbdcd423d">bracketLowerWithLimit</a>(T lower_limit) </div>
+<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="classgalsim_1_1_solve.html#a3aed902043c7c3aef488504cbdcd423d">  345</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classgalsim_1_1_solve.html#a3aed902043c7c3aef488504cbdcd423d">bracketLowerWithLimit</a>(T lower_limit)</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound) </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">if</span> (uBound == lBound)</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;uBound=lBound in bracketLowerWithLimit()&quot;</span>);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (lBound == lower_limit) </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (lBound == lower_limit)</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;lBound=lower_limit in bracketLowerWithLimit()&quot;</span>);</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">if</span> ((uBound-lBound) * (lBound-lower_limit) &lt;= 0)</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">throw</span> SolveError(<span class="stringliteral">&quot;lBound not between uBound and lower_limit&quot;</span>);</div>
@@ -352,8 +352,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            f=flower;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            fmid=fupper;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordflow">if</span> (f*fmid &gt;= 0.0) </div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> &lt;&lt; lBound </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordflow">if</span> (f*fmid &gt;= 0.0)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> &lt;&lt; lBound</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            rtb = f &lt; 0.0 ? (dx=uBound-lBound,lBound) : (dx=lBound-uBound,uBound);</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=1;j&lt;=maxSteps;j++) {</div>
@@ -376,7 +376,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            T p,q,r,s,tol1,xm;</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">if</span> ((fa &gt; 0.0 &amp;&amp; fb &gt; 0.0) || (fa &lt; 0.0 &amp;&amp; fb &lt; 0.0)) {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span> </div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                FormatAndThrow&lt;SolveError&gt; () &lt;&lt; <span class="stringliteral">&quot;Root is not bracketed: &quot;</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    &lt;&lt; lBound &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; uBound;</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            }</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            T fc=fb;</div>

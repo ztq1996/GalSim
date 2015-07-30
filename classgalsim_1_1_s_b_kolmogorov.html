@@ -125,6 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca2435e647afd55cd9dec709ed4076f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_kolmogorov.html#aca2435e647afd55cd9dec709ed4076f5">getLamOverR0</a> () const </td></tr>
 <tr class="memdesc:aca2435e647afd55cd9dec709ed4076f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns lam_over_r0 param of the <a class="el" href="classgalsim_1_1_s_b_kolmogorov.html" title="Surface Brightness Profile for a Kolmogorov turbulent spectrum. ">SBKolmogorov</a>.  <a href="#aca2435e647afd55cd9dec709ed4076f5">More...</a><br/></td></tr>
 <tr class="separator:aca2435e647afd55cd9dec709ed4076f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ea1e6bc6f73fbb1fdb96fdbc995e60"><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a53ea1e6bc6f73fbb1fdb96fdbc995e60">getGSParams</a> () const </td></tr>
+<tr class="memdesc:a53ea1e6bc6f73fbb1fdb96fdbc995e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object for this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>.  <a href="#a53ea1e6bc6f73fbb1fdb96fdbc995e60">More...</a><br/></td></tr>
+<tr class="separator:a53ea1e6bc6f73fbb1fdb96fdbc995e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11558695546a3b4129971d09df8332bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a11558695546a3b4129971d09df8332bf">xValue</a> (const <a class="el" href="classgalsim_1_1_position.html">Position</a>&lt; double &gt; &amp;p) const </td></tr>
 <tr class="memdesc:a11558695546a3b4129971d09df8332bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> at a chosen 2D position in real space.  <a href="#a11558695546a3b4129971d09df8332bf">More...</a><br/></td></tr>
 <tr class="separator:a11558695546a3b4129971d09df8332bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,9 +170,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae516375386ed9d0cdbed3c061e1d818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aae516375386ed9d0cdbed3c061e1d818">expand</a> (double scale) const </td></tr>
 <tr class="memdesc:aae516375386ed9d0cdbed3c061e1d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an overall scale change to the profile, preserving surface brightness.  <a href="#aae516375386ed9d0cdbed3c061e1d818">More...</a><br/></td></tr>
 <tr class="separator:aae516375386ed9d0cdbed3c061e1d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a9ba39acff7f44777cb9f0ea5ba1ab7a8">shear</a> (<a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a> s) const </td></tr>
-<tr class="memdesc:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given shear.  <a href="#a9ba39acff7f44777cb9f0ea5ba1ab7a8">More...</a><br/></td></tr>
-<tr class="separator:a9ba39acff7f44777cb9f0ea5ba1ab7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8fc7c15d9e303f7be0170f515d73081"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ab8fc7c15d9e303f7be0170f515d73081">rotate</a> (const <a class="el" href="classgalsim_1_1_angle.html">Angle</a> &amp;theta) const </td></tr>
 <tr class="memdesc:ab8fc7c15d9e303f7be0170f515d73081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a given rotation.  <a href="#ab8fc7c15d9e303f7be0170f515d73081">More...</a><br/></td></tr>
 <tr class="separator:ab8fc7c15d9e303f7be0170f515d73081"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,6 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b291c735a243fe5edd1c6cb72d26ae7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a0b291c735a243fe5edd1c6cb72d26ae7">fourierDrawK</a> (<a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; re, <a class="el" href="classgalsim_1_1_image_view.html">ImageView</a>&lt; T &gt; im, double gain, double wmult) const </td></tr>
 <tr class="memdesc:a0b291c735a243fe5edd1c6cb72d26ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a> in k space forcing the use of Fourier transform from real space.  <a href="#a0b291c735a243fe5edd1c6cb72d26ae7">More...</a><br/></td></tr>
 <tr class="separator:a0b291c735a243fe5edd1c6cb72d26ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825043629146d081c39ced658f40597f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a825043629146d081c39ced658f40597f">repr</a> () const </td></tr>
+<tr class="memdesc:a825043629146d081c39ced658f40597f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that can act as the repr in python.  <a href="#a825043629146d081c39ced658f40597f">More...</a><br/></td></tr>
+<tr class="separator:a825043629146d081c39ced658f40597f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae5a2125c390c01bcde7d8f9603134c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae5a2125c390c01bcde7d8f9603134c5e">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
 <tr class="memdesc:ae5a2125c390c01bcde7d8f9603134c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the range over which the profile is not trivially zero.  <a href="#ae5a2125c390c01bcde7d8f9603134c5e">More...</a><br/></td></tr>
@@ -261,7 +264,7 @@ Public Member Functions</h2></td></tr>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends on wavelength as [r0 ~ lambda^(-6/5)]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lam_over_r0</td><td>lambda / r0 in the physical units adopted (user responsible for consistency), where r0 is the Fried parameter. The FWHM of the Kolmogorov PSF is ~0.976 lambda/r0 (e.g., Racine 1996, PASP 699, 108). Typical values for the Fried parameter are on the order of 10 cm for most observatories and up to 20 cm for excellent sites. The values are usually quoted at lambda = 500 nm and r0 depends on wavelength as [r0 ~ lambda^(6/5)]. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flux</td><td>Flux. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gsparams</td><td><a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object storing constants that control the accuracy of image operations and rendering, if different from the default. </td></tr>
   </table>
@@ -740,6 +743,31 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the recommended image size.</dd></dl>
 <p>The basic formula is 2pi * wmult / (dx * <a class="el" href="classgalsim_1_1_s_b_profile.html#a81e8f62302e15417bdd4a474b3f6fe55" title="Sampling in k-space necessary to avoid folding too much of image in x space. ">stepK()</a>). But then we round up to the next even integer value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a53ea1e6bc6f73fbb1fdb96fdbc995e60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const boost::shared_ptr&lt;<a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a>&gt; galsim::SBProfile::getGSParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object for this <a class="el" href="classgalsim_1_1_s_b_profile.html" title="A base class representing all of the 2D surface brightness profiles that we know how to draw...">SBProfile</a>. </p>
 
 </div>
 </div>
@@ -1230,6 +1258,31 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a825043629146d081c39ced658f40597f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::SBProfile::repr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a string that can act as the repr in python. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab8fc7c15d9e303f7be0170f515d73081"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1279,32 +1332,6 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Multiply the flux by fluxRatio. </p>
-
-</div>
-</div>
-<a class="anchor" id="a9ba39acff7f44777cb9f0ea5ba1ab7a8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_s_b_transform.html">SBTransform</a> galsim::SBProfile::shear </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_cpp_shear.html">CppShear</a>&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Apply a given shear. </p>
 
 </div>
 </div>

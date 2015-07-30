@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_s_b_box_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*-</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2014 by the GalSim developers team on GitHub</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2015 by the GalSim developers team on GitHub</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/GalSim-developers</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GalSim: The modular galaxy image simulation toolkit.</span></div>
@@ -138,17 +138,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// op= is undefined</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_box.html">SBBox</a>&amp; rhs);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classgalsim_1_1_s_b_top_hat.html">   79</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgalsim_1_1_s_b_top_hat.html">SBTopHat</a> : <span class="keyword">public</span> <a class="code" href="classgalsim_1_1_s_b_profile.html">SBProfile</a> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_top_hat.html#a03cabda2ad4eae0bb0a3c191067c434a">SBTopHat</a>(<span class="keywordtype">double</span> radius, <span class="keywordtype">double</span> flux, <span class="keyword">const</span> <a class="code" href="structgalsim_1_1_g_s_params_ptr.html">GSParamsPtr</a>&amp; gsparams);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_top_hat.html#a03cabda2ad4eae0bb0a3c191067c434a">SBTopHat</a>(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_top_hat.html">SBTopHat</a>&amp; rhs);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classgalsim_1_1_s_b_top_hat.html#a4be7031425a5071530d3bb81af00a659">~SBTopHat</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classgalsim_1_1_s_b_top_hat.html#a1b12a7495b3d4a5723880b378cfcd979">getRadius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">class </span>SBTopHatImpl;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">// op= is undefined</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classgalsim_1_1_s_b_top_hat.html">SBTopHat</a>&amp; rhs);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="ttc" id="classgalsim_1_1_s_b_top_hat_html_a4be7031425a5071530d3bb81af00a659"><div class="ttname"><a href="classgalsim_1_1_s_b_top_hat.html#a4be7031425a5071530d3bb81af00a659">galsim::SBTopHat::~SBTopHat</a></div><div class="ttdeci">~SBTopHat()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_top_hat_html"><div class="ttname"><a href="classgalsim_1_1_s_b_top_hat.html">galsim::SBTopHat</a></div><div class="ttdoc">Surface Brightness Profile for the TopHat function. </div><div class="ttdef"><b>Definition:</b> SBBox.h:79</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_a6ec42a9537ea9d944622ac1d99f0bf4d"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#a6ec42a9537ea9d944622ac1d99f0bf4d">galsim::SBBox::SBBox</a></div><div class="ttdeci">SBBox(double width, double height, double flux, const GSParamsPtr &amp;gsparams)</div><div class="ttdoc">Constructor. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_ac166f6b4d0fee97ed00ad3ad2ef87f73"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#ac166f6b4d0fee97ed00ad3ad2ef87f73">galsim::SBBox::~SBBox</a></div><div class="ttdeci">~SBBox()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_top_hat_html_a1b12a7495b3d4a5723880b378cfcd979"><div class="ttname"><a href="classgalsim_1_1_s_b_top_hat.html#a1b12a7495b3d4a5723880b378cfcd979">galsim::SBTopHat::getRadius</a></div><div class="ttdeci">double getRadius() const </div><div class="ttdoc">Returns the radius of the TopHat. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_profile_html"><div class="ttname"><a href="classgalsim_1_1_s_b_profile.html">galsim::SBProfile</a></div><div class="ttdoc">A base class representing all of the 2D surface brightness profiles that we know how to draw...</div><div class="ttdef"><b>Definition:</b> SBProfile.h:111</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html">galsim::SBBox</a></div><div class="ttdoc">Surface Brightness Profile for the Boxcar function. </div><div class="ttdef"><b>Definition:</b> SBBox.h:38</div></div>
+<div class="ttc" id="classgalsim_1_1_s_b_top_hat_html_a03cabda2ad4eae0bb0a3c191067c434a"><div class="ttname"><a href="classgalsim_1_1_s_b_top_hat.html#a03cabda2ad4eae0bb0a3c191067c434a">galsim::SBTopHat::SBTopHat</a></div><div class="ttdeci">SBTopHat(double radius, double flux, const GSParamsPtr &amp;gsparams)</div><div class="ttdoc">Constructor. </div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_ad62144b89448540675c9ad0fca64521e"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#ad62144b89448540675c9ad0fca64521e">galsim::SBBox::getHeight</a></div><div class="ttdeci">double getHeight() const </div><div class="ttdoc">Returns the y dimension width of the Boxcar. </div></div>
 <div class="ttc" id="_s_b_profile_8h_html"><div class="ttname"><a href="_s_b_profile_8h.html">SBProfile.h</a></div><div class="ttdoc">Contains a class definition for two-dimensional Surface Brightness Profiles. </div></div>
-<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:262</div></div>
+<div class="ttc" id="structgalsim_1_1_g_s_params_ptr_html"><div class="ttname"><a href="structgalsim_1_1_g_s_params_ptr.html">galsim::GSParamsPtr</a></div><div class="ttdef"><b>Definition:</b> GSParams.h:176</div></div>
 <div class="ttc" id="classgalsim_1_1_s_b_box_html_a373c4e97a443c1f72d4978bc2eba760b"><div class="ttname"><a href="classgalsim_1_1_s_b_box.html#a373c4e97a443c1f72d4978bc2eba760b">galsim::SBBox::getWidth</a></div><div class="ttdeci">double getWidth() const </div><div class="ttdoc">Returns the x dimension width of the Boxcar. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

@@ -100,8 +100,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a373c8fc7fad6f2633ae1407ee631912b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the given non-linearity function (<code>NLfunc</code>) on the Image instance directly.  <a href="#a373c8fc7fad6f2633ae1407ee631912b">More...</a><br/></td></tr>
 <tr class="separator:a373c8fc7fad6f2633ae1407ee631912b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b8d9f206b33705f9e5260c49b1e2bb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#a79b8d9f206b33705f9e5260c49b1e2bb">addReciprocityFailure</a></td></tr>
-<tr class="memdesc:a79b8d9f206b33705f9e5260c49b1e2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accounts for the reciprocity failure and corrects the original Image for it directly.  <a href="#a79b8d9f206b33705f9e5260c49b1e2bb">More...</a><br/></td></tr>
+<tr class="memdesc:a79b8d9f206b33705f9e5260c49b1e2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accounts for the reciprocity failure and includes it in the original Image directly.  <a href="#a79b8d9f206b33705f9e5260c49b1e2bb">More...</a><br/></td></tr>
 <tr class="separator:a79b8d9f206b33705f9e5260c49b1e2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeecb90af8bf9f48b7713defd5694f049"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#aeecb90af8bf9f48b7713defd5694f049">applyIPC</a></td></tr>
+<tr class="memdesc:aeecb90af8bf9f48b7713defd5694f049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect of interpixel capacitance to the Image instance.  <a href="#aeecb90af8bf9f48b7713defd5694f049">More...</a><br/></td></tr>
+<tr class="separator:aeecb90af8bf9f48b7713defd5694f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e4fee9bf7799384cecd686b7dd0055"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#aa6e4fee9bf7799384cecd686b7dd0055">quantize</a></td></tr>
+<tr class="memdesc:aa6e4fee9bf7799384cecd686b7dd0055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds the pixel values in an image to integer values, while preserving the type of the data.  <a href="#aa6e4fee9bf7799384cecd686b7dd0055">More...</a><br/></td></tr>
+<tr class="separator:aa6e4fee9bf7799384cecd686b7dd0055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a79b8d9f206b33705f9e5260c49b1e2bb"></a>
@@ -140,7 +146,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Accounts for the reciprocity failure and corrects the original Image for it directly. </p>
+<p>Accounts for the reciprocity failure and includes it in the original Image directly. </p>
 <p>Reciprocity, in the context of photography, is the inverse relationship between the incident flux (I) of a source object and the exposure time (t) required to produce a given response (p) in the detector, i.e., p = I*t. At very low (also at high) levels of incident flux, deviation from this relation is observed, leading to reduced sensitivity at low flux levels. The pixel response to a high flux is larger than its response to a low flux. This flux-dependent non- linearity is known as 'Reciprocity Failure' and is known to happen in photographic films since</p>
 <ol type="1">
 <li>Interested users can refer to <a href="http://en.wikipedia.org/wiki/Reciprocity_(photography)">http://en.wikipedia.org/wiki/Reciprocity_(photography)</a></li>
@@ -156,7 +162,81 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">exp_time</td><td>The exposure time (t) in seconds, which goes into the expression for reciprocity failure given in the docstring. </td></tr>
     <tr><td class="paramname">alpha</td><td>The alpha parameter in the expression for reciprocity failure, in units of 'per decade'. </td></tr>
-    <tr><td class="paramname">base_flux</td><td>The flux (p'/t') at which the gain is calibrated to have its nominal value.</td></tr>
+    <tr><td class="paramname">base_flux</td><td>The flux (p'/t') at which the gain is calibrated to have its nominal value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeecb90af8bf9f48b7713defd5694f049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.detectors.applyIPC </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>IPC_kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>edge_treatment</em> = <code>'extend'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fill_value</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kernel_nonnegativity</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kernel_normalization</em> = <code>True</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the effect of interpixel capacitance to the Image instance. </p>
+<p>In NIR detectors, the quantity that is sensed is not the charge as in CCDs, but a voltage that relates to the charge present within each pixel. The voltage read at a given pixel location is influenced by the charges present in the neighboring pixel locations due to capacitive coupling of sense nodes.</p>
+<p>This interpixel capacitance is approximated as a linear effect that can be described by a 3x3 kernel that is convolved with the image. The kernel must be an Image instance and could be intrinsically anisotropic. A sensible kernel must have non-negative entries and must be normalized such that the sum of the elements is 1, in order to conserve the total charge. The (1,1) element of the kernel is the contribution to the voltage read at a pixel from the electrons in the pixel to its bottom-left, the (1,2) element of the kernel is the contribution from the charges to its left and so on.</p>
+<p>The argument 'edge_treatment' specifies how the edges of the image should be treated, which could be in one of the three ways:</p>
+<ol type="1">
+<li>'extend': The kernel is convolved with the zero-padded image, leading to a larger intermediate image. The central portion of this image is returned. [default]</li>
+<li>'crop': The kernel is convolved with the image, with the kernel inside the image completely. Pixels at the edges, where the center of the kernel could not be placed, are set to the value specified by 'fill_value'. If 'fill_value' is not specified or set to 'None', then the pixel values in the original image are retained. The user can make the edges invalid by setting fill_value to numpy.nan.</li>
+<li>'wrap': The kernel is convolved with the image, assuming periodic boundary conditions.</li>
+</ol>
+<p>The size of the image array remains unchanged in all three cases.</p>
+<h2>Calling </h2>
+<pre class="fragment">&gt;&gt;&gt; img.applyIPC(IPC_kernel=ipc_kernel, edge_treatment='extend', fill_value=0,
+    kernel_nonnegativity=True, kernel_normalization=True)
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IPC_kernel</td><td>A 3x3 Image instance that is convolved with the Image instance </td></tr>
+    <tr><td class="paramname">edge_treatment</td><td>Specifies the method of handling edges and should be one of 'crop', 'extend' or 'wrap'. See above for details. [default: 'extend'] </td></tr>
+    <tr><td class="paramname">fill_value</td><td>Specifies the value (including nan) to fill the edges with when edge_treatment is 'crop'. If unspecified or set to 'None', the original pixel values are retained at the edges. If edge_treatment is not 'crop', then this is ignored. </td></tr>
+    <tr><td class="paramname">kernel_nonnegativity</td><td>Specify whether the kernel should have only non-negative entries. [default: True] </td></tr>
+    <tr><td class="paramname">kernel_normalization</td><td>Specify whether to check and enforce correct normalization for the kernel. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
@@ -212,6 +292,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+</div>
+</div>
+<a class="anchor" id="aa6e4fee9bf7799384cecd686b7dd0055"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.detectors.quantize </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rounds the pixel values in an image to integer values, while preserving the type of the data. </p>
+<p>At certain stages in the astronomical image generation process, detectors effectively round to the nearest integer. The exact stage at which this happens depends on the type of device (CCD vs. NIR detector). For example, for H2RG detectors, quantization happens in two stages: first, when detecting a certain number of photons, corresponding to the sum of background and signal multiplied by the QE and including reciprocity failure. After this, a number of other processes occur (e.g., nonlinearity, IPC, read noise) that could result in non-integer pixel values, only rounding to an integer at the stage of analog-to-digital conversion.</p>
+<p>Because we cannot guarantee that quantization will always be the last step in the process, the <a class="el" href="namespacegalsim_1_1detectors.html#aa6e4fee9bf7799384cecd686b7dd0055" title="Rounds the pixel values in an image to integer values, while preserving the type of the data...">quantize()</a> routine does not actually modify the type of the image to 'int'. However, users can easily do so by doing </p>
+<pre class="fragment">image.quantize()
+int_image = galsim.Image(image, dtype=int)</pre> 
 </div>
 </div>
 </div><!-- contents -->

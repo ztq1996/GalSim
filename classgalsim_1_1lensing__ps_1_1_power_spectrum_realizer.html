@@ -113,6 +113,16 @@ Inheritance diagram for galsim.lensing_ps.PowerSpectrumRealizer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ecde620a14b238c14d7d27eac3efa32"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a9ecde620a14b238c14d7d27eac3efa32">__init__</a></td></tr>
 <tr class="separator:a9ecde620a14b238c14d7d27eac3efa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cec875547b1eeecbb4f0bb4d502704a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a2cec875547b1eeecbb4f0bb4d502704a">__repr__</a></td></tr>
+<tr class="separator:a2cec875547b1eeecbb4f0bb4d502704a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f2ca8e134725c1829c7775ae2089721"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a9f2ca8e134725c1829c7775ae2089721">__str__</a></td></tr>
+<tr class="separator:a9f2ca8e134725c1829c7775ae2089721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd999b00bfe42bc8e7fc305c28b4cff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a6fd999b00bfe42bc8e7fc305c28b4cff">__eq__</a></td></tr>
+<tr class="separator:a6fd999b00bfe42bc8e7fc305c28b4cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae091fba385ba218adbfd2e23ca84e1fc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#ae091fba385ba218adbfd2e23ca84e1fc">__ne__</a></td></tr>
+<tr class="separator:ae091fba385ba218adbfd2e23ca84e1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f557134ddc076d89f5ea6f753eb8488"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a9f557134ddc076d89f5ea6f753eb8488">__hash__</a></td></tr>
+<tr class="separator:a9f557134ddc076d89f5ea6f753eb8488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0448ca45ad35f30a9f2cb7ecb2b90f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#aab0448ca45ad35f30a9f2cb7ecb2b90f">set_size</a></td></tr>
 <tr class="separator:aab0448ca45ad35f30a9f2cb7ecb2b90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4123cfab938e48f96c8496f8b1ebcfe0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a4123cfab938e48f96c8496f8b1ebcfe0">set_power</a></td></tr>
@@ -163,8 +173,8 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">ngrid</td><td>The size of the grid in one dimension. </td></tr>
     <tr><td class="paramname">pixel_size</td><td>The size of the pixel sides, in units consistent with the units expected by the power spectrum functions. </td></tr>
-    <tr><td class="paramname">e_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k). ">PowerSpectrum</a> class. </td></tr>
-    <tr><td class="paramname">b_power_function</td><td>See description of this parameter in the documentation for the <a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k). ">PowerSpectrum</a> class. </td></tr>
+    <tr><td class="paramname">p_E</td><td>Equivalent to e_power_function in the documentation for the <a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k). ">PowerSpectrum</a> class. </td></tr>
+    <tr><td class="paramname">p_B</td><td>Equivalent to b_power_function in the documentation for the <a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html" title="Class to represent a lensing shear field according to some power spectrum P(k). ">PowerSpectrum</a> class. </td></tr>
   </table>
   </dd>
 </dl>
@@ -246,6 +256,106 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a tuple of NumPy arrays (g1,g2,kappa) for the shear and convergence. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6fd999b00bfe42bc8e7fc305c28b4cff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrumRealizer.__eq__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9f557134ddc076d89f5ea6f753eb8488"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrumRealizer.__hash__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae091fba385ba218adbfd2e23ca84e1fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrumRealizer.__ne__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2cec875547b1eeecbb4f0bb4d502704a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrumRealizer.__repr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9f2ca8e134725c1829c7775ae2089721"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrumRealizer.__str__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
