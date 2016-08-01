@@ -258,6 +258,7 @@ Variables</h2></td></tr>
 <p>Depending on what the user wants to do with the results, they may wish to use the <code>include_border</code> keyword. This keyword determines whether or not to include an additional border corresponding to half of the gaps between SCAs. For example, if a user is drawing a single image they may wish to only know whether a given position falls onto an SCA, and if so, which one (ignoring everything in the gaps). In contrast, a user who plans to make a sequence of dithered images might find it most useful to know whether the position is either on an SCA or close enough that in a small dither sequence it might appear on the SCA at some point. Use of <code>include_border</code> switches between these scenarios.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">wcs_dict</td><td>The dict of WCS's output from <a class="el" href="namespacegalsim_1_1wfirst_1_1wfirst__wcs.html#aabb4c000140bef579c2426849bfb8d1c" title="This routine returns a dict containing a WCS for each of the WFIRST SCAs (Sensor Chip Array...">galsim.wfirst.getWCS()</a>. </td></tr>
     <tr><td class="paramname">world_pos</td><td>A galsim.CelestialCoord indicating the sky position of interest. </td></tr>
     <tr><td class="paramname">include_border</td><td>If True, then include the half-border around SCA to cover the gap between each sensor. [default: False] </td></tr>
   </table>

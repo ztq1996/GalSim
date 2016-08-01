@@ -1,11 +1,19 @@
 var searchData=
 [
   ['c',['c',['../classgalsim_1_1nfw__halo_1_1_n_f_w_halo.html#a54b5ae78486441dc6196bde0cdf43fc1',1,'galsim::nfw_halo::NFWHalo']]],
+  ['cache',['cache',['../classgalsim_1_1utilities_1_1_l_r_u___cache.html#a8a2b4811f781db38492bb4ffede83d4a',1,'galsim::utilities::LRU_Cache']]],
+  ['cat',['cat',['../classgalsim_1_1config_1_1extra__truth_1_1_truth_builder.html#a44fcb68ed671914067d4e4757c957aae',1,'galsim.config.extra_truth.TruthBuilder.cat()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#af8825d6037c6b55b3e35416ce94bd1ce',1,'galsim.real.RealGalaxyCatalog.cat()']]],
+  ['catalog',['catalog',['../classgalsim_1_1real_1_1_real_galaxy.html#a9c36b3cb22d909d141187433e8147ddd',1,'galsim::real::RealGalaxy']]],
   ['catalog_5ffile',['catalog_file',['../classgalsim_1_1real_1_1_real_galaxy.html#abe77bd2103063b1dbb3c09d5f65387b0',1,'galsim::real::RealGalaxy']]],
   ['cd',['cd',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a750ba7db6f9589fe8bde34927e64d772',1,'galsim::fitswcs::GSFitsWCS']]],
   ['center',['center',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#aab6b0421c3b42b1c701d735999d8ff4d',1,'galsim.fitswcs.GSFitsWCS.center()'],['../classgalsim_1_1lensing__ps_1_1_power_spectrum.html#ad1c78817f9b04e27c7c292b2505bdb7e',1,'galsim.lensing_ps.PowerSpectrum.center()']]],
-  ['config',['config',['../classgalsim_1_1config_1_1process_1_1_input_getter.html#a4ef0371b5c93ecf9074f14ad1e0b18c0',1,'galsim::config::process::InputGetter']]],
-  ['constimageview',['ConstImageView',['../namespacegalsim_1_1image.html#ad358b9f933a4b148f64e403635296b99',1,'galsim::image']]],
+  ['charge_5fdiffusion',['charge_diffusion',['../namespacegalsim_1_1wfirst.html#a7fecbc25a9c32bb43c309d9ecf26e962',1,'galsim::wfirst']]],
+  ['chromatic',['chromatic',['../classgalsim_1_1chromatic_1_1_chromatic_transformation.html#a1797f39ebc9ce1b3e268366e7ed175e6',1,'galsim::chromatic::ChromaticTransformation']]],
+  ['coef_5farray',['coef_array',['../classgalsim_1_1phase__screens_1_1_optical_screen.html#adea4b25560a099f2e11418c65ef5638d',1,'galsim::phase_screens::OpticalScreen']]],
+  ['comments',['comments',['../classgalsim_1_1catalog_1_1_catalog.html#acc9bfa33b71353ec4f3198114fda1469',1,'galsim::catalog::Catalog']]],
+  ['connected_5ftypes',['connected_types',['../namespacegalsim_1_1config_1_1input.html#ac75af8a1c8f0ba75acddce60668c2530',1,'galsim::config::input']]],
+  ['constant',['constant',['../classgalsim_1_1table_1_1_lookup_table2_d.html#a91cb60ae2f9dc1f8a849e53780d8d384',1,'galsim::table::LookupTable2D']]],
+  ['convergence_5fthreshold',['convergence_threshold',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#aa90bdd93c10cc111b7245bb7a258efde',1,'galsim::hsm::HSMParams']]],
   ['corrected_5fe1',['corrected_e1',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#a79bb2455d55da4e77131e87c9909ff1f',1,'galsim::hsm::CppShapeData::corrected_e1()'],['../classgalsim_1_1hsm_1_1_shape_data.html#ac253f93d5cc1e4ca32ce11f2fb69f01f',1,'galsim::hsm.ShapeData.corrected_e1()']]],
   ['corrected_5fe2',['corrected_e2',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#adacfdee64623fec9970f2ae03e0e95d3',1,'galsim::hsm::CppShapeData::corrected_e2()'],['../classgalsim_1_1hsm_1_1_shape_data.html#aaad49a96b1b52e5057f85245e6e590e5',1,'galsim::hsm.ShapeData.corrected_e2()']]],
   ['corrected_5fg1',['corrected_g1',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#ab785d8331d6bd30d9dde7c2ffc0854b1',1,'galsim::hsm::CppShapeData::corrected_g1()'],['../classgalsim_1_1hsm_1_1_shape_data.html#ad51602b7e98d4be91f488f9f1e331c58',1,'galsim::hsm.ShapeData.corrected_g1()']]],
@@ -14,6 +22,9 @@ var searchData=
   ['correction_5fmethod',['correction_method',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#af26d117a4bca6d4b08f4a8e69535ea2c',1,'galsim::hsm::CppShapeData::correction_method()'],['../classgalsim_1_1hsm_1_1_shape_data.html#a89659fd046de5609a9033d8b0b006f4a',1,'galsim::hsm.ShapeData.correction_method()']]],
   ['correction_5fstatus',['correction_status',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#aa6b0a53b4fee885d99c444d09d0d7df4',1,'galsim::hsm::CppShapeData::correction_status()'],['../classgalsim_1_1hsm_1_1_shape_data.html#ab74e7b4f6246598daf2e0633b04355db',1,'galsim::hsm.ShapeData.correction_status()']]],
   ['cosmo',['cosmo',['../classgalsim_1_1nfw__halo_1_1_n_f_w_halo.html#a203ee5c2d2629ba7c153abe0481ea83e',1,'galsim::nfw_halo::NFWHalo']]],
+  ['cosmos_5fpix_5fscale',['cosmos_pix_scale',['../namespacegalsim_1_1scene.html#a86a3799f9c959a561e2daa2b9d354994',1,'galsim::scene']]],
   ['cpp_5fvalid_5fdtypes',['cpp_valid_dtypes',['../classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db',1,'galsim::image::Image']]],
-  ['crpix',['crpix',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a491fd3d9976a31e4e8b746f4228cf631',1,'galsim::fitswcs::GSFitsWCS']]]
+  ['crpix',['crpix',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a491fd3d9976a31e4e8b746f4228cf631',1,'galsim::fitswcs::GSFitsWCS']]],
+  ['current_5fcn',['current_cn',['../classgalsim_1_1config_1_1noise_1_1_c_o_s_m_o_s_noise_builder.html#acb56560bafc8d649731362fb08d87c4d',1,'galsim::config::noise::COSMOSNoiseBuilder']]],
+  ['current_5fcn_5ftag',['current_cn_tag',['../classgalsim_1_1config_1_1noise_1_1_c_o_s_m_o_s_noise_builder.html#aa1a698ff26759fb95a6afd23491b4309',1,'galsim::config::noise::COSMOSNoiseBuilder']]]
 ];

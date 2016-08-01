@@ -155,7 +155,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">AB_zeropoint</td><td>Should the routine set an AB zeropoint before returning the bandpass? If False, then it is up to the user to set a zero point. [default: True] </td></tr>
     <tr><td class="paramname">exptime</td><td>Exposure time to use for setting the zeropoint; if None, use the default WFIRST exposure time, taken from <a class="el" href="namespacegalsim_1_1wfirst.html#a7d4210eff8c0ef58204f23d87a58c433">galsim.wfirst.exptime</a>. [default: None] </td></tr>
-    <tr><td class="paramname">default_thin_trunc</td><td>Use the default thinning and truncation options? Users who wish to use no thinning and truncation of bandpasses, or who want control over the level of thinning and truncation, should have this be False. [default: True]  **kwargs Other kwargs are passed to either <code>bandpass.thin()</code> or <code>bandpass.truncate()</code> as appropriate.</td></tr>
+    <tr><td class="paramname">default_thin_trunc</td><td>Use the default thinning and truncation options? Users who wish to use no thinning and truncation of bandpasses, or who want control over the level of thinning and truncation, should have this be False. [default: True] </td></tr>
+    <tr><td class="paramname">**kwargs</td><td>Other kwargs are passed to either <code>bandpass.thin()</code> or <code>bandpass.truncate()</code> as appropriate.</td></tr>
   </table>
   </dd>
 </dl>

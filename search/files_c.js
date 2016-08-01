@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['photonarray_2eh',['PhotonArray.h',['../_photon_array_8h.html',1,'']]],
-  ['position_2epy',['position.py',['../position_8py.html',1,'']]],
-  ['probabilitytree_2eh',['ProbabilityTree.h',['../_probability_tree_8h.html',1,'']]],
-  ['process_2epy',['process.py',['../process_8py.html',1,'']]],
-  ['pse_2epy',['pse.py',['../pse_8py.html',1,'']]],
-  ['psfcorr_2eh',['PSFCorr.h',['../_p_s_f_corr_8h.html',1,'']]]
+  ['onedimensionaldeviate_2eh',['OneDimensionalDeviate.h',['../_one_dimensional_deviate_8h.html',1,'']]],
+  ['optics_2epy',['optics.py',['../optics_8py.html',1,'']]],
+  ['optics_2epy',['optics.py',['../deprecated_2optics_8py.html',1,'']]],
+  ['output_2epy',['output.py',['../output_8py.html',1,'']]],
+  ['output_5fdatacube_2epy',['output_datacube.py',['../output__datacube_8py.html',1,'']]],
+  ['output_5fmultifits_2epy',['output_multifits.py',['../output__multifits_8py.html',1,'']]]
 ];

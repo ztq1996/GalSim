@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['nfw_5fhalo_2epy',['nfw_halo.py',['../nfw__halo_8py.html',1,'']]],
-  ['noise_2eh',['Noise.h',['../_noise_8h.html',1,'']]],
-  ['noise_2epy',['noise.py',['../config_2noise_8py.html',1,'']]],
-  ['noise_2epy',['noise.py',['../noise_8py.html',1,'']]]
+  ['lensing_5fps_2epy',['lensing_ps.py',['../lensing__ps_8py.html',1,'']]],
+  ['lrucache_2eh',['LRUCache.h',['../_l_r_u_cache_8h.html',1,'']]],
+  ['lsst_5fwcs_2epy',['lsst_wcs.py',['../lsst__wcs_8py.html',1,'']]]
 ];

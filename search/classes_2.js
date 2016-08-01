@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['badpixbuilder',['BadPixBuilder',['../classgalsim_1_1config_1_1extra__badpix_1_1_bad_pix_builder.html',1,'galsim::config::extra_badpix']]],
   ['bandpass',['Bandpass',['../classgalsim_1_1bandpass_1_1_bandpass.html',1,'galsim::bandpass']]],
+  ['basecdmodel',['BaseCDModel',['../classgalsim_1_1cdmodel_1_1_base_c_d_model.html',1,'galsim::cdmodel']]],
   ['basedeviate',['BaseDeviate',['../classgalsim_1_1_base_deviate.html',1,'galsim']]],
   ['baseimage',['BaseImage',['../classgalsim_1_1_base_image.html',1,'galsim']]],
   ['baseimage_3c_20float_20_3e',['BaseImage&lt; float &gt;',['../classgalsim_1_1_base_image.html',1,'galsim']]],

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['history_2emd',['HISTORY.md',['../_h_i_s_t_o_r_y_8md.html',1,'']]],
-  ['hsm_2epy',['hsm.py',['../hsm_8py.html',1,'']]]
+  ['galsim_2eh',['GalSim.h',['../_gal_sim_8h.html',1,'']]],
+  ['gsobject_2epy',['gsobject.py',['../gsobject_8py.html',1,'']]],
+  ['gsobject_5fring_2epy',['gsobject_ring.py',['../gsobject__ring_8py.html',1,'']]],
+  ['gsparams_2eh',['GSParams.h',['../_g_s_params_8h.html',1,'']]]
 ];

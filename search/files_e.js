@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['sbadd_2eh',['SBAdd.h',['../_s_b_add_8h.html',1,'']]],
-  ['sbairy_2eh',['SBAiry.h',['../_s_b_airy_8h.html',1,'']]],
-  ['sbbox_2eh',['SBBox.h',['../_s_b_box_8h.html',1,'']]],
-  ['sbconvolve_2eh',['SBConvolve.h',['../_s_b_convolve_8h.html',1,'']]],
-  ['sbdeconvolve_2eh',['SBDeconvolve.h',['../_s_b_deconvolve_8h.html',1,'']]],
-  ['sbexponential_2eh',['SBExponential.h',['../_s_b_exponential_8h.html',1,'']]],
-  ['sbgaussian_2eh',['SBGaussian.h',['../_s_b_gaussian_8h.html',1,'']]],
-  ['sbinterpolatedimage_2eh',['SBInterpolatedImage.h',['../_s_b_interpolated_image_8h.html',1,'']]],
-  ['sbkolmogorov_2eh',['SBKolmogorov.h',['../_s_b_kolmogorov_8h.html',1,'']]],
-  ['sbmoffat_2eh',['SBMoffat.h',['../_s_b_moffat_8h.html',1,'']]],
-  ['sbprofile_2eh',['SBProfile.h',['../_s_b_profile_8h.html',1,'']]],
-  ['sbsersic_2eh',['SBSersic.h',['../_s_b_sersic_8h.html',1,'']]],
-  ['sbshapelet_2eh',['SBShapelet.h',['../_s_b_shapelet_8h.html',1,'']]],
-  ['sbtransform_2eh',['SBTransform.h',['../_s_b_transform_8h.html',1,'']]],
-  ['sed_2epy',['sed.py',['../sed_8py.html',1,'']]],
-  ['shapelet_2epy',['shapelet.py',['../shapelet_8py.html',1,'']]],
-  ['shear_2epy',['shear.py',['../shear_8py.html',1,'']]],
-  ['solve_2eh',['Solve.h',['../_solve_8h.html',1,'']]],
-  ['stamp_2epy',['stamp.py',['../stamp_8py.html',1,'']]]
+  ['random_2eh',['Random.h',['../_random_8h.html',1,'']]],
+  ['random_2epy',['random.py',['../deprecated_2random_8py.html',1,'']]],
+  ['random_2epy',['random.py',['../random_8py.html',1,'']]],
+  ['randomoldboost_2eh',['RandomOldBoost.h',['../_random_old_boost_8h.html',1,'']]],
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['real_2epy',['real.py',['../real_8py.html',1,'']]],
+  ['roots_2eh',['Roots.h',['../_roots_8h.html',1,'']]]
 ];
