@@ -124,31 +124,34 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a43296ea7e5c0ed96e6327a63293b0964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac694e6b48f92638fd0db75a36e1015e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#ac694e6b48f92638fd0db75a36e1015e3">n_cutouts</a></td></tr>
 <tr class="separator:ac694e6b48f92638fd0db75a36e1015e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a0b6a5a5866156843b4a048ec0e5215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a3a0b6a5a5866156843b4a048ec0e5215">weights</a></td></tr>
-<tr class="separator:a3a0b6a5a5866156843b4a048ec0e5215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25a22a43804e1b4f00516f9356bf05db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a25a22a43804e1b4f00516f9356bf05db">segs</a></td></tr>
-<tr class="separator:a25a22a43804e1b4f00516f9356bf05db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c23f92a623a4a468057012596724d4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a1c23f92a623a4a468057012596724d4e">psf_box_size</a></td></tr>
+<tr class="separator:a1c23f92a623a4a468057012596724d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c245ef15bb7035914a1b25354323c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a09c245ef15bb7035914a1b25354323c1">weight</a></td></tr>
+<tr class="separator:a09c245ef15bb7035914a1b25354323c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8811a7e1478846f12e5f925a88e7d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a9c8811a7e1478846f12e5f925a88e7d3">seg</a></td></tr>
+<tr class="separator:a9c8811a7e1478846f12e5f925a88e7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57b9c47e23fbc3238e52b5240cce9ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#aa57b9c47e23fbc3238e52b5240cce9ac">wcs</a></td></tr>
 <tr class="separator:aa57b9c47e23fbc3238e52b5240cce9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6776fea5e76b52efbda0e52c13c683"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a7f6776fea5e76b52efbda0e52c13c683">psf</a></td></tr>
+<tr class="separator:a7f6776fea5e76b52efbda0e52c13c683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class containing exposures for single object, along with other information. </p>
 <h2>Initialization </h2>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">images</td><td>List of images of the object (GalSim Images). </td></tr>
-    <tr><td class="paramname">weights</td><td>List of weight maps (GalSim Images). [default: None] </td></tr>
-    <tr><td class="paramname">badpix</td><td>List of bad pixel masks (GalSim Images). [default: None] </td></tr>
-    <tr><td class="paramname">segs</td><td>List of segmentation maps (GalSim Images). [default: None] </td></tr>
-    <tr><td class="paramname">wcs</td><td>List of WCS transformations (GalSim AffineTransforms). [default: None] </td></tr>
+    <tr><td class="paramname">images</td><td>List of images of the object. </td></tr>
+    <tr><td class="paramname">weight</td><td>List of weight images. [default: None] </td></tr>
+    <tr><td class="paramname">badpix</td><td>List of bad pixel masks. [default: None] </td></tr>
+    <tr><td class="paramname">seg</td><td>List of segmentation maps. [default: None] </td></tr>
+    <tr><td class="paramname">psf</td><td>List of psf images. [default: None] </td></tr>
+    <tr><td class="paramname">wcs</td><td>List of WCS transformations. [default: None] </td></tr>
     <tr><td class="paramname">id</td><td>Galaxy id. [default: 0]</td></tr>
   </table>
   </dd>
 </dl>
 <h2>Attributes </h2>
-<p>self.images List of images of the object (GalSim Images). self.weights List of weight maps (GalSim Images). self.segs List of segmentation masks (GalSim Images). self.wcs List of WCS transformations (GalSim AffineTransforms). self.n_cutouts Number of exposures. self.box_size Size of each exposure image.</p>
-<h2>Module level variables </h2>
-<p>Images, weights and segs have to be square numpy arrays with size in BOX_SIZES = [32,48,64,96,128,196,256]. Number of exposures for all lists (images,weights,segs,wcs) have to be the same and smaller than MAX_NCUTOUTS (default 11). </p>
+<p>self.images List of images of the object. self.weight List of weight maps. self.seg List of segmentation maps. self.psf List of psf images. self.wcs List of WCS transformations. self.n_cutouts Number of exposures. self.box_size Size of each exposure image. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a207da7623237053a11a6a37bfa64b3d5"></a>
 <div class="memitem">
@@ -170,7 +173,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>weights</em> = <code>None</code>, </td>
+          <td class="paramname"><em>weight</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -182,7 +185,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>segs</em> = <code>None</code>, </td>
+          <td class="paramname"><em>seg</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>psf</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -255,12 +264,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a25a22a43804e1b4f00516f9356bf05db"></a>
+<a class="anchor" id="a7f6776fea5e76b52efbda0e52c13c683"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.des.des_meds.MultiExposureObject.segs</td>
+          <td class="memname">galsim.des.des_meds.MultiExposureObject.psf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1c23f92a623a4a468057012596724d4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.des.des_meds.MultiExposureObject.psf_box_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c8811a7e1478846f12e5f925a88e7d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.des.des_meds.MultiExposureObject.seg</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -279,12 +312,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3a0b6a5a5866156843b4a048ec0e5215"></a>
+<a class="anchor" id="a09c245ef15bb7035914a1b25354323c1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.des.des_meds.MultiExposureObject.weights</td>
+          <td class="memname">galsim.des.des_meds.MultiExposureObject.weight</td>
         </tr>
       </table>
 </div><div class="memdoc">

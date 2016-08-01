@@ -105,16 +105,24 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a07fc9be6755a477ed2e4fbb323023926"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a07fc9be6755a477ed2e4fbb323023926">BuildGSObject</a></td></tr>
-<tr class="memdesc:a07fc9be6755a477ed2e4fbb323023926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a GSObject using config dict for <code>key=key</code>.  <a href="#a07fc9be6755a477ed2e4fbb323023926">More...</a><br/></td></tr>
+<tr class="memdesc:a07fc9be6755a477ed2e4fbb323023926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a GSObject from the parameters in config[key].  <a href="#a07fc9be6755a477ed2e4fbb323023926">More...</a><br/></td></tr>
 <tr class="separator:a07fc9be6755a477ed2e4fbb323023926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e08e739e5e235a6f5dffc538924fd8c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a1e08e739e5e235a6f5dffc538924fd8c">UpdateGSParams</a></td></tr>
 <tr class="memdesc:a1e08e739e5e235a6f5dffc538924fd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add additional items to the <code>gsparams</code> dict based on config['gsparams'].  <a href="#a1e08e739e5e235a6f5dffc538924fd8c">More...</a><br/></td></tr>
 <tr class="separator:a1e08e739e5e235a6f5dffc538924fd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5371f4fc995e8afc5bda8488c3119d7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#ae5371f4fc995e8afc5bda8488c3119d7">TransformObject</a></td></tr>
+<tr class="memdesc:ae5371f4fc995e8afc5bda8488c3119d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies ellipticity, rotation, gravitational shearing and centroid shifting to a supplied GSObject, in that order.  <a href="#ae5371f4fc995e8afc5bda8488c3119d7">More...</a><br/></td></tr>
+<tr class="separator:ae5371f4fc995e8afc5bda8488c3119d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908ed1f9a1f729237e116c4271d2a67f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a908ed1f9a1f729237e116c4271d2a67f">RegisterObjectType</a></td></tr>
+<tr class="memdesc:a908ed1f9a1f729237e116c4271d2a67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an object type for use by the config apparatus.  <a href="#a908ed1f9a1f729237e116c4271d2a67f">More...</a><br/></td></tr>
+<tr class="separator:a908ed1f9a1f729237e116c4271d2a67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5f33a5157025a9119a7d4557ea75aace"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a5f33a5157025a9119a7d4557ea75aace">valid_gsobject_types</a></td></tr>
+<tr class="memitem:a5f33a5157025a9119a7d4557ea75aace"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a5f33a5157025a9119a7d4557ea75aace">valid_gsobject_types</a> = {}</td></tr>
 <tr class="separator:a5f33a5157025a9119a7d4557ea75aace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc30a71ab980ff270cf9ab065ba67c8a"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#adc30a71ab980ff270cf9ab065ba67c8a">block_gsobject_types</a> = []</td></tr>
+<tr class="separator:adc30a71ab980ff270cf9ab065ba67c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a07fc9be6755a477ed2e4fbb323023926"></a>
@@ -159,18 +167,116 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Build a GSObject using config dict for <code>key=key</code>. </p>
+<p>Build a GSObject from the parameters in config[key]. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>A dict with the configuration information. </td></tr>
     <tr><td class="paramname">key</td><td>The key name in config indicating which object to build. </td></tr>
-    <tr><td class="paramname">base</td><td>A dict which stores potentially useful things like base['rng'] = random number generator base['catalog'] = input catalog for InputCat items base['real_catalog'] = real galaxy catalog for RealGalaxy objects Typically on the initial call to <a class="el" href="namespacegalsim_1_1config_1_1gsobject.html#a07fc9be6755a477ed2e4fbb323023926" title="Build a GSObject using config dict for key=key. ">BuildGSObject()</a>, this will be the same as config, hence the name base. [default: None] </td></tr>
+    <tr><td class="paramname">base</td><td>The base dict of the configuration. [default: config] </td></tr>
     <tr><td class="paramname">gsparams</td><td>Optionally, provide non-default <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> items. Any <code>gsparams</code> specified at this level will be added to the list. This should be a dict with whatever kwargs should be used in constructing the <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object. [default: {}] </td></tr>
     <tr><td class="paramname">logger</td><td>Optionally, provide a logger for logging debug statements. [default: None]</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the tuple <code>(gsobject, safe)</code>, where <code>gsobject</code> is the built object, and <code>safe</code> is a bool that says whether it is safe to use this object again next time. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a908ed1f9a1f729237e116c4271d2a67f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.gsobject.RegisterObjectType </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>type_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>build_func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>input_type</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_is_block</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register an object type for use by the config apparatus. </p>
+<p>A few notes about the signature of the build functions:</p>
+<ol type="1">
+<li>The config parameter is the dict for the current object to be generated. So it should be the case that config['type'] == type_name.</li>
+<li>The base parameter is the original config dict being processed.</li>
+<li>The ignore parameter is a list of items that should be ignored in the config dict if they are present and not valid for the object being built.</li>
+<li>The gsparams parameter is a dict of kwargs that should be used to build a <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> object to use when building this object.</li>
+<li>The logger parameter is a logging.Logger object to use for logging progress if desired.</li>
+<li>The return value of build_func should be a tuple consisting of the object and a boolean, safe, which indicates whether the generated object is safe to use again rather than regenerate for subsequent postage stamps. e.g. if a PSF has all constant values, then it can be used for all the galaxies in a simulation, which lets it keep any FFTs that it has performed internally. OpticalPSF is a good example of where this can have a significant speed up.</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type_name</td><td>The name of the 'type' specification in the config dict. </td></tr>
+    <tr><td class="paramname">build_func</td><td>A function to build a GSObject from the config information. The call signature is obj, safe = Build(config, base, ignore, gsparams, logger) </td></tr>
+    <tr><td class="paramname">input_type</td><td>If the type utilises an input object, give the key name of the input type here. (If it uses more than one, this may be a list.) [default: None] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5371f4fc995e8afc5bda8488c3119d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.config.gsobject.TransformObject </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsobject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies ellipticity, rotation, gravitational shearing and centroid shifting to a supplied GSObject, in that order. </p>
+<dl class="section return"><dt>Returns</dt><dd>transformed GSObject. </dd></dl>
 
 </div>
 </div>
@@ -194,12 +300,6 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>base</em>&#160;</td>
         </tr>
         <tr>
@@ -215,33 +315,28 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="adc30a71ab980ff270cf9ab065ba67c8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list galsim.config.gsobject.block_gsobject_types = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5f33a5157025a9119a7d4557ea75aace"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">dictionary galsim.config.gsobject.valid_gsobject_types</td>
+          <td class="memname">dictionary galsim.config.gsobject.valid_gsobject_types = {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1config_1_1gsobject.html">    1</a></span>&#160;= {</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="comment"># Note: these are just the types that need a special builder.  Most GSObject sub-classes</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="comment"># in base.py (and some elsewhere) can use the default builder, called _BuildSimple, which</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="comment"># just uses the req, opt, and single class variables.</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment"># See the des module for examples of how to extend this from a module.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;None&#39;</span> : <span class="stringliteral">&#39;_BuildNone&#39;</span>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;Add&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;Sum&#39;</span> : <span class="stringliteral">&#39;_BuildAdd&#39;</span>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;Convolve&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;Convolution&#39;</span> : <span class="stringliteral">&#39;_BuildConvolve&#39;</span>,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;List&#39;</span> : <span class="stringliteral">&#39;_BuildList&#39;</span>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;Ring&#39;</span> : <span class="stringliteral">&#39;_BuildRing&#39;</span>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&#39;RealGalaxy&#39;</span> : <span class="stringliteral">&#39;_BuildRealGalaxy&#39;</span>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="stringliteral">&#39;RealGalaxyOriginal&#39;</span> : <span class="stringliteral">&#39;_BuildRealGalaxyOriginal&#39;</span>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&#39;OpticalPSF&#39;</span> : <span class="stringliteral">&#39;_BuildOpticalPSF&#39;</span>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&#39;COSMOSGalaxy&#39;</span> : <span class="stringliteral">&#39;_BuildCOSMOSGalaxy&#39;</span>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

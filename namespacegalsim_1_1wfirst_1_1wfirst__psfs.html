@@ -169,7 +169,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>high_accuracy</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>high_accuracy</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,6 +208,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">logger</td><td>A logger object for output of progress statements if the user wants them. [default: None] </td></tr>
     <tr><td class="paramname">wavelength</td><td>An option to get an achromatic PSF for a single wavelength, for users who do not care about chromaticity of the PSF. If None, then the fully chromatic PSF is returned. Alternatively the user should supply either (a) a wavelength in nanometers, and they will get achromatic OpticalPSF objects for that wavelength, or (b) a bandpass object, in which case they will get achromatic OpticalPSF objects defined at the effective wavelength of that bandpass. [default: False] </td></tr>
     <tr><td class="paramname">high_accuracy</td><td>If True, make higher-fidelity representations of the PSF in Fourier space, to minimize aliasing (see plots on <a href="https://github.com/GalSim-developers/GalSim/issues/661">https://github.com/GalSim-developers/GalSim/issues/661</a> for more details). This setting is more expensive in terms of time and RAM, and may not be necessary for many applications. [default: False] </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None] </td></tr>
   </table>
   </dd>
 </dl>

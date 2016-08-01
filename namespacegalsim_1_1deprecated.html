@@ -108,11 +108,15 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegalsim_1_1deprecated_1_1correlatednoise"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1correlatednoise.html">correlatednoise</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegalsim_1_1deprecated_1_1gsobject__ring"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1gsobject__ring.html">gsobject_ring</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegalsim_1_1deprecated_1_1image"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1image.html">image</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegalsim_1_1deprecated_1_1interpolatedimage"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1interpolatedimage.html">interpolatedimage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegalsim_1_1deprecated_1_1noise"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1noise.html">noise</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegalsim_1_1deprecated_1_1optics"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1optics.html">optics</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegalsim_1_1deprecated_1_1random"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1deprecated_1_1random.html">random</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,15 +178,15 @@ Functions</h2></td></tr>
 <p>A helper function for emitting a <a class="el" href="classgalsim_1_1deprecated_1_1_gal_sim_deprecation_warning.html">GalSimDeprecationWarning</a>. </p>
 <p>Example usage:</p>
 <ol type="1">
-<li>Normally, you would simply warn that a deprecated function has a new preferred syntax: <pre class="fragment"> depr('applyShear', 1.1, 'obj = obj.shear(..)`)
+<li>Normally, you would simply warn that a deprecated function has a new preferred syntax: <pre class="fragment"> depr('applyShear', 1.1, 'obj = obj.shear(..)')
 </pre></li>
 <li>You can add extra information if you want to point out something about the new syntax: <pre class="fragment"> depr('draw', 1.1, "drawImage(..., method='no_pixel')",
       'Note: drawImage has different args than draw did.  ' +
       'Read the docs for the method keywords carefully.')
 </pre></li>
 <li>If the deprecated function has no replacement, you can use '' for the first string. <pre class="fragment"> depr('calculateCovarianceMatrix', 1.3, '',
-     'This functionality has been removed. If you have a need for it, please open '+
-     'an issue requesting the functionality.')</pre> </li>
+      'This functionality has been removed. If you have a need for it, please open '+
+      'an issue requesting the functionality.')</pre> </li>
 </ol>
 
 </div>

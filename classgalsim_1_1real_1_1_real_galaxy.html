@@ -115,6 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6d9d397ad863afbd675a495951e1af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b19ddf73cbc4bd748608e5eb2421eb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#ab8b19ddf73cbc4bd748608e5eb2421eb">getHalfLightRadius</a></td></tr>
 <tr class="separator:ab8b19ddf73cbc4bd748608e5eb2421eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63a9bdef0d5a4d1761a20e31666b530"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#af63a9bdef0d5a4d1761a20e31666b530">__eq__</a></td></tr>
+<tr class="separator:af63a9bdef0d5a4d1761a20e31666b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afccae5514b60b24175b5b2c7c38a70f9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#afccae5514b60b24175b5b2c7c38a70f9">__hash__</a></td></tr>
+<tr class="separator:afccae5514b60b24175b5b2c7c38a70f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a698aba62040218d750fe3bf6fe4e207d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#a698aba62040218d750fe3bf6fe4e207d">__repr__</a></td></tr>
 <tr class="separator:a698aba62040218d750fe3bf6fe4e207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6111b8ae655281219dada6d9edb9695"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html#aa6111b8ae655281219dada6d9edb9695">__str__</a></td></tr>
@@ -153,13 +157,14 @@ Public Attributes</h2></td></tr>
 <p>This class uses a catalog describing galaxies in some training data (for more details, see the <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data. ">RealGalaxyCatalog</a> documentation) to read in data about realistic galaxies that can be used for simulations based on those galaxies. Also included in the class is additional information that might be needed to make or interpret the simulations, e.g., the noise properties of the training data. Users who wish to draw RealGalaxies that have well-defined flux scalings in various passbands, and/or parametric representations, should use the COSMOSGalaxy class.</p>
 <p>Because <a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset. ">RealGalaxy</a> involves a Deconvolution, <code>method = 'phot'</code> is unavailable for the drawImage() function.</p>
 <h2>Initialization </h2>
-<pre class="fragment">&gt;&gt;&gt; real_galaxy = galsim.RealGalaxy(real_galaxy_catalog, index=None, id=None, random=False, 
+<pre class="fragment">&gt;&gt;&gt; real_galaxy = galsim.RealGalaxy(real_galaxy_catalog, index=None, id=None, random=False,
 ...                                 rng=None, x_interpolant=None, k_interpolant=None,
 ...                                 flux=None, pad_factor=4, noise_pad_size=0,
 ...                                 gsparams=None)
 </pre><p>This initializes <code>real_galaxy</code> with three InterpolatedImage objects (one for the deconvolved galaxy, and saved versions of the original HST image and PSF). Note that there are multiple keywords for choosing a galaxy; exactly one must be set. In future we may add more such options, e.g., to choose at random but accounting for the non-constant weight factors (probabilities for objects to make it into the training sample).</p>
 <p>Note that tests suggest that for optimal balance between accuracy and speed, <code>k_interpolant</code> and <code>pad_factor</code> should be kept at their default values. The user should be aware that significant inaccuracy can result from using other combinations of these parameters; more details can be found in <a href="http://arxiv.org/abs/1401.2636,">http://arxiv.org/abs/1401.2636,</a> especially table 1, and in comment <a href="https://github.com/GalSim-developers/GalSim/issues/389#issuecomment-26166621">https://github.com/GalSim-developers/GalSim/issues/389#issuecomment-26166621</a> and the following comments.</p>
-<p>If you don't set a flux, the flux of the returned object will be the flux of the original COSMOS data, scaled to correspond to a 1 second HST exposure. If you want a flux approproriate for a longer exposure, you can set flux_rescale = the exposure time. You can also account for exposures taken with a different telescope diameter than the HST 2.4 meter diameter this way.</p>
+<p>If you don't set a flux, the flux of the returned object will be the flux of the original COSMOS data, scaled to correspond to a 1 second HST exposure. If you want a flux appropriate for a longer exposure, you can set flux_rescale = the exposure time. You can also account for exposures taken with a different telescope diameter than the HST 2.4 meter diameter this way.</p>
+<p>Note that <a class="el" href="classgalsim_1_1real_1_1_real_galaxy.html" title="A class describing real galaxies from some training dataset. ">RealGalaxy</a> objects use arcsec for the units of their linear dimension. If you are using a different unit for other things (the PSF, WCS, etc.), then you should dilate the resulting object with <code>gal.dilate(<a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790" title="constant with units of arcseconds ">galsim.arcsec</a> / scale_unit)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">real_galaxy_catalog</td><td>A <a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html" title="Class containing a catalog with information about real galaxy training data. ">RealGalaxyCatalog</a> object with basic information about where to find the data, etc. </td></tr>
@@ -280,12 +285,54 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af63a9bdef0d5a4d1761a20e31666b530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.real.RealGalaxy.__eq__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac1fb7def968a40eb1ea7689d3be4033c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">def galsim.real.RealGalaxy.__getstate__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afccae5514b60b24175b5b2c7c38a70f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.real.RealGalaxy.__hash__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>

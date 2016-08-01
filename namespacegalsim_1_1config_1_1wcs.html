@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -95,17 +96,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1config_1_1wcs_1_1_origin_w_c_s_builder.html">OriginWCSBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A specialization for WCS classes that use a different type depending on whether there is an origin or world_origin parameter in the config dict.  <a href="classgalsim_1_1config_1_1wcs_1_1_origin_w_c_s_builder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1config_1_1wcs_1_1_simple_w_c_s_builder.html">SimpleWCSBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for building simple WCS objects.  <a href="classgalsim_1_1config_1_1wcs_1_1_simple_w_c_s_builder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1config_1_1wcs_1_1_tan_w_c_s_builder.html">TanWCSBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The TanWCS type needs special handling to get the kwargs, since the TanWCS function takes an AffineTransform as one of the arguments, so we need to build that from dudx, dudy, etc.  <a href="classgalsim_1_1config_1_1wcs_1_1_tan_w_c_s_builder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1config_1_1wcs_1_1_w_c_s_builder.html">WCSBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class for building WCS objects.  <a href="classgalsim_1_1config_1_1wcs_1_1_w_c_s_builder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a96ff1f958f93fe52ea1eeeefcb510a77"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1wcs.html#a96ff1f958f93fe52ea1eeeefcb510a77">BuildWCS</a></td></tr>
-<tr class="memdesc:a96ff1f958f93fe52ea1eeeefcb510a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the wcs from the config dict, writing both it and, if it is well-defined, the pixel_scale to the config.  <a href="#a96ff1f958f93fe52ea1eeeefcb510a77">More...</a><br/></td></tr>
+<tr class="memdesc:a96ff1f958f93fe52ea1eeeefcb510a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the wcs parameters from the config dict and return a constructed wcs object.  <a href="#a96ff1f958f93fe52ea1eeeefcb510a77">More...</a><br/></td></tr>
 <tr class="separator:a96ff1f958f93fe52ea1eeeefcb510a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8da9ee0d1efc98eaa9e9225249d93b9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1wcs.html#ab8da9ee0d1efc98eaa9e9225249d93b9">TanWCSBuilder</a></td></tr>
-<tr class="separator:ab8da9ee0d1efc98eaa9e9225249d93b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f6ff076dc748ab8c4aa0db2c9f908c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1wcs.html#a82f6ff076dc748ab8c4aa0db2c9f908c">RegisterWCSType</a></td></tr>
+<tr class="memdesc:a82f6ff076dc748ab8c4aa0db2c9f908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a wcs type for use by the config apparatus.  <a href="#a82f6ff076dc748ab8c4aa0db2c9f908c">More...</a><br/></td></tr>
+<tr class="separator:a82f6ff076dc748ab8c4aa0db2c9f908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4b7b2226313acd67dff6a30a55893853"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1wcs.html#a4b7b2226313acd67dff6a30a55893853">valid_wcs_types</a></td></tr>
+<tr class="memitem:a4b7b2226313acd67dff6a30a55893853"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1config_1_1wcs.html#a4b7b2226313acd67dff6a30a55893853">valid_wcs_types</a> = {}</td></tr>
 <tr class="separator:a4b7b2226313acd67dff6a30a55893853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -117,78 +134,37 @@ Variables</h2></td></tr>
           <td class="memname">def galsim.config.wcs.BuildWCS </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>logger</em> = <code>None</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read the wcs from the config dict, writing both it and, if it is well-defined, the pixel_scale to the config. </p>
-<p>If the wcs does not have a well-defined pixel_scale, it will be stored as None. </p>
+<p>Read the wcs parameters from the config dict and return a constructed wcs object. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab8da9ee0d1efc98eaa9e9225249d93b9"></a>
+<a class="anchor" id="a82f6ff076dc748ab8c4aa0db2c9f908c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.config.wcs.TanWCSBuilder </td>
+          <td class="memname">def galsim.config.wcs.RegisterWCSType </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dudx</em>, </td>
+          <td class="paramname"><em>wcs_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dudy</em>, </td>
+          <td class="paramname"><em>builder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dvdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dvdy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ra</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dec</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>units</em> = <code>'arcsec'</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>origin</em> = <code>galsim.PositionD(0,0</code>&#160;</td>
+          <td class="paramname"><em>input_type</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -197,6 +173,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Register a wcs type for use by the config apparatus. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wcs_type</td><td>The name of the type in config['image']['wcs'] </td></tr>
+    <tr><td class="paramname">builder</td><td>A builder object to use for building the WCS object. It should be an instance of a subclass of <a class="el" href="classgalsim_1_1config_1_1wcs_1_1_w_c_s_builder.html" title="A base class for building WCS objects. ">WCSBuilder</a>. </td></tr>
+    <tr><td class="paramname">input_type</td><td>If the WCS builder utilises an input object, give the key name of the input type here. (If it uses more than one, this may be a list.) [default: None] </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -206,21 +192,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">dictionary galsim.config.wcs.valid_wcs_types</td>
+          <td class="memname">dictionary galsim.config.wcs.valid_wcs_types = {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1config_1_1wcs.html">    1</a></span>&#160;= { </div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;PixelScale&#39;</span> : ( <span class="stringliteral">&#39;galsim.PixelScale&#39;</span>, <span class="stringliteral">&#39;galsim.OffsetWCS&#39;</span> ),</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;Shear&#39;</span> : ( <span class="stringliteral">&#39;galsim.ShearWCS&#39;</span>, <span class="stringliteral">&#39;galsim.OffsetShearWCS&#39;</span> ),</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;Jacobian&#39;</span> : ( <span class="stringliteral">&#39;galsim.JacobianWCS&#39;</span>, <span class="stringliteral">&#39;galsim.AffineTransform&#39;</span> ),</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;Affine&#39;</span> : ( <span class="stringliteral">&#39;galsim.JacobianWCS&#39;</span>, <span class="stringliteral">&#39;galsim.AffineTransform&#39;</span>, ),</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;UVFunction&#39;</span> : ( <span class="stringliteral">&#39;galsim.UVFunction&#39;</span>, <span class="stringliteral">&#39;galsim.UVFunction&#39;</span> ),</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;RaDecFunction&#39;</span> : ( <span class="stringliteral">&#39;galsim.RaDecFunction&#39;</span>, <span class="stringliteral">&#39;galsim.RaDecFunction&#39;</span> ),</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;Fits&#39;</span> : ( <span class="stringliteral">&#39;galsim.FitsWCS&#39;</span>, <span class="stringliteral">&#39;galsim.FitsWCS&#39;</span> ),</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;Tan&#39;</span> : ( <span class="stringliteral">&#39;TanWCSBuilder&#39;</span>, <span class="stringliteral">&#39;TanWCSBuilder&#39;</span> ),</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

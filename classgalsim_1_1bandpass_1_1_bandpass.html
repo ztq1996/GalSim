@@ -144,16 +144,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab161b7c3dc98365d088f3a53e2e9831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac21a719237bf3c55864486dbf3997aea"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#ac21a719237bf3c55864486dbf3997aea">__ne__</a></td></tr>
 <tr class="separator:ac21a719237bf3c55864486dbf3997aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2e423e419cac65d9bc782444ae9ca0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a3f2e423e419cac65d9bc782444ae9ca0">__getstate__</a></td></tr>
-<tr class="separator:a3f2e423e419cac65d9bc782444ae9ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42f478ae06537dd586dbad55db6d1512"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a42f478ae06537dd586dbad55db6d1512">__setstate__</a></td></tr>
-<tr class="separator:a42f478ae06537dd586dbad55db6d1512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6293ca325eee251c6d66132d9308fec7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a6293ca325eee251c6d66132d9308fec7">__hash__</a></td></tr>
+<tr class="separator:a6293ca325eee251c6d66132d9308fec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa366868767642e0a67cf8b2e619dfa4d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#aa366868767642e0a67cf8b2e619dfa4d">__repr__</a></td></tr>
 <tr class="separator:aa366868767642e0a67cf8b2e619dfa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12036b7d6ac1926c93a9528b13711da6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a12036b7d6ac1926c93a9528b13711da6">__str__</a></td></tr>
 <tr class="separator:a12036b7d6ac1926c93a9528b13711da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6293ca325eee251c6d66132d9308fec7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a6293ca325eee251c6d66132d9308fec7">__hash__</a></td></tr>
-<tr class="separator:a6293ca325eee251c6d66132d9308fec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2e423e419cac65d9bc782444ae9ca0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a3f2e423e419cac65d9bc782444ae9ca0">__getstate__</a></td></tr>
+<tr class="separator:a3f2e423e419cac65d9bc782444ae9ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f478ae06537dd586dbad55db6d1512"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a42f478ae06537dd586dbad55db6d1512">__setstate__</a></td></tr>
+<tr class="separator:a42f478ae06537dd586dbad55db6d1512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -189,15 +189,15 @@ Public Attributes</h2></td></tr>
 <li>a file from which a LookupTable can be read in</li>
 <li>a string which can be evaluated into a function of <code>wave</code> via `eval('lambda wave : '+throughput)` e.g. throughput = '0.8 + 0.2 * (wave-800)'</li>
 </ol>
-<p>The argument of <code>throughput</code> will be the wavelength in either nanometers (default) or Angstroms depending on the value of <code>wave_type</code>. The output should be the dimensionless throughput at that wavelength. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.)</p>
+<p>The argument of <code>throughput</code> will be the wavelength in either nanometers or Angstroms depending on the value of <code>wave_type</code>. The output should be the dimensionless throughput at that wavelength. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.)</p>
 <p>The argument <code>wave_type</code> specifies the units to assume for wavelength and must be one of 'nm', 'nanometer', 'nanometers', 'A', 'Ang', 'Angstrom', or 'Angstroms'. Text case here is unimportant. If these wavelength options are insufficient, please submit an issue to the GalSim github issues page: <a href="https://github.com/GalSim-developers/GalSim/issues">https://github.com/GalSim-developers/GalSim/issues</a></p>
 <p>Note that the <code>wave_type</code> parameter does not propagate into other methods of <code><a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a></code>. For instance, <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a2b71784d78902a5955315382b4569d40" title="Return dimensionless throughput of bandpass at given wavelength in nanometers. ">Bandpass.__call__</a> assumes its input argument is in nanometers.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">throughput</td><td>Function defining the throughput at each wavelength. See above for valid options for this parameter. </td></tr>
+    <tr><td class="paramname">wave_type</td><td>The units to use for the wavelength argument of the <code>throughput</code> function. See above for details. </td></tr>
     <tr><td class="paramname">blue_limit</td><td>Hard cut off of bandpass on the blue side. [default: None, but required if throughput is not a LookupTable or file. See above.] </td></tr>
     <tr><td class="paramname">red_limit</td><td>Hard cut off of bandpass on the red side. [default: None, but required if throughput is not a LookupTable or file. See above.] </td></tr>
-    <tr><td class="paramname">wave_type</td><td>The units to use for the wavelength argument of the <code>throughput</code> function. See above for details. [default: 'nm'] </td></tr>
     <tr><td class="paramname">zeropoint</td><td>Set the zero-point for this <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a>. Here, this can only be a float value. See the method <code>withZeroPoint</code> for other options for how to set this using a particular spectrum (AB, Vega, etc.) [default: None] </td></tr>
   </table>
   </dd>
@@ -223,6 +223,12 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>wave_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>blue_limit</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -230,12 +236,6 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>red_limit</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wave_type</em> = <code>'nm'</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -635,7 +635,25 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>preserve_range</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>trim_zeros</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>preserve_range</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fast_search</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>preserve_zp</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -648,10 +666,14 @@ Public Attributes</h2></td></tr>
 <p>Thin out the internal wavelengths of a <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> that uses a LookupTable. </p>
 <p>If the bandpass was initialized with a LookupTable or from a file (which internally creates a LookupTable), this function removes tabulated values while keeping the integral over the set of tabulated values still accurate to the given relative error.</p>
 <p>That is, the integral of the bandpass function is preserved to a relative precision of <code>rel_err</code>, while eliminating as many internal wavelength values as possible. This process will usually help speed up integrations using this bandpass. You should weigh the speed improvements against your fidelity requirements for your particular use case.</p>
+<p>By default, this routine will preserve the zeropoint of the original bandpass by assigning it to the new thinned bandpass. The justification for this choice is that when using an AB zeropoint, a typical optical bandpass, and the default thinning <code>rel_err</code> value, the zeropoint for the new and thinned bandpasses changes by 10^-6. However, if you are thinning a lot, and/or want to do extremely precise tests, you can set <code>preserve_zp=False</code> and then recalculate the zeropoint after thinning.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the throughput function. [default: 1.e-4] </td></tr>
-    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: False]</td></tr>
+    <tr><td class="paramname">trim_zeros</td><td>Remove redundant leading and trailing points where f=0? (The last leading point with f=0 and the first trailing point with f=0 will be retained). Note that if both trim_leading_zeros and preserve_range are True, then the only the range of <code>x</code> <em>after</em> zero trimming is preserved. [default: True] </td></tr>
+    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: True] </td></tr>
+    <tr><td class="paramname">fast_search</td><td>If set to True, then the underlying algorithm will use a relatively fast O(N) algorithm to select points to include in the thinned approximation. If set to False, then a slower O(N^2) algorithm will be used. We have found that the slower algorithm tends to yield a thinned representation that retains fewer samples while still meeting the relative error requirement, and may also be somewhat more robust when computing SED fluxes through Bandpasses when a significant fraction of the integrated flux passes through low throughput bandpass light leaks. [default: True] </td></tr>
+    <tr><td class="paramname">preserve_zp</td><td>If True, the new thinned <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> will be assigned the same zeropoint as the original. If False, the new thinned <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> will have a zeropoint of None. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
@@ -685,7 +707,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>relative_throughput</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>relative_throughput</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>preserve_zp</em> = <code>'auto'</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -699,11 +727,13 @@ Public Attributes</h2></td></tr>
 <p>This function truncate the range of the bandpass either explicitly (with <code>blue_limit</code> or <code>red_limit</code> or both) or automatically, just trimming off leading and trailing wavelength ranges where the relative throughput is less than some amount (<code>relative_throughput</code>).</p>
 <p>This second option using relative_throughput is only available for bandpasses initialized with a LookupTable or from a file, not when using a regular python function or a string evaluation.</p>
 <p>This function does not remove any intermediate wavelength ranges, but see <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html#a20a7b1813506e7441e03ef097f0d5bf1" title="Thin out the internal wavelengths of a Bandpass that uses a LookupTable. ">thin()</a> for a method that can thin out the intermediate values.</p>
+<p>When truncating a bandpass that already has an assigned zeropoint, there are several possibilities for what should happen to the new (returned) bandpass by default. If red and/or blue limits are given, then the new bandpass will have no assigned zeropoint because it is difficult to predict what should happen if the bandpass is being arbitrarily truncated. If <code>relative_throughput</code> is given, often corresponding to low-level truncation that results in little change in observed quantities, then the new bandpass is assigned the same zeropoint as the original. This default behavior is called 'auto'. The user can also give boolean True or False values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blue_limit</td><td>Truncate blue side of bandpass here. [default: None] </td></tr>
-    <tr><td class="paramname">red_limit</td><td>Truncate red side of bandpass here. [default: None] </td></tr>
-    <tr><td class="paramname">relative_throughput</td><td>Truncate leading or trailing wavelengths that are below this relative throughput level. (See above for details.) [default: None]</td></tr>
+    <tr><td class="paramname">blue_limit</td><td>Truncate blue side of bandpass at this wavelength in nm. [default: None] </td></tr>
+    <tr><td class="paramname">red_limit</td><td>Truncate red side of bandpass at this wavelength in nm. [default: None] </td></tr>
+    <tr><td class="paramname">relative_throughput</td><td>Truncate leading or trailing wavelengths that are below this relative throughput level. (See above for details.) Either <code>blue_limit</code> and/or <code>red_limit</code> should be supplied, or <code>relative_throughput</code> should be supplied &ndash; but <code>relative_throughput</code> should not be combined with one of the limits. [default: None] </td></tr>
+    <tr><td class="paramname">preserve_zp</td><td>If True, the new truncated <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> will be assigned the same zeropoint as the original. If False, the new truncated <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> will have a zeropoint of None. If 'auto', the new truncated <a class="el" href="classgalsim_1_1bandpass_1_1_bandpass.html" title="Simple bandpass object, which models the transmission fraction of incident light as a function of wav...">Bandpass</a> will have the same zeropoint as the original when truncating using <code>relative_throughput</code>, but will have a zeropoint of None when truncating using 'blue_limit' and/or 'red_limit'. [default: 'auto']</td></tr>
   </table>
   </dd>
 </dl>

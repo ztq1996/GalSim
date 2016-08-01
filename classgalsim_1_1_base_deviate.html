@@ -155,6 +155,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a0fc520933ed8ce5a80fe1396cea553"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a8a0fc520933ed8ce5a80fe1396cea553">clearCache</a> ()</td></tr>
 <tr class="memdesc:a8a0fc520933ed8ce5a80fe1396cea553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal cache of the rng object.  <a href="#a8a0fc520933ed8ce5a80fe1396cea553">More...</a><br/></td></tr>
 <tr class="separator:a8a0fc520933ed8ce5a80fe1396cea553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627a0f44a93de5313b42c49143a00e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a627a0f44a93de5313b42c49143a00e2f">discard</a> (int n)</td></tr>
+<tr class="memdesc:a627a0f44a93de5313b42c49143a00e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard some number of values from the random number generator.  <a href="#a627a0f44a93de5313b42c49143a00e2f">More...</a><br/></td></tr>
+<tr class="separator:a627a0f44a93de5313b42c49143a00e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2320b2f5b80caead4ddda97c121568"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#aca2320b2f5b80caead4ddda97c121568">raw</a> ()</td></tr>
+<tr class="memdesc:aca2320b2f5b80caead4ddda97c121568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a random value in its raw form as a long integer.  <a href="#aca2320b2f5b80caead4ddda97c121568">More...</a><br/></td></tr>
+<tr class="separator:aca2320b2f5b80caead4ddda97c121568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d45ced1fcc88f5a9b9fec70f845e05"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#a56d45ced1fcc88f5a9b9fec70f845e05">operator()</a> ()</td></tr>
 <tr class="memdesc:a56d45ced1fcc88f5a9b9fec70f845e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a56d45ced1fcc88f5a9b9fec70f845e05">More...</a><br/></td></tr>
 <tr class="separator:a56d45ced1fcc88f5a9b9fec70f845e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,6 +299,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a627a0f44a93de5313b42c49143a00e2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::discard </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discard some number of values from the random number generator. </p>
+
+</div>
+</div>
 <a class="anchor" id="a24ad76f1ae74197b900cb4abbaf93dc6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -326,6 +350,23 @@ Public Member Functions</h2></td></tr>
 
 <p>Draw a new random number from the distribution. </p>
 <p>This is invalid for a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object that is not a derived class. However, we don't make it pure virtual, since we want to be able to make <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> objects a direct way to define a common seed for other Deviates. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca2320b2f5b80caead4ddda97c121568"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long galsim::BaseDeviate::raw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a random value in its raw form as a long integer. </p>
 
 </div>
 </div>

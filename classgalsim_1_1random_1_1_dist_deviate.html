@@ -130,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4f2db2111f2b23ea51db19d5b4bf4f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ddf83122de4feaf4c0a385c5edeb57"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html#a39ddf83122de4feaf4c0a385c5edeb57">__str__</a></td></tr>
 <tr class="separator:a39ddf83122de4feaf4c0a385c5edeb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4a9fd2bbd4278c8404c066b5030dfd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html#a2a4a9fd2bbd4278c8404c066b5030dfd">__eq__</a></td></tr>
+<tr class="separator:a2a4a9fd2bbd4278c8404c066b5030dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38084636fbcf77ce6f3fb3dbc565544b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html#a38084636fbcf77ce6f3fb3dbc565544b">__getinitargs__</a></td></tr>
 <tr class="separator:a38084636fbcf77ce6f3fb3dbc565544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -142,7 +144,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to draw random numbers from a user-defined probability distribution. </p>
-<p><a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> is a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> class that can be used to draw from an arbitrary probability distribution. The probability distribution passed to <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> can be given one of three ways: as the name of a file containing a 2d ASCII array of x and P(x) or as a callable function.</p>
+<p><a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> is a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> class that can be used to draw from an arbitrary probability distribution. The probability distribution passed to <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> can be given one of three ways: as the name of a file containing a 2d ASCII array of x and P(x), as a LookupTable mapping x to P(x), or as a callable function.</p>
 <p>Once given a probability, <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> creates a table of the cumulative probability and draws from it using a <a class="el" href="classgalsim_1_1_uniform_deviate.html" title="Pseudo-random number generator with uniform distribution in interval [0.,1.). ">UniformDeviate</a>. The precision of its outputs can be controlled with the keyword <code>npoints</code>, which sets the number of points <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> creates for its internal table of CDF(x). To prevent errors due to non-monotonicity, the interpolant for this internal table is always linear.</p>
 <p>Two keywords, <code>x_min</code> and <code>x_max</code>, define the support of the function. They must be passed if a callable function is given to <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a>, unless the function is a LookupTable, which has its own defined endpoints. If a filename or LookupTable is passed to <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a>, the use of <code>x_min</code> or <code>x_max</code> will result in an error.</p>
 <p>If given a table in a file, <a class="el" href="classgalsim_1_1random_1_1_dist_deviate.html" title="A class to draw random numbers from a user-defined probability distribution. ">DistDeviate</a> will construct an interpolated LookupTable to obtain more finely gridded probabilities for generating the cumulative probability table. The default <code>interpolant</code> is linear, but any interpolant understood by LookupTable may be used. We caution against the use of splines because they can cause non-monotonic behavior. Passing the <code>interpolant</code> keyword next to anything but a table in a file will result in an error.</p>
@@ -156,7 +158,7 @@ Public Attributes</h2></td></tr>
 </blockquote>
 </blockquote>
 <pre class="fragment"> Initializes d to be a DistDeviate instance with a distribution given by the callable function
- `f(x)` from `x=x_min` to `x=x_max` and seeds the PRNG using current time.  
+ `f(x)` from `x=x_min` to `x=x_max` and seeds the PRNG using current time.
 </pre><blockquote class="doxtable">
 <blockquote class="doxtable">
 <blockquote class="doxtable">
@@ -178,19 +180,19 @@ Public Attributes</h2></td></tr>
  arrays `x` and `p` which are used to make a callable LookupTable, and links the DistDeviate
  PRNG to the already-existing random number generator `rng`.
 
- @param seed         Something that can seed a BaseDeviate: a long int seed or another 
+ @param seed         Something that can seed a BaseDeviate: a long int seed or another
                      BaseDeviate.  Using 0 means to generate a seed from the system. [default: 0]
- @param function     A callable function giving a probability distribution or the name of a 
+ @param function     A callable function giving a probability distribution or the name of a
                      file containing a probability distribution as a 2-column ASCII table.
-                     [default: None]
+                     [required]
  @param x_min        The minimum desired return value (required for non-LookupTable
                      callable functions; will raise an error if not passed in that case, or if
                      passed in any other case) [default: None]
  @param x_min        The maximum desired return value (required for non-LookupTable
                      callable functions; will raise an error if not passed in that case, or if
                      passed in any other case) [default: None]
- @param interpolant  Type of interpolation used for interpolating a file (causes an error if 
-                     passed alongside a callable function).  Options are given in the 
+ @param interpolant  Type of interpolation used for interpolating a file (causes an error if
+                     passed alongside a callable function).  Options are given in the
                      documentation for LookupTable. [default: 'linear']
  @param npoints      Number of points DistDeviate should create for its internal interpolation
                      tables. [default: 256]
@@ -311,6 +313,32 @@ Public Attributes</h2></td></tr>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a4a9fd2bbd4278c8404c066b5030dfd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.random.DistDeviate.__eq__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

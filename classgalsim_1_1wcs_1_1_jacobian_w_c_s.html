@@ -549,7 +549,7 @@ v = dvdx x + dvdy y
 <pre class="fragment">M = P Q
 </pre><p>In our case, P includes an overall scale and a shear, and Q is a rotation and possibly a flip of (x,y) -&gt; (y,x). </p>
 <pre class="fragment">( dudx  dudy ) = scale/sqrt(1-g1^2-g2^2) ( 1+g1  g2  ) ( cos(theta)  -sin(theta) ) F
-( dvdx  dvdy )                           (  g2  1-g2 ) ( sin(theta)   cos(theta) )
+( dvdx  dvdy )                           (  g2  1-g1 ) ( sin(theta)   cos(theta) )
 </pre><p>where F is either the identity matrix, ( 1 0 ), or a flip matrix, ( 0 1 ). ( 0 1 ) ( 1 0 )</p>
 <p>If there is no flip, then this means that the effect of </p>
 <pre class="fragment">&gt;&gt;&gt; prof.transform(dudx, dudy, dvdx, dvdy)

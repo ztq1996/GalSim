@@ -725,7 +725,7 @@ argument, or as an image method: `image.write(...)`.
 <p>The details of how the images are written to file depends on the arguments.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image_list</td><td>A Python list of Images. </td></tr>
+    <tr><td class="paramname">image_list</td><td>A Python list of Images. (For convenience, some items in this list may be HDUs already. Any Images will be converted into pyfits HDUs.) </td></tr>
     <tr><td class="paramname">file_name</td><td>The name of the file to write to. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>
     <tr><td class="paramname">dir</td><td>Optionally a directory name can be provided if <code>file_name</code> does not already include it. [default: None] </td></tr>
     <tr><td class="paramname">hdu_list</td><td>A pyfits HDUList. If this is provided instead of <code>file_name</code>, then the image is appended to the end of the HDUList as a new HDU. In that case, the user is responsible for calling either <code>hdu_list.writeto(...)</code> or <code><a class="el" href="namespacegalsim_1_1fits.html#a66d9a3d0597dc3b9304ab2ac447f1c81" title="Write a Pyfits hdu_list to a FITS file, taking care of the GalSim compression options. ">galsim.fits.writeFile</a>(...)</code> afterwards. [Either <code>file_name</code> or <code>hdu_list</code> is required.] </td></tr>

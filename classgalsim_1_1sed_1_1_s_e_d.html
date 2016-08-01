@@ -161,16 +161,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a796a558a9a3b737337df053f53f951f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24de3a599789bae18a97415f4b603be6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a24de3a599789bae18a97415f4b603be6">__ne__</a></td></tr>
 <tr class="separator:a24de3a599789bae18a97415f4b603be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0614bf8ff787ca3467341b04d676622d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a0614bf8ff787ca3467341b04d676622d">__getstate__</a></td></tr>
-<tr class="separator:a0614bf8ff787ca3467341b04d676622d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16a84aadfa175776f7b37f06d7673bf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#af16a84aadfa175776f7b37f06d7673bf">__setstate__</a></td></tr>
-<tr class="separator:af16a84aadfa175776f7b37f06d7673bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca12a18654758d53a89597531411271"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a8ca12a18654758d53a89597531411271">__hash__</a></td></tr>
+<tr class="separator:a8ca12a18654758d53a89597531411271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab227398169b4fdb91e40c330e6878f0e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ab227398169b4fdb91e40c330e6878f0e">__repr__</a></td></tr>
 <tr class="separator:ab227398169b4fdb91e40c330e6878f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e0ee804af9d1c83704503899b02586"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a49e0ee804af9d1c83704503899b02586">__str__</a></td></tr>
 <tr class="separator:a49e0ee804af9d1c83704503899b02586"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca12a18654758d53a89597531411271"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a8ca12a18654758d53a89597531411271">__hash__</a></td></tr>
-<tr class="separator:a8ca12a18654758d53a89597531411271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0614bf8ff787ca3467341b04d676622d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a0614bf8ff787ca3467341b04d676622d">__getstate__</a></td></tr>
+<tr class="separator:a0614bf8ff787ca3467341b04d676622d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16a84aadfa175776f7b37f06d7673bf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#af16a84aadfa175776f7b37f06d7673bf">__setstate__</a></td></tr>
+<tr class="separator:af16a84aadfa175776f7b37f06d7673bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -203,7 +203,7 @@ Public Attributes</h2></td></tr>
 <li>a file from which a LookupTable can be read in</li>
 <li>a string which can be evaluated into a function of <code>wave</code> via `eval('lambda wave : '+spec) e.g. spec = '0.8 + 0.2 * (wave-800)`</li>
 </ol>
-<p>The argument of <code>spec</code> will be the wavelength in either nanometers (default) or Angstroms depending on the value of <code>wave_type</code>. The output should be the flux density at that wavelength. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.)</p>
+<p>The argument of <code>spec</code> will be the wavelength in either nanometers or Angstroms depending on the value of <code>wave_type</code>. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.) The output should be the flux density at that wavelength, defined according to one of the <code>flux_type</code> options below.</p>
 <p>The argument <code>wave_type</code> specifies the units to assume for wavelength and must be one of 'nm', 'nanometer', 'nanometers', 'A', 'Ang', 'Angstrom', or 'Angstroms'. Text case here is unimportant. If these wavelength options are insufficient, please submit an issue to the GalSim github issues page: <a href="https://github.com/GalSim-developers/GalSim/issues">https://github.com/GalSim-developers/GalSim/issues</a></p>
 <p>The argument <code>flux_type</code> specifies the type of spectral density and must be one of:</p>
 <ol type="1">
@@ -215,8 +215,8 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spec</td><td>Function defining the z=0 spectrum at each wavelength. See above for valid options for this parameter. </td></tr>
-    <tr><td class="paramname">wave_type</td><td>String specifying units for wavelength input to <code>spec</code>. [default: 'nm'] </td></tr>
-    <tr><td class="paramname">flux_type</td><td>String specifying what type of spectral density <code>spec</code> represents. See above for valid options for this parameter. [default: 'flambda'] </td></tr>
+    <tr><td class="paramname">wave_type</td><td>String specifying units for wavelength input to <code>spec</code>. </td></tr>
+    <tr><td class="paramname">flux_type</td><td>String specifying what type of spectral density <code>spec</code> represents. See above for valid options for this parameter. </td></tr>
     <tr><td class="paramname">redshift</td><td>Optionally shift the spectrum to the given redshift. [default: 0] </td></tr>
   </table>
   </dd>
@@ -242,13 +242,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wave_type</em> = <code>'nm'</code>, </td>
+          <td class="paramname"><em>wave_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flux_type</em> = <code>'flambda'</code>, </td>
+          <td class="paramname"><em>flux_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -867,7 +867,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>preserve_range</em> = <code>False</code>&#160;</td>
+          <td class="paramname"><em>trim_zeros</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>preserve_range</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fast_search</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -881,7 +893,9 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> [default: 1.e-4] </td></tr>
-    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: False]</td></tr>
+    <tr><td class="paramname">trim_zeros</td><td>Remove redundant leading and trailing points where f=0? (The last leading point with f=0 and the first trailing point with f=0 will be retained). Note that if both trim_leading_zeros and preserve_range are True, then the only the range of <code>x</code> <em>after</em> zero trimming is preserved. [default: True] </td></tr>
+    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: True] </td></tr>
+    <tr><td class="paramname">fast_search</td><td>If set to True, then the underlying algorithm will use a relatively fast O(N) algorithm to select points to include in the thinned approximation. If set to False, then a slower O(N^2) algorithm will be used. We have found that the slower algorithm tends to yield a thinned representation that retains fewer samples while still meeting the relative error requirement. [default: True]</td></tr>
   </table>
   </dd>
 </dl>

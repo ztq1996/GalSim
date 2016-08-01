@@ -121,7 +121,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>thin_err</em> = <code>1.e-4</code>&#160;</td>
+          <td class="paramname"><em>default_thin_trunc</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -138,7 +144,7 @@ Functions</h2></td></tr>
 <li>There is a column called 'Wave', containing the wavelengths in microns.</li>
 <li>The other columns are labeled by the name of the bandpass.</li>
 </ul>
-<p>Currently the bandpasses are not truncated. We leave it to the user to decide whether they wish to truncate after getting the bandpasses, and the <code>thin_err</code> keyword allows the user to choose the relative errors allowed when thinning.</p>
+<p>The bandpasses can be either truncated or thinned before setting the zero points, by passing in the keyword arguments that need to get propagated through to the Bandpass.thin() and/or Bandpass.truncate() routines. Or, if the user wishes to thin and truncate using the defaults for those two routines, they can use <code>default_thin_trunc=True</code>. This option is the default, because the stored 'official' versions of the bandpasses cover a wide wavelength range. So even if thinning is not desired, truncation is recommended.</p>
 <p>By default, the routine will set an AB zeropoint using the WFIRST effective diameter and default exposure time. Setting the zeropoint can be avoided by setting <code>AB_zeropoint=False</code>; changing the exposure time that is used for the zeropoint calculation can be used by setting the <code>exptime</code> keyword.</p>
 <p>This routine also loads information about sky backgrounds in each filter, to be used by the <a class="el" href="namespacegalsim_1_1wfirst_1_1wfirst__backgrounds.html#ab19e0a6dcae6bf5a3cfce404ca0f9d66" title="Get the expected sky level for a WFIRST observation due to zodiacal light for this bandpass and posit...">galsim.wfirst.getSkyLevel()</a> routine. The sky background information is saved as an attribute in each Bandpass object.</p>
 <p>There are some subtle points related to the filter edges, which seem to depend on the field angle at some level. This is more important for the grism than for the imaging, so currently this effect is not included in the WFIRST bandpasses in GalSim.</p>
@@ -149,7 +155,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">AB_zeropoint</td><td>Should the routine set an AB zeropoint before returning the bandpass? If False, then it is up to the user to set a zero point. [default: True] </td></tr>
     <tr><td class="paramname">exptime</td><td>Exposure time to use for setting the zeropoint; if None, use the default WFIRST exposure time, taken from <a class="el" href="namespacegalsim_1_1wfirst.html#a7d4210eff8c0ef58204f23d87a58c433">galsim.wfirst.exptime</a>. [default: None] </td></tr>
-    <tr><td class="paramname">thin_err</td><td>Relative error allowed when thinning the bandpasses. [default: 1e-4]</td></tr>
+    <tr><td class="paramname">default_thin_trunc</td><td>Use the default thinning and truncation options? Users who wish to use no thinning and truncation of bandpasses, or who want control over the level of thinning and truncation, should have this be False. [default: True]  **kwargs Other kwargs are passed to either <code>bandpass.thin()</code> or <code>bandpass.truncate()</code> as appropriate.</td></tr>
   </table>
   </dd>
 </dl>

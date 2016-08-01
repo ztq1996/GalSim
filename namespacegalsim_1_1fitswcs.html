@@ -260,18 +260,18 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    <span class="comment"># TAN projection, and also TPV, which is used by SCamp.  If it does work, it </span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                    <span class="comment"># is a good choice, since it is easily the fastest of any of these.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    AstropyWCS,     <span class="comment"># This requires `import astropy.wcs` to succeed.  So far, they only handle</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    <span class="comment"># the standard official WCS types.  So not TPV, for instance.  Also, it is</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                    <span class="comment"># a little faster than PyAst, so we prefer PyAst when it is available.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                    <span class="comment"># (But only because of our fix in the _xy function to not use the astropy</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                    <span class="comment"># version of all_world2pix function!)</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    PyAstWCS,       <span class="comment"># This requires `import starlink.Ast` to succeed.  This handles the largest</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                    <span class="comment"># number of WCS types of any of these.  In fact, it worked for every one</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                    <span class="comment"># we tried in our unit tests (which was not exhaustive).  This is a bit </span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                    <span class="comment"># slower than Astropy, but I think mostly due to their initial reading of </span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <span class="comment"># the fits header -- that seems to take a lot of time for some reason.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    <span class="comment"># Once it is loaded, the actual usage seems to be quite fast.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    PyAstWCS,       <span class="comment"># This requires `import starlink.Ast` to succeed.  This handles the largest</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    <span class="comment"># number of WCS types of any of these.  In fact, it worked for every one</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                    <span class="comment"># we tried in our unit tests (which was not exhaustive).  This is a bit </span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                    <span class="comment"># slower than Astropy, but I think mostly due to their initial reading of </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                    <span class="comment"># the fits header -- that seems to take a lot of time for some reason.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                    <span class="comment"># Once it is loaded, the actual usage seems to be quite fast.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    AstropyWCS,     <span class="comment"># This requires `import astropy.wcs` to succeed.  So far, they only handle</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                    <span class="comment"># the standard official WCS types.  So not TPV, for instance.  Also, it is</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                    <span class="comment"># a little faster than PyAst, so we prefer PyAst when it is available.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <span class="comment"># (But only because of our fix in the _xy function to not use the astropy</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    <span class="comment"># version of all_world2pix function!)</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    WcsToolsWCS,    <span class="comment"># This requires the wcstool command line functions to be installed.</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    <span class="comment"># It is very slow, so it should only be used as a last resort.</span></div>

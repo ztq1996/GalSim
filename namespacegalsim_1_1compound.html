@@ -109,6 +109,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html">Deconvolution</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for deconvolving a GSObject.  <a href="classgalsim_1_1compound_1_1_deconvolution.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_fourier_sqrt_profile.html">FourierSqrtProfile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for computing the Fourier-space sqrt of a GSObject.  <a href="classgalsim_1_1compound_1_1_fourier_sqrt_profile.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1compound_1_1_sum.html">Sum</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for adding 2 or more GSObject instances.  <a href="classgalsim_1_1compound_1_1_sum.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1ae9ed61c71a77efb3fa9865e0e0e43c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1compound.html#a1ae9ed61c71a77efb3fa9865e0e0e43c">AutoCorrelate</a></td></tr>
 <tr class="memdesc:a1ae9ed61c71a77efb3fa9865e0e0e43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function for autocorrelating either a GSObject or ChromaticObject.  <a href="#a1ae9ed61c71a77efb3fa9865e0e0e43c">More...</a><br/></td></tr>
 <tr class="separator:a1ae9ed61c71a77efb3fa9865e0e0e43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1561b25b229a3f923c363db7954446b6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1compound.html#a1561b25b229a3f923c363db7954446b6">FourierSqrt</a></td></tr>
+<tr class="memdesc:a1561b25b229a3f923c363db7954446b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function for computing the Fourier-space square root of either a GSObject or ChromaticObject.  <a href="#a1561b25b229a3f923c363db7954446b6">More...</a><br/></td></tr>
+<tr class="separator:a1561b25b229a3f923c363db7954446b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ad3f305087db1b740376666d9c022d94e"></a>
@@ -337,6 +343,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1compound_1_1_deconvolution.html" title="A class for deconvolving a GSObject. ">Deconvolution</a> or ChromaticDeconvolution instance as appropriate. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1561b25b229a3f923c363db7954446b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.compound.FourierSqrt </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A function for computing the Fourier-space square root of either a GSObject or ChromaticObject. </p>
+<p>The FourierSqrt function is principally used for doing an optimal coaddition algorithm originally developed by Nick Kaiser (but unpublished) and also described by Zackay &amp; Ofek 2015 (<a href="http://adsabs.harvard.edu/abs/2015arXiv151206879Z">http://adsabs.harvard.edu/abs/2015arXiv151206879Z</a>). See the script make_coadd.py in the GalSim/examples directory for an example of how it works.</p>
+<p>This function will inspect its input argument to decide if a <a class="el" href="classgalsim_1_1compound_1_1_fourier_sqrt_profile.html" title="A class for computing the Fourier-space sqrt of a GSObject. ">FourierSqrtProfile</a> object or a ChromaticFourierSqrtProfile object is required to represent the operation applied to a surface brightness profile.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The object to compute the Fourier-space square root of. </td></tr>
+    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1compound_1_1_fourier_sqrt_profile.html" title="A class for computing the Fourier-space sqrt of a GSObject. ">FourierSqrtProfile</a> or ChromaticFourierSqrtProfile instance as appropriate. </dd></dl>
 
 </div>
 </div>

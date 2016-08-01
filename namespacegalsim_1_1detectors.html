@@ -105,6 +105,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeecb90af8bf9f48b7713defd5694f049"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#aeecb90af8bf9f48b7713defd5694f049">applyIPC</a></td></tr>
 <tr class="memdesc:aeecb90af8bf9f48b7713defd5694f049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect of interpixel capacitance to the Image instance.  <a href="#aeecb90af8bf9f48b7713defd5694f049">More...</a><br/></td></tr>
 <tr class="separator:aeecb90af8bf9f48b7713defd5694f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41cd399afc79c3bc3c2a5111e4707589"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#a41cd399afc79c3bc3c2a5111e4707589">applyPersistence</a></td></tr>
+<tr class="memdesc:a41cd399afc79c3bc3c2a5111e4707589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effects of persistence to the Image instance.  <a href="#a41cd399afc79c3bc3c2a5111e4707589">More...</a><br/></td></tr>
+<tr class="separator:a41cd399afc79c3bc3c2a5111e4707589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e4fee9bf7799384cecd686b7dd0055"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1detectors.html#aa6e4fee9bf7799384cecd686b7dd0055">quantize</a></td></tr>
 <tr class="memdesc:aa6e4fee9bf7799384cecd686b7dd0055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds the pixel values in an image to integer values, while preserving the type of the data.  <a href="#aa6e4fee9bf7799384cecd686b7dd0055">More...</a><br/></td></tr>
 <tr class="separator:aa6e4fee9bf7799384cecd686b7dd0055"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +294,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a41cd399afc79c3bc3c2a5111e4707589"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.detectors.applyPersistence </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>imgs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coeffs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the effects of persistence to the Image instance. </p>
+<p>Persistence refers to the retention of a small fraction of the signal after resetting the imager pixel elements. The persistence signal of a previous exposure is left in the pixel even after several detector resets. This effect is most likely due to charge traps in the material. Laboratory tests on the WFIRST CMOS detectors show that if exposures and readouts are taken in a fixed cadence, the persistence signal can be given as a linear combination of prior pixel values that can be added to the current image.</p>
+<p>This routine takes in a list of Image instances and adds them to Image weighted by the values passed on to 'coeffs'. The pixel values of the Image instances in the list must correspond to the electron counts before the readout. This routine does NOT keep track of realistic dither patterns. During the image simulation process, the user has to queue a list of previous Image instances (imgs) outside the routine by inserting the latest image in the beginning of the list and deleting the oldest image. The values in 'coeffs' tell how much of each Image is to be added. This usually remains constant in the image generation process.</p>
+<h2>Calling </h2>
+<pre class="fragment">&gt;&gt;&gt; img.applyPersistence(imgs=img_list, coeffs=coeffs_list)
+</pre><p>@ param imgs A list of previous Image instances that still persist. @ param coeffs A list of floats that specifies the retention factors for the corresponding Image instances listed in 'imgs'.</p>
+<p>@ returns None </p>
 
 </div>
 </div>

@@ -115,6 +115,10 @@ Inheritance diagram for galsim.chromatic.ChromaticAiry:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a22e6d56291a70bf6bd335ae097d884da"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a22e6d56291a70bf6bd335ae097d884da">__init__</a></td></tr>
 <tr class="separator:a22e6d56291a70bf6bd335ae097d884da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698049ae5e8f46ad5e28a072252adacc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a698049ae5e8f46ad5e28a072252adacc">__eq__</a></td></tr>
+<tr class="separator:a698049ae5e8f46ad5e28a072252adacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99dd6d52a0ffd34909d3bf7c2ae3c1db"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a99dd6d52a0ffd34909d3bf7c2ae3c1db">__hash__</a></td></tr>
+<tr class="separator:a99dd6d52a0ffd34909d3bf7c2ae3c1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42a34206daa717dd4987102d8418631"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#ac42a34206daa717dd4987102d8418631">__repr__</a></td></tr>
 <tr class="separator:ac42a34206daa717dd4987102d8418631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a84c49394e143949203c260633738cb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a2a84c49394e143949203c260633738cb">__str__</a></td></tr>
@@ -122,12 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e8c78b0c53f0f0cc7a210d870f132b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a2e8c78b0c53f0f0cc7a210d870f132b8">evaluateAtWavelength</a></td></tr>
 <tr class="memdesc:a2e8c78b0c53f0f0cc7a210d870f132b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to directly instantiate a monochromatic instance of this object.  <a href="#a2e8c78b0c53f0f0cc7a210d870f132b8">More...</a><br/></td></tr>
 <tr class="separator:a2e8c78b0c53f0f0cc7a210d870f132b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41eb7ac7fa87202edb39b64f4e756358"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a41eb7ac7fa87202edb39b64f4e756358">__eq__</a></td></tr>
-<tr class="separator:a41eb7ac7fa87202edb39b64f4e756358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4384457822a94f67ee54fdcdf2a919c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a4384457822a94f67ee54fdcdf2a919c6">__ne__</a></td></tr>
 <tr class="separator:a4384457822a94f67ee54fdcdf2a919c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb98cf9b9d437fb24c206190d7c0d45"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#affb98cf9b9d437fb24c206190d7c0d45">__hash__</a></td></tr>
-<tr class="separator:affb98cf9b9d437fb24c206190d7c0d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26cb78568bb6166ff3d1286534787c93"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a26cb78568bb6166ff3d1286534787c93">interpolate</a></td></tr>
 <tr class="memdesc:a26cb78568bb6166ff3d1286534787c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used as a pre-processing step that can expedite image rendering using objects that have to be built up as sums of GSObjects with different parameters at each wavelength, by interpolating between Images at each wavelength instead of making a more costly instantiation of the relevant GSObject at each value of wavelength at which the bandpass is defined.  <a href="#a26cb78568bb6166ff3d1286534787c93">More...</a><br/></td></tr>
 <tr class="separator:a26cb78568bb6166ff3d1286534787c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,14 +189,14 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:aa87080ee208445829e06fc5d72b88996"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#aa87080ee208445829e06fc5d72b88996">scale_unit</a></td></tr>
+<tr class="separator:aa87080ee208445829e06fc5d72b88996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20b2a6b8e896dae6b707199376cdc82f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a20b2a6b8e896dae6b707199376cdc82f">lam_over_diam</a></td></tr>
 <tr class="separator:a20b2a6b8e896dae6b707199376cdc82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af50d3825a8aa7879c03608051b9f5e18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#af50d3825a8aa7879c03608051b9f5e18">lam</a></td></tr>
 <tr class="separator:af50d3825a8aa7879c03608051b9f5e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f8ab8b1d03bd51aad89168fdae4c6e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#a4f8ab8b1d03bd51aad89168fdae4c6e5">kwargs</a></td></tr>
 <tr class="separator:a4f8ab8b1d03bd51aad89168fdae4c6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa87080ee208445829e06fc5d72b88996"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#aa87080ee208445829e06fc5d72b88996">scale_unit</a></td></tr>
-<tr class="separator:aa87080ee208445829e06fc5d72b88996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb7414da5e3b2cc7c8ce1304426c6164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#adb7414da5e3b2cc7c8ce1304426c6164">separable</a></td></tr>
 <tr class="separator:adb7414da5e3b2cc7c8ce1304426c6164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac135e83dc3d4676732548b54a7e0a307"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_airy.html#ac135e83dc3d4676732548b54a7e0a307">wave_list</a></td></tr>
@@ -340,15 +340,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41eb7ac7fa87202edb39b64f4e756358"></a>
+<a class="anchor" id="a698049ae5e8f46ad5e28a072252adacc"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__eq__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticAiry.__eq__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -365,35 +362,22 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="affb98cf9b9d437fb24c206190d7c0d45"></a>
+<a class="anchor" id="a99dd6d52a0ffd34909d3bf7c2ae3c1db"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__hash__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticAiry.__hash__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

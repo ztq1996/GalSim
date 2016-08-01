@@ -98,20 +98,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_m_e_d_s_builder.html">MEDSBuilder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html">MultiExposureObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class containing exposures for single object, along with other information.  <a href="classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a93d6c092f2e9098e0b142f45798bba9c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a93d6c092f2e9098e0b142f45798bba9c">write_meds</a></td></tr>
-<tr class="memdesc:a93d6c092f2e9098e0b142f45798bba9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the galaxy, weights, segmaps images to a MEDS file.  <a href="#a93d6c092f2e9098e0b142f45798bba9c">More...</a><br/></td></tr>
-<tr class="separator:a93d6c092f2e9098e0b142f45798bba9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6079c1662c7456527b3eb8ccadb73e24"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a6079c1662c7456527b3eb8ccadb73e24">BuildMEDS</a></td></tr>
-<tr class="memdesc:a6079c1662c7456527b3eb8ccadb73e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a meds file as specified in config.  <a href="#a6079c1662c7456527b3eb8ccadb73e24">More...</a><br/></td></tr>
-<tr class="separator:a6079c1662c7456527b3eb8ccadb73e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a1aee6257d8835a22927b183dc7a246"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a1a1aee6257d8835a22927b183dc7a246">GetNObjForMEDS</a></td></tr>
-<tr class="separator:a1a1aee6257d8835a22927b183dc7a246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b08ef0d7abffd11de9f064eb4eb3a6f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1des_1_1des__meds.html#a1b08ef0d7abffd11de9f064eb4eb3a6f">WriteMEDS</a></td></tr>
+<tr class="memdesc:a1b08ef0d7abffd11de9f064eb4eb3a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a MEDS file from a list of MultiExposureObjects.  <a href="#a1b08ef0d7abffd11de9f064eb4eb3a6f">More...</a><br/></td></tr>
+<tr class="separator:a1b08ef0d7abffd11de9f064eb4eb3a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -131,124 +128,21 @@ Variables</h2></td></tr>
 <tr class="separator:a52294e00d72c743363390e6a7e5a6226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a6079c1662c7456527b3eb8ccadb73e24"></a>
+<a class="anchor" id="a1b08ef0d7abffd11de9f064eb4eb3a6f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.des.des_meds.BuildMEDS </td>
+          <td class="memname">def galsim.des.des_meds.WriteMEDS </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>nproc</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>logger</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_num</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image_num</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj_num</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Build a meds file as specified in config. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the output file. </td></tr>
-    <tr><td class="paramname">config</td><td>A configuration dict. </td></tr>
-    <tr><td class="paramname">nproc</td><td>How many processes to use. [default: 1] </td></tr>
-    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
-    <tr><td class="paramname">file_num</td><td>If given, the current file_num. [default: 0] </td></tr>
-    <tr><td class="paramname">image_num</td><td>If given, the current image_num. [default: 0] </td></tr>
-    <tr><td class="paramname">obj_num</td><td>If given, the current obj_num. [default: 0]</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the time taken to build file </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a1a1aee6257d8835a22927b183dc7a246"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.des.des_meds.GetNObjForMEDS </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_num</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>image_num</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a93d6c092f2e9098e0b142f45798bba9c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.des.des_meds.write_meds </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>obj_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -264,12 +158,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Writes the galaxy, weights, segmaps images to a MEDS file. </p>
+<p>Writes a MEDS file from a list of MultiExposureObjects. </p>
 <h2>Arguments: </h2>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>Name of meds file to be written </td></tr>
     <tr><td class="paramname">obj_list</td><td>List of MultiExposureObjects </td></tr>
+    <tr><td class="paramname">file_name</td><td>Name of meds file to be written </td></tr>
     <tr><td class="paramname">clobber</td><td>Setting <code>clobber=True</code> when <code>file_name</code> is given will silently overwrite existing files. (Default <code>clobber = True</code>.) </td></tr>
   </table>
   </dd>

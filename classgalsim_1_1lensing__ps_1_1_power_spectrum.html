@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2009ebd0aaab64683fcd60ba5b0d8069"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a2009ebd0aaab64683fcd60ba5b0d8069">buildGrid</a></td></tr>
 <tr class="memdesc:a2009ebd0aaab64683fcd60ba5b0d8069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a realization of the current power spectrum on the specified grid.  <a href="#a2009ebd0aaab64683fcd60ba5b0d8069">More...</a><br/></td></tr>
 <tr class="separator:a2009ebd0aaab64683fcd60ba5b0d8069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dde5ca70773d8f57eecb1f5bdb642c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a96dde5ca70773d8f57eecb1f5bdb642c">nRandCallsForBuildGrid</a></td></tr>
+<tr class="memdesc:a96dde5ca70773d8f57eecb1f5bdb642c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of times the rng() was called the last time buildGrid was called.  <a href="#a96dde5ca70773d8f57eecb1f5bdb642c">More...</a><br/></td></tr>
+<tr class="separator:a96dde5ca70773d8f57eecb1f5bdb642c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad312cc52f9a3b4ea51221b16b01ffbe8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#ad312cc52f9a3b4ea51221b16b01ffbe8">subsampleGrid</a></td></tr>
 <tr class="memdesc:ad312cc52f9a3b4ea51221b16b01ffbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to use a regular subset of the grid points without a completely new call to <a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a2009ebd0aaab64683fcd60ba5b0d8069" title="Generate a realization of the current power spectrum on the specified grid. ">buildGrid()</a>.  <a href="#ad312cc52f9a3b4ea51221b16b01ffbe8">More...</a><br/></td></tr>
 <tr class="separator:ad312cc52f9a3b4ea51221b16b01ffbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +170,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0931e6f1a8d4950ffd770fe76d5789ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7700448eb709d4abc8f4fc0575fe22d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a7700448eb709d4abc8f4fc0575fe22d6">interpolant</a></td></tr>
 <tr class="separator:a7700448eb709d4abc8f4fc0575fe22d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d883a1d05717714b99b13d71b010b7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a1d883a1d05717714b99b13d71b010b7e">ngrid_tot</a></td></tr>
+<tr class="separator:a1d883a1d05717714b99b13d71b010b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa33a055585d247753d7b4270b69fb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a5aa33a055585d247753d7b4270b69fb6">pixel_size</a></td></tr>
+<tr class="separator:a5aa33a055585d247753d7b4270b69fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bad4165ff17f51b67bb11c170631a29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#a8bad4165ff17f51b67bb11c170631a29">grid_kappa</a></td></tr>
 <tr class="separator:a8bad4165ff17f51b67bb11c170631a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5d639842746d63c080f60c26b42276b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1lensing__ps_1_1_power_spectrum.html#af5d639842746d63c080f60c26b42276b">grid_g1</a></td></tr>
@@ -873,6 +880,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a96dde5ca70773d8f57eecb1f5bdb642c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.lensing_ps.PowerSpectrum.nRandCallsForBuildGrid </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the number of times the rng() was called the last time buildGrid was called. </p>
+<p>This can be useful for keeping rngs in sync if the connection between them is broken (e.g. when calling the function through a Proxy object). </p>
+
+</div>
+</div>
 <a class="anchor" id="ad312cc52f9a3b4ea51221b16b01ffbe8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1078,6 +1104,30 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.lensing_ps.PowerSpectrum.interpolant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d883a1d05717714b99b13d71b010b7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing_ps.PowerSpectrum.ngrid_tot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5aa33a055585d247753d7b4270b69fb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.lensing_ps.PowerSpectrum.pixel_size</td>
         </tr>
       </table>
 </div><div class="memdoc">

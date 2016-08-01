@@ -115,16 +115,17 @@ Inheritance diagram for galsim::SBProfile:</div>
 <area href="classgalsim_1_1_s_b_convolve.html" title="Convolve SBProfiles. " alt="galsim::SBConvolve" shape="rect" coords="186,336,362,360"/>
 <area href="classgalsim_1_1_s_b_deconvolve.html" title="SBProfile adapter which inverts its subject in k space to effect a deconvolvution. " alt="galsim::SBDeconvolve" shape="rect" coords="186,392,362,416"/>
 <area href="classgalsim_1_1_s_b_exponential.html" title="Exponential Surface Brightness Profile. " alt="galsim::SBExponential" shape="rect" coords="186,448,362,472"/>
-<area href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile. " alt="galsim::SBGaussian" shape="rect" coords="186,504,362,528"/>
-<area href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images. " alt="galsim::SBInterpolatedImage" shape="rect" coords="186,560,362,584"/>
-<area href="classgalsim_1_1_s_b_interpolated_k_image.html" alt="galsim::SBInterpolatedKImage" shape="rect" coords="186,616,362,640"/>
-<area href="classgalsim_1_1_s_b_kolmogorov.html" title="Surface Brightness Profile for a Kolmogorov turbulent spectrum. " alt="galsim::SBKolmogorov" shape="rect" coords="186,672,362,696"/>
-<area href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)..." alt="galsim::SBMoffat" shape="rect" coords="186,728,362,752"/>
-<area href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile. " alt="galsim::SBSersic" shape="rect" coords="186,784,362,808"/>
-<area href="classgalsim_1_1_s_b_shapelet.html" title="Class for describing polar shapelet surface brightness profiles. " alt="galsim::SBShapelet" shape="rect" coords="186,840,362,864"/>
-<area href="classgalsim_1_1_s_b_spergel.html" title="Spergel Surface Brightness Profile. " alt="galsim::SBSpergel" shape="rect" coords="186,896,362,920"/>
-<area href="classgalsim_1_1_s_b_top_hat.html" title="Surface Brightness Profile for the TopHat function. " alt="galsim::SBTopHat" shape="rect" coords="186,952,362,976"/>
-<area href="classgalsim_1_1_s_b_transform.html" title="An affine transformation of another SBProfile. " alt="galsim::SBTransform" shape="rect" coords="186,1008,362,1032"/>
+<area href="classgalsim_1_1_s_b_fourier_sqrt.html" title="SBProfile adapter which computes the square root of its subject in k space. " alt="galsim::SBFourierSqrt" shape="rect" coords="186,504,362,528"/>
+<area href="classgalsim_1_1_s_b_gaussian.html" title="Gaussian Surface Brightness Profile. " alt="galsim::SBGaussian" shape="rect" coords="186,560,362,584"/>
+<area href="classgalsim_1_1_s_b_interpolated_image.html" title="Surface Brightness Profile represented by interpolation over one or more data tables/images. " alt="galsim::SBInterpolatedImage" shape="rect" coords="186,616,362,640"/>
+<area href="classgalsim_1_1_s_b_interpolated_k_image.html" alt="galsim::SBInterpolatedKImage" shape="rect" coords="186,672,362,696"/>
+<area href="classgalsim_1_1_s_b_kolmogorov.html" title="Surface Brightness Profile for a Kolmogorov turbulent spectrum. " alt="galsim::SBKolmogorov" shape="rect" coords="186,728,362,752"/>
+<area href="classgalsim_1_1_s_b_moffat.html" title="Surface Brightness for the Moffat Profile (an approximate description of ground-based PSFs)..." alt="galsim::SBMoffat" shape="rect" coords="186,784,362,808"/>
+<area href="classgalsim_1_1_s_b_sersic.html" title="Sersic Surface Brightness Profile. " alt="galsim::SBSersic" shape="rect" coords="186,840,362,864"/>
+<area href="classgalsim_1_1_s_b_shapelet.html" title="Class for describing polar shapelet surface brightness profiles. " alt="galsim::SBShapelet" shape="rect" coords="186,896,362,920"/>
+<area href="classgalsim_1_1_s_b_spergel.html" title="Spergel Surface Brightness Profile. " alt="galsim::SBSpergel" shape="rect" coords="186,952,362,976"/>
+<area href="classgalsim_1_1_s_b_top_hat.html" title="Surface Brightness Profile for the TopHat function. " alt="galsim::SBTopHat" shape="rect" coords="186,1008,362,1032"/>
+<area href="classgalsim_1_1_s_b_transform.html" title="An affine transformation of another SBProfile. " alt="galsim::SBTransform" shape="rect" coords="186,1064,362,1088"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -236,6 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a825043629146d081c39ced658f40597f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#a825043629146d081c39ced658f40597f">repr</a> () const </td></tr>
 <tr class="memdesc:a825043629146d081c39ced658f40597f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that can act as the repr in python.  <a href="#a825043629146d081c39ced658f40597f">More...</a><br/></td></tr>
 <tr class="separator:a825043629146d081c39ced658f40597f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5917d9978302b27cf1197f347084eb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#aeb5917d9978302b27cf1197f347084eb">serialize</a> () const </td></tr>
+<tr class="memdesc:aeb5917d9978302b27cf1197f347084eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that can act as the pickle serialization string in python.  <a href="#aeb5917d9978302b27cf1197f347084eb">More...</a><br/></td></tr>
+<tr class="separator:aeb5917d9978302b27cf1197f347084eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae5a2125c390c01bcde7d8f9603134c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_s_b_profile.html#ae5a2125c390c01bcde7d8f9603134c5e">getXRange</a> (double &amp;xmin, double &amp;xmax, std::vector&lt; double &gt; &amp;splits) const </td></tr>
 <tr class="memdesc:ae5a2125c390c01bcde7d8f9603134c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the range over which the profile is not trivially zero.  <a href="#ae5a2125c390c01bcde7d8f9603134c5e">More...</a><br/></td></tr>
@@ -271,7 +275,7 @@ Public Member Functions</h2></td></tr>
 <p>Default constructor for convenience only. Do not use! </p>
 <p>This constructor is only provided so you can do things like: </p>
 <div class="fragment"><div class="line">std::list&lt;SBProfile&gt; prof_list;</div>
-<div class="line">prof_list.push_back(<a class="code" href="namespacegalsim_1_1optics.html#a96e39510406dde5b33771b59ce5cf984">psf</a>);</div>
+<div class="line">prof_list.push_back(<a class="code" href="namespacegalsim_1_1deprecated_1_1optics.html#ab70e3f9c777b2404d5bd65197ea830fb">psf</a>);</div>
 <div class="line">prof_list.push_back(gal);</div>
 <div class="line">prof_list.push_back(pix);</div>
 </div><!-- fragment --><p> The default constructor for std::list strangely requires a default constructor for the argument type, even though it isn't ever really used. </p>
@@ -1122,6 +1126,23 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Multiply the flux by fluxRatio. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb5917d9978302b27cf1197f347084eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string galsim::SBProfile::serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string that can act as the pickle serialization string in python. </p>
 
 </div>
 </div>

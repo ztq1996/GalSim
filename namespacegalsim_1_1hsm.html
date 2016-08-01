@@ -125,9 +125,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a9ce66ba4ec411c491b53754a8fefb2ab">general_shear_estimator</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; gal_image, <a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; PSF_image, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;gal_data, <a class="el" href="structgalsim_1_1hsm_1_1_object_data.html">ObjectData</a> &amp;PSF_data, const std::string &amp;shear_est, unsigned long flags, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
 <tr class="memdesc:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out PSF correction.  <a href="#a9ce66ba4ec411c491b53754a8fefb2ab">More...</a><br/></td></tr>
 <tr class="separator:a9ce66ba4ec411c491b53754a8fefb2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d79efe1e4d4f94b6ea1a42e4bf1a97f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a8d79efe1e4d4f94b6ea1a42e4bf1a97f">find_ellipmom_2</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; data, double &amp;A, double &amp;x0, double &amp;y0, double &amp;Mxx, double &amp;Mxy, double &amp;Myy, double &amp;rho4, double epsilon, int &amp;num_iter, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
-<tr class="memdesc:a8d79efe1e4d4f94b6ea1a42e4bf1a97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a8d79efe1e4d4f94b6ea1a42e4bf1a97f">More...</a><br/></td></tr>
-<tr class="separator:a8d79efe1e4d4f94b6ea1a42e4bf1a97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410e4e192b19623616f6516ec77544b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a410e4e192b19623616f6516ec77544b3">find_ellipmom_2</a> (<a class="el" href="classgalsim_1_1_const_image_view.html">ConstImageView</a>&lt; double &gt; data, double &amp;A, double &amp;x0, double &amp;y0, double &amp;Mxx, double &amp;Mxy, double &amp;Myy, double &amp;rho4, double convergence_threshold, int &amp;num_iter, boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt; hsmparams=boost::shared_ptr&lt; <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> &gt;())</td></tr>
+<tr class="memdesc:a410e4e192b19623616f6516ec77544b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the adaptive moments of an object.  <a href="#a410e4e192b19623616f6516ec77544b3">More...</a><br/></td></tr>
+<tr class="separator:a410e4e192b19623616f6516ec77544b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e4df98f3d16186ddeeac25b3d1c50e8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8">EstimateShear</a></td></tr>
 <tr class="memdesc:a3e4df98f3d16186ddeeac25b3d1c50e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out moments-based PSF correction routines.  <a href="#a3e4df98f3d16186ddeeac25b3d1c50e8">More...</a><br/></td></tr>
 <tr class="separator:a3e4df98f3d16186ddeeac25b3d1c50e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,7 +251,7 @@ Functions</h2></td></tr>
 <h2>Example usage </h2>
 <p>Typical application to a single object: </p>
 <pre class="fragment">&gt;&gt;&gt; galaxy = galsim.Gaussian(flux=1.0, sigma=1.0)
-&gt;&gt;&gt; galaxy = galaxy.shear(g1=0.05, g2=0.0)  # shears the Gaussian by (0.05, 0) using the 
+&gt;&gt;&gt; galaxy = galaxy.shear(g1=0.05, g2=0.0)  # shears the Gaussian by (0.05, 0) using the
 &gt;&gt;&gt;                                         # |g| = (a-b)/(a+b) definition
 &gt;&gt;&gt; psf = galsim.Kolmogorov(flux=1.0, fwhm=0.7)
 &gt;&gt;&gt; final = galsim.Convolve(galaxy, psf)
@@ -392,7 +392,7 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8d79efe1e4d4f94b6ea1a42e4bf1a97f"></a>
+<a class="anchor" id="a410e4e192b19623616f6516ec77544b3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -448,7 +448,7 @@ template&lt;typename T , typename U &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>epsilon</em>, </td>
+          <td class="paramname"><em>convergence_threshold</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -482,7 +482,7 @@ template&lt;typename T , typename U &gt; </div>
     <tr><td class="paramdir">[out]</td><td class="paramname">Mxy</td><td>The xy component of the moment matrix. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">Myy</td><td>The yy component of the moment matrix. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">rho4</td><td>The weighted radial fourth moment. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">epsilon</td><td>The required level of accuracy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">convergence_threshold</td><td>The required level of accuracy. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">num_iter</td><td>The number of iterations needed to converge. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hsmparams</td><td>Optional argument to specify parameters to be used for shape measurement routines, as an <a class="el" href="structgalsim_1_1hsm_1_1_h_s_m_params.html">HSMParams</a> object. </td></tr>
   </table>

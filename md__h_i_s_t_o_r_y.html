@@ -82,6 +82,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Below is a summary of the major changes with each new tagged version of GalSim. Each version also includes various other minor changes and bug fixes, which are not listed here for brevity. See the CHANGLELOG.md files associated with each version for a more complete list. Issue numbers related to each change are given in parentheses.</p>
+<h1>v1.3 </h1>
+<h2>Installation Changes </h2>
+<ul>
+<li>Require functionality in TMV 0.72. (#616)</li>
+</ul>
+<h2>API Changes </h2>
+<ul>
+<li>Changed the name of the <code>bounds.addBorder()</code> method to <code>withBorder</code>. (#218)</li>
+<li>Removed (from the python layer) Interpolant2d and InterpolantXY. (#218)</li>
+<li>Removed the MultipleImage way of constructing an SBInterpolatedImage. (#218, #642)</li>
+<li>Made the default tolerance for all Interpolants equal to 1.e-4.. (#218)</li>
+<li>Deprecated the <b>rdiv</b> operator from Bandpass and SED. (#218)</li>
+<li>Made all returned matrices consistently use numpy.array, rather than numpy.matrix. (#218)</li>
+<li>Made the classes PositionI, PositionD, GSParams, and HSMParams immutable. (#218, #643)</li>
+<li>Deprecated CorrelatedNoise.calculateCovarianceMatrix. (#630)</li>
+<li>Officially deprecated the methods and functions that had been described as having been removed or changed to a different name. (#643)</li>
+<li>Added function to interleave a set of dithered images into a single higher-resolution image. (#666)</li>
+</ul>
+<h2>New Features </h2>
+<ul>
+<li>Made all GalSim objects picklable unless they use fundamentally unpicklable things such as lambda expressions, improved str and repr representations, made <b>eq</b>, <b>ne</b>, and <b>hash</b> work better. (#218)</li>
+<li>Added ability to set the zeropoint of a bandpass to a numeric value on construction. (#218)</li>
+<li>Added ability to set the redshift of an SED on construction. (#218)</li>
+<li>Updated CorrelatedNoise to work with images that have a non-trivial WCS. (#501)</li>
+<li>Added new methods of the image class to simulate detector effects (#555, #558).</li>
+<li>Enabled constructing a FitsHeader object from a dict, and allow FitsHeader to be default constructed with no keys. (#590)</li>
+<li>Added a module, <a class="el" href="namespacegalsim_1_1wfirst.html">galsim.wfirst</a>, that includes information about the planned WFIRST mission, along with helper routines for constructing appropriate PSFs, bandpasses, WCS, etc. (#590)</li>
+<li>Added native support for the TAN-SIP WCS type using GSFitsWCS. (#590)</li>
+<li>Added a helper program, galsim_download_cosmos, that downloads the COSMOS RealGalaxy catalog. (#590)</li>
+<li>Added new class with methods for making realistic galaxy samples using COSMOS: the COSMOSCatalog class and its method makeObj(). (#590 / #635).</li>
+<li>Added information about PSF to the data returned by <a class="el" href="namespacegalsim_1_1hsm.html#a3e4df98f3d16186ddeeac25b3d1c50e8" title="Carry out moments-based PSF correction routines. ">EstimateShear()</a>. (#612)</li>
+<li>Added Spergel(2010) profile GSObject (#616).</li>
+<li>Added an option to the ChromaticObject class that allows for faster image rendering via interpolation between stored images. (#618)</li>
+<li>Added new <code>ChromaticAiry</code> and <code>ChromaticOpticalPSF</code> classes for representing chromatic optical PSFs. (#618)</li>
+<li>Enable initializing a DES_PSFEx object using a pyfits HDU directly instead of a filename. (#626)</li>
+<li>Added TopHat class implementing a circular tophat profile. (#639)</li>
+<li>Added ability of Noise objects to take a new random number generator (a BaseDeviate instance) when being copied. (#643)</li>
+<li>Added InterpolatedKImage GSObject for constructing a surface brightness profile out of samples of its Fourier transform. (#642)</li>
+<li>Enabled constructing a FitsHeader object from a list of (key, value) pairs, which preserves the order of the items in the header. (#672)</li>
+</ul>
+<h2>Bug Fixes and Improvements </h2>
+<ul>
+<li>Fixed a bug in the normalization of SEDs that use <code>wave_type='A'</code>. (#218)</li>
+<li>Switched the sign of the angle returned by <code>CelestialCoord.angleBetween</code>. (#590)</li>
+<li>Fixed a bug in UncorrelatedNoise where the variance was set incorrectly. (#630)</li>
+<li>Changed the implementation of drawing Box and Pixel profiles in real space (i.e. without being convolved by anything) to actually draw the surface brightness at the center of each pixel. (#639)</li>
+<li>Fixed a bug where InterpolatedImage and Box profiles were not correctly rendered when transformed by something that includes a flip. (#645)</li>
+<li>Fixed a bug in rendering profiles that involve two separate shifts. (#645)</li>
+<li>Fixed a bug if drawImage was given odd nx, ny parameters, the drawn profile was not correctly centered in the image. (#645)</li>
+<li>Added intermediate results cache to <code>ChromaticObject.drawImage</code> and <code>ChromaticConvolution.drawImage</code> to speed up the rendering of groups of similar (same SED, same Bandpass, same PSF) chromatic profiles. (#670)</li>
+</ul>
+<h2>Updates to config options </h2>
+<ul>
+<li>Added COSMOSGalaxy type, with corresponding cosmos_catalog input type. (#590)</li>
+<li>Added Spergel type. (#616)</li>
+<li>Added lam, diam, scale_units options to Airy and OpticalPSF types. (#618)</li>
+<li>Added TopHat type. (#639)</li>
+</ul>
 <h1>v1.2 </h1>
 <h2>New Features </h2>
 <ul>

@@ -115,6 +115,10 @@ Inheritance diagram for galsim.chromatic.ChromaticAutoConvolution:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6053d9ce7a81ad15404cdb827af91734"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a6053d9ce7a81ad15404cdb827af91734">__init__</a></td></tr>
 <tr class="separator:a6053d9ce7a81ad15404cdb827af91734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b28e9356bc988b4c975db93e8e1b85b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a2b28e9356bc988b4c975db93e8e1b85b">__eq__</a></td></tr>
+<tr class="separator:a2b28e9356bc988b4c975db93e8e1b85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a57aec45a9e77a86aab87706240997a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a8a57aec45a9e77a86aab87706240997a">__hash__</a></td></tr>
+<tr class="separator:a8a57aec45a9e77a86aab87706240997a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae912261f08dd2d1eceaf65181f38474f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#ae912261f08dd2d1eceaf65181f38474f">__repr__</a></td></tr>
 <tr class="separator:ae912261f08dd2d1eceaf65181f38474f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc66df806a0e393609288a5cd6b416d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a8bc66df806a0e393609288a5cd6b416d">__str__</a></td></tr>
@@ -122,12 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae59d3258c5383a1c533d46cc5c44ad74"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#ae59d3258c5383a1c533d46cc5c44ad74">evaluateAtWavelength</a></td></tr>
 <tr class="memdesc:ae59d3258c5383a1c533d46cc5c44ad74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate this chromatic object at a particular wavelength <code>wave</code>.  <a href="#ae59d3258c5383a1c533d46cc5c44ad74">More...</a><br/></td></tr>
 <tr class="separator:ae59d3258c5383a1c533d46cc5c44ad74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41eb7ac7fa87202edb39b64f4e756358"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a41eb7ac7fa87202edb39b64f4e756358">__eq__</a></td></tr>
-<tr class="separator:a41eb7ac7fa87202edb39b64f4e756358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4384457822a94f67ee54fdcdf2a919c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a4384457822a94f67ee54fdcdf2a919c6">__ne__</a></td></tr>
 <tr class="separator:a4384457822a94f67ee54fdcdf2a919c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb98cf9b9d437fb24c206190d7c0d45"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#affb98cf9b9d437fb24c206190d7c0d45">__hash__</a></td></tr>
-<tr class="separator:affb98cf9b9d437fb24c206190d7c0d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26cb78568bb6166ff3d1286534787c93"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a26cb78568bb6166ff3d1286534787c93">interpolate</a></td></tr>
 <tr class="memdesc:a26cb78568bb6166ff3d1286534787c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used as a pre-processing step that can expedite image rendering using objects that have to be built up as sums of GSObjects with different parameters at each wavelength, by interpolating between Images at each wavelength instead of making a more costly instantiation of the relevant GSObject at each value of wavelength at which the bandpass is defined.  <a href="#a26cb78568bb6166ff3d1286534787c93">More...</a><br/></td></tr>
 <tr class="separator:a26cb78568bb6166ff3d1286534787c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,15 +314,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41eb7ac7fa87202edb39b64f4e756358"></a>
+<a class="anchor" id="a2b28e9356bc988b4c975db93e8e1b85b"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__eq__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticAutoConvolution.__eq__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -339,35 +336,22 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="affb98cf9b9d437fb24c206190d7c0d45"></a>
+<a class="anchor" id="a8a57aec45a9e77a86aab87706240997a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__hash__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticAutoConvolution.__hash__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

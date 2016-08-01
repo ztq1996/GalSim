@@ -105,9 +105,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f691c29812f517b2018d95507ddaf12"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1wfirst_1_1wfirst__detectors.html#a0f691c29812f517b2018d95507ddaf12">applyIPC</a></td></tr>
 <tr class="memdesc:a0f691c29812f517b2018d95507ddaf12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect of interpixel capacitance (IPC) to the Image instance.  <a href="#a0f691c29812f517b2018d95507ddaf12">More...</a><br/></td></tr>
 <tr class="separator:a0f691c29812f517b2018d95507ddaf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad697b19f62ef1890acdedf64e97aa7c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1wfirst_1_1wfirst__detectors.html#ad697b19f62ef1890acdedf64e97aa7c5">allDetectorEffects</a></td></tr>
-<tr class="memdesc:ad697b19f62ef1890acdedf64e97aa7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This utility applies all sources of noise and detector effects for WFIRST that are implemented in GalSim.  <a href="#ad697b19f62ef1890acdedf64e97aa7c5">More...</a><br/></td></tr>
-<tr class="separator:ad697b19f62ef1890acdedf64e97aa7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ab76250c2f7e8cce2d993b08f0c841800"></a>
@@ -140,49 +137,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">img</td><td>The Image to be transformed. </td></tr>
     <tr><td class="paramname">exptime</td><td>The exposure time (t) in seconds, which goes into the expression for reciprocity failure given in the docstring. If None, then the routine will use the default WFIRST exposure time in <a class="el" href="namespacegalsim_1_1wfirst.html#a7d4210eff8c0ef58204f23d87a58c433">galsim.wfirst.exptime</a>. [default: None] </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ad697b19f62ef1890acdedf64e97aa7c5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.wfirst.wfirst_detectors.allDetectorEffects </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>exptime</em> = <code>None</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This utility applies all sources of noise and detector effects for WFIRST that are implemented in GalSim. </p>
-<p>In terms of noise, this includes the Poisson noise due to the signal (sky + background), dark current, and read noise. The detector effects that are included are reciprocity failure, quantization, nonlinearity, and interpixel capacitance. It also includes the necessary factors of gain. In short, the user should be able to pass in an Image with all sources of signal (background plus astronomical objects), and the Image will be modified to include all subsequent steps in the image generation process for WFIRST that are implemented in GalSim.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">img</td><td>The Image to be modified. </td></tr>
-    <tr><td class="paramname">rng</td><td>An optional <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a> to use for the addition of noise. If None, a new one will be initialized. [default: None] </td></tr>
-    <tr><td class="paramname">exptime</td><td>The exposure time, in seconds. If None, then the WFIRST default exposure time will be used. [default: None] </td></tr>
   </table>
   </dd>
 </dl>

@@ -84,19 +84,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p>System requirements: GalSim currently only supports Linux and Mac OSX.</p>
 <p>Table of Contents:</p>
 <ol type="1">
-<li>Software required before building GalSim</li>
-<li>Installing the GalSim Python package</li>
-<li>Running tests and installing example executables</li>
-<li>Platform-specific notes</li>
-<li>More SCons options</li>
+<li><a href="#1-software-required-before-building-galsim">Software required before building GalSim</a></li>
+<li><a href="#2-installing-the-galsim-python-package">Installing the GalSim Python package</a></li>
+<li><a href="#3-running-tests-and-installing-example-executables">Running tests and installing example executables</a></li>
+<li><a href="#4-running-example-scripts">Running example scripts</a></li>
+<li><a href="#5-platform-specific-notes">Platform-specific notes</a></li>
+<li><a href="#6-more-scons-options">More SCons options</a></li>
 </ol>
 <h1>1. Software required before building GalSim </h1>
-<p>Please note: Mac users who want to use fink can skip down to Section 4.ii and use that to satisfy all dependencies before installing.</p>
-<h2>i) Python (2.6 or 2.7 series), with some additional modules installed </h2>
-<p>The interface to the GalSim code is via the Python package <code>galsim</code>, and its associated modules. Therefore you must have Python installed on your system. Python is free, and available from a number of sources online (see below). Currently GalSim only supports Python versions 2.6.X and 2.7.X, but earlier versions of Python 2.X may be supported in future: please let us know via Github if you need this support.</p>
+<p>Please note: Mac users who want to use fink can skip down to Section 5.ii and use that to satisfy all dependencies before installing.</p>
+<h2>i) Python (2.6, 2.7, 3.4, or 3.5 series), with some additional modules installed </h2>
+<p>The interface to the GalSim code is via the Python package <code>galsim</code>, and its associated modules. Therefore you must have Python installed on your system. Python is free, and available from a number of sources online (see below). Currently GalSim supports Python versions 2.6, 2.7, 3.4, and 3.5. It is likely that other Python 3.x versions are compatible, but these two are the only ones actively tested.</p>
 <p>Many systems have a version of Python pre-installed. To check whether you already have a compatible version, type </p>
 <pre class="fragment">python --version
-</pre><p>at the terminal prompt. If you get a "Command not found" error, or the reported version is not 2.6.X or 2.7.X, you will need to install 2.6 or 2.7 series Python. In this case you should read the "Getting Python and required modules" section below.</p>
+</pre><p>at the terminal prompt. If you get a "Command not found" error, or the reported version is not one of the supported versions, you should read the "Getting
+Python and required modules" section below.</p>
 <p>It may be that there is or soon will be more than one version of Python installed on your operating system, in which case please see the "Making sure
 you are using the right Python" Section below.</p>
 <h3>Getting Python and required modules</h3>
@@ -105,30 +107,35 @@ you are using the right Python" Section below.</p>
 <ul>
 <li>the numerical Python module NumPy (<a href="http://www.numpy.org">http://www.numpy.org</a>)</li>
 <li>the astronomical FITS file input/output module PyFITS available either as a standalone package: <a href="http://www.stsci.edu/institute/software_hardware/pyfits">http://www.stsci.edu/institute/software_hardware/pyfits</a> or as part of the astropy library: <a href="http://www.astropy.org/">http://www.astropy.org/</a> The latter is preferred, since this is now where all future development of this package is happening.</li>
-<li>Optional dependency: the Python YAML parser and emitter module PyYAML (<a href="http://pyyaml.org/wiki/PyYAML">http://pyyaml.org/wiki/PyYAML</a>) Note: PyYAML is in fact only required for full config file parsing functionality, and can be omitted if users are happy to use JSON-style config parsing or prefer to write python scripts directly.</li>
+<li>the future module, which is used to ease compatibility between Python 2 and Python 3.</li>
+<li>the PyYAML package for parsing YAML files (<a href="http://pyyaml.org/wiki/PyYAML">http://pyyaml.org/wiki/PyYAML</a>) Note: PyYAML is only technically required if you are using the <code>galsim</code> executable for parsing YAML config files. Users who will only use GalSim in Python (or use only JSON config files) may skip this dependency.</li>
 <li>Optional dependency: PyAst WCS package. This is a really nice front end for the Starlink AST astrometry code. It seems to support pretty much every WCS encoding there is. (At least every one we tried.) Their preferred installation method is via pip: pip install starlink-pyast For more information, see their website: <a href="https://pypi.python.org/pypi/starlink-pyast/">https://pypi.python.org/pypi/starlink-pyast/</a> With this installed, you can use the galsim.PyAstWCS class, which in turn means that galsim.FitsWCS will pretty much always work.</li>
 <li>Optional dependency: Astropy WCS package. We already mentioned astropy above for astropy.io.fits. Another package we can use from astropy is their WCS package, astropy.wcs. They cannot read all that many WCS types (compared to PyAst at least), but hopefully the functionality will include in time. Unfortunately, this package has scipy as a dependency, which is kind of a gargantuan package. But if you are willing to install that too, then you can use the galsim.AstropyWCS class.</li>
+<li>Optional dependency: Pandas. This has a very fast function for reading ASCII tables. If this is not available (e.g. when reading in Bandpass or SED files) then we fall back to the (much) slower numpy loadtxt function.</li>
 </ul>
 <p>These should installed onto your Python system so that they can be imported by: </p>
 <pre class="fragment">&gt;&gt;&gt; import numpy
 &gt;&gt;&gt; import astropy.io.fits  [ Either this (preferred)... ]
 &gt;&gt;&gt; import pyfits           [ ... or this.               ]
-&gt;&gt;&gt; import yaml             [ if using the galsim executable or otherwise
-                              plan to parse .yaml configuration files ]
+&gt;&gt;&gt; import future
+&gt;&gt;&gt; import yaml
 &gt;&gt;&gt; import starlink.Ast     [ if planning to use PyAstWCS class ]
 &gt;&gt;&gt; import astropy.wcs      [ if planning to use AstropyWCS class ]
+&gt;&gt;&gt; import pandas           [ for faster ASCII table input ]
 </pre><p>within Python. You can test this by loading up the Python interpreter for the version of Python you will be using with the GalSim toolkit. This is usually achieved by typing <code>python</code> or <code>/path/to/executable/bin/python</code> if your desired Python is not the system default, and typing the <code>import</code> commands above. If you get no warning message, things are OK.</p>
 <p>If you do not have these modules, follow the links above or alternatively try <code>easy_install</code> (or equivalently <code>/path/to/executable/bin/easy_install</code> if your desired Python is not the default).</p>
 <p>As an example, if using the default system Python, connected to the internet and with root/admin privileges simply type </p>
 <pre class="fragment">easy_install numpy
 easy_install pyfits
+easy_install future
 easy_install pyyaml
 </pre><p>at the prompt. If not using an admin account, prefix the commands above with <code>sudo</code> and enter your admin password when prompted. The required modules should then be installed.</p>
 <p>See <a href="http://packages.python.org/distribute/easy_install.html#using-easy-install">http://packages.python.org/distribute/easy_install.html#using-easy-install</a> for more details about the extremely useful <code>easy_install</code> feature.</p>
 <p>Another option for installing these packages is pip. See pypi.python.org for details about getting this installed if you do not already have it on your system. Then </p>
 <pre class="fragment">pip install numpy
 pip install astropy
-pip install yaml
+pip install future
+pip install pyyaml
 pip install starlink-pyast
 pip install scipy
 </pre><h3>Third party-maintained Python packages</h3>
@@ -143,14 +150,14 @@ pip install scipy
 <pre class="fragment">which python
 </pre><p>at the prompt. This will tell you the location of the executable, something like /path/to/executable/bin/python</p>
 <p>If this is not the Python you want, please edit your startup scripts (e.g. <code>.profile</code> or <code>.bashrc</code>), and be sure to specify where your desired Python version resides when installing the Boost C++ libraries (see Section 1.v).</p>
-<p>See Section 4 of this document for some suggestions about getting Python, Boost and all the other dependencies all working well together on your specific system.</p>
+<p>See Section 5 of this document for some suggestions about getting Python, Boost and all the other dependencies all working well together on your specific system.</p>
 <h2>ii) SCons (<a href="http://www.scons.org">http://www.scons.org</a>) </h2>
 <p>GalSim uses SCons to configure and run its installation procedures, and so SCons needs to be installed in advance. Versions 2.0 and 2.1 of SCons get reasonable testing with GalSim, but it should also work with 1.x versions. You can check if it is installed, and if so which version, by typing </p>
 <pre class="fragment">scons --version
-</pre><p>See Section 4 for some more suggestions about installing this on your platform.</p>
+</pre><p>See Section 5 for some more suggestions about installing this on your platform.</p>
 <h2>iii) FFTW (<a href="http://www.fftw.org">http://www.fftw.org</a>) </h2>
-<p>These Fast Fourier Transform libraries must be installed, as GalSim will link to them during the build. We require version 3 (or greater presumably), which is often distributed as fftw3. See Section 4 for some suggestions about installing this on your platform.</p>
-<h2>iv) TMV (<a href="http://code.google.com/p/tmv-cpp/">http://code.google.com/p/tmv-cpp/</a>) (version &gt;= 0.72 required) </h2>
+<p>These Fast Fourier Transform libraries must be installed, as GalSim will link to them during the build. We require version 3 (or greater presumably), which is often distributed as fftw3. See Section 5 for some suggestions about installing this on your platform.</p>
+<h2>iv) TMV (<a href="https://github.com/rmjarvis/tmv/">https://github.com/rmjarvis/tmv/</a>) (version &gt;= 0.72 required) </h2>
 <p>GalSim uses the TMV library for its linear algebra routines. You should download it from the site above and follow the instructions in its INSTALL file for how to install it. Usually installing TMV just requires the command </p>
 <pre class="fragment">scons install PREFIX=&lt;installdir&gt;
 </pre><p>but there are additional options you might consider, so you should read the TMV INSTALL file for full details. Also note, you may not need to specify the installation directory if you are comfortable installing it into <code>/usr/local</code>. However, if you are trying to install it into a system directory then you need to use sudo scons install [PREFIX=&lt;installdir&gt;].</p>
@@ -194,7 +201,10 @@ otool -L &lt;YOUR_BOOST_LIB_DIR&gt;/libboost_python&lt;POSSIBLE_SUFFIX&gt;.dylib
 <p>Again, you can see the full list of options using <code>scons -h</code>.</p>
 <p>Another common option is <code>CXX=&lt;c++compiler&gt;</code>. So, to compile with <code>icpc</code> rather than the default <code>g++</code>, type </p>
 <pre class="fragment">scons CXX=icpc
-</pre><p>One nice feature of SCons is that once you have specified a parameter, it will save that value for future builds in the file <code>gs_scons.conf</code>, so once you have the build process working, for later builds you only need to type <code>scons</code>. It can also be useful to edit this file directly &ndash; mostly if you want to unset a parameter and return to the default value, it can be easier to just delete the line from this file, rather than explicitly set it back to the default value.</p>
+</pre><p>On El Capitan, Apple instituted a new security measure wherein system calls lose some of the system environment variables, including DYLD_LIBRARY_PATH among others. If your system is set up to use that environment variable to resolve library locations at runtime, then this will cause problems when SCons is trying to figure out if things are installed correctly. To override this behavior, you can explicitly send this environment variable to SCons by writing </p>
+<pre class="fragment">scons DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH
+</pre><p>and it will be able to re-set this value within the SCons processing.</p>
+<p>One nice feature of SCons is that once you have specified a parameter, it will save that value for future builds in the file <code>gs_scons.conf</code>, so once you have the build process working, for later builds you only need to type <code>scons</code>. It can also be useful to edit this file directly &ndash; mostly if you want to unset a parameter and return to the default value, it can be easier to just delete the line from this file, rather than explicitly set it back to the default value.</p>
 <p>SCons caches the results of the various checks it does for the required external libraries (TMV, Boost, etc.). This is usually very helpful, since they do not generally change, so it makes later builds much faster. However, sometimes (rarely) SCons can get confused and not realized that things on your system have changed, which might cause problems for you. You can delete everything scons knows about what it has tried to build previously with </p>
 <pre class="fragment">/bin/rm -rf .scon*
 </pre><p>This will force SCons to recheck and recompile everything from scratch.</p>
@@ -237,7 +247,7 @@ otool -L &lt;YOUR_BOOST_LIB_DIR&gt;/libboost_python&lt;POSSIBLE_SUFFIX&gt;.dylib
 <pre class="fragment">galsim demo1.yaml
 </pre><p>They are also well commented, and can be considered a parallel tutorial for learning the config file usage of GalSim.</p>
 <p>All demo scripts are designed to be run in the <code>GalSim/examples</code> directory. Some of them access files in subdirectories of the <code>examples</code> directory, so they would not work correctly from other locations.</p>
-<h1>4. Platform-specific notes </h1>
+<h1>5. Platform-specific notes </h1>
 <h2>i) Linux </h2>
 <p>The vast majority of Linux distributions provide installable packages for most of our dependencies. In many cases, however, it is also necessary to install "-devel" or "-dev" packages (e.g. <code>python-dev</code> or <code>libboost-dev</code> on Debian- derivatives). However, as above we stress that you should make sure that the version of Python that Boost is built against must be the same as that you intend to use for running GalSim.</p>
 <p>The solution may be to install Boost C++ manually. This can be done by following the instructions of Section 1.v), above.</p>
@@ -253,7 +263,7 @@ fink update-all
 <li>This will install GalSim as a module of the python2.7 installed by fink. This is not the default Python (usually <code>/usr/bin/python</code> or some other package, such as EPD, if installed). Any Python scripts you write that use the galsim module should therefore have <code>#!/sw/bin/python2.7</code> as the first line rather than the usual <code>#!/usr/bin/env python</code>. Similarly, if you want to use galsim in an interactive Python session, you should run <code>/sw/bin/python2.7</code> (simply <code>python2.7</code> may also work) rather than just <code>python</code>. (Of course, you can always change your <code>PATH</code> environment variable to make the fink Python the system default if you wish...)</li>
 <li>The executable <code>galsim</code>, which parses YAML or JSON configuration files, will be installed in <code>/sw/bin</code>. You should not need to do anything special to use these, since <code>/sw/bin</code> should already be in your path if using fink.</li>
 <li>If you want to run through the example scripts (such as the demo tutorials <code>demo1.py</code>, <code>demo2.py</code> etc. and the <code>.yaml</code> and <code>.json</code> config versions of the same demos), you will still need to download the GalSim tarball. But you can skip all the instructions above about installation and just use the fink version. So <code>python2.7 demo1.py</code> (assuming <code>which python2.7</code> is the fink one) and <code>galsim demo1.yaml</code> should run those scripts for you.</li>
-<li>If you want to work with GalSim as a developer, rather than just a user, then you cannot use the fink-installed GalSim. However, the process above will have installed all the prerequisites. So <code>fink uninstall galsim</code> will leave you able to install GalSim using the master branch with: <pre class="fragment">scons TMV_DIR=/sw PYTHON=/sw/bin/python2.7
+<li>If you want to work with GalSim as a developer, rather than just a user, then you cannot use the fink-installed GalSim. However, the process above will have installed all the prerequisites. So <code>fink uninstall galsim</code> will leave you able to install GalSim using the master branch with: <pre class="fragment">scons TMV_DIR=/sw PYTHON=/sw/bin/python2.7 BOOST_DIR=/sw/opt/boost-1_58
 </pre></li>
 </ol>
 <p>from within the repository base directory.</p>
@@ -261,9 +271,10 @@ fink update-all
 <pre class="fragment">fink install nose-py27
 scons tests NOSETESTS=/sw/bin/nosetests
 </pre><p>If you want to use the system Python, or some other version, then the fink Python installations will not work. You will need to manually install NumPy, PyFITS, PyYAML and nose, for example using easy_install, with your chosen Python.</p>
-<p>For the system Python, you can use fink for Boost, but you will want a different package than the boost1.35.python27 that gets installed using <code>fink install galsim</code> above: </p>
-<pre class="fragment">fink install scons fftw3 tmv0 boost1.46.1.cmake
-scons TMV_DIR=/sw
+<p>For the system Python, you can use fink for Boost, but you will want a different package than the boost1.58.python27 that gets installed using <code>fink install galsim</code> above: </p>
+<pre class="fragment">fink install scons fftw3 tmv0 boost1.58-systempython
+pip install future
+scons TMV_DIR=/sw BOOST_DIR=/sw/opt/boost-1_58
 </pre><p>For other Python versions, the fink-installed Boost usually will not work, so you can only use fink for SCons, FFTW and TMV. So you will probably need to install Boost manually. This can be done by following the instructions of Section 1.v), above.</p>
 <p>b) MacPorts &ndash; this is another popular Mac package management project (<a href="http://www.macports.org/">http://www.macports.org/</a>) with similar functionality to fink. Neither TMV nor GalSim are currently on the official MacPorts distribution list, so users cannot find them by searching the MacPorts site. However, it is possible to install both TMV and GalSim, plus the other dependencies of GalSim, using MacPorts following the instructions below.</p>
 <p>It is in general a good idea to upgrade all modules, prior to installing any new modules: </p>
@@ -299,7 +310,11 @@ brew install gal-sim
 <p>Most of what applies above for earlier Mac OSX versions seems to apply for GalSim on Mavericks too, although not all combinations have yet been tested.</p>
 <p>However, it has been found that GalSim and its dependencies can be sensitive (e.g. Issue #483) to the fact that under Mavericks the system <code>gcc</code> is NOT in fact the Gnu Compiler Collection, but in fact Clang masquerading as such. This can lead to problems when linking libraries, as described in the following GalSim Wiki FAQ item: <a href="https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-what-should-i-do-about-undefined-symbols-for-architecture-x86_64-errors">https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-what-should-i-do-about-undefined-symbols-for-architecture-x86_64-errors</a></p>
 <p>The best success seems to be achieved in Mavericks by <em>explicitly</em> specifying <code>clang</code> and <code>clang++</code> as the compiler to GalSim and all its dependencies when building (as in the example above).</p>
-<h1>5. More SCons options </h1>
+<h2>iv) Docker </h2>
+<p>Karen Ng has created a Docker file for containerizing GalSim. See her repo: </p>
+<pre class="fragment">https://github.com/karenyyng/GalSim_dockerfile
+</pre><p>for instructions about how to either use her image or create your own.</p>
+<h1>6. More SCons options </h1>
 <p>Here is a fairly complete list of the options you can pass to SCons to control the build process. The options are listed with their default value. You change them simply by specifying a different value on the command line.</p>
 <p>For example: </p>
 <pre class="fragment">scons CXX=icpc TMV_DIR=~

@@ -115,6 +115,10 @@ Inheritance diagram for galsim.chromatic.ChromaticOpticalPSF:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7578a632b9fa1838b68ddb5b32d78bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#ab7578a632b9fa1838b68ddb5b32d78bd">__init__</a></td></tr>
 <tr class="separator:ab7578a632b9fa1838b68ddb5b32d78bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1e6b835f6673461aebeb4dcf8bf0f0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a5b1e6b835f6673461aebeb4dcf8bf0f0">__eq__</a></td></tr>
+<tr class="separator:a5b1e6b835f6673461aebeb4dcf8bf0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94211f1a0b837ac80bb7948b23106554"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a94211f1a0b837ac80bb7948b23106554">__hash__</a></td></tr>
+<tr class="separator:a94211f1a0b837ac80bb7948b23106554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab118cea1a39b33cdb427f776d932da50"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#ab118cea1a39b33cdb427f776d932da50">__repr__</a></td></tr>
 <tr class="separator:ab118cea1a39b33cdb427f776d932da50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcc14a3e5a0f7cd9910b4037bd34883"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a1bcc14a3e5a0f7cd9910b4037bd34883">__str__</a></td></tr>
@@ -122,12 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7f5aa6beb54e87e71ffa0069ce239ff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#aa7f5aa6beb54e87e71ffa0069ce239ff">evaluateAtWavelength</a></td></tr>
 <tr class="memdesc:aa7f5aa6beb54e87e71ffa0069ce239ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to directly instantiate a monochromatic instance of this object.  <a href="#aa7f5aa6beb54e87e71ffa0069ce239ff">More...</a><br/></td></tr>
 <tr class="separator:aa7f5aa6beb54e87e71ffa0069ce239ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41eb7ac7fa87202edb39b64f4e756358"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a41eb7ac7fa87202edb39b64f4e756358">__eq__</a></td></tr>
-<tr class="separator:a41eb7ac7fa87202edb39b64f4e756358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4384457822a94f67ee54fdcdf2a919c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a4384457822a94f67ee54fdcdf2a919c6">__ne__</a></td></tr>
 <tr class="separator:a4384457822a94f67ee54fdcdf2a919c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb98cf9b9d437fb24c206190d7c0d45"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#affb98cf9b9d437fb24c206190d7c0d45">__hash__</a></td></tr>
-<tr class="separator:affb98cf9b9d437fb24c206190d7c0d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26cb78568bb6166ff3d1286534787c93"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_object.html#a26cb78568bb6166ff3d1286534787c93">interpolate</a></td></tr>
 <tr class="memdesc:a26cb78568bb6166ff3d1286534787c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used as a pre-processing step that can expedite image rendering using objects that have to be built up as sums of GSObjects with different parameters at each wavelength, by interpolating between Images at each wavelength instead of making a more costly instantiation of the relevant GSObject at each value of wavelength at which the bandpass is defined.  <a href="#a26cb78568bb6166ff3d1286534787c93">More...</a><br/></td></tr>
 <tr class="separator:a26cb78568bb6166ff3d1286534787c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,16 +189,18 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a7e879449d26bc456667272cece56b13b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a7e879449d26bc456667272cece56b13b">scale_unit</a></td></tr>
+<tr class="separator:a7e879449d26bc456667272cece56b13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67eafd03a05338c2fa3ec8b8e53f79de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a67eafd03a05338c2fa3ec8b8e53f79de">lam_over_diam</a></td></tr>
 <tr class="separator:a67eafd03a05338c2fa3ec8b8e53f79de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a07f90a4b2a718e226047c429387f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a5a07f90a4b2a718e226047c429387f53">diam</a></td></tr>
+<tr class="separator:a5a07f90a4b2a718e226047c429387f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af06c98769047c340fe8671c234b2b7a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#af06c98769047c340fe8671c234b2b7a9">lam</a></td></tr>
 <tr class="separator:af06c98769047c340fe8671c234b2b7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2128dfff117848d9f0587de6ec5667"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a4a2128dfff117848d9f0587de6ec5667">aberrations</a></td></tr>
 <tr class="separator:a4a2128dfff117848d9f0587de6ec5667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b3c8f67bbe67be117af77b5d645ed8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a67b3c8f67bbe67be117af77b5d645ed8">kwargs</a></td></tr>
 <tr class="separator:a67b3c8f67bbe67be117af77b5d645ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e879449d26bc456667272cece56b13b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a7e879449d26bc456667272cece56b13b">scale_unit</a></td></tr>
-<tr class="separator:a7e879449d26bc456667272cece56b13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad69bb506e67b9191d4dfcdec8eec85ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#ad69bb506e67b9191d4dfcdec8eec85ac">separable</a></td></tr>
 <tr class="separator:ad69bb506e67b9191d4dfcdec8eec85ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9268d721e46043c56b2e7a29754a906c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a9268d721e46043c56b2e7a29754a906c">wave_list</a></td></tr>
@@ -354,15 +356,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41eb7ac7fa87202edb39b64f4e756358"></a>
+<a class="anchor" id="a5b1e6b835f6673461aebeb4dcf8bf0f0"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__eq__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticOpticalPSF.__eq__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -379,35 +378,22 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="affb98cf9b9d437fb24c206190d7c0d45"></a>
+<a class="anchor" id="a94211f1a0b837ac80bb7948b23106554"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.chromatic.ChromaticObject.__hash__ </td>
+          <td class="memname">def galsim.chromatic.ChromaticOpticalPSF.__hash__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -1346,6 +1332,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.chromatic.ChromaticOpticalPSF.aberrations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a07f90a4b2a718e226047c429387f53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.chromatic.ChromaticOpticalPSF.diam</td>
         </tr>
       </table>
 </div><div class="memdoc">

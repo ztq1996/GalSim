@@ -105,59 +105,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af129c714797baab6f6b976ea485d055f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> { <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fadc39a6b07eec8e68c03317a30c9d61b9">linear</a>, 
-<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fa6fd64494ece82b68a25ae2c35acd7f02">spline</a>, 
+<tr class="memitem:af129c714797baab6f6b976ea485d055f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> { <br/>
+&#160;&#160;<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fadc39a6b07eec8e68c03317a30c9d61b9">linear</a>, 
 <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fa8e74305a8adef9a1ebaeca2314845041">floor</a>, 
-<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055faf2de0b70de40f06a5641261f3acc478b">ceil</a>
+<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055faf2de0b70de40f06a5641261f3acc478b">ceil</a>, 
+<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fa5ecf4e5dc2d6265865310059b45ad026">nearest</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fa6fd64494ece82b68a25ae2c35acd7f02">spline</a>
+<br/>
  }</td></tr>
 <tr class="separator:af129c714797baab6f6b976ea485d055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7578625f9101dacea44f259d2693a5d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classgalsim_1_1_table_entry.html">TableEntry</a>&lt; V, A &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ac7578625f9101dacea44f259d2693a5d">Entry</a></td></tr>
-<tr class="separator:ac7578625f9101dacea44f259d2693a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c580f84efbf0c7014057f05249c89ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a1c580f84efbf0c7014057f05249c89ca">Table</a> (<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> i)</td></tr>
-<tr class="memdesc:a1c580f84efbf0c7014057f05249c89ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty table.  <a href="#a1c580f84efbf0c7014057f05249c89ca">More...</a><br/></td></tr>
-<tr class="separator:a1c580f84efbf0c7014057f05249c89ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0d00ae0d5e98ba943e221fc3556186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#acb0d00ae0d5e98ba943e221fc3556186">Table</a> (const A *argvec, const V *valvec, int N, <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
-<tr class="memdesc:acb0d00ae0d5e98ba943e221fc3556186"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a> from two arrays:  <a href="#acb0d00ae0d5e98ba943e221fc3556186">More...</a><br/></td></tr>
-<tr class="separator:acb0d00ae0d5e98ba943e221fc3556186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27970ab06e5cd010f3240ab3f061650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#af27970ab06e5cd010f3240ab3f061650">Table</a> (const std::vector&lt; A &gt; &amp;a, const std::vector&lt; V &gt; &amp;v, <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
-<tr class="separator:af27970ab06e5cd010f3240ab3f061650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a744f5622d2727996fc665a2ea6130e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a744f5622d2727996fc665a2ea6130e8a">Table</a> (std::istream &amp;is, <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
-<tr class="separator:a744f5622d2727996fc665a2ea6130e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8470f076762081326de9f739f145e73f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a8470f076762081326de9f739f145e73f">clear</a> ()</td></tr>
-<tr class="separator:a8470f076762081326de9f739f145e73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7db7f65785233887584b010c9aa45130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a7db7f65785233887584b010c9aa45130">read</a> (std::istream &amp;is)</td></tr>
-<tr class="separator:a7db7f65785233887584b010c9aa45130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29e4367c2a8e1e598123029d12f7ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ab29e4367c2a8e1e598123029d12f7ba7">addEntry</a> (const A a, const V v)</td></tr>
-<tr class="memdesc:ab29e4367c2a8e1e598123029d12f7ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">new element for table.  <a href="#ab29e4367c2a8e1e598123029d12f7ba7">More...</a><br/></td></tr>
-<tr class="separator:ab29e4367c2a8e1e598123029d12f7ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ab14312669db15558711add2eceeda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a88ab14312669db15558711add2eceeda">Table</a> (const A *_args, const V *_vals, int N, <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
+<tr class="memdesc:a88ab14312669db15558711add2eceeda"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a> from args, vals.  <a href="#a88ab14312669db15558711add2eceeda">More...</a><br/></td></tr>
+<tr class="separator:a88ab14312669db15558711add2eceeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6c90b13dbb2006633ef3956d22f386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a7e6c90b13dbb2006633ef3956d22f386">Table</a> (const std::vector&lt; A &gt; &amp;_args, const std::vector&lt; V &gt; &amp;_vals, <a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
+<tr class="separator:a7e6c90b13dbb2006633ef3956d22f386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e3ca9825148cc2a1ffab58a1134f8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a67e3ca9825148cc2a1ffab58a1134f8a">Table</a> (<a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a> in)</td></tr>
+<tr class="memdesc:a67e3ca9825148cc2a1ffab58a1134f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty <a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a>.  <a href="#a67e3ca9825148cc2a1ffab58a1134f8a">More...</a><br/></td></tr>
+<tr class="separator:a67e3ca9825148cc2a1ffab58a1134f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc20b3fa41aa9b73c507a03032e4a577"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#acc20b3fa41aa9b73c507a03032e4a577">init</a> ()</td></tr>
+<tr class="separator:acc20b3fa41aa9b73c507a03032e4a577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="memItemLeft" align="right" valign="top">A&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ae267cbd42e40d384f4c4bfcadbf64ae0">argMin</a> () const </td></tr>
+<tr class="memdesc:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common initialization code.  <a href="#ae267cbd42e40d384f4c4bfcadbf64ae0">More...</a><br/></td></tr>
+<tr class="separator:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1681103498e27495a0f0f36e487620"><td class="memItemLeft" align="right" valign="top">A&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a1d1681103498e27495a0f0f36e487620">argMax</a> () const </td></tr>
+<tr class="separator:a1d1681103498e27495a0f0f36e487620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a4d5810f584623a94c8a83af4a2bdb7e1">size</a> () const </td></tr>
+<tr class="memdesc:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the table.  <a href="#a4d5810f584623a94c8a83af4a2bdb7e1">More...</a><br/></td></tr>
+<tr class="separator:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f8332f26d8960aaee14cae58cd6e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a88f8332f26d8960aaee14cae58cd6e17">addEntry</a> (const A arg, const V val)</td></tr>
+<tr class="memdesc:a88f8332f26d8960aaee14cae58cd6e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an (x, y(x)) pair into the table.  <a href="#a88f8332f26d8960aaee14cae58cd6e17">More...</a><br/></td></tr>
+<tr class="separator:a88f8332f26d8960aaee14cae58cd6e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f55d1876d167dfe7cccda69b3f8db6e"><td class="memItemLeft" align="right" valign="top">V&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a7f55d1876d167dfe7cccda69b3f8db6e">operator()</a> (const A a) const </td></tr>
-<tr class="memdesc:a7f55d1876d167dfe7cccda69b3f8db6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">lookup &amp; interp. function value.  <a href="#a7f55d1876d167dfe7cccda69b3f8db6e">More...</a><br/></td></tr>
+<tr class="memdesc:a7f55d1876d167dfe7cccda69b3f8db6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">interp, return V(0) if beyond bounds  <a href="#a7f55d1876d167dfe7cccda69b3f8db6e">More...</a><br/></td></tr>
 <tr class="separator:a7f55d1876d167dfe7cccda69b3f8db6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c5fbdc6083dcbdd2a54ad19c5f7acd6"><td class="memItemLeft" align="right" valign="top">V&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a9c5fbdc6083dcbdd2a54ad19c5f7acd6">lookup</a> (const A a) const </td></tr>
 <tr class="memdesc:a9c5fbdc6083dcbdd2a54ad19c5f7acd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">interp, but exception if beyond bounds  <a href="#a9c5fbdc6083dcbdd2a54ad19c5f7acd6">More...</a><br/></td></tr>
 <tr class="separator:a9c5fbdc6083dcbdd2a54ad19c5f7acd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a4d5810f584623a94c8a83af4a2bdb7e1">size</a> () const </td></tr>
-<tr class="memdesc:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of table  <a href="#a4d5810f584623a94c8a83af4a2bdb7e1">More...</a><br/></td></tr>
-<tr class="separator:a4d5810f584623a94c8a83af4a2bdb7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="memItemLeft" align="right" valign="top">A&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ae267cbd42e40d384f4c4bfcadbf64ae0">argMin</a> () const </td></tr>
-<tr class="memdesc:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest argument.  <a href="#ae267cbd42e40d384f4c4bfcadbf64ae0">More...</a><br/></td></tr>
-<tr class="separator:ae267cbd42e40d384f4c4bfcadbf64ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d1681103498e27495a0f0f36e487620"><td class="memItemLeft" align="right" valign="top">A&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a1d1681103498e27495a0f0f36e487620">argMax</a> () const </td></tr>
-<tr class="memdesc:a1d1681103498e27495a0f0f36e487620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largest argument.  <a href="#a1d1681103498e27495a0f0f36e487620">More...</a><br/></td></tr>
-<tr class="separator:a1d1681103498e27495a0f0f36e487620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae30751fbcef431f3cbc595de1faf256c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ae30751fbcef431f3cbc595de1faf256c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ae30751fbcef431f3cbc595de1faf256c">TransformVal</a> (T &amp;xfrm)</td></tr>
-<tr class="separator:ae30751fbcef431f3cbc595de1faf256c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0a5893895a9081999dea00985cdd64"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ada0a5893895a9081999dea00985cdd64"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ada0a5893895a9081999dea00985cdd64">TransformArg</a> (T &amp;xfrm)</td></tr>
-<tr class="separator:ada0a5893895a9081999dea00985cdd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b35cc5781e2e3049cf8c33833c6487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a91b35cc5781e2e3049cf8c33833c6487">dump</a> () const </td></tr>
-<tr class="separator:a91b35cc5781e2e3049cf8c33833c6487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6911f8e45ae891b95b5e734f4be27de"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classgalsim_1_1_table.html#ac7578625f9101dacea44f259d2693a5d">Entry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ad6911f8e45ae891b95b5e734f4be27de">getV</a> () const </td></tr>
-<tr class="separator:ad6911f8e45ae891b95b5e734f4be27de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03aed02c41c263d1bd37efe76aadc29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ad03aed02c41c263d1bd37efe76aadc29">interpMany</a> (const A *argvec, V *valvec, int N) const </td></tr>
+<tr class="memdesc:ad03aed02c41c263d1bd37efe76aadc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">interp many values at once  <a href="#ad03aed02c41c263d1bd37efe76aadc29">More...</a><br/></td></tr>
+<tr class="separator:ad03aed02c41c263d1bd37efe76aadc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6275f9d60b081be889c3a70d193046b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; A &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#ab6275f9d60b081be889c3a70d193046b">getArgs</a> () const </td></tr>
+<tr class="separator:ab6275f9d60b081be889c3a70d193046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d51de549b5d3ffcf8876e8c2f5eaae"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a82d51de549b5d3ffcf8876e8c2f5eaae">getVals</a> () const </td></tr>
+<tr class="separator:a82d51de549b5d3ffcf8876e8c2f5eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20464d7469c5c87dfc55b13965274d38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a20464d7469c5c87dfc55b13965274d38">getN</a> () const </td></tr>
+<tr class="separator:a20464d7469c5c87dfc55b13965274d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1faae40ca3476164c2f2cb658f888932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table.html#a1faae40ca3476164c2f2cb658f888932">getInterp</a> () const </td></tr>
 <tr class="separator:a1faae40ca3476164c2f2cb658f888932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -168,22 +164,7 @@ class galsim::Table&lt; V, A &gt;</h3>
 <p>A class to represent lookup tables for a function y = f(x). </p>
 <p>A is the type of the argument of the function. V is the type of the value of the function.</p>
 <p>Requirements for A,V: A must have ordering operators (&lt; &gt; ==) and the normal arithmetic ops (+ - * /) V must have + and *. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="ac7578625f9101dacea44f259d2693a5d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classgalsim_1_1_table_entry.html">TableEntry</a>&lt;V,A&gt; <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::<a class="el" href="classgalsim_1_1_table.html#ac7578625f9101dacea44f259d2693a5d">Entry</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="af129c714797baab6f6b976ea485d055f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -198,38 +179,20 @@ template&lt;class V, class A&gt; </div>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055fadc39a6b07eec8e68c03317a30c9d61b9"></a>linear&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055fa6fd64494ece82b68a25ae2c35acd7f02"></a>spline&#160;</td><td class="fielddoc">
-</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055fa8e74305a8adef9a1ebaeca2314845041"></a>floor&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055faf2de0b70de40f06a5641261f3acc478b"></a>ceil&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055fa5ecf4e5dc2d6265865310059b45ad026"></a>nearest&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af129c714797baab6f6b976ea485d055fa6fd64494ece82b68a25ae2c35acd7f02"></a>spline&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1c580f84efbf0c7014057f05249c89ca"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::<a class="el" href="classgalsim_1_1_table.html">Table</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct empty table. </p>
-
-</div>
-</div>
-<a class="anchor" id="acb0d00ae0d5e98ba943e221fc3556186"></a>
+<a class="anchor" id="a88ab14312669db15558711add2eceeda"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -239,13 +202,13 @@ template&lt;class V, class A&gt; </div>
           <td class="memname"><a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::<a class="el" href="classgalsim_1_1_table.html">Table</a> </td>
           <td>(</td>
           <td class="paramtype">const A *&#160;</td>
-          <td class="paramname"><em>argvec</em>, </td>
+          <td class="paramname"><em>_args</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const V *&#160;</td>
-          <td class="paramname"><em>valvec</em>, </td>
+          <td class="paramname"><em>_vals</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -267,11 +230,11 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a> from two arrays: </p>
+<p><a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a> from args, vals. </p>
 
 </div>
 </div>
-<a class="anchor" id="af27970ab06e5cd010f3240ab3f061650"></a>
+<a class="anchor" id="a7e6c90b13dbb2006633ef3956d22f386"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -281,13 +244,13 @@ template&lt;class V, class A&gt; </div>
           <td class="memname"><a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::<a class="el" href="classgalsim_1_1_table.html">Table</a> </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; A &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>_args</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; V &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
+          <td class="paramname"><em>_vals</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -305,7 +268,7 @@ template&lt;class V, class A&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a744f5622d2727996fc665a2ea6130e8a"></a>
+<a class="anchor" id="a67e3ca9825148cc2a1ffab58a1134f8a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -314,27 +277,19 @@ template&lt;class V, class A&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::<a class="el" href="classgalsim_1_1_table.html">Table</a> </td>
           <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055f">interpolant</a>&#160;</td>
-          <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>in</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Empty <a class="el" href="classgalsim_1_1_table.html" title="A class to represent lookup tables for a function y = f(x). ">Table</a>. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab29e4367c2a8e1e598123029d12f7ba7"></a>
+<a class="anchor" id="a88f8332f26d8960aaee14cae58cd6e17"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -344,13 +299,13 @@ template&lt;class V, class A&gt; </div>
           <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::addEntry </td>
           <td>(</td>
           <td class="paramtype">const A&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>arg</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const V&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -360,7 +315,7 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>new element for table. </p>
+<p>Insert an (x, y(x)) pair into the table. </p>
 
 </div>
 </div>
@@ -379,8 +334,6 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Largest argument. </p>
-
 </div>
 </div>
 <a class="anchor" id="ae267cbd42e40d384f4c4bfcadbf64ae0"></a>
@@ -398,35 +351,18 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Smallest argument. </p>
+<p>Common initialization code. </p>
 
 </div>
 </div>
-<a class="anchor" id="a8470f076762081326de9f739f145e73f"></a>
+<a class="anchor" id="ab6275f9d60b081be889c3a70d193046b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class V, class A&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a91b35cc5781e2e3049cf8c33833c6487"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::dump </td>
+          <td class="memname">const std::vector&lt;A&gt;&amp; <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::getArgs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -453,20 +389,90 @@ template&lt;class V, class A&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad6911f8e45ae891b95b5e734f4be27de"></a>
+<a class="anchor" id="a20464d7469c5c87dfc55b13965274d38"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class V, class A&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="classgalsim_1_1_table.html#ac7578625f9101dacea44f259d2693a5d">Entry</a>&gt;&amp; <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::getV </td>
+          <td class="memname">int <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::getN </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a82d51de549b5d3ffcf8876e8c2f5eaae"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V, class A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;V&gt;&amp; <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::getVals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc20b3fa41aa9b73c507a03032e4a577"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V, class A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad03aed02c41c263d1bd37efe76aadc29"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V, class A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::interpMany </td>
+          <td>(</td>
+          <td class="paramtype">const A *&#160;</td>
+          <td class="paramname"><em>argvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V *&#160;</td>
+          <td class="paramname"><em>valvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>interp many values at once </p>
 
 </div>
 </div>
@@ -506,25 +512,7 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>lookup &amp; interp. function value. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7db7f65785233887584b010c9aa45130"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::read </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>interp, return V(0) if beyond bounds </p>
 
 </div>
 </div>
@@ -543,47 +531,7 @@ template&lt;class V, class A&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>size of table </p>
-
-</div>
-</div>
-<a class="anchor" id="ada0a5893895a9081999dea00985cdd64"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::TransformArg </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>xfrm</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae30751fbcef431f3cbc595de1faf256c"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class V, class A&gt; </div>
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classgalsim_1_1_table.html">galsim::Table</a>&lt; V, A &gt;::TransformVal </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>xfrm</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Return the size of the table. </p>
 
 </div>
 </div>

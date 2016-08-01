@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A class for storing image data along with the pixel scale or wcs information.  
+<p>A class for storing image data along with the pixel scale or WCS information.  
  <a href="classgalsim_1_1image_1_1_image.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.image.Image:</div>
@@ -107,6 +107,7 @@ Inheritance diagram for galsim.image.Image:</div>
  <div class="center">
   <img src="classgalsim_1_1image_1_1_image.png" usemap="#galsim.image.Image_map" alt=""/>
   <map id="galsim.image.Image_map" name="galsim.image.Image_map">
+<area href="classgalsim_1_1image_1_1_meta_image.html" alt="galsim.image.MetaImage" shape="rect" coords="159,56,308,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -118,8 +119,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4f1882c02eb57f3eb90fb43907ba3790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaee3f5fbb12897eadceca90e53f8cb8f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#aaee3f5fbb12897eadceca90e53f8cb8f">__str__</a></td></tr>
 <tr class="separator:aaee3f5fbb12897eadceca90e53f8cb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8362d7206d835736467f6f010d842b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a7e8362d7206d835736467f6f010d842b">__hash__</a></td></tr>
-<tr class="separator:a7e8362d7206d835736467f6f010d842b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab52d9735310407953364e3557bc01c73"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#ab52d9735310407953364e3557bc01c73">bounds</a></td></tr>
 <tr class="separator:ab52d9735310407953364e3557bc01c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fe0aed1b301acadb3f50cf4fcbf7905"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a1fe0aed1b301acadb3f50cf4fcbf7905">array</a></td></tr>
@@ -154,6 +153,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a968b8dce7fb7155a09fe44c064a285aa"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a968b8dce7fb7155a09fe44c064a285aa">subImage</a></td></tr>
 <tr class="memdesc:a968b8dce7fb7155a09fe44c064a285aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a view of a portion of the full image.  <a href="#a968b8dce7fb7155a09fe44c064a285aa">More...</a><br/></td></tr>
 <tr class="separator:a968b8dce7fb7155a09fe44c064a285aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424eccadadec61ff35ca2e494e74f650"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a424eccadadec61ff35ca2e494e74f650">setSubImage</a></td></tr>
+<tr class="memdesc:a424eccadadec61ff35ca2e494e74f650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a portion of the full image to the values in another image.  <a href="#a424eccadadec61ff35ca2e494e74f650">More...</a><br/></td></tr>
+<tr class="separator:a424eccadadec61ff35ca2e494e74f650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac5ad900bb4a3fcc372b00bc9cf1976"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#adac5ad900bb4a3fcc372b00bc9cf1976">__getitem__</a></td></tr>
 <tr class="memdesc:adac5ad900bb4a3fcc372b00bc9cf1976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a view of a portion of the full image.  <a href="#adac5ad900bb4a3fcc372b00bc9cf1976">More...</a><br/></td></tr>
 <tr class="separator:adac5ad900bb4a3fcc372b00bc9cf1976"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,10 +178,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae84bd8b3ec2104057ad0f39f88cca271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the origin of the image to the given (integral) (x0, y0)  <a href="#ae84bd8b3ec2104057ad0f39f88cca271">More...</a><br/></td></tr>
 <tr class="separator:ae84bd8b3ec2104057ad0f39f88cca271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a391a0ac484a6582255ed6fe26a0ae96e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a391a0ac484a6582255ed6fe26a0ae96e">center</a></td></tr>
-<tr class="memdesc:a391a0ac484a6582255ed6fe26a0ae96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current nominal center of the image.  <a href="#a391a0ac484a6582255ed6fe26a0ae96e">More...</a><br/></td></tr>
+<tr class="memdesc:a391a0ac484a6582255ed6fe26a0ae96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current nominal center (xcen,ycen) of the image as a PositionI instance.  <a href="#a391a0ac484a6582255ed6fe26a0ae96e">More...</a><br/></td></tr>
 <tr class="separator:a391a0ac484a6582255ed6fe26a0ae96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac48ee417d696425c1384cf7ed6916a0c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#ac48ee417d696425c1384cf7ed6916a0c">trueCenter</a></td></tr>
-<tr class="memdesc:ac48ee417d696425c1384cf7ed6916a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current true center of the image.  <a href="#ac48ee417d696425c1384cf7ed6916a0c">More...</a><br/></td></tr>
+<tr class="memdesc:ac48ee417d696425c1384cf7ed6916a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current true center of the image as a PositionD instance.  <a href="#ac48ee417d696425c1384cf7ed6916a0c">More...</a><br/></td></tr>
 <tr class="separator:ac48ee417d696425c1384cf7ed6916a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e353a56aad63f3b36f09dd9c89a9a40"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a4e353a56aad63f3b36f09dd9c89a9a40">origin</a></td></tr>
 <tr class="memdesc:a4e353a56aad63f3b36f09dd9c89a9a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the origin of the image.  <a href="#a4e353a56aad63f3b36f09dd9c89a9a40">More...</a><br/></td></tr>
@@ -191,7 +193,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a929dd9a1df345c79f1dd5a94eba2676e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is a synonym for im(x,y).  <a href="#a929dd9a1df345c79f1dd5a94eba2676e">More...</a><br/></td></tr>
 <tr class="separator:a929dd9a1df345c79f1dd5a94eba2676e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee3001b7791ba8e62fc4db0aa2e96556"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#aee3001b7791ba8e62fc4db0aa2e96556">setValue</a></td></tr>
-<tr class="memdesc:aee3001b7791ba8e62fc4db0aa2e96556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel value at given position.  <a href="#aee3001b7791ba8e62fc4db0aa2e96556">More...</a><br/></td></tr>
+<tr class="memdesc:aee3001b7791ba8e62fc4db0aa2e96556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel value at given (x,y) position.  <a href="#aee3001b7791ba8e62fc4db0aa2e96556">More...</a><br/></td></tr>
 <tr class="separator:aee3001b7791ba8e62fc4db0aa2e96556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bbad502cfbd1cff26be8195320b935"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a13bbad502cfbd1cff26be8195320b935">fill</a></td></tr>
 <tr class="memdesc:a13bbad502cfbd1cff26be8195320b935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all pixel values to the given <code>value</code>  <a href="#a13bbad502cfbd1cff26be8195320b935">More...</a><br/></td></tr>
@@ -202,6 +204,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a128b1a52372e565ef3d439b5faf62d22"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a128b1a52372e565ef3d439b5faf62d22">invertSelf</a></td></tr>
 <tr class="memdesc:a128b1a52372e565ef3d439b5faf62d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all pixel values to their inverse: x -&gt; 1/x.  <a href="#a128b1a52372e565ef3d439b5faf62d22">More...</a><br/></td></tr>
 <tr class="separator:a128b1a52372e565ef3d439b5faf62d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7abf550ab2be87ea668021c2c707137e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a7abf550ab2be87ea668021c2c707137e">calculateHLR</a></td></tr>
+<tr class="memdesc:a7abf550ab2be87ea668021c2c707137e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half-light radius of a drawn object.  <a href="#a7abf550ab2be87ea668021c2c707137e">More...</a><br/></td></tr>
+<tr class="separator:a7abf550ab2be87ea668021c2c707137e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d60123f73f39f9c681fa080e8793620"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a6d60123f73f39f9c681fa080e8793620">calculateMomentRadius</a></td></tr>
+<tr class="memdesc:a6d60123f73f39f9c681fa080e8793620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an estimate of the radius based on unweighted second moments of a drawn object.  <a href="#a6d60123f73f39f9c681fa080e8793620">More...</a><br/></td></tr>
+<tr class="separator:a6d60123f73f39f9c681fa080e8793620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2960c5d9cd6cbeadbe6fa0aa6bb22e6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#ae2960c5d9cd6cbeadbe6fa0aa6bb22e6">calculateFWHM</a></td></tr>
+<tr class="memdesc:ae2960c5d9cd6cbeadbe6fa0aa6bb22e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full-width half-maximum (FWHM) of a drawn object.  <a href="#ae2960c5d9cd6cbeadbe6fa0aa6bb22e6">More...</a><br/></td></tr>
+<tr class="separator:ae2960c5d9cd6cbeadbe6fa0aa6bb22e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcdbc673a3a758fec6f8b1405678f47c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#abcdbc673a3a758fec6f8b1405678f47c">__eq__</a></td></tr>
 <tr class="separator:abcdbc673a3a758fec6f8b1405678f47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d282abfd45a5ab5826b2fa387a36d8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a09d282abfd45a5ab5826b2fa387a36d8">__ne__</a></td></tr>
@@ -220,26 +231,34 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a45c4862e6e5db46e5049db07261870db"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a> = _galsim.ImageView.keys()</td></tr>
+<tr class="memitem:a45c4862e6e5db46e5049db07261870db"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a> = list(_galsim.ImageView)</td></tr>
 <tr class="separator:a45c4862e6e5db46e5049db07261870db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2beca89fa7369986af6b138589240e30"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a2beca89fa7369986af6b138589240e30">alias_dtypes</a></td></tr>
 <tr class="separator:a2beca89fa7369986af6b138589240e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a8848a2c56a8b87be08ed30bdc0beed98">valid_dtypes</a> = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+alias_dtypes.keys()</td></tr>
+<tr class="memitem:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a8848a2c56a8b87be08ed30bdc0beed98">valid_dtypes</a> = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+list(<a class="el" href="classgalsim_1_1image_1_1_image.html#a2beca89fa7369986af6b138589240e30">alias_dtypes</a>)</td></tr>
 <tr class="separator:a8848a2c56a8b87be08ed30bdc0beed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cbe7006892418bc236b5a536be345c1"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a7cbe7006892418bc236b5a536be345c1">unsigned_dtypes</a></td></tr>
+<tr class="separator:a7cbe7006892418bc236b5a536be345c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a7bfe9103ae1bfca1d24f0bdfee51f"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1image_1_1_image.html#a74a7bfe9103ae1bfca1d24f0bdfee51f">valid_array_dtypes</a> = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+list(<a class="el" href="classgalsim_1_1image_1_1_image.html#a7cbe7006892418bc236b5a536be345c1">unsigned_dtypes</a>)</td></tr>
+<tr class="separator:a74a7bfe9103ae1bfca1d24f0bdfee51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for storing image data along with the pixel scale or wcs information. </p>
-<p>The <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class encapsulates all the relevant information about an image including a NumPy array for the pixel values, a bounding box, and some kind of WCS that converts between pixel coordinates and world coordinates. The NumPy array may be constructed by the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class itself, or an existing array can be provided by the user.</p>
+<div class="textblock"><p>A class for storing image data along with the pixel scale or WCS information. </p>
+<p>The <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> class encapsulates all the relevant information about an image including a NumPy array for the pixel values, a bounding box, and some kind of WCS that converts between pixel coordinates and world coordinates. The NumPy array may be constructed by the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> class itself, or an existing array can be provided by the user.</p>
 <p>This class creates shallow copies unless a deep copy is explicitly requested using the <code>copy</code> method. The main reason for this is that it allows users to work directly with and modify subimages of larger images (for example, to successively draw many galaxies into one large image). For other implications of this convention, see the description of initialization instructions below.</p>
-<p>There are 4 data types that the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> can use for the data values. These are <code>numpy.int16</code>, <code>numpy.int32</code>, <code>numpy.float32</code>, and <code>numpy.float64</code>. If you are constructing a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> from scratch, the default is <code>numpy.float32</code>, but you can specify one of the other data types.</p>
+<p>In most applications with images, we will use (x,y) to refer to the coordinates. We adopt the same meaning for these coordinates as most astronomy applications do: ds9, SAOImage, SExtractor, etc. all treat x as the column number and y as the row number. However, this is different from the default convention used by numpy. In numpy, the access is by [row_num,col_num], which means this is really [y,x] in terms of the normal x,y values. Users are typically insulated from this concern by the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> API, but if you access the numpy array directly via the <code>array</code> attribute, you will need to be careful about this difference.</p>
+<p>There are 4 data types that the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> can use for the data values. These are <code>numpy.int16</code>, <code>numpy.int32</code>, <code>numpy.float32</code>, and <code>numpy.float64</code>. If you are constructing a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> from scratch, the default is <code>numpy.float32</code>, but you can specify one of the other data types.</p>
 <h2>Initialization </h2>
-<p>There are several ways to construct an <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>: </p>
+<p>There are several ways to construct an <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a>: </p>
 <pre class="fragment">Image(ncol, nrow, dtype=numpy.float32, init_value=0, ...)
 
         This constructs a new image, allocating memory for the pixel values according to
         the number of columns and rows.  You can specify the data type as `dtype` if you
         want.  The default is `numpy.float32` if you don't specify it.  You can also
         optionally provide an initial value for the pixels, which defaults to 0.
+        Reminder, with our convention for x,y coordinates described above, ncol is the
+        number of pixels in the x direction, and nrow is the number of pixels in the y
+        direction.
 
 Image(bounds, dtype=numpy.float32, init_value=0, ...)
 
@@ -288,24 +307,24 @@ None        If you do not provide either of the above, then the conversion is un
 <p>There are also two read-only attributes: </p>
 <pre class="fragment">&gt;&gt;&gt; image.bounds
 &gt;&gt;&gt; image.array
-</pre><p>The <code>array</code> attribute is a NumPy array of the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>'s pixels. The individual elements in the array attribute are accessed as <code>image.array[y,x]</code>, matching the standard NumPy convention, while the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> class's own accessor uses <code>(x,y)</code>.</p>
-<pre class="fragment"> Methods
- -------
-
-     view        Return a view of the image, possibly giving it a new scale or wcs.
-     subImage    Return a view of a portion of the full image.
-     shift       Shift the origin of the image by (dx,dy).
-     setCenter   Set a new position for the center of the image.
-     setOrigin   Set a new position for the origin (x,y) = (0,0) of the image.
-     im(x,y)     Get the value of a single pixel.
-     setValue    Set the value of a single pixel.
-     resize      Resize the image to have a new bounds.
-     fill        Fill the image with the same value in all pixels.
-     setZero     Fill the image with zeros.
-     invertSelf  Convert each value x to 1/x.
-     copy        Return a deep copy of the image.
-
- See their doc strings for more details.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</pre><p>The <code>array</code> attribute is a NumPy array of the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a>'s pixels. The individual elements in the array attribute are accessed as <code>image.array[y,x]</code>, matching the standard NumPy convention, while the <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> class's own accessor uses <code>(x,y)</code>. That is, the following are equivalent: </p>
+<pre class="fragment">&gt;&gt;&gt; ixy = image(x,y)
+&gt;&gt;&gt; ixy = image.array[y,x]
+</pre><h2>Methods </h2>
+<pre class="fragment">view        Return a view of the image, possibly giving it a new scale or wcs.
+subImage    Return a view of a portion of the full image.
+shift       Shift the origin of the image by (dx,dy).
+setCenter   Set a new position for the center of the image.
+setOrigin   Set a new position for the origin (x,y) = (0,0) of the image.
+im(x,y)     Get the value of a single pixel.
+setValue    Set the value of a single pixel.
+resize      Resize the image to have a new bounds.
+fill        Fill the image with the same value in all pixels.
+setZero     Fill the image with zeros.
+invertSelf  Convert each value x to 1/x.
+copy        Return a deep copy of the image.
+</pre><p>See their doc strings for more details. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abd4cfb47eac16fe6e29a090a0b87d439"></a>
 <div class="memitem">
 <div class="memproto">
@@ -425,22 +444,6 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Return a view of a portion of the full image. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7e8362d7206d835736467f6f010d842b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def galsim.image.Image.__hash__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -603,6 +606,157 @@ None        If you do not provide either of the above, then the conversion is un
 
 </div>
 </div>
+<a class="anchor" id="ae2960c5d9cd6cbeadbe6fa0aa6bb22e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image.calculateFWHM </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>center</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Imax</em> = <code>0.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the full-width half-maximum (FWHM) of a drawn object. </p>
+<p>This method is equivalent to GSObject.calculateMomentRadius when the object has already been drawn onto an image. Note that the profile should be drawn using a method that does not integrate over pixels, so either 'sb' or 'no_pixel'. Also, if there is a significant amount of noise in the image, this method may not work well.</p>
+<p>If the image has a wcs other than a PixelScale, an AttributeError will be raised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The position in pixels to use for the center, r=0. [default: self.trueCenter()] </td></tr>
+    <tr><td class="paramname">Imax</td><td>The maximum surface brightness. [default: max(self.array)] Note: If Imax is provided, and the maximum pixel value is larger than this value, Imax will be updated to use the larger value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an estimate of the full-width half-maximum in physical units defined by the pixel scale. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7abf550ab2be87ea668021c2c707137e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image.calculateHLR </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>center</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux_frac</em> = <code>0.5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the half-light radius of a drawn object. </p>
+<p>This method is equivalent to GSObject.calculateHLR when the object has already been been drawn onto an image. Note that the profile should be drawn using a method that integrates over pixels and does not add noise. (The default method='auto' is acceptable.)</p>
+<p>If the image has a wcs other than a PixelScale, an AttributeError will be raised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The position in pixels to use for the center, r=0. [default: self.trueCenter()] </td></tr>
+    <tr><td class="paramname">flux</td><td>The total flux. [default: sum(self.array)] </td></tr>
+    <tr><td class="paramname">flux_frac</td><td>The fraction of light to be enclosed by the returned radius. [default: 0.5]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an estimate of the half-light radius in physical units defined by the pixel scale. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d60123f73f39f9c681fa080e8793620"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image.calculateMomentRadius </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>center</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flux</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rtype</em> = <code>'det'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an estimate of the radius based on unweighted second moments of a drawn object. </p>
+<p>This method is equivalent to GSObject.calculateMomentRadius when the object has already been drawn onto an image. Note that the profile should be drawn using a method that integrates over pixels and does not add noise. (The default method='auto' is acceptable.)</p>
+<p>If the image has a wcs other than a PixelScale, an AttributeError will be raised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The position in pixels to use for the center, r=0. [default: self.trueCenter()] </td></tr>
+    <tr><td class="paramname">flux</td><td>The total flux. [default: sum(self.array)] </td></tr>
+    <tr><td class="paramname">rtype</td><td>There are three options for this parameter:<ul>
+<li>'trace' means return sqrt(T/2)</li>
+<li>'det' means return det(Q)^1/4</li>
+<li>'both' means return both: (sqrt(T/2), det(Q)^1/4) [default: 'det']</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an estimate of the radius in physical units defined by the pixel scale (or both estimates if rtype == 'both'). </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a391a0ac484a6582255ed6fe26a0ae96e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -617,10 +771,18 @@ None        If you do not provide either of the above, then the conversion is un
       </table>
 </div><div class="memdoc">
 
-<p>Return the current nominal center of the image. </p>
-<p>This is a PositionI instance, which means that for even-sized images, it won't quite be the true center, since the true center is between two pixels.</p>
-<p>e.g the nominal center of an image with bounds (1,32,1,32) will be (17, 17). </p>
-
+<p>Return the current nominal center (xcen,ycen) of the image as a PositionI instance. </p>
+<p>In terms of the rows and columns, xcen is the x value for the central column, and ycen is the y value of the central row. For even-sized arrays, there is no central column or row, so the convention we adopt in this case is to round up. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; im = galsim.Image(numpy.array(range(16),dtype=float).reshape((4,4)))
+&gt;&gt;&gt; im.center()
+galsim.PositionI(x=3, y=3)
+&gt;&gt;&gt; im(im.center())
+10.0
+&gt;&gt;&gt; im.setCenter(56,72)
+&gt;&gt;&gt; im.center()
+galsim.PositionI(x=56, y=72)
+&gt;&gt;&gt; im(im.center())
+10.0</pre> 
 </div>
 </div>
 <a class="anchor" id="a2554c1d9c170b7f510e07fadc0d402ea"></a>
@@ -808,8 +970,24 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Return the origin of the image. </p>
-<p>i.e. the position of the lower-left pixel. </p>
-<pre class="fragment">   e.g the origin of an image with bounds (1,32,1,32) will be (1, 1).</pre> 
+<p>i.e. the (x,y) position of the lower-left pixel. </p>
+<pre class="fragment">   In terms of the rows and columns, this is the (x,y) coordinate of the first column, and
+   first row of the array.  For example:
+
+       &gt;&gt;&gt; im = galsim.Image(numpy.array(range(16),dtype=float).reshape((4,4)))
+       &gt;&gt;&gt; im.origin()
+       galsim.PositionI(x=1, y=1)
+       &gt;&gt;&gt; im(im.origin())
+       0.0
+       &gt;&gt;&gt; im.setOrigin(23,45)
+       &gt;&gt;&gt; im.origin()
+       galsim.PositionI(x=23, y=45)
+       &gt;&gt;&gt; im(im.origin())
+       0.0
+       &gt;&gt;&gt; im(23,45)
+       0.0
+       &gt;&gt;&gt; im.bounds
+       galsim.BoundsI(xmin=23, xmax=26, ymin=45, ymax=48)</pre> 
 </div>
 </div>
 <a class="anchor" id="ade130ce30581cfd380739caedeafbb9a"></a>
@@ -826,7 +1004,13 @@ None        If you do not provide either of the above, then the conversion is un
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>bounds</em>&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>wcs</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -837,7 +1021,14 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Resize the image to have a new bounds (must be a BoundsI instance) </p>
-<p>Note that the resized image will have uninitialized data. If you want to preserve the existing data values, you should either use <code>subImage</code> (if you want a smaller portion of the current <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>) or make a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> and copy over the current values into a portion of the new image (if you are resizing to a larger <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a>). </p>
+<p>Note that the resized image will have uninitialized data. If you want to preserve the existing data values, you should either use <code>subImage</code> (if you want a smaller portion of the current <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a>) or make a new <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> and copy over the current values into a portion of the new image (if you are resizing to a larger <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The new bounds to resize to. </td></tr>
+    <tr><td class="paramname">wcs</td><td>If provided, also update the wcs to the given value. [default: None, which means keep the existing wcs] </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -914,8 +1105,31 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Set the center of the image to the given (integral) (xcen, ycen) </p>
-<p>The arguments here may be either (xcen, ycen) or a PositionI instance. Or you can provide xcen, ycen as named kwargs. </p>
-
+<p>The arguments here may be either (xcen, ycen) or a PositionI instance. Or you can provide xcen, ycen as named kwargs.</p>
+<p>In terms of the rows and columns, xcen is the new x value for the central column, and ycen is the new y value of the central row. For even-sized arrays, there is no central column or row, so the convention we adopt in this case is to round up. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; im = galsim.Image(numpy.array(range(16),dtype=float).reshape((4,4)))
+&gt;&gt;&gt; im(1,1)
+0.0
+&gt;&gt;&gt; im(4,1)
+3.0
+&gt;&gt;&gt; im(4,4)
+15.0
+&gt;&gt;&gt; im(3,3)
+10.0
+&gt;&gt;&gt; im.setCenter(0,0)
+&gt;&gt;&gt; im(0,0)
+10.0
+&gt;&gt;&gt; im(-2,-2)
+0.0
+&gt;&gt;&gt; im(1,-2)
+3.0
+&gt;&gt;&gt; im(1,1)
+15.0
+&gt;&gt;&gt; im.setCenter(234,456)
+&gt;&gt;&gt; im(234,456)
+10.0
+&gt;&gt;&gt; im.bounds
+galsim.BoundsI(xmin=232, xmax=235, ymin=454, ymax=457)</pre> 
 </div>
 </div>
 <a class="anchor" id="ae84bd8b3ec2104057ad0f39f88cca271"></a>
@@ -949,7 +1163,65 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Set the origin of the image to the given (integral) (x0, y0) </p>
-<p>The arguments here may be either (x0, y0) or a PositionI instance. Or you can provide x0, y0 as named kwargs. </p>
+<p>The arguments here may be either (x0, y0) or a PositionI instance. Or you can provide x0, y0 as named kwargs.</p>
+<p>In terms of the rows and columns, x0 is the new x value for the first column, and y0 is the new y value of the first row. For example: </p>
+<pre class="fragment">&gt;&gt;&gt; im = galsim.Image(numpy.array(range(16),dtype=float).reshape((4,4)))
+&gt;&gt;&gt; im(1,1)
+0.0
+&gt;&gt;&gt; im(4,1)
+3.0
+&gt;&gt;&gt; im(1,4)
+12.0
+&gt;&gt;&gt; im(4,4)
+15.0
+&gt;&gt;&gt; im.setOrigin(0,0)
+&gt;&gt;&gt; im(0,0)
+0.0
+&gt;&gt;&gt; im(3,0)
+3.0
+&gt;&gt;&gt; im(0,3)
+12.0
+&gt;&gt;&gt; im(3,3)
+15.0
+&gt;&gt;&gt; im.setOrigin(234,456)
+&gt;&gt;&gt; im(234,456)
+0.0
+&gt;&gt;&gt; im.bounds
+galsim.BoundsI(xmin=234, xmax=237, ymin=456, ymax=459)</pre> 
+</div>
+</div>
+<a class="anchor" id="a424eccadadec61ff35ca2e494e74f650"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.image.Image.setSubImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a portion of the full image to the values in another image. </p>
+<p>This is equivalent to self[bounds] = rhs </p>
 
 </div>
 </div>
@@ -983,7 +1255,7 @@ None        If you do not provide either of the above, then the conversion is un
       </table>
 </div><div class="memdoc">
 
-<p>Set the pixel value at given position. </p>
+<p>Set the pixel value at given (x,y) position. </p>
 <p>The arguments here may be either (x, y, value) or (pos, value) where pos is a PositionI. Or you can provide x, y, value as named kwargs. </p>
 
 </div>
@@ -1037,8 +1309,11 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Shift the pixel coordinates by some (integral) dx,dy. </p>
-<p>The arguments here may be either (dx, dy) or a PositionI instance. Or you can provide dx, dy as named kwargs. </p>
-
+<p>The arguments here may be either (dx, dy) or a PositionI instance. Or you can provide dx, dy as named kwargs.</p>
+<p>In terms of columns and rows, dx means a shift in the x value of each column in the array, and dy means a shift in the y value of each row. In other words, the following will return the same value for ixy. The shift function just changes the coordinates (x,y) used for that pixel: </p>
+<pre class="fragment">&gt;&gt;&gt; ixy = im(x,y)
+&gt;&gt;&gt; im.shift(3,9)
+&gt;&gt;&gt; ixy = im(x+3, y+9)</pre> 
 </div>
 </div>
 <a class="anchor" id="a968b8dce7fb7155a09fe44c064a285aa"></a>
@@ -1066,6 +1341,7 @@ None        If you do not provide either of the above, then the conversion is un
 </div><div class="memdoc">
 
 <p>Return a view of a portion of the full image. </p>
+<p>This is equivalent to self[bounds] </p>
 
 </div>
 </div>
@@ -1083,10 +1359,21 @@ None        If you do not provide either of the above, then the conversion is un
       </table>
 </div><div class="memdoc">
 
-<p>Return the current true center of the image. </p>
-<p>This is a PositionD instance, and it may be half-way between two pixels.</p>
-<p>e.g the true center of an image with bounds (1,32,1,32) will be (16.5, 16.5). </p>
-
+<p>Return the current true center of the image as a PositionD instance. </p>
+<p>Unline the nominal center returned by im.center(), this value may be half-way between two pixels if the image has an even number of rows or columns. It gives the position (x,y) at the exact center of the image, regardless of whether this is at the center of a pixel (integer value) or halfway between two (half-integer). For example: </p>
+<pre class="fragment">&gt;&gt;&gt; im = galsim.Image(numpy.array(range(16),dtype=float).reshape((4,4)))
+&gt;&gt;&gt; im.center()
+galsim.PositionI(x=3, y=3)
+&gt;&gt;&gt; im.trueCenter()
+galsim.PositionI(x=2.5, y=2.5)
+&gt;&gt;&gt; im.setCenter(56,72)
+&gt;&gt;&gt; im.center()
+galsim.PositionI(x=56, y=72)
+&gt;&gt;&gt; im.trueCenter()
+galsim.PositionD(x=55.5, y=71.5)
+&gt;&gt;&gt; im.setOrigin(0,0)
+&gt;&gt;&gt; im.trueCenter()
+galsim.PositionD(x=1.5, y=1.5)</pre> 
 </div>
 </div>
 <a class="anchor" id="ad8ba5007481a9bbffb23a5c1e15f21d4"></a>
@@ -1139,7 +1426,7 @@ None        If you do not provide either of the above, then the conversion is un
 
 <p>Make a view of this image, which lets you change the scale, wcs, origin, etc. </p>
 <p>but view the same underlying data as the original image.</p>
-<p>If you do not provide either <code>scale</code> or <code>wcs</code>, the view will keep the same wcs as the current <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or wcs information. ">Image</a> object.</p>
+<p>If you do not provide either <code>scale</code> or <code>wcs</code>, the view will keep the same wcs as the current <a class="el" href="classgalsim_1_1image_1_1_image.html" title="A class for storing image data along with the pixel scale or WCS information. ">Image</a> object.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. [default: None] </td></tr>
@@ -1236,8 +1523,8 @@ None        If you do not provide either of the above, then the conversion is un
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;= {</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        int : numpy.int32,          <span class="comment"># So that user gets what they would expect</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        float : numpy.float64,      <span class="comment"># if using dtype=int or float</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        int : np.int32,          <span class="comment"># So that user gets what they would expect</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        float : np.float64,      <span class="comment"># if using dtype=int or float</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -1262,7 +1549,7 @@ None        If you do not provide either of the above, then the conversion is un
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tuple galsim.image.Image.cpp_valid_dtypes = _galsim.ImageView.keys()</td>
+          <td class="memname">tuple galsim.image.Image.cpp_valid_dtypes = list(_galsim.ImageView)</td>
         </tr>
       </table>
   </td>
@@ -1298,6 +1585,51 @@ None        If you do not provide either of the above, then the conversion is un
 
 </div>
 </div>
+<a class="anchor" id="a7cbe7006892418bc236b5a536be345c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary galsim.image.Image.unsigned_dtypes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;= {</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        <span class="comment"># We don&#39;t have unsigned image code, so just use signed int types.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        np.uint32 : np.int32,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        np.uint16 : np.int16,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a74a7bfe9103ae1bfca1d24f0bdfee51f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple galsim.image.Image.valid_array_dtypes = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+list(<a class="el" href="classgalsim_1_1image_1_1_image.html#a7cbe7006892418bc236b5a536be345c1">unsigned_dtypes</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8848a2c56a8b87be08ed30bdc0beed98"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1306,7 +1638,7 @@ None        If you do not provide either of the above, then the conversion is un
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tuple galsim.image.Image.valid_dtypes = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+alias_dtypes.keys()</td>
+          <td class="memname">tuple galsim.image.Image.valid_dtypes = <a class="el" href="classgalsim_1_1image_1_1_image.html#a45c4862e6e5db46e5049db07261870db">cpp_valid_dtypes</a>+list(<a class="el" href="classgalsim_1_1image_1_1_image.html#a2beca89fa7369986af6b138589240e30">alias_dtypes</a>)</td>
         </tr>
       </table>
   </td>
