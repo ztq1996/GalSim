@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classgalsim_1_1celestial_1_1_celestial_coord-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,6 +114,12 @@ Inheritance diagram for galsim.celestial.CelestialCoord:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a47866f2f62617e18275687cf8a3d4c3f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a47866f2f62617e18275687cf8a3d4c3f">__init__</a></td></tr>
 <tr class="separator:a47866f2f62617e18275687cf8a3d4c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab864807f1abc5836b5faa3aa2f121e5e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#ab864807f1abc5836b5faa3aa2f121e5e">get_xyz</a></td></tr>
+<tr class="memdesc:ab864807f1abc5836b5faa3aa2f121e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (x,y,z) coordinates on the unit sphere corresponding to this (RA, Dec).  <a href="#ab864807f1abc5836b5faa3aa2f121e5e">More...</a><br/></td></tr>
+<tr class="separator:ab864807f1abc5836b5faa3aa2f121e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c09fe7fdedcb32c3bfaf2a113ef5b2e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a5c09fe7fdedcb32c3bfaf2a113ef5b2e">from_xyz</a></td></tr>
+<tr class="memdesc:a5c09fe7fdedcb32c3bfaf2a113ef5b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from a given (x,y,z) position in three dimensions.  <a href="#a5c09fe7fdedcb32c3bfaf2a113ef5b2e">More...</a><br/></td></tr>
+<tr class="separator:a5c09fe7fdedcb32c3bfaf2a113ef5b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f4039d9c543e96bdf22847948929f8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a83f4039d9c543e96bdf22847948929f8">ra</a></td></tr>
 <tr class="separator:a83f4039d9c543e96bdf22847948929f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab338e87453a894e11a7ebad28fe070f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#ab338e87453a894e11a7ebad28fe070f1">dec</a></td></tr>
@@ -162,6 +169,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a379a176d111336d952420598cf3e6846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1038421255f5c2590df544f145b889e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#aa1038421255f5c2590df544f145b889e">__ne__</a></td></tr>
 <tr class="separator:aa1038421255f5c2590df544f145b889e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae1faa8591c895f5cef08f72b8f5e1c77"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#ae1faa8591c895f5cef08f72b8f5e1c77">from_galactic</a></td></tr>
+<tr class="memdesc:ae1faa8591c895f5cef08f72b8f5e1c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from the given galactic coordinates.  <a href="#ae1faa8591c895f5cef08f72b8f5e1c77">More...</a><br/></td></tr>
+<tr class="separator:ae1faa8591c895f5cef08f72b8f5e1c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d037cce3e2dbe8ae6c700eea52981da"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html#a9d037cce3e2dbe8ae6c700eea52981da">from_ecliptic</a></td></tr>
+<tr class="memdesc:a9d037cce3e2dbe8ae6c700eea52981da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from the given ecliptic coordinates.  <a href="#a9d037cce3e2dbe8ae6c700eea52981da">More...</a><br/></td></tr>
+<tr class="separator:a9d037cce3e2dbe8ae6c700eea52981da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -624,6 +640,142 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9d037cce3e2dbe8ae6c700eea52981da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.celestial.CelestialCoord.from_ecliptic </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>epoch</em> = <code>2000.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>date</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from the given ecliptic coordinates. </p>
+<p>:param lam: The longitude in ecliptic coordinates (an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance) :param beta: The latitude in ecliptic coordinates (an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance) :param epoch: The epoch to be used for estimating the obliquity of the ecliptic, if <code>date</code> is None. But if <code>date</code> is given, then use that to determine the epoch. [default: 2000.] :param date: If a date is given as a python datetime object, then return the position in ecliptic coordinates with respect to the sun position at that date. If None, then return the true ecliptic coordiantes. [default: None]</p>
+<p>:returns: the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> corresponding to these ecliptic coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1faa8591c895f5cef08f72b8f5e1c77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.celestial.CelestialCoord.from_galactic </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>epoch</em> = <code>2000.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from the given galactic coordinates. </p>
+<p>:param el: The longitude in galactic coordinates (an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance) :param b: The latitude in galactic coordinates (an <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instance) :param epoch: The epoch of the returned coordinate. [default: 2000.]</p>
+<p>:returns: the <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> corresponding to these galactic coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5c09fe7fdedcb32c3bfaf2a113ef5b2e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.celestial.CelestialCoord.from_xyz </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cls</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> from a given (x,y,z) position in three dimensions. </p>
+<p>The 3D (x,y,z) position does not need to fall on the unit sphere.</p>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classgalsim_1_1celestial_1_1_celestial_coord.html" title="This class defines a position on the celestial sphere, normally given by two angles, ra and dec. ">CelestialCoord</a> instance </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa1c5df3465d1f21fc8be89812192fcca"></a>
 <div class="memitem">
 <div class="memproto">
@@ -651,6 +803,25 @@ Public Attributes</h2></td></tr>
 <p>Get the longitude and latitude in galactic coordinates corresponding to this position. </p>
 <p>The formulae are implemented in terms of the 1950 coordinates, so we need to precess from the current epoch to 1950. The current epoch is assumed to be 2000 by default, but you may also specify a different value with the epoch parameter.</p>
 <dl class="section return"><dt>Returns</dt><dd>the longitude and latitude as a tuple (el, b), given as <a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">Angle</a> instances. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab864807f1abc5836b5faa3aa2f121e5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.celestial.CelestialCoord.get_xyz </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the (x,y,z) coordinates on the unit sphere corresponding to this (RA, Dec). </p>
+<dl class="section return"><dt>Returns</dt><dd>a tuple (x,y,z) </dd></dl>
 
 </div>
 </div>
@@ -729,7 +900,7 @@ Public Attributes</h2></td></tr>
         not area.  For more information, see
         http://mathworld.wolfram.com/StereographicProjection.html
 'gnomonic' uses a gnomonic projection (i.e. a projection from the center of the
-        sphere, which has the property that all great circles become straight 
+        sphere, which has the property that all great circles become straight
         lines.  For more information, see
         http://mathworld.wolfram.com/GnomonicProjection.html
 'postel' uses a Postel equidistant proejection, which preserves distances from

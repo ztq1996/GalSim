@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -189,6 +189,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ca26ba7127e5aab446e77ab3573048f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a1ca26ba7127e5aab446e77ab3573048f">drawImage</a></td></tr>
 <tr class="memdesc:a1ca26ba7127e5aab446e77ab3573048f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for drawing profiles storing correlation functions.  <a href="#a1ca26ba7127e5aab446e77ab3573048f">More...</a><br/></td></tr>
 <tr class="separator:a1ca26ba7127e5aab446e77ab3573048f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168808f7533dd2699fd69d6c39bd673d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a168808f7533dd2699fd69d6c39bd673d">drawKImage</a></td></tr>
+<tr class="memdesc:a168808f7533dd2699fd69d6c39bd673d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for drawing profiles storing correlation functions (i.e., power spectra) in Fourier space.  <a href="#a168808f7533dd2699fd69d6c39bd673d">More...</a><br/></td></tr>
+<tr class="separator:a168808f7533dd2699fd69d6c39bd673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -499,7 +502,7 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">&gt;&gt;&gt; image.addNoise(correlated_noise)
 </pre><p>is preferred. However, this is equivalent to calling this instance's <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a0a1fd2775afe89b89f5d004aa0fa5149" title="Apply this correlated Gaussian random noise field to an input Image. ">applyTo()</a> method as follows </p>
 <pre class="fragment">&gt;&gt;&gt; correlated_noise.applyTo(image)
-</pre><p>On output the Image instance <code>image</code> will have been given additional noise according to the given <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>correlated_noise</code>. Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.scale &lt;= 0</code> a pixel scale of 1 is assumed. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
+</pre><p>On output the Image instance <code>image</code> will have been given additional noise according to the given <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> instance <code>correlated_noise</code>. Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.scale &lt;= 0</code> a pixel scale of 1 is assumed. If the image has a non-uniform WCS, the local uniform approximation at the center of the image will be used.</p>
 <p>Note that the correlations defined in a correlated_noise object are defined in terms of world coordinates (i.e. typically arcsec on the sky). Some care is thus required if you apply correlated noise to an image with a non-trivial WCS. The correlations will have a specific direction and scale in world coordinates, so if you apply them to an image with a WCS that has a rotation or a different pixel scale than the original, the resulting correlations will have the correct direction and scale in world coordinates, but a different direction and/or scale in image coordinates.</p>
 <p>If you want to override this behavior, you can view your image with the WCS of the correlation function and apply the noise to that. For example: </p>
 <pre class="fragment">&gt;&gt;&gt; image = galsim.Image(nx, ny, wcs=complicated_wcs)
@@ -701,19 +704,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>wmult</em> = <code>1.</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>add_to_image</em> = <code>False</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dx</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>dx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>wmult</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -725,19 +728,90 @@ Public Attributes</h2></td></tr>
 
 <p>A method for drawing profiles storing correlation functions. </p>
 <p>This is a mild reimplementation of the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a1ca26ba7127e5aab446e77ab3573048f" title="A method for drawing profiles storing correlation functions. ">drawImage()</a> method for GSObjects. The <code>method</code> is automatically set to 'sb' and cannot be changed, and the <code>gain</code> is set to unity. Also, not all the normal parameters of the GSObject method are available.</p>
-<p>It <code>scale</code> and <code>wcs</code> are not set, and the <code>image</code> has no <code>wcs</code> attribute, then this will use the wcs of the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> object.</p>
+<p>If <code>scale</code> and <code>wcs</code> are not set, and the <code>image</code> has no <code>wcs</code> attribute, then this will use the wcs of the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> object.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>If provided, this will be the image on which to draw the profile. If <code>image</code> is None, then an automatically-sized Image will be created. If <code>image</code> is given, but its bounds are undefined (e.g. if it was constructed with <code>image = galsim.Image()</code>), then it will be resized appropriately based on the profile's size [default: None]. </td></tr>
     <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale for the image. [default: None] </td></tr>
     <tr><td class="paramname">wcs</td><td>If provided, use this as the wcs for the image (possibly overriding any existing <code>image.wcs</code>). At most one of <code>scale</code> or <code>wcs</code> may be provided. [default: None] Note: If no WCS is provided either via <code>scale</code>, <code>wcs</code> or <code>image.wcs</code>, then the noise object's wcs will be used. </td></tr>
     <tr><td class="paramname">dtype</td><td>The data type to use for an automatically constructed image. Only valid if <code>image</code> is None. [default: None, which means to use numpy.float32] </td></tr>
-    <tr><td class="paramname">wmult</td><td>A multiplicative factor by which to enlarge (in each direction) the default automatically calculated FFT grid size used for any intermediate calculations in Fourier space. See the description in GSObject.drawImage() for more details. [default: 1] </td></tr>
     <tr><td class="paramname">add_to_image</td><td>Whether to add flux to the existing image rather than clear out anything in the image before drawing. Note: This requires that <code>image</code> be provided and that it have defined bounds. [default: False]</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an Image of the correlation function. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a168808f7533dd2699fd69d6c39bd673d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.correlatednoise._BaseCorrelatedNoise.drawKImage </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nx</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ny</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bounds</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>add_to_image</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A method for drawing profiles storing correlation functions (i.e., power spectra) in Fourier space. </p>
+<p>This is a mild reimplementation of the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a168808f7533dd2699fd69d6c39bd673d" title="A method for drawing profiles storing correlation functions (i.e., power spectra) in Fourier space...">drawKImage()</a> method for GSObjects. The <code>gain</code> is automatically set to unity and cannot be change. Also, not all the normal parameters of the GSObject method are available.</p>
+<p>If <code>scale</code> is not set, and <code>image</code> has no <code>wcs</code> attribute, then this will use the wcs of the <a class="el" href="classgalsim_1_1correlatednoise_1_1_correlated_noise.html" title="Then we define the CorrelatedNoise, which generates a correlation function by estimating it directly ...">CorrelatedNoise</a> object, which must be a <code>PixelScale</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>If provided, this will be the Image onto which to draw the k-space image. If <code>image</code> is None, then an automatically-sized image will be created. If <code>image</code> is given, but its bounds are undefined, then it will be resized appropriately based on the profile's size. [default: None] </td></tr>
+    <tr><td class="paramname">nx</td><td>If provided and <code>image</code> is None, use to set the x-direction size of the image. Must be accompanied by <code>ny</code>. </td></tr>
+    <tr><td class="paramname">ny</td><td>If provided and <code>image</code> is None, use to set the y-direction size of the image. Must be accompanied by <code>nx</code>. </td></tr>
+    <tr><td class="paramname">bounds</td><td>If provided and <code>image</code> is None, use to set the bounds of the image. </td></tr>
+    <tr><td class="paramname">scale</td><td>If provided, use this as the pixel scale, dk, for the images. If <code>scale</code> is None and <code>image</code> is given, then take the provided images' pixel scale (which must be equal). If <code>scale</code> is None and <code>image</code> is None, then use the Nyquist scale. If <code>scale &lt;= 0</code> (regardless of <code>image</code>), then use the Nyquist scale. [default: None] </td></tr>
+    <tr><td class="paramname">add_to_image</td><td>Whether to add to the existing images rather than clear out anything in the image before drawing. Note: This requires that <code>image</code> be provided and that it has defined bounds. [default: False]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the tuple of Image instances, <code>(re, im)</code> (created if necessary) </dd></dl>
 
 </div>
 </div>
@@ -1028,7 +1102,7 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">&gt;&gt;&gt; correlated_noise.symmetrizeImage(image, order=order)
 </pre><p>If the <code>image</code> originally contained noise with a correlation function described by the <code>correlated_noise</code> instance, the combined noise after using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> method will have a noise correlation function with N-fold symmetry, where <code>N=order</code>.</p>
 <p>Note that the code doesn't check that the "if" above is true: the user MUST make sure this is the case for the final noise correlation function to be symmetric in the requested way.</p>
-<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, it will use the wcs of the noise. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
+<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, it will use the wcs of the noise. If the image has a non-uniform WCS, the local uniform approximation at the center of the image will be used.</p>
 <p>If you are interested in a theoretical calculation of the variance in the final noise field after imposing symmetry, the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> method in fact returns this variance. For example: </p>
 <pre class="fragment">&gt;&gt;&gt; variance = correlated_noise.symmetrizeImage(image, order=order)
 </pre><p>For context, in comparison with the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method for the case of noise correlation functions that are roughly like those in the COSMOS HST data, the amount of noise added to impose N-fold symmetry is usually much less than what is added to fully whiten the noise. The usage of <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#a8f4cb9995d9e097a35aaf87da1b72ec1" title="Apply noise designed to impose N-fold symmetry on the existing noise in a (square) input Image...">symmetrizeImage()</a> is totally analogous to the usage of <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a>.</p>
@@ -1130,7 +1204,7 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">&gt;&gt;&gt; correlated_noise.whitenImage(image)
 </pre><p>If the <code>image</code> originally contained noise with a correlation function described by the <code>correlated_noise</code> instance, the combined noise after using the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method will be approximately uncorrelated. Tests using COSMOS noise fields suggest ~0.3% residual off-diagonal covariances after whitening, relative to the variance, although results may vary depending on the precise correlation function of the noise field. (See <code>devel/external/hst/compare_whitening_subtraction.py</code> for the COSMOS tests.)</p>
 <p>Note that the code doesn't check that the "if" above is true: the user MUST make sure this is the case for the final noise to be uncorrelated.</p>
-<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, it will use the wcs of the noise. If the image has a non-trivial WCS, it must at least be "uniform", i.e., <code>image.wcs.isUniform() == True</code>.</p>
+<p>Normally, <code>image.scale</code> is used to determine the input Image pixel separation, and if <code>image.wcs</code> is None, it will use the wcs of the noise. If the image has a non-uniform WCS, the local uniform approximation at the center of the image will be used.</p>
 <p>If you are interested in a theoretical calculation of the variance in the final noise field after whitening, the <a class="el" href="classgalsim_1_1correlatednoise_1_1___base_correlated_noise.html#af39b3141a36a515022acabae5c973817" title="Apply noise designed to whiten correlated Gaussian random noise in an input Image. ">whitenImage()</a> method in fact returns this variance. For example: </p>
 <pre class="fragment">&gt;&gt;&gt; variance = correlated_noise.whitenImage(image)
 </pre><h2>Example </h2>

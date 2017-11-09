@@ -70,14 +70,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow3" class="tabs2">
     <ul class="tablist">
       <li class="current"><a href="globals.html"><span>All</span></a></li>
+      <li><a href="globals_func.html"><span>Functions</span></a></li>
       <li><a href="globals_vars.html"><span>Variables</span></a></li>
+      <li><a href="globals_type.html"><span>Typedefs</span></a></li>
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index__"><span>_</span></a></li>
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
@@ -85,11 +89,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_j"><span>j</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+      <li><a href="#index_x"><span>x</span></a></li>
       <li><a href="#index_y"><span>y</span></a></li>
       <li class="current"><a href="#index_z"><span>z</span></a></li>
     </ul>
@@ -100,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,6 +119,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 <div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
+
+<h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
+<li>__GNUC_PREREQ
+: <a class="el" href="fmath_8hpp.html#a9ce725228f93c94c413ddd8589b7ba44">fmath.hpp</a>
+</li>
+<li>_aligned_malloc()
+: <a class="el" href="fastexp_8cpp.html#a615e94833943f757241c3260288749fb">fastexp.cpp</a>
+</li>
+</ul>
+
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>abserr
@@ -132,16 +150,94 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>benchmark()
+: <a class="el" href="bench_8cpp.html#aaf0f63e497fe0e990dfb66d3f61be829">bench.cpp</a>
+, <a class="el" href="ck_8cpp.html#a958ce148b710949e1e3f1c493f334546">ck.cpp</a>
+, <a class="el" href="fastexp_8cpp.html#a958ce148b710949e1e3f1c493f334546">fastexp.cpp</a>
+</li>
+<li>benchmark_v()
+: <a class="el" href="ck_8cpp.html#a5257adff68aaa756b679898f059be799">ck.cpp</a>
+</li>
 <li>Boltzmann
 : <a class="el" href="_astronomical_constants_8h.html#a125b41175d0944993a5f264899eee96b">AstronomicalConstants.h</a>
 </li>
 <li>BOOST_NO_CXX11_SMART_PTR
 : <a class="el" href="_f_f_t_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">FFT.h</a>
 , <a class="el" href="_g_s_params_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">GSParams.h</a>
-, <a class="el" href="_image_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">Image.h</a>
 , <a class="el" href="_int_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">Int.h</a>
-, <a class="el" href="_interpolant_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">Interpolant.h</a>
 , <a class="el" href="_s_b_profile_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">SBProfile.h</a>
+, <a class="el" href="_interpolant_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">Interpolant.h</a>
+, <a class="el" href="_image_8h.html#ae23b24e85d04f74fdebd21fe0cc0ebcf">Image.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>C1
+: <a class="el" href="fastexp_8cpp.html#a904dc404907e943cfad5b4e2ec9278b2">fastexp.cpp</a>
+</li>
+<li>C2
+: <a class="el" href="fastexp_8cpp.html#a63ef11ac7d8fc6f3da5bc06b6a4a323d">fastexp.cpp</a>
+</li>
+<li>check_exp_ps256()
+: <a class="el" href="avx2_8cpp.html#ac1fd1b698fd992b81f14c5d896b249e8">avx2.cpp</a>
+</li>
+<li>check_expd_v()
+: <a class="el" href="avx2_8cpp.html#af6049deeedd8a53a31ac50c30ef63a6f">avx2.cpp</a>
+</li>
+<li>compare()
+: <a class="el" href="fastexp_8cpp.html#a884975cbacc7218061fc6d7df8a9c264">fastexp.cpp</a>
+</li>
+<li>CONST_128D
+: <a class="el" href="fastexp_8cpp.html#a274a45e37c205884cb4dae559b905ce3">fastexp.cpp</a>
+</li>
+<li>CONST_128I
+: <a class="el" href="fastexp_8cpp.html#a1765688c1d02f0a256439af498500f47">fastexp.cpp</a>
+</li>
+<li>CYBOZU_ALIGN
+: <a class="el" href="inttype_8hpp.html#a7a8b009e99b75a1b25f4c38503b7ee62">inttype.hpp</a>
+</li>
+<li>CYBOZU_ALLOCA_
+: <a class="el" href="inttype_8hpp.html#ada57abbe34b2b6df7713c87602d58ac1">inttype.hpp</a>
+</li>
+<li>CYBOZU_BENCH
+: <a class="el" href="benchmark_8hpp.html#a84ca1aaaab29e0968d6069ce8c6d2929">benchmark.hpp</a>
+</li>
+<li>CYBOZU_BENCH_C
+: <a class="el" href="benchmark_8hpp.html#ae71c1a162fdb1c832cebfc3649b52f5b">benchmark.hpp</a>
+</li>
+<li>CYBOZU_CPP_VERSION
+: <a class="el" href="inttype_8hpp.html#ab28a8f9b585142cd1b3dbb873793340c">inttype.hpp</a>
+</li>
+<li>CYBOZU_CPP_VERSION_CPP03
+: <a class="el" href="inttype_8hpp.html#a6e8c965fda263156ba402d9551b0485b">inttype.hpp</a>
+</li>
+<li>CYBOZU_CPP_VERSION_CPP11
+: <a class="el" href="inttype_8hpp.html#a7e393045f353f1af7d1c875a391de81d">inttype.hpp</a>
+</li>
+<li>CYBOZU_CPP_VERSION_TR1
+: <a class="el" href="inttype_8hpp.html#aa807dce4c171a94a787374dc859197dd">inttype.hpp</a>
+</li>
+<li>CYBOZU_NAMESPACE_STD
+: <a class="el" href="inttype_8hpp.html#a7410ce0bb8601765676018efe712360a">inttype.hpp</a>
+</li>
+<li>CYBOZU_NAMESPACE_TR1_BEGIN
+: <a class="el" href="inttype_8hpp.html#a4b137e9bb3490b8f0157281f9b8647b0">inttype.hpp</a>
+</li>
+<li>CYBOZU_NAMESPACE_TR1_END
+: <a class="el" href="inttype_8hpp.html#a11a2045c1dc1b5ae30b76ee24bf7ff76">inttype.hpp</a>
+</li>
+<li>CYBOZU_NUM_OF_ARRAY
+: <a class="el" href="inttype_8hpp.html#a9590a04f10a3cc6e777de8bef7ae030c">inttype.hpp</a>
+</li>
+<li>CYBOZU_OS_BIT
+: <a class="el" href="inttype_8hpp.html#a66ce9a5702fda83c4e384f6706c9778d">inttype.hpp</a>
+</li>
+<li>CYBOZU_SNPRINTF
+: <a class="el" href="inttype_8hpp.html#a6ff8eedb77b726a888b05c967e5d270e">inttype.hpp</a>
+</li>
+<li>CYBOZU_UNUSED
+: <a class="el" href="benchmark_8hpp.html#a26afc45a0dc319c3b6e6236da80c75fc">benchmark.hpp</a>
 </li>
 </ul>
 
@@ -156,6 +252,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>DIVERT_BOOST_RANDOM
 : <a class="el" href="_random_8h.html#aa7f15194f79996fb7331d88b71069c5c">Random.h</a>
 </li>
+<li>dummy()
+: <a class="el" href="bench_8cpp.html#a1513033e1743cc9c25fbc1375c3d1f0a">bench.cpp</a>
+</li>
+<li>dummy4()
+: <a class="el" href="bench_8cpp.html#ae34e84fdc6bc017229f4742605c81a9f">bench.cpp</a>
+</li>
+<li>dummy_ps()
+: <a class="el" href="bench_8cpp.html#a015bc932bf2fea30e2a653c3f32297a0">bench.cpp</a>
+</li>
 </ul>
 
 
@@ -169,6 +274,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>EclipticNode
 : <a class="el" href="_astronomical_constants_8h.html#a70d263beef34cdf48edfd30555b82cfb">AstronomicalConstants.h</a>
 </li>
+<li>err()
+: <a class="el" href="ck_8cpp.html#a8e6a7f523a18b5d495ca568486f14f1c">ck.cpp</a>
+</li>
 </ul>
 
 
@@ -176,13 +284,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>f
 : <a class="el" href="_int_8h.html#a1e69c193646d41e1aed232d10b1b5d8d">Int.h</a>
 </li>
+<li>fmath_exp4()
+: <a class="el" href="bench_8cpp.html#a87bcfb03bcd93b1032f68e2d417a4b4f">bench.cpp</a>
+</li>
+<li>fmath_exp_ps()
+: <a class="el" href="bench_8cpp.html#a08bd01fd6593afbb18c48a8889ad2198">bench.cpp</a>
+</li>
+<li>fmath_expd()
+: <a class="el" href="fastexp_8cpp.html#a025a352dcfce4dffd7057be241bdae37">fastexp.cpp</a>
+</li>
+<li>fmath_log4()
+: <a class="el" href="bench_8cpp.html#abfc33e8eb9859dcf8b2cc92e343cb9a4">bench.cpp</a>
+</li>
+<li>fmath_log_ps()
+: <a class="el" href="bench_8cpp.html#aa361606d177aba128f6868f37fae9b35">bench.cpp</a>
+</li>
 <li>func
 : <a class="el" href="_int_8h.html#ac6eeed7beb92b341a701bdeaeaa95de8">Int.h</a>
+</li>
+<li>func4()
+: <a class="el" href="bench_8cpp.html#ab27fec556cc36824fbf0f829665c9aef">bench.cpp</a>
+</li>
+<li>func_ps()
+: <a class="el" href="bench_8cpp.html#a99a8b5929dc784c8bcc4fd35f46f11a5">bench.cpp</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>g_y
+: <a class="el" href="bench_8cpp.html#adc5737b6e039b77d5cf8e52477d6bd6b">bench.cpp</a>
+</li>
 <li>GM
 : <a class="el" href="_astronomical_constants_8h.html#a3ad3646aedbb317bd8a31bc8e8064abd">AstronomicalConstants.h</a>
 </li>
@@ -231,9 +363,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 
 
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>LOG2E
+: <a class="el" href="fastexp_8cpp.html#a7314186604a194f9909a2ac6b4f26961">fastexp.cpp</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="avx2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">avx2.cpp</a>
+, <a class="el" href="bench_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">bench.cpp</a>
+, <a class="el" href="ck_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">ck.cpp</a>
+, <a class="el" href="fastexp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">fastexp.cpp</a>
+</li>
+<li>mainExp()
+: <a class="el" href="bench_8cpp.html#a40bbf90729b47da0987e58a782989a48">bench.cpp</a>
+</li>
+<li>mainLog()
+: <a class="el" href="bench_8cpp.html#a92b2ec510614a62655da799b8fda0e95">bench.cpp</a>
+</li>
+<li>mainPow()
+: <a class="el" href="bench_8cpp.html#a4ea757de4bf84ec13716e6680a31a8f6">bench.cpp</a>
+</li>
+<li>MAXLOG
+: <a class="el" href="fastexp_8cpp.html#a2bc679b0e99582a5d722e0a0ccb7ac5a">fastexp.cpp</a>
+</li>
+<li>measure()
+: <a class="el" href="fastexp_8cpp.html#a44a92ef34dd85136805b0bec7afb873a">fastexp.cpp</a>
+</li>
 <li>Micron
 : <a class="el" href="_astronomical_constants_8h.html#a62e1c874d2cf1a788c5fbb046a6cac28">AstronomicalConstants.h</a>
+</li>
+<li>MIE_ALIGN
+: <a class="el" href="fastexp_8cpp.html#a5cef5f7b5efee59e24361929a7257baf">fastexp.cpp</a>
+, <a class="el" href="fmath_8hpp.html#a5cef5f7b5efee59e24361929a7257baf">fmath.hpp</a>
+</li>
+<li>MIE_PACK
+: <a class="el" href="fmath_8hpp.html#a5d358aeb36b3c09983242cab3982963d">fmath.hpp</a>
+</li>
+<li>MINLOG
+: <a class="el" href="fastexp_8cpp.html#a1652d38f198d6b54c12d84fdc90e208a">fastexp.cpp</a>
 </li>
 <li>MINUTE
 : <a class="el" href="_astronomical_constants_8h.html#abfcf174b6ac8e2228f63dcad84b66d96">AstronomicalConstants.h</a>
@@ -245,6 +415,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>p
+: <a class="el" href="bench_8cpp.html#aca4d0130fcb9b532681f34adb07c6237">bench.cpp</a>
+</li>
 <li>Parsec
 : <a class="el" href="_astronomical_constants_8h.html#aab83e617ec86afa1bb20cf937b9004ea">AstronomicalConstants.h</a>
 </li>
@@ -254,6 +427,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Planck
 : <a class="el" href="_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74">AstronomicalConstants.h</a>
 </li>
+<li>powa()
+: <a class="el" href="bench_8cpp.html#a44f81091f5bad7da208106f1aeb1731c">bench.cpp</a>
+</li>
+<li>put()
+: <a class="el" href="bench_8cpp.html#aec3fcb6cb698cff3fb9ebb24b3656735">bench.cpp</a>
+</li>
+<li>puti()
+: <a class="el" href="bench_8cpp.html#a8ab7f5bbb7edc829a6c153f21ed6fed0">bench.cpp</a>
+</li>
+<li>PutVersion()
+: <a class="el" href="bench_8cpp.html#a5b756862a99949b3204188d120f92bfe">bench.cpp</a>
+</li>
 </ul>
 
 
@@ -261,16 +446,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>RadToArcsec
 : <a class="el" href="_astronomical_constants_8h.html#a90aa40c60414845803b95ab9053f22c1">AstronomicalConstants.h</a>
 </li>
+<li>read_source()
+: <a class="el" href="fastexp_8cpp.html#a8d96e168a8c4416782b34cdd6bbb3161">fastexp.cpp</a>
+</li>
 <li>RecombinationRedshift
 : <a class="el" href="_astronomical_constants_8h.html#a1831b9bf2e57ee4dca1641f533e54878">AstronomicalConstants.h</a>
 </li>
 <li>relerr
 : <a class="el" href="_int_8h.html#a0e9f6681c910ef2d85e1d0efae6a4a2d">Int.h</a>
 </li>
+<li>remez11_0_log2()
+: <a class="el" href="fastexp_8cpp.html#af8b212585be2560d7f41de30a71b4701">fastexp.cpp</a>
+</li>
+<li>remez11_0_log2_sse()
+: <a class="el" href="fastexp_8cpp.html#a754fa0d9cc7b52ba4da327fcf8e64f34">fastexp.cpp</a>
+</li>
+<li>remez13_0_log2()
+: <a class="el" href="fastexp_8cpp.html#acb0b1c71e632ea9712b17a5f0ec7fda7">fastexp.cpp</a>
+</li>
+<li>remez9_0_log2_sse()
+: <a class="el" href="fastexp_8cpp.html#a9196444ba714ad1cac3f45010b0fc231">fastexp.cpp</a>
+</li>
+<li>roundC()
+: <a class="el" href="ck_8cpp.html#af201a17f210fb80ed5def9155b51635a">ck.cpp</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>s_hasSSE41
+: <a class="el" href="bench_8cpp.html#af9d06fba350f10a6cbf1335f9e2bcf0e">bench.cpp</a>
+</li>
 <li>SECOND
 : <a class="el" href="_astronomical_constants_8h.html#abdc7476cc68a315db18707f461e0f29f">AstronomicalConstants.h</a>
 </li>
@@ -283,12 +489,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SpeedOfLightAU
 : <a class="el" href="_astronomical_constants_8h.html#ae27d4278c37b3e1cd9fca4c4d24e56b9">AstronomicalConstants.h</a>
 </li>
+<li>std_exp4()
+: <a class="el" href="bench_8cpp.html#a6aec8b677bafc24e847f69ffe07f6071">bench.cpp</a>
+</li>
+<li>std_log4()
+: <a class="el" href="bench_8cpp.html#ab9ee538ef27ce1a7301f26e2778a5131">bench.cpp</a>
+</li>
+<li>std_pow()
+: <a class="el" href="bench_8cpp.html#a1e03b59dd4d582e2ce1a23fee700f35b">bench.cpp</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tbl
+: <a class="el" href="bench_8cpp.html#ab2c4c0ca27e0fc62cef6ebec497e0129">bench.cpp</a>
+</li>
+<li>test()
+: <a class="el" href="bench_8cpp.html#a26f5233c5ffd29b19f7be4ee5f380a27">bench.cpp</a>
+</li>
+<li>testExp()
+: <a class="el" href="bench_8cpp.html#a6bda0ef8638cc177b0142d091a473ccf">bench.cpp</a>
+</li>
+<li>testExp_ps()
+: <a class="el" href="bench_8cpp.html#a4f043e65f34e0f2b981962ef9c4be8a0">bench.cpp</a>
+</li>
+<li>testLimits()
+: <a class="el" href="fastexp_8cpp.html#a781eba055e848bc4209d6882c5e641e4">fastexp.cpp</a>
+</li>
+<li>testLog()
+: <a class="el" href="bench_8cpp.html#ae5d9ca04fae9d97cb7a721ad92218c60">bench.cpp</a>
+</li>
+<li>testLog_ps()
+: <a class="el" href="bench_8cpp.html#a1523226389ba7e478ec3f3aa139c5541">bench.cpp</a>
+</li>
+<li>testPow()
+: <a class="el" href="bench_8cpp.html#ae270b1e00a1a6ebd32673db251d82144">bench.cpp</a>
+</li>
+<li>testSlots()
+: <a class="el" href="fastexp_8cpp.html#a49e753969df89adc3842096541154711">fastexp.cpp</a>
+</li>
 <li>TPI
 : <a class="el" href="_astronomical_constants_8h.html#ae0563db88ec40dfb8c9b8b07aeb93f90">AstronomicalConstants.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>uint64_t
+: <a class="el" href="ck_8cpp.html#aaa5d1cd013383c889537491c3cfd9aad">ck.cpp</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>validateAll()
+: <a class="el" href="bench_8cpp.html#af9a24d5f0eac48b0ad04ca87942d3c41">bench.cpp</a>
+</li>
+<li>validateExp()
+: <a class="el" href="bench_8cpp.html#a61df7232d1c0c79ca4f10c61549ef97f">bench.cpp</a>
+</li>
+<li>vecexp_cephes()
+: <a class="el" href="fastexp_8cpp.html#a7f9882897798349677ff57af3709a97a">fastexp.cpp</a>
+</li>
+<li>vecexp_libc()
+: <a class="el" href="fastexp_8cpp.html#af366f08fb8b6571e0e4b2d4ccd348ec0">fastexp.cpp</a>
+</li>
+<li>vecexp_remez11_05_05()
+: <a class="el" href="fastexp_8cpp.html#aadd7df9d8a394eeb20f3ccf105aa33ae">fastexp.cpp</a>
+</li>
+<li>vecexp_remez13_05_05()
+: <a class="el" href="fastexp_8cpp.html#acf111d394aeb906a01d6a6da2ec815e5">fastexp.cpp</a>
+</li>
+<li>vecexp_taylor11()
+: <a class="el" href="fastexp_8cpp.html#af4ebb0248ba6d24b78ccfb02824eb741">fastexp.cpp</a>
+</li>
+<li>vecexp_taylor13()
+: <a class="el" href="fastexp_8cpp.html#aa329dda6456c6bcb67a25ef329f63290">fastexp.cpp</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
+<li>XBYAK_NO_OP_NAMES
+: <a class="el" href="bench_8cpp.html#a3ede98665532cce0e33f614fac5150f9">bench.cpp</a>
+, <a class="el" href="fastexp_8cpp.html#a3ede98665532cce0e33f614fac5150f9">fastexp.cpp</a>
 </li>
 </ul>
 

@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,6 +113,8 @@ Inheritance diagram for galsim.phase_screens.OpticalScreen:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4c52aecf25f9ec9251cb70bf3ff1ac6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#ac4c52aecf25f9ec9251cb70bf3ff1ac6">__init__</a></td></tr>
 <tr class="separator:ac4c52aecf25f9ec9251cb70bf3ff1ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2adab73533f2e13bae652a5f933d49"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a0b2adab73533f2e13bae652a5f933d49">coef_array</a></td></tr>
+<tr class="separator:a0b2adab73533f2e13bae652a5f933d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a904bc531f5c10af4a00de5cc279d1b34"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a904bc531f5c10af4a00de5cc279d1b34">__str__</a></td></tr>
 <tr class="separator:a904bc531f5c10af4a00de5cc279d1b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad2d686c7953a063ef7e6883729d303"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a5ad2d686c7953a063ef7e6883729d303">__repr__</a></td></tr>
@@ -123,27 +125,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8c9ea0dcdc83d8ce58b4bc6d21e78d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f45834ed1e8792067173373d109a46"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#af8f45834ed1e8792067173373d109a46">__hash__</a></td></tr>
 <tr class="separator:af8f45834ed1e8792067173373d109a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06bc6c1f9a32c6658827c32db68ecd9f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a06bc6c1f9a32c6658827c32db68ecd9f">stepK</a></td></tr>
-<tr class="memdesc:a06bc6c1f9a32c6658827c32db68ecd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an appropriate stepK for this phase screen.  <a href="#a06bc6c1f9a32c6658827c32db68ecd9f">More...</a><br/></td></tr>
-<tr class="separator:a06bc6c1f9a32c6658827c32db68ecd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71bdfc9ac8421e38cfcb065239dcd461"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a71bdfc9ac8421e38cfcb065239dcd461">wavefront</a></td></tr>
 <tr class="memdesc:a71bdfc9ac8421e38cfcb065239dcd461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute wavefront due to optical phase screen.  <a href="#a71bdfc9ac8421e38cfcb065239dcd461">More...</a><br/></td></tr>
 <tr class="separator:a71bdfc9ac8421e38cfcb065239dcd461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b3806082ef1fa7212057018e92a337"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a43b3806082ef1fa7212057018e92a337">wavefront_gradient</a></td></tr>
+<tr class="memdesc:a43b3806082ef1fa7212057018e92a337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute gradient of wavefront due to atmospheric phase screen.  <a href="#a43b3806082ef1fa7212057018e92a337">More...</a><br/></td></tr>
+<tr class="separator:a43b3806082ef1fa7212057018e92a337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ab3fa7a614f147e1ea41e71d7b421e807"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#ab3fa7a614f147e1ea41e71d7b421e807">diam</a></td></tr>
+<tr class="separator:ab3fa7a614f147e1ea41e71d7b421e807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308a1457fbaa5a43f37cb3af7447c26d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a308a1457fbaa5a43f37cb3af7447c26d">aberrations</a></td></tr>
 <tr class="separator:a308a1457fbaa5a43f37cb3af7447c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33acb87495697bdba494134176e3dc2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#a33acb87495697bdba494134176e3dc2d">annular_zernike</a></td></tr>
+<tr class="separator:a33acb87495697bdba494134176e3dc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8d4fb5d5b63849a91b63cf242d21d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#acf8d4fb5d5b63849a91b63cf242d21d1">obscuration</a></td></tr>
+<tr class="separator:acf8d4fb5d5b63849a91b63cf242d21d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5962cfde5a35d82c5a90b1ddce669e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#ae5962cfde5a35d82c5a90b1ddce669e5">lam_0</a></td></tr>
 <tr class="separator:ae5962cfde5a35d82c5a90b1ddce669e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea4b25560a099f2e11418c65ef5638d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#adea4b25560a099f2e11418c65ef5638d">coef_array</a></td></tr>
-<tr class="separator:adea4b25560a099f2e11418c65ef5638d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb22751893ac86f4f4b8b64b428f7ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#afeb22751893ac86f4f4b8b64b428f7ac">dynamic</a></td></tr>
+<tr class="separator:afeb22751893ac86f4f4b8b64b428f7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3583f0a96fd50c2509e2b25ec16845"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html#acc3583f0a96fd50c2509e2b25ec16845">reversible</a></td></tr>
+<tr class="separator:acc3583f0a96fd50c2509e2b25ec16845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to describe optical aberrations in terms of Zernike polynomial coefficients. </p>
 <p>Input aberration coefficients are assumed to be supplied in units of wavelength, and correspond to the Zernike polynomials in the Noll convention defined in Noll, J. Opt. Soc. Am. 66, 207-211(1976). For a brief summary of the polynomials, refer to <a href="http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials#Zernike_polynomials</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">diam</td><td>Diameter of pupil in meters. </td></tr>
     <tr><td class="paramname">tip</td><td>Tip aberration in units of reference wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">tilt</td><td>Tilt aberration in units of reference wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">defocus</td><td>Defocus in units of reference wavelength. [default: 0] </td></tr>
@@ -155,6 +166,8 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">trefoil2</td><td>Trefoil (one of the arrows along x) in units of reference wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">spher</td><td>Spherical aberration in units of reference wavelength. [default: 0] </td></tr>
     <tr><td class="paramname">aberrations</td><td>Optional keyword, to pass in a list, tuple, or NumPy array of aberrations in units of reference wavelength (ordered according to the Noll convention), rather than passing in individual values for each individual aberration. Note that aberrations[1] is piston (and not aberrations[0], which is unused.) This list can be arbitrarily long to handle Zernike polynomial aberrations of arbitrary order. </td></tr>
+    <tr><td class="paramname">annular_zernike</td><td>Boolean indicating that aberrations specify the amplitudes of annular Zernike polynomials instead of circular Zernike polynomials. [default: False] </td></tr>
+    <tr><td class="paramname">obscuration</td><td><a class="el" href="classgalsim_1_1_linear.html" title="Linear interpolant. ">Linear</a> dimension of central obscuration as fraction of aperture linear dimension. [0., 1.). Note it is the user's responsibility to ensure consistency of <a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html" title="Class to describe optical aberrations in terms of Zernike polynomial coefficients. ">OpticalScreen</a> obscuration and Aperture obscuration. [default: 0.0] </td></tr>
     <tr><td class="paramname">lam_0</td><td>Reference wavelength in nanometers at which Zernike aberrations are being specified. [default: 500] </td></tr>
   </table>
   </dd>
@@ -169,6 +182,12 @@ Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>diam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -235,6 +254,18 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>aberrations</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>annular_zernike</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obscuration</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -353,41 +384,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a06bc6c1f9a32c6658827c32db68ecd9f"></a>
+<a class="anchor" id="a0b2adab73533f2e13bae652a5f933d49"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.phase_screens.OpticalScreen.stepK </td>
+          <td class="memname">def galsim.phase_screens.OpticalScreen.coef_array </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>kwargs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Return an appropriate stepK for this phase screen. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lam</td><td>Wavelength in nanometers. </td></tr>
-    <tr><td class="paramname">diam</td><td>Aperture diameter in meters. </td></tr>
-    <tr><td class="paramname">obscuration</td><td>Fractional linear aperture obscuration. [default: 0.0] </td></tr>
-    <tr><td class="paramname">gsparams</td><td>An optional <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> argument. See the docstring for <a class="el" href="structgalsim_1_1_g_s_params.html">GSParams</a> for details. [default: None] </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>stepK in inverse arcsec. </dd></dl>
 
 </div>
 </div>
@@ -405,19 +414,25 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>aper</em>, </td>
+          <td class="paramname"><em>u</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>theta</em> = <code>(0.0*<a class="el" href="namespacegalsim.html#a18ba59df6de751b3e8ff69188fd79b9f">galsim.arcmin</a>,&#160;0.0*<a class="el" href="namespacegalsim.html#a18ba59df6de751b3e8ff69188fd79b9f">galsim.arcmin</a></code>, </td>
+          <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>compact</em> = <code>True</code>&#160;</td>
+          <td class="paramname"><em>t</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>theta</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -428,16 +443,73 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compute wavefront due to optical phase screen. </p>
-<p>Wavefront here indicates the distance by which the physical wavefront lags or leads the ideal converging Gaussian reference spherical wave.</p>
+<p>Wavefront here indicates the distance by which the physical wavefront lags or leads the ideal plane wave.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aper</td><td><code>galsim.Aperture</code> over which to compute wavefront. </td></tr>
-    <tr><td class="paramname">theta</td><td>Field angle of center of output array, as a 2-tuple of <code><a class="el" href="classgalsim_1_1_angle.html" title="A class representing an Angle. ">galsim.Angle</a></code>s. [default: (0.0*galsim.arcmin, 0.0*galsim.arcmin)] </td></tr>
-    <tr><td class="paramname">compact</td><td>If true, then only return wavefront for illuminated pixels in a single-dimensional array congruent with array[aper.illuminated]. Otherwise, return wavefront as a 2d array for the full Aperture pupil plane. [default: True] </td></tr>
+    <tr><td class="paramname">u</td><td>Horizontal pupil coordinate (in meters) at which to evaluate wavefront. Can be a scalar or an iterable. The shapes of u and v must match. </td></tr>
+    <tr><td class="paramname">v</td><td>Vertical pupil coordinate (in meters) at which to evaluate wavefront. Can be a scalar or an iterable. The shapes of u and v must match. </td></tr>
+    <tr><td class="paramname">t</td><td>Ignored for <a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html" title="Class to describe optical aberrations in terms of Zernike polynomial coefficients. ">OpticalScreen</a>. </td></tr>
+    <tr><td class="paramname">theta</td><td>Ignored for <a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html" title="Class to describe optical aberrations in terms of Zernike polynomial coefficients. ">OpticalScreen</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Wavefront lag or lead in nanometers over aperture. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Array of wavefront lag or lead in nanometers. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43b3806082ef1fa7212057018e92a337"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.phase_screens.OpticalScreen.wavefront_gradient </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>t</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>theta</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute gradient of wavefront due to atmospheric phase screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>Horizontal pupil coordinate (in meters) at which to evaluate wavefront. Can be a scalar or an iterable. The shapes of u and v must match. </td></tr>
+    <tr><td class="paramname">v</td><td>Vertical pupil coordinate (in meters) at which to evaluate wavefront. Can be a scalar or an iterable. The shapes of u and v must match. </td></tr>
+    <tr><td class="paramname">t</td><td>Ignored for <a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html" title="Class to describe optical aberrations in terms of Zernike polynomial coefficients. ">OpticalScreen</a>. </td></tr>
+    <tr><td class="paramname">theta</td><td>Ignored for <a class="el" href="classgalsim_1_1phase__screens_1_1_optical_screen.html" title="Class to describe optical aberrations in terms of Zernike polynomial coefficients. ">OpticalScreen</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Arrays dWdu and dWdv of wavefront lag or lead gradient in nm/m. </dd></dl>
 
 </div>
 </div>
@@ -454,12 +526,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adea4b25560a099f2e11418c65ef5638d"></a>
+<a class="anchor" id="a33acb87495697bdba494134176e3dc2d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.phase_screens.OpticalScreen.coef_array</td>
+          <td class="memname">galsim.phase_screens.OpticalScreen.annular_zernike</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3fa7a614f147e1ea41e71d7b421e807"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.phase_screens.OpticalScreen.diam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afeb22751893ac86f4f4b8b64b428f7ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.phase_screens.OpticalScreen.dynamic</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -472,6 +568,30 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.phase_screens.OpticalScreen.lam_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf8d4fb5d5b63849a91b63cf242d21d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.phase_screens.OpticalScreen.obscuration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc3583f0a96fd50c2509e2b25ec16845"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.phase_screens.OpticalScreen.reversible</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -66,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,18 +83,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><p>System requirements: GalSim currently only supports Linux and Mac OSX.</p>
 <p>Table of Contents:</p>
-<ol type="1">
-<li><a href="#1-software-required-before-building-galsim">Software required before building GalSim</a></li>
-<li><a href="#2-installing-the-galsim-python-package">Installing the GalSim Python package</a></li>
-<li><a href="#3-running-tests-and-installing-example-executables">Running tests and installing example executables</a></li>
-<li><a href="#4-running-example-scripts">Running example scripts</a></li>
-<li><a href="#5-platform-specific-notes">Platform-specific notes</a></li>
-<li><a href="#6-more-scons-options">More SCons options</a></li>
-</ol>
+<p>0) <a href="#0-overall-summary">Overall summary</a></p>
+<p>1) <a href="#1-software-required-before-building-galsim">Software required before building GalSim</a></p>
+<p>2) <a href="#2-installing-the-galsim-python-package">Installing the GalSim Python package</a></p>
+<p>3) <a href="#3-running-tests-and-installing-example-executables">Running tests and installing example executables</a></p>
+<p>4) <a href="#4-running-example-scripts">Running example scripts</a></p>
+<p>5) <a href="#5-platform-specific-notes">Platform-specific notes</a></p>
+<p>6) <a href="#6-more-scons-options">More SCons options</a></p>
+<h1>0. Overall summary </h1>
+<p>While the sections below detail how to install GalSim including its required and optional dependencies, this section gives a brief summary. A minimal installation of GalSim requires the following dependencies. This dependency list includes a canonical version number that is known to work. In most cases, other recent versions will also work:</p>
+<ul>
+<li>Python (2.7, 3.4, 3.5, 3.6)</li>
+<li>SCons (2.1.0)</li>
+<li>NumPy (1.11)</li>
+<li>Astropy (1.1.1)</li>
+<li>Future (0.16.0)</li>
+<li>FFTW (3.3)</li>
+<li>TMV (0.73)</li>
+<li>Boost (1.61)</li>
+</ul>
+<p>A few optional dependencies provide additional functionality, but GalSim can otherwise be compiled and used without them. Basic WCS functionality is native to GalSim, but for users with more complicated WCS needs, we recommend installing starlink-pyast. Thee Astropy WCS package is also supported, but note that it requires scipy as an additional dependency. To use yaml for config parsing, the pyyaml module is needed. Faster text file parsing for reading in bandpasses and SEDs can be enabled if you have the pandas module (but the code will work, albeit more slowly, without this module).</p>
+<p>The sections below give a lot more details about how to obtain these dependencies; many are available from sources like pip or easy_install, rather than having to be installed from source. Third party packages like Anaconda often include many of these dependencies automatically. GalSim and all of its dependencies can be installed via fink, for users with Macs.</p>
 <h1>1. Software required before building GalSim </h1>
 <p>Please note: Mac users who want to use fink can skip down to Section 5.ii and use that to satisfy all dependencies before installing.</p>
-<h2>i) Python (2.6, 2.7, 3.4, or 3.5 series), with some additional modules installed </h2>
-<p>The interface to the GalSim code is via the Python package <code>galsim</code>, and its associated modules. Therefore you must have Python installed on your system. Python is free, and available from a number of sources online (see below). Currently GalSim supports Python versions 2.6, 2.7, 3.4, and 3.5. It is likely that other Python 3.x versions are compatible, but these two are the only ones actively tested.</p>
+<h2>i) Python (2.7, 3.4, 3.5, or 3.6 series), with some additional modules installed </h2>
+<p>The interface to the GalSim code is via the Python package <code>galsim</code>, and its associated modules. Therefore you must have Python installed on your system. Python is free, and available from a number of sources online (see below). Currently GalSim supports Python versions 2.7, 3.4, 3.5, and 3.6. It is likely that other Python 3.x versions are compatible, but these two are the only ones actively tested.</p>
 <p>Many systems have a version of Python pre-installed. To check whether you already have a compatible version, type </p>
 <pre class="fragment">python --version
 </pre><p>at the terminal prompt. If you get a "Command not found" error, or the reported version is not one of the supported versions, you should read the "Getting
@@ -105,12 +118,13 @@ you are using the right Python" Section below.</p>
 <p>For a list of places to download Python, see <a href="http://www.python.org/download/">http://www.python.org/download/</a>.</p>
 <p>The GalSim package also requires</p>
 <ul>
-<li>the numerical Python module NumPy (<a href="http://www.numpy.org">http://www.numpy.org</a>)</li>
-<li>the astronomical FITS file input/output module PyFITS available either as a standalone package: <a href="http://www.stsci.edu/institute/software_hardware/pyfits">http://www.stsci.edu/institute/software_hardware/pyfits</a> or as part of the astropy library: <a href="http://www.astropy.org/">http://www.astropy.org/</a> The latter is preferred, since this is now where all future development of this package is happening.</li>
-<li>the future module, which is used to ease compatibility between Python 2 and Python 3.</li>
-<li>the PyYAML package for parsing YAML files (<a href="http://pyyaml.org/wiki/PyYAML">http://pyyaml.org/wiki/PyYAML</a>) Note: PyYAML is only technically required if you are using the <code>galsim</code> executable for parsing YAML config files. Users who will only use GalSim in Python (or use only JSON config files) may skip this dependency.</li>
+<li>the numerical Python module NumPy (<a href="http://www.numpy.org">http://www.numpy.org</a>). Currently GalSim is regularly tested to ensure it works with NumPy 1.11.2, but other versions will likely work.</li>
+<li>the astronomical FITS file input/output module PyFITS available either as a standalone package: <a href="http://www.stsci.edu/institute/software_hardware/pyfits">http://www.stsci.edu/institute/software_hardware/pyfits</a> or as part of the astropy library: <a href="http://www.astropy.org/">http://www.astropy.org/</a> The latter is preferred, since this is now where all future development of this package is happening. Currently GalSim is regularly tested to ensure it works with astropy version 1.1.1, but it is likely that most recent versions will also work.</li>
+<li>the future module, which is used to ease compatibility between Python 2 and Python 3. Currently GalSim is regularly tested to ensure it works with version 0.16.0 of this module, but other versions may work.</li>
+<li>the PyYAML package for parsing YAML files (<a href="http://pyyaml.org/wiki/PyYAML">http://pyyaml.org/wiki/PyYAML</a>) Note: PyYAML is only technically required if you are using the <code>galsim</code> executable for parsing YAML config files. Users who will only use GalSim in Python (or use only JSON config files) may skip this dependency. Currently GalSim is regularly tested to ensure it works with version 3.12 of this package, but other versions may work.</li>
 <li>Optional dependency: PyAst WCS package. This is a really nice front end for the Starlink AST astrometry code. It seems to support pretty much every WCS encoding there is. (At least every one we tried.) Their preferred installation method is via pip: pip install starlink-pyast For more information, see their website: <a href="https://pypi.python.org/pypi/starlink-pyast/">https://pypi.python.org/pypi/starlink-pyast/</a> With this installed, you can use the galsim.PyAstWCS class, which in turn means that galsim.FitsWCS will pretty much always work.</li>
 <li>Optional dependency: Astropy WCS package. We already mentioned astropy above for astropy.io.fits. Another package we can use from astropy is their WCS package, astropy.wcs. They cannot read all that many WCS types (compared to PyAst at least), but hopefully the functionality will include in time. Unfortunately, this package has scipy as a dependency, which is kind of a gargantuan package. But if you are willing to install that too, then you can use the galsim.AstropyWCS class.</li>
+<li>Optional dependency: Astropy Units package. This is now required for GalSim chromatic functionality, but can be omitted if you are not using this part of GalSim.</li>
 <li>Optional dependency: Pandas. This has a very fast function for reading ASCII tables. If this is not available (e.g. when reading in Bandpass or SED files) then we fall back to the (much) slower numpy loadtxt function.</li>
 </ul>
 <p>These should installed onto your Python system so that they can be imported by: </p>
@@ -140,7 +154,7 @@ pip install starlink-pyast
 pip install scipy
 </pre><h3>Third party-maintained Python packages</h3>
 <p>There are a number of third party-maintained packages which bundle Python with many of the numerical and scientific libraries that are commonly used, and many of these are free for non-commercial or academic use.</p>
-<p>One good example of such a package, which includes all of the Python dependencies required by GalSim (NumPy, PyFITS, PyYAML as well as SCons and nosetests; see Section 2 below) was the Enthought Python Distribution (EPD; see <a href="https://enthought.com/products/canopy/academic/">https://enthought.com/products/canopy/academic/</a> for the academic download instructions).</p>
+<p>One good example of such a package, which includes all of the Python dependencies required by GalSim (NumPy, PyFITS, PyYAML as well as SCons and pytest; see Section 2 below) was the Enthought Python Distribution (EPD; see <a href="https://enthought.com/products/canopy/academic/">https://enthought.com/products/canopy/academic/</a> for the academic download instructions).</p>
 <p>The new Enthought "Canopy" package, a successor to EPD, provides the same functionality. However, it has been found that Canopy on Mac OSX can give problems building against Boost.Python, another GalSim dependency. A solution to these issues is described here: <a href="https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-canopy">https://github.com/GalSim-developers/GalSim/wiki/Installation-FAQ#wiki-canopy</a></p>
 <p>Other re-packaged Python downloads can be found at <a href="http://www.python.org/download/">http://www.python.org/download/</a>.</p>
 <h3>Making sure you are using the right Python</h3>
@@ -163,7 +177,7 @@ pip install scipy
 </pre><p>but there are additional options you might consider, so you should read the TMV INSTALL file for full details. Also note, you may not need to specify the installation directory if you are comfortable installing it into <code>/usr/local</code>. However, if you are trying to install it into a system directory then you need to use sudo scons install [PREFIX=&lt;installdir&gt;].</p>
 <p>Note: On Mac OS 10.7, the Apple BLAS library has problems when run using multiple processes. So if you have such a system, we recommend getting a different BLAS library, such as ATLAS (and making sure TMV finds it instead of the system BLAS) or compiling TMV with no BLAS library at all (using the SCons option <code>WITH_BLAS=false</code>). Otherwise, Galsim programs may hang when run with multiple processes. e.g. <code>scons tests</code> by default uses multiple processes, and multiple people reported problems using the Apple system BLAS on OS 10.7.</p>
 <h2>v) Boost C++ (<a href="http://www.boost.org">http://www.boost.org</a>) </h2>
-<p>GalSim makes use of some of the Boost C++ libraries, and these parts of Boost must be installed. It is particularly important that your installed Boost library links to the same version of Python which which you will be using GalSim and on which you have installed NumPy and PyFITS (see Section ii, above). Boost can be downloaded from the above website, and must be installed per the (rather limited) instructions there, which essentially amount to using a command </p>
+<p>GalSim makes use of some of the Boost C++ libraries, and these parts of Boost must be installed. Currently GalSim is regularly tested to ensure it works with Boost version 1.61, but it is likely that most versions released within the last several years will also work. It is particularly important that your installed Boost library links to the same version of Python with which you will be using GalSim and on which you have installed NumPy and PyFITS (see Section ii, above). Boost can be downloaded from the above website, and must be installed per the (rather limited) instructions there, which essentially amount to using a command </p>
 <pre class="fragment">./bootstrap.sh
 </pre><p>(Additional <code>bootstrap.sh</code> options may be necessary to ensure Boost is built against the correct version of Python; see below).</p>
 <p>followed by </p>
@@ -230,9 +244,13 @@ otool -L &lt;YOUR_BOOST_LIB_DIR&gt;/libboost_python&lt;POSSIBLE_SUFFIX&gt;.dylib
 <h1>3. Running tests and installing example executables </h1>
 <p>You can run our test suite by typing </p>
 <pre class="fragment">scons tests
-</pre><p>This should compile the test suite and run it. The tests of our C++ library will always be run, but we use <code>nosetests</code> for our Python test suite, so that will only be run if <code>nosetests</code> is present on your system. We do not require this as a dependency, since you can still do everything with the GalSim library without this. But it is required for a complete run of the test suite.</p>
-<p>To install <code>nosetests</code>, you can also use easy_install as described in Section 1 above (see also <a href="http://nose.readthedocs.org/en/latest/">http://nose.readthedocs.org/en/latest/</a>). Many third party- maintained Python distributions, such as the Enthought Python Distribution, include <code>nosetests</code>.</p>
-<p>Note: if your system does not have <code>nosetests</code> installed, and you do not want to install it, you can run all the Python tests with the script run_all_tests in the <code>tests</code> directory. If this finishes without an error, then all the tests have passed.</p>
+</pre><p>This should compile the test suite and run it. The tests of our C++ library will always be run, but we use <code>pytest</code> for our Python test suite, so that will only be run if <code>pytest</code> is present on your system. We do not require this as a dependency, since you can still do everything with the GalSim library without this. But it is required for a complete run of the test suite.</p>
+<p>To install <code>pytest</code>, you can also use easy_install as described in Section 1 above (see also <a href="https://docs.pytest.org/en/latest/">https://docs.pytest.org/en/latest/</a>). Many third party- maintained Python distributions, such as the Enthought Python Distribution, include <code>pytest</code>.</p>
+<p>By default, the python tests will use the pytest plugins <code>pytest-xdist</code> (for running tests in parallel) and <code>pytest-timeout</code> (to manage how much time each test is allowed to run). These plugins are usually installable using pip: </p>
+<pre class="fragment">pip install pytest-xdist pytest-timeout
+</pre><p>Sometimes the <code>--user</code> flag may be needed in the above command to make the plugins discoverable. If you want to run the python tests without these plugins (serially!), you can still do this via </p>
+<pre class="fragment">scons tests -j1
+</pre><p>Note: if your system does not have <code>pytest</code> installed, and you do not want to install it, you can run all the Python tests with the script run_all_tests in the <code>tests</code> directory. If this finishes without an error, then all the tests have passed.</p>
 <h1>4. Running example scripts </h1>
 <p>The <code>examples</code> directory has a series of demo scripts: </p>
 <pre class="fragment">demo1.py, demo2.py, ...
@@ -267,10 +285,10 @@ fink update-all
 </pre></li>
 </ol>
 <p>from within the repository base directory.</p>
-<p>To run the unit tests, you will also need nosetests, which you can also get from fink: </p>
-<pre class="fragment">fink install nose-py27
-scons tests NOSETESTS=/sw/bin/nosetests
-</pre><p>If you want to use the system Python, or some other version, then the fink Python installations will not work. You will need to manually install NumPy, PyFITS, PyYAML and nose, for example using easy_install, with your chosen Python.</p>
+<p>To run the unit tests, you will also need pytest, which you can also get from fink: </p>
+<pre class="fragment">fink install pytest-py27
+scons tests PYTEST=/sw/bin/pytest
+</pre><p>If you want to use the system Python, or some other version, then the fink Python installations will not work. You will need to manually install NumPy, PyFITS, PyYAML and pytest, for example using easy_install, with your chosen Python.</p>
 <p>For the system Python, you can use fink for Boost, but you will want a different package than the boost1.58.python27 that gets installed using <code>fink install galsim</code> above: </p>
 <pre class="fragment">fink install scons fftw3 tmv0 boost1.58-systempython
 pip install future
@@ -325,7 +343,9 @@ brew install gal-sim
 <li><code>CXX</code> (g++) specifies which C++ compiler to use.</li>
 <li><code>FLAGS</code> ('') specifies the basic flags to pass to the compiler. The default behavior is to automatically choose good flags to use according to which kind of compiler you are using. This option overrides that and lets you specify exactly what flags to use.</li>
 <li><code>EXTRA_FLAGS</code> ('') specifies some extra flags that you want to use in addition to the defaults that SCons determines on its own. Unlike the above option, this do not override the defaults, it just adds to them.</li>
+<li><code>LINK_FLAGS</code> ('') specifies some extra flags at the linking step to use in addition to the defaults that SCons determines it needs on its own.</li>
 <li><code>DEBUG</code> (True) specifies whether to keep the debugging assert statements in the compiled library code. They are not much of a performance hit, so it is generally worth keeping them in, but if you need to squeeze out every last bit of performance, you can set this to False.</li>
+<li><code>EXTRA_DEBUG</code> (False) specifies whether to add a flag to keep the original code information in the compiled library (-g3 for g++ compiler). This increases the size of the compiled library, but makes debugging with things like gdb easier. Probably end users will never need to use this.</li>
 <li><code>WARN</code> (False) specifies whether to add warning compiler flags such as <code>-Wall</code>.</li>
 <li><code>PYTHON</code> (/usr/bin/env python) specifies which version of Python you are planning to use GalSim with. If you choose not to use the default here, then you need to remember to use the correct Python version</li>
 </ul>
@@ -334,6 +354,7 @@ brew install gal-sim
 <li><code>PREFIX</code> (/usr/local) specifies where to install the library when running <code>scons install</code>.</li>
 <li><code>PYPREFIX</code> ([your python dir]/site-packages) specifies where to install the Python modules when running <code>scons install</code>.</li>
 <li><code>FINAL_PREFIX</code> (<code>PREFIX</code>) specifies the final installation prefix if different from PREFIX. (This is only needed for things like fink, where they install into a staging area first before copying over to the final location.)</li>
+<li><code>WITH_UPS</code> (False) specified whether to install the ups directory for use with EUPS.</li>
 </ul>
 <h3>Flags that specify where to look for external libraries</h3>
 <ul>
@@ -348,15 +369,17 @@ brew install gal-sim
 <li><code>IMPORT_ENV</code> (True) specifies whether to import the entire environment from the calling shell. The default is for SCons to use the same environment as the shell from which it is called. However, sometimes it can be useful to start with a clean environment and manually add paths for various things, in which case you would want to set this to False.</li>
 <li><code>EXTRA_LIBS</code> ('') specifies libraries to use in addition to what SCons finds on its own. This might be useful if you have a non-standard name for one of the external libraries. e.g. If you want to use the Intel MKL library for the FFTW library, SCons will not automatically try that, so you could add those libraries here. If there is more than one, they should be quoted with spaces between the different libraries. e.g. <code>EXTRA_LIBS="mkl_intel mkl_intel_thread mkl_core"</code></li>
 <li><code>IMPORT_PREFIX</code> (True) specifies whether to include the directories <code>PREFIX/include</code>, <code>PREFIX/lib</code> and <code>PREFIX/bin</code> as part of the standard path lists. Normally, you install everything in the same place, so it is useful to search those locations for some of the prerequisite packages, so the default is True. But occasionally, this might be inconvenient, so you can turn this feature off.</li>
+<li><code>DYLD_LIBRARY_PATH</code> ('') Set the DYLD_LIBRARY_PATH inside of SCons. Particularly useful on El Capitan (and later), since Apple strips out DYLD_LIBRARY_PATH from the environment that SCons sees, so if you need it, this option enables SCons to set it back in for you by doing <code>scons DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH</code>.</li>
+<li><code>DYLD_FALLBACK_LIBRARY_PATH</code> ('') Set the DYLD_FALLBACK_LIBRARY_PATH inside of SCons. cf. DYLD_LIBRARY_PATH for why this may be useful.</li>
+<li><code>LD_LIBRARY_PATH</code> ('') Set the LD_LIBRARY_PATH inside of SCons. cf. DYLD_LIBRARY_PATH for why this may be useful.</li>
 </ul>
 <h3>Miscellaneous flags</h3>
 <ul>
-<li><code>NOSETESTS</code> (nosetests) specifies which version of nosetests you want to use for running the unit tests. If you specified a non-default Python, then there is a possibility that the standard nosetests executable in your path will not work (since it might be for a different version of Python). In that case, specify the correct nosetests here.</li>
+<li><code>PYTEST</code> (pytest) specifies which version of pytest you want to use for running the unit tests. If you specified a non-default Python, then there is a possibility that the standard pytest executable in your path will not work (since it might be for a different version of Python). In that case, specify the correct pytest here.</li>
 <li><code>CACHE_LIB</code> (True) specifies whether to cache the results of the library checks. While you are working one getting the prerequisites installed properly, it can be useful to set this to False to force SCons to redo all of its library checks each time. Once you have a successful build, you should set it back to True so that later builds can skip those checks.</li>
 <li><code>WITH_PROF</code> (False) specifies whether to use the compiler flag <code>-pg</code> to include profiling info for <code>gprof</code>.</li>
 <li><code>MEM_TEST</code> (False) specifies whether to test the code for memory leaks.</li>
 <li><code>TMV_DEBUG</code> (False) specifies whether to turn on extra (slower) debugging statements within the TMV library.</li>
-<li><code>WITH_OPENMP</code> (False) specifies whether to use OpenMP to parallelize some parts of the code. (Note: We do not actually use OpenMP currently, so this does not do anything.)</li>
 <li><code>USE_UNKNOWN_VARS</code> (False) specifies whether to accept scons parameters other than the ones listed here. Normally, another name would indicate a typo, so we catch it and let you know. But if you want to use other scons options that we did not list here, you would want to also set this to True. </li>
 </ul>
 </div></div><!-- contents -->

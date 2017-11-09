@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,15 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a775887eebb3e9594186c26ee32e39f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a775887eebb3e9594186c26ee32e39f53">GaussianDeviate</a> (const <a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a775887eebb3e9594186c26ee32e39f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a copy that shares the RNG with rhs.  <a href="#a775887eebb3e9594186c26ee32e39f53">More...</a><br/></td></tr>
 <tr class="separator:a775887eebb3e9594186c26ee32e39f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46f126d34567bad818f46d42ce6acee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a46f126d34567bad818f46d42ce6acee7">GaussianDeviate</a> (const std::string &amp;<a class="el" href="classgalsim_1_1_base_deviate.html#a80e6898883248a94a2ef4a9b6d2b9dd2">str</a>, double mean, double sigma)</td></tr>
-<tr class="memdesc:a46f126d34567bad818f46d42ce6acee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution. ">GaussianDeviate</a> from a serialization string.  <a href="#a46f126d34567bad818f46d42ce6acee7">More...</a><br/></td></tr>
-<tr class="separator:a46f126d34567bad818f46d42ce6acee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769297726fa047f7740a1b4c5269a7b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a769297726fa047f7740a1b4c5269a7b0">GaussianDeviate</a> (const char *str_c, double mean, double sigma)</td></tr>
+<tr class="memdesc:a769297726fa047f7740a1b4c5269a7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution. ">GaussianDeviate</a> from a serialization string.  <a href="#a769297726fa047f7740a1b4c5269a7b0">More...</a><br/></td></tr>
+<tr class="separator:a769297726fa047f7740a1b4c5269a7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6f62102ea545ee1c0e08144f09f105"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgalsim_1_1_gaussian_deviate.html">GaussianDeviate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a9f6f62102ea545ee1c0e08144f09f105">duplicate</a> ()</td></tr>
 <tr class="memdesc:a9f6f62102ea545ee1c0e08144f09f105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a duplicate of this <a class="el" href="classgalsim_1_1_gaussian_deviate.html" title="Pseudo-random number generator with Gaussian distribution. ">GaussianDeviate</a> object.  <a href="#a9f6f62102ea545ee1c0e08144f09f105">More...</a><br/></td></tr>
 <tr class="separator:a9f6f62102ea545ee1c0e08144f09f105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a5c6ac1934a4f8297237dc6036f6cc87e">operator()</a> ()</td></tr>
-<tr class="memdesc:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a new random number from the distribution.  <a href="#a5c6ac1934a4f8297237dc6036f6cc87e">More...</a><br/></td></tr>
-<tr class="separator:a5c6ac1934a4f8297237dc6036f6cc87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03c91202c223207cf04f61701a7c9b67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_gaussian_deviate.html#a03c91202c223207cf04f61701a7c9b67">getMean</a> ()</td></tr>
 <tr class="memdesc:a03c91202c223207cf04f61701a7c9b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current distribution mean.  <a href="#a03c91202c223207cf04f61701a7c9b67">More...</a><br/></td></tr>
 <tr class="separator:a03c91202c223207cf04f61701a7c9b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +183,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca2320b2f5b80caead4ddda97c121568"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#aca2320b2f5b80caead4ddda97c121568">raw</a> ()</td></tr>
 <tr class="memdesc:aca2320b2f5b80caead4ddda97c121568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a random value in its raw form as a long integer.  <a href="#aca2320b2f5b80caead4ddda97c121568">More...</a><br/></td></tr>
 <tr class="separator:aca2320b2f5b80caead4ddda97c121568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43b6f0beb9f3b2fe1bf7ee6c08ea066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_base_deviate.html#ae43b6f0beb9f3b2fe1bf7ee6c08ea066">generate</a> (int N, double *data)</td></tr>
+<tr class="memdesc:ae43b6f0beb9f3b2fe1bf7ee6c08ea066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw N new random numbers from the distribution and save the values in an array.  <a href="#ae43b6f0beb9f3b2fe1bf7ee6c08ea066">More...</a><br/></td></tr>
+<tr class="separator:ae43b6f0beb9f3b2fe1bf7ee6c08ea066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pseudo-random number generator with Gaussian distribution. </p>
@@ -294,15 +294,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a46f126d34567bad818f46d42ce6acee7"></a>
+<a class="anchor" id="a769297726fa047f7740a1b4c5269a7b0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">galsim::GaussianDeviate::GaussianDeviate </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str_c</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -448,6 +448,49 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae43b6f0beb9f3b2fe1bf7ee6c08ea066"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void galsim::BaseDeviate::generate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw N new random numbers from the distribution and save the values in an array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">N</td><td>The number of values to draw </td></tr>
+    <tr><td class="paramname">data</td><td>The array into which to write the values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a03c91202c223207cf04f61701a7c9b67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -541,24 +584,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5c6ac1934a4f8297237dc6036f6cc87e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double galsim::GaussianDeviate::operator() </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw a new random number from the distribution. </p>
-<dl class="section return"><dt>Returns</dt><dd>A Gaussian deviate with current mean and sigma </dd></dl>
 
 </div>
 </div>

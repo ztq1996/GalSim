@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,9 +129,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>Add()
 : <a class="el" href="namespacegalsim_1_1compound.html#ad3f305087db1b740376666d9c022d94e">galsim::compound</a>
-</li>
-<li>add_function_pixel()
-: <a class="el" href="namespacegalsim.html#a4f80013e0447c4d10a160639c8eeb3ce">galsim</a>
 </li>
 <li>AddExtraOutputHDUs()
 : <a class="el" href="namespacegalsim_1_1config_1_1extra.html#a9bd6cff1ce5a5099ae3068172ce3517e">galsim::config::extra</a>
@@ -164,8 +161,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>alt_int32
 : <a class="el" href="namespacegalsim_1_1image.html#ac508989418521341d682d5f3f417701a">galsim::image</a>
 </li>
+<li>Angle_from_dms()
+: <a class="el" href="namespacegalsim_1_1angle.html#aa0a46e6383de9b3ecf639d7b99acae58">galsim::angle</a>
+</li>
+<li>Angle_from_hms()
+: <a class="el" href="namespacegalsim_1_1angle.html#acdef0c025854b41dd99830847faca10f">galsim::angle</a>
+</li>
 <li>Angle_getstate()
 : <a class="el" href="namespacegalsim_1_1angle.html#a612a4348a16d6ec4343a06b9bbc0bb72">galsim::angle</a>
+</li>
+<li>Angle_rad_function
+: <a class="el" href="namespacegalsim_1_1angle.html#abc0fefc51659230809afa3f705907bce">galsim::angle</a>
+</li>
+<li>Angle_rad_property()
+: <a class="el" href="namespacegalsim_1_1angle.html#ae574e2ae0db1ca819c4e44203bc9421d">galsim::angle</a>
 </li>
 <li>Angle_setstate()
 : <a class="el" href="namespacegalsim_1_1angle.html#a35ad1b3eba7bbf2643190528410504cd">galsim::angle</a>
@@ -190,11 +199,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>applyPersistence()
 : <a class="el" href="namespacegalsim_1_1detectors.html#a41cd399afc79c3bc3c2a5111e4707589">galsim::detectors</a>
 </li>
+<li>ApplyPV()
+: <a class="el" href="namespacegalsim.html#a345e029a237fdb978004384d520a504a">galsim</a>
+</li>
 <li>arcmin()
 : <a class="el" href="namespacegalsim.html#a18ba59df6de751b3e8ff69188fd79b9f">galsim</a>
 </li>
 <li>arcsec()
 : <a class="el" href="namespacegalsim.html#ac3e6f6efd0f7ad138601e798ff3e1790">galsim</a>
+</li>
+<li>at()
+: <a class="el" href="namespacegalsim_1_1deprecated_1_1image.html#aee4b76e3e35800f30a24383c0fa4231b">galsim::deprecated::image</a>
 </li>
 <li>Atmosphere()
 : <a class="el" href="namespacegalsim_1_1phase__screens.html#a933f253310f24281418335dc8ab540d8">galsim::phase_screens</a>

@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A class describing non-parametric profiles specified by samples &ndash; i.e., images &ndash; of their complex Fourier transform.  
+<p>A class describing non-parametric profiles specified by samples of their complex Fourier transform.  
  <a href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.interpolatedimage.InterpolatedKImage:</div>
@@ -130,25 +130,26 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4569f6858483386d8efb8c982e9291ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#a4569f6858483386d8efb8c982e9291ca">k_interpolant</a></td></tr>
 <tr class="separator:a4569f6858483386d8efb8c982e9291ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da2d1db28582df4d4390b467f7aa60f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#a0da2d1db28582df4d4390b467f7aa60f">SBProfile</a></td></tr>
-<tr class="separator:a0da2d1db28582df4d4390b467f7aa60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class describing non-parametric profiles specified by samples &ndash; i.e., images &ndash; of their complex Fourier transform. </p>
-<p>The <a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html" title="A class describing non-parametric profiles specified by samples – i.e., images – of their complex F...">InterpolatedKImage</a> class is useful if you have a non-parametric description of the Fourier transform of an object as a pair of Images &ndash; one for the real part and one for the imaginary part &ndash; of the complex-valued profile that you wish to manipulate / transform using GSObject methods such as shear(), magnify(), shift(), etc. Note that neither real-space convolution nor photon-shooting of InterpolatedKImages is currently implemented. Please submit an issue at <a href="http://github.com/GalSim-developers/GalSim/issues">http://github.com/GalSim-developers/GalSim/issues</a> if you require either of these use cases.</p>
-<p>The images required for creating an <a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html" title="A class describing non-parametric profiles specified by samples – i.e., images – of their complex F...">InterpolatedKImage</a> are precisely those returned by the GSObject <code>.drawKImage()</code> method. The <code>a</code> and <code>b</code> objects in the following command will produce essentially equivalent images when drawn with the <code>.drawImage()</code> method:</p>
+<div class="textblock"><p>A class describing non-parametric profiles specified by samples of their complex Fourier transform. </p>
+<p>The <a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html" title="A class describing non-parametric profiles specified by samples of their complex Fourier transform...">InterpolatedKImage</a> class is useful if you have a non-parametric description of the Fourier transform of the profile (provided as either a complex Image or two Images giving the real and imaginary parts) that you wish to manipulate / transform using GSObject methods such as shear(), magnify(), shift(), etc. Note that neither real-space convolution nor photon-shooting of InterpolatedKImages is currently implemented. Please submit an issue at <a href="http://github.com/GalSim-developers/GalSim/issues">http://github.com/GalSim-developers/GalSim/issues</a> if you require either of these use cases.</p>
+<p>The images required for creating an <a class="el" href="classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html" title="A class describing non-parametric profiles specified by samples of their complex Fourier transform...">InterpolatedKImage</a> are precisely those returned by the GSObject <code>.drawKImage()</code> method. The <code>a</code> and <code>b</code> objects in the following command will produce essentially equivalent images when drawn with the <code>.drawImage()</code> method:</p>
 <blockquote class="doxtable">
 <blockquote class="doxtable">
 <blockquote class="doxtable">
-<p>a = returns_a_GSObject() b = galsim.InterpolatedKImage(*a.drawKImage()) </p>
+<p>a = returns_a_GSObject() b = galsim.InterpolatedKImage(a.drawKImage()) </p>
 </blockquote>
 </blockquote>
 </blockquote>
-<pre class="fragment"> The real- and imaginary-part Images must have the same data type, same bounds, and same scale.
- The only wcs permitted is a simple PixelScale.  Furthermore, the complex-valued Fourier profile
- formed by `real_kimage` and `imag_kimage` must be Hermitian, since it represents a real-valued
- real-space profile.  (To see an example of valid input to `InterpolatedKImage`, you can look at
- the output of `drawKImage`).
+<pre class="fragment"> The input `kimage` must have dtype=numpy.complex64 or dtype=numpy.complex128, which are also
+ known as ImageCF and ImageCD objects respectively.
+ The only wcs permitted is a simple PixelScale (or OffsetWCS), in which case `kimage.scale` is
+ used for the `stepk` value unless overridden by the `stepk` initialization argument.
+
+ Furthermore, the complex-valued Fourier profile given by `kimage` must be Hermitian, since it
+ represents a real-valued real-space profile.  (To see an example of valid input to
+ `InterpolatedKImage`, you can look at the output of `drawKImage`).
 
  The user may optionally specify an interpolant, `k_interpolant`, for Fourier-space
  manipulations (e.g., shearing, resampling).  If none is specified, then by default, a Quintic
@@ -161,28 +162,34 @@ Public Attributes</h2></td></tr>
  Initialization
  --------------
 
-     &gt;&gt;&gt; interpolated_kimage = galsim.InterpolatedKImage(real_kimage, imag_kimage,
-             k_interpolant=None, stepk=0., gsparams=None)
+     &gt;&gt;&gt; interpolated_kimage = galsim.InterpolatedKImage(kimage, k_interpolant=None, stepk=0.,
+                                                         gsparams=None)
 
  Initializes `interpolated_kimage` as an InterpolatedKImage instance.
 
- @param real_kimage      The Image corresponding to the real part of the Fourier-space samples.
- @param imag_kimage      The Image corresponding to the imaginary part of the Fourier-space
-                         samples.
+ @param kimage           The complex Image corresponding to the Fourier-space samples.
  @param k_interpolant    Either an Interpolant instance or a string indicating which k-space
                          interpolant should be used.  Options are 'nearest', 'sinc', 'linear',
                          'cubic', 'quintic', or 'lanczosN' where N should be the integer order
                          to use.  [default: galsim.Quintic()]
  @param stepk            By default, the stepk value (the sampling frequency in Fourier-space)
-                         of the underlying SBProfile is set by the `scale` attribute of the
-                         supplied images.  This keyword allows the user to specify a coarser
-                         sampling in Fourier-space, which may increase efficiency at the expense
-                         of decreasing the separation between neighboring copies of the
-                         DFT-rendered real-space profile.  (See the GSParams docstring for the
-                         parameter `folding_threshold` for more information).
-                         [default: real_kimage.scale]
+                         is set by the `scale` attribute of the supplied images.  This keyword
+                         allows the user to specify a coarser sampling in Fourier-space, which
+                         may increase efficiency at the expense of decreasing the separation
+                         between neighboring copies of the DFT-rendered real-space profile.
+                         (See the GSParams docstring for the parameter `folding_threshold` for
+                         more information).  [default: kimage.scale]
  @param gsparams         An optional GSParams argument.  See the docstring for GSParams for
                          details. [default: None]
+ @param real_kimage      Optionally, rather than provide kimage, you may provide the real
+                         and imaginary parts separately.  These separate real-valued images
+                         may be strings, in which case they refer to FITS files from which
+                         to read the images. [default: None]
+ @param imag_kimage      The imaginary image corresponding to real_kimage. [default: None]
+ @param real_hdu         When reading in real_kimage from a file, this parameter can be used to
+                         select a particular HDU in the file. [default: None]
+ @param imag_hdu         When reading in imag_kimage from a file, this parameter can be used to
+                         select a particular HDU in the file. [default: None]
 
  Methods
  -------
@@ -202,13 +209,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>real_kimage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>imag_kimage</em>, </td>
+          <td class="paramname"><em>kimage</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -226,7 +227,31 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>gsparams</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>gsparams</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>real_kimage</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>imag_kimage</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>real_hdu</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>imag_hdu</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -362,18 +387,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.interpolatedimage.InterpolatedKImage.k_interpolant</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0da2d1db28582df4d4390b467f7aa60f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">galsim.interpolatedimage.InterpolatedKImage.SBProfile</td>
         </tr>
       </table>
 </div><div class="memdoc">

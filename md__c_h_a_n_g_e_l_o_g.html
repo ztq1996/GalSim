@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>GalSim: Changes from v1.3 to v1.4</title>
+<title>GalSim: Changes from v1.4 to v1.5</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -78,97 +78,148 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Changes from v1.3 to v1.4 </div>  </div>
+<div class="title">Changes from v1.4 to v1.5 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>API Changes </h2>
 <ul>
-<li>Changed the galsim.Bandpass and galsim.SED classes so that formerly optional keywords to indicate units (<code>wave_type</code> for the former, <code>wave_type</code> and <code>flux_type</code> for the latter) are now required. (#745)</li>
-<li>Changed the default shift and/or offset for the output.psf field in a config file to not do any shift or offset. It had been the default to match what was applied to the galaxy (cf. demo5). However, we thought that was probably not the most intuitive default. Now, matching the galaxy is still possible, but requires explicit specification of output.psf.shift = "galaxy" or output.psf.offset = "galaxy". (#691)</li>
+<li>Simplified the return value of galsim.config.ReadConfig. (#580)</li>
+<li>Changed RealGalaxyCatalog methods <code>getGal</code> and <code>getPSF</code> to return <code>GSObject</code>s instead of <code>Image</code>s; added <code>getGalImage</code> and <code>getPSFImage</code> to enable former behavior (#640)</li>
+<li>Moved packaged <code>SED</code> and <code>Bandpass</code> files from <code>.../share/galsim/</code> to <code>.../share/galsim/SEDs</code> and <code>.../share/galsim/bandpasses</code> respectively. (#640)</li>
+<li>Changed the dimensions of <code>SED</code> from [photons/wavelength-interval] to either [photons/wavelength-interval/area/time] or [1] (dimensionless). <code>ChromaticObject</code>s representing stars or galaxies take SEDs with the former dimensions; those representing a chromatic PSF take SEDs with the latter dimensions. (#789)</li>
+<li>Added restrictions to <code>ChromaticObject</code>s and <code>SED</code>s consistent with dimensional analysis. E.g., only <code>ChromaticObject</code>s with dimensionful SEDs can be drawn. (#789)</li>
+<li>Changed <code>drawKImage</code> to return a single ImageCD instance rather than two ImageD instances (for real and imag parts). The old syntax of <code>re, im = obj.drawKImage(...)</code> will still work, but it will raise a deprecation warning. (#799)</li>
+<li>Changed <code>InterpolatedKImage</code> to take an ImageCD rather than two ImageD instances. The old syntax will work, but it will raise a deprecation warning. (#799)</li>
+<li>Dynamic PhaseScreenPSFs now require an explicit start time and time step. Clock management of phase screens now handled implicitly. (#824)</li>
+<li>The time_step for updating atmospheric screens and the time_step used for integrating a PhaseScreenPSF over time are now independent (#824)</li>
+<li>OpticalScreen now requires <code>diam</code> argument. (#824)</li>
+<li>Some of the backend (but nonetheless public API) methods of PhaseScreen and PhaseScreenList have changed. See the docstrings of these classes for the new API if you have been using these methods. (#824)</li>
+<li>Slightly changed the signatures of some back-end, but nonetheless public, config-layer functions. If you have been using custom config modules, there may be slight changes to your code required. See the doc strings of these functions for more information. (#865)</li>
+<li>Switched galsim.Image(image) to make a copy of the image rather than a view. If you want a view, you should use the more intuitive image.view(). (#873)</li>
+<li>Changed behaviour of the <code>preload</code> option in RealGalaxyCatalog and COSMOSCatalog to preload data in memory, not just the fits HDUs (#884)</li>
 </ul>
 <h2>Dependency Changes </h2>
 <ul>
-<li>Added future module as a dependency. This is a trivial one to install, so it should not be any hardship. You can use either <code>pip install future</code> or <code>easy_install future</code>. (#534)</li>
-<li>Changed PyYAML to a nominal dependency, even though it is still not technically required if you do not plan to use the <code>galsim</code> executable (or only plan to use JSON config files). (#768)</li>
+<li>Added <code>astropy</code> as a required dependency for chromatic functionality. (#789)</li>
+<li>Switched <code>scons tests</code> test runner from <code>nosetests</code> to <code>pytest</code>. (#892)</li>
 </ul>
 <h2>Bug Fixes </h2>
 <ul>
-<li>Fixed bug in config that did not allow users to pass in a filename for COSMOS (correlated) noise. (#732)</li>
-<li>Improved ability of <a class="el" href="namespacegalsim_1_1fits.html#abbad6f82a80bc74fb22a752af1bbd8e9" title="Now the primary read functions. ">galsim.fits.read</a> to handle invalid but fixable FITS headers. (#602)</li>
-<li>Fixed bug in des module related to building meds file with wcs taken from the input images. (#654)</li>
-<li>Improved ability of ChromaticObjects to find fiducial achromatic profiles and wavelengths with non-zero flux. (#680)</li>
-<li>Fixed a bug in some of the WCS classes if the RA/Dec axes in the FITS header are reversed (which is allowed by the FITS standard). (#681)</li>
-<li>Fixed a bug in the way Images are instantiated for certain combinations of ChromaticObjects and image-setup keyword arguments (#683)</li>
-<li>Added ability to manipulate the width of the moment-measuring weight function for the KSB shear estimation method of the <a class="el" href="namespacegalsim_1_1hsm.html">galsim.hsm</a> package. (#686)</li>
-<li>Fixed bug in the (undocumented) function COSMOSCatalog._makeSingleGalaxy, where the resulting object did not set the index attribute properly. (#694)</li>
-<li>Fixed an error in the <code>CCDNoise.getVariance()</code> function, as well as some errors in the documentation about the units of CCDNoise parameters. (#713)</li>
-<li>Fixed a bug in drawKImage when non-default scale is given, but no images are provided. (#720)</li>
-<li>Fixed an assert failure in InterpolatedImage if the input image is identically equal to zero. (#720)</li>
-<li>Fixed a potential instability in drawing with deconvolution. Now the fft of the deconvolved image will not be made larger than 1/kvalue_accuracy. (#720)</li>
-<li>Fixed a bug in how InterpolatedKImage checked for properly Hermitian input images. (#723)</li>
-<li>Updated ups table file so that setup command is <code>setup galsim</code> instead of <code>setup GalSim</code> (#724)</li>
-<li>Added new default algorithm for thinning SEDs and Bandpasses to enable faster calculations while still meeting relative error constraints. (#739).</li>
-<li>Fixed a bug in how DistDeviate handled probabilities that were nearly, but not quite, flat (#741)</li>
-<li>Fixed a bug in chromatic parametric galaxy models based on COSMOS galaxies. (#745)</li>
-<li>Fixed a bug in the Image copy constructor where the wcs was not copied if the <code>image</code> parameter is a galsim.Image. (#762)</li>
-<li>Fixed a bug in the Sum and Convolution constructors when they are only adding or convolving a single element that could lead to erroneous str and reprs for the resulting object if it was then transformed. (#763)</li>
-<li>Fixed a bug related to boost-v1.60 python shared_ptr registration. (#764)</li>
-<li>Made the error message when trying to read a non-existent *.fits.gz or *.fits.bz2 file more helpful. (#773)</li>
+<li>Fixed parity mistake in configuration of WFIRST focal plane. (#675)</li>
+<li>Added checks to <code>SED</code>s and <code>ChromaticObject</code>s for dimensional sanity. (#789)</li>
+<li>Fixed an error in the magnification calculated by NFWHalo.getLensing(). (#580)</li>
+<li>Fixed bug when whitening noise in images based on COSMOS training datasets using the config functionality. (#792)</li>
+<li>Fixed some handling of images with undefined bounds. (#799)</li>
+<li>Fixed bug in image.subImage that could cause seg faults in some cases. (#848)</li>
+<li>Fixed minor bug in shear == implementation. (#865)</li>
+<li>Fixed bug in GSFitsWCS that made <code>toImage</code> sometimes fail to converge. (#880)</li>
+<li>Added check to <code>SED.atRedshift</code> for valid redshifts. (#905)</li>
+<li>Added exception for disjoint wave_list intersection in combine_wave_list. (#905)</li>
 </ul>
 <h2>Deprecated Features </h2>
 <ul>
-<li>Deprecated the gal.type=Ring option in the config files. The preferred way to get a ring test is now with the new stamp.type=Ring. See demo5 and demo10 for examples of the new syntax. (#698)</li>
+<li>Deprecated <code>simReal</code> method, a little-used way of simulating images based on realistic galaxies. (#787)</li>
+<li>Deprecated <code>Chromatic</code> class. This functionality has been subsumed by <code>ChromaticTransformation</code>. (#789)</li>
+<li>Deprecated <code>.<a class="el" href="namespacegalsim_1_1fitswcs.html#a1a6968473badb1b15449f2de33a73b1c">copy()</a></code> methods for immutable classes, including <code>GSObject</code>, <code>ChromaticObject</code>, <code>SED</code>, and <code>Bandpass</code>, which are unnecessary. (#789)</li>
+<li>Deprecated <code>wmult</code> parameter of <code>drawImage</code>. (#799)</li>
+<li>Deprecated <code>Image.at</code> method. Normally im(x,y) or im[x,y] would be the preferred syntax, but for the case where you want a named method, the new name is <code>getValue</code> in parallel with <code>setValue</code>. (#799)</li>
+<li>Deprecated <code>gain</code> parameter of <code>drawKImage</code>. It does not really make sense. If you had been using it, you should instead just divide the returned image by gain, which will have the same effect and probably be clearer in your own code about what you meant. (#799)</li>
+<li>Deprecated ability to create multiple PhaseScreenPSFs with single call to makePSF, since it is now just as efficient to call makePSF multiple times. (#824)</li>
+<li>Deprecated the use of <code>np.trapz</code> and <code>galsim.integ.mipdt</code> as valid integration rules for use by <code>ImageIntegrator</code>s, replaced by <code><a class="el" href="namespacegalsim_1_1integ.html#ad7d1f00db8a7acc73f6c382207c9de7b" title="Trapezoidal rule for integration. ">galsim.integ.trapzRule</a></code> and <code><a class="el" href="namespacegalsim_1_1integ.html#a97c7473a31f898a7de884bb511f5f8cd" title="Midpoint rule for integration. ">galsim.integ.midptRule</a></code>. (#887)</li>
+<li>Changed the Angle.rad method to a property, so now you should write angle.rad rather than <a class="el" href="namespacegalsim_1_1angle.html#a282a3f58459a45cd7f5b000aa0a68c90">angle.rad()</a> to get the value in radians. Note: the return value is a subclass of float, so <a class="el" href="namespacegalsim_1_1angle.html#a282a3f58459a45cd7f5b000aa0a68c90">angle.rad()</a> still works but gives a deprecation warning. But it should work in all ways as a float. (#904)</li>
+<li>Deprecated the functions HMS_Angle and DMS_Angle. These are now classmethods of the Angle class: Angle.from_hms and Angle.from_dms, respectively. (#904)</li>
+<li>Deprecated the function ShapeletSize and FitShapelet. This functionality is not in classmethods of the Shapelet class: <code>Shapelet.size(order)</code> and <code>Shapelet.fit(image)</code>. Also, direct use of LVector is deprecated, and it will be removed in version 2.0. (#904)</li>
+<li>The use of the Interpolant base class as a factory function is now deprecated. Instead, use <code>Interpolant.from_name(name)</code>. (#904)</li>
+<li>Use of the <code>SBProfile</code> attribute of GSObject is deprecated. The attribute <code>_sbp</code> takes its place, but that should be considered an implementation detail that users should not need to access, not part of the public API. If you think you have a use case that is not covered by the public API (either for functionality of efficiency), please open an issue. (#904)</li>
+<li>Deprecated making a GSObject directly rather than making one of the subclasses. Again, this should not be necessary, but if you have a use case that you think requires this, please open an issue. (#904)</li>
+<li>Use of the <code>image</code> attribute of Image is deprecated, being replaced by <code>_image</code>, which is similarly now officially an implementation detail that users should not need to access. (#904)</li>
+<li>PhotonArray.addTo(image) now takes a regular galsim.Image for its argument, not a C++-layer image object. (#904)</li>
+<li>Deprecated the various PhotonArray.get* functions as unwieldy equivalents of the cleaner pa.x, pa,flux, etc. properties. Similarly the setPhoton function is deprecated in lieu of setting each value separately. (#904)</li>
+<li>Deprecated <code>calculateFlux(bandpass=None)</code> for computing bolometric flux. Users of this feature can still obtain a psuedo-bolometric flux by using an explicit bolometric Bandpass. (#905)</li>
+<li>Deprecated the various <code>get*</code> methods that are equivalent to a property, which is the more Pythonic and preferred syntax. e.g. obj.getFlux() -&gt; obj.flux, gaussian.getSigma() -&gt; gaussian.sigma, shear.getG1() -&gt; shear.g1. There were many such methods, especially in the various kinds of GSObjects, as well as in Image, Bounds, Shear, and the Noise classes. (#904)</li>
+<li>Deprecated ChromaticObject.obj -&gt; _obj, which is now an implementation detail, not something that users should need to use. (#904)</li>
+<li>Changed the objlist attribute of ChromaticSum and ChromaticConvolution to obj_list to conform to similar attributes in other classes. (#904)</li>
+<li>Deprecated OpticalScreen.coef_array -&gt; _coef_array, which is now an implementation detail. (#904)</li>
+<li>Changed a number of GSObject methods to properties to be more pythonic:<ul>
+<li>obj.stepK() -&gt; obj.stepk</li>
+<li>obj.maxK() -&gt; obj.maxk</li>
+<li>obj.nyquistScale() -&gt; obj.nyquist_scale</li>
+<li>obj.centroid() -&gt; obj.centroid</li>
+<li>obj.getPositiveFlux() -&gt; obj.positive_flux</li>
+<li>obj.getNegativeFlux() -&gt; obj.negative_flux</li>
+<li>obj.maxSB() -&gt; obj.max_sb</li>
+<li>obj.isAxisymmetric() -&gt; obj.is_axisymmetric</li>
+<li>obj.isAnalyticX() -&gt; obj.is_analytic_x</li>
+<li>obj.isAnalyticK() -&gt; obj.is_analytic_k</li>
+<li>obj.hasHardEdges() -&gt; obj.has_hard_edges The method versions still work for now, but are deprecated. (#904)</li>
+</ul>
+</li>
+<li>Renamed the ChromaticObject.centroid(bandpass) method to calculateCentroid to be more clear that a calculation is required and to avoid confusion with the centroid property of (non-chromatic) GSObjects. (#904)</li>
+<li>Changed a few Image methods to properties to be more pythonic:<ul>
+<li>image.center() -&gt; image.center</li>
+<li>image.trueCenter() -&gt; image.true_center</li>
+<li><a class="el" href="namespacegalsim_1_1fitswcs.html#a5a43c655c3c00f04df1f291ade148c24">image.origin()</a> -&gt; image.origin Likewise, the same named methods for Bounds have also been similarly changed. The method versions still work for now, but are deprecated. (#904)</li>
+</ul>
+</li>
 </ul>
 <h2>New Features </h2>
 <ul>
-<li>Added OutputCatalog class, which can be used to keep track of and then output truth information. cf. demos 9 and 10. (#301, #691)</li>
-<li>Added methods calculateHLR, calculateMomentRadius, and calculateFWHM to both GSObject and Image. (#308)</li>
-<li>Added LookupTable2D to facilitate quick interpolation of two-dimensional tabular data. (#465)</li>
-<li>Added support for Python 3. Specifically, we tested with Python 3.4 and 3.5, but we expect that it should work for Python versions &gt;= 3.3. (#534)</li>
-<li>Added AtmosphericScreen, OpticalScreen, and PhaseScreenList used to generate PSFs via Fourier optics. (#549)</li>
-<li>Added PhaseScreenPSF to transform PhaseScreens into GSObjects. (#549)</li>
-<li>Added Atmosphere function to conveniently assemble a multi-layer atmosphere PhaseScreenList. (#549)</li>
-<li>Rewrote OpticalPSF to operate under the PhaseScreen framework to enable fully self-consistent optics+atmospheric PSFs. (#549)</li>
-<li>OpticalPSF now able to handle Zernike polynomial aberrations up to arbitrary order. (#549)</li>
-<li>Added a simple, linear model for persistence in the detectors that accepts a list of galsim.Image instances and a list of an equal number of floats. (#554)</li>
-<li>Added BoundsI.numpyShape() to easily get the numpy shape that corresponds to a given bounds instance. (#654)</li>
-<li>Have FITS files with unsigned integer data automatically convert that into the corresponding signed integer data type for use in GalSim, rather than converting to float64, which it had been doing. (#654)</li>
-<li>Made COSMOSCatalog write an index parameter for both parameteric and real galaxy types to indicate the index of the object in the full COSMOS catalog. (#654, #694)</li>
-<li>Added ability to specify lambda and r0 separately for Kolmogorov to have GalSim do the conversion from radians to the given scale unit. (#657)</li>
-<li>Made it possible to initialize an InterpolatedImage from a user-specified HDU in a FITS file with multiple extensions. (#660)</li>
-<li>Changed <code><a class="el" href="namespacegalsim_1_1fits.html#a17dbb70385408586795efade476cdc98" title="Write a Python list of images to a multi-extension FITS file. ">galsim.fits.writeMulti</a></code> to allow any of the "image"s to be already-built hdus, which are included as is. (#691)</li>
-<li>Added optional <code>wcs</code> argument to <code>Image.resize()</code>. (#691)</li>
-<li>Added <code>BaseDeviate.discard(n)</code> and <code>BaseDeviate.raw()</code>. (#691)</li>
-<li>Added <code>sersic_prec</code> option to COSMOSCatalog.makeGalaxy(). (#691)</li>
-<li>Made it possible to impose some cuts on galaxy image quality in the COSMOSCatalog class. (#693)</li>
-<li>Added <code>convergence_threshold</code> as a parameter of HSMParams. (#709)</li>
-<li>Improved the readability of Image and BaseDeviate reprs. (#723)</li>
-<li>Sped up some Bandpass and SED functionality (and LookupTable class in general). (#735)</li>
-<li>Added the FourierSqrt operator to compute the Fourier-space square root of a profile. This is useful in implementing optimal coaddition algorithms; see make_coadd.py in the examples directory (#748).</li>
-<li>Made Bandpass.thin() and Bandpass.truncate() preserve the zeropoint by default. (#711)</li>
-<li>Added version information to the compiled C++ library. (#750)</li>
-</ul>
-<h2>Updates to galsim executable </h2>
-<ul>
-<li>Dropped default verbosity from 2 to 1, since for real simulations, 2 is usually too much output. (#691)</li>
-<li>Added ability to easily split the total work into several jobs with galsim -n njobs -j jobnum. (#691)</li>
-<li>Added galsim -p to perform profiling on the run. (#691)</li>
+<li>Added new surface brightness profile, 'DeltaFunction'. This represents a point source with a flux value. (#533)</li>
+<li>Added <code>ChromaticRealGalaxy</code>, which can use multi-band HST-images to model realistic galaxies, including color gradients (#640)</li>
+<li>Added <code>CovarianceSpectrum</code> to propagate noise through <code>ChromaticRealGalaxy</code> (#640)</li>
+<li>Updated packaged bandpasses and SEDs and associated download scripts (#640)</li>
+<li>Added HST bandpasses covering AEGIS and CANDELS surveys (#640)</li>
+<li>Added <code>drawKImage</code> method for <code>ChromaticObject</code> and <code>CorrelatedNoise</code> (#640)</li>
+<li>Updated WFIRST WCS (focal plane location, orientation, configuration) and some other basic numbers in the module to reflect WFIRST Cycle 7 design. A detailed listing of what was and was not updated can be found in the issue page (#675)</li>
+<li>Added support for reading in of unsigned int Images (#715)</li>
+<li>Added a new Sensor class hierarchy, including SiliconSensor, which models the repulsion of incoming electrons by the electrons already accumulated on the sensor. This effect is known as the "brighter-fatter effect", since it means that brighter objects are a bit larger than dimmer but otherwise- identical objects. (#722)</li>
+<li>Added <code>save_photons</code> option to <code>drawImage</code> to output the photons that were shot when photon shooting (if applicable). (#722)</li>
+<li>Added image.bin and image.subsample methods. (#722)</li>
+<li>Added ability to specify optical aberrations in terms of annular Zernike coefficients. (#771)</li>
+<li>Added ability to use <code>numpy</code>, <code>np</code>, or <code>math</code> in all places where we evaluate user input, including DistDeviate (aka RandomDistribution in config files), PowerSpectrum, UVFunction, RaDecFunction, Bandpass, and SED. Some of these had allowed <code>np.</code> for numpy commands, but inconsistently, so now they should all reliably work with any of these three module names. (#776)</li>
+<li>Added keywords <code>exptime</code> and <code>area</code> to <code>drawImage()</code> to indicate the image exposure time and telescope collecting area. (#789)</li>
+<li><code>SED</code>s can now be constructed with flexible units via the <code>astropy.units</code> module. (#789).</li>
+<li>Added new surface brightness profile, 'InclinedExponential'. This represents the 2D projection of the 3D profile: I(R,z) = I_0 / (2h_s) * sech^2 (z/h_s) * exp(-R/R_s), inclined to the line of sight at a desired angle. If face-on (inclination = 0 degrees), this will be identical to the Exponential profile. (#782)</li>
+<li>Allow selection of random galaxies from a RealGalaxyCatalog or COSMOSCatalog in a way that accounts for any selection effects in catalog creation, using the 'weight' entries in the catalog. (#787)</li>
+<li>Added possibility of using <code>dtype=complex</code> or <code>numpy.complex128</code> for Images, the shorthand alias for which is ImageCD. Also <code>dtype=numpy.complex64</code> is allowed, the alias for which is ImageCF. (#799, #873)</li>
+<li>Added <code>maxSB()</code> method to GSObjects to return an estimate of the maximum surface brightness. For analytic profiles, it returns the correct value, but for compound objects (convolutions in particular), it cannot know the exact value without fully drawing the object (which would defeat the point for the use cases where we want this information). So it does its best to estimate something close, generally erring on the high side. So the true maximum SB &lt;~ obj.maxSB(). (#799)</li>
+<li>Added <code>im[x,y] = value</code> as a valid replacement for im.setValue(x,y,value). Likewise <code>value = im[x,y]</code> is equivalent to <code>value = im(x,y)</code> or <code>value = im.getValue(x,y)</code>. (#799).</li>
+<li>Added ability to do FFTs directly on images. The relevant methods for doing so are <code>im.calculate_fft()</code> and <code>im.calculate_inverse_fft()</code>. There is also <code>im.wrap()</code> which can be used to wrap an image prior to doing the FFT to properly alias the data if necessary. (#799)</li>
+<li>Added new surface brightness profile, 'InclinedSersic'. This is a generalization of the InclinedExponential profile, allowing Sersic disks and a truncation radius for the disk. (#811)</li>
+<li>Added new profile <code>galsim.RandomWalk</code>, a class for generating a set of point sources distributed using a random walk. Uses of this profile include representing an "irregular" galaxy, or adding this profile to an Exponential to represent knots of star formation. (#819)</li>
+<li>Allowed drawImage to take a non-uniform WCS when default constructing the image from either nx,ny or bounds. (#820)</li>
+<li>Added 'generate' function to BaseDeviate and 'sed.sampleWavelength' to draw random wavelengths from an SED. (#822)</li>
+<li>Added function assignPhotonAngles to add arrival directions (in the form of dx/dz and dy/dz slopes) to an existing photon array. (#823)</li>
+<li>Added geometric optics approximation for photon-shooting through PhaseScreenPSFs (includes atmospheric PSF and OpticalPSF). This approximation is now the default for non-optical PhaseScreenPSFs. (#824)</li>
+<li>Added gradient method to LookupTable2D. (#824)</li>
+<li>Added <code>surface_ops</code> option to <code>drawImage</code> function, which applies a list of surface operations to the photon array before accumulating on the image. (#827)</li>
+<li>Added <code>ii_pad_factor</code> kwarg to PhaseScreenPSF and OpticalPSF to control the zero-padding of the underlying InterpolatedImage. (#835)</li>
+<li>Added <a class="el" href="namespacegalsim_1_1fft.html">galsim.fft</a> module that includes functions that act as drop-in replacements for np.fft functions, but using the C-layer FFTW package. Our functions have more restrictions on the input arrays, but when valid are generally somewhat faster than the numpy functions. (#840)</li>
+<li>Added some variants of normal functions and methods with a leading underscore. These variants skip the normal sanity checks of the input parameters and often have more limited options for the input arguments. Some examples: <code>_Image</code>, <code>_Shear</code>, <code>_BoundsI</code>, <code>_Transform</code>, <code>obj._shear</code>, <code>obj._shift</code>, <code>obj._drawKImage</code>, <code>image._view</code>, <code>image._shift</code>. These are appropriate for advanced users who are optimizing a tight loop and find that the normal Python checks are taking a significant amount of time. (#840, #873)</li>
+<li>Added a hook to the WCS classes to allow them to vary with color, although most of our current WCS classes are not able to use this feature. The only one that can is UVFunction, which may now optionally have a color term if you set <code>uses_color=True</code>. (Note however that there is not yet a mechanism to assign colors to objects in the config parser.) (#865)</li>
+<li>Added optional <code>variance</code> parameter to PowerSpectrum.buildGrid to renormalize the variance of the returned shear values. (#865)</li>
+<li>Added ability to get position (x,y,z) on the unit sphere corresponding to a CelestialCoord with <code>coord.get_xyz()</code>. Also make a CelestialCoord from (x,y,z) using <code>CeletialCoord.from_xyz(x,y,z)</code>. (#865)</li>
+<li>Added an optional <code>center</code> argument for <code>Angle.wrap()</code>. (#865)</li>
+<li>Added <code>recenter</code> option to drawKImage to optionally not recenter the input image at (0,0). The default <code>recenter=True</code> is consistent with how this function has worked in previous versions. (#873)</li>
+<li>Drawing chromatic objects now uses significantly less RAM. (#887)</li>
 </ul>
 <h2>New config features </h2>
 <ul>
-<li>Added ability to write truth catalogs using output.truth field. (#301, #691)</li>
-<li>Improved the extensibility of the config parsing. It is now easier to write custom image types, object types, value types, etc. and register them with the config parser. The code with the new type definitions should be given as a module for the code to import using the new 'modules' top-level config field. (#691, #774)</li>
-<li>Added the 'template' option to read another config file and use either the whole file as a template or just a given field from the file. (#691)</li>
-<li>Made '$' and '@' shorthand for 'Eval' and 'Current' types respectively in string values. e.g. '$(pixel_scale) * 2' would be parsed to mean 2 times the current value of image.pixel_scale. (#691)</li>
-<li>Allowed gsobjects to be referenced from Current types. (#691)</li>
-<li>Added x,f specification for a RandomDistribution. (#691)</li>
-<li>Added a new 'stamp' top level field and moved some of the items that had belonged in 'image' over to 'stamp'. Notably, 'draw_method', 'offset', and 'gsparams', among other less commonly used parameters. However, for backwards compatibility, they are all still allowed in the image field as well. (#691)</li>
-<li>Added more example scripts to showcase how to use some of the new config features to make fairly sophisticated simulations. cf. examples/great3 and examples/des. (#654, #691)</li>
-<li>Added new stamp type=Ring to effect ring tests. This replaces the old gsobject type=Ring, which is now deprecated. See demo5 and demo10 for examples of the new preferred syntax. (#698)</li>
-</ul>
-<h2>File name changes </h2>
-<ul>
-<li>Changed the names of the real galaxy catalog examples from <em>catalog_example</em> to <em>catalog_23.5_example</em> (#740) </li>
+<li>Output slightly more information about the COSMOSCatalog() (if any) being used as the basis of simulations, at the default verbosity level. (#804)</li>
+<li>Changed the name of galsim.config.CalculateNoiseVar to the slightly more verbose, but also more readable CalculateNoiseVariance. (#820)</li>
+<li>Setting config['rng'] is no longer required when manually running commands like <code>galsim.config.BuildGSObject</code>. If you do not care about deterministic pseudo-rngs, then it will just use /dev/urandom for you. (#820)</li>
+<li>Allow PoissonNoise without any sky level, in which case only the shot noise in the signal photons contribute to the noise. Likewise for CCDNoise. (#820)</li>
+<li>Let 'None' in the config file mean <code>None</code>. (#820)</li>
+<li>Require 'max_extra_noise' to be explicitly set for photon shooting if you want it rather than have it default to 0.01. (#820)</li>
+<li>Added &ndash;except_abort option to galsim executable to abort execution if a file has an error, rather than just reporting the exception and continuing on (which is still the default behavior). (#820)</li>
+<li>Added optional probability parameter 'p' for Random bool values. (#820)</li>
+<li>Added ability to specify world_pos in celestial coordinates (#865)</li>
+<li>Added the ability to have multiple rngs with different update sequences (e.g. to have some random galaxy properties repeat for the corresponding galaxies on multiple images). (#865)</li>
+<li>Added ngrid, center, variance, index options to power_spectrum input field. (#865)</li>
+<li>Skip drawing objects whose postage stamps will end up completely off the main image currently being worked on. (#865)</li>
+<li>Added skip option in stamp field, which works the same as the skip parameter in gal or psf fields. (#865)</li>
+<li>Added ':field' syntax for templates, which use the current dict as the base rather than reading from another file (with '<a href="file:field'">file:field'</a>). (#865)</li>
+<li>No longer tries to process extra output items for stamps that are skipped. This is normally better, since the extra output processing probably depends on the stamp processing having been completed. But it is customizable via the <code>processSkippedStamp</code> method of ExtraOutputBuilders, so you can override this behavior in your custom modules if you prefer. (#865) </li>
 </ul>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>

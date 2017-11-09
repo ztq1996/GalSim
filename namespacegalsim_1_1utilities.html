@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,7 +89,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">galsim.utilities Namespace Reference</div>  </div>
 </div><!--header-->
@@ -99,6 +100,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1utilities_1_1_attribute_dict.html">AttributeDict</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary class that allows for easy initialization and refs to key values via attributes.  <a href="classgalsim_1_1utilities_1_1_attribute_dict.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1utilities_1_1lazy__property.html">lazy_property</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">meant to be used for lazy evaluation of an object attribute.  <a href="classgalsim_1_1utilities_1_1lazy__property.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1utilities_1_1_l_r_u___cache.html">LRU_Cache</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplified Least Recently Used Cache.  <a href="classgalsim_1_1utilities_1_1_l_r_u___cache.html#details">More...</a><br/></td></tr>
@@ -124,6 +128,20 @@ Functions</h2></td></tr>
 <tr class="memitem:af424a90c9e1c9f64eaaf4f52bcb1aceb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#af424a90c9e1c9f64eaaf4f52bcb1aceb">parse_pos_args</a></td></tr>
 <tr class="memdesc:af424a90c9e1c9f64eaaf4f52bcb1aceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the args and kwargs of a function call to be some kind of position.  <a href="#af424a90c9e1c9f64eaaf4f52bcb1aceb">More...</a><br/></td></tr>
 <tr class="separator:af424a90c9e1c9f64eaaf4f52bcb1aceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b1c940e27f2d23b7506e67c727c9f5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ac5b1c940e27f2d23b7506e67c727c9f5">__init__</a></td></tr>
+<tr class="separator:ac5b1c940e27f2d23b7506e67c727c9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad977b8a08a1759488c76d9cdad45d70f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ad977b8a08a1759488c76d9cdad45d70f">__getattr__</a></td></tr>
+<tr class="separator:ad977b8a08a1759488c76d9cdad45d70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477125c74c36558fb331073a40c17296"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a477125c74c36558fb331073a40c17296">__setattr__</a></td></tr>
+<tr class="separator:a477125c74c36558fb331073a40c17296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d842fd5fdb12498b791ec51d1486ef3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a8d842fd5fdb12498b791ec51d1486ef3">merge</a></td></tr>
+<tr class="separator:a8d842fd5fdb12498b791ec51d1486ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9adbfafe988302774d457fdf61d508"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a2c9adbfafe988302774d457fdf61d508">__bool__</a></td></tr>
+<tr class="separator:a2c9adbfafe988302774d457fdf61d508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926d8736a654f57a88f244cb5c31fffe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a926d8736a654f57a88f244cb5c31fffe">__repr__</a></td></tr>
+<tr class="separator:a926d8736a654f57a88f244cb5c31fffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaec444532d4668103fdcaa1c732f6e4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#acaec444532d4668103fdcaa1c732f6e4">__len__</a></td></tr>
+<tr class="separator:acaec444532d4668103fdcaa1c732f6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbd8593ea30d16263c2f03e1147b5b27"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#abbd8593ea30d16263c2f03e1147b5b27">rand_arr</a></td></tr>
 <tr class="memdesc:abbd8593ea30d16263c2f03e1147b5b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a 2d array of random deviates (of any sort).  <a href="#abbd8593ea30d16263c2f03e1147b5b27">More...</a><br/></td></tr>
 <tr class="separator:abbd8593ea30d16263c2f03e1147b5b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +154,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a2760dcbfc4ece3e6177ee35a187ae1db"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a2760dcbfc4ece3e6177ee35a187ae1db">old_thin_tabulated_values</a></td></tr>
 <tr class="memdesc:a2760dcbfc4ece3e6177ee35a187ae1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove items from a set of tabulated f(x) values so that the error in the integral is still accurate to a given relative accuracy.  <a href="#a2760dcbfc4ece3e6177ee35a187ae1db">More...</a><br/></td></tr>
 <tr class="separator:a2760dcbfc4ece3e6177ee35a187ae1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9142199cbac3fed25ff74caa4d622e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#adf9142199cbac3fed25ff74caa4d622e">horner</a></td></tr>
+<tr class="memdesc:adf9142199cbac3fed25ff74caa4d622e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate univariate polynomial using Horner's method.  <a href="#adf9142199cbac3fed25ff74caa4d622e">More...</a><br/></td></tr>
+<tr class="separator:adf9142199cbac3fed25ff74caa4d622e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274c70e018a51b0fbe8a231cea92f6dd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a274c70e018a51b0fbe8a231cea92f6dd">horner2d</a></td></tr>
+<tr class="memdesc:a274c70e018a51b0fbe8a231cea92f6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate bivariate polynomial using nested Horner's method.  <a href="#a274c70e018a51b0fbe8a231cea92f6dd">More...</a><br/></td></tr>
+<tr class="separator:a274c70e018a51b0fbe8a231cea92f6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9f44699b20e12fdf56532d37dd29c4e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ab9f44699b20e12fdf56532d37dd29c4e">deInterleaveImage</a></td></tr>
 <tr class="memdesc:ab9f44699b20e12fdf56532d37dd29c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The routine to do the opposite of what 'interleaveImages' routine does.  <a href="#ab9f44699b20e12fdf56532d37dd29c4e">More...</a><br/></td></tr>
 <tr class="separator:ab9f44699b20e12fdf56532d37dd29c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,17 +171,284 @@ Functions</h2></td></tr>
 <tr class="memitem:aee0d05124abd7aeb2585903f31b82caa"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#aee0d05124abd7aeb2585903f31b82caa">listify</a></td></tr>
 <tr class="memdesc:aee0d05124abd7aeb2585903f31b82caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn argument into a list if not already iterable.  <a href="#aee0d05124abd7aeb2585903f31b82caa">More...</a><br/></td></tr>
 <tr class="separator:aee0d05124abd7aeb2585903f31b82caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2f282768adf06a13a7348abdd4dfe5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#aec2f282768adf06a13a7348abdd4dfe5">lod_to_dol</a></td></tr>
-<tr class="memdesc:aec2f282768adf06a13a7348abdd4dfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate dicts from dict of lists (with broadcasting).  <a href="#aec2f282768adf06a13a7348abdd4dfe5">More...</a><br/></td></tr>
-<tr class="separator:aec2f282768adf06a13a7348abdd4dfe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82f5997044243f068ccd3ad943e7f99"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ab82f5997044243f068ccd3ad943e7f99">dol_to_lod</a></td></tr>
+<tr class="memdesc:ab82f5997044243f068ccd3ad943e7f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate list of dicts from dict of lists (with broadcasting).  <a href="#ab82f5997044243f068ccd3ad943e7f99">More...</a><br/></td></tr>
+<tr class="separator:ab82f5997044243f068ccd3ad943e7f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b126af0ef8f3da36e3a964c1559a2c9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a7b126af0ef8f3da36e3a964c1559a2c9">set_func_doc</a></td></tr>
 <tr class="memdesc:a7b126af0ef8f3da36e3a964c1559a2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically set a docstring for a given function.  <a href="#a7b126af0ef8f3da36e3a964c1559a2c9">More...</a><br/></td></tr>
 <tr class="separator:a7b126af0ef8f3da36e3a964c1559a2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a898e9309f6853faa1cfa6be77f23c8ea"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a898e9309f6853faa1cfa6be77f23c8ea">structure_function</a></td></tr>
 <tr class="memdesc:a898e9309f6853faa1cfa6be77f23c8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate the angularly-averaged structure function of a 2D random field.  <a href="#a898e9309f6853faa1cfa6be77f23c8ea">More...</a><br/></td></tr>
 <tr class="separator:a898e9309f6853faa1cfa6be77f23c8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65841ccc2fb0d022429d43519d8cd671"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a65841ccc2fb0d022429d43519d8cd671">combine_wave_list</a></td></tr>
+<tr class="memdesc:a65841ccc2fb0d022429d43519d8cd671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine wave_list attributes of all objects in obj_list while respecting blue_limit and red_limit attributes.  <a href="#a65841ccc2fb0d022429d43519d8cd671">More...</a><br/></td></tr>
+<tr class="separator:a65841ccc2fb0d022429d43519d8cd671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9345b7d8c210fc4f3915e464d50253e8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a9345b7d8c210fc4f3915e464d50253e8">functionize</a></td></tr>
+<tr class="memdesc:a9345b7d8c210fc4f3915e464d50253e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate a function <code>f</code> which accepts scalar positional or keyword arguments, to accept arguments that can be either scalars or <em>functions</em>.  <a href="#a9345b7d8c210fc4f3915e464d50253e8">More...</a><br/></td></tr>
+<tr class="separator:a9345b7d8c210fc4f3915e464d50253e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5954168a0cc8a0ad4ed8bbd0a850bc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a7a5954168a0cc8a0ad4ed8bbd0a850bc">math_eval</a></td></tr>
+<tr class="memdesc:a7a5954168a0cc8a0ad4ed8bbd0a850bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a string that may include numpy, np, or math commands.  <a href="#a7a5954168a0cc8a0ad4ed8bbd0a850bc">More...</a><br/></td></tr>
+<tr class="separator:a7a5954168a0cc8a0ad4ed8bbd0a850bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af049279e1679862583206b6b8f547bbe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#af049279e1679862583206b6b8f547bbe">binomial</a></td></tr>
+<tr class="memdesc:af049279e1679862583206b6b8f547bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return xy coefficients of (ax + by)^n ordered by descending powers of a.  <a href="#af049279e1679862583206b6b8f547bbe">More...</a><br/></td></tr>
+<tr class="separator:af049279e1679862583206b6b8f547bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a664fe6ef606cf8e6388c6431c8aa8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ab4a664fe6ef606cf8e6388c6431c8aa8">unweighted_moments</a></td></tr>
+<tr class="memdesc:ab4a664fe6ef606cf8e6388c6431c8aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes unweighted 0th, 1st, and 2nd moments in image coordinates.  <a href="#ab4a664fe6ef606cf8e6388c6431c8aa8">More...</a><br/></td></tr>
+<tr class="separator:ab4a664fe6ef606cf8e6388c6431c8aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6105b670b7f0dc588f987c74b2c1b7d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ac6105b670b7f0dc588f987c74b2c1b7d">unweighted_shape</a></td></tr>
+<tr class="memdesc:ac6105b670b7f0dc588f987c74b2c1b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes unweighted second moment size and ellipticity given either an image or a dict of unweighted moments.  <a href="#ac6105b670b7f0dc588f987c74b2c1b7d">More...</a><br/></td></tr>
+<tr class="separator:ac6105b670b7f0dc588f987c74b2c1b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b105da3acaf3802e1404611fa443b7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ac2b105da3acaf3802e1404611fa443b7">rand_with_replacement</a></td></tr>
+<tr class="memdesc:ac2b105da3acaf3802e1404611fa443b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select some number of random choices from a list, with replacement, using a supplied RNG.  <a href="#ac2b105da3acaf3802e1404611fa443b7">More...</a><br/></td></tr>
+<tr class="separator:ac2b105da3acaf3802e1404611fa443b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e780e1b94c37a30fddd48cecdb0a8ff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#a4e780e1b94c37a30fddd48cecdb0a8ff">check_share_file</a></td></tr>
+<tr class="memdesc:a4e780e1b94c37a30fddd48cecdb0a8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find SED or Bandpass file, possibly adding share dir or raising deprecation warning if old share dir was specified.  <a href="#a4e780e1b94c37a30fddd48cecdb0a8ff">More...</a><br/></td></tr>
+<tr class="separator:a4e780e1b94c37a30fddd48cecdb0a8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac81fa65e66cb701e8bb4bbca3ec2044a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1utilities.html#ac81fa65e66cb701e8bb4bbca3ec2044a">__str__</a> = <a class="el" href="namespacegalsim_1_1utilities.html#a926d8736a654f57a88f244cb5c31fffe">__repr__</a></td></tr>
+<tr class="separator:ac81fa65e66cb701e8bb4bbca3ec2044a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a2c9adbfafe988302774d457fdf61d508"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__bool__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad977b8a08a1759488c76d9cdad45d70f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__getattr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac5b1c940e27f2d23b7506e67c727c9f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acaec444532d4668103fdcaa1c732f6e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__len__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a926d8736a654f57a88f244cb5c31fffe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__repr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a477125c74c36558fb331073a40c17296"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.__setattr__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af049279e1679862583206b6b8f547bbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.binomial </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return xy coefficients of (ax + by)^n ordered by descending powers of a. </p>
+<p>For example:</p>
+<h1>(x + y)^3 = 1 x^3 + 3 x^2 y + 3 x y^2 + 1 y^3</h1>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>print(binomial(1, 1, 3)) </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>array([ 1., 3., 3., 1.])</p>
+<pre class="fragment"> # (2 x + y)^3 = 8 x^3 + 12 x^2 y + 6 x y^2 + 1 y^3
+</pre> <blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>print(binomial(2, 1, 3)) </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>array([ 8., 12., 6., 1.])</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>First scalar in binomial to be expanded. </td></tr>
+    <tr><td class="paramname">b</td><td>Second scalar in binomial to be expanded. </td></tr>
+    <tr><td class="paramname">n</td><td>Exponent of expansion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Array of coefficients in expansion. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4e780e1b94c37a30fddd48cecdb0a8ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.check_share_file </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>subdir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find SED or Bandpass file, possibly adding share dir or raising deprecation warning if old share dir was specified. </p>
+
+</div>
+</div>
+<a class="anchor" id="a65841ccc2fb0d022429d43519d8cd671"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.combine_wave_list </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Combine wave_list attributes of all objects in obj_list while respecting blue_limit and red_limit attributes. </p>
+<p>Should work with SEDs, Bandpasses, and ChromaticObjects.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj_list</td><td>List of SED, Bandpass, or ChromaticObject objects. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>wave_list, blue_limit, red_limit </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="adf0f1e1e39e1ac7f446f278746918992"></a>
 <div class="memitem">
 <div class="memproto">
@@ -239,6 +530,102 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab82f5997044243f068ccd3ad943e7f99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.dol_to_lod </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>N</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate list of dicts from dict of lists (with broadcasting). </p>
+<p>Specifically, generate "scalar-valued" kwargs dictionaries from a kwarg dictionary with values that are length-N lists, or possibly length-1 lists or scalars that should be broadcasted up to length-N lists. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9345b7d8c210fc4f3915e464d50253e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.functionize </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decorate a function <code>f</code> which accepts scalar positional or keyword arguments, to accept arguments that can be either scalars or <em>functions</em>. </p>
+<p>If the arguments include univariate (N-variate) functions, then the output will be a univariate (N-variate) function. While it's okay to mix scalar and N-variate function arguments, it is an error to mix N-variate and M-variate function arguments.</p>
+<p>As an example:</p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>def f(x, y): # Function of two scalars. </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>... return x + y </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>decorated = functionize(f) # Function of two scalars, functions, or a mix. result = f(2, 3) # 5 result = f(2, lambda u: u) # Generates a TypeError result = decorated(2, 3) # Scalar args returns a scalar result = decorated(2, lambda u: u) # Univariate argument leads to a univariate output. print(result(5)) # 7 result = decorated(2, lambda u,v: u*v) # Bivariate argument leads to a bivariate output. print(result(5, 7)) # 2 + (5*7) = 37 </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre class="fragment"> We can use arguments that accept keyword arguments too:
+</pre><blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>def f2(u, v=None): </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>... if v is None: ... v = 6.0 ... return u / v </p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>result = decorated(2, f2) print(result(12)) # 2 + (12./6) = 4.0 print(result(12, v=4)) # 2 + (12/4) = 5 </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre class="fragment"> Note that you can also use python's decorator syntax:
+</pre><blockquote class="doxtable">
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>def f(x, y): </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>... return x + y</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function to be decorated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The decorated function. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9e5623a48fc511636b486d42816ba940"></a>
 <div class="memitem">
 <div class="memproto">
@@ -273,6 +660,100 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding distortions, e1 and e2. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf9142199cbac3fed25ff74caa4d622e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.horner </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dtype</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluate univariate polynomial using Horner's method. </p>
+<p>I.e., take A + Bx + Cx^2 + Dx^3 and evaluate it as A + x(B + x(C + x(D)))</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A numpy array of values at which to evaluate the polynomial. </td></tr>
+    <tr><td class="paramname">coef</td><td>Polynomial coefficients of increasing powers of x. </td></tr>
+    <tr><td class="paramname">dtype</td><td>Optionally specify the dtype of the return array. [default: None]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a numpy array of the evaluated polynomial. Will be the same shape as x. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a274c70e018a51b0fbe8a231cea92f6dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.horner2d </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coefs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dtype</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluate bivariate polynomial using nested Horner's method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A numpy array of the x values at which to evaluate the polynomial. </td></tr>
+    <tr><td class="paramname">y</td><td>A numpy array of the y values at which to evaluate the polynomial. </td></tr>
+    <tr><td class="paramname">coefs</td><td>2D array-like of coefficients in increasing powers of x and y. The first axis corresponds to increasing the power of y, and the second to increasing the power of x. </td></tr>
+    <tr><td class="paramname">dtype</td><td>Optionally specify the dtype of the return array. [default: None]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a numpy array of the evaluated polynomial. Will be the same shape as x and y. </dd></dl>
 
 </div>
 </div>
@@ -406,21 +887,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec2f282768adf06a13a7348abdd4dfe5"></a>
+<a class="anchor" id="a7a5954168a0cc8a0ad4ed8bbd0a850bc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.utilities.lod_to_dol </td>
+          <td class="memname">def galsim.utilities.math_eval </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>lod</em>, </td>
+          <td class="paramname"><em>str</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>N</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>other_modules</em> = <code>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -430,8 +911,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate dicts from dict of lists (with broadcasting). </p>
-<p>Specifically, generate "scalar-valued" kwargs dictionaries from a kwarg dictionary with values that are length-N lists, or possibly length-1 lists or scalars that should be broadcasted up to length-N lists. </p>
+<p>Evaluate a string that may include numpy, np, or math commands. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to evaluate </td></tr>
+    <tr><td class="paramname">other_modules</td><td>Other modules in addition to numpy, np, math to import as well. Should be given as a list of strings. [default: None]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whatever the string evaluates to. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d842fd5fdb12498b791ec51d1486ef3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.merge </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -603,6 +1117,63 @@ f(name1=x, name2=y)
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a NumPy array of the desired dimensions with random numbers generated using the supplied deviate. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2b105da3acaf3802e1404611fa443b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.rand_with_replacement </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n_choices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rng</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_n_rng_calls</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Select some number of random choices from a list, with replacement, using a supplied RNG. </p>
+<p><code>n</code> random choices with replacement are made assuming that those choices should range from 0 to <code>n_choices</code>-1, so they can be used as indices in a list/array. If <code>weight</code> is supplied, then it should be an array of length <code>n_choices</code> that ranges from 0-1, and can be used to make weighted choices from the list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Number of random selections to make. </td></tr>
+    <tr><td class="paramname">n_choices</td><td>Number of entries from which to choose. </td></tr>
+    <tr><td class="paramname">rng</td><td>RNG to use. Should be a <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">galsim.BaseDeviate</a>. </td></tr>
+    <tr><td class="paramname">weight</td><td>Optional list of weight factors to use for weighting the selection of random indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a NumPy array of length <code>n</code> containing the integer-valued indices that were selected. </dd></dl>
 
 </div>
 </div>
@@ -811,6 +1382,82 @@ f(name1=x, name2=y)
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a tuple of lists <code>(x_new, y_new)</code> with the thinned tabulation. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4a664fe6ef606cf8e6388c6431c8aa8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.unweighted_moments </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>origin</em> = <code>galsim.PositionD(0,&#160;0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes unweighted 0th, 1st, and 2nd moments in image coordinates. </p>
+<p>Respects image bounds, but ignores any scale or wcs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image from which to compute moments </td></tr>
+    <tr><td class="paramname">origin</td><td>Optional origin in image coordinates used to compute Mx and My [default: galsim.PositionD(0, 0)]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dict with entries for [M0, Mx, My, Mxx, Myy, Mxy] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6105b670b7f0dc588f987c74b2c1b7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.utilities.unweighted_shape </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes unweighted second moment size and ellipticity given either an image or a dict of unweighted moments. </p>
+<p>The size is: rsqr = Mxx+Myy The ellipticities are: e1 = (Mxx-Myy) / rsqr e2 = 2*Mxy / rsqr</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Either a galsim.Image or the output of unweighted_moments(image). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dict with entries for [rsqr, e1, e2] </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ac81fa65e66cb701e8bb4bbca3ec2044a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.utilities.__str__ = <a class="el" href="namespacegalsim_1_1utilities.html#a926d8736a654f57a88f244cb5c31fffe">__repr__</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

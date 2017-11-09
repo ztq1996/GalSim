@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,6 +133,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82aa662ab581d4425b1a10a6b3995e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b83feed574790d09c6a6a170c46ef1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table2_d.html#a4b83feed574790d09c6a6a170c46ef1f">interpManyMesh</a> (const A *xvec, const A *yvec, V *valvec, int Nx, int Ny) const </td></tr>
 <tr class="separator:a4b83feed574790d09c6a6a170c46ef1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28808aea0269b6e3b56b746a357cc5d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table2_d.html#a28808aea0269b6e3b56b746a357cc5d4">gradient</a> (const A x, const A y, V &amp;dfdxvec, V &amp;dfdyvec) const </td></tr>
+<tr class="memdesc:a28808aea0269b6e3b56b746a357cc5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate df/dx, df/dy at a single location.  <a href="#a28808aea0269b6e3b56b746a357cc5d4">More...</a><br/></td></tr>
+<tr class="separator:a28808aea0269b6e3b56b746a357cc5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7367e9fb5af3ada7ac801184d39b37b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table2_d.html#a7367e9fb5af3ada7ac801184d39b37b5">gradientMany</a> (const A *xvec, const A *yvec, V *dfdxvec, V *dfdyvec, int N) const </td></tr>
+<tr class="memdesc:a7367e9fb5af3ada7ac801184d39b37b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate many df/dx and df/dy values.  <a href="#a7367e9fb5af3ada7ac801184d39b37b5">More...</a><br/></td></tr>
+<tr class="separator:a7367e9fb5af3ada7ac801184d39b37b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4adb456fb280578ff50f5a16b48d45c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; A &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table2_d.html#ad4adb456fb280578ff50f5a16b48d45c">getXArgs</a> () const </td></tr>
 <tr class="separator:ad4adb456fb280578ff50f5a16b48d45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26c76f7524d571988d7fb07ebbfe71d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; A &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1_table2_d.html#ad26c76f7524d571988d7fb07ebbfe71d">getYArgs</a> () const </td></tr>
@@ -333,6 +339,96 @@ template&lt;class V, class A&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a28808aea0269b6e3b56b746a357cc5d4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V, class A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_table2_d.html">galsim::Table2D</a>&lt; V, A &gt;::gradient </td>
+          <td>(</td>
+          <td class="paramtype">const A&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const A&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V &amp;&#160;</td>
+          <td class="paramname"><em>dfdxvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V &amp;&#160;</td>
+          <td class="paramname"><em>dfdyvec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimate df/dx, df/dy at a single location. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7367e9fb5af3ada7ac801184d39b37b5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V, class A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgalsim_1_1_table2_d.html">galsim::Table2D</a>&lt; V, A &gt;::gradientMany </td>
+          <td>(</td>
+          <td class="paramtype">const A *&#160;</td>
+          <td class="paramname"><em>xvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const A *&#160;</td>
+          <td class="paramname"><em>yvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V *&#160;</td>
+          <td class="paramname"><em>dfdxvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V *&#160;</td>
+          <td class="paramname"><em>dfdyvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimate many df/dx and df/dy values. </p>
 
 </div>
 </div>

@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -131,7 +131,7 @@ Public Attributes</h2></td></tr>
 <p>This integrator will evaluate the integrand only at the wavelengths in <code>bandpass.wave_list</code>. See <a class="el" href="classgalsim_1_1integ_1_1_continuous_integrator.html" title="Create a chromatic surface brightness profile integrator, which will integrate over wavelength using ...">ContinuousIntegrator</a> for an integrator that evaluates the integrand at a given number of points equally spaced apart.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rule</td><td>Which integration rule to apply to the wavelength and monochromatic surface brightness samples. Options include: <a class="el" href="namespacegalsim_1_1integ.html#ada2fe904b7548bfefd61394ea06fde93" title="Midpoint rule for integration. ">galsim.integ.midpt</a> &ndash; Use the midpoint integration rule numpy.trapz &ndash; Use the trapezoidal integration rule </td></tr>
+    <tr><td class="paramname">rule</td><td>Which integration rule to apply to the wavelength and monochromatic surface brightness samples. Options include: <a class="el" href="namespacegalsim_1_1integ.html#a97c7473a31f898a7de884bb511f5f8cd" title="Midpoint rule for integration. ">galsim.integ.midptRule</a> &ndash; Use the midpoint integration rule <a class="el" href="namespacegalsim_1_1integ.html#ad7d1f00db8a7acc73f6c382207c9de7b" title="Trapezoidal rule for integration. ">galsim.integ.trapzRule</a> &ndash; Use the trapezoidal integration rule </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,7 +198,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>drawImageKwargs</em>&#160;</td>
+          <td class="paramname"><em>drawImageKwargs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>doK</em> = <code>False</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,7 +223,8 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">evaluateAtWavelength</td><td>Function that returns a monochromatic surface brightness profile as a function of wavelength. </td></tr>
     <tr><td class="paramname">bandpass</td><td>Bandpass object representing the filter being imaged through. </td></tr>
     <tr><td class="paramname">image</td><td>Image used to set size and scale of output </td></tr>
-    <tr><td class="paramname">drawImageKwargs</td><td>dict with other kwargs to send to drawImage function.</td></tr>
+    <tr><td class="paramname">drawImageKwargs</td><td>dict with other kwargs to send to drawImage function. </td></tr>
+    <tr><td class="paramname">doK</td><td>Integrate up results of drawKImage instead of results of drawImage. [default: False]</td></tr>
   </table>
   </dd>
 </dl>

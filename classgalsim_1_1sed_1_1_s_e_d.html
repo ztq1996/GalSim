@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Simple <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> object to represent the spectral energy distributions of stars and galaxies.  
+<p>Object to represent the spectral energy distributions of stars and galaxies.  
  <a href="classgalsim_1_1sed_1_1_s_e_d.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for galsim.sed.SED:</div>
@@ -113,8 +113,16 @@ Inheritance diagram for galsim.sed.SED:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ada1e8ef6de244f3aa82586b9ca25cad1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ada1e8ef6de244f3aa82586b9ca25cad1">__init__</a></td></tr>
 <tr class="separator:ada1e8ef6de244f3aa82586b9ca25cad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0b9e1533cd15a21dc5c605a8379b82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#aad0b9e1533cd15a21dc5c605a8379b82">check_spectral</a></td></tr>
+<tr class="memdesc:aad0b9e1533cd15a21dc5c605a8379b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return boolean indicating if <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> has units compatible with a spectral density.  <a href="#aad0b9e1533cd15a21dc5c605a8379b82">More...</a><br/></td></tr>
+<tr class="separator:aad0b9e1533cd15a21dc5c605a8379b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb9d4f98d4a8c0ada3b7f4aafa5f515"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#aebb9d4f98d4a8c0ada3b7f4aafa5f515">check_dimensionless</a></td></tr>
+<tr class="memdesc:aebb9d4f98d4a8c0ada3b7f4aafa5f515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return boolean indicating if <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is dimensionless.  <a href="#aebb9d4f98d4a8c0ada3b7f4aafa5f515">More...</a><br/></td></tr>
+<tr class="separator:aebb9d4f98d4a8c0ada3b7f4aafa5f515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee36a1f9a8a28f9bbcf92adafa9df4b9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#aee36a1f9a8a28f9bbcf92adafa9df4b9">dimensionless</a></td></tr>
+<tr class="separator:aee36a1f9a8a28f9bbcf92adafa9df4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae346d86e8b9dce5cd09a30a256a2f993"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ae346d86e8b9dce5cd09a30a256a2f993">__call__</a></td></tr>
-<tr class="memdesc:ae346d86e8b9dce5cd09a30a256a2f993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return photon density at wavelength <code>wave</code>.  <a href="#ae346d86e8b9dce5cd09a30a256a2f993">More...</a><br/></td></tr>
+<tr class="memdesc:ae346d86e8b9dce5cd09a30a256a2f993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return photon flux density or dimensionless normalization at wavelength <code>wave</code>.  <a href="#ae346d86e8b9dce5cd09a30a256a2f993">More...</a><br/></td></tr>
 <tr class="separator:ae346d86e8b9dce5cd09a30a256a2f993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac53f1762c36aeeb6cbbeee79fbe4cf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a4ac53f1762c36aeeb6cbbeee79fbe4cf">__mul__</a></td></tr>
 <tr class="separator:a4ac53f1762c36aeeb6cbbeee79fbe4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,28 +136,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae39733e5ef38728e1cb89a8d6f8c9628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ce91b68db82ee79ff634636b73530bb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a2ce91b68db82ee79ff634636b73530bb">__sub__</a></td></tr>
 <tr class="separator:a2ce91b68db82ee79ff634636b73530bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df6e4e24797ee9c06eb59b94676b99d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a1df6e4e24797ee9c06eb59b94676b99d">copy</a></td></tr>
-<tr class="separator:a1df6e4e24797ee9c06eb59b94676b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd38352d0cd9327ba255b8f327562992"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#abd38352d0cd9327ba255b8f327562992">withFluxDensity</a></td></tr>
-<tr class="memdesc:abd38352d0cd9327ba255b8f327562992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux density set to <code>target_flux_density</code> at wavelength <code>wavelength</code>.  <a href="#abd38352d0cd9327ba255b8f327562992">More...</a><br/></td></tr>
+<tr class="memdesc:abd38352d0cd9327ba255b8f327562992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux density set to <code>target_flux_density</code> at wavelength <code>wavelength</code>.  <a href="#abd38352d0cd9327ba255b8f327562992">More...</a><br/></td></tr>
 <tr class="separator:abd38352d0cd9327ba255b8f327562992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33613fdc3b0f99534971e9651ea2e659"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a33613fdc3b0f99534971e9651ea2e659">withFlux</a></td></tr>
-<tr class="memdesc:a33613fdc3b0f99534971e9651ea2e659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux through the Bandpass <code>bandpass</code> set to <code>target_flux</code>.  <a href="#a33613fdc3b0f99534971e9651ea2e659">More...</a><br/></td></tr>
+<tr class="memdesc:a33613fdc3b0f99534971e9651ea2e659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux through the Bandpass <code>bandpass</code> set to <code>target_flux</code>.  <a href="#a33613fdc3b0f99534971e9651ea2e659">More...</a><br/></td></tr>
 <tr class="separator:a33613fdc3b0f99534971e9651ea2e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a880456ae714010ab6fd604837b0b08c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a880456ae714010ab6fd604837b0b08c5">withMagnitude</a></td></tr>
-<tr class="memdesc:a880456ae714010ab6fd604837b0b08c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with magnitude through <code>bandpass</code> set to <code>target_magnitude</code>.  <a href="#a880456ae714010ab6fd604837b0b08c5">More...</a><br/></td></tr>
+<tr class="memdesc:a880456ae714010ab6fd604837b0b08c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with magnitude through <code>bandpass</code> set to <code>target_magnitude</code>.  <a href="#a880456ae714010ab6fd604837b0b08c5">More...</a><br/></td></tr>
 <tr class="separator:a880456ae714010ab6fd604837b0b08c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d49d109ff539f61ab022e1be6391b12"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a9d49d109ff539f61ab022e1be6391b12">atRedshift</a></td></tr>
-<tr class="memdesc:a9d49d109ff539f61ab022e1be6391b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with redshifted wavelengths.  <a href="#a9d49d109ff539f61ab022e1be6391b12">More...</a><br/></td></tr>
+<tr class="memdesc:a9d49d109ff539f61ab022e1be6391b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with redshifted wavelengths.  <a href="#a9d49d109ff539f61ab022e1be6391b12">More...</a><br/></td></tr>
 <tr class="separator:a9d49d109ff539f61ab022e1be6391b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ab20b0c861f5b6a6604fe838b83a4d6cc">calculateFlux</a></td></tr>
-<tr class="memdesc:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a Bandpass <code>bandpass</code>.  <a href="#ab20b0c861f5b6a6604fe838b83a4d6cc">More...</a><br/></td></tr>
+<tr class="memdesc:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the flux (photons/cm^2/s) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> through the bandpass.  <a href="#ab20b0c861f5b6a6604fe838b83a4d6cc">More...</a><br/></td></tr>
 <tr class="separator:ab20b0c861f5b6a6604fe838b83a4d6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487693ba2178da5345f265b3193707d6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a487693ba2178da5345f265b3193707d6">calculateMagnitude</a></td></tr>
-<tr class="memdesc:a487693ba2178da5345f265b3193707d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> magnitude through a Bandpass <code>bandpass</code>.  <a href="#a487693ba2178da5345f265b3193707d6">More...</a><br/></td></tr>
+<tr class="memdesc:a487693ba2178da5345f265b3193707d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> magnitude through a Bandpass <code>bandpass</code>.  <a href="#a487693ba2178da5345f265b3193707d6">More...</a><br/></td></tr>
 <tr class="separator:a487693ba2178da5345f265b3193707d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e67cea06205ba94ee75f370a86af46"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a24e67cea06205ba94ee75f370a86af46">thin</a></td></tr>
-<tr class="memdesc:a24e67cea06205ba94ee75f370a86af46"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>.  <a href="#a24e67cea06205ba94ee75f370a86af46">More...</a><br/></td></tr>
+<tr class="memdesc:a24e67cea06205ba94ee75f370a86af46"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>.  <a href="#a24e67cea06205ba94ee75f370a86af46">More...</a><br/></td></tr>
 <tr class="separator:a24e67cea06205ba94ee75f370a86af46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b66d8de07826c2c95db59b34d9f0309"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a9b66d8de07826c2c95db59b34d9f0309">calculateDCRMomentShifts</a></td></tr>
 <tr class="memdesc:a9b66d8de07826c2c95db59b34d9f0309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates shifts in first and second moments of PSF due to differential chromatic refraction (DCR).  <a href="#a9b66d8de07826c2c95db59b34d9f0309">More...</a><br/></td></tr>
@@ -157,6 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15030823cb571d5e0182950837948858"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a15030823cb571d5e0182950837948858">calculateSeeingMomentRatio</a></td></tr>
 <tr class="memdesc:a15030823cb571d5e0182950837948858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the relative size of a PSF compared to the monochromatic PSF size at wavelength <code>base_wavelength</code>.  <a href="#a15030823cb571d5e0182950837948858">More...</a><br/></td></tr>
 <tr class="separator:a15030823cb571d5e0182950837948858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9e74e652b7f2bc56818c0e13165b3a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a5d9e74e652b7f2bc56818c0e13165b3a">sampleWavelength</a></td></tr>
+<tr class="memdesc:a5d9e74e652b7f2bc56818c0e13165b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a number of random wavelength values from the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>, possibly as observed through a bandpass.  <a href="#a5d9e74e652b7f2bc56818c0e13165b3a">More...</a><br/></td></tr>
+<tr class="separator:a5d9e74e652b7f2bc56818c0e13165b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796a558a9a3b737337df053f53f951f5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a796a558a9a3b737337df053f53f951f5">__eq__</a></td></tr>
 <tr class="separator:a796a558a9a3b737337df053f53f951f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24de3a599789bae18a97415f4b603be6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a24de3a599789bae18a97415f4b603be6">__ne__</a></td></tr>
@@ -178,46 +187,56 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1bbb2489673901b21d1eeb561dc8b611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8b06fcf84ee96ef192415fd7d77d00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a5a8b06fcf84ee96ef192415fd7d77d00">flux_type</a></td></tr>
 <tr class="separator:a5a8b06fcf84ee96ef192415fd7d77d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28b13926ed04c9bada317dcb148ee3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#aa28b13926ed04c9bada317dcb148ee3c">spectral</a></td></tr>
+<tr class="separator:aa28b13926ed04c9bada317dcb148ee3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fa5e810412199b8a7c245b5d18485bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a8fa5e810412199b8a7c245b5d18485bb">redshift</a></td></tr>
 <tr class="separator:a8fa5e810412199b8a7c245b5d18485bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b68d5900c3d13f653c942cdbc861d54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a5b68d5900c3d13f653c942cdbc861d54">wave_factor</a></td></tr>
-<tr class="separator:a5b68d5900c3d13f653c942cdbc861d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0b24cae7c310957efa1918e324bf08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a8f0b24cae7c310957efa1918e324bf08">fast</a></td></tr>
+<tr class="separator:a8f0b24cae7c310957efa1918e324bf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5cfaead87f4f7ff5502d003a142f9ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#aa5cfaead87f4f7ff5502d003a142f9ec">wave_list</a></td></tr>
 <tr class="separator:aa5cfaead87f4f7ff5502d003a142f9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2732fd6ef7765a9e51a6ebc757c02d79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a2732fd6ef7765a9e51a6ebc757c02d79">blue_limit</a></td></tr>
 <tr class="separator:a2732fd6ef7765a9e51a6ebc757c02d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8140a8b856d048df25f8f5f80496edf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a8140a8b856d048df25f8f5f80496edf5">red_limit</a></td></tr>
 <tr class="separator:a8140a8b856d048df25f8f5f80496edf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c2bf16e5495ee2c2f57379ab1063f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#a31c2bf16e5495ee2c2f57379ab1063f5">deviate</a></td></tr>
+<tr class="separator:a31c2bf16e5495ee2c2f57379ab1063f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> object to represent the spectral energy distributions of stars and galaxies. </p>
-<p>SEDs are callable, returning the flux in photons/nm as a function of wavelength in nm.</p>
-<p>SEDs are immutable; all transformative <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> methods return <em>new</em> SEDs, and leave their originating SEDs unaltered.</p>
-<p>SEDs have <code>blue_limit</code> and <code>red_limit</code> attributes, which may be set to <code>None</code> in the case that the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is defined by a python function or lambda <code>eval</code> string. SEDs are considered undefined outside of this range, and <b>call</b> will raise an exception if a flux is requested outside of this range.</p>
-<p>SEDs may be multiplied by scalars or scalar functions of wavelength.</p>
-<p>SEDs may be added together if they are at the same redshift. The resulting <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> will only be defined on the wavelength region where both of the operand SEDs are defined. <code>blue_limit</code> and <code>red_limit</code> will be reset accordingly.</p>
+<div class="textblock"><p>Object to represent the spectral energy distributions of stars and galaxies. </p>
+<p>SEDs are callable, usually returning the flux density in photons/nm/cm^2/s as a function of wavelength, though SEDs are also used by GalSim to track dimensionless wavelength-dependent normalizations, and may thus also return dimensionless values. By default, the above wavelength used by <b>call</b> is nanometers, but it's possible to use other units via the astropy.units module (at least, if the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> keyword argument <code>fast=False</code>, see below). For instance, </p>
+<pre class="fragment">&gt;&gt;&gt; sed = galsim.SED(...)
+&gt;&gt;&gt; from astropy import units as u
+&gt;&gt;&gt; assert sed(500) == sed(5000 * u.AA)  # 500 nm == 5000 Angstroms
+</pre><p>The python type of the return value depends on the type of the input wavelength(s). A scalar input wavelength yields a scalar flux density, a tuple yields a tuple, a list yields a list, and a numpy.ndarray yields a numpy.ndarray. A scalar astropy.units.Quantity yields a python scalar, and a vector astropy.units.Quantity yields a numpy.ndarray.</p>
+<p>SEDs are immutable; all transformative <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> methods return <em>new</em> SEDs, and leave their originating SEDs unaltered.</p>
+<p>SEDs have <code>blue_limit</code> and <code>red_limit</code> attributes, which indicate the range over which the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is defined. An exception will be raised if the flux density or normalization is requested outside of this range. Note that <code>blue_limit</code> and <code>red_limit</code> are always in nanometers and in the observed frame when <code>redshift != 0</code>.</p>
+<p>SEDs may be multiplied by scalars or scalar functions of wavelength. In particular, an <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> multiplied by a <code>Bandpass</code> will yield the appropriately filtered <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. Two SEDs may be multiplied together if at least one of them represents a dimensionless normalization.</p>
+<p>SEDs may be added together if they are at the same redshift. The resulting <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> will only be defined on the wavelength region where both of the operand SEDs are defined. <code>blue_limit</code> and <code>red_limit</code> will be reset accordingly.</p>
 <p>The input parameter, <code>spec</code>, may be one of several possible forms:</p>
 <ol type="1">
 <li>a regular python function (or an object that acts like a function)</li>
 <li>a LookupTable</li>
 <li>a file from which a LookupTable can be read in</li>
-<li>a string which can be evaluated into a function of <code>wave</code> via `eval('lambda wave : '+spec) e.g. spec = '0.8 + 0.2 * (wave-800)`</li>
+<li>a string which can be evaluated into a function of <code>wave</code> via eval('lambda wave : '+spec), e.g., spec = '0.8 + 0.2 * (wave-800)'</li>
+<li>a python scalar (only possible for dimensionless SEDs)</li>
 </ol>
-<p>The argument of <code>spec</code> will be the wavelength in either nanometers or Angstroms depending on the value of <code>wave_type</code>. (Note we use <code>wave</code> rather than <code>lambda</code>, since <code>lambda</code> is a python reserved word.) The output should be the flux density at that wavelength, defined according to one of the <code>flux_type</code> options below.</p>
-<p>The argument <code>wave_type</code> specifies the units to assume for wavelength and must be one of 'nm', 'nanometer', 'nanometers', 'A', 'Ang', 'Angstrom', or 'Angstroms'. Text case here is unimportant. If these wavelength options are insufficient, please submit an issue to the GalSim github issues page: <a href="https://github.com/GalSim-developers/GalSim/issues">https://github.com/GalSim-developers/GalSim/issues</a></p>
-<p>The argument <code>flux_type</code> specifies the type of spectral density and must be one of:</p>
+<p>The argument of <code>spec</code> should be the wavelength in units specified by <code>wave_type</code>, which should be an instance of <code>astropy.units.Unit</code> of equivalency class <code>astropy.units.spectral</code>, or one of the case-insensitive aliases 'nm', 'nanometer', 'nanometers', 'A', 'Ang', 'Angstrom', or 'Angstroms'. Note that <code>astropy.units.spectral</code> includes not only units with dimensions of length, but also frequency, energy, or wavenumber.</p>
+<p>The return value of <code>spec</code> should be a spectral density with units specified by <code>flux_type</code>, which should be an instance of <code>astropy.units.Unit</code> of equivalency class <code>astropy.units.spectral_density</code>, or one of the case-insensitive aliases:</p>
 <ol type="1">
-<li>'flambda': <code>spec</code> is proportional to erg/nm or erg/Angstrom (according to wave_type)</li>
-<li>'fnu': <code>spec</code> is proportional to erg/Hz</li>
-<li>'fphotons': <code>spec</code> is proportional to photons/nm or photons/Angstrom (according to wave_type)</li>
+<li>'flambda': erg/wave_type/cm^2/s, where wave_type is as above.</li>
+<li>'fnu': erg/Hz/cm^2/s</li>
+<li>'fphotons': photons/wave_type/cm^2/s, where wave_type is as above.</li>
+<li>'1': dimensionless Note that the <code>astropy.units.spectral_density</code> class includes units with dimensions of [energy/time/area/unit-wavelength], [energy/time/area/unit-frequency], [photons/time/area/unit-wavelength], and so on.</li>
 </ol>
-<p>Note that the <code>wave_type</code> and <code>flux_type</code> parameters do not propagate into other methods of <code><a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a></code>. For instance, <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html#ae346d86e8b9dce5cd09a30a256a2f993" title="Return photon density at wavelength wave. ">SED.__call__</a> assumes its input argument is in nanometers and returns flux proportional to photons/nm.</p>
+<p>Finally, the optional <code>fast</code> keyword option is used to specify when unit and dimension changes are executed, particularly for SEDs specified by a LookupTable. If <code>fast=True</code>, the default, then the input units/dimensions may be converted to an internal working unit before interpolation in wavelength is performed. Alternatively, <code>fast=False</code> implies that interpolation should take place in the native units of the input <code>spec</code>, and subsequently flux density converted to photons/cm^2/s/nm afterwards. Generally, the former option is faster, but may be less accurate since interpolation and dimensionality conversion do not commute. One consequence of using <code>fast=True</code> is that <b>call</b> can not accept <code>astropy.units.Quantity</code>s in this case.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spec</td><td>Function defining the z=0 spectrum at each wavelength. See above for valid options for this parameter. </td></tr>
-    <tr><td class="paramname">wave_type</td><td>String specifying units for wavelength input to <code>spec</code>. </td></tr>
-    <tr><td class="paramname">flux_type</td><td>String specifying what type of spectral density <code>spec</code> represents. See above for valid options for this parameter. </td></tr>
+    <tr><td class="paramname">wave_type</td><td>String or astropy.unit specifying units for wavelength input to <code>spec</code>. </td></tr>
+    <tr><td class="paramname">flux_type</td><td>String or astropy.unit specifying what type of spectral density or dimensionless normalization <code>spec</code> represents. See above for valid options for this parameter. </td></tr>
     <tr><td class="paramname">redshift</td><td>Optionally shift the spectrum to the given redshift. [default: 0] </td></tr>
+    <tr><td class="paramname">fast</td><td>Convert units on initialization instead of on <b>call</b>. [default: True] </td></tr>
   </table>
   </dd>
 </dl>
@@ -260,13 +279,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>_blue_limit</em> = <code>None</code>, </td>
+          <td class="paramname"><em>fast</em> = <code>True</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>_red_limit</em> = <code>None</code>, </td>
+          <td class="paramname"><em>_blue_limit</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_red_limit</em> = <code>float('inf')</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -278,7 +303,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>_spec</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>_spectral</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -341,15 +366,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return photon density at wavelength <code>wave</code>. </p>
-<p>Note that outside of the wavelength range defined by the <code>blue_limit</code> and <code>red_limit</code> attributes, the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is considered undefined, and this method will raise an exception if a flux at a wavelength outside the defined range is requested.</p>
+<p>Return photon flux density or dimensionless normalization at wavelength <code>wave</code>. </p>
+<p>Note that outside of the wavelength range defined by the <code>blue_limit</code> and <code>red_limit</code> attributes, the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is considered undefined, and this method will raise an exception if a wavelength outside the defined range is passed as an argument.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wave</td><td>Wavelength in nanometers at which to evaluate the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>.</td></tr>
+    <tr><td class="paramname">wave</td><td>Wavelength in nanometers at which to evaluate the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the photon density in units of photons/nm </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>photon flux density in units of photons/nm/cm^2/s if self.spectral, or dimensionless normalization if self.dimensionless. </dd></dl>
 
 </div>
 </div>
@@ -649,14 +674,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with redshifted wavelengths. </p>
+<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with redshifted wavelengths. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">redshift</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the redshifted <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the redshifted <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -735,10 +760,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> flux through a Bandpass <code>bandpass</code>. </p>
+<p>Return the flux (photons/cm^2/s) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> through the bandpass. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None to compute the bolometric flux. For the bolometric flux the integration limits will be set to (0, infinity) unless overridden by non-<code>None</code> <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> attributes <code>blue_limit</code> or <code>red_limit</code>. Note that SEDs defined using <code>LookupTable</code>s automatically have <code>blue_limit</code> and <code>red_limit</code> set.</td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None to compute the bolometric flux. For the bolometric flux the integration limits will be set to (0, infinity), which implies that the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> needs to be evaluable over this entire range.</td></tr>
   </table>
   </dd>
 </dl>
@@ -770,11 +795,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> magnitude through a Bandpass <code>bandpass</code>. </p>
+<p>Return the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> magnitude through a Bandpass <code>bandpass</code>. </p>
 <p>Note that this requires <code>bandpass</code> to have been assigned a zeropoint using <code>Bandpass.withZeropoint()</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None to compute the bolometric magnitude. For the bolometric magnitude the integration limits will be set to (0, infinity) unless overridden by non-<code>None</code> <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> attributes <code>blue_limit</code> or <code>red_limit</code>. Note that SEDs defined using <code>LookupTable</code>s automatically have <code>blue_limit</code> and <code>red_limit</code> set.</td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None to compute the bolometric magnitude. For the bolometric magnitude the integration limits will be set to (0, infinity), which implies that the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> needs to be evaluable over this entire range.</td></tr>
   </table>
   </dd>
 </dl>
@@ -831,12 +856,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1df6e4e24797ee9c06eb59b94676b99d"></a>
+<a class="anchor" id="aebb9d4f98d4a8c0ada3b7f4aafa5f515"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def galsim.sed.SED.copy </td>
+          <td class="memname">def galsim.sed.SED.check_dimensionless </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -844,6 +869,97 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return boolean indicating if <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is dimensionless. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad0b9e1533cd15a21dc5c605a8379b82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.sed.SED.check_spectral </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return boolean indicating if <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> has units compatible with a spectral density. </p>
+
+</div>
+</div>
+<a class="anchor" id="aee36a1f9a8a28f9bbcf92adafa9df4b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.sed.SED.dimensionless </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d9e74e652b7f2bc56818c0e13165b3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def galsim.sed.SED.sampleWavelength </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nphotons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bandpass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rng</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>npoints</em> = <code>256</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sample a number of random wavelength values from the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>, possibly as observed through a bandpass. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nphotons</td><td>Number of samples (photons) to randomly draw. </td></tr>
+    <tr><td class="paramname">bandpass</td><td>A Bandpass object representing a filter, or None to sample over the full <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> wavelength range. </td></tr>
+    <tr><td class="paramname">rng</td><td>If provided, a random number generator that is any kind of <a class="el" href="classgalsim_1_1_base_deviate.html" title="Base class for all the various Deviates. ">BaseDeviate</a> object. If <code>rng</code> is None, one will be automatically created, using the time as a seed. [default: None] </td></tr>
+    <tr><td class="paramname">npoints</td><td>Number of points DistDeviate should use for its internal interpolation tables. [default: 256] </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -889,17 +1005,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>. </p>
+<p>If the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> was initialized with a LookupTable or from a file (which internally creates a LookupTable), then remove tabulated values while keeping the integral over the set of tabulated values still accurate to <code>rel_err</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> [default: 1.e-4] </td></tr>
+    <tr><td class="paramname">rel_err</td><td>The relative error allowed in the integral over the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> [default: 1.e-4] </td></tr>
     <tr><td class="paramname">trim_zeros</td><td>Remove redundant leading and trailing points where f=0? (The last leading point with f=0 and the first trailing point with f=0 will be retained). Note that if both trim_leading_zeros and preserve_range are True, then the only the range of <code>x</code> <em>after</em> zero trimming is preserved. [default: True] </td></tr>
-    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: True] </td></tr>
+    <tr><td class="paramname">preserve_range</td><td>Should the original range (<code>blue_limit</code> and <code>red_limit</code>) of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> be preserved? (True) Or should the ends be trimmed to include only the region where the integral is significant? (False) [default: True] </td></tr>
     <tr><td class="paramname">fast_search</td><td>If set to True, then the underlying algorithm will use a relatively fast O(N) algorithm to select points to include in the thinned approximation. If set to False, then a slower O(N^2) algorithm will be used. We have found that the slower algorithm tends to yield a thinned representation that retains fewer samples while still meeting the relative error requirement. [default: True]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the thinned <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the thinned <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -933,16 +1049,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux through the Bandpass <code>bandpass</code> set to <code>target_flux</code>. </p>
-<p>Note that this normalization is <em>relative</em> to the <code>flux</code> attribute of the chromaticized GSObject.</p>
+<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux through the Bandpass <code>bandpass</code> set to <code>target_flux</code>. </p>
+<p>See ChromaticObject docstring for information about how <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> normalization affects ChromaticObject normalization.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_flux</td><td>The desired <em>relative</em> flux normalization of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
+    <tr><td class="paramname">target_flux</td><td>The desired flux normalization of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
     <tr><td class="paramname">bandpass</td><td>A Bandpass object defining a filter bandpass.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -976,16 +1092,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux density set to <code>target_flux_density</code> at wavelength <code>wavelength</code>. </p>
-<p>Note that this normalization is <em>relative</em> to the <code>flux</code> attribute of the chromaticized GSObject.</p>
+<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with flux density set to <code>target_flux_density</code> at wavelength <code>wavelength</code>. </p>
+<p>See ChromaticObject docstring for information about how <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> normalization affects ChromaticObject normalization.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_flux_density</td><td>The target <em>relative</em> normalization in photons / nm. </td></tr>
-    <tr><td class="paramname">wavelength</td><td>The wavelength, in nm, at which flux density will be set.</td></tr>
+    <tr><td class="paramname">target_flux_density</td><td>The target normalization in photons/nm/cm^2/s. </td></tr>
+    <tr><td class="paramname">wavelength</td><td>The wavelength, in nm, at which the flux density will be set.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -1019,16 +1135,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with magnitude through <code>bandpass</code> set to <code>target_magnitude</code>. </p>
-<p>Note that this requires <code>bandpass</code> to have been assigned a zeropoint using <code>Bandpass.withZeropoint()</code>. When the returned <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> is multiplied by a GSObject with flux=1, the resulting ChromaticObject will have magnitude <code>target_magnitude</code> when drawn through <code>bandpass</code>. Note that the total normalization depends both on the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a> and the GSObject. See the galsim.Chromatic docstring for more details on normalization conventions.</p>
+<p>Return a new <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> with magnitude through <code>bandpass</code> set to <code>target_magnitude</code>. </p>
+<p>Note that this requires <code>bandpass</code> to have been assigned a zeropoint using <code>Bandpass.withZeropoint()</code>. See ChromaticObject docstring for information about how <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a> normalization affects ChromaticObject normalization.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_magnitude</td><td>The desired <em>relative</em> magnitude of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
+    <tr><td class="paramname">target_magnitude</td><td>The desired magnitude of the <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </td></tr>
     <tr><td class="paramname">bandpass</td><td>A Bandpass object defining a filter bandpass.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Simple SED object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new normalized <a class="el" href="classgalsim_1_1sed_1_1_s_e_d.html" title="Object to represent the spectral energy distributions of stars and galaxies. ">SED</a>. </dd></dl>
 
 </div>
 </div>
@@ -1039,6 +1155,30 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">galsim.sed.SED.blue_limit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a31c2bf16e5495ee2c2f57379ab1063f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.sed.SED.deviate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f0b24cae7c310957efa1918e324bf08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">galsim.sed.SED.fast</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1081,12 +1221,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5b68d5900c3d13f653c942cdbc861d54"></a>
+<a class="anchor" id="aa28b13926ed04c9bada317dcb148ee3c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">galsim.sed.SED.wave_factor</td>
+          <td class="memname">galsim.sed.SED.spectral</td>
         </tr>
       </table>
 </div><div class="memdoc">

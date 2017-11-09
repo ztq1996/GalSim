@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -440,7 +440,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>obj_num</em>&#160;</td>
+          <td class="paramname"><em>obj_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -465,6 +471,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">config</td><td>The configuration dict. </td></tr>
     <tr><td class="paramname">image_num</td><td>The current image number. </td></tr>
     <tr><td class="paramname">obj_num</td><td>The first object number in the image. </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -491,7 +498,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ysize</em>&#160;</td>
+          <td class="paramname"><em>ysize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -516,6 +529,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">config</td><td>The configuration dict. </td></tr>
     <tr><td class="paramname">xsize</td><td>The size of the image in the x-dimension. </td></tr>
     <tr><td class="paramname">ysize</td><td>The size of the image in the y-dimension. </td></tr>
+    <tr><td class="paramname">logger</td><td>If given, a logger object to log progress. [default: None] </td></tr>
   </table>
   </dd>
 </dl>
@@ -532,9 +546,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1config_1_1image.html">    1</a></span>&#160;= [ <span class="stringliteral">&#39;random_seed&#39;</span>, <span class="stringliteral">&#39;draw_method&#39;</span>, <span class="stringliteral">&#39;noise&#39;</span>, <span class="stringliteral">&#39;pixel_scale&#39;</span>, <span class="stringliteral">&#39;wcs&#39;</span>,</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                 <span class="stringliteral">&#39;sky_level&#39;</span>, <span class="stringliteral">&#39;sky_level_pixel&#39;</span>, <span class="stringliteral">&#39;index_convention&#39;</span>, <span class="stringliteral">&#39;nproc&#39;</span>,</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                 <span class="stringliteral">&#39;retry_failures&#39;</span>, <span class="stringliteral">&#39;n_photons&#39;</span>, <span class="stringliteral">&#39;wmult&#39;</span>, <span class="stringliteral">&#39;offset&#39;</span>, <span class="stringliteral">&#39;gsparams&#39;</span> ]</div>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacegalsim_1_1config_1_1image.html">    1</a></span>&#160;= [ <span class="stringliteral">&#39;random_seed&#39;</span>, <span class="stringliteral">&#39;noise&#39;</span>, <span class="stringliteral">&#39;pixel_scale&#39;</span>, <span class="stringliteral">&#39;wcs&#39;</span>, <span class="stringliteral">&#39;sky_level&#39;</span>, <span class="stringliteral">&#39;sky_level_pixel&#39;</span>,</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                 <span class="stringliteral">&#39;index_convention&#39;</span>, <span class="stringliteral">&#39;nproc&#39;</span>]</div>
 </div><!-- fragment -->
 </div>
 </div>

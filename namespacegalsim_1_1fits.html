@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -217,24 +217,24 @@ Variables</h2></td></tr>
 <p>Now the primary read functions. </p>
 <p>We have: image = read(...) image_list = readMulti(...) image_list = readCube(...) hdu, hdu_list, fin = readFile(...) Construct an Image from a FITS file or pyfits HDUList. </p>
 <pre class="fragment">The normal usage for this function is to read a fits file and return the image contained
-therein, automatically decompressing it if necessary.  However, you may also pass it 
-an HDUList, in which case it will select the indicated hdu (with the `hdu` parameter) 
+therein, automatically decompressing it if necessary.  However, you may also pass it
+an HDUList, in which case it will select the indicated hdu (with the `hdu` parameter)
 from that.
 
 Not all FITS pixel types are supported (only those with C++ Image template instantiations:
-`short`, `int`, `float`, and `double`).  If the FITS header has GS_* keywords, these will be 
+`short`, `int`, `float`, and `double`).  If the FITS header has GS_* keywords, these will be
 used to initialize the bounding box and WCS.  If not, the bounding box will have `(xmin,ymin)`
 at `(1,1)` and the scale will be set to 1.0.
 
 This function is called as `im = galsim.fits.read(...)`
 
-@param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is 
+@param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is
                     required.]
-@param dir          Optionally a directory name can be provided if `file_name` does not 
+@param dir          Optionally a directory name can be provided if `file_name` does not
                     already include it. [default: None]
 @param hdu_list     Either a `pyfits.HDUList`, a `pyfits.PrimaryHDU`, or `pyfits.ImageHDU`.
                     In the former case, the `hdu` in the list will be selected.  In the latter
-                    two cases, the `hdu` parameter is ignored.  [Either `file_name` or 
+                    two cases, the `hdu` parameter is ignored.  [Either `file_name` or
                     `hdu_list` is required.]
 @param hdu          The number of the HDU to return.  [default: None, which means to return
                     either the primary or first extension as appropriate for the given
@@ -249,7 +249,7 @@ This function is called as `im = galsim.fits.read(...)`
                     - 'hcompress' = use hcompress decompression in tiles
                     - 'plio' = use plio decompression in tiles
                     - 'auto' = determine the decompression from the extension of the file name
-                               (requires `file_name` to be given).  
+                               (requires `file_name` to be given).
                                '*.fz' =&gt; 'rice'
                                '*.gz' =&gt; 'gzip'
                                '*.bz2' =&gt; 'bzip2'
@@ -433,9 +433,9 @@ This function is called as `im = galsim.fits.read(...)`
 <p>The normal usage for this function is to read a fits file and return a list of all the images contained therein, automatically decompressing them if necessary. However, you may also pass it an HDUList, in which case it will build the images from these directly.</p>
 <p>Not all FITS pixel types are supported (only those with C++ Image template instantiations: <code>short</code>, <code>int</code>, <code>float</code>, and <code>double</code>). If the FITS header has GS_* keywords, these will be used to initialize the bounding box and WCS. If not, the bounding box will have <code>(xmin,ymin)</code> at <code>(1,1)</code> and the scale will be set to 1.0.</p>
 <p>This function is called as <code>im = <a class="el" href="namespacegalsim_1_1fits.html#ae7aacb9f44faf9e487e83e12b9dd9067" title="Construct a list of Images from a FITS file or pyfits HDUList. ">galsim.fits.readMulti</a>(...)</code></p>
-<pre class="fragment"> @param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is 
+<pre class="fragment"> @param file_name    The name of the file to read in.  [Either `file_name` or `hdu_list` is
                      required.]
- @param dir          Optionally a directory name can be provided if `file_name` does not 
+ @param dir          Optionally a directory name can be provided if `file_name` does not
                      already include it. [default: None]
  @param hdu_list     A `pyfits.HDUList` from which to read the images.  [Either `file_name` or
                      `hdu_list` is required.]
@@ -448,7 +448,7 @@ This function is called as `im = galsim.fits.read(...)`
                      - 'hcompress' = use hcompress decompression in tiles
                      - 'plio' = use plio decompression in tiles
                      - 'auto' = determine the decompression from the extension of the file name
-                                (requires `file_name` to be given).  
+                                (requires `file_name` to be given).
                                 '*.fz' =&gt; 'rice'
                                 '*.gz' =&gt; 'gzip'
                                 '*.bz2' =&gt; 'bzip2'
@@ -513,20 +513,20 @@ function can be called directly as `galsim.fits.write(image, ...)`, with the ima
 argument, or as an image method: `image.write(...)`.
 
 @param image        The image to write to file.  Per the description of this method, it may be
-                    given explicitly via `galsim.fits.write(image, ...)` or the method may be 
+                    given explicitly via `galsim.fits.write(image, ...)` or the method may be
                     called directly as an image method, `image.write(...)`.  Note that if the
                     image has a 'header' attribute containing a FitsHeader, then the FitsHeader
                     is written to the header in the PrimaryHDU, followed by the WCS as usual.
-@param file_name    The name of the file to write to.  [Either `file_name` or `hdu_list` is 
+@param file_name    The name of the file to write to.  [Either `file_name` or `hdu_list` is
                     required.]
-@param dir          Optionally a directory name can be provided if `file_name` does not 
+@param dir          Optionally a directory name can be provided if `file_name` does not
                     already include it. [default: None]
-@param hdu_list     A pyfits HDUList.  If this is provided instead of `file_name`, then the 
-                    image is appended to the end of the HDUList as a new HDU. In that case, 
-                    the user is responsible for calling either `hdu_list.writeto(...)` or 
-                    `galsim.fits.writeFile(...)` afterwards.  [Either `file_name` or `hdu_list` 
+@param hdu_list     A pyfits HDUList.  If this is provided instead of `file_name`, then the
+                    image is appended to the end of the HDUList as a new HDU. In that case,
+                    the user is responsible for calling either `hdu_list.writeto(...)` or
+                    `galsim.fits.writeFile(...)` afterwards.  [Either `file_name` or `hdu_list`
                     is required.]
-@param clobber      Setting `clobber=True` when `file_name` is given will silently overwrite 
+@param clobber      Setting `clobber=True` when `file_name` is given will silently overwrite
                     existing files. [default: True]
 @param compression  Which compression scheme to use (if any).  Options are:
                     - None or 'none' = no compression

@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,9 +105,10 @@ Inheritance diagram for galsim.config.wcs.WCSBuilder:</div>
  <div class="center">
   <img src="classgalsim_1_1config_1_1wcs_1_1_w_c_s_builder.png" usemap="#galsim.config.wcs.WCSBuilder_map" alt=""/>
   <map id="galsim.config.wcs.WCSBuilder_map" name="galsim.config.wcs.WCSBuilder_map">
-<area href="classgalsim_1_1config_1_1wcs_1_1_simple_w_c_s_builder.html" title="A class for building simple WCS objects. " alt="galsim.config.wcs.SimpleWCSBuilder" shape="rect" coords="0,112,221,136"/>
-<area href="classgalsim_1_1config_1_1wcs_1_1_tan_w_c_s_builder.html" title="The TanWCS type needs special handling to get the kwargs, since the TanWCS function takes an AffineTr..." alt="galsim.config.wcs.TanWCSBuilder" shape="rect" coords="231,112,452,136"/>
-<area href="classgalsim_1_1config_1_1wcs_1_1_origin_w_c_s_builder.html" title="A specialization for WCS classes that use a different type depending on whether there is an origin or..." alt="galsim.config.wcs.OriginWCSBuilder" shape="rect" coords="0,168,221,192"/>
+<area href="classgalsim_1_1config_1_1wcs_1_1_list_w_c_s_builder.html" title="Select a wcs from a list. " alt="galsim.config.wcs.ListWCSBuilder" shape="rect" coords="0,112,221,136"/>
+<area href="classgalsim_1_1config_1_1wcs_1_1_simple_w_c_s_builder.html" title="A class for building simple WCS objects. " alt="galsim.config.wcs.SimpleWCSBuilder" shape="rect" coords="231,112,452,136"/>
+<area href="classgalsim_1_1config_1_1wcs_1_1_tan_w_c_s_builder.html" title="The TanWCS type needs special handling to get the kwargs, since the TanWCS function takes an AffineTr..." alt="galsim.config.wcs.TanWCSBuilder" shape="rect" coords="462,112,683,136"/>
+<area href="classgalsim_1_1config_1_1wcs_1_1_origin_w_c_s_builder.html" title="A specialization for WCS classes that use a different type depending on whether there is an origin or..." alt="galsim.config.wcs.OriginWCSBuilder" shape="rect" coords="231,168,452,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -141,7 +142,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>base</em>&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>logger</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -156,7 +163,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>The configuration dict for the wcs type. </td></tr>
-    <tr><td class="paramname">base</td><td>The base configuration dict.</td></tr>
+    <tr><td class="paramname">base</td><td>The base configuration dict. </td></tr>
+    <tr><td class="paramname">logger</td><td>If provided, a logger for logging debug statements.</td></tr>
   </table>
   </dd>
 </dl>

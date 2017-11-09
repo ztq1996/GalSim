@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,7 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">real.py File Reference</div>  </div>
 </div><!--header-->
@@ -107,6 +108,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_real_galaxy_catalog.html">galsim.real.RealGalaxyCatalog</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class containing a catalog with information about real galaxy training data.  <a href="classgalsim_1_1real_1_1_real_galaxy_catalog.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgalsim_1_1real_1_1_chromatic_real_galaxy.html">galsim.real.ChromaticRealGalaxy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class describing real galaxies over multiple wavelengths, using some multi-band training dataset.  <a href="classgalsim_1_1real_1_1_chromatic_real_galaxy.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -116,14 +120,19 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8bbf994bce5a396a830c2d6c39c2a570"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1real.html#a8bbf994bce5a396a830c2d6c39c2a570">galsim.real.simReal</a></td></tr>
-<tr class="memdesc:a8bbf994bce5a396a830c2d6c39c2a570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to simulate images (no added noise) from real galaxy training data.  <a href="#a8bbf994bce5a396a830c2d6c39c2a570">More...</a><br/></td></tr>
 <tr class="separator:a8bbf994bce5a396a830c2d6c39c2a570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a00522f5a69cc7c3ef565fb514ca5d709"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1real.html#a00522f5a69cc7c3ef565fb514ca5d709">galsim.real.HST_area</a> = 45238.93416</td></tr>
+<tr class="separator:a00522f5a69cc7c3ef565fb514ca5d709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0001c9eb0d85226e9d47e3aeda57e347"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegalsim_1_1real.html#a0001c9eb0d85226e9d47e3aeda57e347">galsim.real.real_galaxy_bandpasses</a></td></tr>
+<tr class="separator:a0001c9eb0d85226e9d47e3aeda57e347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions for dealing with RealGalaxy objects and the catalogs that store their data. </p>
 <p>The RealGalaxy uses images of galaxies from real astrophysical data (e.g. the Hubble Space Telescope), along with a PSF model of the optical properties of the telescope that took these images, to simulate new galaxy images with a different (must be larger) telescope PSF. A description of the simulation method can be found in Section 5 of Mandelbaum et al. (2012; MNRAS, 540, 1518), although note that the details of the implementation in Section 7 of that work are not relevant to the more recent software used here.</p>
-<p>This module defines the RealGalaxyCatalog class, used to store all required information about a real galaxy simulation training sample and accompanying PSF model. For information about downloading GalSim-readable RealGalaxyCatalog data in FITS format, see the RealGalaxy Data Download page on the GalSim Wiki: <a href="https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data">https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data</a></p>
-<p>The function <a class="el" href="namespacegalsim_1_1real.html#a8bbf994bce5a396a830c2d6c39c2a570" title="Function to simulate images (no added noise) from real galaxy training data. ">simReal()</a> takes this information and uses it to simulate a (no-noise-added) image from some lower-resolution telescope. </p>
+<p>This module defines the RealGalaxyCatalog class, used to store all required information about a real galaxy simulation training sample and accompanying PSF model. For information about downloading GalSim-readable RealGalaxyCatalog data in FITS format, see the RealGalaxy Data Download page on the GalSim Wiki: <a href="https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data">https://github.com/GalSim-developers/GalSim/wiki/RealGalaxy%20Data</a> </p>
 </div></div><!-- contents -->
 <hr class="footer"/><address class="footer"><small>
 Generated for GalSim by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6</small></address>
