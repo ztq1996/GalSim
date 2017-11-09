@@ -81,22 +81,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/GalSim-developers/GalSim">![Build Status](https://travis-ci.org/GalSim-developers/GalSim.svg?branch=master)</a> <a href="https://coveralls.io/github/GalSim-developers/GalSim?branch=master">![Coverage Status](https://coveralls.io/repos/github/GalSim-developers/GalSim/badge.svg?branch=master)</a> <a href="https://arxiv.org/abs/1407.7676">![Paper](https://img.shields.io/badge/astro--ph.IM-1407.7676-B31B1B.svg)</a> <a href="http://adsabs.harvard.edu/abs/2015A%26C....10..121R">![Paper](https://img.shields.io/badge/ADS-Rowe%20et%20al%2C%202015-blue.svg)</a></p>
+<div class="textblock"><div class="image">
+<img src="https://travis-ci.org/GalSim-developers/GalSim.svg?branch=master"  alt="Build Status"/>
+</div>
+<p>](<a href="https://travis-ci.org/GalSim-developers/GalSim">https://travis-ci.org/GalSim-developers/GalSim</a>) </p>
+<div class="image">
+<img src="https://coveralls.io/repos/github/GalSim-developers/GalSim/badge.svg?branch=master"  alt="Coverage Status"/>
+</div>
+<p>](<a href="https://coveralls.io/github/GalSim-developers/GalSim?branch=master">https://coveralls.io/github/GalSim-developers/GalSim?branch=master</a>) </p>
+<div class="image">
+<img src="https://img.shields.io/badge/astro--ph.IM-1407.7676-B31B1B.svg"  alt="Paper"/>
+</div>
+<p>](<a href="https://arxiv.org/abs/1407.7676">https://arxiv.org/abs/1407.7676</a>) </p>
+<div class="image">
+<img src="https://img.shields.io/badge/ADS-Rowe%20et%20al%2C%202015-blue.svg"  alt="Paper"/>
+</div>
+<p>](<a href="http://adsabs.harvard.edu/abs/2015A%26C....10..121R">http://adsabs.harvard.edu/abs/2015A%26C....10..121R</a>)</p>
 <h1>GalSim: The modular galaxy image simulation toolkit </h1>
 <p>GalSim is open-source software for simulating images of astronomical objects (stars, galaxies) in a variety of ways. The bulk of the calculations are carried out in C++, and the user interface is in python. In addition, the code can operate directly on "config" files, for those users who prefer not to work in python. The impetus for the software package was a weak lensing community data challenge, called GREAT3: </p>
 <pre class="fragment">http://great3challenge.info/
 </pre><p>However, the code has numerous additional capabilities beyond those needed for the challenge, and has been useful for a number of projects that needed to simulate high-fidelity galaxy images with accurate sizes and shears. At the end of this file, there is a list of the code capabilities and plans for future development. For details of algorithms and code validation, please see </p>
 <pre class="fragment">http://adsabs.harvard.edu/abs/2015A%26C....10..121R
 </pre><h2>Distribution </h2>
-<p>The current released version of GalSim is version 1.4. To get the code, you can grab the tarball (or zip file) from </p>
-<pre class="fragment">https://github.com/GalSim-developers/GalSim/releases/tag/v1.4.0
+<p>The current released version of GalSim is version 1.5. To get the code, you can grab the tarball (or zip file) from </p>
+<pre class="fragment">https://github.com/GalSim-developers/GalSim/releases/tag/v1.5.0
 </pre><p>Also, feel free to fork the repository: </p>
 <pre class="fragment">https://github.com/GalSim-developers/GalSim/fork
 </pre><p>Or clone the repository with either of the following: </p>
 <pre class="fragment">git clone git@github.com:GalSim-developers/GalSim.git
 git clone https://github.com/GalSim-developers/GalSim.git
 </pre><p>although after doing so, if you are not a developer, you should probably checkout the latest release tag, rather than use the master branch: </p>
-<pre class="fragment">git checkout v1.4.0
+<pre class="fragment">git checkout v1.5.0
 </pre><p>The code is also distributed via Fink, Macports, and Homebrew for Mac users. See <a class="el" href="_i_n_s_t_a_l_l_8md.html">INSTALL.md</a> for more information.</p>
 <p>The code is licensed under a BSD-style license. See the file LICENSE for more details.</p>
 <h2>Keeping up-to-date with GalSim </h2>
@@ -156,7 +171,7 @@ git clone https://github.com/GalSim-developers/GalSim.git
 <pre class="fragment">git tag -l
 </pre><p>at a terminal from within the repository. In addition to the official releases, we also have tags for various other milestones that were important at one time or another.</p>
 <p>The version of the code at any given snapshot can be downloaded from our GitHub webpage, or checked out from the repository using the tag name, e.g.: </p>
-<pre class="fragment">git checkout v1.4.0
+<pre class="fragment">git checkout v1.5.0
 </pre><p>This will then update your directory tree to the snapshot of the code at the milestone requested. (You will also get a message about being in a "detached" HEAD state. That is normal.)</p>
 <p>For a version history and a description of how the current version of the code differs from the last tagged version, see <a class="el" href="_h_i_s_t_o_r_y_8md.html">HISTORY.md</a> and <a class="el" href="_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a> (respectively). These files are found in the main GalSim directory, and are also displayed on our wiki which is linked above.</p>
 <h2>Summary of current capabilities </h2>
