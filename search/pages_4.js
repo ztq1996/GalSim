@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme',['README',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['installation_20instructions',['Installation Instructions',['../md__i_n_s_t_a_l_l.html',1,'']]]
 ];

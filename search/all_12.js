@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme',['README',['../md__r_e_a_d_m_e.html',1,'']]],
   ['r',['r',['../classgalsim_1_1lensing__ps_1_1xip__integrand.html#a27c847b112696060a5995aa3d2a8b964',1,'galsim.lensing_ps.xip_integrand.r()'],['../classgalsim_1_1lensing__ps_1_1xim__integrand.html#a0c9d86bfb07055754cf9f6893b5600ce',1,'galsim.lensing_ps.xim_integrand.r()']]],
   ['r0_5f500',['r0_500',['../classgalsim_1_1phase__screens_1_1_atmospheric_screen.html#a81c85d14236a4b4439bd61d3abb5aaff',1,'galsim::phase_screens::AtmosphericScreen']]],
   ['r0_5f500_5feffective',['r0_500_effective',['../classgalsim_1_1phase__psf_1_1_phase_screen_list.html#a4328bff0c9996a5436506095a850991d',1,'galsim::phase_psf::PhaseScreenList']]],
