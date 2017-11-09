@@ -5,6 +5,8 @@ var searchData=
   ['imagebuilder',['ImageBuilder',['../classgalsim_1_1config_1_1image_1_1_image_builder.html',1,'galsim::config::image']]],
   ['imageintegrator',['ImageIntegrator',['../classgalsim_1_1integ_1_1_image_integrator.html',1,'galsim::integ']]],
   ['imageview',['ImageView',['../classgalsim_1_1_image_view.html',1,'galsim']]],
+  ['inclinedexponential',['InclinedExponential',['../classgalsim_1_1inclinedexponential_1_1_inclined_exponential.html',1,'galsim::inclinedexponential']]],
+  ['inclinedsersic',['InclinedSersic',['../classgalsim_1_1inclinedsersic_1_1_inclined_sersic.html',1,'galsim::inclinedsersic']]],
   ['inputloader',['InputLoader',['../classgalsim_1_1config_1_1input_1_1_input_loader.html',1,'galsim::config::input']]],
   ['interpolant',['Interpolant',['../classgalsim_1_1_interpolant.html',1,'galsim']]],
   ['interpolant2d',['Interpolant2d',['../classgalsim_1_1_interpolant2d.html',1,'galsim']]],

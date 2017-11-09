@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['p',['p',['../classgalsim_1_1random_1_1_dist_deviate.html#a3ab9c21f01ea8c52e051b65f51f6de3b',1,'galsim.random.DistDeviate.p()'],['../bench_8cpp.html#aca4d0130fcb9b532681f34adb07c6237',1,'p():&#160;bench.cpp']]],
   ['p_5fb',['p_B',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a7a4567210d12d6380db94adf63b2f89d',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['p_5fe',['p_E',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a7bff011adbec30c6b43e5704ac0333dd',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['parallactic_5fangle',['parallactic_angle',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#a1e6c58c3c56ca2108d00fcaea7403096',1,'galsim::chromatic::ChromaticAtmosphere']]],
@@ -12,6 +13,7 @@ var searchData=
   ['pixel_5fsize_5fmm',['pixel_size_mm',['../namespacegalsim_1_1wfirst_1_1wfirst__wcs.html#a4f91042e801cb5363789202e955c4d33',1,'galsim::wfirst::wfirst_wcs']]],
   ['pk',['pk',['../classgalsim_1_1lensing__ps_1_1xip__integrand.html#a556c36c9cff6614cd7b0f25018be93bd',1,'galsim.lensing_ps.xip_integrand.pk()'],['../classgalsim_1_1lensing__ps_1_1xim__integrand.html#aa453b8ca1aa2cf6d5f2d53792f35afed',1,'galsim.lensing_ps.xim_integrand.pk()']]],
   ['planck',['Planck',['../_astronomical_constants_8h.html#a32bf8163439fba33fd4149559efaff74',1,'AstronomicalConstants.h']]],
+  ['pos',['pos',['../classgalsim_1_1position_1_1dep__posd__type.html#a34dbcb47491beb200b21d28a914641e2',1,'galsim.position.dep_posd_type.pos()'],['../classgalsim_1_1position_1_1dep__posi__type.html#aa00da6cff5890b9b232d5ad711b4ebd5',1,'galsim.position.dep_posi_type.pos()']]],
   ['prog_5fversion',['prog_version',['../namespacegalsim_1_1wfirst_1_1wfirst__wcs.html#a2c2a8f6ee7617b1e74cae95e61621eb3',1,'galsim::wfirst::wfirst_wcs']]],
   ['projection',['projection',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a77c2f0c8a9807bdfdd60f3f95b89f47a',1,'galsim::fitswcs::GSFitsWCS']]],
   ['psf',['psf',['../classgalsim_1_1des_1_1des__meds_1_1_multi_exposure_object.html#a7f6776fea5e76b52efbda0e52c13c683',1,'galsim::des::des_meds::MultiExposureObject']]],
@@ -26,9 +28,8 @@ var searchData=
   ['psf_5fshape',['psf_shape',['../classgalsim_1_1hsm_1_1_shape_data.html#aa360b05844e0f03d5d0b7a6859283974',1,'galsim::hsm::ShapeData']]],
   ['psf_5fsigma',['psf_sigma',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html#a67ff4e2ef2aa308214feb59e135e4103',1,'galsim::hsm::CppShapeData::psf_sigma()'],['../classgalsim_1_1hsm_1_1_shape_data.html#a308f2658d2fa8e7348e7b5d51e9a8483',1,'galsim::hsm.ShapeData.psf_sigma()']]],
   ['psf_5fsize',['psf_size',['../classgalsim_1_1des_1_1des__shapelet_1_1_d_e_s___shapelet.html#a9f851f7a63e6e69d3f8628190ce97141',1,'galsim::des::des_shapelet::DES_Shapelet']]],
-  ['psi',['psi',['../classgalsim_1_1phase__screens_1_1_atmospheric_screen.html#ac0aa4a03a0bb638473ed7ea0549fd067',1,'galsim::phase_screens::AtmosphericScreen']]],
   ['pupil_5fplane_5ffile',['pupil_plane_file',['../namespacegalsim_1_1wfirst.html#a4719503bb05205f8566f2f6075ee968d',1,'galsim::wfirst']]],
-  ['pupil_5fplane_5fscale',['pupil_plane_scale',['../classgalsim_1_1phase__psf_1_1_aperture.html#a73b77aca86ac97f2d091357c256e631a',1,'galsim.phase_psf.Aperture.pupil_plane_scale()'],['../namespacegalsim_1_1wfirst.html#acf24f562ce1e22cbb3c00e4b9d90002e',1,'galsim.wfirst.pupil_plane_scale()']]],
+  ['pupil_5fplane_5fscale',['pupil_plane_scale',['../classgalsim_1_1phase__psf_1_1_aperture.html#a73b77aca86ac97f2d091357c256e631a',1,'galsim.phase_psf.Aperture.pupil_plane_scale()'],['../namespacegalsim_1_1wfirst.html#aea335f453a887ae5b49c83d00a32dfe6',1,'galsim.wfirst.pupil_plane_scale()']]],
   ['pupil_5fplane_5fsize',['pupil_plane_size',['../classgalsim_1_1phase__psf_1_1_aperture.html#ad95a3f271335be53f216512951838cd2',1,'galsim::phase_psf::Aperture']]],
   ['pv',['pv',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#af46d85d4e7ceba1d44fa4e6d0a0f0632',1,'galsim::fitswcs::GSFitsWCS']]],
   ['pyfits_5fstr',['pyfits_str',['../namespacegalsim_1_1__pyfits.html#aebf3768a7de8bf40bb103b4cb86385bc',1,'galsim::_pyfits']]],

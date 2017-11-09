@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['g_5fclk',['g_clk',['../namespacecybozu_1_1bench.html#a4d2152f182df42c080b32acbcd3133c9',1,'cybozu::bench']]],
+  ['g_5floopnum',['g_loopNum',['../namespacecybozu_1_1bench.html#a236519d4e36bf8f6166293d89a5e1060',1,'cybozu::bench']]],
+  ['g_5fy',['g_y',['../bench_8cpp.html#adc5737b6e039b77d5cf8e52477d6bd6b',1,'bench.cpp']]],
   ['gain',['gain',['../namespacegalsim_1_1wfirst.html#aa8d1656f83263d0e1132281c28480114',1,'galsim::wfirst']]],
   ['gal_5ffile_5fname',['gal_file_name',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#aa56507baa0b862d746bd87a93daa6012',1,'galsim::real::RealGalaxyCatalog']]],
   ['gal_5fhdu',['gal_hdu',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad2bebca2101281914421a9c5ccbab8a5',1,'galsim::real::RealGalaxyCatalog']]],

@@ -10,6 +10,7 @@ var searchData=
   ['basewcs',['BaseWCS',['../classgalsim_1_1wcs_1_1_base_w_c_s.html',1,'galsim::wcs']]],
   ['binomialdeviate',['BinomialDeviate',['../classgalsim_1_1_binomial_deviate.html',1,'galsim']]],
   ['bounds',['Bounds',['../classgalsim_1_1_bounds.html',1,'galsim']]],
+  ['bounds_3c_20double_20_3e',['Bounds&lt; double &gt;',['../classgalsim_1_1_bounds.html',1,'galsim']]],
   ['bounds_3c_20int_20_3e',['Bounds&lt; int &gt;',['../classgalsim_1_1_bounds.html',1,'galsim']]],
   ['box',['Box',['../classgalsim_1_1base_1_1_box.html',1,'galsim::base']]]
 ];

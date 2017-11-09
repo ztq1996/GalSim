@@ -8,7 +8,13 @@ var searchData=
   ['last_5fn_5feval',['last_n_eval',['../classgalsim_1_1integ_1_1_image_integrator.html#a2f680619aaf5cb7d1c4fdbe406337336',1,'galsim::integ::ImageIntegrator']]],
   ['loaded_5ffiles',['loaded_files',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad624e6e1516061819c2f73445373a056',1,'galsim::real::RealGalaxyCatalog']]],
   ['loaded_5flock',['loaded_lock',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ae7540b706170eaccf0f58c13c76d746e',1,'galsim::real::RealGalaxyCatalog']]],
+  ['log2e',['LOG2E',['../fastexp_8cpp.html#a7314186604a194f9909a2ac6b4f26961',1,'fastexp.cpp']]],
+  ['log_5fn',['LOG_N',['../namespacefmath_1_1local.html#a589fa7e3f13d26af5106e4768e57099e',1,'fmath::local']]],
+  ['log_5ftable_5fsize',['LOG_TABLE_SIZE',['../namespacefmath_1_1local.html#a3b151e66012caa9b107c68c8995ed078',1,'fmath::local']]],
   ['logger',['logger',['../classgalsim_1_1config_1_1process_1_1_logger_wrapper.html#a90bc7ffbbb96f1c7155aa783533fa9c2',1,'galsim.config.process.LoggerWrapper.logger()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a7c9beb931e3bb084aaa42435182d6bf0',1,'galsim.real.RealGalaxyCatalog.logger()']]],
+  ['logvar',['logVar',['../structfmath_1_1local_1_1_c.html#a6ed90bdf46a6283346b0759638e37e79',1,'fmath::local::C']]],
+  ['loopn1',['loopN1',['../classcybozu_1_1_cpu_clock.html#a4deb211ea6e958f2d694343870ed42b5',1,'cybozu::CpuClock']]],
+  ['loopn2',['loopN2',['../classcybozu_1_1_cpu_clock.html#a87c17b81605613b6a49d5e77b86f7ec4',1,'cybozu::CpuClock']]],
   ['lx',['lx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a1082bde1d8d3f169daa743de40f4010a',1,'galsim::pse::PowerSpectrumEstimator']]],
   ['ly',['ly',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#aff6ccc101c52037999b76e7cb1bbb8a0',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

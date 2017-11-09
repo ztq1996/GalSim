@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['c',['C',['../structfmath_1_1local_1_1_c.html',1,'fmath::local']]],
   ['calculatecenter',['CalculateCenter',['../structgalsim_1_1_calculate_center.html',1,'galsim']]],
   ['calculatecenter_3c_20t_2c_20u_2c_20true_20_3e',['CalculateCenter&lt; T, U, true &gt;',['../structgalsim_1_1_calculate_center_3_01_t_00_01_u_00_01true_01_4.html',1,'galsim']]],
   ['catalog',['Catalog',['../classgalsim_1_1catalog_1_1_catalog.html',1,'galsim::catalog']]],
@@ -8,7 +9,7 @@ var searchData=
   ['celestialcoord',['CelestialCoord',['../classgalsim_1_1celestial_1_1_celestial_coord.html',1,'galsim::celestial']]],
   ['celestialwcs',['CelestialWCS',['../classgalsim_1_1wcs_1_1_celestial_w_c_s.html',1,'galsim::wcs']]],
   ['chi2deviate',['Chi2Deviate',['../classgalsim_1_1_chi2_deviate.html',1,'galsim']]],
-  ['chromatic',['Chromatic',['../classgalsim_1_1chromatic_1_1_chromatic.html',1,'galsim::chromatic']]],
+  ['chromatic',['Chromatic',['../classgalsim_1_1deprecated_1_1chromatic_1_1_chromatic.html',1,'galsim::deprecated::chromatic']]],
   ['chromaticairy',['ChromaticAiry',['../classgalsim_1_1chromatic_1_1_chromatic_airy.html',1,'galsim::chromatic']]],
   ['chromaticatmosphere',['ChromaticAtmosphere',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html',1,'galsim::chromatic']]],
   ['chromaticautoconvolution',['ChromaticAutoConvolution',['../classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html',1,'galsim::chromatic']]],
@@ -18,10 +19,12 @@ var searchData=
   ['chromaticfouriersqrtprofile',['ChromaticFourierSqrtProfile',['../classgalsim_1_1chromatic_1_1_chromatic_fourier_sqrt_profile.html',1,'galsim::chromatic']]],
   ['chromaticobject',['ChromaticObject',['../classgalsim_1_1chromatic_1_1_chromatic_object.html',1,'galsim::chromatic']]],
   ['chromaticopticalpsf',['ChromaticOpticalPSF',['../classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html',1,'galsim::chromatic']]],
+  ['chromaticrealgalaxy',['ChromaticRealGalaxy',['../classgalsim_1_1real_1_1_chromatic_real_galaxy.html',1,'galsim::real']]],
   ['chromaticsum',['ChromaticSum',['../classgalsim_1_1chromatic_1_1_chromatic_sum.html',1,'galsim::chromatic']]],
   ['chromatictransformation',['ChromaticTransformation',['../classgalsim_1_1chromatic_1_1_chromatic_transformation.html',1,'galsim::chromatic']]],
   ['constimageview',['ConstImageView',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],
   ['constimageview_3c_20float_20_3e',['ConstImageView&lt; float &gt;',['../classgalsim_1_1_const_image_view.html',1,'galsim']]],
+  ['constreturn',['ConstReturn',['../classgalsim_1_1_const_return.html',1,'galsim']]],
   ['continuousintegrator',['ContinuousIntegrator',['../classgalsim_1_1integ_1_1_continuous_integrator.html',1,'galsim::integ']]],
   ['convolution',['Convolution',['../classgalsim_1_1compound_1_1_convolution.html',1,'galsim::compound']]],
   ['correlatednoise',['CorrelatedNoise',['../classgalsim_1_1correlatednoise_1_1_correlated_noise.html',1,'galsim::correlatednoise']]],
@@ -29,7 +32,9 @@ var searchData=
   ['cosmoscatalog',['COSMOSCatalog',['../classgalsim_1_1scene_1_1_c_o_s_m_o_s_catalog.html',1,'galsim::scene']]],
   ['cosmosloader',['COSMOSLoader',['../classgalsim_1_1config_1_1input__cosmos_1_1_c_o_s_m_o_s_loader.html',1,'galsim::config::input_cosmos']]],
   ['cosmosnoisebuilder',['COSMOSNoiseBuilder',['../classgalsim_1_1config_1_1noise_1_1_c_o_s_m_o_s_noise_builder.html',1,'galsim::config::noise']]],
+  ['covariancespectrum',['CovarianceSpectrum',['../classgalsim_1_1correlatednoise_1_1_covariance_spectrum.html',1,'galsim::correlatednoise']]],
   ['cppellipse',['CppEllipse',['../classgalsim_1_1_cpp_ellipse.html',1,'galsim']]],
   ['cppshapedata',['CppShapeData',['../structgalsim_1_1hsm_1_1_cpp_shape_data.html',1,'galsim::hsm']]],
+  ['cpuclock',['CpuClock',['../classcybozu_1_1_cpu_clock.html',1,'cybozu']]],
   ['cubic',['Cubic',['../classgalsim_1_1_cubic.html',1,'galsim']]]
 ];

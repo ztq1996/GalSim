@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bisect',['Bisect',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045ac946a08005036040527cbac1b1e1333e',1,'galsim']]],
-  ['brent',['Brent',['../namespacegalsim.html#afd0a492100e8fe7a03839776dc3c2045a8e06681aaf2baa24b7088035f6d644a3',1,'galsim']]]
+  ['adj',['adj',['../structfmath_1_1local_1_1_expd_var.html#a715757528a9fbd8ac26b234f7bf84795abb787a63dca67e9272f37f41adbe1d18',1,'fmath::local::ExpdVar']]]
 ];

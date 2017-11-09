@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['a',['../structfmath_1_1local_1_1_exp_var.html#a74cce5817a87e04c5c24bcd526bce60c',1,'fmath::local::ExpVar::a()'],['../structfmath_1_1local_1_1_expd_var.html#a5c957b7406b04fbee3d52cdf5bd0da57',1,'fmath::local::ExpdVar::a()'],['../classgalsim_1_1random_1_1_dist_deviate.html#a0ed4bae8e261d7d34a5177002885380f',1,'galsim.random.DistDeviate.a()']]],
   ['a_5fb',['a_b',['../classgalsim_1_1cdmodel_1_1_base_c_d_model.html#a28ae951dae9fecbeb5b003ab999010b4',1,'galsim::cdmodel::BaseCDModel']]],
   ['a_5fl',['a_l',['../classgalsim_1_1cdmodel_1_1_base_c_d_model.html#af1a0703f8228156af4f7d60988d43266',1,'galsim::cdmodel::BaseCDModel']]],
   ['a_5fr',['a_r',['../classgalsim_1_1cdmodel_1_1_base_c_d_model.html#af2a1615e6da5c7bdc1ab9e42d430c383',1,'galsim::cdmodel::BaseCDModel']]],
@@ -7,6 +8,7 @@ var searchData=
   ['ab',['ab',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a9a6d14a33f11baf747347758329f874d',1,'galsim::fitswcs::GSFitsWCS']]],
   ['aberrations',['aberrations',['../classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a4a2128dfff117848d9f0587de6ec5667',1,'galsim.chromatic.ChromaticOpticalPSF.aberrations()'],['../classgalsim_1_1phase__screens_1_1_optical_screen.html#a308a1457fbaa5a43f37cb3af7447c26d',1,'galsim.phase_screens.OpticalScreen.aberrations()']]],
   ['abp',['abp',['../classgalsim_1_1fitswcs_1_1_g_s_fits_w_c_s.html#a80eb75ca7d5c6dc6e5561b9bbb6e7fef',1,'galsim::fitswcs::GSFitsWCS']]],
+  ['abs_5flength_5ftable',['abs_length_table',['../classgalsim_1_1sensor_1_1_silicon_sensor.html#a5c234f90318a88f8de913c288b159aff',1,'galsim::sensor::SiliconSensor']]],
   ['abserr',['abserr',['../_int_8h.html#aa11c2f12c3630ba41a493ce0bf1cc349',1,'Int.h']]],
   ['abzeropoint',['ABZeropoint',['../_astronomical_constants_8h.html#a04cdda147e4061c975a013366ff0555b',1,'AstronomicalConstants.h']]],
   ['adapt_5forder',['adapt_order',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a4e60d118ed60bda1ee907d076fabfe8f',1,'galsim::hsm::HSMParams']]],
@@ -18,7 +20,10 @@ var searchData=
   ['altitude',['altitude',['../classgalsim_1_1phase__screens_1_1_atmospheric_screen.html#ac003649c8d0a678571378f8e479b9994',1,'galsim::phase_screens::AtmosphericScreen']]],
   ['amplitude_5fb',['amplitude_B',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a532ed2fdbd9f7a351233b30eff53d32e',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
   ['amplitude_5fe',['amplitude_E',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a702945e4bba827150c1868f183c08f8b',1,'galsim::lensing_ps::PowerSpectrumRealizer']]],
+  ['angle_5frad_5ffunction',['Angle_rad_function',['../namespacegalsim_1_1angle.html#abc0fefc51659230809afa3f705907bce',1,'galsim::angle']]],
+  ['annular_5fzernike',['annular_zernike',['../classgalsim_1_1phase__screens_1_1_optical_screen.html#a33acb87495697bdba494134176e3dc2d',1,'galsim::phase_screens::OpticalScreen']]],
   ['aper',['aper',['../classgalsim_1_1phase__psf_1_1_phase_screen_p_s_f.html#a02c41848d9514872196822ceb5bc45ca',1,'galsim::phase_psf::PhaseScreenPSF']]],
+  ['app',['app',['../structfmath_1_1local_1_1_log_var.html#a744cbc5988664969d3b61960456b7c06',1,'fmath::local::LogVar::app()'],['../classfmath_1_1_pow_generator.html#a854fd8a242359147bfb5b421955d2bff',1,'fmath::PowGenerator::app()']]],
   ['arcmin',['ARCMIN',['../_astronomical_constants_8h.html#a0f3de8cc08ae1e66965f5e04e7fb1eed',1,'AstronomicalConstants.h']]],
   ['arcsec',['ARCSEC',['../_astronomical_constants_8h.html#a65dbe000c12ec62523c2e0a8e68ff3e6',1,'AstronomicalConstants.h']]],
   ['au',['AU',['../_astronomical_constants_8h.html#a2b9e1ccc1a034cb26b9c794767315346',1,'AstronomicalConstants.h']]],

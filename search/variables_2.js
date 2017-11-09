@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['b',['b',['../structfmath_1_1local_1_1_exp_var.html#a056ccb2489ed7e220de04d5e7c29bd93',1,'fmath::local::ExpVar::b()'],['../classgalsim_1_1random_1_1_dist_deviate.html#a0f73146b3d310963367bcc77bfa4cbbc',1,'galsim.random.DistDeviate.b()']]],
   ['b_5fpower_5ffunction',['b_power_function',['../classgalsim_1_1lensing__ps_1_1_power_spectrum.html#aa1680823e5f523dbd6bd29b14a7a8f75',1,'galsim::lensing_ps::PowerSpectrum']]],
   ['band',['band',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a3f5c993516cedb0bfea1155efa7c91c9',1,'galsim::real::RealGalaxyCatalog']]],
+  ['bandpass',['bandpass',['../classgalsim_1_1photon__array_1_1_wavelength_sampler.html#a0780df74458dae255b980b3fd7172d6f',1,'galsim::photon_array::WavelengthSampler']]],
   ['base_5fobj',['base_obj',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#a64eb5bd6649c6bccf9944060d0d230cb',1,'galsim::chromatic::ChromaticAtmosphere']]],
   ['base_5frefraction',['base_refraction',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#a428f037c7e426f91c4fa7a42fcf883c4',1,'galsim::chromatic::ChromaticAtmosphere']]],
   ['base_5fwavelength',['base_wavelength',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#a2705843868382c20c85d6254da3f5304',1,'galsim::chromatic::ChromaticAtmosphere']]],

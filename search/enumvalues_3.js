@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['half_5flight_5fradius',['HALF_LIGHT_RADIUS',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f',1,'galsim::SBMoffat::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743a208e1a5503f6556a5f1334cf59d53b21',1,'galsim::SBSersic::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_spergel.html#ae8689e1c95306815619cc7405544d5afaee01a59e7f3bc99144f6b8949398da9f',1,'galsim::SBSpergel::HALF_LIGHT_RADIUS()']]]
+  ['f88',['f88',['../structfmath_1_1local_1_1_exp_var.html#a759d39f57b94e755539475f42109b634afdf1329890b9668eeb4bad6b931ce991',1,'fmath::local::ExpVar']]],
+  ['floor',['floor',['../classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055fa8e74305a8adef9a1ebaeca2314845041',1,'galsim::Table::floor()'],['../classgalsim_1_1_table2_d.html#ac9857e74de7ebd48b87059febb9c7859a76b610664b2fda1460bb78d2b5ef0fb2',1,'galsim::Table2D::floor()']]],
+  ['fwhm',['FWHM',['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792afd3bfcb60e1909d7502f0ed92d883de8',1,'galsim::SBMoffat']]]
 ];

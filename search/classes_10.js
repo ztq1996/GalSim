@@ -8,6 +8,7 @@ var searchData=
   ['poissondeviate',['PoissonDeviate',['../classgalsim_1_1_poisson_deviate.html',1,'galsim']]],
   ['poissonnoise',['PoissonNoise',['../classgalsim_1_1_poisson_noise.html',1,'galsim']]],
   ['poissonnoisebuilder',['PoissonNoiseBuilder',['../classgalsim_1_1config_1_1noise_1_1_poisson_noise_builder.html',1,'galsim::config::noise']]],
+  ['polygon',['Polygon',['../classgalsim_1_1_polygon.html',1,'galsim']]],
   ['position',['Position',['../classgalsim_1_1_position.html',1,'galsim']]],
   ['position_3c_20double_20_3e',['Position&lt; double &gt;',['../classgalsim_1_1_position.html',1,'galsim']]],
   ['powerlawcd',['PowerLawCD',['../classgalsim_1_1cdmodel_1_1_power_law_c_d.html',1,'galsim::cdmodel']]],
@@ -15,8 +16,13 @@ var searchData=
   ['powerspectrumestimator',['PowerSpectrumEstimator',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html',1,'galsim::pse']]],
   ['powerspectrumloader',['PowerSpectrumLoader',['../classgalsim_1_1config_1_1input__powerspectrum_1_1_power_spectrum_loader.html',1,'galsim::config::input_powerspectrum']]],
   ['powerspectrumrealizer',['PowerSpectrumRealizer',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html',1,'galsim::lensing_ps']]],
+  ['powgenerator',['PowGenerator',['../classfmath_1_1_pow_generator.html',1,'fmath']]],
   ['probabilitytree',['ProbabilityTree',['../classgalsim_1_1_probability_tree.html',1,'galsim']]],
   ['probabilitytree_3c_20galsim_3a_3ainterval_20_3e',['ProbabilityTree&lt; galsim::Interval &gt;',['../classgalsim_1_1_probability_tree.html',1,'galsim']]],
+  ['promotion',['Promotion',['../structgalsim_1_1_promotion.html',1,'galsim']]],
+  ['promotion_3c_20double_2c_20int_20_3e',['Promotion&lt; double, int &gt;',['../structgalsim_1_1_promotion_3_01double_00_01int_01_4.html',1,'galsim']]],
+  ['promotion_3c_20int_2c_20double_20_3e',['Promotion&lt; int, double &gt;',['../structgalsim_1_1_promotion_3_01int_00_01double_01_4.html',1,'galsim']]],
+  ['promotion_3c_20t_2c_20t_20_3e',['Promotion&lt; T, T &gt;',['../structgalsim_1_1_promotion_3_01_t_00_01_t_01_4.html',1,'galsim']]],
   ['psfexloader',['PSFExLoader',['../classgalsim_1_1des_1_1des__psfex_1_1_p_s_f_ex_loader.html',1,'galsim::des::des_psfex']]],
   ['pyastwcs',['PyAstWCS',['../classgalsim_1_1fitswcs_1_1_py_ast_w_c_s.html',1,'galsim::fitswcs']]]
 ];
