@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2017 by the GalSim developers team on GitHub
+# Copyright (c) 2012-2018 by the GalSim developers team on GitHub
 # https://github.com/GalSim-developers
 #
 # This file is part of GalSim: The modular galaxy image simulation toolkit.
@@ -62,8 +62,6 @@ def test_vk(slow=False):
 
                     check_basic(vk, "VonKarman")
                     do_pickle(vk)
-                    do_pickle(vk._sbp)
-                    do_pickle(vk._sbp, lambda x: (x.getFlux(), x.getGSParams()))
 
                     img = galsim.Image(16, 16, scale=0.2)
                     if not do_delta:
@@ -137,7 +135,7 @@ def test_vk_ne():
 def test_vk_eq_kolm():
     lam = 500.0
     r0 = 0.2
-    L0 = 3e5  # Need to make this surprisingly large to make vk -> kolm.
+    L0 = 1e10  # Need to make this surprisingly large to make vk -> kolm.
     flux = 3.3
     kolm = galsim.Kolmogorov(lam=lam, r0=r0, flux=flux)
     vk = galsim.VonKarman(lam=lam, r0=r0, L0=L0, flux=flux)
@@ -146,7 +144,7 @@ def test_vk_eq_kolm():
 
     kolm_img = kolm.drawImage(nx=24, ny=24, scale=0.2)
     vk_img = vk.drawImage(nx=24, ny=24, scale=0.2)
-    np.testing.assert_allclose(kolm_img.array, vk_img.array, atol=flux*1e-5, rtol=0)
+    np.testing.assert_allclose(kolm_img.array, vk_img.array, atol=flux*4e-5, rtol=0)
 
 
 @timer
@@ -212,6 +210,16 @@ def vk_benchmark():
     t3 = time.time()
     print("Time to photon-shoot 100 more with 50000 photons each: {:6.3f}s".format(t3-t2))  # ~0.9s
 
+def test_vk_r0():
+    """Test a special r0 value that resulted in an error, reported in issue #957.
+    """
+    r0 = 0.146068884
+    vk = galsim.VonKarman(L0=25.,lam=700.,r0=r0)
+    # Note: the resolution of the bug was to add explicit split points for the first several
+    # j0 zeros.  Without that, the integral in rawXValue can spuriously fail badly, leading to
+    # an invalid estimate of the total integrated flux within R=pi/stepk.
+    check_basic(vk, "VonKarman, r0=%s"%r0)
+
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
@@ -233,6 +241,7 @@ if __name__ == "__main__":
     test_vk_eq_kolm()
     test_vk_fitting_formulae()
     test_vk_gsp()
+    test_vk_r0()
     if args.benchmark:
         vk_benchmark()
 
