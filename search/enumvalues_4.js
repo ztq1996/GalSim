@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['half_5flight_5fradius',['HALF_LIGHT_RADIUS',['../classgalsim_1_1_s_b_inclined_sersic.html#a110268092b9a637e0c48491d1490eaa5a6011c20d15102b55b5dd8e96978fec34',1,'galsim::SBInclinedSersic::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_moffat.html#a7a32e4cfca8fd425fe09e51db0aa1792ab4f98c8a03d705f7e1a805187e6ccf0f',1,'galsim::SBMoffat::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_sersic.html#ab4d96f6c870d4d25e896ecbb0af1e743a208e1a5503f6556a5f1334cf59d53b21',1,'galsim::SBSersic::HALF_LIGHT_RADIUS()'],['../classgalsim_1_1_s_b_spergel.html#ae8689e1c95306815619cc7405544d5afaee01a59e7f3bc99144f6b8949398da9f',1,'galsim::SBSpergel::HALF_LIGHT_RADIUS()']]]
+  ['len',['LEN',['../structfmath_1_1local_1_1_log_var.html#a5ad9a228a44e9c301552f791d22c1448a9cd92b10a14da1491d2ee11b1b990ba5',1,'fmath::local::LogVar']]],
+  ['linear',['linear',['../classgalsim_1_1_table.html#af129c714797baab6f6b976ea485d055faac6a9b34f4c9bbf735f027a9661fca1a',1,'galsim::Table::linear()'],['../classgalsim_1_1_table2_d.html#ac9857e74de7ebd48b87059febb9c7859a0f22c40340c7dce5734c5946ab4dc5e9',1,'galsim::Table2D::linear()']]]
 ];

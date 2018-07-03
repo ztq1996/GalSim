@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing__ps.html#a979b775d8fe6f324ebf32fc304a64b09',1,'galsim::lensing_ps']]],
-  ['keys',['keys',['../classgalsim_1_1catalog_1_1_dict.html#a694911db5477e374654bbcfb2137e8ec',1,'galsim.catalog.Dict.keys()'],['../classgalsim_1_1fits_1_1_fits_header.html#a244b06c922f06c7c9c6175f5048a6e24',1,'galsim.fits.FitsHeader.keys()']]],
+  ['k',['k',['../classgalsim_1_1random_1_1_gamma_deviate.html#a5cfb4ea245c53b4046e93598015fcaea',1,'galsim::random::GammaDeviate']]],
+  ['k_5finterpolant',['k_interpolant',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#af4f7da21d60a225f010732c33622519b',1,'galsim.interpolatedimage.InterpolatedImage.k_interpolant()'],['../classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#ad6c7051ef650878d40fe6b9713b3cdc7',1,'galsim.interpolatedimage.InterpolatedKImage.k_interpolant()']]],
+  ['kappakaisersquires',['kappaKaiserSquires',['../namespacegalsim_1_1lensing__ps.html#a488209ae147127aad23fde329dfac1ad',1,'galsim::lensing_ps']]],
+  ['kcrit',['kcrit',['../classgalsim_1_1phase__psf_1_1_phase_screen_p_s_f.html#a6fcf5b2a50462921567aa4a1a7df5527',1,'galsim.phase_psf.PhaseScreenPSF.kcrit()'],['../classgalsim_1_1second__kick_1_1_second_kick.html#aa667ca7bd77d8431f90d0ad2def25dae',1,'galsim.second_kick.SecondKick.kcrit()']]],
+  ['keys',['keys',['../classgalsim_1_1catalog_1_1_dict.html#a9dd6dc85af0e1965ecb5f1fe93905f3c',1,'galsim.catalog.Dict.keys()'],['../classgalsim_1_1fits_1_1_fits_header.html#a08692a6e1126e8fc26566c890538bacf',1,'galsim.fits.FitsHeader.keys()']]],
+  ['kimage',['kimage',['../classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#a5aeaacf87665909cbd82f4aa398adb7c',1,'galsim::interpolatedimage::InterpolatedKImage']]],
+  ['krange',['krange',['../classgalsim_1_1interpolant_1_1_delta.html#acde008cd33b9d4a8f648384449a99520',1,'galsim.interpolant.Delta.krange()'],['../classgalsim_1_1interpolant_1_1_nearest.html#ace080d9104ab870cb005ba2618e39c73',1,'galsim.interpolant.Nearest.krange()'],['../classgalsim_1_1interpolant_1_1_sinc_interpolant.html#a3042bba2ad1c41f4e51cd22608780714',1,'galsim.interpolant.SincInterpolant.krange()'],['../classgalsim_1_1interpolant_1_1_linear.html#a160760ca36ef7c94e0440ad5da082440',1,'galsim.interpolant.Linear.krange()'],['../classgalsim_1_1interpolant_1_1_cubic.html#a228b2dcadcd7f3124a9013a0fdd84803',1,'galsim.interpolant.Cubic.krange()'],['../classgalsim_1_1interpolant_1_1_quintic.html#a52b38b3c55eefa4ed4350ccba29153b1',1,'galsim.interpolant.Quintic.krange()'],['../classgalsim_1_1interpolant_1_1_lanczos.html#ae42fe52520a0b1e96d64d3acaadc02b9',1,'galsim.interpolant.Lanczos.krange()']]],
+  ['ksb_5fmoments_5fmax',['ksb_moments_max',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a4ceb676156283d9a91e7ffb978f098a6',1,'galsim::hsm::HSMParams']]],
+  ['ksb_5fsig_5ffactor',['ksb_sig_factor',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#aedb8a78d87cc87b03bb0b52110a2b17e',1,'galsim::hsm::HSMParams']]],
+  ['ksb_5fsig_5fweight',['ksb_sig_weight',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a63192bcb9364fe98506576d4824e156c',1,'galsim::hsm::HSMParams']]],
   ['kset',['kSet',['../classgalsim_1_1_k_table.html#af96651b6eda29f0ed12f783487ee1ac2',1,'galsim::KTable']]],
   ['kset2',['kSet2',['../classgalsim_1_1_k_table.html#a2e9aa4e4aab7bd05aacb4445171fd359',1,'galsim::KTable']]],
   ['ktable',['KTable',['../classgalsim_1_1_k_table.html#a3aa262f4e91f9dc1a887e7088d8ff8a4',1,'galsim::KTable::KTable()'],['../classgalsim_1_1_k_table.html#ad52a41c9cdda89524206f2e3025fa5b8',1,'galsim::KTable::KTable(int N, double dk, std::complex&lt; double &gt; value=0.)'],['../classgalsim_1_1_k_table.html#abfaeaad79bf9ef482f7bb4e3e9f1aeef',1,'galsim::KTable::KTable(const KTable &amp;rhs)']]],
-  ['kval',['kval',['../classgalsim_1_1_k_table.html#aea21e98251a2f1c58f60457f039d040e',1,'galsim::KTable::kval()'],['../classgalsim_1_1_x_table.html#a9afda863ac34cd4281de6e42203efd6b',1,'galsim::XTable::kval()']]],
-  ['kval2',['kval2',['../classgalsim_1_1_k_table.html#acbc9e2068b99c23ce2eb60d432818e4e',1,'galsim::KTable']]],
-  ['kvalue',['kValue',['../classgalsim_1_1_s_b_profile.html#aeeef4c5230553a57f35a70490b97eb06',1,'galsim::SBProfile::kValue()'],['../classgalsim_1_1gsobject_1_1_g_s_object.html#a7a924e2d85a44389099bd8e74e591017',1,'galsim.gsobject.GSObject.kValue()']]],
-  ['kxky',['kxky',['../namespacegalsim_1_1utilities.html#ae3d1586e7c70ecfd9582b71f6f5147ab',1,'galsim::utilities']]]
+  ['kval',['kval',['../classgalsim_1_1_k_table.html#ae3e107a600153e7dd87309aecfa91189',1,'galsim::KTable::kval()'],['../classgalsim_1_1_x_table.html#a118ff133dfe5f2ba439312aa340d4204',1,'galsim::XTable::kval()']]],
+  ['kval2',['kval2',['../classgalsim_1_1_k_table.html#a126ee5413f648d08f8af6a3c28c484fa',1,'galsim::KTable']]],
+  ['kvalue',['kValue',['../classgalsim_1_1_s_b_profile.html#ad499ae77e7fe143674067de214dfd03b',1,'galsim::SBProfile::kValue()'],['../classgalsim_1_1_s_b_second_kick.html#a95549e04aaeeef58f42f932a758c40fb',1,'galsim::SBSecondKick::kValue()'],['../namespacegalsim_1_1gsobject.html#a2461ca769d1d0dc874ac0e710e2326d8',1,'galsim.gsobject.kValue()']]],
+  ['kvalue_5faccuracy',['kvalue_accuracy',['../classgalsim_1_1gsparams_1_1_g_s_params.html#abf54da02b3f2b884babb3793d09f5fb8',1,'galsim::gsparams::GSParams']]],
+  ['kvalueraw',['kValueRaw',['../classgalsim_1_1_s_b_second_kick.html#ae728d2b96b1035bea20bd1c1c6510324',1,'galsim::SBSecondKick']]],
+  ['kxky',['kxky',['../namespacegalsim_1_1utilities.html#aa903eb2a1996461798e389862df86309',1,'galsim::utilities']]]
 ];

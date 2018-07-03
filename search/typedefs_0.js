@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oururng',['OurURNG',['../namespacegalsim.html#a448800a092a088b209501f94afe18e6f',1,'galsim']]]
+  ['point',['Point',['../namespacegalsim.html#a436c00246372fb22ffe47302b6b63973',1,'galsim']]]
 ];

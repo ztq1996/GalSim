@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['k',['k',['../classgalsim_1_1random_1_1_dist_deviate.html#ac1bba3cef8a18ab3338693ffde4f1a4b',1,'galsim::random::DistDeviate']]],
-  ['k_5finterpolant',['k_interpolant',['../classgalsim_1_1interpolatedimage_1_1_interpolated_image.html#aac3af99a2355efe2a1eb6367a839075e',1,'galsim.interpolatedimage.InterpolatedImage.k_interpolant()'],['../classgalsim_1_1interpolatedimage_1_1_interpolated_k_image.html#a4569f6858483386d8efb8c982e9291ca',1,'galsim.interpolatedimage.InterpolatedKImage.k_interpolant()']]],
-  ['key_5fsplit',['key_split',['../classgalsim_1_1catalog_1_1_dict.html#a5db70f8ae25618cff4ed6411a8841ea8',1,'galsim::catalog::Dict']]],
-  ['ksb_5fmoments_5fmax',['ksb_moments_max',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#af90c2c5eb1147b91ae1aa08be672b358',1,'galsim::hsm::HSMParams']]],
-  ['ksb_5fsig_5ffactor',['ksb_sig_factor',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a3ec767e65e32e929509f1f7806d2a641',1,'galsim::hsm::HSMParams']]],
-  ['ksb_5fsig_5fweight',['ksb_sig_weight',['../structgalsim_1_1hsm_1_1_h_s_m_params.html#a11ad7f20a9a387bcb028783f1618c759',1,'galsim::hsm::HSMParams']]],
-  ['kvalue_5faccuracy',['kvalue_accuracy',['../structgalsim_1_1_g_s_params.html#ae30354f3faf550e1fcb3462900f33773',1,'galsim::GSParams']]],
-  ['kw',['kw',['../classgalsim_1_1chromatic_1_1_chromatic_atmosphere.html#ad9ed516e066f73c5cb625d09c1628ddf',1,'galsim::chromatic::ChromaticAtmosphere']]],
-  ['kwargs',['kwargs',['../classgalsim_1_1chromatic_1_1_chromatic_deconvolution.html#a42440f9d7a6eeaf295687571d85548d9',1,'galsim.chromatic.ChromaticDeconvolution.kwargs()'],['../classgalsim_1_1chromatic_1_1_chromatic_auto_convolution.html#a08ff48ac9b24ff86494713c491521f57',1,'galsim.chromatic.ChromaticAutoConvolution.kwargs()'],['../classgalsim_1_1chromatic_1_1_chromatic_auto_correlation.html#abdb22b62713fd2e43fbc60d630637f50',1,'galsim.chromatic.ChromaticAutoCorrelation.kwargs()'],['../classgalsim_1_1chromatic_1_1_chromatic_fourier_sqrt_profile.html#a83f6667ee9a9eba70ef1082447e87d6e',1,'galsim.chromatic.ChromaticFourierSqrtProfile.kwargs()'],['../classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a67b3c8f67bbe67be117af77b5d645ed8',1,'galsim.chromatic.ChromaticOpticalPSF.kwargs()'],['../classgalsim_1_1chromatic_1_1_chromatic_airy.html#a4f8ab8b1d03bd51aad89168fdae4c6e5',1,'galsim.chromatic.ChromaticAiry.kwargs()']]],
-  ['ky',['ky',['../classgalsim_1_1lensing__ps_1_1_power_spectrum_realizer.html#a35b0f7ca2ade2169839d5283cd4904ba',1,'galsim::lensing_ps::PowerSpectrumRealizer']]]
+  ['l0',['L0',['../classgalsim_1_1phase__screens_1_1_atmospheric_screen.html#afe6c9fa47dcb3f3504eacc91588b1ed5',1,'galsim.phase_screens.AtmosphericScreen.L0()'],['../classgalsim_1_1vonkarman_1_1_von_karman.html#a6d8c6e2a81ad3bd219656677421fe44e',1,'galsim.vonkarman.VonKarman.L0()']]],
+  ['lam',['lam',['../classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#af06c98769047c340fe8671c234b2b7a9',1,'galsim.chromatic.ChromaticOpticalPSF.lam()'],['../classgalsim_1_1chromatic_1_1_chromatic_airy.html#af50d3825a8aa7879c03608051b9f5e18',1,'galsim.chromatic.ChromaticAiry.lam()'],['../classgalsim_1_1phase__psf_1_1_phase_screen_p_s_f.html#a9b4f0d41eb221a7ff18f184307bcbce5',1,'galsim.phase_psf.PhaseScreenPSF.lam()'],['../classgalsim_1_1second__kick_1_1_second_kick.html#a5ae851cea029e362f5a93938402f48b9',1,'galsim.second_kick.SecondKick.lam()'],['../classgalsim_1_1vonkarman_1_1_von_karman.html#a4d1ef0afc28890a8885e7ae9891d7dd3',1,'galsim.vonkarman.VonKarman.lam()']]],
+  ['lam_5f0',['lam_0',['../classgalsim_1_1phase__screens_1_1_optical_screen.html#ae5962cfde5a35d82c5a90b1ddce669e5',1,'galsim::phase_screens::OpticalScreen']]],
+  ['lam_5fover_5fdiam',['lam_over_diam',['../classgalsim_1_1airy_1_1_airy.html#a2447e6e83c6cc76b0586fb56ab88493f',1,'galsim.airy.Airy.lam_over_diam()'],['../classgalsim_1_1chromatic_1_1_chromatic_optical_p_s_f.html#a67eafd03a05338c2fa3ec8b8e53f79de',1,'galsim.chromatic.ChromaticOpticalPSF.lam_over_diam()'],['../classgalsim_1_1chromatic_1_1_chromatic_airy.html#a20b2a6b8e896dae6b707199376cdc82f',1,'galsim.chromatic.ChromaticAiry.lam_over_diam()']]],
+  ['lam_5fover_5fr0',['lam_over_r0',['../classgalsim_1_1kolmogorov_1_1_kolmogorov.html#ab4b9980c9b1529e48e75000a5dd77d08',1,'galsim::kolmogorov::Kolmogorov']]],
+  ['last_5fn_5feval',['last_n_eval',['../classgalsim_1_1integ_1_1_image_integrator.html#a2f680619aaf5cb7d1c4fdbe406337336',1,'galsim::integ::ImageIntegrator']]],
+  ['loaded_5ffiles',['loaded_files',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ad624e6e1516061819c2f73445373a056',1,'galsim::real::RealGalaxyCatalog']]],
+  ['loaded_5flock',['loaded_lock',['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#ae7540b706170eaccf0f58c13c76d746e',1,'galsim::real::RealGalaxyCatalog']]],
+  ['log2e',['LOG2E',['../fastexp_8cpp.html#a7314186604a194f9909a2ac6b4f26961',1,'fastexp.cpp']]],
+  ['log_5fn',['LOG_N',['../namespacefmath_1_1local.html#a589fa7e3f13d26af5106e4768e57099e',1,'fmath::local']]],
+  ['log_5ftable_5fsize',['LOG_TABLE_SIZE',['../namespacefmath_1_1local.html#a3b151e66012caa9b107c68c8995ed078',1,'fmath::local']]],
+  ['logger',['logger',['../classgalsim_1_1config_1_1process_1_1_logger_wrapper.html#a90bc7ffbbb96f1c7155aa783533fa9c2',1,'galsim.config.process.LoggerWrapper.logger()'],['../classgalsim_1_1real_1_1_real_galaxy_catalog.html#a7c9beb931e3bb084aaa42435182d6bf0',1,'galsim.real.RealGalaxyCatalog.logger()']]],
+  ['logvar',['logVar',['../structfmath_1_1local_1_1_c.html#a6ed90bdf46a6283346b0759638e37e79',1,'fmath::local::C']]],
+  ['loopn1',['loopN1',['../classcybozu_1_1_cpu_clock.html#a4deb211ea6e958f2d694343870ed42b5',1,'cybozu::CpuClock']]],
+  ['loopn2',['loopN2',['../classcybozu_1_1_cpu_clock.html#a87c17b81605613b6a49d5e77b86f7ec4',1,'cybozu::CpuClock']]],
+  ['lx',['lx',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#a1082bde1d8d3f169daa743de40f4010a',1,'galsim::pse::PowerSpectrumEstimator']]],
+  ['ly',['ly',['../classgalsim_1_1pse_1_1_power_spectrum_estimator.html#aff6ccc101c52037999b76e7cb1bbb8a0',1,'galsim::pse::PowerSpectrumEstimator']]]
 ];

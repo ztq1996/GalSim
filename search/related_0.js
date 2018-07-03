@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['angle',['Angle',['../classgalsim_1_1_angle_unit.html#a56927f37f8ac54bad49addcb5cb4b202',1,'galsim::AngleUnit']]]
+  ['ktable',['KTable',['../classgalsim_1_1_x_table.html#ac0607c18b5761592fe290f570b1981f4',1,'galsim::XTable']]]
 ];

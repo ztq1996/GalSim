@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ktable',['KTable',['../classgalsim_1_1_x_table.html#ac0607c18b5761592fe290f570b1981f4',1,'galsim::XTable']]]
+  ['vkxintegrand',['VKXIntegrand',['../classgalsim_1_1_s_b_von_karman.html#a4a20889934f2d7a0191d81c050b52f55',1,'galsim::SBVonKarman']]]
 ];
